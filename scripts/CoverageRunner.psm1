@@ -236,7 +236,7 @@ function Invoke-TestCoverage {
         Write-PerPackageCoverageReport -CoverDir $coverDir -SrcPkgStmts $srcPkgStmts -TotalPct $totalPct -TotalLine $totalLine
         Write-CoverageConsoleSummary -SrcPkgStmts $srcPkgStmts -FuncOutput $funcOutput
         Write-BuildErrorsReport -CoverDir $coverDir -BuildErrorsByPackage $buildErrorsByPackage -BlockedPkgs $blockedPkgs -BlockedErrors $blockedErrors
-        Write-RuntimeFailuresReport -CoverDir $coverDir -RuntimeFailuresByPackage $runtimeFailuresByPackage -MissingProfiles $missingProfiles
+        Write-RuntimeFailuresReport -CoverDir $coverDir -RuntimeFailuresByPackage $runtimeFailuresByPackage -MissingProfiles $missingProfiles -BlockedPkgs $blockedPkgs
 
         # Written files summary
         Write-Host ""
