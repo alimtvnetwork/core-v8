@@ -1,0 +1,34 @@
+package chmodhelper
+
+import (
+	"github.com/alimtvnetwork/core/coredata/corestr"
+	"github.com/alimtvnetwork/core/errcore"
+)
+
+// GetFilesChmodRwxFullMap returns filePath -> "-rwxrwxrwx"
+func GetFilesChmodRwxFullMap(
+	requestedPaths []string,
+) (filePathToRwxMap *corestr.Hashmap, err error) {
+	length := len(requestedPaths)
+	hashmap := corestr.New.Hashmap.Cap(length)
+
+	if length == 0 {
+		return hashmap, nil
+	}
+
+	var sliceErr []string
+
+	for _, filePath := range requestedPaths {
+		fileMode, chmodErr := GetExistingChmod(filePath)
+
+		if chmodErr != nil {
+			sliceErr = append(sliceErr, chmodErr.Error())
+
+			continue
+		}
+
+		hashmap.AddOrUpdate(filePath, fileMode.String())
+	}
+
+	return hashmap, errcore.SliceErrorDefault(sliceErr)
+}

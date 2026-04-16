@@ -1,0 +1,37 @@
+package errcore
+
+import (
+	"github.com/alimtvnetwork/core/constants"
+)
+
+func CombineWithMsgTypeStackTrace(
+	genericMsg RawErrorType,
+	otherMsg string,
+	reference any,
+) string {
+	msg := CombineWithMsgTypeNoStack(
+		genericMsg,
+		otherMsg,
+		reference,
+	)
+
+	return StackEnhance.MsgSkip(1, msg)
+}
+
+func CombineWithMsgTypeNoStack(
+	genericMsg RawErrorType,
+	otherMsg string,
+	reference any,
+) string {
+	if otherMsg == "" {
+		return genericMsg.String() +
+			getReferenceMessage(reference)
+	}
+
+	msg := genericMsg.String() +
+		constants.Space +
+		otherMsg +
+		getReferenceMessage(reference)
+
+	return msg
+}

@@ -1,0 +1,20 @@
+package corestr
+
+import (
+	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core/errcore"
+)
+
+//goland:noinspection ALL
+var (
+	New             = &newCreator{}
+	Empty           = &emptyCreator{}
+	StringUtils     = utils{}
+	StaticJsonError = errcore.EmptyResultCannotMakeJsonType.
+			Error(constants.EmptyString, constants.EmptyString)
+	ExpectingLengthForLeftRight      = constants.Two
+	LeftRightExpectingLengthMessager = errcore.ExpectingFuture(
+		"Expecting length at least",
+		ExpectingLengthForLeftRight,
+	)
+)

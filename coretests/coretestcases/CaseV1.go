@@ -1,0 +1,651 @@
+package coretestcases
+
+import (
+	"fmt"
+	"reflect"
+	"testing"
+
+	"github.com/alimtvnetwork/core/coretests"
+	"github.com/alimtvnetwork/core/corevalidator"
+	"github.com/alimtvnetwork/core/enums/stringcompareas"
+	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core/internal/convertinternal"
+	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/smarty/assertions/should"
+	"github.com/smartystreets/goconvey/convey"
+)
+
+// CaseV1
+//
+//   - Title : Test case header
+//   - ArrangeInput : Preparing input
+//   - ActualInput : Input for the act method
+//   - ExpectedInput : Set expectations for the unit test (what we are going receive from invoking something)
+//   - Will verify type using VerifyTypeOf
+type CaseV1 coretests.BaseTestCase
+
+func (it CaseV1) Input() any {
+	return it.ArrangeInput
+}
+
+func (it CaseV1) Expected() any {
+	return it.ExpectedInput
+}
+
+// ExpectedLines normalizes ExpectedInput to []string.
+//
+// Supported types:
+//   - string        → []string{s}
+//   - []string      → as-is
+//   - int           → []string{strconv.Itoa(v)}
+//   - []int         → each element converted via strconv.Itoa
+//   - bool          → []string{"true"} or []string{"false"}
+//   - []bool        → each element converted via strconv.FormatBool
+//   - byte          → []string{strconv.Itoa(int(v))}
+//   - []any         → each element converted via fmt.Sprintf
+//   - map[string]any, map[string]string, map[string]int, etc.
+//   - any other     → delegates to convertinternal.AnyTo.Strings (PrettyJSON fallback)
+//
+// This allows test cases to use any reasonable type for ExpectedInput
+// while still producing []string for line-based assertion comparison.
+func (it CaseV1) ExpectedLines() []string {
+	return convertinternal.AnyTo.Strings(it.ExpectedInput)
+}
+
+func (it CaseV1) ArrangeTypeName() string {
+	return reflectinternal.TypeName(it.ArrangeInput)
+}
+
+// Actual
+//
+// Must SetActual first.
+func (it CaseV1) Actual() any {
+	return it.ActualInput
+}
+
+func (it CaseV1) AsSimpleTestCaseWrapper() coretests.SimpleTestCaseWrapper {
+	return it
+}
+
+func (it CaseV1) SetActual(actual any) {
+	it.ActualInput = actual
+}
+
+func (it CaseV1) CaseTitle() string {
+	return it.Title
+}
+
+func (it CaseV1) SetExpected(expected any) {
+	it.ExpectedInput = expected
+}
+
+// VerifyTypeOfMatch
+//
+// Will verify type using reflect.TypeOf
+func (it CaseV1) VerifyTypeOfMatch(
+	t *testing.T,
+	caseIndex int,
+	actual any,
+) {
+	baseCase := it.AsBaseTestCase()
+
+	if baseCase.IsTypeInvalidOrSkipVerify() {
+		return
+	}
+
+	expectedType := reflect.TypeOf(it.ExpectedInput)
+	actualType := reflect.TypeOf(actual)
+
+	title := fmt.Sprintf(
+		typeVerifyTitleFormat,
+		it.Title,
+	)
+
+	convey.Convey(title, t, func() {
+		convey.So(
+			actualType,
+			should.Resemble,
+			expectedType,
+		)
+	})
+}
+
+// VerifyTypeOfMust
+//
+// Will verify type using reflect.TypeOf
+func (it CaseV1) VerifyTypeOfMust(
+	t *testing.T,
+	caseIndex int,
+	actual any,
+) {
+	baseCase := it.AsBaseTestCase()
+
+	if baseCase.IsTypeInvalidOrSkipVerify() {
+		return
+	}
+
+	expectedType := reflect.TypeOf(it.ExpectedInput)
+	actualType := reflect.TypeOf(actual)
+
+	title := fmt.Sprintf(
+		typeVerifyTitleFormat,
+		it.Title,
+	)
+
+	convey.Convey(title, t, func() {
+		convey.So(
+			actualType,
+			should.Resemble,
+			expectedType,
+		)
+	})
+}
+
+// VerifyType
+//
+// Will verify type using reflect.Type
+func (it CaseV1) VerifyType(
+	t *testing.T,
+	caseIndex int,
+	actual any,
+) {
+	baseCase := it.AsBaseTestCase()
+
+	if baseCase.IsTypeInvalidOrSkipVerify() {
+		return
+	}
+
+	expectedType := reflect.TypeOf(it.ExpectedInput)
+	actualType := reflect.TypeOf(actual)
+
+	title := fmt.Sprintf(
+		typeVerifyTitleFormat,
+		it.Title,
+	)
+
+	convey.Convey(title, t, func() {
+		convey.So(
+			actualType,
+			should.Resemble,
+			expectedType,
+		)
+	})
+}
+
+// VerifyTypeMust
+//
+// Will verify type using reflect.Type
+func (it CaseV1) VerifyTypeMust(
+	t *testing.T,
+	caseIndex int,
+	actual any,
+) {
+	baseCase := it.AsBaseTestCase()
+
+	if baseCase.IsTypeInvalidOrSkipVerify() {
+		return
+	}
+
+	expectedType := reflect.TypeOf(it.ExpectedInput)
+	actualType := reflect.TypeOf(actual)
+
+	title := fmt.Sprintf(
+		typeVerifyTitleFormat,
+		it.Title,
+	)
+
+	convey.Convey(title, t, func() {
+		convey.So(
+			actualType,
+			should.Resemble,
+			expectedType,
+		)
+	})
+}
+
+func (it CaseV1) VerifyAllEqual(
+	caseIndex int,
+	actualElements ...string,
+) error {
+	return it.VerifyAll(
+		caseIndex,
+		stringcompareas.Equal,
+		actualElements,
+	)
+}
+
+func (it CaseV1) VerifyAllEqualCondition(
+	caseIndex int,
+	condition corevalidator.Condition,
+	actualElements ...string,
+) error {
+	return it.VerifyAllCondition(
+		caseIndex,
+		stringcompareas.Equal,
+		condition,
+		actualElements,
+	)
+}
+
+func (it CaseV1) SliceValidator(
+	compareAs stringcompareas.Variant,
+	actualElements []string,
+) corevalidator.SliceValidator {
+	return it.SliceValidatorCondition(
+		compareAs,
+		corevalidator.DefaultDisabledCoreCondition,
+		actualElements,
+	)
+}
+
+func (it CaseV1) SliceValidatorCondition(
+	compareAs stringcompareas.Variant,
+	condition corevalidator.Condition,
+	actualElements []string,
+) corevalidator.SliceValidator {
+	it.SetActual(actualElements)
+
+	sliceValidator := corevalidator.SliceValidator{
+		Condition:     condition,
+		CompareAs:     compareAs,
+		ActualLines:   actualElements,
+		ExpectedLines: it.ExpectedLines(),
+	}
+
+	return sliceValidator
+}
+
+func (it CaseV1) VerifyAll(
+	caseIndex int,
+	compareAs stringcompareas.Variant,
+	actualElements []string,
+) error {
+	it.SetActual(actualElements)
+
+	sliceValidator := corevalidator.SliceValidator{
+		Condition:     corevalidator.DefaultDisabledCoreCondition,
+		CompareAs:     compareAs,
+		ActualLines:   actualElements,
+		ExpectedLines: it.ExpectedLines(),
+	}
+
+	finalErr := it.VerifyAllSliceValidator(
+		caseIndex,
+		sliceValidator,
+	)
+
+	sliceValidator.Dispose()
+
+	return finalErr
+}
+
+func (it CaseV1) VerifyAllCondition(
+	caseIndex int,
+	compareAs stringcompareas.Variant,
+	condition corevalidator.Condition,
+	actualElements []string,
+) error {
+	it.SetActual(actualElements)
+
+	sliceValidator := corevalidator.SliceValidator{
+		Condition:     condition,
+		CompareAs:     compareAs,
+		ActualLines:   actualElements,
+		ExpectedLines: it.ExpectedLines(),
+	}
+
+	finalErr := it.VerifyAllSliceValidator(
+		caseIndex,
+		sliceValidator,
+	)
+
+	sliceValidator.Dispose()
+
+	return finalErr
+}
+
+func (it CaseV1) VerifyFirst(
+	caseIndex int,
+	compareAs stringcompareas.Variant,
+	actualElements []string,
+) error {
+	it.SetActual(actualElements)
+
+	sliceValidator := corevalidator.SliceValidator{
+		Condition:     corevalidator.DefaultTrimCoreCondition,
+		CompareAs:     compareAs,
+		ActualLines:   actualElements,
+		ExpectedLines: it.ExpectedLines(),
+	}
+
+	param := corevalidator.Parameter{
+		CaseIndex:          caseIndex,
+		Header:             it.Title,
+		IsAttachUserInputs: true,
+		IsCaseSensitive:    true,
+	}
+
+	return sliceValidator.VerifyFirstError(&param)
+}
+
+func (it CaseV1) VerifyAllSliceValidator(
+	caseIndex int,
+	validator corevalidator.SliceValidator,
+) error {
+	param := corevalidator.Parameter{
+		CaseIndex:          caseIndex,
+		Header:             it.Title,
+		IsAttachUserInputs: true,
+		IsCaseSensitive:    true,
+	}
+
+	return validator.AllVerifyError(&param)
+}
+
+func (it CaseV1) VerifyError(
+	caseIndex int,
+	compareAs stringcompareas.Variant,
+	actualElements ...string,
+) error {
+	toBaseTestCase := it.AsBaseTestCase()
+	validationFinalError := it.VerifyAll(
+		caseIndex,
+		compareAs,
+		actualElements,
+	)
+
+	if toBaseTestCase.IsTypeInvalidOrSkipVerify() {
+		return validationFinalError
+	}
+
+	typeVerifyErr := toBaseTestCase.TypeValidationError()
+
+	return errcore.MergeErrors(
+		validationFinalError,
+		typeVerifyErr,
+	)
+}
+
+func (it CaseV1) ShouldBe(
+	t *testing.T,
+	caseIndex int,
+	compareAs stringcompareas.Variant,
+	actualElements ...string,
+) error {
+	return it.ShouldBeUsingCondition(
+		t,
+		caseIndex,
+		compareAs,
+		corevalidator.DefaultDisabledCoreCondition,
+		actualElements...,
+	)
+}
+
+func (it CaseV1) ShouldBeUsingCondition(
+	t *testing.T,
+	caseIndex int,
+	compareAs stringcompareas.Variant,
+	condition corevalidator.Condition,
+	actualElements ...string,
+) error {
+	toBaseTestCase := it.AsBaseTestCase()
+	validationFinalError := it.VerifyAllCondition(
+		caseIndex,
+		compareAs,
+		condition,
+		actualElements,
+	)
+
+	convey.Convey(
+		toBaseTestCase.Title, t, func() {
+			convey.So(
+				validationFinalError,
+				should.BeNil,
+			)
+		},
+	)
+
+	if toBaseTestCase.IsTypeInvalidOrSkipVerify() {
+		return validationFinalError
+	}
+
+	typeVerifyErr := it.TypeShouldMatch(t)
+
+	return errcore.MergeErrors(
+		validationFinalError,
+		typeVerifyErr,
+	)
+}
+
+// TypeShouldMatch
+//
+// Assert along with returns the error.
+func (it CaseV1) TypeShouldMatch(
+	t *testing.T,
+) error {
+	baseCase := it.AsBaseTestCase()
+	typeVerifyErr := baseCase.TypeValidationError()
+	typeVerifyTitle := fmt.Sprintf(
+		typeVerifyTitleFormat,
+		it.Title,
+	)
+
+	convey.Convey(
+		typeVerifyTitle, t, func() {
+			convey.So(
+				typeVerifyErr,
+				should.BeNil,
+			)
+		},
+	)
+
+	return typeVerifyErr
+}
+
+func (it CaseV1) ShouldBeEqual(
+	t *testing.T,
+	caseIndex int,
+	actualElements ...string,
+) {
+	// When ExpectedInput is a single string, wrap it as []string
+	// so that "" becomes [""] matching the actual [""] from variadic.
+	// This prevents AnyTo.Strings("") returning [] (0 elements)
+	// while actual has [""] (1 element).
+	if s, ok := it.ExpectedInput.(string); ok {
+		it.ExpectedInput = []string{s}
+	}
+
+	_ = it.ShouldBe(
+		t,
+		caseIndex,
+		stringcompareas.Equal,
+		actualElements...,
+	)
+}
+
+func (it CaseV1) ShouldBeTrimEqual(
+	t *testing.T,
+	caseIndex int,
+	actualElements ...string,
+) {
+	_ = it.ShouldBeUsingCondition(
+		t,
+		caseIndex,
+		stringcompareas.Equal,
+		corevalidator.DefaultTrimCoreCondition,
+		actualElements...,
+	)
+}
+
+func (it CaseV1) ShouldBeSortedEqual(
+	t *testing.T,
+	caseIndex int,
+	actualElements ...string,
+) {
+	_ = it.ShouldBeUsingCondition(
+		t,
+		caseIndex,
+		stringcompareas.Equal,
+		corevalidator.DefaultSortTrimCoreCondition,
+		actualElements...,
+	)
+}
+
+func (it CaseV1) ShouldContains(
+	t *testing.T,
+	caseIndex int,
+	actualElements ...string,
+) {
+	_ = it.ShouldBe(
+		t,
+		caseIndex,
+		stringcompareas.Contains,
+		actualElements...,
+	)
+}
+
+func (it CaseV1) ShouldStartsWith(
+	t *testing.T,
+	caseIndex int,
+	actualElements ...string,
+) {
+	_ = it.ShouldBe(
+		t,
+		caseIndex,
+		stringcompareas.StartsWith,
+		actualElements...,
+	)
+}
+
+func (it CaseV1) ShouldEndsWith(
+	t *testing.T,
+	caseIndex int,
+	actualElements ...string,
+) {
+	_ = it.ShouldBe(
+		t,
+		caseIndex,
+		stringcompareas.EndsWith,
+		actualElements...,
+	)
+}
+
+func (it CaseV1) ShouldBeNotEqual(
+	t *testing.T,
+	caseIndex int,
+	actualElements ...string,
+) {
+	_ = it.ShouldBe(
+		t,
+		caseIndex,
+		stringcompareas.NotEqual,
+		actualElements...,
+	)
+}
+
+// ShouldBeRegex
+//
+// Each expectation line acts as a regex to
+// be validated against the actual line.
+func (it CaseV1) ShouldBeRegex(
+	t *testing.T,
+	caseIndex int,
+	actualElements ...string,
+) {
+	_ = it.ShouldBe(
+		t,
+		caseIndex,
+		stringcompareas.Regex,
+		actualElements...,
+	)
+}
+
+// ShouldBeTrimRegex
+//
+// Each expectation line acts as a regex to
+// be validated against the actual line.
+func (it CaseV1) ShouldBeTrimRegex(
+	t *testing.T,
+	caseIndex int,
+	actualElements ...string,
+) {
+	_ = it.ShouldBeUsingCondition(
+		t,
+		caseIndex,
+		stringcompareas.Regex,
+		corevalidator.DefaultTrimCoreCondition,
+		actualElements...,
+	)
+}
+
+func (it CaseV1) ShouldHaveNoError(
+	t *testing.T,
+	additionalTitle string,
+	caseIndex int,
+	err error,
+) {
+	finalTitle := fmt.Sprintf(
+		"%d - %s - %s",
+		caseIndex,
+		it.CaseTitle(),
+		additionalTitle,
+	)
+
+	convey.Convey(
+		finalTitle, t, func() {
+			convey.So(
+				err,
+				should.BeNil,
+			)
+		},
+	)
+}
+
+// AssertDirectly
+//
+// Assert directly using convey.Convey
+func (it CaseV1) AssertDirectly(
+	t *testing.T,
+	additionalTitle string,
+	msg string,
+	caseIndex int,
+	actual any,
+	assertion convey.Assertion,
+	expectation any,
+) {
+	finalTitle := it.PrepareTitle(
+		caseIndex,
+		additionalTitle,
+	)
+
+	convey.Convey(
+		finalTitle, t, func() {
+			convey.SoMsg(
+				msg,
+				actual,
+				assertion,
+				expectation,
+			)
+		},
+	)
+}
+
+func (it CaseV1) PrepareTitle(
+	caseIndex int,
+	additionalTitle string,
+) string {
+	return fmt.Sprintf(
+		"%d - %s - %s",
+		caseIndex,
+		it.CaseTitle(),
+		additionalTitle,
+	)
+}
+
+func (it CaseV1) AsBaseTestCase() coretests.BaseTestCase {
+	return coretests.BaseTestCase(it)
+}
+
+func (it CaseV1) AsSimpleTestCaseWrapperContractsBinder() coretests.SimpleTestCaseWrapperContractsBinder {
+	return &it
+}

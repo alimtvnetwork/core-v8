@@ -1,0 +1,146 @@
+package coredynamic
+
+import (
+	"errors"
+	"reflect"
+
+	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core/internal/strutilinternal"
+	"github.com/alimtvnetwork/core/issetter"
+)
+
+type SimpleRequest struct {
+	Dynamic
+	message string
+	err     error
+}
+
+func InvalidSimpleRequestNoMessage() *SimpleRequest {
+	return &SimpleRequest{
+		Dynamic: NewDynamic(nil, false),
+		message: constants.EmptyString,
+	}
+}
+
+func InvalidSimpleRequest(
+	message string,
+) *SimpleRequest {
+	return &SimpleRequest{
+		Dynamic: NewDynamic(nil, false),
+		message: message,
+	}
+}
+
+func NewSimpleRequest(
+	request any,
+	isValid bool,
+	message string,
+) *SimpleRequest {
+	return &SimpleRequest{
+		Dynamic: NewDynamic(request, isValid),
+		message: message,
+	}
+}
+
+func NewSimpleRequestValid(
+	request any,
+) *SimpleRequest {
+	return &SimpleRequest{
+		Dynamic: NewDynamic(request, true),
+		message: constants.EmptyString,
+	}
+}
+
+func (receiver *SimpleRequest) Message() string {
+	if receiver == nil {
+		return constants.EmptyString
+	}
+
+	return receiver.message
+}
+
+func (receiver *SimpleRequest) Request() any {
+	if receiver == nil {
+		return nil
+	}
+
+	return receiver.Dynamic.Data()
+}
+
+func (receiver *SimpleRequest) Value() any {
+	if receiver == nil {
+		return nil
+	}
+
+	return receiver.Dynamic.Data()
+}
+
+func (receiver *SimpleRequest) GetErrorOnTypeMismatch(
+	typeMatch reflect.Type,
+	isIncludeInvalidMessage bool,
+) error {
+	if receiver == nil {
+		return nil
+	}
+
+	if receiver.IsReflectTypeOf(typeMatch) {
+		return nil
+	}
+
+	typeMismatchMessage := errcore.CombineWithMsgTypeNoStack(
+		errcore.TypeMismatchType,
+		"Current type - ["+receiver.ReflectTypeName()+"], expected type",
+		typeMatch,
+	) + constants.NewLineUnix
+
+	isExcludeMessage := !isIncludeInvalidMessage
+
+	if isExcludeMessage {
+		return errors.New(typeMismatchMessage)
+	}
+
+	return errors.New(typeMismatchMessage + receiver.message)
+}
+
+func (receiver *SimpleRequest) IsReflectKind(checkingKind reflect.Kind) bool {
+	if receiver == nil {
+		return false
+	}
+
+	return receiver.ReflectKind() == checkingKind
+}
+
+func (receiver *SimpleRequest) IsPointer() bool {
+	if receiver == nil {
+		return false
+	}
+
+	if receiver.isPointer.IsUninitialized() {
+		receiver.isPointer = issetter.GetBool(
+			receiver.IsReflectKind(reflect.Ptr),
+		)
+	}
+
+	return receiver.isPointer.IsTrue()
+}
+
+func (receiver *SimpleRequest) InvalidError() error {
+	if receiver == nil {
+		return nil
+	}
+
+	if receiver.err != nil {
+		return receiver.err
+	}
+
+	if strutilinternal.IsEmptyOrWhitespace(receiver.message) {
+		return nil
+	}
+
+	if receiver.err == nil {
+		receiver.err = errors.New(receiver.message)
+	}
+
+	return receiver.err
+}

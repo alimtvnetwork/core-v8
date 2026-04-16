@@ -1,0 +1,30 @@
+package chmodhelpertestwrappers
+
+import (
+	"github.com/alimtvnetwork/core/chmodhelper"
+)
+
+var PathInstructionsV1 = []chmodhelper.DirFilesWithRwxPermission{
+	{
+		DirWithFiles: chmodhelper.DirWithFiles{
+			Dir: "/tmp/core/test-cases",
+			Files: []string{
+				"file-1.txt",
+				"file-2.txt",
+				"file-3.txt",
+			},
+		},
+		ApplyRwx: DefaultRwx,
+	},
+	{
+		DirWithFiles: chmodhelper.DirWithFiles{
+			Dir: "/tmp/core/test-cases-2",
+			Files: []string{
+				"file-1.txt",
+				"file-2.txt",
+				"file-3.txt",
+			},
+		},
+		ApplyRwx: DefaultRwx,
+	},
+}

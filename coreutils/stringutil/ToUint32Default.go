@@ -1,0 +1,27 @@
+package stringutil
+
+import (
+	"math"
+	"strconv"
+
+	"github.com/alimtvnetwork/core/constants"
+)
+
+func ToUint32Default(
+	s string,
+) uint32 {
+	toInt, err := strconv.Atoi(s)
+
+	if err != nil {
+		return constants.Zero
+	}
+
+	// fix https://t.ly/6aoW,
+	// https://github.com/alimtvnetwork/core/-/issues/81
+	// use MaxInt32 instead of uint32Max
+	if toInt >= 0 && toInt <= math.MaxInt32 {
+		return uint32(toInt)
+	}
+
+	return constants.Zero
+}

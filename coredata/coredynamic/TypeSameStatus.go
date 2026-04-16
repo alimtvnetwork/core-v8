@@ -1,0 +1,27 @@
+package coredynamic
+
+import (
+	"reflect"
+
+	"github.com/alimtvnetwork/core/internal/reflectinternal"
+)
+
+func TypeSameStatus(
+	left, right any,
+) TypeStatus {
+	leftType := reflect.TypeOf(left)
+	rightType := reflect.TypeOf(right)
+
+	isLeftUnknownNull := reflectinternal.Is.Null(leftType)
+	isRightUnknownNull := reflectinternal.Is.Null(rightType)
+
+	return TypeStatus{
+		IsSame:             leftType == rightType,
+		IsLeftUnknownNull:  isLeftUnknownNull,
+		IsRightUnknownNull: isRightUnknownNull,
+		IsRightPointer:     !isRightUnknownNull && rightType.Kind() == reflect.Ptr,
+		IsLeftPointer:      !isLeftUnknownNull && leftType.Kind() == reflect.Ptr,
+		Left:               leftType,
+		Right:              rightType,
+	}
+}

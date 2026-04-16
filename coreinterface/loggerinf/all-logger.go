@@ -1,0 +1,47 @@
+package loggerinf
+
+import (
+	"github.com/alimtvnetwork/core/coreinterface"
+	"github.com/alimtvnetwork/core/coreinterface/serializerinf"
+)
+
+type StandardLoggerGetter interface {
+	StandardLogger() StandardLogger
+}
+
+type BaseLogDefiner interface {
+	coreinterface.TypeNameGetter
+	coreinterface.MessageGetter
+}
+
+type LogDefiner interface {
+	BaseLogDefiner
+	coreinterface.RawMessageBytesGetter
+	serializerinf.FieldBytesToPointerDeserializer
+}
+
+type LogDefinerWriter interface {
+	LogWrite(logEntity LogDefiner) error
+	LogWriteMust(logEntity LogDefiner)
+	LogWriteUsingStackSkip(
+		stackSkipIndex int,
+		logEntity LogDefiner,
+	) error
+}
+
+type LogTypeWriter interface {
+	LogTypeWrite(logType string, v ...any) error
+	LogTypeWriteMust(logType string, v ...any)
+
+	LogTypeWriteStackSkip(
+		stackSkipIndex int,
+		logType string,
+		v ...any,
+	) error
+
+	LogTypeWriteStackSkipMust(
+		stackSkipIndex int,
+		logType string,
+		v ...any,
+	)
+}

@@ -1,0 +1,277 @@
+{
+  "packages": [
+    {
+      "Package": "osconsts",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "issetter",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "bytetype",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "coredata/coreonce",
+      "Coverage": 99.7
+    },
+    {
+      "Package": "coreunique/intunique",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "coredata/corejson",
+      "Coverage": 97.7
+    },
+    {
+      "Package": "anycmp",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "coreindexes",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "codestack",
+      "Coverage": 99.4
+    },
+    {
+      "Package": "coresort/intsort",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "namevalue",
+      "Coverage": 99.5
+    },
+    {
+      "Package": "coreappend",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "errcore",
+      "Coverage": 97.5
+    },
+    {
+      "Package": "coretests",
+      "Coverage": 97.3
+    },
+    {
+      "Package": "iserror",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "enums/versionindexes",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "internal/msgcreator",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "coredata/coreapi",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "coretests/coretestcases",
+      "Coverage": 99.3
+    },
+    {
+      "Package": "chmodhelper/chmodins",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "internal/convertinternal",
+      "Coverage": 90.4
+    },
+    {
+      "Package": "typesconv",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "ostype",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "corecomparator",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "internal/trydo",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "converters",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "regexnew",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "coredata/corepayload",
+      "Coverage": 96.4
+    },
+    {
+      "Package": "coretests/args",
+      "Coverage": 98.9
+    },
+    {
+      "Package": "corecsv",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "corecmp",
+      "Coverage": 95.1
+    },
+    {
+      "Package": "coreimpl/enumimpl/enumtype",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "coretaskinfo",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "coredata/stringslice",
+      "Coverage": 99.6
+    },
+    {
+      "Package": "coreinstruction",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "internal/strutilinternal",
+      "Coverage": 99.5
+    },
+    {
+      "Package": "internal/mapdiffinternal",
+      "Coverage": 98.3
+    },
+    {
+      "Package": "coremath",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "coredata",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "internal/jsoninternal",
+      "Coverage": 89.5
+    },
+    {
+      "Package": "internal/pathinternal",
+      "Coverage": 90.4
+    },
+    {
+      "Package": "coredata/corestr",
+      "Coverage": 9.4
+    },
+    {
+      "Package": "chmodhelper",
+      "Coverage": 97.0
+    },
+    {
+      "Package": "corefuncs",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "coredata/coregeneric",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "coreutils/stringutil",
+      "Coverage": 99.8
+    },
+    {
+      "Package": "enums/stringcompareas",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "simplewrap",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "internal/fsinternal",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "coresort/strsort",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "defaultcapacity",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "isany",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "converters/coreconverted",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "coretests/results",
+      "Coverage": 97.3
+    },
+    {
+      "Package": "internal/reflectinternal",
+      "Coverage": 92.0
+    },
+    {
+      "Package": "reqtype",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "mutexbykey",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "coredata/coredynamic",
+      "Coverage": 98.7
+    },
+    {
+      "Package": "pagingutil",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "reflectcore/reflectmodel",
+      "Coverage": 97.7
+    },
+    {
+      "Package": "internal/csvinternal",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "chmodhelper/chmodclasstype",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "coreversion",
+      "Coverage": 99.7
+    },
+    {
+      "Package": "coredata/corerange",
+      "Coverage": 99.7
+    },
+    {
+      "Package": "keymk",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "conditional",
+      "Coverage": 100.0
+    },
+    {
+      "Package": "corevalidator",
+      "Coverage": 98.6
+    },
+    {
+      "Package": "coreimpl/enumimpl",
+      "Coverage": 98.6
+    }
+  ],
+  "timestamp": "2026-04-16T19:18:13Z"
+}

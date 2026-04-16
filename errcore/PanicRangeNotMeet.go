@@ -1,0 +1,30 @@
+package errcore
+
+import (
+	"fmt"
+
+	"github.com/alimtvnetwork/core/constants"
+)
+
+func PanicRangeNotMeet(
+	otherMsg string,
+	rangeStart any,
+	rangeEnd any,
+	wholeRange any,
+) string {
+	rangeStr := ""
+
+	if wholeRange == nil {
+		rangeStr = fmt.Sprintf(rangeWithoutRangeFormat, rangeStart, rangeEnd)
+	} else {
+		rangeStr = fmt.Sprintf(rangeWithRangeFormat, rangeStart, rangeEnd, wholeRange)
+	}
+
+	return OutOfRangeType.String() +
+		constants.Space +
+		otherMsg +
+		constants.Space +
+		ReferenceStart +
+		rangeStr +
+		ReferenceEnd
+}

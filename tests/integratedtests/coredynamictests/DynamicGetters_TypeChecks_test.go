@@ -1,0 +1,3218 @@
+package coredynamictests
+
+import (
+	"reflect"
+	"sync"
+	"testing"
+
+	"github.com/alimtvnetwork/core/coredata/coredynamic"
+	"github.com/alimtvnetwork/core/coredata/corejson"
+	"github.com/alimtvnetwork/core/coretests/args"
+)
+
+// ═══════════════════════════════════════════════════════════════════════
+// DynamicGetters — value extraction, type checks
+// ═══════════════════════════════════════════════════════════════════════
+
+func Test_01_Dynamic_Data(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+
+	// Act
+	actual := args.Map{"result": d.Data() != 42}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 42", actual)
+}
+
+func Test_02_Dynamic_Value(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid("hello")
+
+	// Act
+	actual := args.Map{"result": d.Value() != "hello"}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected hello", actual)
+}
+
+func Test_03_Dynamic_Length_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.Length() != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 0", actual)
+}
+
+func Test_04_Dynamic_Length_Slice(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid([]int{1, 2, 3})
+
+	// Act
+	actual := args.Map{"result": d.Length() != 3}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 3", actual)
+}
+
+func Test_05_Dynamic_StructStringPtr(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	ptr := d.StructStringPtr()
+
+	// Act
+	actual := args.Map{"result": ptr == nil || *ptr == ""}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected non-empty string ptr", actual)
+	// second call should return cached
+	ptr2 := d.StructStringPtr()
+	actual = args.Map{"result": ptr != ptr2}
+	expected = args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected cached pointer", actual)
+}
+
+func Test_06_Dynamic_StructStringPtr_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.StructStringPtr() != nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected nil", actual)
+}
+
+func Test_07_Dynamic_String(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	s := d.String()
+
+	// Act
+	actual := args.Map{"result": s == ""}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected non-empty", actual)
+}
+
+func Test_08_Dynamic_String_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.String() != ""}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected empty", actual)
+}
+
+func Test_09_Dynamic_StructString_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.StructString() != ""}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected empty", actual)
+}
+
+func Test_10_Dynamic_IsNull(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamic(nil, true)
+
+	// Act
+	actual := args.Map{"result": d.IsNull()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected null", actual)
+}
+
+func Test_11_Dynamic_IsValid(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+
+	// Act
+	actual := args.Map{"result": d.IsValid()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected valid", actual)
+}
+
+func Test_12_Dynamic_IsInvalid(t *testing.T) {
+	// Arrange
+	d := coredynamic.InvalidDynamic()
+
+	// Act
+	actual := args.Map{"result": d.IsInvalid()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected invalid", actual)
+}
+
+func Test_13_Dynamic_IsPointer_True(t *testing.T) {
+	// Arrange
+	val := 42
+	d := coredynamic.NewDynamicValid(&val)
+
+	// Act
+	actual := args.Map{"result": d.IsPointer()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected pointer", actual)
+}
+
+func Test_14_Dynamic_IsPointer_False(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+
+	// Act
+	actual := args.Map{"result": d.IsPointer()}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected non-pointer", actual)
+}
+
+func Test_15_Dynamic_IsPointer_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.IsPointer()}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false for nil", actual)
+}
+
+func Test_16_Dynamic_IsValueType(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+
+	// Act
+	actual := args.Map{"result": d.IsValueType()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected value type", actual)
+}
+
+func Test_17_Dynamic_IsValueType_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.IsValueType()}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false for nil", actual)
+}
+
+func Test_18_Dynamic_IsStructStringNullOrEmpty(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamic(nil, true)
+
+	// Act
+	actual := args.Map{"result": d.IsStructStringNullOrEmpty()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true for nil data", actual)
+}
+
+func Test_19_Dynamic_IsStructStringNullOrEmpty_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.IsStructStringNullOrEmpty()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true for nil receiver", actual)
+}
+
+func Test_20_Dynamic_IsStructStringNullOrEmptyOrWhitespace(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamic(nil, true)
+
+	// Act
+	actual := args.Map{"result": d.IsStructStringNullOrEmptyOrWhitespace()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true", actual)
+}
+
+func Test_21_Dynamic_IsStructStringNullOrEmptyOrWhitespace_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.IsStructStringNullOrEmptyOrWhitespace()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true for nil", actual)
+}
+
+func Test_22_Dynamic_IsPrimitive(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+
+	// Act
+	actual := args.Map{"result": d.IsPrimitive()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected primitive", actual)
+}
+
+func Test_23_Dynamic_IsPrimitive_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.IsPrimitive()}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false for nil", actual)
+}
+
+func Test_24_Dynamic_IsNumber(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(3.14)
+
+	// Act
+	actual := args.Map{"result": d.IsNumber()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected number", actual)
+}
+
+func Test_25_Dynamic_IsNumber_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.IsNumber()}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false", actual)
+}
+
+func Test_26_Dynamic_IsStringType(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid("hello")
+
+	// Act
+	actual := args.Map{"result": d.IsStringType()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true", actual)
+}
+
+func Test_27_Dynamic_IsStringType_NotString(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+
+	// Act
+	actual := args.Map{"result": d.IsStringType()}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false", actual)
+}
+
+func Test_28_Dynamic_IsStringType_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.IsStringType()}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false", actual)
+}
+
+func Test_29_Dynamic_IsStruct(t *testing.T) {
+	// Arrange
+	type s struct{ X int }
+	d := coredynamic.NewDynamicValid(s{X: 1})
+
+	// Act
+	actual := args.Map{"result": d.IsStruct()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected struct", actual)
+}
+
+func Test_30_Dynamic_IsStruct_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.IsStruct()}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false", actual)
+}
+
+func Test_31_Dynamic_IsFunc(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(func() {})
+
+	// Act
+	actual := args.Map{"result": d.IsFunc()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected func", actual)
+}
+
+func Test_32_Dynamic_IsFunc_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.IsFunc()}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false", actual)
+}
+
+func Test_33_Dynamic_IsSliceOrArray(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid([]int{1})
+
+	// Act
+	actual := args.Map{"result": d.IsSliceOrArray()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true", actual)
+}
+
+func Test_34_Dynamic_IsSliceOrArray_Array(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid([2]int{1, 2})
+
+	// Act
+	actual := args.Map{"result": d.IsSliceOrArray()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true for array", actual)
+}
+
+func Test_35_Dynamic_IsSliceOrArray_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.IsSliceOrArray()}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false", actual)
+}
+
+func Test_36_Dynamic_IsSliceOrArrayOrMap(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(map[string]int{"a": 1})
+
+	// Act
+	actual := args.Map{"result": d.IsSliceOrArrayOrMap()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true", actual)
+}
+
+func Test_37_Dynamic_IsSliceOrArrayOrMap_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.IsSliceOrArrayOrMap()}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false", actual)
+}
+
+func Test_38_Dynamic_IsMap(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(map[string]int{"a": 1})
+
+	// Act
+	actual := args.Map{"result": d.IsMap()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true", actual)
+}
+
+func Test_39_Dynamic_IsMap_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.IsMap()}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false", actual)
+}
+
+func Test_40_Dynamic_IntDefault_Valid(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	v, ok := d.IntDefault(0)
+
+	// Act
+	actual := args.Map{"result": ok || v != 42}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected 42/true, got/", actual)
+}
+
+func Test_41_Dynamic_IntDefault_Invalid(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid("not a number")
+	v, ok := d.IntDefault(99)
+
+	// Act
+	actual := args.Map{"result": ok || v != 99}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 99/false, got/", actual)
+}
+
+func Test_42_Dynamic_IntDefault_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+	v, ok := d.IntDefault(5)
+
+	// Act
+	actual := args.Map{"result": ok || v != 5}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected default for nil", actual)
+}
+
+func Test_43_Dynamic_Float64_Valid(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(3.14)
+	v, err := d.Float64()
+
+	// Act
+	actual := args.Map{"result": err != nil || v != 3.14}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 3.14, got err=", actual)
+}
+
+func Test_44_Dynamic_Float64_Invalid(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid("abc")
+	_, err := d.Float64()
+
+	// Act
+	actual := args.Map{"result": err == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected error", actual)
+}
+
+func Test_45_Dynamic_Float64_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+	_, err := d.Float64()
+
+	// Act
+	actual := args.Map{"result": err == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected error for nil", actual)
+}
+
+func Test_46_Dynamic_ValueInt(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+
+	// Act
+	actual := args.Map{"result": d.ValueInt() != 42}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 42", actual)
+}
+
+func Test_47_Dynamic_ValueInt_WrongType(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid("str")
+	v := d.ValueInt()
+
+	// Act
+	actual := args.Map{"result": v == 42}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "should not be 42", actual)
+}
+
+func Test_48_Dynamic_ValueUInt(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(uint(10))
+
+	// Act
+	actual := args.Map{"result": d.ValueUInt() != 10}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 10", actual)
+}
+
+func Test_49_Dynamic_ValueUInt_WrongType(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid("str")
+
+	// Act
+	actual := args.Map{"result": d.ValueUInt() != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 0", actual)
+}
+
+func Test_50_Dynamic_ValueStrings(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid([]string{"a", "b"})
+	v := d.ValueStrings()
+
+	// Act
+	actual := args.Map{"result": len(v) != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_51_Dynamic_ValueStrings_WrongType(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+
+	// Act
+	actual := args.Map{"result": d.ValueStrings() != nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected nil", actual)
+}
+
+func Test_52_Dynamic_ValueBool(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(true)
+
+	// Act
+	actual := args.Map{"result": d.ValueBool()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true", actual)
+}
+
+func Test_53_Dynamic_ValueBool_WrongType(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+
+	// Act
+	actual := args.Map{"result": d.ValueBool()}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false", actual)
+}
+
+func Test_54_Dynamic_ValueInt64(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(int64(100))
+
+	// Act
+	actual := args.Map{"result": d.ValueInt64() != 100}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 100", actual)
+}
+
+func Test_55_Dynamic_ValueInt64_WrongType(t *testing.T) {
+	d := coredynamic.NewDynamicValid("x")
+	v := d.ValueInt64()
+	_ = v // just ensure no panic
+}
+
+func Test_56_Dynamic_ValueNullErr_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+	err := d.ValueNullErr()
+
+	// Act
+	actual := args.Map{"result": err == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected error", actual)
+}
+
+func Test_57_Dynamic_ValueNullErr_NullData(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamic(nil, true)
+	err := d.ValueNullErr()
+
+	// Act
+	actual := args.Map{"result": err == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected error for null data", actual)
+}
+
+func Test_58_Dynamic_ValueNullErr_Valid(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	err := d.ValueNullErr()
+
+	// Act
+	actual := args.Map{"result": err != nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected nil", actual)
+}
+
+func Test_59_Dynamic_ValueString_String(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid("hello")
+
+	// Act
+	actual := args.Map{"result": d.ValueString() != "hello"}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected hello", actual)
+}
+
+func Test_60_Dynamic_ValueString_NonString(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	s := d.ValueString()
+
+	// Act
+	actual := args.Map{"result": s == ""}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected non-empty", actual)
+}
+
+func Test_61_Dynamic_ValueString_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.ValueString() != ""}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected empty", actual)
+}
+
+func Test_62_Dynamic_Bytes_Valid(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid([]byte{1, 2, 3})
+	b, ok := d.Bytes()
+
+	// Act
+	actual := args.Map{"result": ok || len(b) != 3}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected bytes", actual)
+}
+
+func Test_63_Dynamic_Bytes_WrongType(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	_, ok := d.Bytes()
+
+	// Act
+	actual := args.Map{"result": ok}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false", actual)
+}
+
+func Test_64_Dynamic_Bytes_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+	b, ok := d.Bytes()
+
+	// Act
+	actual := args.Map{"result": ok || b != nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected nil/false", actual)
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// DynamicJson — serialization/deserialization
+// ═══════════════════════════════════════════════════════════════════════
+
+func Test_65_Dynamic_Deserialize_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+	_, err := d.Deserialize([]byte(`{}`))
+
+	// Act
+	actual := args.Map{"result": err == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected error for nil", actual)
+}
+
+func Test_66_Dynamic_ValueMarshal(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	b, err := d.ValueMarshal()
+
+	// Act
+	actual := args.Map{"result": err != nil || len(b) == 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected bytes", actual)
+}
+
+func Test_67_Dynamic_ValueMarshal_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+	_, err := d.ValueMarshal()
+
+	// Act
+	actual := args.Map{"result": err == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected error", actual)
+}
+
+func Test_68_Dynamic_JsonPayloadMust(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	b := d.JsonPayloadMust()
+
+	// Act
+	actual := args.Map{"result": len(b) == 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected bytes", actual)
+}
+
+func Test_69_Dynamic_JsonBytesPtr_Null(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamic(nil, true)
+	b, err := d.JsonBytesPtr()
+
+	// Act
+	actual := args.Map{"result": err != nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected no error for null", actual)
+	actual = args.Map{"result": len(b) != 0}
+	expected = args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected empty bytes", actual)
+}
+
+func Test_70_Dynamic_JsonBytesPtr_Valid(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	b, err := d.JsonBytesPtr()
+
+	// Act
+	actual := args.Map{"result": err != nil || len(b) == 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected bytes", actual)
+}
+
+func Test_71_Dynamic_MarshalJSON(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid("test")
+	b, err := d.MarshalJSON()
+
+	// Act
+	actual := args.Map{"result": err != nil || len(b) == 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected bytes", actual)
+}
+
+func Test_72_Dynamic_UnmarshalJSON_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+	err := d.UnmarshalJSON([]byte(`42`))
+
+	// Act
+	actual := args.Map{"result": err == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected error for nil", actual)
+}
+
+func Test_73_Dynamic_JsonModel(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+
+	// Act
+	actual := args.Map{"result": d.JsonModel() != 42}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 42", actual)
+}
+
+func Test_74_Dynamic_JsonModelAny(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid("x")
+
+	// Act
+	actual := args.Map{"result": d.JsonModelAny() != "x"}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected x", actual)
+}
+
+func Test_75_Dynamic_Json(t *testing.T) {
+	d := coredynamic.NewDynamicValid(42)
+	j := d.Json()
+	_ = j
+}
+
+func Test_76_Dynamic_JsonPtr(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	jp := d.JsonPtr()
+
+	// Act
+	actual := args.Map{"result": jp == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected non-nil", actual)
+}
+
+func Test_77_Dynamic_JsonBytes(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	b, err := d.JsonBytes()
+
+	// Act
+	actual := args.Map{"result": err != nil || len(b) == 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected bytes", actual)
+}
+
+func Test_78_Dynamic_JsonString(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	s, err := d.JsonString()
+
+	// Act
+	actual := args.Map{"result": err != nil || s == ""}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected json string", actual)
+}
+
+func Test_79_Dynamic_JsonStringMust(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	s := d.JsonStringMust()
+
+	// Act
+	actual := args.Map{"result": s == ""}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected non-empty", actual)
+}
+
+func Test_80_Dynamic_ParseInjectUsingJson(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	jp := d.JsonPtr()
+	d2 := coredynamic.NewDynamicValid(0)
+	_, err := d2.ParseInjectUsingJson(jp)
+
+	// Act
+	actual := args.Map{"result": err == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected error from Dynamic json round-trip with untyped destination", actual)
+}
+
+func Test_81_Dynamic_ParseInjectUsingJsonMust(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	jp := d.JsonPtr()
+	d2 := coredynamic.NewDynamicValid(0)
+
+	didPanic := false
+	func() {
+		defer func() {
+			if recover() != nil {
+				didPanic = true
+			}
+		}()
+		_ = d2.ParseInjectUsingJsonMust(jp)
+	}()
+
+	// Act
+	actual := args.Map{"result": didPanic}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected panic from ParseInjectUsingJsonMust when unmarshal fails", actual)
+}
+
+func Test_82_Dynamic_JsonParseSelfInject(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	jp := d.JsonPtr()
+	d2 := coredynamic.NewDynamicValid(0)
+	err := d2.JsonParseSelfInject(jp)
+
+	// Act
+	actual := args.Map{"result": err == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected error from JsonParseSelfInject with untyped destination", actual)
+}
+
+func Test_83_Dynamic_Clone(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	c := d.Clone()
+
+	// Act
+	actual := args.Map{"result": c.Value() != 42}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 42", actual)
+}
+
+func Test_84_Dynamic_ClonePtr(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	cp := d.ClonePtr()
+
+	// Act
+	actual := args.Map{"result": cp == nil || cp.Value() != 42}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected cloned ptr", actual)
+}
+
+func Test_85_Dynamic_ClonePtr_Nil(t *testing.T) {
+	// Arrange
+	var d *coredynamic.Dynamic
+
+	// Act
+	actual := args.Map{"result": d.ClonePtr() != nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected nil", actual)
+}
+
+func Test_86_Dynamic_NonPtr(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	np := d.NonPtr()
+
+	// Act
+	actual := args.Map{"result": np.Value() != 42}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 42", actual)
+}
+
+func Test_87_Dynamic_Ptr(t *testing.T) {
+	// Arrange
+	d := coredynamic.NewDynamicValid(42)
+	p := d.Ptr()
+
+	// Act
+	actual := args.Map{"result": p == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected non-nil", actual)
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// Collection[T] — base, Lock, Search, Distinct, GroupBy, Map
+// ═══════════════════════════════════════════════════════════════════════
+
+func Test_88_CollectionFrom(t *testing.T) {
+	// Arrange
+	c := coredynamic.CollectionFrom([]int{1, 2, 3})
+
+	// Act
+	actual := args.Map{"result": c.Length() != 3}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 3", actual)
+}
+
+func Test_89_CollectionFrom_Nil(t *testing.T) {
+	// Arrange
+	c := coredynamic.CollectionFrom[int](nil)
+
+	// Act
+	actual := args.Map{"result": c.Length() != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 0", actual)
+}
+
+func Test_90_CollectionClone(t *testing.T) {
+	// Arrange
+	c := coredynamic.CollectionClone([]string{"a", "b"})
+
+	// Act
+	actual := args.Map{"result": c.Length() != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_91_Collection_FirstOrDefault_Empty(t *testing.T) {
+	// Arrange
+	c := coredynamic.EmptyCollection[int]()
+	v, ok := c.FirstOrDefault()
+
+	// Act
+	actual := args.Map{"result": ok || v != nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected nil/false", actual)
+}
+
+func Test_92_Collection_FirstOrDefault_NonEmpty(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(42)
+	v, ok := c.FirstOrDefault()
+
+	// Act
+	actual := args.Map{"result": ok || *v != 42}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected 42/true", actual)
+}
+
+func Test_93_Collection_LastOrDefault_Empty(t *testing.T) {
+	// Arrange
+	c := coredynamic.EmptyCollection[int]()
+	v, ok := c.LastOrDefault()
+
+	// Act
+	actual := args.Map{"result": ok || v != nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected nil/false", actual)
+}
+
+func Test_94_Collection_LastOrDefault_NonEmpty(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2)
+	v, ok := c.LastOrDefault()
+
+	// Act
+	actual := args.Map{"result": ok || *v != 2}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected 2/true", actual)
+}
+
+func Test_95_Collection_Items_Nil(t *testing.T) {
+	// Arrange
+	var c *coredynamic.Collection[int]
+	items := c.Items()
+
+	// Act
+	actual := args.Map{"result": len(items) != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected empty", actual)
+}
+
+func Test_96_Collection_Count(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2)
+
+	// Act
+	actual := args.Map{"result": c.Count() != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_97_Collection_HasAnyItem(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+
+	// Act
+	actual := args.Map{"result": c.HasAnyItem()}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false", actual)
+	c.Add(1)
+	actual = args.Map{"result": c.HasAnyItem()}
+	expected = args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true", actual)
+}
+
+func Test_98_Collection_HasIndex(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2)
+
+	// Act
+	actual := args.Map{"result": c.HasIndex(1)}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true", actual)
+	actual = args.Map{"result": c.HasIndex(2)}
+	expected = args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false", actual)
+	actual = args.Map{"result": c.HasIndex(-1)}
+	expected = args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false for -1", actual)
+}
+
+func Test_99_Collection_Skip(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(3)
+	s := c.Skip(1)
+
+	// Act
+	actual := args.Map{"result": len(s) != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_100_Collection_Take(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(3)
+	s := c.Take(2)
+
+	// Act
+	actual := args.Map{"result": len(s) != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_101_Collection_Limit(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2)
+
+	// Act
+	actual := args.Map{"result": len(c.Limit(1)) != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_102_Collection_SkipCollection(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(3)
+	sc := c.SkipCollection(2)
+
+	// Act
+	actual := args.Map{"result": sc.Length() != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_103_Collection_TakeCollection(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(3)
+	tc := c.TakeCollection(2)
+
+	// Act
+	actual := args.Map{"result": tc.Length() != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_104_Collection_LimitCollection(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2)
+	lc := c.LimitCollection(1)
+
+	// Act
+	actual := args.Map{"result": lc.Length() != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_105_Collection_SafeLimitCollection(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1)
+	lc := c.SafeLimitCollection(100)
+
+	// Act
+	actual := args.Map{"result": lc.Length() != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_106_Collection_AddMany(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.AddMany(1, 2, 3)
+
+	// Act
+	actual := args.Map{"result": c.Length() != 3}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 3", actual)
+}
+
+func Test_107_Collection_AddNonNil(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	val := 42
+	c.AddNonNil(&val)
+	c.AddNonNil(nil)
+
+	// Act
+	actual := args.Map{"result": c.Length() != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_108_Collection_RemoveAt_Valid(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(3)
+	ok := c.RemoveAt(1)
+
+	// Act
+	actual := args.Map{"result": ok || c.Length() != 2}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected success", actual)
+}
+
+func Test_109_Collection_RemoveAt_Invalid(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1)
+
+	// Act
+	actual := args.Map{"result": c.RemoveAt(5)}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false", actual)
+}
+
+func Test_110_Collection_Clear(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2)
+	c.Clear()
+
+	// Act
+	actual := args.Map{"result": c.Length() != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 0", actual)
+}
+
+func Test_111_Collection_Dispose(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1)
+	c.Dispose()
+
+	// Act
+	actual := args.Map{"result": c.Length() != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 0", actual)
+}
+
+func Test_112_Collection_Loop(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(3)
+	sum := 0
+	c.Loop(func(i int, v int) bool {
+		sum += v
+		return false
+	})
+
+	// Act
+	actual := args.Map{"result": sum != 6}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 6", actual)
+}
+
+func Test_113_Collection_Loop_Break(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(3)
+	count := 0
+	c.Loop(func(i int, v int) bool {
+		count++
+		return i == 1
+	})
+
+	// Act
+	actual := args.Map{"result": count != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_114_Collection_Loop_Empty(t *testing.T) {
+	// Arrange
+	c := coredynamic.EmptyCollection[int]()
+	c.Loop(func(i int, v int) bool {
+
+	// Act
+		actual := args.Map{"result": false}
+
+	// Assert
+		expected := args.Map{"result": true}
+		expected.ShouldBeEqual(t, 0, "should not be called", actual)
+		return false
+	})
+}
+
+func Test_115_Collection_LoopAsync(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(3)
+	var mu sync.Mutex
+	sum := 0
+	c.LoopAsync(func(i int, v int) {
+		mu.Lock()
+		sum += v
+		mu.Unlock()
+	})
+
+	// Act
+	actual := args.Map{"result": sum != 6}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 6", actual)
+}
+
+func Test_116_Collection_LoopAsync_Empty(t *testing.T) {
+	// Arrange
+	c := coredynamic.EmptyCollection[int]()
+	c.LoopAsync(func(i int, v int) {
+
+	// Act
+		actual := args.Map{"result": false}
+
+	// Assert
+		expected := args.Map{"result": true}
+		expected.ShouldBeEqual(t, 0, "should not be called", actual)
+	})
+}
+
+func Test_117_Collection_Filter(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(3).Add(4)
+	evens := c.Filter(func(v int) bool { return v%2 == 0 })
+
+	// Act
+	actual := args.Map{"result": evens.Length() != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_118_Collection_Filter_Empty(t *testing.T) {
+	// Arrange
+	c := coredynamic.EmptyCollection[int]()
+	result := c.Filter(func(v int) bool { return true })
+
+	// Act
+	actual := args.Map{"result": result.Length() != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 0", actual)
+}
+
+func Test_119_Collection_GetPagesSize(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](10)
+	for i := 0; i < 10; i++ {
+		c.Add(i)
+	}
+
+	// Act
+	actual := args.Map{"result": c.GetPagesSize(3) != 4}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 4", actual)
+}
+
+func Test_120_Collection_GetPagesSize_Zero(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1)
+
+	// Act
+	actual := args.Map{"result": c.GetPagesSize(0) != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 0", actual)
+}
+
+func Test_121_Collection_GetSinglePageCollection(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](10)
+	for i := 0; i < 10; i++ {
+		c.Add(i)
+	}
+	page := c.GetSinglePageCollection(3, 1)
+
+	// Act
+	actual := args.Map{"result": page.Length() != 3}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 3", actual)
+}
+
+func Test_122_Collection_GetSinglePageCollection_Small(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1)
+	page := c.GetSinglePageCollection(10, 1)
+
+	// Act
+	actual := args.Map{"result": page.Length() != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected same", actual)
+}
+
+func Test_123_Collection_GetPagedCollection(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](10)
+	for i := 0; i < 10; i++ {
+		c.Add(i)
+	}
+	pages := c.GetPagedCollection(3)
+
+	// Act
+	actual := args.Map{"result": len(pages) != 4}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 4", actual)
+}
+
+func Test_124_Collection_GetPagedCollection_Small(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1)
+	pages := c.GetPagedCollection(10)
+
+	// Act
+	actual := args.Map{"result": len(pages) != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_125_Collection_MarshalJSON(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2)
+	b, err := c.MarshalJSON()
+
+	// Act
+	actual := args.Map{"result": err != nil || len(b) == 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected bytes", actual)
+}
+
+func Test_126_Collection_UnmarshalJSON(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	err := c.UnmarshalJSON([]byte(`[1,2,3]`))
+
+	// Act
+	actual := args.Map{"result": err != nil || c.Length() != 3}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 3 items", actual)
+}
+
+func Test_127_Collection_JsonString(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1)
+	s, err := c.JsonString()
+
+	// Act
+	actual := args.Map{"result": err != nil || s == ""}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected json string", actual)
+}
+
+func Test_128_Collection_JsonStringMust(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1)
+	s := c.JsonStringMust()
+
+	// Act
+	actual := args.Map{"result": s == ""}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected non-empty", actual)
+}
+
+func Test_129_Collection_Strings(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2)
+	strs := c.Strings()
+
+	// Act
+	actual := args.Map{"result": len(strs) != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_130_Collection_String(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1)
+	s := c.String()
+
+	// Act
+	actual := args.Map{"result": s == ""}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected non-empty", actual)
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// CollectionLock — thread-safe variants
+// ═══════════════════════════════════════════════════════════════════════
+
+func Test_131_Collection_LengthLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2)
+
+	// Act
+	actual := args.Map{"result": c.LengthLock() != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_132_Collection_IsEmptyLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.EmptyCollection[int]()
+
+	// Act
+	actual := args.Map{"result": c.IsEmptyLock()}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true", actual)
+}
+
+func Test_133_Collection_AddLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.AddLock(42)
+
+	// Act
+	actual := args.Map{"result": c.Length() != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_134_Collection_AddsLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.AddsLock(1, 2, 3)
+
+	// Act
+	actual := args.Map{"result": c.Length() != 3}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 3", actual)
+}
+
+func Test_135_Collection_AddManyLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.AddManyLock(1, 2)
+
+	// Act
+	actual := args.Map{"result": c.Length() != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_136_Collection_AddCollectionLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1)
+	c2 := coredynamic.NewCollection[int](4)
+	c2.Add(2).Add(3)
+	c.AddCollectionLock(c2)
+
+	// Act
+	actual := args.Map{"result": c.Length() != 3}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 3", actual)
+}
+
+func Test_137_Collection_AddCollectionLock_Nil(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1)
+	c.AddCollectionLock(nil)
+
+	// Act
+	actual := args.Map{"result": c.Length() != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_138_Collection_AddCollectionsLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c2 := coredynamic.NewCollection[int](4)
+	c2.Add(1)
+	c3 := coredynamic.NewCollection[int](4)
+	c3.Add(2)
+	c.AddCollectionsLock(c2, nil, c3)
+
+	// Act
+	actual := args.Map{"result": c.Length() != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_139_Collection_AddIfLock_True(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.AddIfLock(true, 42)
+
+	// Act
+	actual := args.Map{"result": c.Length() != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_140_Collection_AddIfLock_False(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.AddIfLock(false, 42)
+
+	// Act
+	actual := args.Map{"result": c.Length() != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 0", actual)
+}
+
+func Test_141_Collection_RemoveAtLock_Valid(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2)
+
+	// Act
+	actual := args.Map{"result": c.RemoveAtLock(0)}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true", actual)
+	actual = args.Map{"result": c.Length() != 1}
+	expected = args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_142_Collection_RemoveAtLock_Invalid(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1)
+
+	// Act
+	actual := args.Map{"result": c.RemoveAtLock(5)}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false", actual)
+}
+
+func Test_143_Collection_ClearLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2)
+	c.ClearLock()
+
+	// Act
+	actual := args.Map{"result": c.Length() != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 0", actual)
+}
+
+func Test_144_Collection_ItemsLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2)
+	items := c.ItemsLock()
+
+	// Act
+	actual := args.Map{"result": len(items) != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_145_Collection_FirstLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(42)
+
+	// Act
+	actual := args.Map{"result": c.FirstLock() != 42}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 42", actual)
+}
+
+func Test_146_Collection_LastLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2)
+
+	// Act
+	actual := args.Map{"result": c.LastLock() != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_147_Collection_AddWithWgLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	wg := &sync.WaitGroup{}
+	wg.Add(1)
+	c.AddWithWgLock(wg, 42)
+	wg.Wait()
+
+	// Act
+	actual := args.Map{"result": c.Length() != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_148_Collection_LoopLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2)
+	sum := 0
+	c.LoopLock(func(i int, v int) bool {
+		sum += v
+		return false
+	})
+
+	// Act
+	actual := args.Map{"result": sum != 3}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 3", actual)
+}
+
+func Test_149_Collection_LoopLock_Break(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(3)
+	count := 0
+	c.LoopLock(func(i int, v int) bool {
+		count++
+		return true
+	})
+
+	// Act
+	actual := args.Map{"result": count != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_150_Collection_FilterLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(3)
+	result := c.FilterLock(func(v int) bool { return v > 1 })
+
+	// Act
+	actual := args.Map{"result": result.Length() != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_151_Collection_StringsLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2)
+	strs := c.StringsLock()
+
+	// Act
+	actual := args.Map{"result": len(strs) != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// CollectionSearch — Contains, IndexOf, Has, HasAll, LastIndexOf, Count
+// ═══════════════════════════════════════════════════════════════════════
+
+func Test_152_Contains(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(3)
+
+	// Act
+	actual := args.Map{"result": coredynamic.Contains(c, 2)}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true", actual)
+	actual = args.Map{"result": coredynamic.Contains(c, 99)}
+	expected = args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false", actual)
+}
+
+func Test_153_IndexOf(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[string](4)
+	c.Add("a").Add("b").Add("c")
+
+	// Act
+	actual := args.Map{"result": coredynamic.IndexOf(c, "b") != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+	actual = args.Map{"result": coredynamic.IndexOf(c, "z") != -1}
+	expected = args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected -1", actual)
+}
+
+func Test_154_Has(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(42)
+
+	// Act
+	actual := args.Map{"result": coredynamic.Has(c, 42)}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true", actual)
+}
+
+func Test_155_HasAll(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(3)
+
+	// Act
+	actual := args.Map{"result": coredynamic.HasAll(c, 1, 3)}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true", actual)
+	actual = args.Map{"result": coredynamic.HasAll(c, 1, 99)}
+	expected = args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false", actual)
+}
+
+func Test_156_HasAll_Empty(t *testing.T) {
+	// Arrange
+	c := coredynamic.EmptyCollection[int]()
+
+	// Act
+	actual := args.Map{"result": coredynamic.HasAll(c, 1)}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false for empty", actual)
+}
+
+func Test_157_LastIndexOf(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(1)
+
+	// Act
+	actual := args.Map{"result": coredynamic.LastIndexOf(c, 1) != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+	actual = args.Map{"result": coredynamic.LastIndexOf(c, 99) != -1}
+	expected = args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected -1", actual)
+}
+
+func Test_158_Count(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(1)
+
+	// Act
+	actual := args.Map{"result": coredynamic.Count(c, 1) != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_159_ContainsLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(42)
+
+	// Act
+	actual := args.Map{"result": coredynamic.ContainsLock(c, 42)}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true", actual)
+}
+
+func Test_160_IndexOfLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2)
+
+	// Act
+	actual := args.Map{"result": coredynamic.IndexOfLock(c, 2) != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// CollectionDistinct
+// ═══════════════════════════════════════════════════════════════════════
+
+func Test_161_Distinct(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(1).Add(3).Add(2)
+	d := coredynamic.Distinct(c)
+
+	// Act
+	actual := args.Map{"result": d.Length() != 3}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 3", actual)
+}
+
+func Test_162_Distinct_Empty(t *testing.T) {
+	// Arrange
+	c := coredynamic.EmptyCollection[int]()
+	d := coredynamic.Distinct(c)
+
+	// Act
+	actual := args.Map{"result": d.Length() != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 0", actual)
+}
+
+func Test_163_Unique(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[string](4)
+	c.Add("a").Add("b").Add("a")
+	u := coredynamic.Unique(c)
+
+	// Act
+	actual := args.Map{"result": u.Length() != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_164_DistinctLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(1).Add(2)
+	d := coredynamic.DistinctLock(c)
+
+	// Act
+	actual := args.Map{"result": d.Length() != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_165_DistinctCount(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(1)
+
+	// Act
+	actual := args.Map{"result": coredynamic.DistinctCount(c) != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_166_DistinctCount_Empty(t *testing.T) {
+	// Arrange
+	c := coredynamic.EmptyCollection[int]()
+
+	// Act
+	actual := args.Map{"result": coredynamic.DistinctCount(c) != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 0", actual)
+}
+
+func Test_167_IsDistinct_True(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(3)
+
+	// Act
+	actual := args.Map{"result": coredynamic.IsDistinct(c)}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected true", actual)
+}
+
+func Test_168_IsDistinct_False(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(1)
+
+	// Act
+	actual := args.Map{"result": coredynamic.IsDistinct(c)}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected false", actual)
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// CollectionGroupBy
+// ═══════════════════════════════════════════════════════════════════════
+
+func Test_169_GroupBy(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(3).Add(4)
+	groups := coredynamic.GroupBy(c, func(v int) string {
+		if v%2 == 0 {
+			return "even"
+		}
+		return "odd"
+	})
+
+	// Act
+	actual := args.Map{"result": len(groups) != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2 groups", actual)
+	actual = args.Map{"result": groups["even"].Length() != 2}
+	expected = args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2 evens", actual)
+}
+
+func Test_170_GroupBy_Nil(t *testing.T) {
+	// Arrange
+	groups := coredynamic.GroupBy[int, string](nil, func(v int) string { return "" })
+
+	// Act
+	actual := args.Map{"result": len(groups) != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected empty", actual)
+}
+
+func Test_171_GroupBy_Empty(t *testing.T) {
+	// Arrange
+	c := coredynamic.EmptyCollection[int]()
+	groups := coredynamic.GroupBy(c, func(v int) string { return "" })
+
+	// Act
+	actual := args.Map{"result": len(groups) != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected empty", actual)
+}
+
+func Test_172_GroupByLock(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2)
+	groups := coredynamic.GroupByLock(c, func(v int) int { return v % 2 })
+
+	// Act
+	actual := args.Map{"result": len(groups) != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2 groups", actual)
+}
+
+func Test_173_GroupByCount(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[string](4)
+	c.Add("a").Add("b").Add("a")
+	counts := coredynamic.GroupByCount(c, func(s string) string { return s })
+
+	// Act
+	actual := args.Map{"result": counts["a"] != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_174_GroupByCount_Nil(t *testing.T) {
+	// Arrange
+	counts := coredynamic.GroupByCount[string, string](nil, func(s string) string { return s })
+
+	// Act
+	actual := args.Map{"result": len(counts) != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected empty", actual)
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// CollectionMap — Map, FlatMap, Reduce
+// ═══════════════════════════════════════════════════════════════════════
+
+func Test_175_Map(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(3)
+	result := coredynamic.Map(c, func(v int) int { return v * 2 })
+
+	// Act
+	actual := args.Map{"result": result.Length() != 3 || result.At(0) != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected doubled", actual)
+}
+
+func Test_176_Map_Nil(t *testing.T) {
+	// Arrange
+	result := coredynamic.Map[int, int](nil, func(v int) int { return v })
+
+	// Act
+	actual := args.Map{"result": result.Length() != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected empty", actual)
+}
+
+func Test_177_Map_Empty(t *testing.T) {
+	// Arrange
+	c := coredynamic.EmptyCollection[int]()
+	result := coredynamic.Map(c, func(v int) int { return v })
+
+	// Act
+	actual := args.Map{"result": result.Length() != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected empty", actual)
+}
+
+func Test_178_FlatMap(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[string](4)
+	c.Add("a,b").Add("c,d")
+	result := coredynamic.FlatMap(c, func(s string) []string {
+		return []string{s + "1", s + "2"}
+	})
+
+	// Act
+	actual := args.Map{"result": result.Length() != 4}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 4", actual)
+}
+
+func Test_179_FlatMap_Nil(t *testing.T) {
+	// Arrange
+	result := coredynamic.FlatMap[int, int](nil, func(v int) []int { return nil })
+
+	// Act
+	actual := args.Map{"result": result.Length() != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected empty", actual)
+}
+
+func Test_180_Reduce(t *testing.T) {
+	// Arrange
+	c := coredynamic.NewCollection[int](4)
+	c.Add(1).Add(2).Add(3)
+	sum := coredynamic.Reduce(c, 0, func(acc int, v int) int { return acc + v })
+
+	// Act
+	actual := args.Map{"result": sum != 6}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 6", actual)
+}
+
+func Test_181_Reduce_Nil(t *testing.T) {
+	// Arrange
+	result := coredynamic.Reduce[int, int](nil, 42, func(acc int, v int) int { return acc + v })
+
+	// Act
+	actual := args.Map{"result": result != 42}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected initial value", actual)
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// AnyCollection — extended methods
+// ═══════════════════════════════════════════════════════════════════════
+
+func Test_182_AnyCollection_AtAsDynamic(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(42)
+	d := ac.AtAsDynamic(0)
+
+	// Act
+	actual := args.Map{"result": d.Value() != 42}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 42", actual)
+}
+
+func Test_183_AnyCollection_DynamicItems(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1).Add(2)
+	items := ac.DynamicItems()
+
+	// Act
+	actual := args.Map{"result": len(items) != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_184_AnyCollection_DynamicItems_Empty(t *testing.T) {
+	// Arrange
+	ac := coredynamic.EmptyAnyCollection()
+	items := ac.DynamicItems()
+
+	// Act
+	actual := args.Map{"result": len(items) != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 0", actual)
+}
+
+func Test_185_AnyCollection_DynamicCollection(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1)
+	dc := ac.DynamicCollection()
+
+	// Act
+	actual := args.Map{"result": dc.Length() != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_186_AnyCollection_DynamicCollection_Empty(t *testing.T) {
+	// Arrange
+	ac := coredynamic.EmptyAnyCollection()
+	dc := ac.DynamicCollection()
+
+	// Act
+	actual := args.Map{"result": dc.Length() != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 0", actual)
+}
+
+func Test_187_AnyCollection_ReflectSetAt(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(42)
+	var target int
+	err := ac.ReflectSetAt(0, &target)
+
+	// Act
+	actual := args.Map{"result": err != nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "unexpected:", actual)
+}
+
+func Test_188_AnyCollection_ListStrings(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add("hello").Add(42)
+	strs := ac.ListStrings(false)
+
+	// Act
+	actual := args.Map{"result": len(strs) != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_189_AnyCollection_ListStringsPtr(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add("x")
+	strs := ac.ListStringsPtr(true)
+
+	// Act
+	actual := args.Map{"result": len(strs) != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_190_AnyCollection_Loop_Sync(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1).Add(2)
+	count := 0
+	ac.Loop(false, func(i int, item any) bool {
+		count++
+		return false
+	})
+
+	// Act
+	actual := args.Map{"result": count != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_191_AnyCollection_Loop_Sync_Break(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1).Add(2).Add(3)
+	count := 0
+	ac.Loop(false, func(i int, item any) bool {
+		count++
+		return true
+	})
+
+	// Act
+	actual := args.Map{"result": count != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_192_AnyCollection_Loop_Async(t *testing.T) {
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1).Add(2)
+	ac.Loop(true, func(i int, item any) bool {
+		return false
+	})
+	// just ensure no panic
+}
+
+func Test_193_AnyCollection_Loop_Empty(t *testing.T) {
+	// Arrange
+	ac := coredynamic.EmptyAnyCollection()
+	ac.Loop(false, func(i int, item any) bool {
+
+	// Act
+		actual := args.Map{"result": false}
+
+	// Assert
+		expected := args.Map{"result": true}
+		expected.ShouldBeEqual(t, 0, "should not be called", actual)
+		return false
+	})
+}
+
+func Test_194_AnyCollection_LoopDynamic_Sync(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1).Add(2)
+	count := 0
+	ac.LoopDynamic(false, func(i int, d coredynamic.Dynamic) bool {
+		count++
+		return false
+	})
+
+	// Act
+	actual := args.Map{"result": count != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_195_AnyCollection_LoopDynamic_Sync_Break(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1).Add(2)
+	count := 0
+	ac.LoopDynamic(false, func(i int, d coredynamic.Dynamic) bool {
+		count++
+		return true
+	})
+
+	// Act
+	actual := args.Map{"result": count != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_196_AnyCollection_LoopDynamic_Async(t *testing.T) {
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1).Add(2)
+	ac.LoopDynamic(true, func(i int, d coredynamic.Dynamic) bool {
+		return false
+	})
+}
+
+func Test_197_AnyCollection_LoopDynamic_Empty(t *testing.T) {
+	// Arrange
+	ac := coredynamic.EmptyAnyCollection()
+	ac.LoopDynamic(false, func(i int, d coredynamic.Dynamic) bool {
+
+	// Act
+		actual := args.Map{"result": false}
+
+	// Assert
+		expected := args.Map{"result": true}
+		expected.ShouldBeEqual(t, 0, "should not be called", actual)
+		return false
+	})
+}
+
+func Test_198_AnyCollection_AddAny(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.AddAny(42, true)
+
+	// Act
+	actual := args.Map{"result": ac.Length() != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_199_AnyCollection_AddNonNull(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.AddNonNull(nil)
+	ac.AddNonNull(42)
+
+	// Act
+	actual := args.Map{"result": ac.Length() != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_200_AnyCollection_AddNonNullDynamic(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.AddNonNullDynamic(nil, true)
+	ac.AddNonNullDynamic(42, true)
+
+	// Act
+	actual := args.Map{"result": ac.Length() != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_201_AnyCollection_AddAnyManyDynamic(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.AddAnyManyDynamic(1, 2, 3)
+
+	// Act
+	actual := args.Map{"result": ac.Length() != 3}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 3", actual)
+}
+
+func Test_202_AnyCollection_AddAnyManyDynamic_Nil(t *testing.T) {
+	ac := coredynamic.NewAnyCollection(4)
+	ac.AddAnyManyDynamic(nil)
+	// nil variadic should skip
+}
+
+func Test_203_AnyCollection_AddAnySliceFromSingleItem(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.AddAnySliceFromSingleItem([]int{1, 2, 3})
+
+	// Act
+	actual := args.Map{"result": ac.Length() != 3}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 3", actual)
+}
+
+func Test_204_AnyCollection_AddAnySliceFromSingleItem_Nil(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.AddAnySliceFromSingleItem(nil)
+
+	// Act
+	actual := args.Map{"result": ac.Length() != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 0", actual)
+}
+
+func Test_205_AnyCollection_AddMany(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.AddMany(1, nil, 3)
+
+	// Act
+	actual := args.Map{"result": ac.Length() != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2 (nil skipped)", actual)
+}
+
+func Test_206_AnyCollection_AddMany_NilVariadic(t *testing.T) {
+	ac := coredynamic.NewAnyCollection(4)
+	ac.AddMany(nil)
+	// nil variadic should skip
+}
+
+func Test_207_AnyCollection_AddAnyWithTypeValidation_Valid(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	err := ac.AddAnyWithTypeValidation(false, reflect.TypeOf(0), 42)
+
+	// Act
+	actual := args.Map{"result": err != nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "unexpected:", actual)
+}
+
+func Test_208_AnyCollection_AddAnyWithTypeValidation_Invalid(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	err := ac.AddAnyWithTypeValidation(false, reflect.TypeOf(0), "str")
+
+	// Act
+	actual := args.Map{"result": err == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected error", actual)
+}
+
+func Test_209_AnyCollection_AddAnyItemsWithTypeValidation_Continue(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	err := ac.AddAnyItemsWithTypeValidation(true, false, reflect.TypeOf(0), 1, "bad", 3)
+
+	// Act
+	actual := args.Map{"result": err == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected error", actual)
+}
+
+func Test_210_AnyCollection_AddAnyItemsWithTypeValidation_Stop(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	err := ac.AddAnyItemsWithTypeValidation(false, false, reflect.TypeOf(0), 1, "bad", 3)
+
+	// Act
+	actual := args.Map{"result": err == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected error", actual)
+}
+
+func Test_211_AnyCollection_AddAnyItemsWithTypeValidation_Empty(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	err := ac.AddAnyItemsWithTypeValidation(false, false, reflect.TypeOf(0))
+
+	// Act
+	actual := args.Map{"result": err != nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected nil", actual)
+}
+
+func Test_212_AnyCollection_Paging(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(10)
+	for i := 0; i < 10; i++ {
+		ac.Add(i)
+	}
+
+	// Act
+	actual := args.Map{"result": ac.GetPagesSize(3) != 4}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 4 pages", actual)
+	actual = args.Map{"result": ac.GetPagesSize(0) != 0}
+	expected = args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 0 for zero page size", actual)
+}
+
+func Test_213_AnyCollection_GetSinglePageCollection(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(10)
+	for i := 0; i < 10; i++ {
+		ac.Add(i)
+	}
+	page := ac.GetSinglePageCollection(3, 1)
+
+	// Act
+	actual := args.Map{"result": page.Length() != 3}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 3", actual)
+}
+
+func Test_214_AnyCollection_GetSinglePageCollection_Small(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1)
+	page := ac.GetSinglePageCollection(10, 1)
+
+	// Act
+	actual := args.Map{"result": page.Length() != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected same", actual)
+}
+
+func Test_215_AnyCollection_GetPagedCollection(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(10)
+	for i := 0; i < 10; i++ {
+		ac.Add(i)
+	}
+	pages := ac.GetPagedCollection(3)
+
+	// Act
+	actual := args.Map{"result": len(pages) == 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected pages", actual)
+}
+
+func Test_216_AnyCollection_GetPagedCollection_Small(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1)
+	pages := ac.GetPagedCollection(10)
+
+	// Act
+	actual := args.Map{"result": len(pages) != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_217_AnyCollection_Json(t *testing.T) {
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1)
+	j := ac.Json()
+	_ = j
+}
+
+func Test_218_AnyCollection_JsonPtr(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1)
+	jp := ac.JsonPtr()
+
+	// Act
+	actual := args.Map{"result": jp == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected non-nil", actual)
+}
+
+func Test_219_AnyCollection_JsonModel(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1)
+	m := ac.JsonModel()
+
+	// Act
+	actual := args.Map{"result": len(m) != 1}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 1", actual)
+}
+
+func Test_220_AnyCollection_JsonModelAny(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1)
+	v := ac.JsonModelAny()
+
+	// Act
+	actual := args.Map{"result": v == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected non-nil", actual)
+}
+
+func Test_221_AnyCollection_MarshalJSON(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(42)
+	b, err := ac.MarshalJSON()
+
+	// Act
+	actual := args.Map{"result": err != nil || len(b) == 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected bytes", actual)
+}
+
+func Test_222_AnyCollection_UnmarshalJSON(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	err := ac.UnmarshalJSON([]byte(`[1,2,3]`))
+
+	// Act
+	actual := args.Map{"result": err != nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected success", actual)
+}
+
+func Test_223_AnyCollection_UnmarshalJSON_Bad(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	err := ac.UnmarshalJSON([]byte(`not json`))
+
+	// Act
+	actual := args.Map{"result": err == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected error", actual)
+}
+
+func Test_224_AnyCollection_JsonResultsCollection(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1)
+	rc := ac.JsonResultsCollection()
+
+	// Act
+	actual := args.Map{"result": rc == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected non-nil", actual)
+}
+
+func Test_225_AnyCollection_JsonResultsCollection_Empty(t *testing.T) {
+	// Arrange
+	ac := coredynamic.EmptyAnyCollection()
+	rc := ac.JsonResultsCollection()
+
+	// Act
+	actual := args.Map{"result": rc == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected non-nil", actual)
+}
+
+func Test_226_AnyCollection_JsonResultsPtrCollection(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1)
+	rc := ac.JsonResultsPtrCollection()
+
+	// Act
+	actual := args.Map{"result": rc == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected non-nil", actual)
+}
+
+func Test_227_AnyCollection_JsonResultsPtrCollection_Empty(t *testing.T) {
+	// Arrange
+	ac := coredynamic.EmptyAnyCollection()
+	rc := ac.JsonResultsPtrCollection()
+
+	// Act
+	actual := args.Map{"result": rc == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected non-nil", actual)
+}
+
+func Test_228_AnyCollection_ParseInjectUsingJson(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1)
+	jp := ac.JsonPtr()
+	ac2 := coredynamic.NewAnyCollection(4)
+	_, err := ac2.ParseInjectUsingJson(jp)
+
+	// Act
+	actual := args.Map{"result": err == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected error for AnyCollection JSON payload {}", actual)
+}
+
+func Test_229_AnyCollection_ParseInjectUsingJson_Bad(t *testing.T) {
+	// Arrange
+	badJson := corejson.NewPtr("not an any collection")
+	ac := coredynamic.NewAnyCollection(4)
+	_, err := ac.ParseInjectUsingJson(badJson)
+
+	// Act
+	actual := args.Map{"result": err == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected error", actual)
+}
+
+func Test_230_AnyCollection_ParseInjectUsingJsonMust(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1)
+	jp := ac.JsonPtr()
+	ac2 := coredynamic.NewAnyCollection(4)
+	panicked := false
+
+	func() {
+		defer func() {
+			if recover() != nil {
+				panicked = true
+			}
+		}()
+
+		_ = ac2.ParseInjectUsingJsonMust(jp)
+	}()
+
+	// Act
+	actual := args.Map{"result": panicked}
+
+	// Assert
+	expected := args.Map{"result": true}
+	expected.ShouldBeEqual(t, 0, "expected panic for AnyCollection JSON payload {}", actual)
+}
+
+func Test_231_AnyCollection_JsonParseSelfInject(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1)
+	jp := ac.JsonPtr()
+	ac2 := coredynamic.NewAnyCollection(4)
+	err := ac2.JsonParseSelfInject(jp)
+
+	// Act
+	actual := args.Map{"result": err == nil}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected error for AnyCollection JSON payload {}", actual)
+}
+
+func Test_232_AnyCollection_Strings(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1).Add("x")
+	strs := ac.Strings()
+
+	// Act
+	actual := args.Map{"result": len(strs) != 2}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 2", actual)
+}
+
+func Test_233_AnyCollection_Strings_Empty(t *testing.T) {
+	// Arrange
+	ac := coredynamic.EmptyAnyCollection()
+	strs := ac.Strings()
+
+	// Act
+	actual := args.Map{"result": len(strs) != 0}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 0", actual)
+}
+
+func Test_234_AnyCollection_String(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(4)
+	ac.Add(1)
+	s := ac.String()
+
+	// Act
+	actual := args.Map{"result": s == ""}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected non-empty", actual)
+}
+
+func Test_235_AnyCollection_GetPagingInfo(t *testing.T) {
+	// Arrange
+	ac := coredynamic.NewAnyCollection(10)
+	for i := 0; i < 10; i++ {
+		ac.Add(i)
+	}
+	info := ac.GetPagingInfo(3, 1)
+
+	// Act
+	actual := args.Map{"result": info.TotalPages != 4}
+
+	// Assert
+	expected := args.Map{"result": false}
+	expected.ShouldBeEqual(t, 0, "expected 4 total pages", actual)
+}
