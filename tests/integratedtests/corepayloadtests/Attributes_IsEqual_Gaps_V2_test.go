@@ -556,7 +556,7 @@ func Test_PayloadsCollection_ParseInjectUsingJsonMust_Panic(t *testing.T) {
 
 func Test_TypedPayloadCollection_FirstByFilter_NoMatch(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	result := col.FirstByFilter(func(item *corepayload.TypedPayloadWrapper[testUserTyped]) bool {
@@ -573,7 +573,7 @@ func Test_TypedPayloadCollection_FirstByFilter_NoMatch(t *testing.T) {
 
 func Test_TypedPayloadCollection_CloneMust_Success(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	cloned := col.CloneMust()
@@ -588,7 +588,7 @@ func Test_TypedPayloadCollection_CloneMust_Success(t *testing.T) {
 
 func Test_TypedPayloadCollection_ConcatNew(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 	extra := makeTypedWrapper("user", "4", testUserTyped{Name: "Dave"})
 
 	// Act
@@ -633,7 +633,7 @@ func Test_TypedPayloadCollection_HasErrors_True(t *testing.T) {
 
 func Test_TypedPayloadCollection_Errors_Empty(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	errs := col.Errors()
@@ -648,7 +648,7 @@ func Test_TypedPayloadCollection_Errors_Empty(t *testing.T) {
 
 func Test_TypedPayloadCollection_FirstError_Nil(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	err := col.FirstError()
@@ -663,7 +663,7 @@ func Test_TypedPayloadCollection_FirstError_Nil(t *testing.T) {
 
 func Test_TypedPayloadCollection_MergedError_Nil(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	err := col.MergedError()
