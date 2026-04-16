@@ -42,7 +42,7 @@ func Test_ValidValue_New_FromValidValueNew(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_UsingAny(t *testing.T) {
+func Test_ValidValue_UsingAny_ValidvalueNew(t *testing.T) {
 	safeTest(t, "Test_ValidValue_UsingAny", func() {
 		// Arrange
 		vv := corestr.NewValidValueUsingAny(false, true, 42)
@@ -532,7 +532,7 @@ func Test_ValidValues_Find_FromValidValueNew(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_Adds(t *testing.T) {
+func Test_ValidValues_Adds_ValidvalueNew(t *testing.T) {
 	safeTest(t, "Test_ValidValues_Adds", func() {
 		// Arrange
 		vvs := corestr.NewValidValues(5)
@@ -1724,7 +1724,7 @@ func Test_KeyValueCollection_HashmapMap(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_Json(t *testing.T) {
+func Test_KeyValueCollection_Json_ValidvalueNew(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_Json", func() {
 		// Arrange
 		kvc := &corestr.KeyValueCollection{}

@@ -339,7 +339,7 @@ func Test_RawErrorType_Expecting_FromRawErrorTypeStringV2(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "RawErrorType.Expecting returns error -- with args", actual)
 }
 
-func Test_RawErrorType_NoRef_EmptyMsg(t *testing.T) {
+func Test_RawErrorType_NoRef_EmptyMsg_RawerrortypeStringV2(t *testing.T) {
 	// Arrange
 	result := errcore.InvalidRequestType.NoRef("")
 
@@ -375,7 +375,7 @@ func Test_RawErrorType_ErrorNoRefs_FromRawErrorTypeStringV2(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "RawErrorType.ErrorNoRefs returns error -- with msg", actual)
 }
 
-func Test_RawErrorType_ErrorNoRefs_EmptyMsg(t *testing.T) {
+func Test_RawErrorType_ErrorNoRefs_EmptyMsg_RawerrortypeStringV2(t *testing.T) {
 	// Arrange
 	err := errcore.InvalidRequestType.ErrorNoRefs("")
 
@@ -466,7 +466,7 @@ func Test_GetSetVariant_False_FromRawErrorTypeStringV2(t *testing.T) {
 
 // ── VarTwo / VarThree ──
 
-func Test_VarTwo_WithType(t *testing.T) {
+func Test_VarTwo_WithType_RawerrortypeStringV2(t *testing.T) {
 	// Arrange
 	result := errcore.VarTwo(true, "a", 1, "b", 2)
 
@@ -490,7 +490,7 @@ func Test_VarTwo_NoType(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "VarTwo returns formatted -- no type", actual)
 }
 
-func Test_VarThree_WithType(t *testing.T) {
+func Test_VarThree_WithType_RawerrortypeStringV2(t *testing.T) {
 	// Arrange
 	result := errcore.VarThree(true, "a", 1, "b", 2, "c", 3)
 
@@ -561,7 +561,7 @@ func Test_VarMap_NonEmpty_FromRawErrorTypeStringV2(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "VarMap returns formatted -- with entries", actual)
 }
 
-func Test_MessageVarMap_Empty(t *testing.T) {
+func Test_MessageVarMap_Empty_RawerrortypeStringV2(t *testing.T) {
 	// Act
 	actual := args.Map{"result": errcore.MessageVarMap("msg", nil)}
 
@@ -689,7 +689,7 @@ func Test_ExpectingSimpleNoType_FromRawErrorTypeStringV2(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ExpectingSimpleNoType returns formatted -- with args", actual)
 }
 
-func Test_ExpectingErrorSimpleNoType(t *testing.T) {
+func Test_ExpectingErrorSimpleNoType_RawerrortypeStringV2(t *testing.T) {
 	// Arrange
 	err := errcore.ExpectingErrorSimpleNoType("title", "exp", "act")
 
@@ -1690,7 +1690,7 @@ func Test_RawErrCollection_AddWithRef_FromRawErrorTypeStringV2(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "RawErrCollection.AddWithRef filters nil -- with ref", actual)
 }
 
-func Test_RawErrCollection_ClearDispose(t *testing.T) {
+func Test_RawErrCollection_ClearDispose_RawerrortypeStringV2(t *testing.T) {
 	// Arrange
 	c := &errcore.RawErrCollection{}
 	c.Add(errors.New("e1"))
@@ -1845,7 +1845,7 @@ func Test_RawErrCollection_HandleEmpty(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "RawErrCollection.Handle completes safely -- empty collection", actual)
 }
 
-func Test_RawErrCollection_IsErrorsCollected(t *testing.T) {
+func Test_RawErrCollection_IsErrorsCollected_RawerrortypeStringV2(t *testing.T) {
 	// Arrange
 	c := &errcore.RawErrCollection{}
 	changed := c.IsErrorsCollected(errors.New("e"))

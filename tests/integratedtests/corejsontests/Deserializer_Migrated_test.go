@@ -639,7 +639,7 @@ func Test_Deserialize_UsingErrorWhichJsonResult(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected nil", actual)
 }
 
-func Test_Deserialize_FromTo(t *testing.T) {
+func Test_Deserialize_FromTo_DeserializerMigrated(t *testing.T) {
 	// Arrange
 	var out string
 	err := corejson.Deserialize.FromTo([]byte(`"hello"`), &out)

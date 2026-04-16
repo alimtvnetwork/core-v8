@@ -10,7 +10,7 @@ import (
 
 // ═══ ValidValue ═══
 
-func Test_ValidValue_Constructors(t *testing.T) {
+func Test_ValidValue_Constructors_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Constructors", func() {
 		// Arrange
 		v1 := corestr.NewValidValue("hello")
@@ -44,7 +44,7 @@ func Test_ValidValue_Constructors(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Methods(t *testing.T) {
+func Test_ValidValue_Methods_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Methods", func() {
 		// Arrange
 		v := corestr.NewValidValue("hello")
@@ -162,7 +162,7 @@ func Test_ValidValue_NumericConversions(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Regex(t *testing.T) {
+func Test_ValidValue_Regex_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Regex", func() {
 		// Arrange
 		v := corestr.NewValidValue("hello123")
@@ -200,7 +200,7 @@ func Test_ValidValue_Regex(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Split(t *testing.T) {
+func Test_ValidValue_Split_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Split", func() {
 		// Arrange
 		v := corestr.NewValidValue("a,b,c")
@@ -216,7 +216,7 @@ func Test_ValidValue_Split(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ValueBytesOnce(t *testing.T) {
+func Test_ValidValue_ValueBytesOnce_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_ValidValue_ValueBytesOnce", func() {
 		// Arrange
 		v := corestr.NewValidValue("hi")
@@ -260,7 +260,7 @@ func Test_ValidValue_Clone_Clear_Dispose(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_String_FullString(t *testing.T) {
+func Test_ValidValue_String_FullString_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_ValidValue_String_FullString", func() {
 		// Arrange
 		v := corestr.NewValidValue("hi")
@@ -284,7 +284,7 @@ func Test_ValidValue_String_FullString(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_JSON(t *testing.T) {
+func Test_ValidValue_JSON_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_ValidValue_JSON", func() {
 		// Arrange
 		v := corestr.NewValidValue("hi")
@@ -309,7 +309,7 @@ func Test_ValidValue_JSON(t *testing.T) {
 
 // ═══ ValidValues ═══
 
-func Test_ValidValues(t *testing.T) {
+func Test_ValidValues_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_ValidValues", func() {
 		// Arrange
 		vv := corestr.NewValidValues(5)
@@ -368,7 +368,7 @@ func Test_ValidValues(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_Add(t *testing.T) {
+func Test_ValidValues_Add_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_ValidValues_Add", func() {
 		// Arrange
 		vv := corestr.NewValidValues(5)
@@ -395,7 +395,7 @@ func Test_ValidValues_Add(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_ConcatNew(t *testing.T) {
+func Test_ValidValues_ConcatNew_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_ValidValues_ConcatNew", func() {
 		// Arrange
 		vv := corestr.NewValidValues(2)
@@ -421,7 +421,7 @@ func Test_ValidValues_ConcatNew(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_Find(t *testing.T) {
+func Test_ValidValues_Find_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_ValidValues_Find", func() {
 		// Arrange
 		vv := corestr.NewValidValues(3)
@@ -446,7 +446,7 @@ func Test_ValidValues_Find(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_Hashmap_Map(t *testing.T) {
+func Test_ValidValues_Hashmap_Map_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_ValidValues_Hashmap_Map", func() {
 		// Arrange
 		vv := corestr.NewValidValues(2)
@@ -472,7 +472,7 @@ func Test_ValidValues_Hashmap_Map(t *testing.T) {
 
 // ═══ ValueStatus ═══
 
-func Test_ValueStatus(t *testing.T) {
+func Test_ValueStatus_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_ValueStatus", func() {
 		// Arrange
 		vs := corestr.InvalidValueStatus("bad")
@@ -496,7 +496,7 @@ func Test_ValueStatus(t *testing.T) {
 
 // ═══ KeyValuePair ═══
 
-func Test_KeyValuePair(t *testing.T) {
+func Test_KeyValuePair_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "k", Value: "v"}
@@ -608,7 +608,7 @@ func Test_KeyValuePair_Numeric(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_JSON(t *testing.T) {
+func Test_KeyValuePair_JSON_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_JSON", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "k", Value: "v"}
@@ -631,7 +631,7 @@ func Test_KeyValuePair_JSON(t *testing.T) {
 
 // ═══ KeyValueCollection ═══
 
-func Test_KeyValueCollection(t *testing.T) {
+func Test_KeyValueCollection_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Cap(5)
@@ -730,7 +730,7 @@ func Test_KeyValueCollection_AddMethods(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_Find(t *testing.T) {
+func Test_KeyValueCollection_Find_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_Find", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Cap(3)
@@ -748,7 +748,7 @@ func Test_KeyValueCollection_Find(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_JSON(t *testing.T) {
+func Test_KeyValueCollection_JSON_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_JSON", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Cap(2)
@@ -783,7 +783,7 @@ func Test_KeyValueCollection_JSON(t *testing.T) {
 
 // ═══ KeyAnyValuePair ═══
 
-func Test_KeyAnyValuePair(t *testing.T) {
+func Test_KeyAnyValuePair_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_KeyAnyValuePair", func() {
 		// Arrange
 		kav := corestr.KeyAnyValuePair{Key: "k", Value: 42}
@@ -886,7 +886,7 @@ func Test_KeyAnyValuePair_JSON(t *testing.T) {
 
 // ═══ LeftRight ═══
 
-func Test_LeftRight(t *testing.T) {
+func Test_LeftRight_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_LeftRight", func() {
 		// Arrange
 		lr := corestr.NewLeftRight("left", "right")
@@ -950,7 +950,7 @@ func Test_LeftRight(t *testing.T) {
 	})
 }
 
-func Test_LeftRight_IsEqual(t *testing.T) {
+func Test_LeftRight_IsEqual_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_LeftRight_IsEqual", func() {
 		// Arrange
 		a := corestr.NewLeftRight("a", "b")
@@ -975,7 +975,7 @@ func Test_LeftRight_IsEqual(t *testing.T) {
 	})
 }
 
-func Test_LeftRight_Clone(t *testing.T) {
+func Test_LeftRight_Clone_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_LeftRight_Clone", func() {
 		// Arrange
 		lr := corestr.NewLeftRight("a", "b")
@@ -990,7 +990,7 @@ func Test_LeftRight_Clone(t *testing.T) {
 	})
 }
 
-func Test_LeftRight_Regex(t *testing.T) {
+func Test_LeftRight_Regex_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_LeftRight_Regex", func() {
 		// Arrange
 		lr := corestr.NewLeftRight("hello", "world")
@@ -1014,7 +1014,7 @@ func Test_LeftRight_Regex(t *testing.T) {
 	})
 }
 
-func Test_LeftRight_FromSlice(t *testing.T) {
+func Test_LeftRight_FromSlice_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_LeftRight_FromSlice", func() {
 		// Arrange
 		lr := corestr.LeftRightUsingSlice([]string{"a", "b"})
@@ -1064,7 +1064,7 @@ func Test_LeftRight_FromSlice(t *testing.T) {
 
 // ═══ LeftMiddleRight ═══
 
-func Test_LeftMiddleRight(t *testing.T) {
+func Test_LeftMiddleRight_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_LeftMiddleRight", func() {
 		// Arrange
 		lmr := corestr.NewLeftMiddleRight("l", "m", "r")
@@ -1146,7 +1146,7 @@ func Test_LeftMiddleRight(t *testing.T) {
 
 // ═══ Utility functions ═══
 
-func Test_CloneSlice(t *testing.T) {
+func Test_CloneSlice_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_CloneSlice", func() {
 		// Arrange
 		r := corestr.CloneSlice([]string{"a", "b"})
@@ -1164,7 +1164,7 @@ func Test_CloneSlice(t *testing.T) {
 	})
 }
 
-func Test_CloneSliceIf(t *testing.T) {
+func Test_CloneSliceIf_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_CloneSliceIf", func() {
 		// Arrange
 		r := corestr.CloneSliceIf(true, "a", "b")
@@ -1186,7 +1186,7 @@ func Test_CloneSliceIf(t *testing.T) {
 	})
 }
 
-func Test_AnyToString(t *testing.T) {
+func Test_AnyToString_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_AnyToString", func() {
 		// Arrange
 		r := corestr.AnyToString(false, "hello")
@@ -1208,7 +1208,7 @@ func Test_AnyToString(t *testing.T) {
 	})
 }
 
-func Test_AllIndividualStringsOfStringsLength(t *testing.T) {
+func Test_AllIndividualStringsOfStringsLength_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_AllIndividualStringsOfStringsLength", func() {
 		// Arrange
 		s := [][]string{{"a", "b"}, {"c"}}
@@ -1226,7 +1226,7 @@ func Test_AllIndividualStringsOfStringsLength(t *testing.T) {
 	})
 }
 
-func Test_AllIndividualsLengthOfSimpleSlices(t *testing.T) {
+func Test_AllIndividualsLengthOfSimpleSlices_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_AllIndividualsLengthOfSimpleSlices", func() {
 		// Arrange
 		ss1 := corestr.New.SimpleSlice.Lines("a", "b")
@@ -1245,7 +1245,7 @@ func Test_AllIndividualsLengthOfSimpleSlices(t *testing.T) {
 	})
 }
 
-func Test_StringUtils(t *testing.T) {
+func Test_StringUtils_ValidvalueTypesRemaining(t *testing.T) {
 	safeTest(t, "Test_StringUtils", func() {
 		// Arrange
 		u := corestr.StringUtils

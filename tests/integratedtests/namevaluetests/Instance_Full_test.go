@@ -9,7 +9,7 @@ import (
 
 // ── Instance ──
 
-func Test_Instance_IsNull(t *testing.T) {
+func Test_Instance_IsNull_InstanceFull(t *testing.T) {
 	// Arrange
 	inst := namevalue.StringAny{Name: "k", Value: "v"}
 	var nilInst *namevalue.StringAny
@@ -41,7 +41,7 @@ func Test_Instance_String(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected non-empty string", actual)
 }
 
-func Test_Instance_JsonString(t *testing.T) {
+func Test_Instance_JsonString_InstanceFull(t *testing.T) {
 	// Arrange
 	inst := namevalue.StringAny{Name: "key", Value: "val"}
 	js := inst.JsonString()
@@ -54,7 +54,7 @@ func Test_Instance_JsonString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected non-empty json", actual)
 }
 
-func Test_Instance_Dispose(t *testing.T) {
+func Test_Instance_Dispose_InstanceFull(t *testing.T) {
 	// Arrange
 	inst := namevalue.StringAny{Name: "key", Value: "val"}
 	inst.Dispose()
@@ -91,7 +91,7 @@ func Test_NewGenericCollection(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "NewGenericCollection returns correct value -- with args", actual)
 }
 
-func Test_NewGenericCollectionDefault(t *testing.T) {
+func Test_NewGenericCollectionDefault_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.NewGenericCollectionDefault[string, any]()
 
@@ -103,7 +103,7 @@ func Test_NewGenericCollectionDefault(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected non-nil", actual)
 }
 
-func Test_EmptyGenericCollection(t *testing.T) {
+func Test_EmptyGenericCollection_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.EmptyGenericCollection[string, any]()
 
@@ -146,7 +146,7 @@ func Test_NewGenericCollectionUsing(t *testing.T) {
 
 // ── NameValuesCollection constructors ──
 
-func Test_NewNameValuesCollection(t *testing.T) {
+func Test_NewNameValuesCollection_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.NewNameValuesCollection(5)
 
@@ -158,7 +158,7 @@ func Test_NewNameValuesCollection(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected non-nil", actual)
 }
 
-func Test_NewCollection(t *testing.T) {
+func Test_NewCollection_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.NewCollection()
 
@@ -170,7 +170,7 @@ func Test_NewCollection(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected non-nil", actual)
 }
 
-func Test_NewNewNameValuesCollectionUsing(t *testing.T) {
+func Test_NewNewNameValuesCollectionUsing_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.NewNewNameValuesCollectionUsing(true, namevalue.StringAny{Name: "x", Value: 1})
 
@@ -182,7 +182,7 @@ func Test_NewNewNameValuesCollectionUsing(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 1", actual)
 }
 
-func Test_EmptyNameValuesCollection(t *testing.T) {
+func Test_EmptyNameValuesCollection_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.EmptyNameValuesCollection()
 
@@ -223,7 +223,7 @@ func Test_Collection_Adds(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 2", actual)
 }
 
-func Test_Collection_Append(t *testing.T) {
+func Test_Collection_Append_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.NewCollection()
 	c.Append(namevalue.StringAny{Name: "a", Value: 1})
@@ -252,7 +252,7 @@ func Test_Collection_AppendIf(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 1", actual)
 }
 
-func Test_Collection_Prepend(t *testing.T) {
+func Test_Collection_Prepend_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.NewCollection()
 	c.Add(namevalue.StringAny{Name: "b", Value: 2})
@@ -283,7 +283,7 @@ func Test_Collection_PrependIf(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 2", actual)
 }
 
-func Test_Collection_PrependUsingFuncIf(t *testing.T) {
+func Test_Collection_PrependUsingFuncIf_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.NewCollection()
 	c.Add(namevalue.StringAny{Name: "b", Value: 2})
@@ -303,7 +303,7 @@ func Test_Collection_PrependUsingFuncIf(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 2", actual)
 }
 
-func Test_Collection_AppendUsingFuncIf(t *testing.T) {
+func Test_Collection_AppendUsingFuncIf_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.NewCollection()
 	c.AppendUsingFuncIf(true, func() []namevalue.StringAny {
@@ -322,7 +322,7 @@ func Test_Collection_AppendUsingFuncIf(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 1", actual)
 }
 
-func Test_Collection_AppendPrependIf(t *testing.T) {
+func Test_Collection_AppendPrependIf_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.NewCollection()
 	c.Add(namevalue.StringAny{Name: "mid", Value: 0})
@@ -341,7 +341,7 @@ func Test_Collection_AppendPrependIf(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 3", actual)
 }
 
-func Test_Collection_AddsPtr(t *testing.T) {
+func Test_Collection_AddsPtr_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.NewCollection()
 	item := namevalue.StringAny{Name: "a", Value: 1}
@@ -356,7 +356,7 @@ func Test_Collection_AddsPtr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 1", actual)
 }
 
-func Test_Collection_AddsIf(t *testing.T) {
+func Test_Collection_AddsIf_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.NewCollection()
 	c.AddsIf(true, namevalue.StringAny{Name: "a", Value: 1})
@@ -435,7 +435,7 @@ func Test_Collection_Strings(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 1", actual)
 }
 
-func Test_Collection_JsonStrings(t *testing.T) {
+func Test_Collection_JsonStrings_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.NewCollection()
 	c.Add(namevalue.StringAny{Name: "a", Value: 1})
@@ -449,7 +449,7 @@ func Test_Collection_JsonStrings(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 1", actual)
 }
 
-func Test_Collection_JoinJsonStrings(t *testing.T) {
+func Test_Collection_JoinJsonStrings_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.NewCollection()
 	c.Add(namevalue.StringAny{Name: "a", Value: 1})
@@ -483,19 +483,19 @@ func Test_Collection_JoinLines(t *testing.T) {
 	_ = c.JoinLines()
 }
 
-func Test_Collection_JoinCsv(t *testing.T) {
+func Test_Collection_JoinCsv_InstanceFull(t *testing.T) {
 	c := namevalue.NewCollection()
 	c.Add(namevalue.StringAny{Name: "a", Value: 1})
 	_ = c.JoinCsv()
 }
 
-func Test_Collection_JoinCsvLine(t *testing.T) {
+func Test_Collection_JoinCsvLine_InstanceFull(t *testing.T) {
 	c := namevalue.NewCollection()
 	c.Add(namevalue.StringAny{Name: "a", Value: 1})
 	_ = c.JoinCsvLine()
 }
 
-func Test_Collection_CsvStrings(t *testing.T) {
+func Test_Collection_CsvStrings_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.NewCollection()
 	// empty
@@ -517,7 +517,7 @@ func Test_Collection_CsvStrings(t *testing.T) {
 
 // ── Collection IsEqualByString ──
 
-func Test_Collection_IsEqualByString(t *testing.T) {
+func Test_Collection_IsEqualByString_InstanceFull(t *testing.T) {
 	// Arrange
 	c1 := namevalue.NewCollection()
 	c1.Add(namevalue.StringAny{Name: "a", Value: 1})
@@ -551,7 +551,7 @@ func Test_Collection_IsEqualByString(t *testing.T) {
 
 // ── Collection JsonString / String ──
 
-func Test_Collection_JsonString(t *testing.T) {
+func Test_Collection_JsonString_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.NewCollection()
 	empty := c.JsonString()
@@ -625,7 +625,7 @@ func Test_Collection_HasCompiledString_CompiledLazyString(t *testing.T) {
 
 // ── Collection Error ──
 
-func Test_Collection_Error(t *testing.T) {
+func Test_Collection_Error_InstanceFull(t *testing.T) {
 	// Arrange
 	c := namevalue.NewCollection()
 

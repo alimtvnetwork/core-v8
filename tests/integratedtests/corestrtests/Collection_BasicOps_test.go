@@ -379,7 +379,7 @@ func Test_Collection_Reverse_FromCollectionBasicOps(t *testing.T) {
 	})
 }
 
-func Test_Collection_GetPagesSize(t *testing.T) {
+func Test_Collection_GetPagesSize_CollectionBasicops(t *testing.T) {
 	safeTest(t, "Test_Collection_GetPagesSize", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b", "c", "d", "e"})
@@ -471,7 +471,7 @@ func Test_Collection_SortedListAsc_Dsc(t *testing.T) {
 	})
 }
 
-func Test_Collection_UniqueList(t *testing.T) {
+func Test_Collection_UniqueList_CollectionBasicops(t *testing.T) {
 	safeTest(t, "Test_Collection_UniqueList", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b", "a", "c"})
@@ -486,7 +486,7 @@ func Test_Collection_UniqueList(t *testing.T) {
 	})
 }
 
-func Test_Collection_HashsetAsIs(t *testing.T) {
+func Test_Collection_HashsetAsIs_CollectionBasicops(t *testing.T) {
 	safeTest(t, "Test_Collection_HashsetAsIs", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b"})
@@ -516,7 +516,7 @@ func Test_Collection_NonEmptyList_FromCollectionBasicOps(t *testing.T) {
 	})
 }
 
-func Test_Collection_IsContainsAll(t *testing.T) {
+func Test_Collection_IsContainsAll_CollectionBasicops(t *testing.T) {
 	safeTest(t, "Test_Collection_IsContainsAll", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b", "c"})
@@ -559,7 +559,7 @@ func Test_Collection_GetAllExcept_FromCollectionBasicOps(t *testing.T) {
 	})
 }
 
-func Test_Collection_Join(t *testing.T) {
+func Test_Collection_Join_CollectionBasicops(t *testing.T) {
 	safeTest(t, "Test_Collection_Join", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b", "c"})
@@ -694,7 +694,7 @@ func Test_Collection_AppendAnys_FromCollectionBasicOps(t *testing.T) {
 	})
 }
 
-func Test_Collection_AppendNonEmptyAnys(t *testing.T) {
+func Test_Collection_AppendNonEmptyAnys_CollectionBasicops(t *testing.T) {
 	safeTest(t, "Test_Collection_AppendNonEmptyAnys", func() {
 		// Arrange
 		c := corestr.New.Collection.Cap(10)
@@ -709,7 +709,7 @@ func Test_Collection_AppendNonEmptyAnys(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddsNonEmpty(t *testing.T) {
+func Test_Collection_AddsNonEmpty_CollectionBasicops(t *testing.T) {
 	safeTest(t, "Test_Collection_AddsNonEmpty", func() {
 		// Arrange
 		c := corestr.New.Collection.Cap(10)
@@ -724,7 +724,7 @@ func Test_Collection_AddsNonEmpty(t *testing.T) {
 	})
 }
 
-func Test_Collection_Joins(t *testing.T) {
+func Test_Collection_Joins_CollectionBasicops(t *testing.T) {
 	safeTest(t, "Test_Collection_Joins", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b"})
@@ -864,7 +864,7 @@ func Test_Collection_AddStringsByFuncChecking_FromCollectionBasicOps(t *testing.
 	})
 }
 
-func Test_Collection_GetAllExceptCollection(t *testing.T) {
+func Test_Collection_GetAllExceptCollection_CollectionBasicops(t *testing.T) {
 	safeTest(t, "Test_Collection_GetAllExceptCollection", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b", "c"})
@@ -940,7 +940,7 @@ func Test_Collection_AddHashmapsKeys_FromCollectionBasicOps(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddHashmapsKeysValues(t *testing.T) {
+func Test_Collection_AddHashmapsKeysValues_CollectionBasicops(t *testing.T) {
 	safeTest(t, "Test_Collection_AddHashmapsKeysValues", func() {
 		// Arrange
 		c := corestr.New.Collection.Cap(10)

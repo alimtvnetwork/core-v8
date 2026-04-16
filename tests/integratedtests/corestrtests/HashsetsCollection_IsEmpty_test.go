@@ -2271,7 +2271,7 @@ func Test_ValidValue_IsEqualNonSensitive_FromHashsetsCollectionIs(t *testing.T) 
 	})
 }
 
-func Test_ValidValue_Regex(t *testing.T) {
+func Test_ValidValue_Regex_HashsetscollectionIsempty(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Regex", func() {
 		vv := corestr.NewValidValue("abc123")
 		re := regexp.MustCompile(`\d+`)

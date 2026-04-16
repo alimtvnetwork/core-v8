@@ -31,7 +31,7 @@ func Test_InvalidReflectValueKindModel_FromReflectValueKind(t *testing.T) {
 
 // Note: All nil receiver tests migrated to ReflectValueKind_NilReceiver_testcases.go
 
-func Test_ReflectValueKind_NilReceiver(t *testing.T) {
+func Test_ReflectValueKind_NilReceiver_Reflectvaluekind(t *testing.T) {
 	for caseIndex, tc := range reflectValueKindNilReceiverTestCases {
 		// Arrange (implicit — nil receiver)
 

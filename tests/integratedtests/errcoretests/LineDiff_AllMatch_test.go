@@ -32,7 +32,7 @@ func Test_LineDiff_AllMatch(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "LineDiff returns all-match -- matching lines", actual)
 }
 
-func Test_LineDiff_Mismatch(t *testing.T) {
+func Test_LineDiff_Mismatch_LinediffAllmatch(t *testing.T) {
 	// Arrange
 	diffs := errcore.LineDiff([]string{"a", "x"}, []string{"a", "b"})
 
@@ -80,7 +80,7 @@ func Test_LineDiffToString_Empty_FromLineDiffAllMatch(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "LineDiffToString returns empty -- both empty", actual)
 }
 
-func Test_LineDiffToString_WithDiffs(t *testing.T) {
+func Test_LineDiffToString_WithDiffs_LinediffAllmatch(t *testing.T) {
 	// Arrange
 	result := errcore.LineDiffToString(0, "h", []string{"a", "x"}, []string{"a", "b"})
 
@@ -116,7 +116,7 @@ func Test_PrintLineDiff_FromLineDiffAllMatch(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "PrintLineDiff completes safely -- with diffs", actual)
 }
 
-func Test_PrintLineDiff_Empty(t *testing.T) {
+func Test_PrintLineDiff_Empty_LinediffAllmatch(t *testing.T) {
 	// Arrange
 	errcore.PrintLineDiff(0, "h", []string{}, []string{})
 
@@ -179,7 +179,7 @@ func Test_PrintLineDiffOnFail_Fail(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "PrintLineDiffOnFail prints diff -- with mismatch", actual)
 }
 
-func Test_ErrorToLinesLineDiff_NilErr(t *testing.T) {
+func Test_ErrorToLinesLineDiff_NilErr_LinediffAllmatch(t *testing.T) {
 	// Arrange
 	result := errcore.ErrorToLinesLineDiff(0, "h", nil, []string{"a"})
 
@@ -191,7 +191,7 @@ func Test_ErrorToLinesLineDiff_NilErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ErrorToLinesLineDiff returns non-empty -- nil error", actual)
 }
 
-func Test_ErrorToLinesLineDiff_WithErr(t *testing.T) {
+func Test_ErrorToLinesLineDiff_WithErr_LinediffAllmatch(t *testing.T) {
 	// Arrange
 	result := errcore.ErrorToLinesLineDiff(0, "h", errors.New("line1\nline2"), []string{"line1"})
 
@@ -215,7 +215,7 @@ func Test_PrintErrorLineDiff_FromLineDiffAllMatch(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "PrintErrorLineDiff completes safely -- with args", actual)
 }
 
-func Test_SliceDiffSummary_Match(t *testing.T) {
+func Test_SliceDiffSummary_Match_LinediffAllmatch(t *testing.T) {
 	// Arrange
 	result := errcore.SliceDiffSummary([]string{"a"}, []string{"a"})
 
@@ -227,7 +227,7 @@ func Test_SliceDiffSummary_Match(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "SliceDiffSummary returns all-match -- matching", actual)
 }
 
-func Test_SliceDiffSummary_Mismatch(t *testing.T) {
+func Test_SliceDiffSummary_Mismatch_LinediffAllmatch(t *testing.T) {
 	// Arrange
 	result := errcore.SliceDiffSummary([]string{"a"}, []string{"b"})
 
@@ -340,7 +340,7 @@ func Test_MergeErrors_WithErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "MergeErrors returns error -- with errors", actual)
 }
 
-func Test_MergeErrorsToString_Nil(t *testing.T) {
+func Test_MergeErrorsToString_Nil_LinediffAllmatch(t *testing.T) {
 	// Act
 	actual := args.Map{"v": errcore.MergeErrorsToString(",")}
 
@@ -361,7 +361,7 @@ func Test_MergeErrorsToString_WithErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "MergeErrorsToString returns non-empty -- with errors", actual)
 }
 
-func Test_MergeErrorsToStringDefault_Nil(t *testing.T) {
+func Test_MergeErrorsToStringDefault_Nil_LinediffAllmatch(t *testing.T) {
 	// Act
 	actual := args.Map{"v": errcore.MergeErrorsToStringDefault()}
 
@@ -428,7 +428,7 @@ func Test_SliceErrorDefault_NonEmpty(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "SliceErrorDefault returns error -- non-empty slice", actual)
 }
 
-func Test_SliceErrorsToStrings_Nil(t *testing.T) {
+func Test_SliceErrorsToStrings_Nil_LinediffAllmatch(t *testing.T) {
 	// Arrange
 	result := errcore.SliceErrorsToStrings()
 
@@ -498,7 +498,7 @@ func Test_SliceToErrorPtr_NonEmpty(t *testing.T) {
 // MustBeEmpty
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_MustBeEmpty_Nil(t *testing.T) {
+func Test_MustBeEmpty_Nil_LinediffAllmatch(t *testing.T) {
 	// Arrange
 	errcore.MustBeEmpty(nil)
 
@@ -570,7 +570,7 @@ func Test_ErrorToSplitNonEmptyLines_WithEmpty(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ErrorToSplitNonEmptyLines returns filtered -- with empty lines", actual)
 }
 
-func Test_ErrorToSplitNonEmptyLines_Nil(t *testing.T) {
+func Test_ErrorToSplitNonEmptyLines_Nil_LinediffAllmatch(t *testing.T) {
 	// Arrange
 	result := errcore.ErrorToSplitNonEmptyLines(nil)
 
@@ -586,7 +586,7 @@ func Test_ErrorToSplitNonEmptyLines_Nil(t *testing.T) {
 // Ref / RefToError / ToError / ToString / ToStringPtr / ToValueString
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_Ref_Nil(t *testing.T) {
+func Test_Ref_Nil_LinediffAllmatch(t *testing.T) {
 	// Act
 	actual := args.Map{"v": errcore.Ref(nil)}
 
@@ -625,7 +625,7 @@ func Test_RefToError_NonNil_FromLineDiffAllMatch(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "RefToError returns error -- with value", actual)
 }
 
-func Test_ToError_Empty(t *testing.T) {
+func Test_ToError_Empty_LinediffAllmatch(t *testing.T) {
 	// Act
 	actual := args.Map{"isNil": errcore.ToError("") == nil}
 
@@ -646,7 +646,7 @@ func Test_ToError_NonEmpty(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ToError returns error -- non-empty string", actual)
 }
 
-func Test_ToString_Nil(t *testing.T) {
+func Test_ToString_Nil_LinediffAllmatch(t *testing.T) {
 	// Act
 	actual := args.Map{"v": errcore.ToString(nil)}
 
@@ -655,7 +655,7 @@ func Test_ToString_Nil(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ToString returns empty -- nil error", actual)
 }
 
-func Test_ToString_WithErr(t *testing.T) {
+func Test_ToString_WithErr_LinediffAllmatch(t *testing.T) {
 	// Act
 	actual := args.Map{"v": errcore.ToString(errors.New("e"))}
 
@@ -664,7 +664,7 @@ func Test_ToString_WithErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ToString returns msg -- with error", actual)
 }
 
-func Test_ToStringPtr_Nil(t *testing.T) {
+func Test_ToStringPtr_Nil_LinediffAllmatch(t *testing.T) {
 	// Arrange
 	result := errcore.ToStringPtr(nil)
 
@@ -676,7 +676,7 @@ func Test_ToStringPtr_Nil(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ToStringPtr returns empty ptr -- nil error", actual)
 }
 
-func Test_ToStringPtr_WithErr(t *testing.T) {
+func Test_ToStringPtr_WithErr_LinediffAllmatch(t *testing.T) {
 	// Arrange
 	result := errcore.ToStringPtr(errors.New("e"))
 
@@ -704,7 +704,7 @@ func Test_ToValueString_FromLineDiffAllMatch(t *testing.T) {
 // VarMap / VarMapStrings
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_VarMap_Empty(t *testing.T) {
+func Test_VarMap_Empty_LinediffAllmatch(t *testing.T) {
 	// Act
 	actual := args.Map{"v": errcore.VarMap(map[string]any{})}
 
@@ -1940,7 +1940,7 @@ func Test_RawErrCollection_AddCompiledErrorGetters_FromLineDiffAllMatch(t *testi
 // RawErrorType — String / Combine
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_RawErrorType_String(t *testing.T) {
+func Test_RawErrorType_String_LinediffAllmatch(t *testing.T) {
 	// Act
 	actual := args.Map{"v": errcore.InvalidType.String() != ""}
 
@@ -1949,7 +1949,7 @@ func Test_RawErrorType_String(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "RawErrorType.String returns non-empty -- InvalidType", actual)
 }
 
-func Test_RawErrorType_Combine(t *testing.T) {
+func Test_RawErrorType_Combine_LinediffAllmatch(t *testing.T) {
 	// Arrange
 	result := errcore.InvalidType.Combine("msg", "ref")
 
@@ -1961,7 +1961,7 @@ func Test_RawErrorType_Combine(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "RawErrorType.Combine returns formatted -- with msg and ref", actual)
 }
 
-func Test_RawErrorType_ErrorNoRefsSkip(t *testing.T) {
+func Test_RawErrorType_ErrorNoRefsSkip_LinediffAllmatch(t *testing.T) {
 	// Arrange
 	err := errcore.InvalidType.ErrorNoRefsSkip(0, "msg")
 

@@ -129,7 +129,7 @@ func Test_Serialize_FromInteger_FromSerializeApplySerial(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_Serialize_FromInteger64(t *testing.T) {
+func Test_Serialize_FromInteger64_SerializeApplySerializer(t *testing.T) {
 	tc := serializeFromInteger64TestCase
 
 	// Arrange
@@ -250,7 +250,7 @@ func Test_Serialize_Raw_FromSerializeApplySerial(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_Serialize_Marshal(t *testing.T) {
+func Test_Serialize_Marshal_SerializeApplySerializer(t *testing.T) {
 	tc := serializeMarshalTestCase
 
 	// Arrange
@@ -267,7 +267,7 @@ func Test_Serialize_Marshal(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_Serialize_ApplyMust(t *testing.T) {
+func Test_Serialize_ApplyMust_SerializeApplySerializer(t *testing.T) {
 	tc := serializeApplyMustTestCase
 
 	// Arrange
@@ -283,7 +283,7 @@ func Test_Serialize_ApplyMust(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_Serialize_ToBytesMust(t *testing.T) {
+func Test_Serialize_ToBytesMust_SerializeApplySerializer(t *testing.T) {
 	tc := serializeToBytesMustTestCase
 
 	// Arrange
@@ -299,7 +299,7 @@ func Test_Serialize_ToBytesMust(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_Serialize_ToSafeBytesMust(t *testing.T) {
+func Test_Serialize_ToSafeBytesMust_SerializeApplySerializer(t *testing.T) {
 	tc := serializeToSafeBytesMustTestCase
 
 	// Arrange
@@ -384,7 +384,7 @@ func Test_Serialize_ToString_FromSerializeApplySerial(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_Serialize_ToStringMust(t *testing.T) {
+func Test_Serialize_ToStringMust_SerializeApplySerializer(t *testing.T) {
 	tc := serializeToStringMustTestCase
 
 	// Arrange

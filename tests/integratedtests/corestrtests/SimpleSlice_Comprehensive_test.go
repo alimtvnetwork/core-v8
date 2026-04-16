@@ -11,7 +11,7 @@ import (
 // SimpleSlice — comprehensive coverage (200 tests)
 // ═══════════════════════════════════════════════════════════════════════
 
-func Test_01_SimpleSlice_Add(t *testing.T) {
+func Test_01_SimpleSlice_Add_SimplesliceComprehensive(t *testing.T) {
 	safeTest(t, "Test_01_SimpleSlice_Add", func() {
 		// Arrange
 		s := corestr.New.SimpleSlice.Default()
@@ -26,7 +26,7 @@ func Test_01_SimpleSlice_Add(t *testing.T) {
 	})
 }
 
-func Test_02_SimpleSlice_AddSplit(t *testing.T) {
+func Test_02_SimpleSlice_AddSplit_SimplesliceComprehensive(t *testing.T) {
 	safeTest(t, "Test_02_SimpleSlice_AddSplit", func() {
 		// Arrange
 		s := corestr.New.SimpleSlice.Default()

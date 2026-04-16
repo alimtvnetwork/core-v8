@@ -12,7 +12,7 @@ import (
 // Result — Map and accessor methods
 // ═══════════════════════════════════════════
 
-func Test_Result_Map(t *testing.T) {
+func Test_Result_Map_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 	m := r.Map()
@@ -44,7 +44,7 @@ func Test_Result_Map_WithError(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns error -- Map with error", actual)
 }
 
-func Test_Result_Map_Nil(t *testing.T) {
+func Test_Result_Map_Nil_ResultMapV2(t *testing.T) {
 	// Arrange
 	var r *corejson.Result
 	m := r.Map()
@@ -57,7 +57,7 @@ func Test_Result_Map_Nil(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns nil -- Map nil", actual)
 }
 
-func Test_Result_SafeString(t *testing.T) {
+func Test_Result_SafeString_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 	s := r.SafeString()
@@ -70,7 +70,7 @@ func Test_Result_SafeString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns correct value -- SafeString", actual)
 }
 
-func Test_Result_Length(t *testing.T) {
+func Test_Result_Length_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 	var nilR *corejson.Result
@@ -89,7 +89,7 @@ func Test_Result_Length(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns correct value -- Length", actual)
 }
 
-func Test_Result_ErrorString(t *testing.T) {
+func Test_Result_ErrorString_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := &corejson.Result{Error: errors.New("fail")}
 	rOk := corejson.NewPtr("ok")
@@ -108,7 +108,7 @@ func Test_Result_ErrorString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns error -- ErrorString", actual)
 }
 
-func Test_Result_IsErrorEqual(t *testing.T) {
+func Test_Result_IsErrorEqual_ResultMapV2(t *testing.T) {
 	// Arrange
 	e := errors.New("fail")
 	r := &corejson.Result{Bytes: []byte("x"), Error: e}
@@ -131,7 +131,7 @@ func Test_Result_IsErrorEqual(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns error -- IsErrorEqual", actual)
 }
 
-func Test_Result_String(t *testing.T) {
+func Test_Result_String_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 	s := r.NonPtr().String()
@@ -144,7 +144,7 @@ func Test_Result_String(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns correct value -- String", actual)
 }
 
-func Test_Result_SafeNonIssueBytes(t *testing.T) {
+func Test_Result_SafeNonIssueBytes_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 	b := r.SafeNonIssueBytes()
@@ -165,7 +165,7 @@ func Test_Result_SafeNonIssueBytes(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns correct value -- SafeNonIssueBytes", actual)
 }
 
-func Test_Result_Values(t *testing.T) {
+func Test_Result_Values_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 
@@ -183,7 +183,7 @@ func Test_Result_Values(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns non-empty -- Values", actual)
 }
 
-func Test_Result_Raw(t *testing.T) {
+func Test_Result_Raw_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 	b, err := r.Raw()
@@ -205,7 +205,7 @@ func Test_Result_Raw(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns correct value -- Raw", actual)
 }
 
-func Test_Result_Raw_Nil(t *testing.T) {
+func Test_Result_Raw_Nil_ResultMapV2(t *testing.T) {
 	// Arrange
 	var r *corejson.Result
 	_, err := r.Raw()
@@ -218,7 +218,7 @@ func Test_Result_Raw_Nil(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns nil -- Raw nil", actual)
 }
 
-func Test_Result_RawPrettyString(t *testing.T) {
+func Test_Result_RawPrettyString_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr(map[string]string{"a": "1"})
 	s, err := r.RawPrettyString()
@@ -237,7 +237,7 @@ func Test_Result_RawPrettyString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns correct value -- RawPrettyString", actual)
 }
 
-func Test_Result_RawErrString(t *testing.T) {
+func Test_Result_RawErrString_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 	b, errMsg := r.RawErrString()
@@ -256,7 +256,7 @@ func Test_Result_RawErrString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns error -- RawErrString", actual)
 }
 
-func Test_Result_MeaningfulError(t *testing.T) {
+func Test_Result_MeaningfulError_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 	rErr := &corejson.Result{Error: errors.New("fail"), Bytes: []byte("x")}
@@ -279,7 +279,7 @@ func Test_Result_MeaningfulError(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns error -- MeaningfulError", actual)
 }
 
-func Test_Result_PrettyJsonStringOrErrString(t *testing.T) {
+func Test_Result_PrettyJsonStringOrErrString_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 	rErr := &corejson.Result{Error: errors.New("fail"), Bytes: []byte("x")}
@@ -301,7 +301,7 @@ func Test_Result_PrettyJsonStringOrErrString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns error -- PrettyJsonStringOrErrString", actual)
 }
 
-func Test_Result_IsEmpty(t *testing.T) {
+func Test_Result_IsEmpty_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 	var nilR *corejson.Result
@@ -330,7 +330,7 @@ func Test_Result_IsEmpty(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns empty -- IsEmpty methods", actual)
 }
 
-func Test_Result_Clone(t *testing.T) {
+func Test_Result_Clone_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 	cloned := r.Clone(true)
@@ -358,7 +358,7 @@ func Test_Result_Clone(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns correct value -- Clone", actual)
 }
 
-func Test_Result_CloneError(t *testing.T) {
+func Test_Result_CloneError_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := &corejson.Result{Error: errors.New("fail"), Bytes: []byte("x")}
 	rOk := corejson.NewPtr("ok")
@@ -377,7 +377,7 @@ func Test_Result_CloneError(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns error -- CloneError", actual)
 }
 
-func Test_Result_PtrNonPtr(t *testing.T) {
+func Test_Result_PtrNonPtr_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 	np := r.NonPtr()
@@ -403,7 +403,7 @@ func Test_Result_PtrNonPtr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns correct value -- Ptr/NonPtr", actual)
 }
 
-func Test_Result_NonPtr_Nil(t *testing.T) {
+func Test_Result_NonPtr_Nil_ResultMapV2(t *testing.T) {
 	// Arrange
 	var r *corejson.Result
 	np := r.NonPtr()
@@ -416,7 +416,7 @@ func Test_Result_NonPtr_Nil(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns nil -- NonPtr nil", actual)
 }
 
-func Test_Result_IsEqual(t *testing.T) {
+func Test_Result_IsEqual_ResultMapV2(t *testing.T) {
 	// Arrange
 	r1 := corejson.New("hello")
 	r2 := corejson.New("hello")
@@ -436,7 +436,7 @@ func Test_Result_IsEqual(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns correct value -- IsEqual", actual)
 }
 
-func Test_Result_IsEqualPtr(t *testing.T) {
+func Test_Result_IsEqualPtr_ResultMapV2(t *testing.T) {
 	// Arrange
 	r1 := corejson.NewPtr("hello")
 	r2 := corejson.NewPtr("hello")
@@ -460,7 +460,7 @@ func Test_Result_IsEqualPtr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns correct value -- IsEqualPtr", actual)
 }
 
-func Test_Result_Serialize(t *testing.T) {
+func Test_Result_Serialize_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 	b, err := r.Serialize()
@@ -485,7 +485,7 @@ func Test_Result_Serialize(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns correct value -- Serialize", actual)
 }
 
-func Test_Result_JsonModel(t *testing.T) {
+func Test_Result_JsonModel_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 	jm := r.JsonModel()
@@ -509,7 +509,7 @@ func Test_Result_JsonModel(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns correct value -- JsonModel", actual)
 }
 
-func Test_Result_BytesError(t *testing.T) {
+func Test_Result_BytesError_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 	be := r.BytesError()
@@ -531,7 +531,7 @@ func Test_Result_BytesError(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result returns error -- BytesError", actual)
 }
 
-func Test_Result_Dispose(t *testing.T) {
+func Test_Result_Dispose_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 	r.Dispose()
@@ -609,7 +609,7 @@ func Test_Serialize_Various(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Serialize returns correct value -- various", actual)
 }
 
-func Test_Serialize_UsingAny(t *testing.T) {
+func Test_Serialize_UsingAny_ResultMapV2(t *testing.T) {
 	// Arrange
 	r := corejson.Serialize.UsingAny("hello")
 	rp := corejson.Serialize.UsingAnyPtr("hello")
@@ -628,7 +628,7 @@ func Test_Serialize_UsingAny(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Serialize returns correct value -- UsingAny", actual)
 }
 
-func Test_Serialize_ToString(t *testing.T) {
+func Test_Serialize_ToString_ResultMapV2(t *testing.T) {
 	// Arrange
 	s := corejson.Serialize.ToString("hello")
 
@@ -662,7 +662,7 @@ func Test_Serialize_ToBytes(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Serialize returns correct value -- ToBytes", actual)
 }
 
-func Test_Serialize_ToStringErr(t *testing.T) {
+func Test_Serialize_ToStringErr_ResultMapV2(t *testing.T) {
 	// Arrange
 	s, err := corejson.Serialize.ToStringErr("hello")
 
@@ -680,7 +680,7 @@ func Test_Serialize_ToStringErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Serialize returns error -- ToStringErr", actual)
 }
 
-func Test_Serialize_ToPrettyStringErr(t *testing.T) {
+func Test_Serialize_ToPrettyStringErr_ResultMapV2(t *testing.T) {
 	// Arrange
 	s, err := corejson.Serialize.ToPrettyStringErr(map[string]string{"a": "1"})
 
@@ -698,7 +698,7 @@ func Test_Serialize_ToPrettyStringErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Serialize returns error -- ToPrettyStringErr", actual)
 }
 
-func Test_Serialize_ToPrettyStringIncludingErr(t *testing.T) {
+func Test_Serialize_ToPrettyStringIncludingErr_ResultMapV2(t *testing.T) {
 	// Arrange
 	s := corejson.Serialize.ToPrettyStringIncludingErr("hello")
 
@@ -710,7 +710,7 @@ func Test_Serialize_ToPrettyStringIncludingErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Serialize returns error -- ToPrettyStringIncludingErr", actual)
 }
 
-func Test_Serialize_Pretty(t *testing.T) {
+func Test_Serialize_Pretty_ResultMapV2(t *testing.T) {
 	// Arrange
 	s := corejson.Serialize.Pretty(map[string]string{"a": "1"})
 

@@ -8,22 +8,9 @@ import (
 	"github.com/alimtvnetwork/core/errcore"
 )
 
-func callPanicsErrcore(fn func()) bool {
-	didPanic := false
-	func() {
-		defer func() {
-			if r := recover(); r != nil {
-				didPanic = true
-			}
-		}()
-		fn()
-	}()
-	return didPanic
-}
-
 // ── CompiledError ──
 
-func Test_CompiledError_NilErr(t *testing.T) {
+func Test_CompiledError_NilErr_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := compiledErrorTestCases[0]
 	// Act
@@ -32,7 +19,7 @@ func Test_CompiledError_NilErr(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"isNil": result == nil})
 }
 
-func Test_CompiledError_EmptyMsg(t *testing.T) {
+func Test_CompiledError_EmptyMsg_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := compiledErrorTestCases[1]
 	err := errors.New("base")
@@ -42,7 +29,7 @@ func Test_CompiledError_EmptyMsg(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"isSame": result == err})
 }
 
-func Test_CompiledError_WithMsg(t *testing.T) {
+func Test_CompiledError_WithMsg_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := compiledErrorTestCases[2]
 	// Act
@@ -51,7 +38,7 @@ func Test_CompiledError_WithMsg(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"nonEmpty": result != nil && result.Error() != ""})
 }
 
-func Test_CompiledErrorString_NilErr(t *testing.T) {
+func Test_CompiledErrorString_NilErr_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := compiledErrorTestCases[3]
 	// Act
@@ -136,7 +123,7 @@ func Test_ErrorWithRefToError_NilErr(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"isNil": result == nil})
 }
 
-func Test_ErrorWithRefToError_WithErr(t *testing.T) {
+func Test_ErrorWithRefToError_WithErr_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := errorWithRefTestCases[5]
 	// Act
@@ -147,7 +134,7 @@ func Test_ErrorWithRefToError_WithErr(t *testing.T) {
 
 // ── ErrorWithCompiledTraceRef ──
 
-func Test_ErrorWithCompiledTraceRef_NilErr(t *testing.T) {
+func Test_ErrorWithCompiledTraceRef_NilErr_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := errorWithCompiledTraceRefTestCases[0]
 	// Act
@@ -156,7 +143,7 @@ func Test_ErrorWithCompiledTraceRef_NilErr(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"isEmpty": result == ""})
 }
 
-func Test_ErrorWithCompiledTraceRef_EmptyTraces(t *testing.T) {
+func Test_ErrorWithCompiledTraceRef_EmptyTraces_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := errorWithCompiledTraceRefTestCases[1]
 	// Act
@@ -165,7 +152,7 @@ func Test_ErrorWithCompiledTraceRef_EmptyTraces(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"nonEmpty": result != ""})
 }
 
-func Test_ErrorWithCompiledTraceRef_NilRef(t *testing.T) {
+func Test_ErrorWithCompiledTraceRef_NilRef_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := errorWithCompiledTraceRefTestCases[2]
 	// Act
@@ -174,7 +161,7 @@ func Test_ErrorWithCompiledTraceRef_NilRef(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"nonEmpty": result != ""})
 }
 
-func Test_ErrorWithCompiledTraceRef_All(t *testing.T) {
+func Test_ErrorWithCompiledTraceRef_All_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := errorWithCompiledTraceRefTestCases[3]
 	// Act
@@ -212,7 +199,7 @@ func Test_ErrorWithTracesRefToError_NilErr(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"isNil": result == nil})
 }
 
-func Test_ErrorWithTracesRefToError_EmptyTraces(t *testing.T) {
+func Test_ErrorWithTracesRefToError_EmptyTraces_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := errorWithTracesRefToErrorTestCases[1]
 	// Act
@@ -221,7 +208,7 @@ func Test_ErrorWithTracesRefToError_EmptyTraces(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"nonNil": result != nil})
 }
 
-func Test_ErrorWithTracesRefToError_WithTraces(t *testing.T) {
+func Test_ErrorWithTracesRefToError_WithTraces_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := errorWithTracesRefToErrorTestCases[2]
 	// Act
@@ -259,7 +246,7 @@ func Test_ConcatMessageWithErrWithStackTrace_NilErr(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"isNil": result == nil})
 }
 
-func Test_ConcatMessageWithErrWithStackTrace_WithErr(t *testing.T) {
+func Test_ConcatMessageWithErrWithStackTrace_WithErr_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := concatMessageTestCases[3]
 	// Act
@@ -309,7 +296,7 @@ func Test_ErrorToSplitNonEmptyLines_Nil(t *testing.T) {
 
 // ── Handlers ──
 
-func Test_HandleErr_Nil(t *testing.T) {
+func Test_HandleErr_Nil_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := handleErrTestCases[0]
 	// Act
@@ -318,7 +305,7 @@ func Test_HandleErr_Nil(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"noPanic": noPanic})
 }
 
-func Test_HandleErr_WithErr(t *testing.T) {
+func Test_HandleErr_WithErr_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := handleErrTestCases[1]
 	// Act
@@ -327,7 +314,7 @@ func Test_HandleErr_WithErr(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"panics": panics})
 }
 
-func Test_HandleErrMessage_Empty(t *testing.T) {
+func Test_HandleErrMessage_Empty_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := handleErrTestCases[2]
 	// Act
@@ -336,7 +323,7 @@ func Test_HandleErrMessage_Empty(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"noPanic": noPanic})
 }
 
-func Test_HandleErrMessage_WithMsg(t *testing.T) {
+func Test_HandleErrMessage_WithMsg_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := handleErrTestCases[3]
 	// Act
@@ -345,7 +332,7 @@ func Test_HandleErrMessage_WithMsg(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"panics": panics})
 }
 
-func Test_SimpleHandleErr_Nil(t *testing.T) {
+func Test_SimpleHandleErr_Nil_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := handleErrTestCases[4]
 	// Act
@@ -354,7 +341,7 @@ func Test_SimpleHandleErr_Nil(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"noPanic": noPanic})
 }
 
-func Test_SimpleHandleErr_WithErr(t *testing.T) {
+func Test_SimpleHandleErr_WithErr_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := handleErrTestCases[5]
 	// Act
@@ -363,7 +350,7 @@ func Test_SimpleHandleErr_WithErr(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"panics": panics})
 }
 
-func Test_SimpleHandleErrMany_Nil(t *testing.T) {
+func Test_SimpleHandleErrMany_Nil_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := handleErrTestCases[6]
 	// Act
@@ -375,7 +362,7 @@ func Test_SimpleHandleErrMany_Nil(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"noPanic": noPanic})
 }
 
-func Test_SimpleHandleErrMany_WithErr(t *testing.T) {
+func Test_SimpleHandleErrMany_WithErr_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := handleErrTestCases[7]
 	// Act
@@ -423,7 +410,7 @@ func Test_HandleGetters_Nil(t *testing.T) {
 	tc3.ShouldBeEqualMapFirst(t, args.Map{"noPanic": noPanic3})
 }
 
-func Test_PrintError_Nil(t *testing.T) {
+func Test_PrintError_Nil_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := printErrorTestCases[0]
 	// Act
@@ -432,7 +419,7 @@ func Test_PrintError_Nil(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"noPanic": noPanic})
 }
 
-func Test_PrintError_WithErr(t *testing.T) {
+func Test_PrintError_WithErr_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := printErrorTestCases[1]
 	// Act
@@ -441,7 +428,7 @@ func Test_PrintError_WithErr(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"noPanic": noPanic})
 }
 
-func Test_PrintErrorWithTestIndex_Nil(t *testing.T) {
+func Test_PrintErrorWithTestIndex_Nil_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := printErrorTestCases[2]
 	// Act
@@ -450,7 +437,7 @@ func Test_PrintErrorWithTestIndex_Nil(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"noPanic": noPanic})
 }
 
-func Test_PrintErrorWithTestIndex_WithErr(t *testing.T) {
+func Test_PrintErrorWithTestIndex_WithErr_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := printErrorTestCases[3]
 	// Act
@@ -468,7 +455,7 @@ func Test_PanicOnIndexOutOfRange_Valid(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"noPanic": noPanic})
 }
 
-func Test_PanicOnIndexOutOfRange_OutOfRange(t *testing.T) {
+func Test_PanicOnIndexOutOfRange_OutOfRange_Errorhandling(t *testing.T) {
 	// Arrange
 	tc := panicOnIndexTestCases[1]
 	// Act

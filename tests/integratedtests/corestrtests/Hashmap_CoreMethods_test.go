@@ -8,7 +8,7 @@ import (
 	"github.com/alimtvnetwork/core/coretests/args"
 )
 
-func Test_Hashmap_Basic_Verification(t *testing.T) {
+func Test_Hashmap_Basic_Verification_HashmapCoremethods(t *testing.T) {
 	safeTest(t, "Test_Hashmap_Basic_Verification", func() {
 		// Arrange
 		tc := srcC06HashmapBasicTestCase
@@ -53,7 +53,7 @@ func Test_Hashmap_AddGet_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_Set_Verification(t *testing.T) {
+func Test_Hashmap_Set_Verification_HashmapCoremethods(t *testing.T) {
 	safeTest(t, "Test_Hashmap_Set_Verification", func() {
 		// Arrange
 		tc := srcC06HashmapSetTestCase
@@ -118,7 +118,7 @@ func Test_Hashmap_HasLock_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_AddVariants_Verification(t *testing.T) {
+func Test_Hashmap_AddVariants_Verification_HashmapCoremethods(t *testing.T) {
 	safeTest(t, "Test_Hashmap_AddVariants_Verification", func() {
 		// Arrange
 		tc := srcC06HashmapAddVariantsTestCase
@@ -352,7 +352,7 @@ func Test_Hashmap_Pairs_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_Remove_Verification(t *testing.T) {
+func Test_Hashmap_Remove_Verification_HashmapCoremethods(t *testing.T) {
 	safeTest(t, "Test_Hashmap_Remove_Verification", func() {
 		// Arrange
 		tc := srcC06HashmapRemoveTestCase
@@ -372,7 +372,7 @@ func Test_Hashmap_Remove_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_Diff_Verification(t *testing.T) {
+func Test_Hashmap_Diff_Verification_HashmapCoremethods(t *testing.T) {
 	safeTest(t, "Test_Hashmap_Diff_Verification", func() {
 		// Arrange
 		tc := srcC06HashmapDiffTestCase
@@ -413,7 +413,7 @@ func Test_Hashmap_Equal_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_Concat_Verification(t *testing.T) {
+func Test_Hashmap_Concat_Verification_HashmapCoremethods(t *testing.T) {
 	safeTest(t, "Test_Hashmap_Concat_Verification", func() {
 		// Arrange
 		tc := srcC06HashmapConcatTestCase

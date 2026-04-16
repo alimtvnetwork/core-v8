@@ -755,7 +755,7 @@ func Test_PrintLineDiff_NoMismatch(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "PrintLineDiff completes -- matching lines", actual)
 }
 
-func Test_PrintLineDiffOnFail_NoMismatch(t *testing.T) {
+func Test_PrintLineDiffOnFail_NoMismatch_RawerrortypeString(t *testing.T) {
 	// Arrange
 	errcore.PrintLineDiffOnFail(0, "h", []string{"a"}, []string{"a"})
 
@@ -767,7 +767,7 @@ func Test_PrintLineDiffOnFail_NoMismatch(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "PrintLineDiffOnFail skips -- matching lines", actual)
 }
 
-func Test_PrintLineDiffOnFail_WithMismatch(t *testing.T) {
+func Test_PrintLineDiffOnFail_WithMismatch_RawerrortypeString(t *testing.T) {
 	// Arrange
 	errcore.PrintLineDiffOnFail(0, "h", []string{"a"}, []string{"b"})
 
@@ -781,7 +781,7 @@ func Test_PrintLineDiffOnFail_WithMismatch(t *testing.T) {
 
 // ── PrintDiffOnMismatch ──
 
-func Test_PrintDiffOnMismatch_NoMismatch(t *testing.T) {
+func Test_PrintDiffOnMismatch_NoMismatch_RawerrortypeString(t *testing.T) {
 	// Arrange
 	errcore.PrintDiffOnMismatch(0, "h", []string{"a"}, []string{"a"})
 
@@ -793,7 +793,7 @@ func Test_PrintDiffOnMismatch_NoMismatch(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "PrintDiffOnMismatch skips -- no mismatch", actual)
 }
 
-func Test_PrintDiffOnMismatch_WithMismatch(t *testing.T) {
+func Test_PrintDiffOnMismatch_WithMismatch_RawerrortypeString(t *testing.T) {
 	// Arrange
 	errcore.PrintDiffOnMismatch(0, "h", []string{"a"}, []string{"b"}, "context: test")
 
@@ -1251,7 +1251,7 @@ func Test_ToError_Empty_FromRawErrorTypeString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ToError returns nil -- empty message", actual)
 }
 
-func Test_ToError_WithMsg(t *testing.T) {
+func Test_ToError_WithMsg_RawerrortypeString(t *testing.T) {
 	// Act
 	actual := args.Map{"hasErr": errcore.ToError("fail") != nil}
 

@@ -99,7 +99,7 @@ func Test_Hashset_AddVariants_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashset_WgLock_Verification(t *testing.T) {
+func Test_Hashset_WgLock_Verification_HashsetFullmethods(t *testing.T) {
 	safeTest(t, "Test_Hashset_WgLock_Verification", func() {
 		// Arrange
 		tc := srcC14HashsetWgLockTestCase
@@ -165,7 +165,7 @@ func Test_Hashset_HasVariants_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashset_List_Verification(t *testing.T) {
+func Test_Hashset_List_Verification_HashsetFullmethods(t *testing.T) {
 	safeTest(t, "Test_Hashset_List_Verification", func() {
 		// Arrange
 		tc := srcC14HashsetListTestCase

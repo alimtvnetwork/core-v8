@@ -92,7 +92,7 @@ func Test_SimpleSlice_IsEqual_BothEmpty(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_IsEqualLines(t *testing.T) {
+func Test_SimpleSlice_IsEqualLines_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_IsEqualLines", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Lines("a", "b")
@@ -131,7 +131,7 @@ func Test_SimpleSlice_IsEqualLines_BothNil(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_IsEqualLines_OneNil(t *testing.T) {
+func Test_SimpleSlice_IsEqualLines_OneNil_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_IsEqualLines_OneNil", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Lines("a")
@@ -143,7 +143,7 @@ func Test_SimpleSlice_IsEqualLines_OneNil(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_IsEqualUnorderedLines(t *testing.T) {
+func Test_SimpleSlice_IsEqualUnorderedLines_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_IsEqualUnorderedLines", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Lines("b", "a")
@@ -203,7 +203,7 @@ func Test_SimpleSlice_IsEqualUnorderedLines_BothEmpty(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_IsEqualUnorderedLinesClone(t *testing.T) {
+func Test_SimpleSlice_IsEqualUnorderedLinesClone_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_IsEqualUnorderedLinesClone", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Lines("c", "a", "b")
@@ -368,7 +368,7 @@ func Test_SimpleSlice_IsDistinctEqualRaw(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_IsDistinctEqual(t *testing.T) {
+func Test_SimpleSlice_IsDistinctEqual_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_IsDistinctEqual", func() {
 		// Arrange
 		ss1 := corestr.New.SimpleSlice.Lines("a", "b", "a")
@@ -467,7 +467,7 @@ func Test_SimpleSlice_IsUnorderedEqual_NilRight(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_IsEqualByFunc(t *testing.T) {
+func Test_SimpleSlice_IsEqualByFunc_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_IsEqualByFunc", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Lines("hello", "world")
@@ -661,7 +661,7 @@ func Test_SimpleSlice_DistinctDiffRaw_RightNil(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_DistinctDiff(t *testing.T) {
+func Test_SimpleSlice_DistinctDiff_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_DistinctDiff", func() {
 		// Arrange
 		ss1 := corestr.New.SimpleSlice.Lines("a", "b")
@@ -724,7 +724,7 @@ func Test_SimpleSlice_DistinctDiff_RightNil(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_AddedRemovedLinesDiff(t *testing.T) {
+func Test_SimpleSlice_AddedRemovedLinesDiff_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_AddedRemovedLinesDiff", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Lines("a", "b")
@@ -757,7 +757,7 @@ func Test_SimpleSlice_AddedRemovedLinesDiff_BothNil(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_RemoveIndexes(t *testing.T) {
+func Test_SimpleSlice_RemoveIndexes_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_RemoveIndexes", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Lines("a", "b", "c", "d")
@@ -885,7 +885,7 @@ func Test_SimpleSlice_Append_Empty(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_AppendFmt(t *testing.T) {
+func Test_SimpleSlice_AppendFmt_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_AppendFmt", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Empty()
@@ -945,7 +945,7 @@ func Test_SimpleSlice_AppendFmtIf_False(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_AddAsTitleValue(t *testing.T) {
+func Test_SimpleSlice_AddAsTitleValue_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_AddAsTitleValue", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Empty()
@@ -1035,7 +1035,7 @@ func Test_SimpleSlice_AddAsTitleValueIf_False(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_InsertAt(t *testing.T) {
+func Test_SimpleSlice_InsertAt_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_InsertAt", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Lines("a", "c")
@@ -1084,7 +1084,7 @@ func Test_SimpleSlice_InsertAt_BeyondLength(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_AddStruct(t *testing.T) {
+func Test_SimpleSlice_AddStruct_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_AddStruct", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Empty()
@@ -1160,7 +1160,7 @@ func Test_SimpleSlice_AddsIf_False(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_AddError(t *testing.T) {
+func Test_SimpleSlice_AddError_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_AddError", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Empty()
@@ -1205,7 +1205,7 @@ func Test_SimpleSlice_AsError_Empty(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_CountFunc(t *testing.T) {
+func Test_SimpleSlice_CountFunc_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_CountFunc", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Lines("a", "bb", "ccc")
@@ -1237,7 +1237,7 @@ func Test_SimpleSlice_CountFunc_Empty(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_IsContains(t *testing.T) {
+func Test_SimpleSlice_IsContains_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_IsContains", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Lines("a", "b")
@@ -1264,7 +1264,7 @@ func Test_SimpleSlice_IsContains_Empty(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_IsContainsFunc(t *testing.T) {
+func Test_SimpleSlice_IsContainsFunc_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_IsContainsFunc", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Lines("Hello", "World")
@@ -1293,7 +1293,7 @@ func Test_SimpleSlice_IsContainsFunc_Empty(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_IndexOfFunc(t *testing.T) {
+func Test_SimpleSlice_IndexOfFunc_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_IndexOfFunc", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Lines("a", "b", "c")
@@ -1342,7 +1342,7 @@ func Test_SimpleSlice_IndexOfFunc_Empty(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_IndexOf(t *testing.T) {
+func Test_SimpleSlice_IndexOf_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_IndexOf", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Lines("x", "y", "z")
@@ -1385,7 +1385,7 @@ func Test_SimpleSlice_HasAnyItem(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_HasIndex(t *testing.T) {
+func Test_SimpleSlice_HasIndex_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_HasIndex", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Lines("a", "b")
@@ -1523,7 +1523,7 @@ func Test_SimpleSlice_FirstOrDefault_NonEmpty(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_FirstOrDefault_Empty(t *testing.T) {
+func Test_SimpleSlice_FirstOrDefault_Empty_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_FirstOrDefault_Empty", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Empty()
@@ -1742,7 +1742,7 @@ func Test_SimpleSlice_Length_Nil(t *testing.T) {
 	})
 }
 
-func Test_SimpleSlice_Strings_List(t *testing.T) {
+func Test_SimpleSlice_Strings_List_SimplesliceSearchfilter(t *testing.T) {
 	safeTest(t, "Test_SimpleSlice_Strings_List", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Lines("a", "b")

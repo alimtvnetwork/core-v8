@@ -21,7 +21,7 @@ func Test_Serializer_Apply(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_Serializer_StringsApply(t *testing.T) {
+func Test_Serializer_StringsApply_SerializerMigrated(t *testing.T) {
 	// Arrange
 	r := corejson.Serialize.StringsApply([]string{"a", "b"})
 
@@ -33,7 +33,7 @@ func Test_Serializer_StringsApply(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected error", actual)
 }
 
-func Test_Serializer_FromBytes(t *testing.T) {
+func Test_Serializer_FromBytes_SerializerMigrated(t *testing.T) {
 	// Arrange
 	r := corejson.Serialize.FromBytes([]byte(`"test"`))
 
@@ -45,7 +45,7 @@ func Test_Serializer_FromBytes(t *testing.T) {
 		expected.ShouldBeEqual(t, 0, "result has no error", actual)
 }
 
-func Test_Serializer_FromStrings(t *testing.T) {
+func Test_Serializer_FromStrings_SerializerMigrated(t *testing.T) {
 	// Arrange
 	r := corejson.Serialize.FromStrings([]string{"a"})
 
@@ -57,7 +57,7 @@ func Test_Serializer_FromStrings(t *testing.T) {
 		expected.ShouldBeEqual(t, 0, "result has no error", actual)
 }
 
-func Test_Serializer_FromStringsSpread(t *testing.T) {
+func Test_Serializer_FromStringsSpread_SerializerMigrated(t *testing.T) {
 	// Arrange
 	r := corejson.Serialize.FromStringsSpread("a", "b")
 
@@ -69,7 +69,7 @@ func Test_Serializer_FromStringsSpread(t *testing.T) {
 		expected.ShouldBeEqual(t, 0, "result has no error", actual)
 }
 
-func Test_Serializer_FromString(t *testing.T) {
+func Test_Serializer_FromString_SerializerMigrated(t *testing.T) {
 	// Arrange
 	r := corejson.Serialize.FromString("hello")
 
@@ -81,7 +81,7 @@ func Test_Serializer_FromString(t *testing.T) {
 		expected.ShouldBeEqual(t, 0, "result has no error", actual)
 }
 
-func Test_Serializer_FromInteger(t *testing.T) {
+func Test_Serializer_FromInteger_SerializerMigrated(t *testing.T) {
 	// Arrange
 	r := corejson.Serialize.FromInteger(42)
 
@@ -93,7 +93,7 @@ func Test_Serializer_FromInteger(t *testing.T) {
 		expected.ShouldBeEqual(t, 0, "result has no error", actual)
 }
 
-func Test_Serializer_FromInteger64(t *testing.T) {
+func Test_Serializer_FromInteger64_SerializerMigrated(t *testing.T) {
 	// Arrange
 	r := corejson.Serialize.FromInteger64(64)
 
@@ -105,7 +105,7 @@ func Test_Serializer_FromInteger64(t *testing.T) {
 		expected.ShouldBeEqual(t, 0, "result has no error", actual)
 }
 
-func Test_Serializer_FromBool(t *testing.T) {
+func Test_Serializer_FromBool_SerializerMigrated(t *testing.T) {
 	// Arrange
 	r := corejson.Serialize.FromBool(true)
 
@@ -117,7 +117,7 @@ func Test_Serializer_FromBool(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_Serializer_FromIntegers(t *testing.T) {
+func Test_Serializer_FromIntegers_SerializerMigrated(t *testing.T) {
 	// Arrange
 	r := corejson.Serialize.FromIntegers([]int{1, 2, 3})
 
@@ -129,7 +129,7 @@ func Test_Serializer_FromIntegers(t *testing.T) {
 		expected.ShouldBeEqual(t, 0, "result has no error", actual)
 }
 
-func Test_Serializer_UsingAnyPtr(t *testing.T) {
+func Test_Serializer_UsingAnyPtr_SerializerMigrated(t *testing.T) {
 	// Arrange
 	r := corejson.Serialize.UsingAnyPtr("x")
 
@@ -146,7 +146,7 @@ func Test_Serializer_UsingAnyPtr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected error", actual)
 }
 
-func Test_Serializer_UsingAny(t *testing.T) {
+func Test_Serializer_UsingAny_SerializerMigrated(t *testing.T) {
 	// Arrange
 	r := corejson.Serialize.UsingAny("x")
 
@@ -158,7 +158,7 @@ func Test_Serializer_UsingAny(t *testing.T) {
 		expected.ShouldBeEqual(t, 0, "result has no error", actual)
 }
 
-func Test_Serializer_Raw(t *testing.T) {
+func Test_Serializer_Raw_SerializerMigrated(t *testing.T) {
 	// Arrange
 	b, err := corejson.Serialize.Raw("x")
 
@@ -170,7 +170,7 @@ func Test_Serializer_Raw(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_Serializer_Marshal(t *testing.T) {
+func Test_Serializer_Marshal_SerializerMigrated(t *testing.T) {
 	// Arrange
 	b, err := corejson.Serialize.Marshal("x")
 
@@ -182,7 +182,7 @@ func Test_Serializer_Marshal(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_Serializer_ToBytesErr(t *testing.T) {
+func Test_Serializer_ToBytesErr_SerializerMigrated(t *testing.T) {
 	// Arrange
 	b, err := corejson.Serialize.ToBytesErr("x")
 
@@ -194,7 +194,7 @@ func Test_Serializer_ToBytesErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_Serializer_ToBytesMust(t *testing.T) {
+func Test_Serializer_ToBytesMust_SerializerMigrated(t *testing.T) {
 	// Arrange
 	b := corejson.Serialize.ToBytesMust("x")
 
@@ -206,7 +206,7 @@ func Test_Serializer_ToBytesMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected bytes", actual)
 }
 
-func Test_Serializer_ToSafeBytesMust(t *testing.T) {
+func Test_Serializer_ToSafeBytesMust_SerializerMigrated(t *testing.T) {
 	// Arrange
 	b := corejson.Serialize.ToSafeBytesMust("x")
 
@@ -218,7 +218,7 @@ func Test_Serializer_ToSafeBytesMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected bytes", actual)
 }
 
-func Test_Serializer_ToSafeBytesSwallowErr(t *testing.T) {
+func Test_Serializer_ToSafeBytesSwallowErr_SerializerMigrated(t *testing.T) {
 	// Arrange
 	b := corejson.Serialize.ToSafeBytesSwallowErr("x")
 
@@ -230,7 +230,7 @@ func Test_Serializer_ToSafeBytesSwallowErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected bytes", actual)
 }
 
-func Test_Serializer_ToBytesSwallowErr(t *testing.T) {
+func Test_Serializer_ToBytesSwallowErr_SerializerMigrated(t *testing.T) {
 	// Arrange
 	b := corejson.Serialize.ToBytesSwallowErr("x")
 
@@ -242,7 +242,7 @@ func Test_Serializer_ToBytesSwallowErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected bytes", actual)
 }
 
-func Test_Serializer_ToString(t *testing.T) {
+func Test_Serializer_ToString_SerializerMigrated(t *testing.T) {
 	// Arrange
 	s := corejson.Serialize.ToString("hello")
 
@@ -254,7 +254,7 @@ func Test_Serializer_ToString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_Serializer_ToStringMust(t *testing.T) {
+func Test_Serializer_ToStringMust_SerializerMigrated(t *testing.T) {
 	// Arrange
 	s := corejson.Serialize.ToStringMust("x")
 
@@ -266,7 +266,7 @@ func Test_Serializer_ToStringMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected string", actual)
 }
 
-func Test_Serializer_ToStringErr(t *testing.T) {
+func Test_Serializer_ToStringErr_SerializerMigrated(t *testing.T) {
 	// Arrange
 	s, err := corejson.Serialize.ToStringErr("x")
 
@@ -278,7 +278,7 @@ func Test_Serializer_ToStringErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_Serializer_ToPrettyStringErr(t *testing.T) {
+func Test_Serializer_ToPrettyStringErr_SerializerMigrated(t *testing.T) {
 	// Arrange
 	s, err := corejson.Serialize.ToPrettyStringErr(map[string]int{"a": 1})
 

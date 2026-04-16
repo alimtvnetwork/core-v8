@@ -28,7 +28,7 @@ func Test_ValidValue_Constructors_Verification(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_BytesOnce_Verification(t *testing.T) {
+func Test_ValidValue_BytesOnce_Verification_ValidvalueConstructors(t *testing.T) {
 	safeTest(t, "Test_ValidValue_BytesOnce_Verification", func() {
 		// Arrange
 		tc := srcC20ValidValueBytesOnceTestCase
@@ -67,7 +67,7 @@ func Test_ValidValue_StringChecks_Verification(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Conversions_Verification(t *testing.T) {
+func Test_ValidValue_Conversions_Verification_ValidvalueConstructors(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Conversions_Verification", func() {
 		// Arrange
 		tc := srcC20ValidValueConversionsTestCase
@@ -148,7 +148,7 @@ func Test_ValidValue_CloneDispose_Verification(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Json_Verification(t *testing.T) {
+func Test_ValidValue_Json_Verification_ValidvalueConstructors(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Json_Verification", func() {
 		// Arrange
 		tc := srcC20ValidValueJsonTestCase
@@ -172,7 +172,7 @@ func Test_ValidValue_Json_Verification(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Split_Verification(t *testing.T) {
+func Test_ValidValue_Split_Verification_ValidvalueConstructors(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Split_Verification", func() {
 		// Arrange
 		tc := srcC20ValidValueSplitTestCase
@@ -274,7 +274,7 @@ func Test_ValidValues_Verification(t *testing.T) {
 	})
 }
 
-func Test_ValueStatus_Verification(t *testing.T) {
+func Test_ValueStatus_Verification_ValidvalueConstructors(t *testing.T) {
 	safeTest(t, "Test_ValueStatus_Verification", func() {
 		// Arrange
 		tc := srcC20ValueStatusTestCase
@@ -292,7 +292,7 @@ func Test_ValueStatus_Verification(t *testing.T) {
 	})
 }
 
-func Test_TextWithLineNumber_Verification(t *testing.T) {
+func Test_TextWithLineNumber_Verification_ValidvalueConstructors(t *testing.T) {
 	safeTest(t, "Test_TextWithLineNumber_Verification", func() {
 		// Arrange
 		tc := srcC20TextWithLineNumberTestCase
@@ -320,7 +320,7 @@ func Test_TextWithLineNumber_Verification(t *testing.T) {
 	})
 }
 
-func Test_LeftRight_Verification(t *testing.T) {
+func Test_LeftRight_Verification_ValidvalueConstructors(t *testing.T) {
 	safeTest(t, "Test_LeftRight_Verification", func() {
 		// Arrange
 		tc := srcC20LeftRightTestCase
@@ -381,7 +381,7 @@ func Test_LeftRight_Verification(t *testing.T) {
 	})
 }
 
-func Test_LeftMiddleRight_Verification(t *testing.T) {
+func Test_LeftMiddleRight_Verification_ValidvalueConstructors(t *testing.T) {
 	safeTest(t, "Test_LeftMiddleRight_Verification", func() {
 		// Arrange
 		tc := srcC20LeftMiddleRightTestCase

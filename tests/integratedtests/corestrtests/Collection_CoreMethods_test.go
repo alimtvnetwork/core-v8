@@ -10,7 +10,7 @@ import (
 
 // ── Basic ──
 
-func Test_Collection_Basic(t *testing.T) {
+func Test_Collection_Basic_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_Basic", func() {
 		// Arrange
 		tc := collectionBasicTestCases[0]
@@ -31,7 +31,7 @@ func Test_Collection_Basic(t *testing.T) {
 	})
 }
 
-func Test_Collection_NilReceiver(t *testing.T) {
+func Test_Collection_NilReceiver_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_NilReceiver", func() {
 		// Arrange
 		tc := collectionNilReceiverTestCases[0]
@@ -51,7 +51,7 @@ func Test_Collection_NilReceiver(t *testing.T) {
 
 // ── Add methods ──
 
-func Test_Collection_Add(t *testing.T) {
+func Test_Collection_Add_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_Add", func() {
 		// Arrange
 		tc := collectionAddTestCases[0]
@@ -68,7 +68,7 @@ func Test_Collection_Add(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddNonEmpty(t *testing.T) {
+func Test_Collection_AddNonEmpty_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_AddNonEmpty", func() {
 		// Arrange
 		tc := collectionAddTestCases[1]
@@ -85,7 +85,7 @@ func Test_Collection_AddNonEmpty(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddNonEmptyWhitespace(t *testing.T) {
+func Test_Collection_AddNonEmptyWhitespace_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_AddNonEmptyWhitespace", func() {
 		// Arrange
 		tc := collectionAddTestCases[2]
@@ -102,7 +102,7 @@ func Test_Collection_AddNonEmptyWhitespace(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddError(t *testing.T) {
+func Test_Collection_AddError_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_AddError", func() {
 		// Arrange
 		tc := collectionAddTestCases[3]
@@ -119,7 +119,7 @@ func Test_Collection_AddError(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddIf(t *testing.T) {
+func Test_Collection_AddIf_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_AddIf", func() {
 		// Arrange
 		tc := collectionAddTestCases[4]
@@ -136,7 +136,7 @@ func Test_Collection_AddIf(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddIfMany(t *testing.T) {
+func Test_Collection_AddIfMany_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_AddIfMany", func() {
 		// Arrange
 		tc := collectionAddTestCases[5]
@@ -153,7 +153,7 @@ func Test_Collection_AddIfMany(t *testing.T) {
 	})
 }
 
-func Test_Collection_Adds(t *testing.T) {
+func Test_Collection_Adds_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_Adds", func() {
 		// Arrange
 		tc := collectionAddTestCases[6]
@@ -169,7 +169,7 @@ func Test_Collection_Adds(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddStrings(t *testing.T) {
+func Test_Collection_AddStrings_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_AddStrings", func() {
 		// Arrange
 		tc := collectionAddTestCases[7]
@@ -185,7 +185,7 @@ func Test_Collection_AddStrings(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddFunc(t *testing.T) {
+func Test_Collection_AddFunc_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_AddFunc", func() {
 		// Arrange
 		tc := collectionAddTestCases[8]
@@ -201,7 +201,7 @@ func Test_Collection_AddFunc(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddFuncErr_NoErr(t *testing.T) {
+func Test_Collection_AddFuncErr_NoErr_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_AddFuncErr_NoErr", func() {
 		// Arrange
 		tc := collectionAddTestCases[9]
@@ -220,7 +220,7 @@ func Test_Collection_AddFuncErr_NoErr(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddFuncErr_WithErr(t *testing.T) {
+func Test_Collection_AddFuncErr_WithErr_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_AddFuncErr_WithErr", func() {
 		// Arrange
 		tc := collectionAddTestCases[10]
@@ -241,7 +241,7 @@ func Test_Collection_AddFuncErr_WithErr(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddLock(t *testing.T) {
+func Test_Collection_AddLock_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_AddLock", func() {
 		// Arrange
 		tc := collectionAddTestCases[11]
@@ -257,7 +257,7 @@ func Test_Collection_AddLock(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddsLock(t *testing.T) {
+func Test_Collection_AddsLock_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_AddsLock", func() {
 		// Arrange
 		tc := collectionAddTestCases[12]
@@ -275,7 +275,7 @@ func Test_Collection_AddsLock(t *testing.T) {
 
 // ── Merge ──
 
-func Test_Collection_AddCollection(t *testing.T) {
+func Test_Collection_AddCollection_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_AddCollection", func() {
 		// Arrange
 		tc := collectionMergeTestCases[0]
@@ -295,7 +295,7 @@ func Test_Collection_AddCollection(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddCollections(t *testing.T) {
+func Test_Collection_AddCollections_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_AddCollections", func() {
 		// Arrange
 		tc := collectionMergeTestCases[1]
@@ -317,7 +317,7 @@ func Test_Collection_AddCollections(t *testing.T) {
 
 // ── Remove ──
 
-func Test_Collection_RemoveAt(t *testing.T) {
+func Test_Collection_RemoveAt_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_RemoveAt", func() {
 		// Arrange
 		tc := collectionRemoveTestCases[0]
@@ -338,7 +338,7 @@ func Test_Collection_RemoveAt(t *testing.T) {
 
 // ── Query ──
 
-func Test_Collection_ListStrings(t *testing.T) {
+func Test_Collection_ListStrings_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_ListStrings", func() {
 		// Arrange
 		tc := collectionQueryTestCases[0]
@@ -354,7 +354,7 @@ func Test_Collection_ListStrings(t *testing.T) {
 	})
 }
 
-func Test_Collection_LengthLock(t *testing.T) {
+func Test_Collection_LengthLock_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_LengthLock", func() {
 		// Arrange
 		tc := collectionQueryTestCases[1]
@@ -369,7 +369,7 @@ func Test_Collection_LengthLock(t *testing.T) {
 	})
 }
 
-func Test_Collection_IsEmptyLock(t *testing.T) {
+func Test_Collection_IsEmptyLock_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_IsEmptyLock", func() {
 		// Arrange
 		tc := collectionQueryTestCases[2]
@@ -384,7 +384,7 @@ func Test_Collection_IsEmptyLock(t *testing.T) {
 	})
 }
 
-func Test_Collection_HasIndex(t *testing.T) {
+func Test_Collection_HasIndex_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_HasIndex", func() {
 		// Arrange
 		tc := collectionQueryTestCases[3]
@@ -404,7 +404,7 @@ func Test_Collection_HasIndex(t *testing.T) {
 
 // ── Error conversion ──
 
-func Test_Collection_AsError(t *testing.T) {
+func Test_Collection_AsError_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_AsError", func() {
 		// Arrange
 		tc := collectionErrorTestCases[0]
@@ -424,7 +424,7 @@ func Test_Collection_AsError(t *testing.T) {
 	})
 }
 
-func Test_Collection_ToError(t *testing.T) {
+func Test_Collection_ToError_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_ToError", func() {
 		// Arrange
 		tc := collectionErrorTestCases[1]
@@ -446,7 +446,7 @@ func Test_Collection_ToError(t *testing.T) {
 
 // ── Misc ──
 
-func Test_Collection_EachItemSplitBy(t *testing.T) {
+func Test_Collection_EachItemSplitBy_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_EachItemSplitBy", func() {
 		// Arrange
 		tc := collectionMiscTestCases[0]
@@ -462,7 +462,7 @@ func Test_Collection_EachItemSplitBy(t *testing.T) {
 	})
 }
 
-func Test_Collection_ConcatNew_Empty(t *testing.T) {
+func Test_Collection_ConcatNew_Empty_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_ConcatNew_Empty", func() {
 		// Arrange
 		tc := collectionMiscTestCases[1]
@@ -494,7 +494,7 @@ func Test_Collection_ConcatNew_WithItems(t *testing.T) {
 	})
 }
 
-func Test_Collection_IsEquals(t *testing.T) {
+func Test_Collection_IsEquals_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_IsEquals", func() {
 		// Arrange
 		tc := collectionMiscTestCases[3]
@@ -510,7 +510,7 @@ func Test_Collection_IsEquals(t *testing.T) {
 	})
 }
 
-func Test_Collection_IsEqualsWithSensitive(t *testing.T) {
+func Test_Collection_IsEqualsWithSensitive_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_IsEqualsWithSensitive", func() {
 		// Arrange
 		tc := collectionMiscTestCases[4]
@@ -527,7 +527,7 @@ func Test_Collection_IsEqualsWithSensitive(t *testing.T) {
 	})
 }
 
-func Test_Collection_JsonString(t *testing.T) {
+func Test_Collection_JsonString_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_JsonString", func() {
 		// Arrange
 		tc := collectionMiscTestCases[5]
@@ -546,7 +546,7 @@ func Test_Collection_JsonString(t *testing.T) {
 
 // ── Hashmap integration ──
 
-func Test_Collection_AddHashmapsValues(t *testing.T) {
+func Test_Collection_AddHashmapsValues_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_AddHashmapsValues", func() {
 		// Arrange
 		tc := collectionHashmapTestCases[0]
@@ -566,7 +566,7 @@ func Test_Collection_AddHashmapsValues(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddHashmapsKeys(t *testing.T) {
+func Test_Collection_AddHashmapsKeys_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_AddHashmapsKeys", func() {
 		// Arrange
 		tc := collectionHashmapTestCases[1]
@@ -585,7 +585,7 @@ func Test_Collection_AddHashmapsKeys(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddPointerCollectionsLock(t *testing.T) {
+func Test_Collection_AddPointerCollectionsLock_CollectionCoremethods(t *testing.T) {
 	safeTest(t, "Test_Collection_AddPointerCollectionsLock", func() {
 		// Arrange
 		tc := collectionHashmapTestCases[2]

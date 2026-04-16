@@ -526,7 +526,7 @@ func Test_ResultsCollection_ClonePtr_Nil_FromResultsCollectionNil(t *testing.T) 
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_ResultsCollection_Json(t *testing.T) {
+func Test_ResultsCollection_Json_ResultscollectionNillength(t *testing.T) {
 	tc := resultsCollectionJsonTestCase
 
 	// Arrange

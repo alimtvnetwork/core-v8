@@ -705,14 +705,14 @@ func Test_Utils_WrapSingleIfMissing(t *testing.T) {
 
 // ── CloneSlice / CloneSliceIf ──
 
-func Test_CloneSlice(t *testing.T) {
+func Test_CloneSlice_HashmapdiffRemaining(t *testing.T) {
 	safeTest(t, "Test_CloneSlice", func() {
 		_ = corestr.CloneSlice([]string{"a"})
 		_ = corestr.CloneSlice(nil)
 	})
 }
 
-func Test_CloneSliceIf(t *testing.T) {
+func Test_CloneSliceIf_HashmapdiffRemaining(t *testing.T) {
 	safeTest(t, "Test_CloneSliceIf", func() {
 		_ = corestr.CloneSliceIf(true, "a")
 		_ = corestr.CloneSliceIf(false, "a")
@@ -722,7 +722,7 @@ func Test_CloneSliceIf(t *testing.T) {
 
 // ── AnyToString ──
 
-func Test_AnyToString(t *testing.T) {
+func Test_AnyToString_HashmapdiffRemaining(t *testing.T) {
 	safeTest(t, "Test_AnyToString", func() {
 		_ = corestr.AnyToString(false, "hello")
 		_ = corestr.AnyToString(true, "hello")
@@ -732,7 +732,7 @@ func Test_AnyToString(t *testing.T) {
 
 // ── AllIndividualStringsOfStringsLength ──
 
-func Test_AllIndividualStringsOfStringsLength(t *testing.T) {
+func Test_AllIndividualStringsOfStringsLength_HashmapdiffRemaining(t *testing.T) {
 	safeTest(t, "Test_AllIndividualStringsOfStringsLength", func() {
 		s := [][]string{{"a", "b"}, {"c"}}
 		_ = corestr.AllIndividualStringsOfStringsLength(&s)
@@ -742,7 +742,7 @@ func Test_AllIndividualStringsOfStringsLength(t *testing.T) {
 
 // ── AllIndividualsLengthOfSimpleSlices ──
 
-func Test_AllIndividualsLengthOfSimpleSlices(t *testing.T) {
+func Test_AllIndividualsLengthOfSimpleSlices_HashmapdiffRemaining(t *testing.T) {
 	safeTest(t, "Test_AllIndividualsLengthOfSimpleSlices", func() {
 		ss := corestr.New.SimpleSlice.Lines("a", "b")
 		_ = corestr.AllIndividualsLengthOfSimpleSlices(ss)
@@ -1167,7 +1167,7 @@ func Test_NCHMC_Strings(t *testing.T) {
 
 // ── DataModel conversions ──
 
-func Test_HashmapDataModel(t *testing.T) {
+func Test_HashmapDataModel_HashmapdiffRemaining(t *testing.T) {
 	safeTest(t, "Test_HashmapDataModel", func() {
 		hm := corestr.New.Hashmap.Empty()
 		hm.AddOrUpdate("k", "v")
@@ -1176,7 +1176,7 @@ func Test_HashmapDataModel(t *testing.T) {
 	})
 }
 
-func Test_HashsetDataModel(t *testing.T) {
+func Test_HashsetDataModel_HashmapdiffRemaining(t *testing.T) {
 	safeTest(t, "Test_HashsetDataModel", func() {
 		hs := corestr.New.Hashset.StringsSpreadItems("a")
 		dm := corestr.NewHashsetsDataModelUsing(hs)
@@ -1184,7 +1184,7 @@ func Test_HashsetDataModel(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionDataModel(t *testing.T) {
+func Test_CharCollectionDataModel_HashmapdiffRemaining(t *testing.T) {
 	safeTest(t, "Test_CharCollectionDataModel", func() {
 		ccm := corestr.New.CharCollectionMap.Empty()
 		ccm.AddStrings("apple")
@@ -1193,7 +1193,7 @@ func Test_CharCollectionDataModel(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetDataModel(t *testing.T) {
+func Test_CharHashsetDataModel_HashmapdiffRemaining(t *testing.T) {
 	safeTest(t, "Test_CharHashsetDataModel", func() {
 		chm := corestr.New.CharHashsetMap.Cap(5, 5)
 		chm.AddStrings("apple")
@@ -1202,7 +1202,7 @@ func Test_CharHashsetDataModel(t *testing.T) {
 	})
 }
 
-func Test_HashsetsCollectionDataModel(t *testing.T) {
+func Test_HashsetsCollectionDataModel_HashmapdiffRemaining(t *testing.T) {
 	safeTest(t, "Test_HashsetsCollectionDataModel", func() {
 		hc := corestr.New.HashsetsCollection.Empty()
 		hc.Add(corestr.New.Hashset.StringsSpreadItems("a"))

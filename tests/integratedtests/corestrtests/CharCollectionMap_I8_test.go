@@ -10,7 +10,7 @@ import (
 
 // ===================== CharCollectionMap =====================
 
-func Test_CharCollectionMap_Empty(t *testing.T) {
+func Test_CharCollectionMap_Empty_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_Empty", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Empty()
@@ -24,7 +24,7 @@ func Test_CharCollectionMap_Empty(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_Add(t *testing.T) {
+func Test_CharCollectionMap_Add_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_Add", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Empty()
@@ -41,7 +41,7 @@ func Test_CharCollectionMap_Add(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_AddLock(t *testing.T) {
+func Test_CharCollectionMap_AddLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AddLock", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Empty()
@@ -56,7 +56,7 @@ func Test_CharCollectionMap_AddLock(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_AddStrings(t *testing.T) {
+func Test_CharCollectionMap_AddStrings_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AddStrings", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Empty()
@@ -71,7 +71,7 @@ func Test_CharCollectionMap_AddStrings(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_Has(t *testing.T) {
+func Test_CharCollectionMap_Has_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_Has", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple", "banana"})
@@ -102,7 +102,7 @@ func Test_CharCollectionMap_Has_Empty(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_HasWithCollection(t *testing.T) {
+func Test_CharCollectionMap_HasWithCollection_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_HasWithCollection", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -121,7 +121,7 @@ func Test_CharCollectionMap_HasWithCollection(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_HasWithCollection_Empty(t *testing.T) {
+func Test_CharCollectionMap_HasWithCollection_Empty_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_HasWithCollection_Empty", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Empty()
@@ -136,7 +136,7 @@ func Test_CharCollectionMap_HasWithCollection_Empty(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_HasWithCollectionLock(t *testing.T) {
+func Test_CharCollectionMap_HasWithCollectionLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_HasWithCollectionLock", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -151,7 +151,7 @@ func Test_CharCollectionMap_HasWithCollectionLock(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_LengthOf(t *testing.T) {
+func Test_CharCollectionMap_LengthOf_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_LengthOf", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple", "apricot"})
@@ -170,7 +170,7 @@ func Test_CharCollectionMap_LengthOf(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_LengthOfLock(t *testing.T) {
+func Test_CharCollectionMap_LengthOfLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_LengthOfLock", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -185,7 +185,7 @@ func Test_CharCollectionMap_LengthOfLock(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_LengthOfCollectionFromFirstChar(t *testing.T) {
+func Test_CharCollectionMap_LengthOfCollectionFromFirstChar_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_LengthOfCollectionFromFirstChar", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple", "apricot"})
@@ -200,7 +200,7 @@ func Test_CharCollectionMap_LengthOfCollectionFromFirstChar(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_AllLengthsSum(t *testing.T) {
+func Test_CharCollectionMap_AllLengthsSum_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AllLengthsSum", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple", "apricot", "banana"})
@@ -215,7 +215,7 @@ func Test_CharCollectionMap_AllLengthsSum(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_AllLengthsSumLock(t *testing.T) {
+func Test_CharCollectionMap_AllLengthsSumLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AllLengthsSumLock", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -230,7 +230,7 @@ func Test_CharCollectionMap_AllLengthsSumLock(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_GetChar(t *testing.T) {
+func Test_CharCollectionMap_GetChar_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_GetChar", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Empty()
@@ -249,7 +249,7 @@ func Test_CharCollectionMap_GetChar(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_GetCollection(t *testing.T) {
+func Test_CharCollectionMap_GetCollection_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_GetCollection", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -272,7 +272,7 @@ func Test_CharCollectionMap_GetCollection(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_GetCollectionLock(t *testing.T) {
+func Test_CharCollectionMap_GetCollectionLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_GetCollectionLock", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -287,7 +287,7 @@ func Test_CharCollectionMap_GetCollectionLock(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_GetCollectionByChar(t *testing.T) {
+func Test_CharCollectionMap_GetCollectionByChar_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_GetCollectionByChar", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -302,7 +302,7 @@ func Test_CharCollectionMap_GetCollectionByChar(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_IsEquals(t *testing.T) {
+func Test_CharCollectionMap_IsEquals_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_IsEquals", func() {
 		// Arrange
 		m1 := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -317,7 +317,7 @@ func Test_CharCollectionMap_IsEquals(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_IsEquals_Nil(t *testing.T) {
+func Test_CharCollectionMap_IsEquals_Nil_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_IsEquals_Nil", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -360,7 +360,7 @@ func Test_CharCollectionMap_IsEquals_DiffLength(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_IsEqualsLock(t *testing.T) {
+func Test_CharCollectionMap_IsEqualsLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_IsEqualsLock", func() {
 		// Arrange
 		m1 := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -375,7 +375,7 @@ func Test_CharCollectionMap_IsEqualsLock(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_IsEqualsCaseSensitive(t *testing.T) {
+func Test_CharCollectionMap_IsEqualsCaseSensitive_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_IsEqualsCaseSensitive", func() {
 		// Arrange
 		m1 := corestr.New.CharCollectionMap.Items([]string{"Apple"})
@@ -390,7 +390,7 @@ func Test_CharCollectionMap_IsEqualsCaseSensitive(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_IsEqualsCaseSensitiveLock(t *testing.T) {
+func Test_CharCollectionMap_IsEqualsCaseSensitiveLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_IsEqualsCaseSensitiveLock", func() {
 		// Arrange
 		m1 := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -405,7 +405,7 @@ func Test_CharCollectionMap_IsEqualsCaseSensitiveLock(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_AddSameStartingCharItems(t *testing.T) {
+func Test_CharCollectionMap_AddSameStartingCharItems_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AddSameStartingCharItems", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Empty()
@@ -424,14 +424,14 @@ func Test_CharCollectionMap_AddSameStartingCharItems(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_AddSameStartingCharItems_Empty(t *testing.T) {
+func Test_CharCollectionMap_AddSameStartingCharItems_Empty_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AddSameStartingCharItems_Empty", func() {
 		m := corestr.New.CharCollectionMap.Empty()
 		m.AddSameStartingCharItems('a', []string{}, false)
 	})
 }
 
-func Test_CharCollectionMap_AddHashmapsValues(t *testing.T) {
+func Test_CharCollectionMap_AddHashmapsValues_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AddHashmapsValues", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Empty()
@@ -449,14 +449,14 @@ func Test_CharCollectionMap_AddHashmapsValues(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_AddHashmapsValues_Nil(t *testing.T) {
+func Test_CharCollectionMap_AddHashmapsValues_Nil_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AddHashmapsValues_Nil", func() {
 		m := corestr.New.CharCollectionMap.Empty()
 		m.AddHashmapsValues(nil)
 	})
 }
 
-func Test_CharCollectionMap_AddHashmapsKeysValuesBoth(t *testing.T) {
+func Test_CharCollectionMap_AddHashmapsKeysValuesBoth_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AddHashmapsKeysValuesBoth", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Empty()
@@ -473,7 +473,7 @@ func Test_CharCollectionMap_AddHashmapsKeysValuesBoth(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_AddCollectionItems(t *testing.T) {
+func Test_CharCollectionMap_AddCollectionItems_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AddCollectionItems", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Empty()
@@ -489,14 +489,14 @@ func Test_CharCollectionMap_AddCollectionItems(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_AddCollectionItems_Nil(t *testing.T) {
+func Test_CharCollectionMap_AddCollectionItems_Nil_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AddCollectionItems_Nil", func() {
 		m := corestr.New.CharCollectionMap.Empty()
 		m.AddCollectionItems(nil)
 	})
 }
 
-func Test_CharCollectionMap_AddCharHashsetMap(t *testing.T) {
+func Test_CharCollectionMap_AddCharHashsetMap_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AddCharHashsetMap", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Empty()
@@ -512,7 +512,7 @@ func Test_CharCollectionMap_AddCharHashsetMap(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_Resize(t *testing.T) {
+func Test_CharCollectionMap_Resize_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_Resize", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"a1"})
@@ -529,21 +529,21 @@ func Test_CharCollectionMap_Resize(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_AddLength(t *testing.T) {
+func Test_CharCollectionMap_AddLength_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AddLength", func() {
 		m := corestr.New.CharCollectionMap.Items([]string{"a1"})
 		m.AddLength(10)
 	})
 }
 
-func Test_CharCollectionMap_AddLength_Empty(t *testing.T) {
+func Test_CharCollectionMap_AddLength_Empty_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AddLength_Empty", func() {
 		m := corestr.New.CharCollectionMap.Empty()
 		m.AddLength()
 	})
 }
 
-func Test_CharCollectionMap_List(t *testing.T) {
+func Test_CharCollectionMap_List_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_List", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple", "banana"})
@@ -558,7 +558,7 @@ func Test_CharCollectionMap_List(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_ListLock(t *testing.T) {
+func Test_CharCollectionMap_ListLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_ListLock", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -573,7 +573,7 @@ func Test_CharCollectionMap_ListLock(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_SortedListAsc(t *testing.T) {
+func Test_CharCollectionMap_SortedListAsc_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_SortedListAsc", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"banana", "apple"})
@@ -591,7 +591,7 @@ func Test_CharCollectionMap_SortedListAsc(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_SortedListAsc_Empty(t *testing.T) {
+func Test_CharCollectionMap_SortedListAsc_Empty_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_SortedListAsc_Empty", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Empty()
@@ -606,7 +606,7 @@ func Test_CharCollectionMap_SortedListAsc_Empty(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_String(t *testing.T) {
+func Test_CharCollectionMap_String_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_String", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -621,7 +621,7 @@ func Test_CharCollectionMap_String(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_SummaryString(t *testing.T) {
+func Test_CharCollectionMap_SummaryString_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_SummaryString", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -636,7 +636,7 @@ func Test_CharCollectionMap_SummaryString(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_StringLock(t *testing.T) {
+func Test_CharCollectionMap_StringLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_StringLock", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -651,7 +651,7 @@ func Test_CharCollectionMap_StringLock(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_SummaryStringLock(t *testing.T) {
+func Test_CharCollectionMap_SummaryStringLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_SummaryStringLock", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -666,7 +666,7 @@ func Test_CharCollectionMap_SummaryStringLock(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_Print(t *testing.T) {
+func Test_CharCollectionMap_Print_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_Print", func() {
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
 		m.Print(false) // skip
@@ -674,7 +674,7 @@ func Test_CharCollectionMap_Print(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_PrintLock(t *testing.T) {
+func Test_CharCollectionMap_PrintLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_PrintLock", func() {
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
 		m.PrintLock(false)
@@ -682,7 +682,7 @@ func Test_CharCollectionMap_PrintLock(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_IsEmptyLock(t *testing.T) {
+func Test_CharCollectionMap_IsEmptyLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_IsEmptyLock", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Empty()
@@ -696,7 +696,7 @@ func Test_CharCollectionMap_IsEmptyLock(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_LengthLock(t *testing.T) {
+func Test_CharCollectionMap_LengthLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_LengthLock", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -710,7 +710,7 @@ func Test_CharCollectionMap_LengthLock(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_HashsetByChar(t *testing.T) {
+func Test_CharCollectionMap_HashsetByChar_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_HashsetByChar", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -729,7 +729,7 @@ func Test_CharCollectionMap_HashsetByChar(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_HashsetByCharLock(t *testing.T) {
+func Test_CharCollectionMap_HashsetByCharLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_HashsetByCharLock", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -748,7 +748,7 @@ func Test_CharCollectionMap_HashsetByCharLock(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_HashsetByStringFirstChar(t *testing.T) {
+func Test_CharCollectionMap_HashsetByStringFirstChar_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_HashsetByStringFirstChar", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -763,7 +763,7 @@ func Test_CharCollectionMap_HashsetByStringFirstChar(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_HashsetByStringFirstCharLock(t *testing.T) {
+func Test_CharCollectionMap_HashsetByStringFirstCharLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_HashsetByStringFirstCharLock", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -778,7 +778,7 @@ func Test_CharCollectionMap_HashsetByStringFirstCharLock(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_HashsetsCollection(t *testing.T) {
+func Test_CharCollectionMap_HashsetsCollection_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_HashsetsCollection", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple", "banana"})
@@ -793,7 +793,7 @@ func Test_CharCollectionMap_HashsetsCollection(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_HashsetsCollection_Empty(t *testing.T) {
+func Test_CharCollectionMap_HashsetsCollection_Empty_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_HashsetsCollection_Empty", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Empty()
@@ -808,7 +808,7 @@ func Test_CharCollectionMap_HashsetsCollection_Empty(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_HashsetsCollectionByChars(t *testing.T) {
+func Test_CharCollectionMap_HashsetsCollectionByChars_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_HashsetsCollectionByChars", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple", "banana"})
@@ -823,7 +823,7 @@ func Test_CharCollectionMap_HashsetsCollectionByChars(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_HashsetsCollectionByStringFirstChar(t *testing.T) {
+func Test_CharCollectionMap_HashsetsCollectionByStringFirstChar_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_HashsetsCollectionByStringFirstChar", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -838,7 +838,7 @@ func Test_CharCollectionMap_HashsetsCollectionByStringFirstChar(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_AddSameCharsCollection(t *testing.T) {
+func Test_CharCollectionMap_AddSameCharsCollection_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AddSameCharsCollection", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Empty()
@@ -859,7 +859,7 @@ func Test_CharCollectionMap_AddSameCharsCollection(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_AddSameCharsCollectionLock(t *testing.T) {
+func Test_CharCollectionMap_AddSameCharsCollectionLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AddSameCharsCollectionLock", func() {
 		m := corestr.New.CharCollectionMap.Empty()
 		col := corestr.New.Collection.Strings([]string{"apple"})
@@ -869,7 +869,7 @@ func Test_CharCollectionMap_AddSameCharsCollectionLock(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_GetCharsGroups(t *testing.T) {
+func Test_CharCollectionMap_GetCharsGroups_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_GetCharsGroups", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Empty()
@@ -884,7 +884,7 @@ func Test_CharCollectionMap_GetCharsGroups(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_GetCharsGroups_Empty(t *testing.T) {
+func Test_CharCollectionMap_GetCharsGroups_Empty_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_GetCharsGroups_Empty", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Empty()
@@ -899,7 +899,7 @@ func Test_CharCollectionMap_GetCharsGroups_Empty(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_GetCopyMapLock(t *testing.T) {
+func Test_CharCollectionMap_GetCopyMapLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_GetCopyMapLock", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -929,7 +929,7 @@ func Test_CharCollectionMap_GetCopyMapLock_Empty(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_GetMap(t *testing.T) {
+func Test_CharCollectionMap_GetMap_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_GetMap", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -944,7 +944,7 @@ func Test_CharCollectionMap_GetMap(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_Clear(t *testing.T) {
+func Test_CharCollectionMap_Clear_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_Clear", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -959,14 +959,14 @@ func Test_CharCollectionMap_Clear(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_Clear_Empty(t *testing.T) {
+func Test_CharCollectionMap_Clear_Empty_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_Clear_Empty", func() {
 		m := corestr.New.CharCollectionMap.Empty()
 		m.Clear()
 	})
 }
 
-func Test_CharCollectionMap_Dispose(t *testing.T) {
+func Test_CharCollectionMap_Dispose_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_Dispose", func() {
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
 		m.Dispose()
@@ -981,7 +981,7 @@ func Test_CharCollectionMap_Dispose_Nil(t *testing.T) {
 }
 
 // JSON
-func Test_CharCollectionMap_MarshalJSON(t *testing.T) {
+func Test_CharCollectionMap_MarshalJSON_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_MarshalJSON", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -999,7 +999,7 @@ func Test_CharCollectionMap_MarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_UnmarshalJSON(t *testing.T) {
+func Test_CharCollectionMap_UnmarshalJSON_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_UnmarshalJSON", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -1016,7 +1016,7 @@ func Test_CharCollectionMap_UnmarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_Json(t *testing.T) {
+func Test_CharCollectionMap_Json_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_Json", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -1031,7 +1031,7 @@ func Test_CharCollectionMap_Json(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_JsonPtr(t *testing.T) {
+func Test_CharCollectionMap_JsonPtr_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_JsonPtr", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -1046,7 +1046,7 @@ func Test_CharCollectionMap_JsonPtr(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_JsonModel(t *testing.T) {
+func Test_CharCollectionMap_JsonModel_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_JsonModel", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -1061,7 +1061,7 @@ func Test_CharCollectionMap_JsonModel(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_JsonModelAny(t *testing.T) {
+func Test_CharCollectionMap_JsonModelAny_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_JsonModelAny", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -1076,7 +1076,7 @@ func Test_CharCollectionMap_JsonModelAny(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_ParseInjectUsingJson(t *testing.T) {
+func Test_CharCollectionMap_ParseInjectUsingJson_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_ParseInjectUsingJson", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -1093,7 +1093,7 @@ func Test_CharCollectionMap_ParseInjectUsingJson(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_ParseInjectUsingJsonMust(t *testing.T) {
+func Test_CharCollectionMap_ParseInjectUsingJsonMust_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_ParseInjectUsingJsonMust", func() {
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
 		j := m.Json()
@@ -1102,7 +1102,7 @@ func Test_CharCollectionMap_ParseInjectUsingJsonMust(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_JsonParseSelfInject(t *testing.T) {
+func Test_CharCollectionMap_JsonParseSelfInject_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_JsonParseSelfInject", func() {
 		// Arrange
 		m := corestr.New.CharCollectionMap.Items([]string{"apple"})
@@ -1234,7 +1234,7 @@ func Test_CharHashsetMap_Empty(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_Cap(t *testing.T) {
+func Test_CharHashsetMap_Cap_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_Cap", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.Cap(20, 15)
@@ -1248,7 +1248,7 @@ func Test_CharHashsetMap_Cap(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_CapItems(t *testing.T) {
+func Test_CharHashsetMap_CapItems_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_CapItems", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(20, 15, "apple", "banana")
@@ -1262,7 +1262,7 @@ func Test_CharHashsetMap_CapItems(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_Strings(t *testing.T) {
+func Test_CharHashsetMap_Strings_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_Strings", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.Strings(10, []string{"apple", "banana"})
@@ -1276,7 +1276,7 @@ func Test_CharHashsetMap_Strings(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_Strings_Nil(t *testing.T) {
+func Test_CharHashsetMap_Strings_Nil_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_Strings_Nil", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.Strings(10, nil)
@@ -1290,7 +1290,7 @@ func Test_CharHashsetMap_Strings_Nil(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_Add(t *testing.T) {
+func Test_CharHashsetMap_Add_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_Add", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.Cap(10, 10)
@@ -1307,7 +1307,7 @@ func Test_CharHashsetMap_Add(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_AddLock(t *testing.T) {
+func Test_CharHashsetMap_AddLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_AddLock", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.Cap(10, 10)
@@ -1322,7 +1322,7 @@ func Test_CharHashsetMap_AddLock(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_AddStrings(t *testing.T) {
+func Test_CharHashsetMap_AddStrings_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_AddStrings", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.Cap(10, 10)
@@ -1344,7 +1344,7 @@ func Test_CharHashsetMap_AddStrings_Nil(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_AddStringsLock(t *testing.T) {
+func Test_CharHashsetMap_AddStringsLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_AddStringsLock", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.Cap(10, 10)
@@ -1366,7 +1366,7 @@ func Test_CharHashsetMap_AddStringsLock_Empty(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_Has(t *testing.T) {
+func Test_CharHashsetMap_Has_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_Has", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1397,7 +1397,7 @@ func Test_CharHashsetMap_Has_Empty(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_HasWithHashset(t *testing.T) {
+func Test_CharHashsetMap_HasWithHashset_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_HasWithHashset", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1431,7 +1431,7 @@ func Test_CharHashsetMap_HasWithHashset_Empty(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_HasWithHashsetLock(t *testing.T) {
+func Test_CharHashsetMap_HasWithHashsetLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_HasWithHashsetLock", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1446,7 +1446,7 @@ func Test_CharHashsetMap_HasWithHashsetLock(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_LengthOf(t *testing.T) {
+func Test_CharHashsetMap_LengthOf_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_LengthOf", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1463,7 +1463,7 @@ func Test_CharHashsetMap_LengthOf(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_LengthOfLock(t *testing.T) {
+func Test_CharHashsetMap_LengthOfLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_LengthOfLock", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1477,7 +1477,7 @@ func Test_CharHashsetMap_LengthOfLock(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_LengthOfHashsetFromFirstChar(t *testing.T) {
+func Test_CharHashsetMap_LengthOfHashsetFromFirstChar_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_LengthOfHashsetFromFirstChar", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1491,7 +1491,7 @@ func Test_CharHashsetMap_LengthOfHashsetFromFirstChar(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_AllLengthsSum(t *testing.T) {
+func Test_CharHashsetMap_AllLengthsSum_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_AllLengthsSum", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple", "banana")
@@ -1505,7 +1505,7 @@ func Test_CharHashsetMap_AllLengthsSum(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_AllLengthsSumLock(t *testing.T) {
+func Test_CharHashsetMap_AllLengthsSumLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_AllLengthsSumLock", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1519,7 +1519,7 @@ func Test_CharHashsetMap_AllLengthsSumLock(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_GetChar(t *testing.T) {
+func Test_CharHashsetMap_GetChar_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_GetChar", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.Cap(10, 10)
@@ -1536,7 +1536,7 @@ func Test_CharHashsetMap_GetChar(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_GetCharOf(t *testing.T) {
+func Test_CharHashsetMap_GetCharOf_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_GetCharOf", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.Cap(10, 10)
@@ -1553,7 +1553,7 @@ func Test_CharHashsetMap_GetCharOf(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_GetHashset(t *testing.T) {
+func Test_CharHashsetMap_GetHashset_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_GetHashset", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1576,7 +1576,7 @@ func Test_CharHashsetMap_GetHashset(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_GetHashsetLock(t *testing.T) {
+func Test_CharHashsetMap_GetHashsetLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_GetHashsetLock", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1591,7 +1591,7 @@ func Test_CharHashsetMap_GetHashsetLock(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_GetHashsetByChar(t *testing.T) {
+func Test_CharHashsetMap_GetHashsetByChar_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_GetHashsetByChar", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1606,7 +1606,7 @@ func Test_CharHashsetMap_GetHashsetByChar(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_HashsetByChar(t *testing.T) {
+func Test_CharHashsetMap_HashsetByChar_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_HashsetByChar", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1621,7 +1621,7 @@ func Test_CharHashsetMap_HashsetByChar(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_HashsetByCharLock(t *testing.T) {
+func Test_CharHashsetMap_HashsetByCharLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_HashsetByCharLock", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1640,7 +1640,7 @@ func Test_CharHashsetMap_HashsetByCharLock(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_HashsetByStringFirstChar(t *testing.T) {
+func Test_CharHashsetMap_HashsetByStringFirstChar_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_HashsetByStringFirstChar", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1655,7 +1655,7 @@ func Test_CharHashsetMap_HashsetByStringFirstChar(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_HashsetByStringFirstCharLock(t *testing.T) {
+func Test_CharHashsetMap_HashsetByStringFirstCharLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_HashsetByStringFirstCharLock", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1670,7 +1670,7 @@ func Test_CharHashsetMap_HashsetByStringFirstCharLock(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_IsEquals(t *testing.T) {
+func Test_CharHashsetMap_IsEquals_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_IsEquals", func() {
 		// Arrange
 		m1 := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1685,7 +1685,7 @@ func Test_CharHashsetMap_IsEquals(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_IsEquals_Nil(t *testing.T) {
+func Test_CharHashsetMap_IsEquals_Nil_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_IsEquals_Nil", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1713,7 +1713,7 @@ func Test_CharHashsetMap_IsEquals_SameRef(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_IsEqualsLock(t *testing.T) {
+func Test_CharHashsetMap_IsEqualsLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_IsEqualsLock", func() {
 		// Arrange
 		m1 := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1728,7 +1728,7 @@ func Test_CharHashsetMap_IsEqualsLock(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_List(t *testing.T) {
+func Test_CharHashsetMap_List_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_List", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple", "banana")
@@ -1743,7 +1743,7 @@ func Test_CharHashsetMap_List(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_SortedListAsc(t *testing.T) {
+func Test_CharHashsetMap_SortedListAsc_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_SortedListAsc", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "banana", "apple")
@@ -1758,7 +1758,7 @@ func Test_CharHashsetMap_SortedListAsc(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_SortedListDsc(t *testing.T) {
+func Test_CharHashsetMap_SortedListDsc_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_SortedListDsc", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple", "banana")
@@ -1773,7 +1773,7 @@ func Test_CharHashsetMap_SortedListDsc(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_String(t *testing.T) {
+func Test_CharHashsetMap_String_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_String", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1788,7 +1788,7 @@ func Test_CharHashsetMap_String(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_StringLock(t *testing.T) {
+func Test_CharHashsetMap_StringLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_StringLock", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1803,7 +1803,7 @@ func Test_CharHashsetMap_StringLock(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_Print(t *testing.T) {
+func Test_CharHashsetMap_Print_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_Print", func() {
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
 		m.Print(false)
@@ -1811,7 +1811,7 @@ func Test_CharHashsetMap_Print(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_PrintLock(t *testing.T) {
+func Test_CharHashsetMap_PrintLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_PrintLock", func() {
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
 		m.PrintLock(false)
@@ -1819,7 +1819,7 @@ func Test_CharHashsetMap_PrintLock(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_IsEmptyLock(t *testing.T) {
+func Test_CharHashsetMap_IsEmptyLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_IsEmptyLock", func() {
 		// Arrange
 		m := corestr.Empty.CharHashsetMap()
@@ -1833,7 +1833,7 @@ func Test_CharHashsetMap_IsEmptyLock(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_HasItems(t *testing.T) {
+func Test_CharHashsetMap_HasItems_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_HasItems", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1847,7 +1847,7 @@ func Test_CharHashsetMap_HasItems(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_HashsetsCollection(t *testing.T) {
+func Test_CharHashsetMap_HashsetsCollection_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_HashsetsCollection", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple", "banana")
@@ -1877,7 +1877,7 @@ func Test_CharHashsetMap_HashsetsCollection_Empty(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_HashsetsCollectionByChars(t *testing.T) {
+func Test_CharHashsetMap_HashsetsCollectionByChars_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_HashsetsCollectionByChars", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1892,7 +1892,7 @@ func Test_CharHashsetMap_HashsetsCollectionByChars(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_HashsetsCollectionByStringsFirstChar(t *testing.T) {
+func Test_CharHashsetMap_HashsetsCollectionByStringsFirstChar_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_HashsetsCollectionByStringsFirstChar", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1907,7 +1907,7 @@ func Test_CharHashsetMap_HashsetsCollectionByStringsFirstChar(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_GetCharsGroups(t *testing.T) {
+func Test_CharHashsetMap_GetCharsGroups_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_GetCharsGroups", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.Cap(10, 10)
@@ -1937,7 +1937,7 @@ func Test_CharHashsetMap_GetCharsGroups_Empty(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_GetMap(t *testing.T) {
+func Test_CharHashsetMap_GetMap_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_GetMap", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1952,7 +1952,7 @@ func Test_CharHashsetMap_GetMap(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_GetCopyMapLock(t *testing.T) {
+func Test_CharHashsetMap_GetCopyMapLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_GetCopyMapLock", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -1982,7 +1982,7 @@ func Test_CharHashsetMap_GetCopyMapLock_Empty(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_AddSameStartingCharItems(t *testing.T) {
+func Test_CharHashsetMap_AddSameStartingCharItems_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_AddSameStartingCharItems", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.Cap(10, 10)
@@ -2008,7 +2008,7 @@ func Test_CharHashsetMap_AddSameStartingCharItems_Empty(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_AddCollectionItems(t *testing.T) {
+func Test_CharHashsetMap_AddCollectionItems_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_AddCollectionItems", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.Cap(10, 10)
@@ -2024,14 +2024,14 @@ func Test_CharHashsetMap_AddCollectionItems(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_AddCollectionItems_Nil(t *testing.T) {
+func Test_CharHashsetMap_AddCollectionItems_Nil_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_AddCollectionItems_Nil", func() {
 		m := corestr.New.CharHashsetMap.Cap(10, 10)
 		m.AddCollectionItems(nil)
 	})
 }
 
-func Test_CharHashsetMap_AddCharCollectionMapItems(t *testing.T) {
+func Test_CharHashsetMap_AddCharCollectionMapItems_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_AddCharCollectionMapItems", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.Cap(10, 10)
@@ -2054,7 +2054,7 @@ func Test_CharHashsetMap_AddCharCollectionMapItems_Nil(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_AddHashsetItems(t *testing.T) {
+func Test_CharHashsetMap_AddHashsetItems_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_AddHashsetItems", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.Cap(10, 10)
@@ -2070,7 +2070,7 @@ func Test_CharHashsetMap_AddHashsetItems(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_AddSameCharsCollection(t *testing.T) {
+func Test_CharHashsetMap_AddSameCharsCollection_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_AddSameCharsCollection", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.Cap(10, 10)
@@ -2091,7 +2091,7 @@ func Test_CharHashsetMap_AddSameCharsCollection(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_AddSameCharsHashset(t *testing.T) {
+func Test_CharHashsetMap_AddSameCharsHashset_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_AddSameCharsHashset", func() {
 		m := corestr.New.CharHashsetMap.Cap(10, 10)
 		hs := corestr.New.Hashset.Strings([]string{"apple"})
@@ -2104,7 +2104,7 @@ func Test_CharHashsetMap_AddSameCharsHashset(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_AddHashsetLock(t *testing.T) {
+func Test_CharHashsetMap_AddHashsetLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_AddHashsetLock", func() {
 		m := corestr.New.CharHashsetMap.Cap(10, 10)
 		hs := corestr.New.Hashset.Strings([]string{"apple"})
@@ -2114,7 +2114,7 @@ func Test_CharHashsetMap_AddHashsetLock(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_AddSameCharsCollectionLock(t *testing.T) {
+func Test_CharHashsetMap_AddSameCharsCollectionLock_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_AddSameCharsCollectionLock", func() {
 		m := corestr.New.CharHashsetMap.Cap(10, 10)
 		col := corestr.New.Collection.Strings([]string{"apple"})
@@ -2124,7 +2124,7 @@ func Test_CharHashsetMap_AddSameCharsCollectionLock(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_RemoveAll(t *testing.T) {
+func Test_CharHashsetMap_RemoveAll_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_RemoveAll", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -2146,7 +2146,7 @@ func Test_CharHashsetMap_RemoveAll_Empty(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_Clear(t *testing.T) {
+func Test_CharHashsetMap_Clear_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_Clear", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -2169,7 +2169,7 @@ func Test_CharHashsetMap_Clear_Empty(t *testing.T) {
 }
 
 // JSON
-func Test_CharHashsetMap_MarshalJSON(t *testing.T) {
+func Test_CharHashsetMap_MarshalJSON_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_MarshalJSON", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -2187,7 +2187,7 @@ func Test_CharHashsetMap_MarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_UnmarshalJSON(t *testing.T) {
+func Test_CharHashsetMap_UnmarshalJSON_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_UnmarshalJSON", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -2204,7 +2204,7 @@ func Test_CharHashsetMap_UnmarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_Json(t *testing.T) {
+func Test_CharHashsetMap_Json_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_Json", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -2219,7 +2219,7 @@ func Test_CharHashsetMap_Json(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_JsonPtr(t *testing.T) {
+func Test_CharHashsetMap_JsonPtr_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_JsonPtr", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -2234,7 +2234,7 @@ func Test_CharHashsetMap_JsonPtr(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_JsonModel(t *testing.T) {
+func Test_CharHashsetMap_JsonModel_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_JsonModel", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -2249,7 +2249,7 @@ func Test_CharHashsetMap_JsonModel(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_JsonModelAny(t *testing.T) {
+func Test_CharHashsetMap_JsonModelAny_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_JsonModelAny", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -2264,7 +2264,7 @@ func Test_CharHashsetMap_JsonModelAny(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_ParseInjectUsingJson(t *testing.T) {
+func Test_CharHashsetMap_ParseInjectUsingJson_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_ParseInjectUsingJson", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
@@ -2281,7 +2281,7 @@ func Test_CharHashsetMap_ParseInjectUsingJson(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_ParseInjectUsingJsonMust(t *testing.T) {
+func Test_CharHashsetMap_ParseInjectUsingJsonMust_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_ParseInjectUsingJsonMust", func() {
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")
 		j := m.Json()
@@ -2290,7 +2290,7 @@ func Test_CharHashsetMap_ParseInjectUsingJsonMust(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_JsonParseSelfInject(t *testing.T) {
+func Test_CharHashsetMap_JsonParseSelfInject_CharcollectionmapI8(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_JsonParseSelfInject", func() {
 		// Arrange
 		m := corestr.New.CharHashsetMap.CapItems(10, 10, "apple")

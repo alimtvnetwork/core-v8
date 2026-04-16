@@ -123,7 +123,7 @@ func Test_SSO_GetOnce_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_GetOnce_AlreadyInit(t *testing.T) {
+func Test_SSO_GetOnce_AlreadyInit_SsoValue(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_GetOnce_AlreadyInit", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -232,7 +232,7 @@ func Test_SSO_IsInvalid_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsInvalid_Nil(t *testing.T) {
+func Test_SSO_IsInvalid_Nil_SsoValue(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_IsInvalid_Nil", func() {
 		// Arrange
 		var sso *corestr.SimpleStringOnce
@@ -246,7 +246,7 @@ func Test_SSO_IsInvalid_Nil(t *testing.T) {
 	})
 }
 
-func Test_SSO_SetInitialize_SetUnInit(t *testing.T) {
+func Test_SSO_SetInitialize_SetUnInit_SsoValue(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_SetInitialize_SetUnInit", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -510,7 +510,7 @@ func Test_SSO_Int32_Err(t *testing.T) {
 	})
 }
 
-func Test_SSO_Uint16(t *testing.T) {
+func Test_SSO_Uint16_SsoValue(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Uint16", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -532,7 +532,7 @@ func Test_SSO_Uint16(t *testing.T) {
 	})
 }
 
-func Test_SSO_Uint32(t *testing.T) {
+func Test_SSO_Uint32_SsoValue(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Uint32", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -864,7 +864,7 @@ func Test_SSO_ValueInt_Err(t *testing.T) {
 	})
 }
 
-func Test_SSO_ValueByte(t *testing.T) {
+func Test_SSO_ValueByte_SsoValue(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_ValueByte", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -906,7 +906,7 @@ func Test_SSO_ValueFloat64_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_NonPtr_Ptr(t *testing.T) {
+func Test_SSO_NonPtr_Ptr_SsoValue(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_NonPtr_Ptr", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -945,7 +945,7 @@ func Test_SSO_ConcatNew_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_ConcatNewUsingStrings(t *testing.T) {
+func Test_SSO_ConcatNewUsingStrings_SsoValue(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_ConcatNewUsingStrings", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -1199,7 +1199,7 @@ func Test_HashmapDiff_ShouldDiffMessage_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_HashmapDiff_LogShouldDiffMessage(t *testing.T) {
+func Test_HashmapDiff_LogShouldDiffMessage_SsoValue(t *testing.T) {
 	safeTest(t, "Test_I28_HashmapDiff_LogShouldDiffMessage", func() {
 		// Arrange
 		hd := corestr.HashmapDiff{"a": "1"}

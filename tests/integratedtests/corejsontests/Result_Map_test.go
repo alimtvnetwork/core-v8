@@ -605,7 +605,7 @@ func Test_Result_Nil_Dispose(t *testing.T) {
 
 // ── Serialize logic ──
 
-func Test_Serialize_FromBytes(t *testing.T) {
+func Test_Serialize_FromBytes_ResultMap(t *testing.T) {
 	// Arrange
 	r := corejson.Serialize.FromBytes([]byte{1, 2})
 
@@ -617,7 +617,7 @@ func Test_Serialize_FromBytes(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Serialize FromBytes -- valid", actual)
 }
 
-func Test_Serialize_FromStrings(t *testing.T) {
+func Test_Serialize_FromStrings_ResultMap(t *testing.T) {
 	// Arrange
 	r := corejson.Serialize.FromStrings([]string{"a"})
 
@@ -629,7 +629,7 @@ func Test_Serialize_FromStrings(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Serialize FromStrings -- valid", actual)
 }
 
-func Test_Serialize_FromStringsSpread(t *testing.T) {
+func Test_Serialize_FromStringsSpread_ResultMap(t *testing.T) {
 	// Arrange
 	r := corejson.Serialize.FromStringsSpread("a", "b")
 
@@ -677,7 +677,7 @@ func Test_Serialize_FromBool_FromResultMap(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Serialize FromBool -- valid", actual)
 }
 
-func Test_Serialize_FromIntegers(t *testing.T) {
+func Test_Serialize_FromIntegers_ResultMap(t *testing.T) {
 	// Arrange
 	r := corejson.Serialize.FromIntegers([]int{1, 2})
 
@@ -848,7 +848,7 @@ func Test_Deserialize_UsingString_FromResultMap(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Deserialize UsingString -- valid", actual)
 }
 
-func Test_Deserialize_UsingStringOption(t *testing.T) {
+func Test_Deserialize_UsingStringOption_ResultMap(t *testing.T) {
 	// Arrange
 	var s string
 	err := corejson.Deserialize.UsingStringOption(true, "", &s)
@@ -874,7 +874,7 @@ func Test_Deserialize_UsingStringIgnoreEmpty_FromResultMap(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Deserialize UsingStringIgnoreEmpty -- valid", actual)
 }
 
-func Test_Deserialize_MapAnyToPointer(t *testing.T) {
+func Test_Deserialize_MapAnyToPointer_ResultMap(t *testing.T) {
 	// Arrange
 	type S struct{ Name string }
 	var s S
@@ -916,7 +916,7 @@ func Test_Deserialize_FromTo_FromResultMap(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Deserialize FromTo -- string to string", actual)
 }
 
-func Test_Deserialize_UsingBytesIf(t *testing.T) {
+func Test_Deserialize_UsingBytesIf_ResultMap(t *testing.T) {
 	// Arrange
 	var s string
 	err := corejson.Deserialize.UsingBytesIf(true, []byte(`"hello"`), &s)

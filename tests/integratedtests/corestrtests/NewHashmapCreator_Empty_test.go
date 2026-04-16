@@ -1004,7 +1004,7 @@ func Test_AllIndividualStringsOfStringsLength_Valid_FromNewHashmapCreatorEmp(t *
 	})
 }
 
-func Test_AllIndividualStringsOfStringsLength_Empty(t *testing.T) {
+func Test_AllIndividualStringsOfStringsLength_Empty_NewhashmapcreatorEmpty(t *testing.T) {
 	safeTest(t, "Test_AllIndividualStringsOfStringsLength_Empty", func() {
 		input := [][]string{}
 		result := corestr.AllIndividualStringsOfStringsLength(&input)

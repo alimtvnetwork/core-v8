@@ -448,7 +448,7 @@ func Test_MapAsKeyValSlice_Pointer_FromMapAnyItemDiffNilMap(t *testing.T) {
 // LeftRight — all methods
 // =============================================================================
 
-func Test_LeftRight_Nil(t *testing.T) {
+func Test_LeftRight_Nil_MapanyitemdiffNilMapanyitemdiffLeftright(t *testing.T) {
 	// Arrange
 	var lr *coredynamic.LeftRight
 

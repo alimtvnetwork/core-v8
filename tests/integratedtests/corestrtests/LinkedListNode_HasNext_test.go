@@ -58,7 +58,7 @@ func Test_LinkedListNode_EndOfChain(t *testing.T) {
 	})
 }
 
-func Test_LinkedListNode_Clone(t *testing.T) {
+func Test_LinkedListNode_Clone_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedListNode_Clone", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("x")
@@ -72,7 +72,7 @@ func Test_LinkedListNode_Clone(t *testing.T) {
 	})
 }
 
-func Test_LinkedListNode_IsEqual_Same(t *testing.T) {
+func Test_LinkedListNode_IsEqual_Same_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedListNode_IsEqual_Same", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a")
@@ -93,7 +93,7 @@ func Test_LinkedListNode_IsEqual_BothNil(t *testing.T) {
 	})
 }
 
-func Test_LinkedListNode_IsEqualValue(t *testing.T) {
+func Test_LinkedListNode_IsEqualValue_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedListNode_IsEqualValue", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("hello")
@@ -115,7 +115,7 @@ func Test_LinkedListNode_IsEqualValueSensitive_CI(t *testing.T) {
 	})
 }
 
-func Test_LinkedListNode_String(t *testing.T) {
+func Test_LinkedListNode_String_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedListNode_String", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("test")
@@ -126,7 +126,7 @@ func Test_LinkedListNode_String(t *testing.T) {
 	})
 }
 
-func Test_LinkedListNode_List(t *testing.T) {
+func Test_LinkedListNode_List_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedListNode_List", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a").Add("b")
@@ -137,7 +137,7 @@ func Test_LinkedListNode_List(t *testing.T) {
 	})
 }
 
-func Test_LinkedListNode_Join(t *testing.T) {
+func Test_LinkedListNode_Join_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedListNode_Join", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a").Add("b")
@@ -148,7 +148,7 @@ func Test_LinkedListNode_Join(t *testing.T) {
 	})
 }
 
-func Test_LinkedListNode_CreateLinkedList(t *testing.T) {
+func Test_LinkedListNode_CreateLinkedList_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedListNode_CreateLinkedList", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("x").Add("y")
@@ -173,7 +173,7 @@ func Test_LinkedListNode_IsChainEqual_True(t *testing.T) {
 	})
 }
 
-func Test_LinkedListNode_IsChainEqual_CaseInsensitive(t *testing.T) {
+func Test_LinkedListNode_IsChainEqual_CaseInsensitive_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedListNode_IsChainEqual_CaseInsensitive", func() {
 		ll1 := corestr.Empty.LinkedList()
 		ll1.Add("A").Add("B")
@@ -255,7 +255,7 @@ func Test_LinkedList_HasItems(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_IsEmptyLock(t *testing.T) {
+func Test_LinkedList_IsEmptyLock_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_IsEmptyLock", func() {
 		ll := corestr.Empty.LinkedList()
 		tc := caseV1Compat{Name: "LL IsEmptyLock", Expected: true, Actual: ll.IsEmptyLock(), Args: args.Map{}}
@@ -265,7 +265,7 @@ func Test_LinkedList_IsEmptyLock(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_LengthLock(t *testing.T) {
+func Test_LinkedList_LengthLock_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_LengthLock", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a")
@@ -276,7 +276,7 @@ func Test_LinkedList_LengthLock(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddLock(t *testing.T) {
+func Test_LinkedList_AddLock_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddLock", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.AddLock("x")
@@ -298,7 +298,7 @@ func Test_LinkedList_AddFront_FromLinkedListNodeHasNex(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddFront_Empty(t *testing.T) {
+func Test_LinkedList_AddFront_Empty_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddFront_Empty", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.AddFront("a")
@@ -342,7 +342,7 @@ func Test_LinkedList_Push(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddNonEmpty(t *testing.T) {
+func Test_LinkedList_AddNonEmpty_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddNonEmpty", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.AddNonEmpty("a").AddNonEmpty("")
@@ -353,7 +353,7 @@ func Test_LinkedList_AddNonEmpty(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddNonEmptyWhitespace(t *testing.T) {
+func Test_LinkedList_AddNonEmptyWhitespace_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddNonEmptyWhitespace", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.AddNonEmptyWhitespace("a").AddNonEmptyWhitespace("  ")
@@ -408,7 +408,7 @@ func Test_LinkedList_AddsIf_False(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddFunc(t *testing.T) {
+func Test_LinkedList_AddFunc_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddFunc", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.AddFunc(func() string { return "x" })
@@ -430,7 +430,7 @@ func Test_LinkedList_AddFuncErr_NoErr(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_Adds(t *testing.T) {
+func Test_LinkedList_Adds_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_Adds", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Adds("a", "b", "c")
@@ -452,7 +452,7 @@ func Test_LinkedList_Adds_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddStrings(t *testing.T) {
+func Test_LinkedList_AddStrings_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddStrings", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.AddStrings([]string{"x", "y"})
@@ -463,7 +463,7 @@ func Test_LinkedList_AddStrings(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddsLock(t *testing.T) {
+func Test_LinkedList_AddsLock_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddsLock", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.AddsLock("a", "b")
@@ -474,7 +474,7 @@ func Test_LinkedList_AddsLock(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddItemsMap(t *testing.T) {
+func Test_LinkedList_AddItemsMap_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddItemsMap", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.AddItemsMap(map[string]bool{"a": true, "b": false})
@@ -497,7 +497,7 @@ func Test_LinkedList_AddCollection_FromLinkedListNodeHasNex(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddCollection_Nil(t *testing.T) {
+func Test_LinkedList_AddCollection_Nil_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddCollection_Nil", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.AddCollection(nil)
@@ -521,7 +521,7 @@ func Test_LinkedList_AppendNode_FromLinkedListNodeHasNex(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AppendNode_Empty(t *testing.T) {
+func Test_LinkedList_AppendNode_Empty_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AppendNode_Empty", func() {
 		ll := corestr.Empty.LinkedList()
 		node := &corestr.LinkedListNode{Element: "a"}
@@ -583,7 +583,7 @@ func Test_LinkedList_IsEqualsWithSensitive_CI(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_List(t *testing.T) {
+func Test_LinkedList_List_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_List", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a").Add("b")
@@ -604,7 +604,7 @@ func Test_LinkedList_List_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_ListLock(t *testing.T) {
+func Test_LinkedList_ListLock_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_ListLock", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a")
@@ -626,7 +626,7 @@ func Test_LinkedList_String_FromLinkedListNodeHasNex(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_String_Empty(t *testing.T) {
+func Test_LinkedList_String_Empty_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_String_Empty", func() {
 		ll := corestr.Empty.LinkedList()
 		tc := caseV1Compat{Name: "LL String empty", Expected: true, Actual: len(ll.String()) > 0, Args: args.Map{}}
@@ -636,7 +636,7 @@ func Test_LinkedList_String_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_Join(t *testing.T) {
+func Test_LinkedList_Join_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_Join", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a").Add("b")
@@ -647,7 +647,7 @@ func Test_LinkedList_Join(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_JoinLock(t *testing.T) {
+func Test_LinkedList_JoinLock_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_JoinLock", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a").Add("b")
@@ -658,7 +658,7 @@ func Test_LinkedList_JoinLock(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_ToCollection(t *testing.T) {
+func Test_LinkedList_ToCollection_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_ToCollection", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a").Add("b")
@@ -670,7 +670,7 @@ func Test_LinkedList_ToCollection(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_ToCollection_Empty(t *testing.T) {
+func Test_LinkedList_ToCollection_Empty_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_ToCollection_Empty", func() {
 		ll := corestr.Empty.LinkedList()
 		col := ll.ToCollection(5)
@@ -716,7 +716,7 @@ func Test_LinkedList_SafeIndexAt_Negative(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_SafePointerIndexAt(t *testing.T) {
+func Test_LinkedList_SafePointerIndexAt_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_SafePointerIndexAt", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a")
@@ -750,7 +750,7 @@ func Test_LinkedList_SafePointerIndexAtUsingDefault_FromLinkedListNodeHasNex(t *
 	})
 }
 
-func Test_LinkedList_SafeIndexAtLock(t *testing.T) {
+func Test_LinkedList_SafeIndexAtLock_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_SafeIndexAtLock", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a")
@@ -774,7 +774,7 @@ func Test_LinkedList_Clear_FromLinkedListNodeHasNex(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_RemoveAll(t *testing.T) {
+func Test_LinkedList_RemoveAll_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_RemoveAll", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a")
@@ -786,7 +786,7 @@ func Test_LinkedList_RemoveAll(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_JsonModel(t *testing.T) {
+func Test_LinkedList_JsonModel_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_JsonModel", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a")
@@ -797,7 +797,7 @@ func Test_LinkedList_JsonModel(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_MarshalJSON(t *testing.T) {
+func Test_LinkedList_MarshalJSON_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_MarshalJSON", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a")
@@ -809,7 +809,7 @@ func Test_LinkedList_MarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_UnmarshalJSON(t *testing.T) {
+func Test_LinkedList_UnmarshalJSON_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_UnmarshalJSON", func() {
 		ll := corestr.Empty.LinkedList()
 		err := ll.UnmarshalJSON([]byte(`["x","y"]`))
@@ -836,7 +836,7 @@ func Test_LinkedList_Loop_FromLinkedListNodeHasNex(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_Loop_Break(t *testing.T) {
+func Test_LinkedList_Loop_Break_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_Loop_Break", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a").Add("b").Add("c")
@@ -902,7 +902,7 @@ func Test_LinkedList_InsertAt_FromLinkedListNodeHasNex(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_InsertAt_Front(t *testing.T) {
+func Test_LinkedList_InsertAt_Front_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_InsertAt_Front", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("b")
@@ -914,7 +914,7 @@ func Test_LinkedList_InsertAt_Front(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_RemoveNodeByElementValue(t *testing.T) {
+func Test_LinkedList_RemoveNodeByElementValue_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_RemoveNodeByElementValue", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a").Add("b").Add("c")
@@ -926,7 +926,7 @@ func Test_LinkedList_RemoveNodeByElementValue(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_RemoveNodeByElementValue_First(t *testing.T) {
+func Test_LinkedList_RemoveNodeByElementValue_First_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_RemoveNodeByElementValue_First", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a").Add("b")
@@ -938,7 +938,7 @@ func Test_LinkedList_RemoveNodeByElementValue_First(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_RemoveNodeByIndex(t *testing.T) {
+func Test_LinkedList_RemoveNodeByIndex_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_RemoveNodeByIndex", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a").Add("b").Add("c")
@@ -950,7 +950,7 @@ func Test_LinkedList_RemoveNodeByIndex(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_StringLock(t *testing.T) {
+func Test_LinkedList_StringLock_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_StringLock", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a")
@@ -973,7 +973,7 @@ func Test_LinkedList_Joins_FromLinkedListNodeHasNex(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_JsonModelAny(t *testing.T) {
+func Test_LinkedList_JsonModelAny_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_JsonModelAny", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a")
@@ -984,7 +984,7 @@ func Test_LinkedList_JsonModelAny(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_Json(t *testing.T) {
+func Test_LinkedList_Json_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_Json", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a")
@@ -996,7 +996,7 @@ func Test_LinkedList_Json(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AsJsonMarshaller(t *testing.T) {
+func Test_LinkedList_AsJsonMarshaller_LinkedlistnodeHasnext(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AsJsonMarshaller", func() {
 		ll := corestr.Empty.LinkedList()
 		ll.Add("a")

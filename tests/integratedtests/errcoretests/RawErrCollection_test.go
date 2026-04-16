@@ -10,7 +10,7 @@ import (
 
 // ── Basic ──
 
-func Test_RawErrCollection_Basic(t *testing.T) {
+func Test_RawErrCollection_Basic_Rawerrcollection(t *testing.T) {
 	// Arrange
 	tc := rawErrCollBasicTestCases[0]
 	// Act
@@ -32,7 +32,7 @@ func Test_RawErrCollection_Basic(t *testing.T) {
 
 // ── Add methods ──
 
-func Test_RawErrCollection_Add(t *testing.T) {
+func Test_RawErrCollection_Add_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[0]
 	c := &errcore.RawErrCollection{}
 	c.Add(nil)
@@ -52,7 +52,7 @@ func Test_RawErrCollection_AddError(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_Adds(t *testing.T) {
+func Test_RawErrCollection_Adds_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[2]
 	c := &errcore.RawErrCollection{}
 	c.Adds()
@@ -62,7 +62,7 @@ func Test_RawErrCollection_Adds(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddErrors(t *testing.T) {
+func Test_RawErrCollection_AddErrors_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[3]
 	c := &errcore.RawErrCollection{}
 	c.AddErrors(errors.New("a"))
@@ -71,7 +71,7 @@ func Test_RawErrCollection_AddErrors(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddString(t *testing.T) {
+func Test_RawErrCollection_AddString_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[4]
 	c := &errcore.RawErrCollection{}
 	c.AddString("")
@@ -81,7 +81,7 @@ func Test_RawErrCollection_AddString(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddMsg(t *testing.T) {
+func Test_RawErrCollection_AddMsg_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[5]
 	c := &errcore.RawErrCollection{}
 	c.AddMsg("hello")
@@ -90,7 +90,7 @@ func Test_RawErrCollection_AddMsg(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddIf(t *testing.T) {
+func Test_RawErrCollection_AddIf_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[6]
 	c := &errcore.RawErrCollection{}
 	c.AddIf(false, "skip")
@@ -100,7 +100,7 @@ func Test_RawErrCollection_AddIf(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddFunc(t *testing.T) {
+func Test_RawErrCollection_AddFunc_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[7]
 	c := &errcore.RawErrCollection{}
 	c.AddFunc(nil)
@@ -111,7 +111,7 @@ func Test_RawErrCollection_AddFunc(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddFuncIf(t *testing.T) {
+func Test_RawErrCollection_AddFuncIf_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[8]
 	c := &errcore.RawErrCollection{}
 	c.AddFuncIf(false, func() error { return errors.New("e") })
@@ -122,7 +122,7 @@ func Test_RawErrCollection_AddFuncIf(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_ConditionalAddError(t *testing.T) {
+func Test_RawErrCollection_ConditionalAddError_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[9]
 	c := &errcore.RawErrCollection{}
 	c.ConditionalAddError(false, errors.New("e"))
@@ -132,7 +132,7 @@ func Test_RawErrCollection_ConditionalAddError(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddMsgStackTrace(t *testing.T) {
+func Test_RawErrCollection_AddMsgStackTrace_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[10]
 	c := &errcore.RawErrCollection{}
 	c.AddMsgStackTrace("")
@@ -142,7 +142,7 @@ func Test_RawErrCollection_AddMsgStackTrace(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddStackTrace(t *testing.T) {
+func Test_RawErrCollection_AddStackTrace_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[11]
 	c := &errcore.RawErrCollection{}
 	c.AddStackTrace(nil)
@@ -152,7 +152,7 @@ func Test_RawErrCollection_AddStackTrace(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddMsgErrStackTrace(t *testing.T) {
+func Test_RawErrCollection_AddMsgErrStackTrace_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[12]
 	c := &errcore.RawErrCollection{}
 	c.AddMsgErrStackTrace("msg", nil)
@@ -162,7 +162,7 @@ func Test_RawErrCollection_AddMsgErrStackTrace(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddMethodName(t *testing.T) {
+func Test_RawErrCollection_AddMethodName_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[13]
 	c := &errcore.RawErrCollection{}
 	c.AddMethodName("")
@@ -172,7 +172,7 @@ func Test_RawErrCollection_AddMethodName(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddMessages(t *testing.T) {
+func Test_RawErrCollection_AddMessages_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[14]
 	c := &errcore.RawErrCollection{}
 	c.AddMessages()
@@ -182,7 +182,7 @@ func Test_RawErrCollection_AddMessages(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddErrorWithMessage(t *testing.T) {
+func Test_RawErrCollection_AddErrorWithMessage_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[15]
 	c := &errcore.RawErrCollection{}
 	c.AddErrorWithMessage(nil, "msg")
@@ -192,7 +192,7 @@ func Test_RawErrCollection_AddErrorWithMessage(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddErrorWithMessageRef(t *testing.T) {
+func Test_RawErrCollection_AddErrorWithMessageRef_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[16]
 	c := &errcore.RawErrCollection{}
 	c.AddErrorWithMessageRef(nil, "msg", "ref")
@@ -203,7 +203,7 @@ func Test_RawErrCollection_AddErrorWithMessageRef(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddFmt(t *testing.T) {
+func Test_RawErrCollection_AddFmt_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[17]
 	c := &errcore.RawErrCollection{}
 	c.AddFmt(nil, "fmt %s", "v")
@@ -213,7 +213,7 @@ func Test_RawErrCollection_AddFmt(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_Fmt(t *testing.T) {
+func Test_RawErrCollection_Fmt_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[18]
 	c := &errcore.RawErrCollection{}
 	c.Fmt("")
@@ -223,7 +223,7 @@ func Test_RawErrCollection_Fmt(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_FmtIf(t *testing.T) {
+func Test_RawErrCollection_FmtIf_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[19]
 	c := &errcore.RawErrCollection{}
 	c.FmtIf(false, "skip")
@@ -233,7 +233,7 @@ func Test_RawErrCollection_FmtIf(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_References(t *testing.T) {
+func Test_RawErrCollection_References_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[20]
 	c := &errcore.RawErrCollection{}
 	c.References("msg", "ref1")
@@ -242,7 +242,7 @@ func Test_RawErrCollection_References(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddWithRef(t *testing.T) {
+func Test_RawErrCollection_AddWithRef_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[21]
 	c := &errcore.RawErrCollection{}
 	c.AddWithRef(nil, "ref")
@@ -252,7 +252,7 @@ func Test_RawErrCollection_AddWithRef(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddWithTraceRef(t *testing.T) {
+func Test_RawErrCollection_AddWithTraceRef_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[22]
 	c := &errcore.RawErrCollection{}
 	c.AddWithTraceRef(nil, []string{"t"}, "r")
@@ -262,7 +262,7 @@ func Test_RawErrCollection_AddWithTraceRef(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddWithCompiledTraceRef(t *testing.T) {
+func Test_RawErrCollection_AddWithCompiledTraceRef_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[23]
 	c := &errcore.RawErrCollection{}
 	c.AddWithCompiledTraceRef(nil, "t", "r")
@@ -272,7 +272,7 @@ func Test_RawErrCollection_AddWithCompiledTraceRef(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddStringSliceAsErr(t *testing.T) {
+func Test_RawErrCollection_AddStringSliceAsErr_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[24]
 	c := &errcore.RawErrCollection{}
 	c.AddStringSliceAsErr()
@@ -282,7 +282,7 @@ func Test_RawErrCollection_AddStringSliceAsErr(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"len": c.Length()})
 }
 
-func Test_RawErrCollection_AddErrorGetters(t *testing.T) {
+func Test_RawErrCollection_AddErrorGetters_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[25]
 	c := &errcore.RawErrCollection{}
 	noPanic := !callPanicsErrcore(func() { c.AddErrorGetters() })
@@ -291,7 +291,7 @@ func Test_RawErrCollection_AddErrorGetters(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"noPanic": noPanic})
 }
 
-func Test_RawErrCollection_AddCompiledErrorGetters(t *testing.T) {
+func Test_RawErrCollection_AddCompiledErrorGetters_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollAddTestCases[26]
 	c := &errcore.RawErrCollection{}
 	noPanic := !callPanicsErrcore(func() { c.AddCompiledErrorGetters() })
@@ -302,7 +302,7 @@ func Test_RawErrCollection_AddCompiledErrorGetters(t *testing.T) {
 
 // ── String/Error methods ──
 
-func Test_RawErrCollection_Strings(t *testing.T) {
+func Test_RawErrCollection_Strings_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollStringTestCases[0]
 	c := &errcore.RawErrCollection{}
 	emptyLen := len(c.Strings())
@@ -315,7 +315,7 @@ func Test_RawErrCollection_Strings(t *testing.T) {
 	})
 }
 
-func Test_RawErrCollection_String(t *testing.T) {
+func Test_RawErrCollection_String_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollStringTestCases[1]
 	c := &errcore.RawErrCollection{}
 	emptyStr := c.String()
@@ -328,7 +328,7 @@ func Test_RawErrCollection_String(t *testing.T) {
 	})
 }
 
-func Test_RawErrCollection_StringUsingJoiner(t *testing.T) {
+func Test_RawErrCollection_StringUsingJoiner_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollStringTestCases[2]
 	c := &errcore.RawErrCollection{}
 	emptyStr := c.StringUsingJoiner(",")
@@ -341,7 +341,7 @@ func Test_RawErrCollection_StringUsingJoiner(t *testing.T) {
 	})
 }
 
-func Test_RawErrCollection_StringUsingJoinerAdditional(t *testing.T) {
+func Test_RawErrCollection_StringUsingJoinerAdditional_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollStringTestCases[3]
 	c := &errcore.RawErrCollection{}
 	emptyStr := c.StringUsingJoinerAdditional(",", "!")
@@ -354,7 +354,7 @@ func Test_RawErrCollection_StringUsingJoinerAdditional(t *testing.T) {
 	})
 }
 
-func Test_RawErrCollection_StringWithAdditionalMessage(t *testing.T) {
+func Test_RawErrCollection_StringWithAdditionalMessage_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollStringTestCases[4]
 	c := &errcore.RawErrCollection{}
 	emptyStr := c.StringWithAdditionalMessage("!")
@@ -369,7 +369,7 @@ func Test_RawErrCollection_StringWithAdditionalMessage(t *testing.T) {
 
 // ── Compiled methods ──
 
-func Test_RawErrCollection_CompiledError(t *testing.T) {
+func Test_RawErrCollection_CompiledError_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollCompiledTestCases[0]
 	c := errcore.RawErrCollection{}
 	emptyNil := c.CompiledError() == nil
@@ -382,7 +382,7 @@ func Test_RawErrCollection_CompiledError(t *testing.T) {
 	})
 }
 
-func Test_RawErrCollection_CompiledErrorUsingJoiner(t *testing.T) {
+func Test_RawErrCollection_CompiledErrorUsingJoiner_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollCompiledTestCases[1]
 	c := &errcore.RawErrCollection{}
 	emptyNil := c.CompiledErrorUsingJoiner(",") == nil
@@ -408,7 +408,7 @@ func Test_RawErrCollection_CompiledErrorUsingJoinerAdditional(t *testing.T) {
 	})
 }
 
-func Test_RawErrCollection_CompiledErrorWithStackTraces(t *testing.T) {
+func Test_RawErrCollection_CompiledErrorWithStackTraces_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollCompiledTestCases[3]
 	c := &errcore.RawErrCollection{}
 	emptyNil := c.CompiledErrorWithStackTraces() == nil
@@ -423,7 +423,7 @@ func Test_RawErrCollection_CompiledErrorWithStackTraces(t *testing.T) {
 
 // ── Misc methods ──
 
-func Test_RawErrCollection_CompiledStackTracesString(t *testing.T) {
+func Test_RawErrCollection_CompiledStackTracesString_Rawerrcollection(t *testing.T) {
 	// Arrange
 	c := &errcore.RawErrCollection{}
 	empty := c.CompiledStackTracesString() == ""
@@ -438,7 +438,7 @@ func Test_RawErrCollection_CompiledStackTracesString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_RawErrCollection_CompiledErrorUsingStackTraces(t *testing.T) {
+func Test_RawErrCollection_CompiledErrorUsingStackTraces_Rawerrcollection(t *testing.T) {
 	// Arrange
 	c := &errcore.RawErrCollection{}
 	emptyNil := c.CompiledErrorUsingStackTraces(",", []string{"t"}) == nil
@@ -453,59 +453,59 @@ func Test_RawErrCollection_CompiledErrorUsingStackTraces(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_RawErrCollection_CompiledJsonErrorWithStackTraces(t *testing.T) {
+func Test_RawErrCollection_CompiledJsonErrorWithStackTraces_Rawerrcollection(t *testing.T) {
 	c := &errcore.RawErrCollection{}
 	c.Add(errors.New("e"))
 	_ = c.CompiledJsonErrorWithStackTraces()
 }
 
-func Test_RawErrCollection_CompiledJsonStringWithStackTraces(t *testing.T) {
+func Test_RawErrCollection_CompiledJsonStringWithStackTraces_Rawerrcollection(t *testing.T) {
 	c := &errcore.RawErrCollection{}
 	_ = c.CompiledJsonStringWithStackTraces()
 }
 
-func Test_RawErrCollection_ErrorString(t *testing.T) {
+func Test_RawErrCollection_ErrorString_Rawerrcollection(t *testing.T) {
 	c := &errcore.RawErrCollection{}
 	_ = c.ErrorString()
 }
 
-func Test_RawErrCollection_Compile(t *testing.T) {
+func Test_RawErrCollection_Compile_Rawerrcollection(t *testing.T) {
 	c := &errcore.RawErrCollection{}
 	_ = c.Compile()
 }
 
-func Test_RawErrCollection_FullString(t *testing.T) {
+func Test_RawErrCollection_FullString_Rawerrcollection(t *testing.T) {
 	c := &errcore.RawErrCollection{}
 	_ = c.FullString()
 }
 
-func Test_RawErrCollection_FullStringWithTraces(t *testing.T) {
+func Test_RawErrCollection_FullStringWithTraces_Rawerrcollection(t *testing.T) {
 	c := &errcore.RawErrCollection{}
 	_ = c.FullStringWithTraces()
 }
 
-func Test_RawErrCollection_FullStringWithTracesIf(t *testing.T) {
+func Test_RawErrCollection_FullStringWithTracesIf_Rawerrcollection(t *testing.T) {
 	c := &errcore.RawErrCollection{}
 	_ = c.FullStringWithTracesIf(true)
 	_ = c.FullStringWithTracesIf(false)
 }
 
-func Test_RawErrCollection_FullStringSplitByNewLine(t *testing.T) {
+func Test_RawErrCollection_FullStringSplitByNewLine_Rawerrcollection(t *testing.T) {
 	c := &errcore.RawErrCollection{}
 	_ = c.FullStringSplitByNewLine()
 }
 
-func Test_RawErrCollection_FullStringWithoutReferences(t *testing.T) {
+func Test_RawErrCollection_FullStringWithoutReferences_Rawerrcollection(t *testing.T) {
 	c := &errcore.RawErrCollection{}
 	_ = c.FullStringWithoutReferences()
 }
 
-func Test_RawErrCollection_ReferencesCompiledString(t *testing.T) {
+func Test_RawErrCollection_ReferencesCompiledString_Rawerrcollection(t *testing.T) {
 	c := &errcore.RawErrCollection{}
 	_ = c.ReferencesCompiledString()
 }
 
-func Test_RawErrCollection_Serialize(t *testing.T) {
+func Test_RawErrCollection_Serialize_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollMiscTestCases[0]
 	c := &errcore.RawErrCollection{}
 	b, err := c.Serialize()
@@ -517,7 +517,7 @@ func Test_RawErrCollection_Serialize(t *testing.T) {
 	})
 }
 
-func Test_RawErrCollection_SerializeWithoutTraces(t *testing.T) {
+func Test_RawErrCollection_SerializeWithoutTraces_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollMiscTestCases[1]
 	c := &errcore.RawErrCollection{}
 	b, err := c.SerializeWithoutTraces()
@@ -529,7 +529,7 @@ func Test_RawErrCollection_SerializeWithoutTraces(t *testing.T) {
 	})
 }
 
-func Test_RawErrCollection_MarshalJSON(t *testing.T) {
+func Test_RawErrCollection_MarshalJSON_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollMiscTestCases[2]
 	c := &errcore.RawErrCollection{}
 	b, err := c.MarshalJSON()
@@ -541,7 +541,7 @@ func Test_RawErrCollection_MarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_RawErrCollection_UnmarshalJSON(t *testing.T) {
+func Test_RawErrCollection_UnmarshalJSON_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollMiscTestCases[3]
 	c := &errcore.RawErrCollection{}
 	noPanic := !callPanicsErrcore(func() { _ = c.UnmarshalJSON([]byte("[]")) })
@@ -550,7 +550,7 @@ func Test_RawErrCollection_UnmarshalJSON(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"noPanic": noPanic})
 }
 
-func Test_RawErrCollection_Value(t *testing.T) {
+func Test_RawErrCollection_Value_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollMiscTestCases[4]
 	c := &errcore.RawErrCollection{}
 
@@ -558,14 +558,14 @@ func Test_RawErrCollection_Value(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"isNil": c.Value() == nil})
 }
 
-func Test_RawErrCollection_Log(t *testing.T) {
+func Test_RawErrCollection_Log_Rawerrcollection(t *testing.T) {
 	c := &errcore.RawErrCollection{}
 	c.Log()
 	c.Add(errors.New("e"))
 	c.Log()
 }
 
-func Test_RawErrCollection_LogWithTraces(t *testing.T) {
+func Test_RawErrCollection_LogWithTraces_Rawerrcollection(t *testing.T) {
 	c := &errcore.RawErrCollection{}
 	c.LogWithTraces()
 	c.Add(errors.New("e"))
@@ -610,7 +610,7 @@ func Test_RawErrCollection_IsErrorsCollected(t *testing.T) {
 	})
 }
 
-func Test_RawErrCollection_CountStateChangeTracker(t *testing.T) {
+func Test_RawErrCollection_CountStateChangeTracker_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollMiscTestCases[7]
 	c := errcore.RawErrCollection{}
 	tracker := c.CountStateChangeTracker()
@@ -619,7 +619,7 @@ func Test_RawErrCollection_CountStateChangeTracker(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"isSame": tracker.IsSameState()})
 }
 
-func Test_RawErrCollection_ToRawErrCollection(t *testing.T) {
+func Test_RawErrCollection_ToRawErrCollection_Rawerrcollection(t *testing.T) {
 	tc := rawErrCollMiscTestCases[8]
 	c := errcore.RawErrCollection{}
 

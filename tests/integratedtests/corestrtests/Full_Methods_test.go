@@ -11,7 +11,7 @@ import (
 
 // ── Collection extended ──
 
-func Test_Collection_TakeSkip_Verification(t *testing.T) {
+func Test_Collection_TakeSkip_Verification_FullMethods(t *testing.T) {
 	safeTest(t, "Test_Collection_TakeSkip_Verification", func() {
 		// Arrange
 		tc := srcC10CollectionTakeSkipTestCase
@@ -675,7 +675,7 @@ func Test_Hashmap_AddVariants_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_Set_Verification(t *testing.T) {
+func Test_Hashmap_Set_Verification_FullMethods(t *testing.T) {
 	safeTest(t, "Test_Hashmap_Set_Verification", func() {
 		// Arrange
 		tc := srcC10HashmapSetTestCase

@@ -31,7 +31,7 @@ func Test_LineDiff_Mismatch(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"status0": diffs[0].Status})
 }
 
-func Test_LineDiff_ExtraActual(t *testing.T) {
+func Test_LineDiff_ExtraActual_Linediffexpecting(t *testing.T) {
 	// Arrange
 	tc := lineDiffTestCases[2]
 	// Act
@@ -40,7 +40,7 @@ func Test_LineDiff_ExtraActual(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"status1": diffs[1].Status})
 }
 
-func Test_LineDiff_MissingExpected(t *testing.T) {
+func Test_LineDiff_MissingExpected_Linediffexpecting(t *testing.T) {
 	// Arrange
 	tc := lineDiffTestCases[3]
 	// Act
@@ -49,7 +49,7 @@ func Test_LineDiff_MissingExpected(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"status1": diffs[1].Status})
 }
 
-func Test_LineDiffToString_Empty(t *testing.T) {
+func Test_LineDiffToString_Empty_Linediffexpecting(t *testing.T) {
 	// Arrange
 	tc := lineDiffToStringTestCases[0]
 	// Act
@@ -159,7 +159,7 @@ func Test_ErrorToLinesLineDiff_WithErr(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"noPanic": noPanic})
 }
 
-func Test_PrintErrorLineDiff(t *testing.T) {
+func Test_PrintErrorLineDiff_Linediffexpecting(t *testing.T) {
 	// Arrange & Act
 	noPanic := !callPanicsErrcore(func() {
 		errcore.PrintErrorLineDiff(0, "test", errors.New("a"), []string{"b"})
@@ -208,7 +208,7 @@ func Test_PrintDiffOnMismatch_WithMismatch(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected panic", actual)
 }
 
-func Test_MapMismatchError(t *testing.T) {
+func Test_MapMismatchError_Linediffexpecting(t *testing.T) {
 	// Arrange
 	tc := mapMismatchErrorTestCases[0]
 	// Act
@@ -234,7 +234,7 @@ func Test_AssertErrorDiffOnMismatch_NoMismatch(t *testing.T) {
 
 // ── Expecting ──
 
-func Test_Expecting(t *testing.T) {
+func Test_Expecting_Linediffexpecting(t *testing.T) {
 	// Arrange
 	tc := expectingTestCases[0]
 	// Act
@@ -243,7 +243,7 @@ func Test_Expecting(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"nonEmpty": s != ""})
 }
 
-func Test_ExpectingSimple(t *testing.T) {
+func Test_ExpectingSimple_Linediffexpecting(t *testing.T) {
 	// Arrange
 	tc := expectingTestCases[1]
 	// Act
@@ -252,7 +252,7 @@ func Test_ExpectingSimple(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"nonEmpty": s != ""})
 }
 
-func Test_ExpectingSimpleNoType(t *testing.T) {
+func Test_ExpectingSimpleNoType_Linediffexpecting(t *testing.T) {
 	// Arrange
 	tc := expectingTestCases[2]
 	// Act
@@ -261,7 +261,7 @@ func Test_ExpectingSimpleNoType(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"nonEmpty": s != ""})
 }
 
-func Test_ExpectingNotEqualSimpleNoType(t *testing.T) {
+func Test_ExpectingNotEqualSimpleNoType_Linediffexpecting(t *testing.T) {
 	// Arrange
 	tc := expectingTestCases[3]
 	// Act
@@ -270,7 +270,7 @@ func Test_ExpectingNotEqualSimpleNoType(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"nonEmpty": s != ""})
 }
 
-func Test_ExpectingSimpleNoTypeError(t *testing.T) {
+func Test_ExpectingSimpleNoTypeError_Linediffexpecting(t *testing.T) {
 	// Arrange
 	tc := expectingTestCases[4]
 	// Act
@@ -288,7 +288,7 @@ func Test_ExpectingErrorSimpleNoType(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"nonNil": err != nil})
 }
 
-func Test_ExpectingErrorSimpleNoTypeNewLineEnds(t *testing.T) {
+func Test_ExpectingErrorSimpleNoTypeNewLineEnds_Linediffexpecting(t *testing.T) {
 	// Arrange
 	tc := expectingTestCases[6]
 	// Act
@@ -297,7 +297,7 @@ func Test_ExpectingErrorSimpleNoTypeNewLineEnds(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"nonNil": err != nil})
 }
 
-func Test_WasExpectingErrorF(t *testing.T) {
+func Test_WasExpectingErrorF_Linediffexpecting(t *testing.T) {
 	// Arrange
 	tc := expectingTestCases[7]
 	// Act
@@ -306,7 +306,7 @@ func Test_WasExpectingErrorF(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"nonNil": err != nil})
 }
 
-func Test_ExpectingFuture(t *testing.T) {
+func Test_ExpectingFuture_Linediffexpecting(t *testing.T) {
 	// Arrange
 	tc := expectingFutureTestCases[0]
 	// Act
@@ -357,7 +357,7 @@ func Test_ExpectationMessageDef_StringTrim(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"result": s})
 }
 
-func Test_ExpectationMessageDef_ToString(t *testing.T) {
+func Test_ExpectationMessageDef_ToString_Linediffexpecting(t *testing.T) {
 	// Arrange
 	tc := expectationMessageDefTestCases[3]
 	def := errcore.ExpectationMessageDef{Expected: "e", When: "w", FuncName: "f"}
@@ -367,7 +367,7 @@ func Test_ExpectationMessageDef_ToString(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, args.Map{"nonEmpty": s != ""})
 }
 
-func Test_ExpectationMessageDef_PrintIf(t *testing.T) {
+func Test_ExpectationMessageDef_PrintIf_Linediffexpecting(t *testing.T) {
 	// Arrange
 	tc := expectationMessageDefTestCases[4]
 	def := errcore.ExpectationMessageDef{Expected: "e", When: "w"}

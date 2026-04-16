@@ -11,7 +11,7 @@ import (
 // KeyValCollection — constructors & basic
 // ═══════════════════════════════════════════
 
-func Test_KeyValCollection_Empty(t *testing.T) {
+func Test_KeyValCollection_Empty_KeyvalcollectionEmpty(t *testing.T) {
 	// Arrange
 	c := coredynamic.EmptyKeyValCollection()
 	var nilC *coredynamic.KeyValCollection
@@ -273,7 +273,7 @@ func Test_KeyValCollection_Serialize(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyValCollection returns correct value -- Serialize", actual)
 }
 
-func Test_KeyValCollection_Clone(t *testing.T) {
+func Test_KeyValCollection_Clone_KeyvalcollectionEmpty(t *testing.T) {
 	// Arrange
 	c := coredynamic.NewKeyValCollection(5)
 	c.Add(coredynamic.KeyVal{Key: "a", Value: 1})
@@ -299,7 +299,7 @@ func Test_KeyValCollection_Clone(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyValCollection returns correct value -- Clone", actual)
 }
 
-func Test_KeyValCollection_Paging(t *testing.T) {
+func Test_KeyValCollection_Paging_KeyvalcollectionEmpty(t *testing.T) {
 	// Arrange
 	c := coredynamic.NewKeyValCollection(10)
 	for i := 0; i < 5; i++ {

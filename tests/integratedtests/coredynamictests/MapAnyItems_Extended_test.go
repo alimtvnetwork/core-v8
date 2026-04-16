@@ -1413,7 +1413,7 @@ func Test_109_LengthOfReflect_Map(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 2", actual)
 }
 
-func Test_110_LengthOfReflect_Array(t *testing.T) {
+func Test_110_LengthOfReflect_Array_MapanyitemsExtended(t *testing.T) {
 	// Arrange
 	rv := reflect.ValueOf([3]int{1, 2, 3})
 

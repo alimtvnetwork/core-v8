@@ -27,7 +27,7 @@ func Test_ZeroSetAny_NonNil(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ZeroSetAny returns nil -- non-nil", actual)
 }
 
-func Test_ZeroSetAny_Nil(t *testing.T) {
+func Test_ZeroSetAny_Nil_Zerosetany(t *testing.T) {
 	// Arrange
 	coredynamic.ZeroSetAny(nil) // should not panic
 
@@ -97,7 +97,7 @@ func Test_KeyVal_IsKeyNull_IsValueNull(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyVal returns correct value -- null checks", actual)
 }
 
-func Test_KeyVal_IsKeyNullOrEmptyString(t *testing.T) {
+func Test_KeyVal_IsKeyNullOrEmptyString_Zerosetany(t *testing.T) {
 	// Arrange
 	kv := coredynamic.KeyVal{Key: "", Value: 1}
 	kvVal := coredynamic.KeyVal{Key: "x", Value: 1}
@@ -116,7 +116,7 @@ func Test_KeyVal_IsKeyNullOrEmptyString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyVal returns empty -- IsKeyNullOrEmptyString", actual)
 }
 
-func Test_KeyVal_String(t *testing.T) {
+func Test_KeyVal_String_Zerosetany(t *testing.T) {
 	// Arrange
 	kv := coredynamic.KeyVal{Key: "k", Value: "v"}
 	s := kv.String()
@@ -129,7 +129,7 @@ func Test_KeyVal_String(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyVal returns correct value -- String", actual)
 }
 
-func Test_KeyVal_ValueReflectValue(t *testing.T) {
+func Test_KeyVal_ValueReflectValue_Zerosetany(t *testing.T) {
 	// Arrange
 	kv := coredynamic.KeyVal{Key: "k", Value: 42}
 	rv := kv.ValueReflectValue()
@@ -148,7 +148,7 @@ func Test_KeyVal_ValueReflectValue(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyVal returns correct value -- ValueReflectValue", actual)
 }
 
-func Test_KeyVal_ValueInt(t *testing.T) {
+func Test_KeyVal_ValueInt_Zerosetany(t *testing.T) {
 	// Arrange
 	kv := coredynamic.KeyVal{Key: "k", Value: 42}
 	kvBad := coredynamic.KeyVal{Key: "k", Value: "nope"}
@@ -167,7 +167,7 @@ func Test_KeyVal_ValueInt(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyVal returns correct value -- ValueInt", actual)
 }
 
-func Test_KeyVal_ValueUInt(t *testing.T) {
+func Test_KeyVal_ValueUInt_Zerosetany(t *testing.T) {
 	// Arrange
 	kv := coredynamic.KeyVal{Key: "k", Value: uint(5)}
 	kvBad := coredynamic.KeyVal{Key: "k", Value: "nope"}
@@ -186,7 +186,7 @@ func Test_KeyVal_ValueUInt(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyVal returns correct value -- ValueUInt", actual)
 }
 
-func Test_KeyVal_ValueStrings(t *testing.T) {
+func Test_KeyVal_ValueStrings_Zerosetany(t *testing.T) {
 	// Arrange
 	kv := coredynamic.KeyVal{Key: "k", Value: []string{"a", "b"}}
 	kvBad := coredynamic.KeyVal{Key: "k", Value: 42}
@@ -205,7 +205,7 @@ func Test_KeyVal_ValueStrings(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyVal returns non-empty -- ValueStrings", actual)
 }
 
-func Test_KeyVal_ValueBool(t *testing.T) {
+func Test_KeyVal_ValueBool_Zerosetany(t *testing.T) {
 	// Arrange
 	kv := coredynamic.KeyVal{Key: "k", Value: true}
 	kvBad := coredynamic.KeyVal{Key: "k", Value: "nope"}
@@ -224,7 +224,7 @@ func Test_KeyVal_ValueBool(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyVal returns correct value -- ValueBool", actual)
 }
 
-func Test_KeyVal_ValueInt64(t *testing.T) {
+func Test_KeyVal_ValueInt64_Zerosetany(t *testing.T) {
 	// Arrange
 	kv := coredynamic.KeyVal{Key: "k", Value: int64(99)}
 	kvBad := coredynamic.KeyVal{Key: "k", Value: "nope"}
@@ -262,7 +262,7 @@ func Test_KeyVal_CastKeyVal(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyVal returns correct value -- CastKeyVal", actual)
 }
 
-func Test_KeyVal_ReflectSetKey(t *testing.T) {
+func Test_KeyVal_ReflectSetKey_Zerosetany(t *testing.T) {
 	// Arrange
 	kv := coredynamic.KeyVal{Key: "hello", Value: "v"}
 	var k string
@@ -409,7 +409,7 @@ func Test_KeyVal_ReflectSetToMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyVal returns correct value -- ReflectSetToMust", actual)
 }
 
-func Test_KeyVal_Json(t *testing.T) {
+func Test_KeyVal_Json_Zerosetany(t *testing.T) {
 	// Arrange
 	kv := coredynamic.KeyVal{Key: "k", Value: "v"}
 	j := kv.Json()
@@ -432,7 +432,7 @@ func Test_KeyVal_Json(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyVal returns correct value -- Json", actual)
 }
 
-func Test_KeyVal_ParseInjectUsingJson(t *testing.T) {
+func Test_KeyVal_ParseInjectUsingJson_Zerosetany(t *testing.T) {
 	// Arrange
 	kv := &coredynamic.KeyVal{}
 	jr := corejson.NewPtr(coredynamic.KeyVal{Key: "x", Value: "y"})
@@ -448,7 +448,7 @@ func Test_KeyVal_ParseInjectUsingJson(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyVal returns correct value -- ParseInjectUsingJson", actual)
 }
 
-func Test_KeyVal_JsonParseSelfInject(t *testing.T) {
+func Test_KeyVal_JsonParseSelfInject_Zerosetany(t *testing.T) {
 	// Arrange
 	kv := &coredynamic.KeyVal{}
 	jr := corejson.NewPtr(coredynamic.KeyVal{Key: "x", Value: "y"})
@@ -463,7 +463,7 @@ func Test_KeyVal_JsonParseSelfInject(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyVal returns correct value -- JsonParseSelfInject", actual)
 }
 
-func Test_KeyVal_Serialize(t *testing.T) {
+func Test_KeyVal_Serialize_Zerosetany(t *testing.T) {
 	// Arrange
 	kv := &coredynamic.KeyVal{Key: "k", Value: "v"}
 	b, err := kv.Serialize()
@@ -486,7 +486,7 @@ func Test_KeyVal_Serialize(t *testing.T) {
 // KeyValCollection — uncovered methods
 // ==========================================================================
 
-func Test_KeyValCollection_AddPtr(t *testing.T) {
+func Test_KeyValCollection_AddPtr_Zerosetany(t *testing.T) {
 	// Arrange
 	kvc := coredynamic.NewKeyValCollection(2)
 	kvc.AddPtr(nil) // should be no-op
@@ -501,7 +501,7 @@ func Test_KeyValCollection_AddPtr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyValCollection returns correct value -- AddPtr", actual)
 }
 
-func Test_KeyValCollection_AddMany(t *testing.T) {
+func Test_KeyValCollection_AddMany_Zerosetany(t *testing.T) {
 	// Arrange
 	kvc := coredynamic.NewKeyValCollection(2)
 	kvc.AddMany() // empty
@@ -515,7 +515,7 @@ func Test_KeyValCollection_AddMany(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyValCollection returns correct value -- AddMany", actual)
 }
 
-func Test_KeyValCollection_AddManyPtr(t *testing.T) {
+func Test_KeyValCollection_AddManyPtr_Zerosetany(t *testing.T) {
 	// Arrange
 	kvc := coredynamic.NewKeyValCollection(2)
 	kvc.AddManyPtr() // empty
@@ -530,7 +530,7 @@ func Test_KeyValCollection_AddManyPtr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyValCollection returns correct value -- AddManyPtr", actual)
 }
 
-func Test_KeyValCollection_Items_Nil(t *testing.T) {
+func Test_KeyValCollection_Items_Nil_Zerosetany(t *testing.T) {
 	// Arrange
 	var kvc *coredynamic.KeyValCollection
 
@@ -542,7 +542,7 @@ func Test_KeyValCollection_Items_Nil(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyValCollection returns nil -- Items nil", actual)
 }
 
-func Test_KeyValCollection_MapAnyItems(t *testing.T) {
+func Test_KeyValCollection_MapAnyItems_Zerosetany(t *testing.T) {
 	// Arrange
 	kvc := coredynamic.NewKeyValCollection(2)
 	kvc.Add(coredynamic.KeyVal{Key: "k", Value: "v"})
@@ -562,7 +562,7 @@ func Test_KeyValCollection_MapAnyItems(t *testing.T) {
 	expected2.ShouldBeEqual(t, 1, "KeyValCollection returns empty -- MapAnyItems empty", actual2)
 }
 
-func Test_KeyValCollection_JsonMapResults(t *testing.T) {
+func Test_KeyValCollection_JsonMapResults_Zerosetany(t *testing.T) {
 	// Arrange
 	kvc := coredynamic.NewKeyValCollection(2)
 	kvc.Add(coredynamic.KeyVal{Key: "k", Value: "v"})
@@ -582,7 +582,7 @@ func Test_KeyValCollection_JsonMapResults(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyValCollection returns correct value -- JsonMapResults", actual)
 }
 
-func Test_KeyValCollection_JsonResultsCollection(t *testing.T) {
+func Test_KeyValCollection_JsonResultsCollection_Zerosetany(t *testing.T) {
 	// Arrange
 	kvc := coredynamic.NewKeyValCollection(2)
 	kvc.Add(coredynamic.KeyVal{Key: "k", Value: "v"})
@@ -688,7 +688,7 @@ func Test_KeyValCollection_AllKeys_AllKeysSorted_AllValues(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyValCollection returns non-empty -- AllKeys/Sorted/Values", actual)
 }
 
-func Test_KeyValCollection_String(t *testing.T) {
+func Test_KeyValCollection_String_Zerosetany(t *testing.T) {
 	// Arrange
 	kvc := coredynamic.NewKeyValCollection(1)
 	kvc.Add(coredynamic.KeyVal{Key: "k", Value: "v"})
@@ -710,7 +710,7 @@ func Test_KeyValCollection_String(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyValCollection returns correct value -- String", actual)
 }
 
-func Test_KeyValCollection_Json(t *testing.T) {
+func Test_KeyValCollection_Json_Zerosetany(t *testing.T) {
 	// Arrange
 	kvc := coredynamic.NewKeyValCollection(1)
 	kvc.Add(coredynamic.KeyVal{Key: "k", Value: "v"})
@@ -769,7 +769,7 @@ func Test_KeyValCollection_Serialize_JsonString_JsonStringMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyValCollection returns correct value -- Serialize/JsonString", actual)
 }
 
-func Test_KeyValCollection_Clone(t *testing.T) {
+func Test_KeyValCollection_Clone_Zerosetany(t *testing.T) {
 	// Arrange
 	kvc := coredynamic.NewKeyValCollection(1)
 	kvc.Add(coredynamic.KeyVal{Key: "k", Value: "v"})
@@ -809,7 +809,7 @@ func Test_KeyValCollection_ParseInjectUsingJson(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyValCollection returns correct value -- ParseInjectUsingJson", actual)
 }
 
-func Test_KeyValCollection_JsonParseSelfInject(t *testing.T) {
+func Test_KeyValCollection_JsonParseSelfInject_Zerosetany(t *testing.T) {
 	// Arrange
 	kvc := coredynamic.NewKeyValCollection(1)
 	jr := corejson.NewPtr([]coredynamic.KeyVal{{Key: "x", Value: "y"}})
@@ -909,7 +909,7 @@ func Test_TypeStatus_NotMatch(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypeStatus returns correct value -- NotMatch", actual)
 }
 
-func Test_TypeStatus_MustBeSame_Panic(t *testing.T) {
+func Test_TypeStatus_MustBeSame_Panic_Zerosetany(t *testing.T) {
 	// Arrange
 	ts := coredynamic.TypeSameStatus("hello", 42)
 	var didPanic bool
@@ -930,7 +930,7 @@ func Test_TypeStatus_MustBeSame_Panic(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypeStatus panics -- MustBeSame panic", actual)
 }
 
-func Test_TypeStatus_SrcDestinationMustBeSame_Panic(t *testing.T) {
+func Test_TypeStatus_SrcDestinationMustBeSame_Panic_Zerosetany(t *testing.T) {
 	// Arrange
 	ts := coredynamic.TypeSameStatus("hello", 42)
 	var didPanic bool
@@ -951,7 +951,7 @@ func Test_TypeStatus_SrcDestinationMustBeSame_Panic(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypeStatus panics -- SrcDestinationMustBeSame panic", actual)
 }
 
-func Test_TypeStatus_IsEqual(t *testing.T) {
+func Test_TypeStatus_IsEqual_Zerosetany(t *testing.T) {
 	// Arrange
 	ts1 := coredynamic.TypeSameStatus("a", "b")
 	ts2 := coredynamic.TypeSameStatus("a", "b")
@@ -1031,7 +1031,7 @@ func Test_TypeStatus_PointerTypes(t *testing.T) {
 // CastTo
 // ==========================================================================
 
-func Test_CastTo_Match(t *testing.T) {
+func Test_CastTo_Match_Zerosetany(t *testing.T) {
 	// Arrange
 	result := coredynamic.CastTo(false, "hello", reflect.TypeOf(""))
 
@@ -1051,7 +1051,7 @@ func Test_CastTo_Match(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "CastTo returns correct value -- match", actual)
 }
 
-func Test_CastTo_NoMatch(t *testing.T) {
+func Test_CastTo_NoMatch_Zerosetany(t *testing.T) {
 	// Arrange
 	result := coredynamic.CastTo(false, "hello", reflect.TypeOf(42))
 
@@ -1073,7 +1073,7 @@ func Test_CastTo_NoMatch(t *testing.T) {
 // TypeNotEqualErr / TypeMustBeSame
 // ==========================================================================
 
-func Test_TypeNotEqualErr(t *testing.T) {
+func Test_TypeNotEqualErr_Zerosetany(t *testing.T) {
 	// Arrange
 	err := coredynamic.TypeNotEqualErr("a", "b")
 	errDiff := coredynamic.TypeNotEqualErr("a", 42)
@@ -1092,7 +1092,7 @@ func Test_TypeNotEqualErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypeNotEqualErr returns error -- with args", actual)
 }
 
-func Test_TypeMustBeSame_NoPanic(t *testing.T) {
+func Test_TypeMustBeSame_NoPanic_Zerosetany(t *testing.T) {
 	// Arrange
 	coredynamic.TypeMustBeSame("a", "b") // same types, no panic
 
@@ -1104,7 +1104,7 @@ func Test_TypeMustBeSame_NoPanic(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypeMustBeSame panics -- no panic", actual)
 }
 
-func Test_TypeMustBeSame_Panic(t *testing.T) {
+func Test_TypeMustBeSame_Panic_Zerosetany(t *testing.T) {
 	// Arrange
 	var didPanic bool
 	func() {
@@ -1128,7 +1128,7 @@ func Test_TypeMustBeSame_Panic(t *testing.T) {
 // TypesIndexOf
 // ==========================================================================
 
-func Test_TypesIndexOf(t *testing.T) {
+func Test_TypesIndexOf_Zerosetany(t *testing.T) {
 	// Arrange
 	strType := reflect.TypeOf("")
 	intType := reflect.TypeOf(0)
@@ -1151,7 +1151,7 @@ func Test_TypesIndexOf(t *testing.T) {
 // MapAnyItemDiff — coverage
 // ==========================================================================
 
-func Test_MapAnyItemDiff_Basic(t *testing.T) {
+func Test_MapAnyItemDiff_Basic_Zerosetany(t *testing.T) {
 	// Arrange
 	m := coredynamic.MapAnyItemDiff{"k": "v"}
 	var nilM *coredynamic.MapAnyItemDiff
@@ -1203,7 +1203,7 @@ func Test_MapAnyItemDiff_Raw_Clear(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "MapAnyItemDiff returns correct value -- Raw/Clear", actual)
 }
 
-func Test_MapAnyItemDiff_Json(t *testing.T) {
+func Test_MapAnyItemDiff_Json_Zerosetany(t *testing.T) {
 	// Arrange
 	m := coredynamic.MapAnyItemDiff{"k": "v"}
 	j := m.Json()
@@ -1226,7 +1226,7 @@ func Test_MapAnyItemDiff_Json(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "MapAnyItemDiff returns correct value -- Json", actual)
 }
 
-func Test_MapAnyItemDiff_IsRawEqual(t *testing.T) {
+func Test_MapAnyItemDiff_IsRawEqual_Zerosetany(t *testing.T) {
 	// Arrange
 	m := coredynamic.MapAnyItemDiff{"k": "v"}
 
@@ -1244,7 +1244,7 @@ func Test_MapAnyItemDiff_IsRawEqual(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "MapAnyItemDiff returns correct value -- IsRawEqual", actual)
 }
 
-func Test_MapAnyItemDiff_HasAnyChanges(t *testing.T) {
+func Test_MapAnyItemDiff_HasAnyChanges_Zerosetany(t *testing.T) {
 	// Arrange
 	m := coredynamic.MapAnyItemDiff{"k": "v"}
 
@@ -1303,7 +1303,7 @@ func Test_MapAnyItemDiff_DiffMethods(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "MapAnyItemDiff returns correct value -- diff methods", actual)
 }
 
-func Test_MapAnyItemDiff_LogPrettyJsonString(t *testing.T) {
+func Test_MapAnyItemDiff_LogPrettyJsonString_Zerosetany(t *testing.T) {
 	// Arrange
 	m := coredynamic.MapAnyItemDiff{"k": "v"}
 	m.LogPrettyJsonString()

@@ -14,7 +14,7 @@ import (
 // Hashset.go — Full coverage (~489 uncovered stmts, 1469 lines)
 // =============================================================================
 
-func Test_Hashset_IsEmpty(t *testing.T) {
+func Test_Hashset_IsEmpty_HashsetIsemptyHashsetseg1(t *testing.T) {
 	safeTest(t, "Test_Hashset_IsEmpty", func() {
 		// Arrange
 		hs := corestr.New.Hashset.Empty()
@@ -744,7 +744,7 @@ func Test_Hashset_AddSimpleSlice_Empty(t *testing.T) {
 	})
 }
 
-func Test_Hashset_AddStringsLock(t *testing.T) {
+func Test_Hashset_AddStringsLock_HashsetIsemptyHashsetseg1(t *testing.T) {
 	safeTest(t, "Test_Hashset_AddStringsLock", func() {
 		// Arrange
 		hs := corestr.New.Hashset.Empty()
@@ -1038,7 +1038,7 @@ func Test_Hashset_AddsUsingFilter_Nil_FromHashsetIsEmptyHashse(t *testing.T) {
 	})
 }
 
-func Test_Hashset_AddLock(t *testing.T) {
+func Test_Hashset_AddLock_HashsetIsemptyHashsetseg1(t *testing.T) {
 	safeTest(t, "Test_Hashset_AddLock", func() {
 		// Arrange
 		hs := corestr.New.Hashset.Empty()
@@ -1186,7 +1186,7 @@ func Test_Hashset_Filter_FromHashsetIsEmptyHashse(t *testing.T) {
 	})
 }
 
-func Test_Hashset_HasLock(t *testing.T) {
+func Test_Hashset_HasLock_HashsetIsemptyHashsetseg1(t *testing.T) {
 	safeTest(t, "Test_Hashset_HasLock", func() {
 		// Arrange
 		hs := corestr.New.Hashset.StringsSpreadItems("a")
@@ -1241,7 +1241,7 @@ func Test_Hashset_HasAllCollectionItems_FromHashsetIsEmptyHashse(t *testing.T) {
 	})
 }
 
-func Test_Hashset_HasAll(t *testing.T) {
+func Test_Hashset_HasAll_HashsetIsemptyHashsetseg1(t *testing.T) {
 	safeTest(t, "Test_Hashset_HasAll", func() {
 		// Arrange
 		hs := corestr.New.Hashset.StringsSpreadItems("a", "b")
@@ -1832,7 +1832,7 @@ func Test_Hashset_Clear_Nil(t *testing.T) {
 	})
 }
 
-func Test_Hashset_Dispose(t *testing.T) {
+func Test_Hashset_Dispose_HashsetIsemptyHashsetseg1(t *testing.T) {
 	safeTest(t, "Test_Hashset_Dispose", func() {
 		// Arrange
 		hs := corestr.New.Hashset.StringsSpreadItems("a")
@@ -1898,7 +1898,7 @@ func Test_Hashset_ToLowerSet_FromHashsetIsEmptyHashse(t *testing.T) {
 	})
 }
 
-func Test_Hashset_Length(t *testing.T) {
+func Test_Hashset_Length_HashsetIsemptyHashsetseg1(t *testing.T) {
 	safeTest(t, "Test_Hashset_Length", func() {
 		// Arrange
 		hs := corestr.New.Hashset.StringsSpreadItems("a", "b")
@@ -1912,7 +1912,7 @@ func Test_Hashset_Length(t *testing.T) {
 	})
 }
 
-func Test_Hashset_LengthLock(t *testing.T) {
+func Test_Hashset_LengthLock_HashsetIsemptyHashsetseg1(t *testing.T) {
 	safeTest(t, "Test_Hashset_LengthLock", func() {
 		// Arrange
 		hs := corestr.New.Hashset.StringsSpreadItems("a")
@@ -2050,7 +2050,7 @@ func Test_Hashset_Remove_FromHashsetIsEmptyHashse(t *testing.T) {
 	})
 }
 
-func Test_Hashset_SafeRemove(t *testing.T) {
+func Test_Hashset_SafeRemove_HashsetIsemptyHashsetseg1(t *testing.T) {
 	safeTest(t, "Test_Hashset_SafeRemove", func() {
 		// Arrange
 		hs := corestr.New.Hashset.StringsSpreadItems("a")
@@ -2066,7 +2066,7 @@ func Test_Hashset_SafeRemove(t *testing.T) {
 	})
 }
 
-func Test_Hashset_RemoveWithLock(t *testing.T) {
+func Test_Hashset_RemoveWithLock_HashsetIsemptyHashsetseg1(t *testing.T) {
 	safeTest(t, "Test_Hashset_RemoveWithLock", func() {
 		// Arrange
 		hs := corestr.New.Hashset.StringsSpreadItems("a")
@@ -2263,7 +2263,7 @@ func Test_Hashset_MarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_Hashset_UnmarshalJSON(t *testing.T) {
+func Test_Hashset_UnmarshalJSON_HashsetIsemptyHashsetseg1(t *testing.T) {
 	safeTest(t, "Test_Hashset_UnmarshalJSON", func() {
 		// Arrange
 		hs := &corestr.Hashset{}
@@ -2435,7 +2435,7 @@ func Test_Hashset_AsJsoner(t *testing.T) {
 	})
 }
 
-func Test_Hashset_JsonParseSelfInject(t *testing.T) {
+func Test_Hashset_JsonParseSelfInject_HashsetIsemptyHashsetseg1(t *testing.T) {
 	safeTest(t, "Test_Hashset_JsonParseSelfInject", func() {
 		// Arrange
 		hs := corestr.New.Hashset.Empty()
@@ -2615,7 +2615,7 @@ func Test_Hashset_DistinctDiffLines_Mixed(t *testing.T) {
 	})
 }
 
-func Test_Hashset_Serialize(t *testing.T) {
+func Test_Hashset_Serialize_HashsetIsemptyHashsetseg1(t *testing.T) {
 	safeTest(t, "Test_Hashset_Serialize", func() {
 		// Arrange
 		hs := corestr.New.Hashset.StringsSpreadItems("a")
@@ -2636,7 +2636,7 @@ func Test_Hashset_Serialize(t *testing.T) {
 	})
 }
 
-func Test_Hashset_Deserialize(t *testing.T) {
+func Test_Hashset_Deserialize_HashsetIsemptyHashsetseg1(t *testing.T) {
 	safeTest(t, "Test_Hashset_Deserialize", func() {
 		// Arrange
 		hs := corestr.New.Hashset.StringsSpreadItems("a")

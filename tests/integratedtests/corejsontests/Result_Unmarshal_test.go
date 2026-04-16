@@ -30,7 +30,7 @@ func Test_Result_Unmarshal_Valid_FromResultUnmarshal(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_Result_Unmarshal_NilReceiver(t *testing.T) {
+func Test_Result_Unmarshal_NilReceiver_ResultUnmarshal(t *testing.T) {
 	tc := resultUnmarshalNilTestCase
 
 	// Arrange

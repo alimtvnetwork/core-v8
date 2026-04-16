@@ -617,7 +617,7 @@ func Test_BytesTo_String_Verification(t *testing.T) {
 	}
 }
 
-func Test_BytesTo_StringMust(t *testing.T) {
+func Test_BytesTo_StringMust_DeserializeApplyDeserializer(t *testing.T) {
 	tc := bytesToStringMustTestCase
 
 	// Arrange
@@ -668,7 +668,7 @@ func Test_BytesTo_Strings(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_BytesTo_Integer(t *testing.T) {
+func Test_BytesTo_Integer_DeserializeApplyDeserializer(t *testing.T) {
 	tc := bytesToIntegerTestCase
 
 	// Arrange
@@ -685,7 +685,7 @@ func Test_BytesTo_Integer(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_BytesTo_Integer64(t *testing.T) {
+func Test_BytesTo_Integer64_DeserializeApplyDeserializer(t *testing.T) {
 	tc := bytesToInteger64TestCase
 
 	// Arrange
@@ -719,7 +719,7 @@ func Test_BytesTo_Bool(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_BytesTo_MapAnyItem(t *testing.T) {
+func Test_BytesTo_MapAnyItem_DeserializeApplyDeserializer(t *testing.T) {
 	tc := bytesToMapAnyItemTestCase
 
 	// Arrange
@@ -736,7 +736,7 @@ func Test_BytesTo_MapAnyItem(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_BytesTo_MapStringString(t *testing.T) {
+func Test_BytesTo_MapStringString_DeserializeApplyDeserializer(t *testing.T) {
 	tc := bytesToMapStringStringTestCase
 
 	// Arrange
@@ -757,7 +757,7 @@ func Test_BytesTo_MapStringString(t *testing.T) {
 // deserializeFromResultTo — String / Bool / Byte / MapAnyItem / MapStringString
 // =============================================================================
 
-func Test_ResultTo_String(t *testing.T) {
+func Test_ResultTo_String_DeserializeApplyDeserializer(t *testing.T) {
 	tc := resultToStringTestCase
 
 	// Arrange
@@ -774,7 +774,7 @@ func Test_ResultTo_String(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_ResultTo_Bool(t *testing.T) {
+func Test_ResultTo_Bool_DeserializeApplyDeserializer(t *testing.T) {
 	tc := resultToBoolTestCase
 
 	// Arrange
@@ -791,7 +791,7 @@ func Test_ResultTo_Bool(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_ResultTo_Byte(t *testing.T) {
+func Test_ResultTo_Byte_DeserializeApplyDeserializer(t *testing.T) {
 	tc := resultToByteTestCase
 
 	// Arrange
@@ -808,7 +808,7 @@ func Test_ResultTo_Byte(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_ResultTo_MapAnyItem(t *testing.T) {
+func Test_ResultTo_MapAnyItem_DeserializeApplyDeserializer(t *testing.T) {
 	tc := resultToMapAnyItemTestCase
 
 	// Arrange
@@ -825,7 +825,7 @@ func Test_ResultTo_MapAnyItem(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_ResultTo_MapStringString(t *testing.T) {
+func Test_ResultTo_MapStringString_DeserializeApplyDeserializer(t *testing.T) {
 	tc := resultToMapStringStringTestCase
 
 	// Arrange

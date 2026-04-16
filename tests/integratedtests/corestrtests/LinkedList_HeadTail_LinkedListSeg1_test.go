@@ -155,7 +155,7 @@ func Test_LinkedList_Add_First(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_Add_Multiple(t *testing.T) {
+func Test_LinkedList_Add_Multiple_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_Add_Multiple", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -391,7 +391,7 @@ func Test_LinkedList_AddFuncErr_NoError(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddFuncErr_Error(t *testing.T) {
+func Test_LinkedList_AddFuncErr_Error_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddFuncErr_Error", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -489,7 +489,7 @@ func Test_LinkedList_AddFront_Empty_FromLinkedListHeadTailLi(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddFront_NonEmpty(t *testing.T) {
+func Test_LinkedList_AddFront_NonEmpty_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddFront_NonEmpty", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -526,7 +526,7 @@ func Test_LinkedList_AddItemsMap_FromLinkedListHeadTailLi(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddItemsMap_Empty(t *testing.T) {
+func Test_LinkedList_AddItemsMap_Empty_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddItemsMap_Empty", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -565,7 +565,7 @@ func Test_LinkedList_AppendNode_Empty_FromLinkedListHeadTailLi(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AppendNode_NonEmpty(t *testing.T) {
+func Test_LinkedList_AppendNode_NonEmpty_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AppendNode_NonEmpty", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -588,7 +588,7 @@ func Test_LinkedList_AppendNode_NonEmpty(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddBackNode(t *testing.T) {
+func Test_LinkedList_AddBackNode_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddBackNode", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -637,7 +637,7 @@ func Test_LinkedList_AddCollection_Nil_FromLinkedListHeadTailLi(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddPointerStringsPtr(t *testing.T) {
+func Test_LinkedList_AddPointerStringsPtr_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddPointerStringsPtr", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -687,7 +687,7 @@ func Test_LinkedList_InsertAt_Negative(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_InsertAt_Middle(t *testing.T) {
+func Test_LinkedList_InsertAt_Middle_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_InsertAt_Middle", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -706,7 +706,7 @@ func Test_LinkedList_InsertAt_Middle(t *testing.T) {
 
 // ── AttachWithNode ──
 
-func Test_LinkedList_AttachWithNode_NilCurrent(t *testing.T) {
+func Test_LinkedList_AttachWithNode_NilCurrent_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AttachWithNode_NilCurrent", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -721,7 +721,7 @@ func Test_LinkedList_AttachWithNode_NilCurrent(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AttachWithNode_NextNotNil(t *testing.T) {
+func Test_LinkedList_AttachWithNode_NextNotNil_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AttachWithNode_NextNotNil", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -761,7 +761,7 @@ func Test_LinkedList_AttachWithNode_Success(t *testing.T) {
 
 // ── AddAfterNode ──
 
-func Test_LinkedList_AddAfterNode(t *testing.T) {
+func Test_LinkedList_AddAfterNode_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddAfterNode", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -779,7 +779,7 @@ func Test_LinkedList_AddAfterNode(t *testing.T) {
 
 // ── AddStringsToNode ──
 
-func Test_LinkedList_AddStringsToNode_Empty(t *testing.T) {
+func Test_LinkedList_AddStringsToNode_Empty_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddStringsToNode_Empty", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -795,7 +795,7 @@ func Test_LinkedList_AddStringsToNode_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddStringsToNode_NilSkip(t *testing.T) {
+func Test_LinkedList_AddStringsToNode_NilSkip_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddStringsToNode_NilSkip", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -810,7 +810,7 @@ func Test_LinkedList_AddStringsToNode_NilSkip(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddStringsToNode_Single(t *testing.T) {
+func Test_LinkedList_AddStringsToNode_Single_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddStringsToNode_Single", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -826,7 +826,7 @@ func Test_LinkedList_AddStringsToNode_Single(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddStringsToNode_Multiple(t *testing.T) {
+func Test_LinkedList_AddStringsToNode_Multiple_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddStringsToNode_Multiple", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -842,7 +842,7 @@ func Test_LinkedList_AddStringsToNode_Multiple(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AddStringsPtrToNode_Nil(t *testing.T) {
+func Test_LinkedList_AddStringsPtrToNode_Nil_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddStringsPtrToNode_Nil", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -876,7 +876,7 @@ func Test_LinkedList_AddStringsPtrToNode_NonNil(t *testing.T) {
 
 // ── AddCollectionToNode ──
 
-func Test_LinkedList_AddCollectionToNode(t *testing.T) {
+func Test_LinkedList_AddCollectionToNode_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AddCollectionToNode", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -994,7 +994,7 @@ func Test_LinkedList_Filter_FromLinkedListHeadTailLi(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_Filter_Empty(t *testing.T) {
+func Test_LinkedList_Filter_Empty_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_Filter_Empty", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1011,7 +1011,7 @@ func Test_LinkedList_Filter_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_Filter_BreakFirst(t *testing.T) {
+func Test_LinkedList_Filter_BreakFirst_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_Filter_BreakFirst", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1029,7 +1029,7 @@ func Test_LinkedList_Filter_BreakFirst(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_Filter_BreakSecond(t *testing.T) {
+func Test_LinkedList_Filter_BreakSecond_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_Filter_BreakSecond", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1115,7 +1115,7 @@ func Test_LinkedList_IndexAt_Middle(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_IndexAt_Negative(t *testing.T) {
+func Test_LinkedList_IndexAt_Negative_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_IndexAt_Negative", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1278,7 +1278,7 @@ func Test_LinkedList_SafePointerIndexAtUsingDefault_Default(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_SafePointerIndexAtUsingDefaultLock(t *testing.T) {
+func Test_LinkedList_SafePointerIndexAtUsingDefaultLock_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_SafePointerIndexAtUsingDefaultLock", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1334,7 +1334,7 @@ func Test_LinkedList_RemoveNodeByElementValue_Middle(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_RemoveNodeByElementValue_CaseInsensitive(t *testing.T) {
+func Test_LinkedList_RemoveNodeByElementValue_CaseInsensitive_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_RemoveNodeByElementValue_CaseInsensitive", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1352,7 +1352,7 @@ func Test_LinkedList_RemoveNodeByElementValue_CaseInsensitive(t *testing.T) {
 
 // ── RemoveNodeByIndex ──
 
-func Test_LinkedList_RemoveNodeByIndex_First(t *testing.T) {
+func Test_LinkedList_RemoveNodeByIndex_First_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_RemoveNodeByIndex_First", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1374,7 +1374,7 @@ func Test_LinkedList_RemoveNodeByIndex_First(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_RemoveNodeByIndex_Last(t *testing.T) {
+func Test_LinkedList_RemoveNodeByIndex_Last_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_RemoveNodeByIndex_Last", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1390,7 +1390,7 @@ func Test_LinkedList_RemoveNodeByIndex_Last(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_RemoveNodeByIndex_Middle(t *testing.T) {
+func Test_LinkedList_RemoveNodeByIndex_Middle_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_RemoveNodeByIndex_Middle", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1408,7 +1408,7 @@ func Test_LinkedList_RemoveNodeByIndex_Middle(t *testing.T) {
 
 // ── RemoveNodeByIndexes ──
 
-func Test_LinkedList_RemoveNodeByIndexes(t *testing.T) {
+func Test_LinkedList_RemoveNodeByIndexes_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_RemoveNodeByIndexes", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1424,7 +1424,7 @@ func Test_LinkedList_RemoveNodeByIndexes(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_RemoveNodeByIndexes_Empty(t *testing.T) {
+func Test_LinkedList_RemoveNodeByIndexes_Empty_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_RemoveNodeByIndexes_Empty", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1442,7 +1442,7 @@ func Test_LinkedList_RemoveNodeByIndexes_Empty(t *testing.T) {
 
 // ── RemoveNode ──
 
-func Test_LinkedList_RemoveNode_Nil(t *testing.T) {
+func Test_LinkedList_RemoveNode_Nil_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_RemoveNode_Nil", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1458,7 +1458,7 @@ func Test_LinkedList_RemoveNode_Nil(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_RemoveNode_First(t *testing.T) {
+func Test_LinkedList_RemoveNode_First_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_RemoveNode_First", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1534,7 +1534,7 @@ func Test_LinkedList_IsEquals_Same_FromLinkedListHeadTailLi(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_IsEquals_BothEmpty(t *testing.T) {
+func Test_LinkedList_IsEquals_BothEmpty_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_IsEquals_BothEmpty", func() {
 		// Arrange
 		a := corestr.New.LinkedList.Create()
@@ -1549,7 +1549,7 @@ func Test_LinkedList_IsEquals_BothEmpty(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_IsEquals_OneEmpty(t *testing.T) {
+func Test_LinkedList_IsEquals_OneEmpty_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_IsEquals_OneEmpty", func() {
 		// Arrange
 		a := corestr.New.LinkedList.Create()
@@ -1614,7 +1614,7 @@ func Test_LinkedList_IsEquals_Equal_FromLinkedListHeadTailLi(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_IsEqualsWithSensitive_CaseInsensitive(t *testing.T) {
+func Test_LinkedList_IsEqualsWithSensitive_CaseInsensitive_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_IsEqualsWithSensitive_CaseInsensitive", func() {
 		// Arrange
 		a := corestr.New.LinkedList.Create()
@@ -1693,7 +1693,7 @@ func Test_LinkedList_List_Empty_FromLinkedListHeadTailLi(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_ListPtr(t *testing.T) {
+func Test_LinkedList_ListPtr_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_ListPtr", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1723,7 +1723,7 @@ func Test_LinkedList_ListLock_FromLinkedListHeadTailLi(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_ListPtrLock(t *testing.T) {
+func Test_LinkedList_ListPtrLock_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_ListPtrLock", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1784,7 +1784,7 @@ func Test_LinkedList_StringLock_FromLinkedListHeadTailLi(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_StringLock_Empty(t *testing.T) {
+func Test_LinkedList_StringLock_Empty_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_StringLock_Empty", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1844,7 +1844,7 @@ func Test_LinkedList_Joins_FromLinkedListHeadTailLi(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_Joins_NilItems(t *testing.T) {
+func Test_LinkedList_Joins_NilItems_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_Joins_NilItems", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1964,7 +1964,7 @@ func Test_LinkedList_Json_FromLinkedListHeadTailLi(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_JsonPtr(t *testing.T) {
+func Test_LinkedList_JsonPtr_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_JsonPtr", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -1980,7 +1980,7 @@ func Test_LinkedList_JsonPtr(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_ParseInjectUsingJson(t *testing.T) {
+func Test_LinkedList_ParseInjectUsingJson_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_ParseInjectUsingJson", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -2004,7 +2004,7 @@ func Test_LinkedList_ParseInjectUsingJson(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_ParseInjectUsingJson_Error(t *testing.T) {
+func Test_LinkedList_ParseInjectUsingJson_Error_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_ParseInjectUsingJson_Error", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -2020,7 +2020,7 @@ func Test_LinkedList_ParseInjectUsingJson_Error(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_ParseInjectUsingJsonMust(t *testing.T) {
+func Test_LinkedList_ParseInjectUsingJsonMust_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_ParseInjectUsingJsonMust", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -2062,7 +2062,7 @@ func Test_LinkedList_ParseInjectUsingJsonMust_Panics(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_JsonParseSelfInject(t *testing.T) {
+func Test_LinkedList_JsonParseSelfInject_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_JsonParseSelfInject", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -2118,7 +2118,7 @@ func Test_LinkedList_Clear_FromLinkedListHeadTailLi(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_Clear_Empty(t *testing.T) {
+func Test_LinkedList_Clear_Empty_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_Clear_Empty", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -2151,7 +2151,7 @@ func Test_LinkedList_RemoveAll_FromLinkedListHeadTailLi(t *testing.T) {
 
 // ── AppendChainOfNodes ──
 
-func Test_LinkedList_AppendChainOfNodes_Empty(t *testing.T) {
+func Test_LinkedList_AppendChainOfNodes_Empty_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AppendChainOfNodes_Empty", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()
@@ -2168,7 +2168,7 @@ func Test_LinkedList_AppendChainOfNodes_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_AppendChainOfNodes_NonEmpty(t *testing.T) {
+func Test_LinkedList_AppendChainOfNodes_NonEmpty_LinkedlistHeadtailLinkedlistseg1(t *testing.T) {
 	safeTest(t, "Test_LinkedList_AppendChainOfNodes_NonEmpty", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()

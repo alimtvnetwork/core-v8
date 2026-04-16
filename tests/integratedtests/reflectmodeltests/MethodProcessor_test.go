@@ -425,7 +425,7 @@ func Test_MethodProcessor_InArgsVerifyRv_LengthMismatch(t *testing.T) {
 
 // --- Invoke ---
 
-func Test_MethodProcessor_Invoke_Success(t *testing.T) {
+func Test_MethodProcessor_Invoke_Success_Methodprocessor(t *testing.T) {
 	// Arrange
 	mp := newMethodProcessor("NoArgsMethod")
 
@@ -449,7 +449,7 @@ func Test_MethodProcessor_Invoke_Success(t *testing.T) {
 
 // Note: Invoke nil receiver test migrated to MethodProcessor_NilReceiver_testcases.go
 
-func Test_MethodProcessor_NilReceiver(t *testing.T) {
+func Test_MethodProcessor_NilReceiver_Methodprocessor(t *testing.T) {
 	for caseIndex, tc := range methodProcessorNilReceiverTestCases {
 		// Arrange (implicit — nil receiver)
 

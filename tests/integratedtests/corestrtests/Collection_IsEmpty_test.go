@@ -13,7 +13,7 @@ import (
 // Collection — IsEmpty / HasItems / Length / Count / Capacity
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_Collection_IsEmpty(t *testing.T) {
+func Test_Collection_IsEmpty_CollectionIsempty(t *testing.T) {
 	safeTest(t, "Test_I31_Collection_IsEmpty", func() {
 		// Arrange
 		c := corestr.New.Collection.Cap(5)
@@ -39,7 +39,7 @@ func Test_Collection_IsEmpty(t *testing.T) {
 	})
 }
 
-func Test_Collection_Length_Nil(t *testing.T) {
+func Test_Collection_Length_Nil_CollectionIsempty(t *testing.T) {
 	safeTest(t, "Test_I31_Collection_Length_Nil", func() {
 		// Arrange
 		var c *corestr.Collection
@@ -102,7 +102,7 @@ func Test_Collection_Capacity_FromCollectionIsEmptyIte(t *testing.T) {
 	})
 }
 
-func Test_Collection_Capacity_Nil(t *testing.T) {
+func Test_Collection_Capacity_Nil_CollectionIsempty(t *testing.T) {
 	safeTest(t, "Test_I31_Collection_Capacity_Nil", func() {
 		// Arrange
 		c := corestr.New.Collection.Cap(0)
@@ -116,7 +116,7 @@ func Test_Collection_Capacity_Nil(t *testing.T) {
 	})
 }
 
-func Test_Collection_LastIndex(t *testing.T) {
+func Test_Collection_LastIndex_CollectionIsempty(t *testing.T) {
 	safeTest(t, "Test_I31_Collection_LastIndex", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b"})
@@ -1083,7 +1083,7 @@ func Test_Collection_IsEquals_Same(t *testing.T) {
 	})
 }
 
-func Test_Collection_IsEquals_BothNil(t *testing.T) {
+func Test_Collection_IsEquals_BothNil_CollectionIsempty(t *testing.T) {
 	safeTest(t, "Test_I31_Collection_IsEquals_BothNil", func() {
 		// Arrange
 		var c *corestr.Collection
@@ -1097,7 +1097,7 @@ func Test_Collection_IsEquals_BothNil(t *testing.T) {
 	})
 }
 
-func Test_Collection_IsEquals_OneNil(t *testing.T) {
+func Test_Collection_IsEquals_OneNil_CollectionIsempty(t *testing.T) {
 	safeTest(t, "Test_I31_Collection_IsEquals_OneNil", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a"})
@@ -1111,7 +1111,7 @@ func Test_Collection_IsEquals_OneNil(t *testing.T) {
 	})
 }
 
-func Test_Collection_IsEquals_BothEmpty(t *testing.T) {
+func Test_Collection_IsEquals_BothEmpty_CollectionIsempty(t *testing.T) {
 	safeTest(t, "Test_I31_Collection_IsEquals_BothEmpty", func() {
 		// Arrange
 		c1 := corestr.New.Collection.Cap(5)
@@ -1126,7 +1126,7 @@ func Test_Collection_IsEquals_BothEmpty(t *testing.T) {
 	})
 }
 
-func Test_Collection_IsEquals_DiffLen(t *testing.T) {
+func Test_Collection_IsEquals_DiffLen_CollectionIsempty(t *testing.T) {
 	safeTest(t, "Test_I31_Collection_IsEquals_DiffLen", func() {
 		// Arrange
 		c1 := corestr.New.Collection.Strings([]string{"a"})
@@ -1156,7 +1156,7 @@ func Test_Collection_IsEquals_DiffItems(t *testing.T) {
 	})
 }
 
-func Test_Collection_IsEqualsWithSensitive_CaseInsensitive(t *testing.T) {
+func Test_Collection_IsEqualsWithSensitive_CaseInsensitive_CollectionIsempty(t *testing.T) {
 	safeTest(t, "Test_I31_Collection_IsEqualsWithSensitive_CaseInsensitive", func() {
 		// Arrange
 		c1 := corestr.New.Collection.Strings([]string{"Hello"})
@@ -1181,7 +1181,7 @@ func Test_Collection_IsEqualsWithSensitive_CaseInsensitive(t *testing.T) {
 // Collection — AsError / ToError
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_Collection_AsError_Empty(t *testing.T) {
+func Test_Collection_AsError_Empty_CollectionIsempty(t *testing.T) {
 	safeTest(t, "Test_I31_Collection_AsError_Empty", func() {
 		// Arrange
 		c := corestr.New.Collection.Cap(5)
@@ -1210,7 +1210,7 @@ func Test_Collection_AsError_FromCollectionIsEmptyIte(t *testing.T) {
 	})
 }
 
-func Test_Collection_AsDefaultError(t *testing.T) {
+func Test_Collection_AsDefaultError_CollectionIsempty(t *testing.T) {
 	safeTest(t, "Test_I31_Collection_AsDefaultError", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"err1"})
@@ -1240,7 +1240,7 @@ func Test_Collection_ToError_FromCollectionIsEmptyIte(t *testing.T) {
 	})
 }
 
-func Test_Collection_ToDefaultError(t *testing.T) {
+func Test_Collection_ToDefaultError_CollectionIsempty(t *testing.T) {
 	safeTest(t, "Test_I31_Collection_ToDefaultError", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a"})

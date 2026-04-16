@@ -12,7 +12,7 @@ import (
 // anyTo — SerializedJsonResult branches
 // =============================================================================
 
-func Test_AnyTo_SerializedJsonResult_Nil(t *testing.T) {
+func Test_AnyTo_SerializedJsonResult_Nil_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToSerializedJsonResultNilTestCase
 
 	// Arrange
@@ -28,7 +28,7 @@ func Test_AnyTo_SerializedJsonResult_Nil(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_AnyTo_SerializedJsonResult_Result(t *testing.T) {
+func Test_AnyTo_SerializedJsonResult_Result_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToSerializedJsonResultResultTestCase
 
 	// Arrange
@@ -44,7 +44,7 @@ func Test_AnyTo_SerializedJsonResult_Result(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_AnyTo_SerializedJsonResult_ResultPtr(t *testing.T) {
+func Test_AnyTo_SerializedJsonResult_ResultPtr_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToSerializedJsonResultResultPtrTestCase
 
 	// Arrange
@@ -60,7 +60,7 @@ func Test_AnyTo_SerializedJsonResult_ResultPtr(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_AnyTo_SerializedJsonResult_Bytes(t *testing.T) {
+func Test_AnyTo_SerializedJsonResult_Bytes_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToSerializedJsonResultBytesTestCase
 
 	// Arrange
@@ -76,7 +76,7 @@ func Test_AnyTo_SerializedJsonResult_Bytes(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_AnyTo_SerializedJsonResult_String(t *testing.T) {
+func Test_AnyTo_SerializedJsonResult_String_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToSerializedJsonResultStringTestCase
 
 	// Arrange
@@ -92,7 +92,7 @@ func Test_AnyTo_SerializedJsonResult_String(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_AnyTo_SerializedJsonResult_Error(t *testing.T) {
+func Test_AnyTo_SerializedJsonResult_Error_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToSerializedJsonResultErrorTestCase
 
 	// Arrange
@@ -144,7 +144,7 @@ func Test_AnyTo_SerializedJsonResult_Default(t *testing.T) {
 // anyTo — SerializedString / SerializedSafeString
 // =============================================================================
 
-func Test_AnyTo_SerializedString_Error(t *testing.T) {
+func Test_AnyTo_SerializedString_Error_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToSerializedStringErrorTestCase
 
 	// Arrange
@@ -180,7 +180,7 @@ func Test_AnyTo_SerializedSafeString_Nil(t *testing.T) {
 // anyTo — JsonString branches
 // =============================================================================
 
-func Test_AnyTo_JsonString_String(t *testing.T) {
+func Test_AnyTo_JsonString_String_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToJsonStringStringTestCase
 
 	// Arrange
@@ -196,7 +196,7 @@ func Test_AnyTo_JsonString_String(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_AnyTo_JsonString_Bytes(t *testing.T) {
+func Test_AnyTo_JsonString_Bytes_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToJsonStringBytesTestCase
 
 	// Arrange
@@ -212,7 +212,7 @@ func Test_AnyTo_JsonString_Bytes(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_AnyTo_JsonString_Result(t *testing.T) {
+func Test_AnyTo_JsonString_Result_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToJsonStringResultTestCase
 
 	// Arrange
@@ -228,7 +228,7 @@ func Test_AnyTo_JsonString_Result(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_AnyTo_JsonString_ResultPtr(t *testing.T) {
+func Test_AnyTo_JsonString_ResultPtr_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToJsonStringResultPtrTestCase
 
 	// Arrange
@@ -300,7 +300,7 @@ func Test_AnyTo_JsonStringWithErr_ResultPtrError(t *testing.T) {
 // anyTo — PrettyStringWithError branches
 // =============================================================================
 
-func Test_AnyTo_PrettyStringWithError_String(t *testing.T) {
+func Test_AnyTo_PrettyStringWithError_String_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToPrettyStringWithErrorStringTestCase
 
 	// Arrange
@@ -317,7 +317,7 @@ func Test_AnyTo_PrettyStringWithError_String(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_AnyTo_PrettyStringWithError_Bytes(t *testing.T) {
+func Test_AnyTo_PrettyStringWithError_Bytes_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToPrettyStringWithErrorBytesTestCase
 
 	// Arrange
@@ -370,7 +370,7 @@ func Test_AnyTo_PrettyStringWithError_ResultPtrErr(t *testing.T) {
 // anyTo — SafeJsonPrettyString branches
 // =============================================================================
 
-func Test_AnyTo_SafeJsonPrettyString_String(t *testing.T) {
+func Test_AnyTo_SafeJsonPrettyString_String_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToSafeJsonPrettyStringStringTestCase
 
 	// Arrange
@@ -386,7 +386,7 @@ func Test_AnyTo_SafeJsonPrettyString_String(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_AnyTo_SafeJsonPrettyString_Bytes(t *testing.T) {
+func Test_AnyTo_SafeJsonPrettyString_Bytes_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToSafeJsonPrettyStringBytesTestCase
 
 	// Arrange
@@ -402,7 +402,7 @@ func Test_AnyTo_SafeJsonPrettyString_Bytes(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_AnyTo_SafeJsonPrettyString_Result(t *testing.T) {
+func Test_AnyTo_SafeJsonPrettyString_Result_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToSafeJsonPrettyStringResultTestCase
 
 	// Arrange
@@ -418,7 +418,7 @@ func Test_AnyTo_SafeJsonPrettyString_Result(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_AnyTo_SafeJsonPrettyString_ResultPtr(t *testing.T) {
+func Test_AnyTo_SafeJsonPrettyString_ResultPtr_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToSafeJsonPrettyStringResultPtrTestCase
 
 	// Arrange
@@ -454,7 +454,7 @@ func Test_AnyTo_SafeJsonPrettyString_Default(t *testing.T) {
 // anyTo — SerializedFieldsMap
 // =============================================================================
 
-func Test_AnyTo_SerializedFieldsMap(t *testing.T) {
+func Test_AnyTo_SerializedFieldsMap_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := anyToSerializedFieldsMapTestCase
 
 	// Arrange
@@ -476,7 +476,7 @@ func Test_AnyTo_SerializedFieldsMap(t *testing.T) {
 // castingAny — FromToOption branches
 // =============================================================================
 
-func Test_CastAny_FromToOption_Bytes(t *testing.T) {
+func Test_CastAny_FromToOption_Bytes_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := castAnyFromToBytesTestCase
 
 	// Arrange
@@ -493,7 +493,7 @@ func Test_CastAny_FromToOption_Bytes(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_CastAny_FromToOption_String(t *testing.T) {
+func Test_CastAny_FromToOption_String_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := castAnyFromToStringTestCase
 
 	// Arrange
@@ -510,7 +510,7 @@ func Test_CastAny_FromToOption_String(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_CastAny_FromToOption_Result(t *testing.T) {
+func Test_CastAny_FromToOption_Result_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := castAnyFromToResultTestCase
 
 	// Arrange — Result implements Jsoner, so Jsoner case matches first → double-serializes
@@ -529,7 +529,7 @@ func Test_CastAny_FromToOption_Result(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_CastAny_FromToOption_ResultPtr(t *testing.T) {
+func Test_CastAny_FromToOption_ResultPtr_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := castAnyFromToResultPtrTestCase
 
 	// Arrange — *Result also implements Jsoner → use bytes directly
@@ -547,7 +547,7 @@ func Test_CastAny_FromToOption_ResultPtr(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_CastAny_FromToOption_SerializerFunc(t *testing.T) {
+func Test_CastAny_FromToOption_SerializerFunc_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := castAnyFromToSerializerFuncTestCase
 
 	// Arrange
@@ -565,7 +565,7 @@ func Test_CastAny_FromToOption_SerializerFunc(t *testing.T) {
 	tc.ShouldBeEqualMapFirst(t, actual)
 }
 
-func Test_CastAny_FromToOption_Error(t *testing.T) {
+func Test_CastAny_FromToOption_Error_AnytoSerializedjsonresultAnytoCastany(t *testing.T) {
 	tc := castAnyFromToErrorTestCase
 
 	// Arrange

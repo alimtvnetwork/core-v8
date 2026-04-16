@@ -143,7 +143,7 @@ func Test_SerializeDeserialize_Roundtrip(t *testing.T) {
 
 // ── AnyTo ──
 
-func Test_AnyTo_SerializedJsonResult(t *testing.T) {
+func Test_AnyTo_SerializedJsonResult_NewresultSerialize(t *testing.T) {
 	// Arrange
 	result := corejson.AnyTo.SerializedJsonResult(map[string]int{"a": 1})
 

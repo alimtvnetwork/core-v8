@@ -351,7 +351,7 @@ func Test_LeftRight_HasValidNonWhitespace(t *testing.T) {
 	})
 }
 
-func Test_LeftRight_NonPtr_Ptr(t *testing.T) {
+func Test_LeftRight_NonPtr_Ptr_LeftrightNewleftright(t *testing.T) {
 	safeTest(t, "Test_I26_LeftRight_NonPtr_Ptr", func() {
 		// Arrange
 		lr := corestr.NewLeftRight("a", "b")
@@ -469,7 +469,7 @@ func Test_LeftRight_Clone_FromLeftRightNewLeftRigh(t *testing.T) {
 	})
 }
 
-func Test_LeftRight_Clear_Dispose(t *testing.T) {
+func Test_LeftRight_Clear_Dispose_LeftrightNewleftright(t *testing.T) {
 	safeTest(t, "Test_I26_LeftRight_Clear_Dispose", func() {
 		// Arrange
 		lr := corestr.NewLeftRight("a", "b")
@@ -829,7 +829,7 @@ func Test_LeftMiddleRight_ToLeftRight_FromLeftRightNewLeftRigh(t *testing.T) {
 	})
 }
 
-func Test_LeftMiddleRight_Clear_Dispose(t *testing.T) {
+func Test_LeftMiddleRight_Clear_Dispose_LeftrightNewleftright(t *testing.T) {
 	safeTest(t, "Test_I26_LeftMiddleRight_Clear_Dispose", func() {
 		// Arrange
 		lmr := corestr.NewLeftMiddleRight("a", "b", "c")
@@ -1289,7 +1289,7 @@ func Test_KeyValuePair_FormatString_FromLeftRightNewLeftRigh(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_Clear_Dispose(t *testing.T) {
+func Test_KeyValuePair_Clear_Dispose_LeftrightNewleftright(t *testing.T) {
 	safeTest(t, "Test_I26_KeyValuePair_Clear_Dispose", func() {
 		// Arrange
 		kv := &corestr.KeyValuePair{Key: "k", Value: "v"}

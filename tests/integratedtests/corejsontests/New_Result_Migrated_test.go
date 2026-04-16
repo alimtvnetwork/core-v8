@@ -163,7 +163,7 @@ func Test_Result_PrettyJsonBuffer(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected empty buffer for empty result", actual)
 }
 
-func Test_Result_PrettyJsonString(t *testing.T) {
+func Test_Result_PrettyJsonString_NewResultMigrated(t *testing.T) {
 	// Arrange
 	r := corejson.NewResult.Any(map[string]int{"a": 1})
 	s := r.PrettyJsonString()
@@ -859,7 +859,7 @@ func Test_Result_Dispose(t *testing.T) {
 	nilR.Dispose()
 }
 
-func Test_Result_Clone(t *testing.T) {
+func Test_Result_Clone_NewResultMigrated(t *testing.T) {
 	// Arrange
 	r := corejson.NewResult.Any("test")
 	c := r.Clone(false)
@@ -884,7 +884,7 @@ func Test_Result_CloneIf(t *testing.T) {
 	_ = r.CloneIf(false, false)
 }
 
-func Test_Result_ClonePtr(t *testing.T) {
+func Test_Result_ClonePtr_NewResultMigrated(t *testing.T) {
 	// Arrange
 	r := corejson.NewResult.AnyPtr("x")
 	c := r.ClonePtr(true)
@@ -969,7 +969,7 @@ func Test_Result_SafeDeserializedFieldsToMap(t *testing.T) {
 	_ = r.SafeDeserializedFieldsToMap()
 }
 
-func Test_Result_FieldsNames(t *testing.T) {
+func Test_Result_FieldsNames_NewResultMigrated(t *testing.T) {
 	r := corejson.NewResult.Any(map[string]int{"a": 1})
 	_, _ = r.FieldsNames()
 }

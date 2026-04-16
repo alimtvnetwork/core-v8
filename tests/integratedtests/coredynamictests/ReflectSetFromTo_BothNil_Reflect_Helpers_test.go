@@ -474,7 +474,7 @@ func Test_TypesIndexOf_NotFound_FromReflectSetFromToBoth(t *testing.T) {
 // Type
 // =============================================================================
 
-func Test_Type(t *testing.T) {
+func Test_Type_ReflectsetfromtoBothnilReflectHelpers(t *testing.T) {
 	// Arrange
 	rt := coredynamic.Type("hello")
 

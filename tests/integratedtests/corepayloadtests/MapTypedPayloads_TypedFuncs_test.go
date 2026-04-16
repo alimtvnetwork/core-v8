@@ -14,7 +14,7 @@ import (
 
 func Test_MapTypedPayloads(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	names := corepayload.MapTypedPayloads[testUserTyped, string](col,
@@ -56,7 +56,7 @@ func Test_MapTypedPayloads_Empty(t *testing.T) {
 
 func Test_MapTypedPayloadData(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	emails := corepayload.MapTypedPayloadData[testUserTyped, string](col,
@@ -79,7 +79,7 @@ func Test_MapTypedPayloadData(t *testing.T) {
 
 func Test_FlatMapTypedPayloads(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	result := corepayload.FlatMapTypedPayloads[testUserTyped, string](col,
@@ -115,7 +115,7 @@ func Test_FlatMapTypedPayloads_Empty(t *testing.T) {
 
 func Test_FlatMapTypedPayloadData(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	result := corepayload.FlatMapTypedPayloadData[testUserTyped, string](col,
@@ -132,7 +132,7 @@ func Test_FlatMapTypedPayloadData(t *testing.T) {
 
 func Test_ReduceTypedPayloads(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	totalAge := corepayload.ReduceTypedPayloads[testUserTyped, int](col, 0,
@@ -168,7 +168,7 @@ func Test_ReduceTypedPayloads_Empty(t *testing.T) {
 
 func Test_ReduceTypedPayloadData(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	result := corepayload.ReduceTypedPayloadData[testUserTyped, int](col, 0,
@@ -185,7 +185,7 @@ func Test_ReduceTypedPayloadData(t *testing.T) {
 
 func Test_GroupTypedPayloads(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	groups := corepayload.GroupTypedPayloads[testUserTyped, string](col,
@@ -230,7 +230,7 @@ func Test_GroupTypedPayloads_Empty(t *testing.T) {
 
 func Test_GroupTypedPayloadData(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	groups := corepayload.GroupTypedPayloadData[testUserTyped, string](col,
@@ -252,7 +252,7 @@ func Test_GroupTypedPayloadData(t *testing.T) {
 
 func Test_PartitionTypedPayloads(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	matching, notMatching := corepayload.PartitionTypedPayloads[testUserTyped](col,
@@ -298,7 +298,7 @@ func Test_PartitionTypedPayloads_Empty(t *testing.T) {
 
 func Test_AnyTypedPayload_True(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	result := corepayload.AnyTypedPayload[testUserTyped](col,
@@ -315,7 +315,7 @@ func Test_AnyTypedPayload_True(t *testing.T) {
 
 func Test_AnyTypedPayload_False(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	result := corepayload.AnyTypedPayload[testUserTyped](col,
@@ -332,7 +332,7 @@ func Test_AnyTypedPayload_False(t *testing.T) {
 
 func Test_AllTypedPayloads_True(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	result := corepayload.AllTypedPayloads[testUserTyped](col,
@@ -349,7 +349,7 @@ func Test_AllTypedPayloads_True(t *testing.T) {
 
 func Test_AllTypedPayloads_False(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	result := corepayload.AllTypedPayloads[testUserTyped](col,
@@ -371,7 +371,7 @@ func Test_ConvertTypedPayloads_Valid(t *testing.T) {
 	type simpleUser struct {
 		Name string `json:"Name"`
 	}
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	converted, err := corepayload.ConvertTypedPayloads[testUserTyped, simpleUser](col)
@@ -412,7 +412,7 @@ func Test_ConvertTypedPayloads_Empty(t *testing.T) {
 
 func Test_TypedPayloadCollection_ForEachData(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 	var names []string
 
 	// Act
@@ -428,7 +428,7 @@ func Test_TypedPayloadCollection_ForEachData(t *testing.T) {
 
 func Test_TypedPayloadCollection_ForEachBreak(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 	count := 0
 
 	// Act
@@ -445,7 +445,7 @@ func Test_TypedPayloadCollection_ForEachBreak(t *testing.T) {
 
 func Test_TypedPayloadCollection_FilterByData(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	result := col.FilterByData(func(u testUserTyped) bool {
@@ -460,7 +460,7 @@ func Test_TypedPayloadCollection_FilterByData(t *testing.T) {
 
 func Test_TypedPayloadCollection_FirstByData(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	result := col.FirstByData(func(u testUserTyped) bool {
@@ -481,7 +481,7 @@ func Test_TypedPayloadCollection_FirstByData(t *testing.T) {
 
 func Test_TypedPayloadCollection_FirstByName(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	result := col.FirstByName("user")
@@ -494,7 +494,7 @@ func Test_TypedPayloadCollection_FirstByName(t *testing.T) {
 
 func Test_TypedPayloadCollection_FirstById(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	result := col.FirstById("2")
@@ -513,7 +513,7 @@ func Test_TypedPayloadCollection_FirstById(t *testing.T) {
 
 func Test_TypedPayloadCollection_CountFunc(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	result := col.CountFunc(func(item *corepayload.TypedPayloadWrapper[testUserTyped]) bool {
@@ -528,7 +528,7 @@ func Test_TypedPayloadCollection_CountFunc(t *testing.T) {
 
 func Test_TypedPayloadCollection_SkipTake(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	skipped := col.Skip(1)
@@ -548,7 +548,7 @@ func Test_TypedPayloadCollection_SkipTake(t *testing.T) {
 
 func Test_TypedPayloadCollection_AllData(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	data := col.AllData()
@@ -567,7 +567,7 @@ func Test_TypedPayloadCollection_AllData(t *testing.T) {
 
 func Test_TypedPayloadCollection_AllNames(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	names := col.AllNames()
@@ -580,7 +580,7 @@ func Test_TypedPayloadCollection_AllNames(t *testing.T) {
 
 func Test_TypedPayloadCollection_AllIdentifiers(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	ids := col.AllIdentifiers()
@@ -599,7 +599,7 @@ func Test_TypedPayloadCollection_AllIdentifiers(t *testing.T) {
 
 func Test_TypedPayloadCollection_ToPayloadsCollection(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	pc := col.ToPayloadsCollection()
@@ -612,7 +612,7 @@ func Test_TypedPayloadCollection_ToPayloadsCollection(t *testing.T) {
 
 func Test_TypedPayloadCollection_Clone_FromMapTypedPayloadsType(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	cloned, err := col.Clone()
@@ -631,7 +631,7 @@ func Test_TypedPayloadCollection_Clone_FromMapTypedPayloadsType(t *testing.T) {
 
 func Test_TypedPayloadCollection_CloneMust(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	cloned := col.CloneMust()
@@ -644,7 +644,7 @@ func Test_TypedPayloadCollection_CloneMust(t *testing.T) {
 
 func Test_TypedPayloadCollection_ConcatNew_FromMapTypedPayloadsType(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 	extra := makeTypedWrapper("user", "4", testUserTyped{Name: "Dave", Age: 40})
 
 	// Act
@@ -664,7 +664,7 @@ func Test_TypedPayloadCollection_ConcatNew_FromMapTypedPayloadsType(t *testing.T
 
 func Test_TypedPayloadCollection_RemoveAt(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	ok := col.RemoveAt(1)
@@ -683,7 +683,7 @@ func Test_TypedPayloadCollection_RemoveAt(t *testing.T) {
 
 func Test_TypedPayloadCollection_RemoveAt_OutOfBounds(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	ok := col.RemoveAt(99)
@@ -698,7 +698,7 @@ func Test_TypedPayloadCollection_RemoveAt_OutOfBounds(t *testing.T) {
 
 func Test_TypedPayloadCollection_GetPagesSize(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	pages := col.GetPagesSize(2)
@@ -711,7 +711,7 @@ func Test_TypedPayloadCollection_GetPagesSize(t *testing.T) {
 
 func Test_TypedPayloadCollection_GetPagedCollection(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	pages := col.GetPagedCollection(2)
@@ -732,7 +732,7 @@ func Test_TypedPayloadCollection_GetPagedCollection(t *testing.T) {
 
 func Test_TypedPayloadCollection_GetPagedCollectionWithInfo(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	pages := col.GetPagedCollectionWithInfo(2)
@@ -757,7 +757,7 @@ func Test_TypedPayloadCollection_GetPagedCollectionWithInfo(t *testing.T) {
 
 func Test_TypedPayloadCollection_IsValid(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	result := col.IsValid()
@@ -770,7 +770,7 @@ func Test_TypedPayloadCollection_IsValid(t *testing.T) {
 
 func Test_TypedPayloadCollection_HasErrors(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	result := col.HasErrors()
@@ -783,7 +783,7 @@ func Test_TypedPayloadCollection_HasErrors(t *testing.T) {
 
 func Test_TypedPayloadCollection_Errors(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	errs := col.Errors()
@@ -796,7 +796,7 @@ func Test_TypedPayloadCollection_Errors(t *testing.T) {
 
 func Test_TypedPayloadCollection_FirstError(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	result := col.FirstError()
@@ -809,7 +809,7 @@ func Test_TypedPayloadCollection_FirstError(t *testing.T) {
 
 func Test_TypedPayloadCollection_MergedError(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 
 	// Act
 	result := col.MergedError()
@@ -1033,7 +1033,7 @@ func Test_TypedPayloadWrapperDeserializeUsingJsonResult(t *testing.T) {
 
 func Test_TypedPayloadCollectionDeserialize(t *testing.T) {
 	// Arrange
-	col := makeTypedCollection()
+	col := makeTypedCollectionShared()
 	pc := col.ToPayloadsCollection()
 	jsonBytes, _ := corejson.Serialize.Raw(pc.Items)
 

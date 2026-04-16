@@ -9,7 +9,7 @@ import (
 
 // ── ValueStatus ──
 
-func Test_InvalidValueStatus(t *testing.T) {
+func Test_InvalidValueStatus_S01InvalidvaluestatusS01ValuestatusTwln(t *testing.T) {
 	safeTest(t, "Test_InvalidValueStatus", func() {
 		// Arrange
 		vs := corestr.InvalidValueStatus("bad")
@@ -33,7 +33,7 @@ func Test_InvalidValueStatus(t *testing.T) {
 	})
 }
 
-func Test_InvalidValueStatusNoMessage(t *testing.T) {
+func Test_InvalidValueStatusNoMessage_S01InvalidvaluestatusS01ValuestatusTwln(t *testing.T) {
 	safeTest(t, "Test_InvalidValueStatusNoMessage", func() {
 		// Arrange
 		vs := corestr.InvalidValueStatusNoMessage()
@@ -53,7 +53,7 @@ func Test_InvalidValueStatusNoMessage(t *testing.T) {
 	})
 }
 
-func Test_ValueStatus_Clone(t *testing.T) {
+func Test_ValueStatus_Clone_S01InvalidvaluestatusS01ValuestatusTwln(t *testing.T) {
 	safeTest(t, "Test_ValueStatus_Clone", func() {
 		// Arrange
 		vs := &corestr.ValueStatus{

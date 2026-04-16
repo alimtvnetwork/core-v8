@@ -16,7 +16,7 @@ import (
 
 // --- ValidValue ---
 
-func Test_ValidValue_NewValidValue(t *testing.T) {
+func Test_ValidValue_NewValidValue_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_NewValidValue", func() {
 		// Arrange & Act
 		vv := corestr.NewValidValue("hello")
@@ -28,7 +28,7 @@ func Test_ValidValue_NewValidValue(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_NewValidValueEmpty(t *testing.T) {
+func Test_ValidValue_NewValidValueEmpty_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_NewValidValueEmpty", func() {
 		// Arrange & Act
 		vv := corestr.NewValidValueEmpty()
@@ -40,7 +40,7 @@ func Test_ValidValue_NewValidValueEmpty(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_InvalidValidValue(t *testing.T) {
+func Test_ValidValue_InvalidValidValue_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_InvalidValidValue", func() {
 		// Arrange & Act
 		vv := corestr.InvalidValidValue("err msg")
@@ -52,7 +52,7 @@ func Test_ValidValue_InvalidValidValue(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_InvalidValidValueNoMessage(t *testing.T) {
+func Test_ValidValue_InvalidValidValueNoMessage_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_InvalidValidValueNoMessage", func() {
 		// Arrange & Act
 		vv := corestr.InvalidValidValueNoMessage()
@@ -64,7 +64,7 @@ func Test_ValidValue_InvalidValidValueNoMessage(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_NewValidValueUsingAny(t *testing.T) {
+func Test_ValidValue_NewValidValueUsingAny_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_NewValidValueUsingAny", func() {
 		// Arrange & Act
 		vv := corestr.NewValidValueUsingAny(false, true, 42)
@@ -76,7 +76,7 @@ func Test_ValidValue_NewValidValueUsingAny(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_NewValidValueUsingAnyAutoValid(t *testing.T) {
+func Test_ValidValue_NewValidValueUsingAnyAutoValid_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_NewValidValueUsingAnyAutoValid", func() {
 		// Arrange & Act
 		vv := corestr.NewValidValueUsingAnyAutoValid(false, "test")
@@ -88,7 +88,7 @@ func Test_ValidValue_NewValidValueUsingAnyAutoValid(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ValueBytesOnce(t *testing.T) {
+func Test_ValidValue_ValueBytesOnce_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_ValueBytesOnce", func() {
 		// Arrange
 		vv := corestr.NewValidValue("abc")
@@ -104,7 +104,7 @@ func Test_ValidValue_ValueBytesOnce(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ValueBytesOncePtr(t *testing.T) {
+func Test_ValidValue_ValueBytesOncePtr_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_ValueBytesOncePtr", func() {
 		// Arrange
 		vv := corestr.NewValidValue("xyz")
@@ -119,7 +119,7 @@ func Test_ValidValue_ValueBytesOncePtr(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_IsEmpty_IsWhitespace(t *testing.T) {
+func Test_ValidValue_IsEmpty_IsWhitespace_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_IsEmpty_IsWhitespace", func() {
 		// Arrange
 		empty := corestr.NewValidValue("")
@@ -139,7 +139,7 @@ func Test_ValidValue_IsEmpty_IsWhitespace(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Trim(t *testing.T) {
+func Test_ValidValue_Trim_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Trim", func() {
 		// Arrange
 		vv := corestr.NewValidValue(" hello ")
@@ -151,7 +151,7 @@ func Test_ValidValue_Trim(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_HasValidNonEmpty(t *testing.T) {
+func Test_ValidValue_HasValidNonEmpty_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_HasValidNonEmpty", func() {
 		// Arrange
 		valid := corestr.NewValidValue("x")
@@ -167,7 +167,7 @@ func Test_ValidValue_HasValidNonEmpty(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_HasValidNonWhitespace(t *testing.T) {
+func Test_ValidValue_HasValidNonWhitespace_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_HasValidNonWhitespace", func() {
 		// Arrange
 		valid := corestr.NewValidValue("x")
@@ -183,7 +183,7 @@ func Test_ValidValue_HasValidNonWhitespace(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ValueBool(t *testing.T) {
+func Test_ValidValue_ValueBool_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_ValueBool", func() {
 		// Arrange
 		trueVV := corestr.NewValidValue("true")
@@ -207,7 +207,7 @@ func Test_ValidValue_ValueBool(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ValueInt(t *testing.T) {
+func Test_ValidValue_ValueInt_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_ValueInt", func() {
 		// Arrange
 		vv := corestr.NewValidValue("42")
@@ -223,7 +223,7 @@ func Test_ValidValue_ValueInt(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ValueDefInt(t *testing.T) {
+func Test_ValidValue_ValueDefInt_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_ValueDefInt", func() {
 		// Arrange
 		vv := corestr.NewValidValue("10")
@@ -239,7 +239,7 @@ func Test_ValidValue_ValueDefInt(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ValueByte(t *testing.T) {
+func Test_ValidValue_ValueByte_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_ValueByte", func() {
 		// Arrange
 		valid := corestr.NewValidValue("100")
@@ -266,7 +266,7 @@ func Test_ValidValue_ValueByte(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ValueDefByte(t *testing.T) {
+func Test_ValidValue_ValueDefByte_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_ValueDefByte", func() {
 		// Arrange
 		valid := corestr.NewValidValue("50")
@@ -286,7 +286,7 @@ func Test_ValidValue_ValueDefByte(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ValueFloat64(t *testing.T) {
+func Test_ValidValue_ValueFloat64_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_ValueFloat64", func() {
 		// Arrange
 		vv := corestr.NewValidValue("3.14")
@@ -302,7 +302,7 @@ func Test_ValidValue_ValueFloat64(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ValueDefFloat64(t *testing.T) {
+func Test_ValidValue_ValueDefFloat64_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_ValueDefFloat64", func() {
 		// Arrange
 		vv := corestr.NewValidValue("2.5")
@@ -314,7 +314,7 @@ func Test_ValidValue_ValueDefFloat64(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_HasSafeNonEmpty(t *testing.T) {
+func Test_ValidValue_HasSafeNonEmpty_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_HasSafeNonEmpty", func() {
 		// Arrange
 		valid := corestr.NewValidValue("x")
@@ -330,7 +330,7 @@ func Test_ValidValue_HasSafeNonEmpty(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Is(t *testing.T) {
+func Test_ValidValue_Is_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Is", func() {
 		// Arrange
 		vv := corestr.NewValidValue("hello")
@@ -345,7 +345,7 @@ func Test_ValidValue_Is(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_IsAnyOf(t *testing.T) {
+func Test_ValidValue_IsAnyOf_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_IsAnyOf", func() {
 		// Arrange
 		vv := corestr.NewValidValue("b")
@@ -363,7 +363,7 @@ func Test_ValidValue_IsAnyOf(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_IsContains(t *testing.T) {
+func Test_ValidValue_IsContains_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_IsContains", func() {
 		// Arrange
 		vv := corestr.NewValidValue("hello world")
@@ -375,7 +375,7 @@ func Test_ValidValue_IsContains(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_IsAnyContains(t *testing.T) {
+func Test_ValidValue_IsAnyContains_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_IsAnyContains", func() {
 		// Arrange
 		vv := corestr.NewValidValue("hello world")
@@ -393,7 +393,7 @@ func Test_ValidValue_IsAnyContains(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_IsEqualNonSensitive(t *testing.T) {
+func Test_ValidValue_IsEqualNonSensitive_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_IsEqualNonSensitive", func() {
 		// Arrange
 		vv := corestr.NewValidValue("Hello")
@@ -405,7 +405,7 @@ func Test_ValidValue_IsEqualNonSensitive(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_IsRegexMatches(t *testing.T) {
+func Test_ValidValue_IsRegexMatches_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_IsRegexMatches", func() {
 		// Arrange
 		vv := corestr.NewValidValue("abc123")
@@ -421,7 +421,7 @@ func Test_ValidValue_IsRegexMatches(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_RegexFindString(t *testing.T) {
+func Test_ValidValue_RegexFindString_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_RegexFindString", func() {
 		// Arrange
 		vv := corestr.NewValidValue("abc123")
@@ -437,7 +437,7 @@ func Test_ValidValue_RegexFindString(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_RegexFindAllStringsWithFlag(t *testing.T) {
+func Test_ValidValue_RegexFindAllStringsWithFlag_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_RegexFindAllStringsWithFlag", func() {
 		// Arrange
 		vv := corestr.NewValidValue("a1b2c3")
@@ -453,7 +453,7 @@ func Test_ValidValue_RegexFindAllStringsWithFlag(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_RegexFindAllStringsWithFlag_Nil(t *testing.T) {
+func Test_ValidValue_RegexFindAllStringsWithFlag_Nil_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_RegexFindAllStringsWithFlag_Nil", func() {
 		// Arrange
 		vv := corestr.NewValidValue("abc")
@@ -468,7 +468,7 @@ func Test_ValidValue_RegexFindAllStringsWithFlag_Nil(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_RegexFindAllStrings(t *testing.T) {
+func Test_ValidValue_RegexFindAllStrings_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_RegexFindAllStrings", func() {
 		// Arrange
 		vv := corestr.NewValidValue("a1b2")
@@ -484,7 +484,7 @@ func Test_ValidValue_RegexFindAllStrings(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_RegexFindAllStrings_Nil(t *testing.T) {
+func Test_ValidValue_RegexFindAllStrings_Nil_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_RegexFindAllStrings_Nil", func() {
 		// Arrange
 		vv := corestr.NewValidValue("abc")
@@ -496,7 +496,7 @@ func Test_ValidValue_RegexFindAllStrings_Nil(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Split(t *testing.T) {
+func Test_ValidValue_Split_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Split", func() {
 		// Arrange
 		vv := corestr.NewValidValue("a,b,c")
@@ -511,7 +511,7 @@ func Test_ValidValue_Split(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_SplitNonEmpty(t *testing.T) {
+func Test_ValidValue_SplitNonEmpty_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_SplitNonEmpty", func() {
 		// Arrange
 		vv := corestr.NewValidValue("a::b")
@@ -526,7 +526,7 @@ func Test_ValidValue_SplitNonEmpty(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_SplitTrimNonWhitespace(t *testing.T) {
+func Test_ValidValue_SplitTrimNonWhitespace_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_SplitTrimNonWhitespace", func() {
 		// Arrange
 		vv := corestr.NewValidValue("a , , b")
@@ -541,7 +541,7 @@ func Test_ValidValue_SplitTrimNonWhitespace(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Clone(t *testing.T) {
+func Test_ValidValue_Clone_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Clone", func() {
 		// Arrange
 		vv := corestr.NewValidValue("x")
@@ -556,7 +556,7 @@ func Test_ValidValue_Clone(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Clone_Nil(t *testing.T) {
+func Test_ValidValue_Clone_Nil_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Clone_Nil", func() {
 		// Arrange
 		var vv *corestr.ValidValue
@@ -571,7 +571,7 @@ func Test_ValidValue_Clone_Nil(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_String(t *testing.T) {
+func Test_ValidValue_String_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_String", func() {
 		// Arrange
 		vv := corestr.NewValidValue("hello")
@@ -583,7 +583,7 @@ func Test_ValidValue_String(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_String_Nil(t *testing.T) {
+func Test_ValidValue_String_Nil_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_String_Nil", func() {
 		// Arrange
 		var vv *corestr.ValidValue
@@ -595,7 +595,7 @@ func Test_ValidValue_String_Nil(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_FullString(t *testing.T) {
+func Test_ValidValue_FullString_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_FullString", func() {
 		// Arrange
 		vv := corestr.NewValidValue("x")
@@ -610,7 +610,7 @@ func Test_ValidValue_FullString(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_FullString_Nil(t *testing.T) {
+func Test_ValidValue_FullString_Nil_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_FullString_Nil", func() {
 		// Arrange
 		var vv *corestr.ValidValue
@@ -622,7 +622,7 @@ func Test_ValidValue_FullString_Nil(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Clear_Dispose(t *testing.T) {
+func Test_ValidValue_Clear_Dispose_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Clear_Dispose", func() {
 		// Arrange
 		vv := corestr.NewValidValue("x")
@@ -637,7 +637,7 @@ func Test_ValidValue_Clear_Dispose(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Dispose_Nil(t *testing.T) {
+func Test_ValidValue_Dispose_Nil_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Dispose_Nil", func() {
 		// Arrange
 		var vv *corestr.ValidValue
@@ -667,7 +667,7 @@ func Test_ValidValue_Json_Serialize(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ParseInjectUsingJson(t *testing.T) {
+func Test_ValidValue_ParseInjectUsingJson_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_ParseInjectUsingJson", func() {
 		// Arrange
 		vv := corestr.NewValidValue("hello")
@@ -687,7 +687,7 @@ func Test_ValidValue_ParseInjectUsingJson(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Deserialize(t *testing.T) {
+func Test_ValidValue_Deserialize_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Deserialize", func() {
 		// Arrange
 		vv := corestr.NewValidValue("x")
@@ -729,7 +729,7 @@ func Test_ValidValues_EmptyValidValues(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_NewValidValuesUsingValues(t *testing.T) {
+func Test_ValidValues_NewValidValuesUsingValues_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_NewValidValuesUsingValues", func() {
 		// Arrange & Act
 		vvs := corestr.NewValidValuesUsingValues(
@@ -756,7 +756,7 @@ func Test_ValidValues_NewValidValuesUsingValues_Empty(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_Add(t *testing.T) {
+func Test_ValidValues_Add_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_Add", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -771,7 +771,7 @@ func Test_ValidValues_Add(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_AddFull(t *testing.T) {
+func Test_ValidValues_AddFull_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_AddFull", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -786,7 +786,7 @@ func Test_ValidValues_AddFull(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_Count_HasAnyItem(t *testing.T) {
+func Test_ValidValues_Count_HasAnyItem_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_Count_HasAnyItem", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -821,7 +821,7 @@ func Test_ValidValues_LastIndex_HasIndex(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_SafeValueAt(t *testing.T) {
+func Test_ValidValues_SafeValueAt_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_SafeValueAt", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -837,7 +837,7 @@ func Test_ValidValues_SafeValueAt(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_SafeValidValueAt(t *testing.T) {
+func Test_ValidValues_SafeValidValueAt_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_SafeValidValueAt", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -854,7 +854,7 @@ func Test_ValidValues_SafeValidValueAt(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_SafeValuesAtIndexes(t *testing.T) {
+func Test_ValidValues_SafeValuesAtIndexes_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_SafeValuesAtIndexes", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -870,7 +870,7 @@ func Test_ValidValues_SafeValuesAtIndexes(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_SafeValidValuesAtIndexes(t *testing.T) {
+func Test_ValidValues_SafeValidValuesAtIndexes_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_SafeValidValuesAtIndexes", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -886,7 +886,7 @@ func Test_ValidValues_SafeValidValuesAtIndexes(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_Strings(t *testing.T) {
+func Test_ValidValues_Strings_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_Strings", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -902,7 +902,7 @@ func Test_ValidValues_Strings(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_Strings_Empty(t *testing.T) {
+func Test_ValidValues_Strings_Empty_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_Strings_Empty", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -914,7 +914,7 @@ func Test_ValidValues_Strings_Empty(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_FullStrings(t *testing.T) {
+func Test_ValidValues_FullStrings_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_FullStrings", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -942,7 +942,7 @@ func Test_ValidValues_FullStrings_Empty(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_String(t *testing.T) {
+func Test_ValidValues_String_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_String", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -958,7 +958,7 @@ func Test_ValidValues_String(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_Find(t *testing.T) {
+func Test_ValidValues_Find_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_Find", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -994,7 +994,7 @@ func Test_ValidValues_Find_WithBreak(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_Find_Empty(t *testing.T) {
+func Test_ValidValues_Find_Empty_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_Find_Empty", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -1011,7 +1011,7 @@ func Test_ValidValues_Find_Empty(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_Adds(t *testing.T) {
+func Test_ValidValues_Adds_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_Adds", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -1029,7 +1029,7 @@ func Test_ValidValues_Adds(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_Adds_Empty(t *testing.T) {
+func Test_ValidValues_Adds_Empty_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_Adds_Empty", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -1044,7 +1044,7 @@ func Test_ValidValues_Adds_Empty(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_AddsPtr(t *testing.T) {
+func Test_ValidValues_AddsPtr_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_AddsPtr", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -1075,7 +1075,7 @@ func Test_ValidValues_AddsPtr_Empty(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_AddValidValues(t *testing.T) {
+func Test_ValidValues_AddValidValues_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_AddValidValues", func() {
 		// Arrange
 		vvs1 := corestr.EmptyValidValues()
@@ -1093,7 +1093,7 @@ func Test_ValidValues_AddValidValues(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_AddValidValues_Nil(t *testing.T) {
+func Test_ValidValues_AddValidValues_Nil_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_AddValidValues_Nil", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -1108,7 +1108,7 @@ func Test_ValidValues_AddValidValues_Nil(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_ConcatNew(t *testing.T) {
+func Test_ValidValues_ConcatNew_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_ConcatNew", func() {
 		// Arrange
 		vvs1 := corestr.EmptyValidValues()
@@ -1142,7 +1142,7 @@ func Test_ValidValues_ConcatNew_EmptyWithClone(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_ConcatNew_EmptyNoClone(t *testing.T) {
+func Test_ValidValues_ConcatNew_EmptyNoClone_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_ConcatNew_EmptyNoClone", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -1158,7 +1158,7 @@ func Test_ValidValues_ConcatNew_EmptyNoClone(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_AddHashsetMap(t *testing.T) {
+func Test_ValidValues_AddHashsetMap_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_AddHashsetMap", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -1173,7 +1173,7 @@ func Test_ValidValues_AddHashsetMap(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_AddHashsetMap_Nil(t *testing.T) {
+func Test_ValidValues_AddHashsetMap_Nil_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_AddHashsetMap_Nil", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -1188,7 +1188,7 @@ func Test_ValidValues_AddHashsetMap_Nil(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_AddHashset(t *testing.T) {
+func Test_ValidValues_AddHashset_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_AddHashset", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -1204,7 +1204,7 @@ func Test_ValidValues_AddHashset(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_AddHashset_Nil(t *testing.T) {
+func Test_ValidValues_AddHashset_Nil_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_AddHashset_Nil", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -1219,7 +1219,7 @@ func Test_ValidValues_AddHashset_Nil(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_Hashmap(t *testing.T) {
+func Test_ValidValues_Hashmap_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_Hashmap", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -1235,7 +1235,7 @@ func Test_ValidValues_Hashmap(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_Map(t *testing.T) {
+func Test_ValidValues_Map_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValidValues_Map", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -1253,7 +1253,7 @@ func Test_ValidValues_Map(t *testing.T) {
 
 // --- ValueStatus ---
 
-func Test_ValueStatus_InvalidValueStatusNoMessage(t *testing.T) {
+func Test_ValueStatus_InvalidValueStatusNoMessage_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValueStatus_InvalidValueStatusNoMessage", func() {
 		// Arrange & Act
 		vs := corestr.InvalidValueStatusNoMessage()
@@ -1268,7 +1268,7 @@ func Test_ValueStatus_InvalidValueStatusNoMessage(t *testing.T) {
 	})
 }
 
-func Test_ValueStatus_InvalidValueStatus(t *testing.T) {
+func Test_ValueStatus_InvalidValueStatus_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValueStatus_InvalidValueStatus", func() {
 		// Arrange & Act
 		vs := corestr.InvalidValueStatus("err")
@@ -1283,7 +1283,7 @@ func Test_ValueStatus_InvalidValueStatus(t *testing.T) {
 	})
 }
 
-func Test_ValueStatus_Clone(t *testing.T) {
+func Test_ValueStatus_Clone_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_ValueStatus_Clone", func() {
 		// Arrange
 		vs := &corestr.ValueStatus{
@@ -1303,7 +1303,7 @@ func Test_ValueStatus_Clone(t *testing.T) {
 
 // --- TextWithLineNumber ---
 
-func Test_TWLN_HasLineNumber(t *testing.T) {
+func Test_TWLN_HasLineNumber_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_TWLN_HasLineNumber", func() {
 		// Arrange
 		twln := &corestr.TextWithLineNumber{LineNumber: 5, Text: "hello"}
@@ -1331,7 +1331,7 @@ func Test_TWLN_HasLineNumber_Nil(t *testing.T) {
 	})
 }
 
-func Test_TWLN_IsInvalidLineNumber(t *testing.T) {
+func Test_TWLN_IsInvalidLineNumber_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_TWLN_IsInvalidLineNumber", func() {
 		// Arrange
 		valid := &corestr.TextWithLineNumber{LineNumber: 1, Text: "x"}
@@ -1359,7 +1359,7 @@ func Test_TWLN_IsInvalidLineNumber_Nil(t *testing.T) {
 	})
 }
 
-func Test_TWLN_Length(t *testing.T) {
+func Test_TWLN_Length_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_TWLN_Length", func() {
 		// Arrange
 		twln := &corestr.TextWithLineNumber{LineNumber: 1, Text: "hello"}
@@ -1383,7 +1383,7 @@ func Test_TWLN_Length_Nil(t *testing.T) {
 	})
 }
 
-func Test_TWLN_IsEmpty(t *testing.T) {
+func Test_TWLN_IsEmpty_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_TWLN_IsEmpty", func() {
 		// Arrange
 		empty := &corestr.TextWithLineNumber{LineNumber: -1, Text: ""}
@@ -1411,7 +1411,7 @@ func Test_TWLN_IsEmpty_Nil(t *testing.T) {
 	})
 }
 
-func Test_TWLN_IsEmptyText(t *testing.T) {
+func Test_TWLN_IsEmptyText_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_TWLN_IsEmptyText", func() {
 		// Arrange
 		empty := &corestr.TextWithLineNumber{LineNumber: 1, Text: ""}
@@ -1439,7 +1439,7 @@ func Test_TWLN_IsEmptyText_Nil(t *testing.T) {
 	})
 }
 
-func Test_TWLN_IsEmptyTextLineBoth(t *testing.T) {
+func Test_TWLN_IsEmptyTextLineBoth_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_TWLN_IsEmptyTextLineBoth", func() {
 		// Arrange
 		empty := &corestr.TextWithLineNumber{LineNumber: -1, Text: ""}
@@ -1453,7 +1453,7 @@ func Test_TWLN_IsEmptyTextLineBoth(t *testing.T) {
 
 // --- CloneSlice ---
 
-func Test_CloneSlice(t *testing.T) {
+func Test_CloneSlice_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_CloneSlice", func() {
 		// Arrange
 		input := []string{"a", "b"}
@@ -1468,7 +1468,7 @@ func Test_CloneSlice(t *testing.T) {
 	})
 }
 
-func Test_CloneSlice_Empty(t *testing.T) {
+func Test_CloneSlice_Empty_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_CloneSlice_Empty", func() {
 		// Arrange & Act
 		result := corestr.CloneSlice([]string{})
@@ -1482,7 +1482,7 @@ func Test_CloneSlice_Empty(t *testing.T) {
 
 // --- CloneSliceIf ---
 
-func Test_CloneSliceIf_Clone(t *testing.T) {
+func Test_CloneSliceIf_Clone_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_CloneSliceIf_Clone", func() {
 		// Arrange & Act
 		result := corestr.CloneSliceIf(true, "a", "b")
@@ -1494,7 +1494,7 @@ func Test_CloneSliceIf_Clone(t *testing.T) {
 	})
 }
 
-func Test_CloneSliceIf_NoClone(t *testing.T) {
+func Test_CloneSliceIf_NoClone_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_CloneSliceIf_NoClone", func() {
 		// Arrange & Act
 		result := corestr.CloneSliceIf(false, "a")
@@ -1506,7 +1506,7 @@ func Test_CloneSliceIf_NoClone(t *testing.T) {
 	})
 }
 
-func Test_CloneSliceIf_Empty(t *testing.T) {
+func Test_CloneSliceIf_Empty_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_CloneSliceIf_Empty", func() {
 		// Arrange & Act
 		result := corestr.CloneSliceIf(true)
@@ -1547,7 +1547,7 @@ func Test_AnyToString_WithoutFieldNames(t *testing.T) {
 	})
 }
 
-func Test_AnyToString_EmptyString(t *testing.T) {
+func Test_AnyToString_EmptyString_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_AnyToString_EmptyString", func() {
 		// Arrange & Act
 		result := corestr.AnyToString(false, "")
@@ -1561,7 +1561,7 @@ func Test_AnyToString_EmptyString(t *testing.T) {
 
 // --- utils (StringUtils) ---
 
-func Test_Utils_WrapDouble(t *testing.T) {
+func Test_Utils_WrapDouble_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_Utils_WrapDouble", func() {
 		// Arrange & Act
 		result := corestr.StringUtils.WrapDouble("x")
@@ -1573,7 +1573,7 @@ func Test_Utils_WrapDouble(t *testing.T) {
 	})
 }
 
-func Test_Utils_WrapSingle(t *testing.T) {
+func Test_Utils_WrapSingle_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_Utils_WrapSingle", func() {
 		// Arrange & Act
 		result := corestr.StringUtils.WrapSingle("x")
@@ -1585,7 +1585,7 @@ func Test_Utils_WrapSingle(t *testing.T) {
 	})
 }
 
-func Test_Utils_WrapTilda(t *testing.T) {
+func Test_Utils_WrapTilda_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_Utils_WrapTilda", func() {
 		// Arrange & Act
 		result := corestr.StringUtils.WrapTilda("x")
@@ -1597,7 +1597,7 @@ func Test_Utils_WrapTilda(t *testing.T) {
 	})
 }
 
-func Test_Utils_WrapDoubleIfMissing_AlreadyWrapped(t *testing.T) {
+func Test_Utils_WrapDoubleIfMissing_AlreadyWrapped_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_Utils_WrapDoubleIfMissing_AlreadyWrapped", func() {
 		// Arrange & Act
 		result := corestr.StringUtils.WrapDoubleIfMissing(`"hello"`)
@@ -1609,7 +1609,7 @@ func Test_Utils_WrapDoubleIfMissing_AlreadyWrapped(t *testing.T) {
 	})
 }
 
-func Test_Utils_WrapDoubleIfMissing_NotWrapped(t *testing.T) {
+func Test_Utils_WrapDoubleIfMissing_NotWrapped_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_Utils_WrapDoubleIfMissing_NotWrapped", func() {
 		// Arrange & Act
 		result := corestr.StringUtils.WrapDoubleIfMissing("hello")
@@ -1621,7 +1621,7 @@ func Test_Utils_WrapDoubleIfMissing_NotWrapped(t *testing.T) {
 	})
 }
 
-func Test_Utils_WrapDoubleIfMissing_Empty(t *testing.T) {
+func Test_Utils_WrapDoubleIfMissing_Empty_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_Utils_WrapDoubleIfMissing_Empty", func() {
 		// Arrange & Act
 		result := corestr.StringUtils.WrapDoubleIfMissing("")
@@ -1633,7 +1633,7 @@ func Test_Utils_WrapDoubleIfMissing_Empty(t *testing.T) {
 	})
 }
 
-func Test_Utils_WrapSingleIfMissing_AlreadyWrapped(t *testing.T) {
+func Test_Utils_WrapSingleIfMissing_AlreadyWrapped_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_Utils_WrapSingleIfMissing_AlreadyWrapped", func() {
 		// Arrange & Act
 		result := corestr.StringUtils.WrapSingleIfMissing("'hello'")
@@ -1645,7 +1645,7 @@ func Test_Utils_WrapSingleIfMissing_AlreadyWrapped(t *testing.T) {
 	})
 }
 
-func Test_Utils_WrapSingleIfMissing_NotWrapped(t *testing.T) {
+func Test_Utils_WrapSingleIfMissing_NotWrapped_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_Utils_WrapSingleIfMissing_NotWrapped", func() {
 		// Arrange & Act
 		result := corestr.StringUtils.WrapSingleIfMissing("hello")
@@ -1657,7 +1657,7 @@ func Test_Utils_WrapSingleIfMissing_NotWrapped(t *testing.T) {
 	})
 }
 
-func Test_Utils_WrapSingleIfMissing_Empty(t *testing.T) {
+func Test_Utils_WrapSingleIfMissing_Empty_ValidvalueTypes(t *testing.T) {
 	safeTest(t, "Test_Utils_WrapSingleIfMissing_Empty", func() {
 		// Arrange & Act
 		result := corestr.StringUtils.WrapSingleIfMissing("")

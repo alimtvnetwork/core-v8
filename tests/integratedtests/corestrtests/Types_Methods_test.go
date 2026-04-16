@@ -758,7 +758,7 @@ func Test_LeftMiddleRight_FromSplit_Verification(t *testing.T) {
 
 // ── KeyAnyValuePair ──
 
-func Test_KeyAnyValuePair_Verification(t *testing.T) {
+func Test_KeyAnyValuePair_Verification_TypesMethods(t *testing.T) {
 	safeTest(t, "Test_KeyAnyValuePair_Verification", func() {
 		// Arrange
 		tc := srcC04KeyAnyValuePairTestCase
@@ -797,7 +797,7 @@ func Test_KeyAnyValuePair_Verification(t *testing.T) {
 
 // ── HashmapDiff ──
 
-func Test_HashmapDiff_Verification(t *testing.T) {
+func Test_HashmapDiff_Verification_TypesMethods(t *testing.T) {
 	safeTest(t, "Test_HashmapDiff_Verification", func() {
 		// Arrange
 		tc := srcC04HashmapDiffTestCase

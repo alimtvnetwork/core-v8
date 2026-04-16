@@ -42,7 +42,7 @@ func Test_SimpleSlice_Verification(t *testing.T) {
 	})
 }
 
-func Test_AnyToString_Verification(t *testing.T) {
+func Test_AnyToString_Verification_TypesFullmethods(t *testing.T) {
 	safeTest(t, "Test_AnyToString_Verification", func() {
 		// Arrange
 		tc := srcC15AnyToStringTestCase
@@ -116,7 +116,7 @@ func Test_KeyValueCollection_Verification(t *testing.T) {
 	})
 }
 
-func Test_HashsetsCollection_Verification(t *testing.T) {
+func Test_HashsetsCollection_Verification_TypesFullmethods(t *testing.T) {
 	safeTest(t, "Test_HashsetsCollection_Verification", func() {
 		// Arrange
 		tc := srcC15HashsetsCollectionTestCase

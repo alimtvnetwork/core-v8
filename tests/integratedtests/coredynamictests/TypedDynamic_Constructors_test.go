@@ -891,7 +891,7 @@ func Test_Dynamic_Json_Deserialize(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Dynamic Deserialize returns expected -- valid and nil", actual)
 }
 
-func Test_Dynamic_UnmarshalJSON(t *testing.T) {
+func Test_Dynamic_UnmarshalJSON_TypeddynamicConstructors(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicPtr("", true)
 	err := d.UnmarshalJSON([]byte(`"test"`))

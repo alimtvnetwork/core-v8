@@ -11,7 +11,7 @@ import (
 
 // ── ErrorWithRef ──
 
-func Test_ErrorWithRef_NilErr(t *testing.T) {
+func Test_ErrorWithRef_NilErr_ErrorwithrefNilerr(t *testing.T) {
 	// Act
 	actual := args.Map{"result": errcore.ErrorWithRef(nil, "ref")}
 
@@ -20,7 +20,7 @@ func Test_ErrorWithRef_NilErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ErrorWithRef returns empty -- nil error", actual)
 }
 
-func Test_ErrorWithRef_NilRef(t *testing.T) {
+func Test_ErrorWithRef_NilRef_ErrorwithrefNilerr(t *testing.T) {
 	// Act
 	actual := args.Map{"result": errcore.ErrorWithRef(errors.New("fail"), nil)}
 
@@ -29,7 +29,7 @@ func Test_ErrorWithRef_NilRef(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ErrorWithRef returns error msg -- nil reference", actual)
 }
 
-func Test_ErrorWithRef_EmptyRef(t *testing.T) {
+func Test_ErrorWithRef_EmptyRef_ErrorwithrefNilerr(t *testing.T) {
 	// Act
 	actual := args.Map{"result": errcore.ErrorWithRef(errors.New("fail"), "")}
 
@@ -38,7 +38,7 @@ func Test_ErrorWithRef_EmptyRef(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ErrorWithRef returns error msg -- empty reference", actual)
 }
 
-func Test_ErrorWithRef_WithRef(t *testing.T) {
+func Test_ErrorWithRef_WithRef_ErrorwithrefNilerr(t *testing.T) {
 	// Arrange
 	result := errcore.ErrorWithRef(errors.New("fail"), "ctx")
 
@@ -58,7 +58,7 @@ func Test_ErrorWithRef_WithRef(t *testing.T) {
 
 // ── ErrorWithRefToError ──
 
-func Test_ErrorWithRefToError_NilErr(t *testing.T) {
+func Test_ErrorWithRefToError_NilErr_ErrorwithrefNilerr(t *testing.T) {
 	// Act
 	actual := args.Map{"isNil": errcore.ErrorWithRefToError(nil, "ref") == nil}
 
@@ -156,7 +156,7 @@ func Test_ErrorWithCompiledTraceRef_Full(t *testing.T) {
 
 // ── ErrorWithCompiledTraceRefToError ──
 
-func Test_ErrorWithCompiledTraceRefToError_NilErr(t *testing.T) {
+func Test_ErrorWithCompiledTraceRefToError_NilErr_ErrorwithrefNilerr(t *testing.T) {
 	// Act
 	actual := args.Map{"isNil": errcore.ErrorWithCompiledTraceRefToError(nil, "traces", "ref") == nil}
 
@@ -165,7 +165,7 @@ func Test_ErrorWithCompiledTraceRefToError_NilErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ErrorWithCompiledTraceRefToError returns nil -- nil error", actual)
 }
 
-func Test_ErrorWithCompiledTraceRefToError_WithErr(t *testing.T) {
+func Test_ErrorWithCompiledTraceRefToError_WithErr_ErrorwithrefNilerr(t *testing.T) {
 	// Act
 	actual := args.Map{"hasErr": errcore.ErrorWithCompiledTraceRefToError(errors.New("fail"), "traces", "ref") != nil}
 
@@ -176,7 +176,7 @@ func Test_ErrorWithCompiledTraceRefToError_WithErr(t *testing.T) {
 
 // ── ErrorWithTracesRefToError ──
 
-func Test_ErrorWithTracesRefToError_NilErr(t *testing.T) {
+func Test_ErrorWithTracesRefToError_NilErr_ErrorwithrefNilerr(t *testing.T) {
 	// Act
 	actual := args.Map{"isNil": errcore.ErrorWithTracesRefToError(nil, []string{"t"}, "ref") == nil}
 
@@ -339,7 +339,7 @@ func Test_PathMeaningfulError_WithErr_FromErrorWithRefNilErr(t *testing.T) {
 
 // ── ConcatMessageWithErr (error return) ──
 
-func Test_ConcatMessageWithErr_NilErr(t *testing.T) {
+func Test_ConcatMessageWithErr_NilErr_ErrorwithrefNilerr(t *testing.T) {
 	// Act
 	actual := args.Map{"isNil": errcore.ConcatMessageWithErr("prefix", nil) == nil}
 
@@ -348,7 +348,7 @@ func Test_ConcatMessageWithErr_NilErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ConcatMessageWithErr returns nil -- nil error", actual)
 }
 
-func Test_ConcatMessageWithErr_WithErr(t *testing.T) {
+func Test_ConcatMessageWithErr_WithErr_ErrorwithrefNilerr(t *testing.T) {
 	// Arrange
 	err := errcore.ConcatMessageWithErr("prefix", errors.New("inner"))
 
@@ -362,7 +362,7 @@ func Test_ConcatMessageWithErr_WithErr(t *testing.T) {
 
 // ── ConcatMessageWithErrWithStackTrace ──
 
-func Test_ConcatMessageWithErrWithStackTrace_NilErr(t *testing.T) {
+func Test_ConcatMessageWithErrWithStackTrace_NilErr_ErrorwithrefNilerr(t *testing.T) {
 	// Act
 	actual := args.Map{"isNil": errcore.ConcatMessageWithErrWithStackTrace("prefix", nil) == nil}
 

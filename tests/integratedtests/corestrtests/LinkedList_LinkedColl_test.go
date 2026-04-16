@@ -27,7 +27,7 @@ func Test_LL_Empty(t *testing.T) {
 	})
 }
 
-func Test_LL_Add(t *testing.T) {
+func Test_LL_Add_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LL_Add", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Empty()
@@ -71,7 +71,7 @@ func Test_LL_Tail(t *testing.T) {
 	})
 }
 
-func Test_LL_LengthLock(t *testing.T) {
+func Test_LL_LengthLock_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LL_LengthLock", func() {
 		ll := corestr.New.LinkedList.Strings([]string{"a"})
 		_ = ll.LengthLock()
@@ -133,14 +133,14 @@ func Test_LL_AddBack(t *testing.T) {
 	})
 }
 
-func Test_LL_AddLock(t *testing.T) {
+func Test_LL_AddLock_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LL_AddLock", func() {
 		ll := corestr.New.LinkedList.Empty()
 		ll.AddLock("a")
 	})
 }
 
-func Test_LL_AddCollection(t *testing.T) {
+func Test_LL_AddCollection_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LL_AddCollection", func() {
 		ll := corestr.New.LinkedList.Empty()
 		c := corestr.New.Collection.Strings([]string{"a", "b"})
@@ -149,7 +149,7 @@ func Test_LL_AddCollection(t *testing.T) {
 	})
 }
 
-func Test_LL_AddStrings(t *testing.T) {
+func Test_LL_AddStrings_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LL_AddStrings", func() {
 		ll := corestr.New.LinkedList.Empty()
 		ll.AddStrings([]string{"a"})
@@ -157,7 +157,7 @@ func Test_LL_AddStrings(t *testing.T) {
 	})
 }
 
-func Test_LL_Adds(t *testing.T) {
+func Test_LL_Adds_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LL_Adds", func() {
 		ll := corestr.New.LinkedList.Empty()
 		ll.Adds("a", "b")
@@ -188,7 +188,7 @@ func Test_LL_RemoveAt(t *testing.T) {
 	})
 }
 
-func Test_LL_List(t *testing.T) {
+func Test_LL_List_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LL_List", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Strings([]string{"a", "b"})
@@ -205,14 +205,14 @@ func Test_LL_List(t *testing.T) {
 	})
 }
 
-func Test_LL_ListLock(t *testing.T) {
+func Test_LL_ListLock_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LL_ListLock", func() {
 		ll := corestr.New.LinkedList.Strings([]string{"a"})
 		_ = ll.ListLock()
 	})
 }
 
-func Test_LL_ToCollection(t *testing.T) {
+func Test_LL_ToCollection_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LL_ToCollection", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Strings([]string{"a"})
@@ -227,7 +227,7 @@ func Test_LL_ToCollection(t *testing.T) {
 	})
 }
 
-func Test_LL_Loop(t *testing.T) {
+func Test_LL_Loop_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LL_Loop", func() {
 		ll := corestr.New.LinkedList.Strings([]string{"a", "b"})
 		ll.Loop(func(arg *corestr.LinkedListProcessorParameter) bool {
@@ -236,7 +236,7 @@ func Test_LL_Loop(t *testing.T) {
 	})
 }
 
-func Test_LL_String(t *testing.T) {
+func Test_LL_String_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LL_String", func() {
 		ll := corestr.New.LinkedList.Strings([]string{"a"})
 		_ = ll.String()
@@ -244,14 +244,14 @@ func Test_LL_String(t *testing.T) {
 	})
 }
 
-func Test_LL_StringLock(t *testing.T) {
+func Test_LL_StringLock_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LL_StringLock", func() {
 		ll := corestr.New.LinkedList.Strings([]string{"a"})
 		_ = ll.StringLock()
 	})
 }
 
-func Test_LL_Clear(t *testing.T) {
+func Test_LL_Clear_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LL_Clear", func() {
 		ll := corestr.New.LinkedList.Strings([]string{"a"})
 		ll.Clear()
@@ -270,14 +270,14 @@ func Test_LL_JsonMethods(t *testing.T) {
 	})
 }
 
-func Test_LL_AddCollectionToNode(t *testing.T) {
+func Test_LL_AddCollectionToNode_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LL_AddCollectionToNode", func() {
 		ll := corestr.New.LinkedList.Strings([]string{"a"})
 		ll.AddCollectionToNode(false, ll.Head(), corestr.New.Collection.Strings([]string{"b"}))
 	})
 }
 
-func Test_LL_AddStringsPtrToNode(t *testing.T) {
+func Test_LL_AddStringsPtrToNode_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LL_AddStringsPtrToNode", func() {
 		ll := corestr.New.LinkedList.Strings([]string{"a"})
 		items := []string{"b"}
@@ -320,7 +320,7 @@ func Test_LC_Empty(t *testing.T) {
 	})
 }
 
-func Test_LC_Add(t *testing.T) {
+func Test_LC_Add_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LC_Add", func() {
 		lc := corestr.New.LinkedCollection.Empty()
 		lc.Add(corestr.New.Collection.Strings([]string{"a"}))
@@ -330,14 +330,14 @@ func Test_LC_Add(t *testing.T) {
 	})
 }
 
-func Test_LC_AddLock(t *testing.T) {
+func Test_LC_AddLock_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LC_AddLock", func() {
 		lc := corestr.New.LinkedCollection.Empty()
 		lc.AddLock(corestr.New.Collection.Strings([]string{"a"}))
 	})
 }
 
-func Test_LC_AddAsync(t *testing.T) {
+func Test_LC_AddAsync_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LC_AddAsync", func() {
 		lc := corestr.New.LinkedCollection.Empty()
 		var wg sync.WaitGroup
@@ -347,7 +347,7 @@ func Test_LC_AddAsync(t *testing.T) {
 	})
 }
 
-func Test_LC_AddAnother(t *testing.T) {
+func Test_LC_AddAnother_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LC_AddAnother", func() {
 		lc := corestr.New.LinkedCollection.Empty()
 		other := corestr.New.LinkedCollection.Strings("a")
@@ -356,14 +356,14 @@ func Test_LC_AddAnother(t *testing.T) {
 	})
 }
 
-func Test_LC_AddStrings(t *testing.T) {
+func Test_LC_AddStrings_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LC_AddStrings", func() {
 		lc := corestr.New.LinkedCollection.Empty()
 		lc.AddStrings("a")
 	})
 }
 
-func Test_LC_AddAfterNode(t *testing.T) {
+func Test_LC_AddAfterNode_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LC_AddAfterNode", func() {
 		lc := corestr.New.LinkedCollection.Empty()
 		lc.Add(corestr.New.Collection.Strings([]string{"a"}))
@@ -371,14 +371,14 @@ func Test_LC_AddAfterNode(t *testing.T) {
 	})
 }
 
-func Test_LC_PushBack(t *testing.T) {
+func Test_LC_PushBack_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LC_PushBack", func() {
 		lc := corestr.New.LinkedCollection.Empty()
 		lc.PushBack(corestr.New.Collection.Strings([]string{"a"}))
 	})
 }
 
-func Test_LC_AllIndividualItemsLength(t *testing.T) {
+func Test_LC_AllIndividualItemsLength_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LC_AllIndividualItemsLength", func() {
 		lc := corestr.New.LinkedCollection.Strings("a", "b")
 		_ = lc.AllIndividualItemsLength()
@@ -392,7 +392,7 @@ func Test_LC_First(t *testing.T) {
 	})
 }
 
-func Test_LC_Single(t *testing.T) {
+func Test_LC_Single_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LC_Single", func() {
 		lc := corestr.New.LinkedCollection.Strings("a")
 		_ = lc.Single()
@@ -433,14 +433,14 @@ func Test_LC_RemoveNodeByIndex(t *testing.T) {
 	})
 }
 
-func Test_LC_List(t *testing.T) {
+func Test_LC_List_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LC_List", func() {
 		lc := corestr.New.LinkedCollection.Strings("a")
 		_ = lc.List()
 	})
 }
 
-func Test_LC_Loop(t *testing.T) {
+func Test_LC_Loop_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LC_Loop", func() {
 		lc := corestr.New.LinkedCollection.Strings("a")
 		lc.Loop(func(arg *corestr.LinkedCollectionProcessorParameter) bool {
@@ -449,7 +449,7 @@ func Test_LC_Loop(t *testing.T) {
 	})
 }
 
-func Test_LC_String(t *testing.T) {
+func Test_LC_String_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LC_String", func() {
 		lc := corestr.New.LinkedCollection.Strings("a")
 		_ = lc.String()
@@ -457,7 +457,7 @@ func Test_LC_String(t *testing.T) {
 	})
 }
 
-func Test_LC_Clear(t *testing.T) {
+func Test_LC_Clear_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LC_Clear", func() {
 		lc := corestr.New.LinkedCollection.Strings("a")
 		lc.Clear()
@@ -479,14 +479,14 @@ func Test_LC_JsonMethods(t *testing.T) {
 	})
 }
 
-func Test_LC_SimpleSlice(t *testing.T) {
+func Test_LC_SimpleSlice_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LC_SimpleSlice", func() {
 		lc := corestr.New.LinkedCollection.Strings("a")
 		_ = lc.SimpleSlice()
 	})
 }
 
-func Test_LC_AddCollectionToNode(t *testing.T) {
+func Test_LC_AddCollectionToNode_LinkedlistLinkedcoll(t *testing.T) {
 	safeTest(t, "Test_LC_AddCollectionToNode", func() {
 		lc := corestr.New.LinkedCollection.Empty()
 		lc.Add(corestr.New.Collection.Strings([]string{"a"}))

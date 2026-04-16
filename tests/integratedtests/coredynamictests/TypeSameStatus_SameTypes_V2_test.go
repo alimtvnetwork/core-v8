@@ -652,7 +652,7 @@ func Test_SimpleRequest_Constructors(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "SimpleRequest constructors -- all", actual)
 }
 
-func Test_SimpleRequest_InvalidError(t *testing.T) {
+func Test_SimpleRequest_InvalidError_TypesamestatusSametypesV2(t *testing.T) {
 	// Arrange
 	r1 := coredynamic.NewSimpleRequestValid("ok")
 	r2 := coredynamic.InvalidSimpleRequest("err")
@@ -691,7 +691,7 @@ func Test_SimpleRequest_GetErrorOnTypeMismatch(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "SimpleRequest GetErrorOnTypeMismatch -- match and mismatch", actual)
 }
 
-func Test_SimpleRequest_IsPointer(t *testing.T) {
+func Test_SimpleRequest_IsPointer_TypesamestatusSametypesV2(t *testing.T) {
 	// Arrange
 	s := "hello"
 	r := coredynamic.NewSimpleRequestValid(&s)

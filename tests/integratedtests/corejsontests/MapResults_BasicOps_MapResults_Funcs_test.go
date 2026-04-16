@@ -451,7 +451,7 @@ func Test_BytesToPrettyString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected empty", actual)
 }
 
-func Test_JsonString_Func(t *testing.T) {
+func Test_JsonString_Func_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	// Arrange
 	s, err := corejson.JsonString("hello")
 
@@ -492,7 +492,7 @@ func Test_JsonStringOrErrMsg_Error(t *testing.T) {
 // AnyTo — serialization methods
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_AnyTo_SerializedRaw(t *testing.T) {
+func Test_AnyTo_SerializedRaw_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	// Arrange
 	b, err := corejson.AnyTo.SerializedRaw("hello")
 
@@ -504,7 +504,7 @@ func Test_AnyTo_SerializedRaw(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_AnyTo_SerializedString(t *testing.T) {
+func Test_AnyTo_SerializedString_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	// Arrange
 	s, err := corejson.AnyTo.SerializedString("hello")
 
@@ -516,7 +516,7 @@ func Test_AnyTo_SerializedString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_AnyTo_SerializedSafeString(t *testing.T) {
+func Test_AnyTo_SerializedSafeString_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	// Arrange
 	s := corejson.AnyTo.SerializedSafeString("hello")
 
@@ -528,7 +528,7 @@ func Test_AnyTo_SerializedSafeString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected non-empty", actual)
 }
 
-func Test_AnyTo_SerializedStringMust(t *testing.T) {
+func Test_AnyTo_SerializedStringMust_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	// Arrange
 	s := corejson.AnyTo.SerializedStringMust("hello")
 
@@ -540,7 +540,7 @@ func Test_AnyTo_SerializedStringMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected non-empty", actual)
 }
 
-func Test_AnyTo_SafeJsonString(t *testing.T) {
+func Test_AnyTo_SafeJsonString_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	// Arrange
 	s := corejson.AnyTo.SafeJsonString("hello")
 
@@ -552,7 +552,7 @@ func Test_AnyTo_SafeJsonString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected non-empty", actual)
 }
 
-func Test_AnyTo_PrettyStringWithError(t *testing.T) {
+func Test_AnyTo_PrettyStringWithError_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	// Arrange
 	s, err := corejson.AnyTo.PrettyStringWithError("hello")
 
@@ -586,7 +586,7 @@ func Test_AnyTo_PrettyStringWithError(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_AnyTo_SafeJsonPrettyString(t *testing.T) {
+func Test_AnyTo_SafeJsonPrettyString_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	_ = corejson.AnyTo.SafeJsonPrettyString("hello")
 	_ = corejson.AnyTo.SafeJsonPrettyString([]byte(`{"a":1}`))
 	r := corejson.NewResult.Any("x")
@@ -596,7 +596,7 @@ func Test_AnyTo_SafeJsonPrettyString(t *testing.T) {
 	_ = corejson.AnyTo.SafeJsonPrettyString(42)
 }
 
-func Test_AnyTo_JsonString(t *testing.T) {
+func Test_AnyTo_JsonString_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	_ = corejson.AnyTo.JsonString("hello")
 	_ = corejson.AnyTo.JsonString([]byte(`"x"`))
 	r := corejson.NewResult.Any("x")
@@ -606,7 +606,7 @@ func Test_AnyTo_JsonString(t *testing.T) {
 	_ = corejson.AnyTo.JsonString(42)
 }
 
-func Test_AnyTo_JsonStringWithErr(t *testing.T) {
+func Test_AnyTo_JsonStringWithErr_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	// Arrange
 	s, err := corejson.AnyTo.JsonStringWithErr("hello")
 
@@ -627,7 +627,7 @@ func Test_AnyTo_JsonStringWithErr(t *testing.T) {
 	_, _ = corejson.AnyTo.JsonStringWithErr(42)
 }
 
-func Test_AnyTo_JsonStringMust(t *testing.T) {
+func Test_AnyTo_JsonStringMust_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	// Arrange
 	s := corejson.AnyTo.JsonStringMust("hello")
 
@@ -639,7 +639,7 @@ func Test_AnyTo_JsonStringMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected non-empty", actual)
 }
 
-func Test_AnyTo_PrettyStringMust(t *testing.T) {
+func Test_AnyTo_PrettyStringMust_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	// Arrange
 	s := corejson.AnyTo.PrettyStringMust("hello")
 
@@ -651,7 +651,7 @@ func Test_AnyTo_PrettyStringMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected non-empty", actual)
 }
 
-func Test_AnyTo_UsingSerializer(t *testing.T) {
+func Test_AnyTo_UsingSerializer_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	// Arrange
 	r := corejson.AnyTo.UsingSerializer(nil)
 
@@ -706,7 +706,7 @@ func Test_AnyTo_SerializedJsonResult_Error_FromMapResultsBasicOpsMa(t *testing.T
 	expected.ShouldBeEqual(t, 0, "expected non-nil", actual)
 }
 
-func Test_AnyTo_SerializedJsonResult_EmptyError(t *testing.T) {
+func Test_AnyTo_SerializedJsonResult_EmptyError_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	// Arrange
 	r := corejson.AnyTo.SerializedJsonResult(errors.New(""))
 
@@ -798,7 +798,7 @@ func Test_Deserializer_Methods(t *testing.T) {
 // NewResult — creator methods
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_NewResult_Various(t *testing.T) {
+func Test_NewResult_Various_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	_ = corejson.NewResult.UsingBytes([]byte(`"x"`))
 	_ = corejson.NewResult.UsingBytesType([]byte(`"x"`), "T")
 	_ = corejson.NewResult.UsingBytesTypePtr([]byte(`"x"`), "T")
@@ -852,7 +852,7 @@ func Test_NewResult_Various(t *testing.T) {
 // CastAny — type conversion methods
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_CastAny_FromToDefault(t *testing.T) {
+func Test_CastAny_FromToDefault_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	// Arrange
 	var out string
 	err := corejson.CastAny.FromToDefault([]byte(`"hello"`), &out)
@@ -865,7 +865,7 @@ func Test_CastAny_FromToDefault(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_CastAny_FromToReflection(t *testing.T) {
+func Test_CastAny_FromToReflection_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	// Arrange
 	var out string
 	err := corejson.CastAny.FromToReflection([]byte(`"hello"`), &out)
@@ -878,7 +878,7 @@ func Test_CastAny_FromToReflection(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_CastAny_OrDeserializeTo(t *testing.T) {
+func Test_CastAny_OrDeserializeTo_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	// Arrange
 	var out string
 	err := corejson.CastAny.OrDeserializeTo([]byte(`"hello"`), &out)
@@ -943,7 +943,7 @@ func Test_CastAny_FromToOption_String_FromMapResultsBasicOpsMa(t *testing.T) {
 // Empty creator
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_EmptyCreator(t *testing.T) {
+func Test_EmptyCreator_MapresultsBasicopsMapresultsFuncs(t *testing.T) {
 	_ = corejson.Empty.Result()
 	_ = corejson.Empty.ResultWithErr("T", errors.New("e"))
 	_ = corejson.Empty.ResultPtrWithErr("T", errors.New("e"))

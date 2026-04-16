@@ -9,7 +9,7 @@ import (
 	"github.com/alimtvnetwork/core/coretests/args"
 )
 
-func Test_Creators_Verification(t *testing.T) {
+func Test_Creators_Verification_LinkedcollectionsMethods(t *testing.T) {
 	safeTest(t, "Test_Creators_Verification", func() {
 		// Arrange
 		tc := srcC19CreatorsTestCase
@@ -58,7 +58,7 @@ func Test_HeadTail_Verification(t *testing.T) {
 	})
 }
 
-func Test_Length_Verification(t *testing.T) {
+func Test_Length_Verification_LinkedcollectionsMethods(t *testing.T) {
 	safeTest(t, "Test_Length_Verification", func() {
 		// Arrange
 		tc := srcC19LengthTestCase
@@ -74,7 +74,7 @@ func Test_Length_Verification(t *testing.T) {
 	})
 }
 
-func Test_State_Verification(t *testing.T) {
+func Test_State_Verification_LinkedcollectionsMethods(t *testing.T) {
 	safeTest(t, "Test_State_Verification", func() {
 		// Arrange
 		tc := srcC19StateTestCase
@@ -91,7 +91,7 @@ func Test_State_Verification(t *testing.T) {
 	})
 }
 
-func Test_Add_Verification(t *testing.T) {
+func Test_Add_Verification_LinkedcollectionsMethods(t *testing.T) {
 	safeTest(t, "Test_Add_Verification", func() {
 		// Arrange
 		tc := srcC19AddTestCase
@@ -486,7 +486,7 @@ func Test_EqualsCompare_Verification(t *testing.T) {
 	})
 }
 
-func Test_Json_Verification(t *testing.T) {
+func Test_Json_Verification_LinkedcollectionsMethods(t *testing.T) {
 	safeTest(t, "Test_Json_Verification", func() {
 		// Arrange
 		tc := srcC19JsonTestCase

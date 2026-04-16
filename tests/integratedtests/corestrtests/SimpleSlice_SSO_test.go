@@ -98,7 +98,7 @@ func Test_SS_Length(t *testing.T) {
 	})
 }
 
-func Test_SS_IsEmpty(t *testing.T) {
+func Test_SS_IsEmpty_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SS_IsEmpty", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Empty()
@@ -112,7 +112,7 @@ func Test_SS_IsEmpty(t *testing.T) {
 	})
 }
 
-func Test_SS_HasAnyItem(t *testing.T) {
+func Test_SS_HasAnyItem_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SS_HasAnyItem", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Lines("a")
@@ -172,7 +172,7 @@ func Test_SS_LastOrDefault(t *testing.T) {
 	})
 }
 
-func Test_SS_Strings(t *testing.T) {
+func Test_SS_Strings_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SS_Strings", func() {
 		ss := corestr.New.SimpleSlice.Lines("a")
 		_ = ss.Strings()
@@ -186,7 +186,7 @@ func Test_SS_Join(t *testing.T) {
 	})
 }
 
-func Test_SS_JoinLine(t *testing.T) {
+func Test_SS_JoinLine_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SS_JoinLine", func() {
 		ss := corestr.New.SimpleSlice.Lines("a", "b")
 		_ = ss.JoinLine()
@@ -208,49 +208,49 @@ func Test_SS_Skip(t *testing.T) {
 	})
 }
 
-func Test_SS_Collection(t *testing.T) {
+func Test_SS_Collection_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SS_Collection", func() {
 		ss := corestr.New.SimpleSlice.Lines("a")
 		_ = ss.Collection(false)
 	})
 }
 
-func Test_SS_Hashset(t *testing.T) {
+func Test_SS_Hashset_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SS_Hashset", func() {
 		ss := corestr.New.SimpleSlice.Lines("a")
 		_ = ss.Hashset()
 	})
 }
 
-func Test_SS_Clear(t *testing.T) {
+func Test_SS_Clear_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SS_Clear", func() {
 		ss := corestr.New.SimpleSlice.Lines("a")
 		ss.Clear()
 	})
 }
 
-func Test_SS_Dispose(t *testing.T) {
+func Test_SS_Dispose_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SS_Dispose", func() {
 		ss := corestr.New.SimpleSlice.Lines("a")
 		ss.Dispose()
 	})
 }
 
-func Test_SS_Clone(t *testing.T) {
+func Test_SS_Clone_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SS_Clone", func() {
 		ss := corestr.New.SimpleSlice.Lines("a")
 		_ = ss.Clone(false)
 	})
 }
 
-func Test_SS_DeepClone(t *testing.T) {
+func Test_SS_DeepClone_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SS_DeepClone", func() {
 		ss := corestr.New.SimpleSlice.Lines("a")
 		_ = ss.DeepClone()
 	})
 }
 
-func Test_SS_AddAsTitleValue(t *testing.T) {
+func Test_SS_AddAsTitleValue_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SS_AddAsTitleValue", func() {
 		ss := corestr.New.SimpleSlice.Empty()
 		ss.AddAsTitleValue("key", "val")
@@ -295,14 +295,14 @@ func Test_SS_AddIf2(t *testing.T) {
 	})
 }
 
-func Test_SS_Sort(t *testing.T) {
+func Test_SS_Sort_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SS_Sort", func() {
 		ss := corestr.New.SimpleSlice.Lines("b", "a")
 		_ = ss.Sort()
 	})
 }
 
-func Test_SS_Reverse(t *testing.T) {
+func Test_SS_Reverse_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SS_Reverse", func() {
 		ss := corestr.New.SimpleSlice.Lines("a", "b")
 		ss.Reverse()
@@ -323,14 +323,14 @@ func Test_SS_IsContains(t *testing.T) {
 	})
 }
 
-func Test_SS_IndexOf(t *testing.T) {
+func Test_SS_IndexOf_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SS_IndexOf", func() {
 		ss := corestr.New.SimpleSlice.Lines("a", "b")
 		_ = ss.IndexOf("a")
 	})
 }
 
-func Test_SS_HasIndex(t *testing.T) {
+func Test_SS_HasIndex_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SS_HasIndex", func() {
 		ss := corestr.New.SimpleSlice.Lines("a")
 		_ = ss.HasIndex(0)
@@ -419,7 +419,7 @@ func Test_SSO_Value(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsInitialized(t *testing.T) {
+func Test_SSO_IsInitialized_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_IsInitialized", func() {
 		sso := corestr.New.SimpleStringOnce.Init("x")
 		actual := args.Map{"result": sso.IsInitialized()}
@@ -428,7 +428,7 @@ func Test_SSO_IsInitialized(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsDefined(t *testing.T) {
+func Test_SSO_IsDefined_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_IsDefined", func() {
 		sso := corestr.New.SimpleStringOnce.Init("x")
 		actual := args.Map{"result": sso.IsDefined()}
@@ -437,7 +437,7 @@ func Test_SSO_IsDefined(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsUninitialized(t *testing.T) {
+func Test_SSO_IsUninitialized_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_IsUninitialized", func() {
 		sso := corestr.New.SimpleStringOnce.Empty()
 		actual := args.Map{"result": sso.IsUninitialized()}
@@ -446,21 +446,21 @@ func Test_SSO_IsUninitialized(t *testing.T) {
 	})
 }
 
-func Test_SSO_Invalidate(t *testing.T) {
+func Test_SSO_Invalidate_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_Invalidate", func() {
 		sso := corestr.New.SimpleStringOnce.Init("x")
 		sso.Invalidate()
 	})
 }
 
-func Test_SSO_Reset(t *testing.T) {
+func Test_SSO_Reset_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_Reset", func() {
 		sso := corestr.New.SimpleStringOnce.Init("x")
 		sso.Reset()
 	})
 }
 
-func Test_SSO_IsInvalid(t *testing.T) {
+func Test_SSO_IsInvalid_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_IsInvalid", func() {
 		sso := corestr.New.SimpleStringOnce.Empty()
 		actual := args.Map{"result": sso.IsInvalid()}
@@ -469,7 +469,7 @@ func Test_SSO_IsInvalid(t *testing.T) {
 	})
 }
 
-func Test_SSO_ValueBytes(t *testing.T) {
+func Test_SSO_ValueBytes_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_ValueBytes", func() {
 		sso := corestr.New.SimpleStringOnce.Init("x")
 		_ = sso.ValueBytes()
@@ -477,7 +477,7 @@ func Test_SSO_ValueBytes(t *testing.T) {
 	})
 }
 
-func Test_SSO_SetOnUninitialized(t *testing.T) {
+func Test_SSO_SetOnUninitialized_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_SetOnUninitialized", func() {
 		sso := corestr.New.SimpleStringOnce.Empty()
 		_ = sso.SetOnUninitialized("v")
@@ -488,7 +488,7 @@ func Test_SSO_SetOnUninitialized(t *testing.T) {
 	})
 }
 
-func Test_SSO_GetSetOnce(t *testing.T) {
+func Test_SSO_GetSetOnce_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_GetSetOnce", func() {
 		sso := corestr.New.SimpleStringOnce.Empty()
 		v := sso.GetSetOnce("hello")
@@ -502,7 +502,7 @@ func Test_SSO_GetSetOnce(t *testing.T) {
 	})
 }
 
-func Test_SSO_GetOnce(t *testing.T) {
+func Test_SSO_GetOnce_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_GetOnce", func() {
 		sso := corestr.New.SimpleStringOnce.Init("x")
 		_ = sso.GetOnce()
@@ -516,35 +516,35 @@ func Test_SSO_SetInitialize(t *testing.T) {
 	})
 }
 
-func Test_SSO_String(t *testing.T) {
+func Test_SSO_String_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_String", func() {
 		sso := corestr.New.SimpleStringOnce.Init("x")
 		_ = sso.String()
 	})
 }
 
-func Test_SSO_Dispose(t *testing.T) {
+func Test_SSO_Dispose_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_Dispose", func() {
 		sso := corestr.New.SimpleStringOnce.Init("x")
 		sso.Dispose()
 	})
 }
 
-func Test_SSO_Boolean(t *testing.T) {
+func Test_SSO_Boolean_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_Boolean", func() {
 		sso := corestr.New.SimpleStringOnce.Init("true")
 		_ = sso.Boolean(true)
 	})
 }
 
-func Test_SSO_Int(t *testing.T) {
+func Test_SSO_Int_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_Int", func() {
 		sso := corestr.New.SimpleStringOnce.Init("42")
 		_ = sso.Int()
 	})
 }
 
-func Test_SSO_ValueDefFloat64(t *testing.T) {
+func Test_SSO_ValueDefFloat64_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_ValueDefFloat64", func() {
 		sso := corestr.New.SimpleStringOnce.Init("3.14")
 		_ = sso.ValueDefFloat64()
@@ -567,14 +567,14 @@ func Test_SSO_JsonMethods(t *testing.T) {
 	})
 }
 
-func Test_SSO_UnmarshalJSON(t *testing.T) {
+func Test_SSO_UnmarshalJSON_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_UnmarshalJSON", func() {
 		sso := corestr.SimpleStringOnce{}
 		_ = sso.UnmarshalJSON([]byte(`"hello"`))
 	})
 }
 
-func Test_SSO_ParseInjectUsingJson(t *testing.T) {
+func Test_SSO_ParseInjectUsingJson_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_ParseInjectUsingJson", func() {
 		sso := corestr.New.SimpleStringOnce.Empty()
 		r := corejson.New("hello")
@@ -591,7 +591,7 @@ func Test_SSO_ParseInjectUsingJsonMust_Panic(t *testing.T) {
 	})
 }
 
-func Test_SSO_JsonParseSelfInject(t *testing.T) {
+func Test_SSO_JsonParseSelfInject_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_JsonParseSelfInject", func() {
 		sso := corestr.New.SimpleStringOnce.Empty()
 		r := corejson.New("hello")
@@ -599,7 +599,7 @@ func Test_SSO_JsonParseSelfInject(t *testing.T) {
 	})
 }
 
-func Test_SSO_Deserialize(t *testing.T) {
+func Test_SSO_Deserialize_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_Deserialize", func() {
 		sso := corestr.New.SimpleStringOnce.Init("x")
 		var s string
@@ -607,7 +607,7 @@ func Test_SSO_Deserialize(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsEmpty(t *testing.T) {
+func Test_SSO_IsEmpty_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_IsEmpty", func() {
 		sso := corestr.New.SimpleStringOnce.Empty()
 		_ = sso.IsEmpty()
@@ -621,7 +621,7 @@ func Test_SSO_IsWhitespace(t *testing.T) {
 	})
 }
 
-func Test_SSO_Trim(t *testing.T) {
+func Test_SSO_Trim_SimplesliceSso(t *testing.T) {
 	safeTest(t, "Test_SSO_Trim", func() {
 		sso := corestr.New.SimpleStringOnce.Init("  x  ")
 		_ = sso.Trim()

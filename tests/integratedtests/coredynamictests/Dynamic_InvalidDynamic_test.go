@@ -90,7 +90,7 @@ func Test_Dynamic_NewDynamic_FromDynamicInvalidDynami(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "NewDynamic returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_Clone(t *testing.T) {
+func Test_Dynamic_Clone_DynamicInvaliddynamic(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid("hello")
 	cloned := d.Clone()
@@ -192,7 +192,7 @@ func Test_Dynamic_Length_Map(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Length returns correct value -- map", actual)
 }
 
-func Test_Dynamic_StructString(t *testing.T) {
+func Test_Dynamic_StructString_DynamicInvaliddynamic(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicPtr("hello", true)
 	s1 := d.StructString()
@@ -1291,7 +1291,7 @@ func Test_DynamicStatus_Clone_FromDynamicInvalidDynami(t *testing.T) {
 // Standalone functions
 // ═══════════════════════════════════════════
 
-func Test_LengthOfReflect(t *testing.T) {
+func Test_LengthOfReflect_DynamicInvaliddynamic(t *testing.T) {
 	// Arrange
 	s := reflect.ValueOf([]int{1, 2, 3})
 	a := reflect.ValueOf([2]int{1, 2})
@@ -1354,7 +1354,7 @@ func Test_ReflectInterfaceVal_Ptr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ReflectInterfaceVal returns correct value -- ptr", actual)
 }
 
-func Test_SafeTypeName(t *testing.T) {
+func Test_SafeTypeName_DynamicInvaliddynamic(t *testing.T) {
 	// Act
 	actual := args.Map{
 		"str": coredynamic.SafeTypeName("hello"),

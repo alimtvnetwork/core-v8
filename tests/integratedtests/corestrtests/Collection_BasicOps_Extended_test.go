@@ -226,7 +226,7 @@ func Test_Collection_FirstLastSingleTakeSkip(t *testing.T) {
 	})
 }
 
-func Test_Collection_Reverse(t *testing.T) {
+func Test_Collection_Reverse_CollectionBasicopsExtended(t *testing.T) {
 	safeTest(t, "Test_I8_Collection_Reverse", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b", "c"})
@@ -241,7 +241,7 @@ func Test_Collection_Reverse(t *testing.T) {
 	})
 }
 
-func Test_Collection_IndexAt(t *testing.T) {
+func Test_Collection_IndexAt_CollectionBasicopsExtended(t *testing.T) {
 	safeTest(t, "Test_I8_Collection_IndexAt", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b", "c"})
@@ -378,7 +378,7 @@ func Test_Collection_NonEmpty(t *testing.T) {
 	})
 }
 
-func Test_Collection_Has(t *testing.T) {
+func Test_Collection_Has_CollectionBasicopsExtended(t *testing.T) {
 	safeTest(t, "Test_I8_Collection_Has", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b"})
@@ -446,7 +446,7 @@ func Test_Collection_Hashset(t *testing.T) {
 	})
 }
 
-func Test_Collection_String(t *testing.T) {
+func Test_Collection_String_CollectionBasicopsExtended(t *testing.T) {
 	safeTest(t, "Test_I8_Collection_String", func() {
 		c := corestr.New.Collection.Strings([]string{"a", "b"})
 		_ = c.String()
@@ -554,7 +554,7 @@ func Test_Collection_ConcatNew_FromCollectionBasicOpsIt(t *testing.T) {
 	})
 }
 
-func Test_Collection_AppendCollections(t *testing.T) {
+func Test_Collection_AppendCollections_CollectionBasicopsExtended(t *testing.T) {
 	safeTest(t, "Test_I8_Collection_AppendCollections", func() {
 		c := corestr.New.Collection.Strings([]string{"a"})
 		c2 := corestr.New.Collection.Strings([]string{"b"})
@@ -614,7 +614,7 @@ func Test_Collection_Paging(t *testing.T) {
 	})
 }
 
-func Test_Collection_New(t *testing.T) {
+func Test_Collection_New_CollectionBasicopsExtended(t *testing.T) {
 	safeTest(t, "Test_I8_Collection_New", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a"})
@@ -677,7 +677,7 @@ func Test_Collection_CharCollectionMap_FromCollectionBasicOpsIt(t *testing.T) {
 	})
 }
 
-func Test_Collection_Resize(t *testing.T) {
+func Test_Collection_Resize_CollectionBasicopsExtended(t *testing.T) {
 	safeTest(t, "Test_I8_Collection_Resize", func() {
 		c := corestr.New.Collection.Empty()
 		c.Resize(100)
@@ -703,7 +703,7 @@ func Test_Collection_ClearDispose_FromCollectionBasicOpsIt(t *testing.T) {
 	})
 }
 
-func Test_Collection_ListCopyPtrLock(t *testing.T) {
+func Test_Collection_ListCopyPtrLock_CollectionBasicopsExtended(t *testing.T) {
 	safeTest(t, "Test_I8_Collection_ListCopyPtrLock", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b"})

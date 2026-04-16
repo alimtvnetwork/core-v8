@@ -69,7 +69,7 @@ func Test_Result_Map_Empty(t *testing.T) {
 // Result — DeserializedFieldsToMap / SafeDeserializedFieldsToMap
 // =============================================================================
 
-func Test_Result_DeserializedFieldsToMap_Nil(t *testing.T) {
+func Test_Result_DeserializedFieldsToMap_Nil_ResultMapResultBranches(t *testing.T) {
 	// Arrange
 	var r *corejson.Result
 	m, err := r.DeserializedFieldsToMap()
@@ -306,7 +306,7 @@ func Test_Result_PrettyJsonStringOrErrString_Valid_FromResultMapResultBranc(t *t
 	expected.ShouldBeEqual(t, 0, "PrettyJsonStringOrErrString valid", actual)
 }
 
-func Test_Result_PrettyJsonBuffer_Empty(t *testing.T) {
+func Test_Result_PrettyJsonBuffer_Empty_ResultMapResultBranches(t *testing.T) {
 	// Arrange
 	r := &corejson.Result{}
 	buf, err := r.PrettyJsonBuffer("", "  ")
@@ -341,7 +341,7 @@ func Test_Result_Length_Nil(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result Length nil", actual)
 }
 
-func Test_Result_ErrorString_NoError(t *testing.T) {
+func Test_Result_ErrorString_NoError_ResultMapResultBranches(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 
@@ -429,7 +429,7 @@ func Test_Result_String_Empty(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result String empty", actual)
 }
 
-func Test_Result_String_WithError(t *testing.T) {
+func Test_Result_String_WithError_ResultMapResultBranches(t *testing.T) {
 	// Arrange
 	r := corejson.Result{Bytes: []byte(`"x"`), Error: errors.New("fail"), TypeName: "string"}
 	s := r.String()
@@ -442,7 +442,7 @@ func Test_Result_String_WithError(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Result String with error", actual)
 }
 
-func Test_Result_String_NoError(t *testing.T) {
+func Test_Result_String_NoError_ResultMapResultBranches(t *testing.T) {
 	// Arrange
 	r := corejson.New("hello")
 	s := r.String()
@@ -471,7 +471,7 @@ func Test_Result_SafeNonIssueBytes_HasIssues_FromResultMapResultBranc(t *testing
 	expected.ShouldBeEqual(t, 0, "SafeNonIssueBytes has issues", actual)
 }
 
-func Test_Result_SafeNonIssueBytes_Valid(t *testing.T) {
+func Test_Result_SafeNonIssueBytes_Valid_ResultMapResultBranches(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 
@@ -483,7 +483,7 @@ func Test_Result_SafeNonIssueBytes_Valid(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "SafeNonIssueBytes valid", actual)
 }
 
-func Test_Result_SafeBytes_Nil(t *testing.T) {
+func Test_Result_SafeBytes_Nil_ResultMapResultBranches(t *testing.T) {
 	// Arrange
 	var r *corejson.Result
 
@@ -495,7 +495,7 @@ func Test_Result_SafeBytes_Nil(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "SafeBytes nil", actual)
 }
 
-func Test_Result_SafeValues_Nil(t *testing.T) {
+func Test_Result_SafeValues_Nil_ResultMapResultBranches(t *testing.T) {
 	// Arrange
 	var r *corejson.Result
 
@@ -718,7 +718,7 @@ func Test_Result_MeaningfulErrorMessage_NoError(t *testing.T) {
 // Result — IsEmptyJsonBytes branches
 // =============================================================================
 
-func Test_Result_IsEmptyJsonBytes_Nil(t *testing.T) {
+func Test_Result_IsEmptyJsonBytes_Nil_ResultMapResultBranches(t *testing.T) {
 	// Arrange
 	var r *corejson.Result
 
@@ -1085,7 +1085,7 @@ func Test_Result_JsonModel_Nil_FromResultMapResultBranc(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "JsonModel nil", actual)
 }
 
-func Test_Result_JsonModel_Valid(t *testing.T) {
+func Test_Result_JsonModel_Valid_ResultMapResultBranches(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 	m := r.JsonModel()

@@ -110,7 +110,7 @@ func Test_Result_BytesTypeName_Nil_FromResultMapResultFull(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected empty for nil", actual)
 }
 
-func Test_Result_SafeBytesTypeName(t *testing.T) {
+func Test_Result_SafeBytesTypeName_ResultMapResultFull(t *testing.T) {
 	// Arrange
 	r := corejson.NewResult.AnyPtr("hello")
 	name := r.SafeBytesTypeName()
@@ -136,7 +136,7 @@ func Test_Result_SafeBytesTypeName_Empty_FromResultMapResultFull(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected empty for empty result", actual)
 }
 
-func Test_Result_SafeString(t *testing.T) {
+func Test_Result_SafeString_ResultMapResultFull(t *testing.T) {
 	// Arrange
 	r := corejson.NewResult.AnyPtr("hello")
 	s := r.SafeString()
@@ -162,7 +162,7 @@ func Test_Result_PrettyJsonStringOrErrString_Nil_FromResultMapResultFull(t *test
 	expected.ShouldBeEqual(t, 0, "expected message for nil", actual)
 }
 
-func Test_Result_PrettyJsonStringOrErrString_WithError(t *testing.T) {
+func Test_Result_PrettyJsonStringOrErrString_WithError_ResultMapResultFull(t *testing.T) {
 	// Arrange
 	r := &corejson.Result{Error: errors.New("e")}
 	s := r.PrettyJsonStringOrErrString()
@@ -391,7 +391,7 @@ func Test_Result_MeaningfulErrorMessage_WithError(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected message", actual)
 }
 
-func Test_Result_HasSafeItems(t *testing.T) {
+func Test_Result_HasSafeItems_ResultMapResultFull(t *testing.T) {
 	// Arrange
 	r := corejson.NewResult.AnyPtr("hello")
 
@@ -427,7 +427,7 @@ func Test_Result_HasJsonBytes(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected true", actual)
 }
 
-func Test_Result_HasAnyItem(t *testing.T) {
+func Test_Result_HasAnyItem_ResultMapResultFull(t *testing.T) {
 	// Arrange
 	r := corejson.NewResult.Any("hello")
 
@@ -465,7 +465,7 @@ func Test_Result_DeserializeMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_Result_UnmarshalMust(t *testing.T) {
+func Test_Result_UnmarshalMust_ResultMapResultFull(t *testing.T) {
 	// Arrange
 	r := corejson.NewResult.AnyPtr(42)
 	var n int
@@ -531,7 +531,7 @@ func Test_Result_Serialize_Nil_FromResultMapResultFull(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected error", actual)
 }
 
-func Test_Result_Serialize_WithError(t *testing.T) {
+func Test_Result_Serialize_WithError_ResultMapResultFull(t *testing.T) {
 	// Arrange
 	r := &corejson.Result{Error: errors.New("e")}
 	_, err := r.Serialize()
@@ -810,7 +810,7 @@ func Test_Result_IsEqualPtr_DiffType_FromResultMapResultFull(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected not equal", actual)
 }
 
-func Test_Result_CombineErrorWithRefString(t *testing.T) {
+func Test_Result_CombineErrorWithRefString_ResultMapResultFull(t *testing.T) {
 	// Arrange
 	r := &corejson.Result{Error: errors.New("e")}
 	s := r.CombineErrorWithRefString("ref1", "ref2")
@@ -836,7 +836,7 @@ func Test_Result_CombineErrorWithRefString_NoErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected empty", actual)
 }
 
-func Test_Result_CombineErrorWithRefError(t *testing.T) {
+func Test_Result_CombineErrorWithRefError_ResultMapResultFull(t *testing.T) {
 	// Arrange
 	r := &corejson.Result{Error: errors.New("e")}
 	err := r.CombineErrorWithRefError("ref")

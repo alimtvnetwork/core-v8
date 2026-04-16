@@ -35,7 +35,7 @@ func Test_SliceToError_NonEmpty_FromSliceToErrorEmpty(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "SliceToError non-empty -- error", actual)
 }
 
-func Test_SliceToErrorPtr_Nil(t *testing.T) {
+func Test_SliceToErrorPtr_Nil_SlicetoerrorEmpty(t *testing.T) {
 	// Arrange
 	err := errcore.SliceToErrorPtr(nil)
 

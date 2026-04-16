@@ -63,7 +63,7 @@ func Test_StringsTo_HashmapTrim_FromStringsToHashmapTrim(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "HashmapTrim returns correct value -- with args", actual)
 }
 
-func Test_StringsTo_HashmapUsingFuncOptions(t *testing.T) {
+func Test_StringsTo_HashmapUsingFuncOptions_StringstoHashmaptrimcolon(t *testing.T) {
 	// Arrange
 	result := converters.StringsTo.HashmapUsingFuncOptions(true, func(line string) (string, string) {
 		return "k", "v"
@@ -77,7 +77,7 @@ func Test_StringsTo_HashmapUsingFuncOptions(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "HashmapUsingFuncOptions returns correct value -- with args", actual)
 }
 
-func Test_StringsTo_HashmapUsingFuncTrim(t *testing.T) {
+func Test_StringsTo_HashmapUsingFuncTrim_StringstoHashmaptrimcolon(t *testing.T) {
 	// Arrange
 	result := converters.StringsTo.HashmapUsingFuncTrim(func(line string) (string, string) {
 		return "k", "v"
@@ -91,7 +91,7 @@ func Test_StringsTo_HashmapUsingFuncTrim(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "HashmapUsingFuncTrim returns correct value -- with args", actual)
 }
 
-func Test_StringsTo_MapStringIntegerUsingFunc(t *testing.T) {
+func Test_StringsTo_MapStringIntegerUsingFunc_StringstoHashmaptrimcolon(t *testing.T) {
 	// Arrange
 	result := converters.StringsTo.MapStringIntegerUsingFunc(true, func(line string) (string, int) {
 		return "k", 42
@@ -111,7 +111,7 @@ func Test_StringsTo_MapStringIntegerUsingFunc(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "MapStringIntegerUsingFunc returns correct value -- with args", actual)
 }
 
-func Test_StringsTo_MapStringAnyUsingFunc(t *testing.T) {
+func Test_StringsTo_MapStringAnyUsingFunc_StringstoHashmaptrimcolon(t *testing.T) {
 	// Arrange
 	result := converters.StringsTo.MapStringAnyUsingFunc(false, func(line string) (string, any) {
 		return "k", "val"

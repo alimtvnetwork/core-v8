@@ -325,7 +325,7 @@ func Test_HashsetsCollectionDataModel(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionDataModel(t *testing.T) {
+func Test_CharCollectionDataModel_ClonesliceNilHelpers(t *testing.T) {
 	safeTest(t, "Test_CharCollectionDataModel", func() {
 		// Arrange
 		dm := &corestr.CharCollectionDataModel{
@@ -350,7 +350,7 @@ func Test_CharCollectionDataModel(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetDataModel(t *testing.T) {
+func Test_CharHashsetDataModel_ClonesliceNilHelpers(t *testing.T) {
 	safeTest(t, "Test_CharHashsetDataModel", func() {
 		// Arrange
 		dm := &corestr.CharHashsetDataModel{

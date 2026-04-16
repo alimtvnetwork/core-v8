@@ -659,7 +659,7 @@ func Test_LinkedList_Filter_FromSimpleSliceBasicRema(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_IndexAt(t *testing.T) {
+func Test_LinkedList_IndexAt_SimplesliceBasicRemaining(t *testing.T) {
 	safeTest(t, "Test_LinkedList_IndexAt", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Strings([]string{"a", "b", "c"})

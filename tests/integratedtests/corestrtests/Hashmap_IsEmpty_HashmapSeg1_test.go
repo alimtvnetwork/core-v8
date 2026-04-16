@@ -16,7 +16,7 @@ import (
 
 // ── IsEmpty / HasItems ──
 
-func Test_Hashmap_IsEmpty(t *testing.T) {
+func Test_Hashmap_IsEmpty_HashmapIsemptyHashmapseg1(t *testing.T) {
 	safeTest(t, "Test_Hashmap_IsEmpty", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Empty()
@@ -87,7 +87,7 @@ func Test_Hashmap_Collection_FromHashmapIsEmptyHashma(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_IsEmptyLock(t *testing.T) {
+func Test_Hashmap_IsEmptyLock_HashmapIsemptyHashmapseg1(t *testing.T) {
 	safeTest(t, "Test_Hashmap_IsEmptyLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Empty()
@@ -121,7 +121,7 @@ func Test_Hashmap_AddOrUpdateWithWgLock_FromHashmapIsEmptyHashma(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_AddOrUpdateKeyStrValInt(t *testing.T) {
+func Test_Hashmap_AddOrUpdateKeyStrValInt_HashmapIsemptyHashmapseg1(t *testing.T) {
 	safeTest(t, "Test_Hashmap_AddOrUpdateKeyStrValInt", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Empty()
@@ -1026,7 +1026,7 @@ func Test_Hashmap_HasAllCollectionItems_FromHashmapIsEmptyHashma(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_HasAll(t *testing.T) {
+func Test_Hashmap_HasAll_HashmapIsemptyHashmapseg1(t *testing.T) {
 	safeTest(t, "Test_Hashmap_HasAll", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Empty()
@@ -1048,7 +1048,7 @@ func Test_Hashmap_HasAll(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_HasAnyItem(t *testing.T) {
+func Test_Hashmap_HasAnyItem_HashmapIsemptyHashmapseg1(t *testing.T) {
 	safeTest(t, "Test_Hashmap_HasAnyItem", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Empty()
@@ -1569,7 +1569,7 @@ func Test_Hashmap_KeysLock_Empty(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_ValuesListCopyLock(t *testing.T) {
+func Test_Hashmap_ValuesListCopyLock_HashmapIsemptyHashmapseg1(t *testing.T) {
 	safeTest(t, "Test_Hashmap_ValuesListCopyLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Empty()
@@ -2415,7 +2415,7 @@ func Test_Hashmap_AsJsoner(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_JsonParseSelfInject(t *testing.T) {
+func Test_Hashmap_JsonParseSelfInject_HashmapIsemptyHashmapseg1(t *testing.T) {
 	safeTest(t, "Test_Hashmap_JsonParseSelfInject", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Empty()

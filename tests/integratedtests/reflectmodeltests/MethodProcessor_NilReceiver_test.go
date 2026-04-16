@@ -262,7 +262,7 @@ func Test_InvokeError_NoArgsError(t *testing.T) {
 // InvalidReflectValueKindModel — constructor
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_InvalidReflectValueKindModel(t *testing.T) {
+func Test_InvalidReflectValueKindModel_MethodprocessorNilreceiver(t *testing.T) {
 	// Arrange
 	rvk := reflectmodel.InvalidReflectValueKindModel("test error msg")
 

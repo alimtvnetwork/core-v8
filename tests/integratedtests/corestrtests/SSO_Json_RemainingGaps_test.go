@@ -49,7 +49,7 @@ func Test_SSO_JsonPtr(t *testing.T) {
 	})
 }
 
-func Test_SSO_JsonModel(t *testing.T) {
+func Test_SSO_JsonModel_SsoJsonRemaininggaps(t *testing.T) {
 	safeTest(t, "Test_SSO_JsonModel", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("hello")
@@ -70,7 +70,7 @@ func Test_SSO_JsonModel(t *testing.T) {
 	})
 }
 
-func Test_SSO_JsonModelAny(t *testing.T) {
+func Test_SSO_JsonModelAny_SsoJsonRemaininggaps(t *testing.T) {
 	safeTest(t, "Test_SSO_JsonModelAny", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("x")
@@ -137,7 +137,7 @@ func Test_SSO_UnmarshalJSON_Error(t *testing.T) {
 	})
 }
 
-func Test_SSO_ParseInjectUsingJson(t *testing.T) {
+func Test_SSO_ParseInjectUsingJson_SsoJsonRemaininggaps(t *testing.T) {
 	safeTest(t, "Test_SSO_ParseInjectUsingJson", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("hello")
@@ -176,7 +176,7 @@ func Test_SSO_ParseInjectUsingJson_Error(t *testing.T) {
 	})
 }
 
-func Test_SSO_ParseInjectUsingJsonMust(t *testing.T) {
+func Test_SSO_ParseInjectUsingJsonMust_SsoJsonRemaininggaps(t *testing.T) {
 	safeTest(t, "Test_SSO_ParseInjectUsingJsonMust", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("hello")
@@ -217,7 +217,7 @@ func Test_SSO_ParseInjectUsingJsonMust_Panics(t *testing.T) {
 	})
 }
 
-func Test_SSO_JsonParseSelfInject(t *testing.T) {
+func Test_SSO_JsonParseSelfInject_SsoJsonRemaininggaps(t *testing.T) {
 	safeTest(t, "Test_SSO_JsonParseSelfInject", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("hello")
@@ -234,7 +234,7 @@ func Test_SSO_JsonParseSelfInject(t *testing.T) {
 	})
 }
 
-func Test_SSO_AsJsonContractsBinder(t *testing.T) {
+func Test_SSO_AsJsonContractsBinder_SsoJsonRemaininggaps(t *testing.T) {
 	safeTest(t, "Test_SSO_AsJsonContractsBinder", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("hello")
@@ -248,7 +248,7 @@ func Test_SSO_AsJsonContractsBinder(t *testing.T) {
 	})
 }
 
-func Test_SSO_AsJsoner(t *testing.T) {
+func Test_SSO_AsJsoner_SsoJsonRemaininggaps(t *testing.T) {
 	safeTest(t, "Test_SSO_AsJsoner", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("hello")
@@ -262,7 +262,7 @@ func Test_SSO_AsJsoner(t *testing.T) {
 	})
 }
 
-func Test_SSO_AsJsonParseSelfInjector(t *testing.T) {
+func Test_SSO_AsJsonParseSelfInjector_SsoJsonRemaininggaps(t *testing.T) {
 	safeTest(t, "Test_SSO_AsJsonParseSelfInjector", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("hello")
@@ -276,7 +276,7 @@ func Test_SSO_AsJsonParseSelfInjector(t *testing.T) {
 	})
 }
 
-func Test_SSO_AsJsonMarshaller(t *testing.T) {
+func Test_SSO_AsJsonMarshaller_SsoJsonRemaininggaps(t *testing.T) {
 	safeTest(t, "Test_SSO_AsJsonMarshaller", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("hello")
@@ -290,7 +290,7 @@ func Test_SSO_AsJsonMarshaller(t *testing.T) {
 	})
 }
 
-func Test_SSO_Serialize(t *testing.T) {
+func Test_SSO_Serialize_SsoJsonRemaininggaps(t *testing.T) {
 	safeTest(t, "Test_SSO_Serialize", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("hello")
@@ -311,7 +311,7 @@ func Test_SSO_Serialize(t *testing.T) {
 	})
 }
 
-func Test_SSO_Deserialize(t *testing.T) {
+func Test_SSO_Deserialize_SsoJsonRemaininggaps(t *testing.T) {
 	safeTest(t, "Test_SSO_Deserialize", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("hello")

@@ -13,7 +13,7 @@ import (
 // DynamicGetters — value extraction and type checks
 // ═══════════════════════════════════════════════════════════════════════
 
-func Test_01_Dynamic_Data(t *testing.T) {
+func Test_01_Dynamic_Data_DynamicgettersValueextraction(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid("hello")
 	// Act
@@ -24,7 +24,7 @@ func Test_01_Dynamic_Data(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected hello", actual)
 }
 
-func Test_02_Dynamic_Value(t *testing.T) {
+func Test_02_Dynamic_Value_DynamicgettersValueextraction(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid(42)
 
@@ -48,7 +48,7 @@ func Test_03_Dynamic_Length_NilReceiver(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 0 for nil receiver", actual)
 }
 
-func Test_04_Dynamic_Length_Slice(t *testing.T) {
+func Test_04_Dynamic_Length_Slice_DynamicgettersValueextraction(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid([]int{1, 2, 3})
 

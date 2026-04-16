@@ -8,7 +8,7 @@ import (
 	"github.com/alimtvnetwork/core/coretests/args"
 )
 
-func Test_Hashmap_Diff_Verification(t *testing.T) {
+func Test_Hashmap_Diff_Verification_HashmapDeepclone(t *testing.T) {
 	safeTest(t, "Test_Hashmap_Diff_Verification", func() {
 		// Arrange
 		tc := srcC13HashmapDiffTestCase
@@ -66,7 +66,7 @@ func Test_Hashmap_HasVariants_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_Filter_Verification(t *testing.T) {
+func Test_Hashmap_Filter_Verification_HashmapDeepclone(t *testing.T) {
 	safeTest(t, "Test_Hashmap_Filter_Verification", func() {
 		// Arrange
 		tc := srcC13HashmapFilterTestCase
@@ -111,7 +111,7 @@ func Test_Hashmap_Items_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_Values_Verification(t *testing.T) {
+func Test_Hashmap_Values_Verification_HashmapDeepclone(t *testing.T) {
 	safeTest(t, "Test_Hashmap_Values_Verification", func() {
 		// Arrange
 		tc := srcC13HashmapValuesTestCase
@@ -154,7 +154,7 @@ func Test_Hashmap_KeysValues_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_Keys_Verification(t *testing.T) {
+func Test_Hashmap_Keys_Verification_HashmapDeepclone(t *testing.T) {
 	safeTest(t, "Test_Hashmap_Keys_Verification", func() {
 		// Arrange
 		tc := srcC13HashmapKeysTestCase
@@ -212,7 +212,7 @@ func Test_Hashmap_Length_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_Equal_Verification(t *testing.T) {
+func Test_Hashmap_Equal_Verification_HashmapDeepclone(t *testing.T) {
 	safeTest(t, "Test_Hashmap_Equal_Verification", func() {
 		// Arrange
 		tc := srcC13HashmapEqualTestCase
@@ -238,7 +238,7 @@ func Test_Hashmap_Equal_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_Remove_Verification(t *testing.T) {
+func Test_Hashmap_Remove_Verification_HashmapDeepclone(t *testing.T) {
 	safeTest(t, "Test_Hashmap_Remove_Verification", func() {
 		// Arrange
 		tc := srcC13HashmapRemoveTestCase
@@ -258,7 +258,7 @@ func Test_Hashmap_Remove_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_String_Verification(t *testing.T) {
+func Test_Hashmap_String_Verification_HashmapDeepclone(t *testing.T) {
 	safeTest(t, "Test_Hashmap_String_Verification", func() {
 		// Arrange
 		tc := srcC13HashmapStringTestCase
@@ -278,7 +278,7 @@ func Test_Hashmap_String_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_Except_Verification(t *testing.T) {
+func Test_Hashmap_Except_Verification_HashmapDeepclone(t *testing.T) {
 	safeTest(t, "Test_Hashmap_Except_Verification", func() {
 		// Arrange
 		tc := srcC13HashmapExceptTestCase
@@ -384,7 +384,7 @@ func Test_Hashmap_Misc_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_Compiler_Verification(t *testing.T) {
+func Test_Hashmap_Compiler_Verification_HashmapDeepclone(t *testing.T) {
 	safeTest(t, "Test_Hashmap_Compiler_Verification", func() {
 		// Arrange
 		tc := srcC13HashmapCompilerTestCase
@@ -401,7 +401,7 @@ func Test_Hashmap_Compiler_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_Clone_Verification(t *testing.T) {
+func Test_Hashmap_Clone_Verification_HashmapDeepclone(t *testing.T) {
 	safeTest(t, "Test_Hashmap_Clone_Verification", func() {
 		// Arrange
 		tc := srcC13HashmapCloneTestCase
@@ -488,7 +488,7 @@ func Test_Hashmap_FilterVariants_Verification(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_WgLock_Verification(t *testing.T) {
+func Test_Hashmap_WgLock_Verification_HashmapDeepclone(t *testing.T) {
 	safeTest(t, "Test_Hashmap_WgLock_Verification", func() {
 		// Arrange
 		tc := srcC13HashmapWgLockTestCase

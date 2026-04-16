@@ -41,7 +41,7 @@ func Test_Collection_SafeIndexAtUsingLength_OutOfRange(t *testing.T) {
 	})
 }
 
-func Test_Collection_First(t *testing.T) {
+func Test_Collection_First_CollectionIndexat(t *testing.T) {
 	safeTest(t, "Test_Collection_First", func() {
 		c := corestr.New.Collection.Strings([]string{"x", "y"})
 		tc := caseV1Compat{Name: "First", Expected: "x", Actual: c.First(), Args: args.Map{}}
@@ -51,7 +51,7 @@ func Test_Collection_First(t *testing.T) {
 	})
 }
 
-func Test_Collection_Last(t *testing.T) {
+func Test_Collection_Last_CollectionIndexat(t *testing.T) {
 	safeTest(t, "Test_Collection_Last", func() {
 		c := corestr.New.Collection.Strings([]string{"x", "y"})
 		tc := caseV1Compat{Name: "Last", Expected: "y", Actual: c.Last(), Args: args.Map{}}
@@ -177,7 +177,7 @@ func Test_Collection_Reverse_Multiple(t *testing.T) {
 	})
 }
 
-func Test_Collection_Reverse_Two(t *testing.T) {
+func Test_Collection_Reverse_Two_CollectionIndexat(t *testing.T) {
 	safeTest(t, "Test_Collection_Reverse_Two", func() {
 		c := corestr.New.Collection.Strings([]string{"a", "b"})
 		c.Reverse()
@@ -684,7 +684,7 @@ func Test_CharHashsetMap_AddStringsLock_FromCollectionIndexAtIte(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_AddStringsLock_Empty(t *testing.T) {
+func Test_CharHashsetMap_AddStringsLock_Empty_CollectionIndexat(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_AddStringsLock_Empty", func() {
 		chm := corestr.New.CharHashsetMap.Cap(10, 5)
 		chm.AddStringsLock()

@@ -338,7 +338,7 @@ func Test_TypedDynamic_Constructors(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedDynamic returns correct value -- constructors", actual)
 }
 
-func Test_TypedDynamic_GetAs(t *testing.T) {
+func Test_TypedDynamic_GetAs_TypesamestatusSametypes(t *testing.T) {
 	// Arrange
 	ds := coredynamic.NewTypedDynamic("hello", true)
 	di := coredynamic.NewTypedDynamic(42, true)
@@ -401,7 +401,7 @@ func Test_TypedDynamic_Value(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedDynamic returns correct value -- value", actual)
 }
 
-func Test_TypedDynamic_Json(t *testing.T) {
+func Test_TypedDynamic_Json_TypesamestatusSametypes(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewTypedDynamic("hello", true)
 	jb, jErr := d.JsonBytes()
@@ -530,7 +530,7 @@ func Test_TypedDynamic_UnmarshalBadJSON(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedDynamic returns correct value -- unmarshal bad json", actual)
 }
 
-func Test_TypedDynamic_Deserialize(t *testing.T) {
+func Test_TypedDynamic_Deserialize_TypesamestatusSametypes(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewTypedDynamicPtr("", false)
 	jsonBytes, _ := json.Marshal("world")
@@ -596,7 +596,7 @@ func Test_SimpleResult_Constructors(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "SimpleResult returns correct value -- constructors", actual)
 }
 
-func Test_SimpleResult_InvalidError(t *testing.T) {
+func Test_SimpleResult_InvalidError_TypesamestatusSametypes(t *testing.T) {
 	// Arrange
 	sr := coredynamic.NewSimpleResultValid("hello")
 	srInv := coredynamic.InvalidSimpleResult("err-msg")
@@ -615,7 +615,7 @@ func Test_SimpleResult_InvalidError(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "SimpleResult returns error -- invalid error", actual)
 }
 
-func Test_SimpleResult_TypeMismatch(t *testing.T) {
+func Test_SimpleResult_TypeMismatch_TypesamestatusSametypes(t *testing.T) {
 	// Arrange
 	sr := coredynamic.NewSimpleResultValid("hello")
 	strType := reflect.TypeOf("")
@@ -713,7 +713,7 @@ func Test_SimpleRequest_InvalidError_FromTypeSameStatusSameTy(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "SimpleRequest returns error -- invalid error", actual)
 }
 
-func Test_SimpleRequest_TypeMismatch(t *testing.T) {
+func Test_SimpleRequest_TypeMismatch_TypesamestatusSametypes(t *testing.T) {
 	// Arrange
 	sr := coredynamic.NewSimpleRequestValid("hello")
 	strType := reflect.TypeOf("")

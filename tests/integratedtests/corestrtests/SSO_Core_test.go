@@ -30,7 +30,7 @@ func Test_SSO_Value_IsInitialized(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsDefined(t *testing.T) {
+func Test_SSO_IsDefined_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_IsDefined", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("x")
@@ -42,7 +42,7 @@ func Test_SSO_IsDefined(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsUninitialized(t *testing.T) {
+func Test_SSO_IsUninitialized_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_IsUninitialized", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Empty()
@@ -54,7 +54,7 @@ func Test_SSO_IsUninitialized(t *testing.T) {
 	})
 }
 
-func Test_SSO_Invalidate(t *testing.T) {
+func Test_SSO_Invalidate_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_Invalidate", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("val")
@@ -69,7 +69,7 @@ func Test_SSO_Invalidate(t *testing.T) {
 	})
 }
 
-func Test_SSO_Reset(t *testing.T) {
+func Test_SSO_Reset_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_Reset", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("val")
@@ -84,7 +84,7 @@ func Test_SSO_Reset(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsInvalid(t *testing.T) {
+func Test_SSO_IsInvalid_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_IsInvalid", func() {
 		// Arrange
 		uninit := corestr.New.SimpleStringOnce.Empty()
@@ -116,7 +116,7 @@ func Test_SSO_IsInvalid_Nil(t *testing.T) {
 	})
 }
 
-func Test_SSO_ValueBytes(t *testing.T) {
+func Test_SSO_ValueBytes_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_ValueBytes", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("abc")
@@ -146,7 +146,7 @@ func Test_SSO_ValueBytesPtr(t *testing.T) {
 	})
 }
 
-func Test_SSO_SetOnUninitialized(t *testing.T) {
+func Test_SSO_SetOnUninitialized_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_SetOnUninitialized", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Empty()
@@ -164,7 +164,7 @@ func Test_SSO_SetOnUninitialized(t *testing.T) {
 	})
 }
 
-func Test_SSO_SetOnUninitialized_AlreadyInit(t *testing.T) {
+func Test_SSO_SetOnUninitialized_AlreadyInit_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_SetOnUninitialized_AlreadyInit", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("existing")
@@ -245,7 +245,7 @@ func Test_SSO_GetOnce_AlreadyInit(t *testing.T) {
 	})
 }
 
-func Test_SSO_GetOnceFunc(t *testing.T) {
+func Test_SSO_GetOnceFunc_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_GetOnceFunc", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Empty()
@@ -275,7 +275,7 @@ func Test_SSO_GetOnceFunc_AlreadyInit(t *testing.T) {
 	})
 }
 
-func Test_SSO_SetOnceIfUninitialized(t *testing.T) {
+func Test_SSO_SetOnceIfUninitialized_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_SetOnceIfUninitialized", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Empty()
@@ -328,7 +328,7 @@ func Test_SSO_SetInitialize_SetUnInit(t *testing.T) {
 	})
 }
 
-func Test_SSO_ConcatNew(t *testing.T) {
+func Test_SSO_ConcatNew_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_ConcatNew", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("hello")
@@ -438,7 +438,7 @@ func Test_SSO_IsValueBool(t *testing.T) {
 	})
 }
 
-func Test_SSO_SafeValue(t *testing.T) {
+func Test_SSO_SafeValue_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_SafeValue", func() {
 		// Arrange
 		init := corestr.New.SimpleStringOnce.Init("val")
@@ -454,7 +454,7 @@ func Test_SSO_SafeValue(t *testing.T) {
 	})
 }
 
-func Test_SSO_Int(t *testing.T) {
+func Test_SSO_Int_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_Int", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("42")
@@ -470,7 +470,7 @@ func Test_SSO_Int(t *testing.T) {
 	})
 }
 
-func Test_SSO_Byte(t *testing.T) {
+func Test_SSO_Byte_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_Byte", func() {
 		// Arrange
 		valid := corestr.New.SimpleStringOnce.Init("200")
@@ -490,7 +490,7 @@ func Test_SSO_Byte(t *testing.T) {
 	})
 }
 
-func Test_SSO_Int16(t *testing.T) {
+func Test_SSO_Int16_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_Int16", func() {
 		// Arrange
 		valid := corestr.New.SimpleStringOnce.Init("1000")
@@ -510,7 +510,7 @@ func Test_SSO_Int16(t *testing.T) {
 	})
 }
 
-func Test_SSO_Int32(t *testing.T) {
+func Test_SSO_Int32_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_Int32", func() {
 		// Arrange
 		valid := corestr.New.SimpleStringOnce.Init("100000")
@@ -556,7 +556,7 @@ func Test_SSO_Uint32(t *testing.T) {
 	})
 }
 
-func Test_SSO_WithinRange_InRange(t *testing.T) {
+func Test_SSO_WithinRange_InRange_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_WithinRange_InRange", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("50")
@@ -710,7 +710,7 @@ func Test_SSO_Boolean_ConsiderInit_Uninitialized(t *testing.T) {
 	})
 }
 
-func Test_SSO_BooleanDefault(t *testing.T) {
+func Test_SSO_BooleanDefault_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_BooleanDefault", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("yes")
@@ -782,7 +782,7 @@ func Test_SSO_IsSetter_ConsiderInit_Uninitialized(t *testing.T) {
 	})
 }
 
-func Test_SSO_ValueInt(t *testing.T) {
+func Test_SSO_ValueInt_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_ValueInt", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("42")
@@ -850,7 +850,7 @@ func Test_SSO_ValueDefByte(t *testing.T) {
 	})
 }
 
-func Test_SSO_ValueFloat64(t *testing.T) {
+func Test_SSO_ValueFloat64_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_ValueFloat64", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("3.14")
@@ -897,7 +897,7 @@ func Test_SSO_NonPtr_Ptr(t *testing.T) {
 	})
 }
 
-func Test_SSO_HasSafeNonEmpty(t *testing.T) {
+func Test_SSO_HasSafeNonEmpty_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_HasSafeNonEmpty", func() {
 		// Arrange
 		valid := corestr.New.SimpleStringOnce.Init("x")
@@ -913,7 +913,7 @@ func Test_SSO_HasSafeNonEmpty(t *testing.T) {
 	})
 }
 
-func Test_SSO_Is(t *testing.T) {
+func Test_SSO_Is_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_Is", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("hello")
@@ -955,7 +955,7 @@ func Test_SSO_IsAnyOf_Empty(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsContains(t *testing.T) {
+func Test_SSO_IsContains_SsoCore(t *testing.T) {
 	safeTest(t, "Test_SSO_IsContains", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("hello world")

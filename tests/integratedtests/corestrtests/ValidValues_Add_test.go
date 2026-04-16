@@ -169,7 +169,7 @@ func Test_ValidValues_FullStrings_FromValidValuesAddIterat(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_FullStrings_Empty(t *testing.T) {
+func Test_ValidValues_FullStrings_Empty_ValidvaluesAdd(t *testing.T) {
 	safeTest(t, "Test_ValidValues_FullStrings_Empty", func() {
 		vv := corestr.EmptyValidValues()
 		result := vv.FullStrings()
@@ -236,7 +236,7 @@ func Test_ValidValues_Adds_Empty_FromValidValuesAddIterat(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_AddsPtr(t *testing.T) {
+func Test_ValidValues_AddsPtr_ValidvaluesAdd(t *testing.T) {
 	safeTest(t, "Test_ValidValues_AddsPtr", func() {
 		vv := corestr.EmptyValidValues()
 		v1 := &corestr.ValidValue{Value: "a", IsValid: true}

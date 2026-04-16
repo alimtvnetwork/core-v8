@@ -11,7 +11,7 @@ import (
 
 // ===================== LinkedCollectionNode =====================
 
-func Test_LinkedCollectionNode_IsEmpty(t *testing.T) {
+func Test_LinkedCollectionNode_IsEmpty_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollectionNode_IsEmpty", func() {
 		// Arrange
 		var n *corestr.LinkedCollectionNode
@@ -29,7 +29,7 @@ func Test_LinkedCollectionNode_IsEmpty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollectionNode_HasElement(t *testing.T) {
+func Test_LinkedCollectionNode_HasElement_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollectionNode_HasElement", func() {
 		// Arrange
 		col := corestr.New.Collection.Strings([]string{"a"})
@@ -58,7 +58,7 @@ func Test_LinkedCollectionNode_HasNext(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollectionNode_Clone(t *testing.T) {
+func Test_LinkedCollectionNode_Clone_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollectionNode_Clone", func() {
 		// Arrange
 		col := corestr.New.Collection.Strings([]string{"a"})
@@ -76,7 +76,7 @@ func Test_LinkedCollectionNode_Clone(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollectionNode_EndOfChain(t *testing.T) {
+func Test_LinkedCollectionNode_EndOfChain_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollectionNode_EndOfChain", func() {
 		lc := corestr.New.LinkedCollection.Strings("a", "b")
 		end, length := lc.Head().EndOfChain()
@@ -112,7 +112,7 @@ func Test_LinkedCollectionNode_IsEqual_Same(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollectionNode_IsChainEqual(t *testing.T) {
+func Test_LinkedCollectionNode_IsChainEqual_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollectionNode_IsChainEqual", func() {
 		// Arrange
 		lc1 := corestr.New.LinkedCollection.Create()
@@ -129,7 +129,7 @@ func Test_LinkedCollectionNode_IsChainEqual(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollectionNode_IsEqualValue(t *testing.T) {
+func Test_LinkedCollectionNode_IsEqualValue_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollectionNode_IsEqualValue", func() {
 		// Arrange
 		col := corestr.New.Collection.Strings([]string{"a"})
@@ -159,7 +159,7 @@ func Test_LinkedCollectionNode_IsEqualValue_NilBoth(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollectionNode_String(t *testing.T) {
+func Test_LinkedCollectionNode_String_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollectionNode_String", func() {
 		// Arrange
 		col := corestr.New.Collection.Strings([]string{"a"})
@@ -176,7 +176,7 @@ func Test_LinkedCollectionNode_String(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollectionNode_List(t *testing.T) {
+func Test_LinkedCollectionNode_List_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollectionNode_List", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -192,7 +192,7 @@ func Test_LinkedCollectionNode_List(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollectionNode_ListPtr(t *testing.T) {
+func Test_LinkedCollectionNode_ListPtr_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollectionNode_ListPtr", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -208,7 +208,7 @@ func Test_LinkedCollectionNode_ListPtr(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollectionNode_Join(t *testing.T) {
+func Test_LinkedCollectionNode_Join_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollectionNode_Join", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -224,7 +224,7 @@ func Test_LinkedCollectionNode_Join(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollectionNode_StringList(t *testing.T) {
+func Test_LinkedCollectionNode_StringList_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollectionNode_StringList", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -240,7 +240,7 @@ func Test_LinkedCollectionNode_StringList(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollectionNode_Print(t *testing.T) {
+func Test_LinkedCollectionNode_Print_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollectionNode_Print", func() {
 		lc := corestr.New.LinkedCollection.Create()
 		lc.AddStrings("a")
@@ -248,7 +248,7 @@ func Test_LinkedCollectionNode_Print(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollectionNode_LoopEndOfChain(t *testing.T) {
+func Test_LinkedCollectionNode_LoopEndOfChain_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollectionNode_LoopEndOfChain", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -290,7 +290,7 @@ func Test_LinkedCollectionNode_LoopEndOfChain_BreakFirst(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollectionNode_AddNext(t *testing.T) {
+func Test_LinkedCollectionNode_AddNext_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollectionNode_AddNext", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -310,7 +310,7 @@ func Test_LinkedCollectionNode_AddNext(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollectionNode_AddNextNode(t *testing.T) {
+func Test_LinkedCollectionNode_AddNextNode_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollectionNode_AddNextNode", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -328,7 +328,7 @@ func Test_LinkedCollectionNode_AddNextNode(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollectionNode_CreateLinkedList(t *testing.T) {
+func Test_LinkedCollectionNode_CreateLinkedList_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollectionNode_CreateLinkedList", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -361,7 +361,7 @@ func Test_LinkedCollections_Create_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_Add(t *testing.T) {
+func Test_LinkedCollections_Add_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_Add", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -393,7 +393,7 @@ func Test_LinkedCollections_AddMultiple(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AddStrings(t *testing.T) {
+func Test_LinkedCollections_AddStrings_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AddStrings", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -423,7 +423,7 @@ func Test_LinkedCollections_AddStrings_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AddStringsLock(t *testing.T) {
+func Test_LinkedCollections_AddStringsLock_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AddStringsLock", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -453,7 +453,7 @@ func Test_LinkedCollections_AddStringsLock_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AddLock(t *testing.T) {
+func Test_LinkedCollections_AddLock_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AddLock", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -500,7 +500,7 @@ func Test_LinkedCollections_AddFront_NonEmpty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AddFrontLock(t *testing.T) {
+func Test_LinkedCollections_AddFrontLock_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AddFrontLock", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -591,7 +591,7 @@ func Test_LinkedCollections_First_Single_Last(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_FirstOrDefault_Empty(t *testing.T) {
+func Test_LinkedCollections_FirstOrDefault_Empty_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_FirstOrDefault_Empty", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -606,7 +606,7 @@ func Test_LinkedCollections_FirstOrDefault_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_LastOrDefault_Empty(t *testing.T) {
+func Test_LinkedCollections_LastOrDefault_Empty_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_LastOrDefault_Empty", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -621,7 +621,7 @@ func Test_LinkedCollections_LastOrDefault_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AllIndividualItemsLength(t *testing.T) {
+func Test_LinkedCollections_AllIndividualItemsLength_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AllIndividualItemsLength", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -637,7 +637,7 @@ func Test_LinkedCollections_AllIndividualItemsLength(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_LengthLock(t *testing.T) {
+func Test_LinkedCollections_LengthLock_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_LengthLock", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -652,7 +652,7 @@ func Test_LinkedCollections_LengthLock(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_IsEmptyLock(t *testing.T) {
+func Test_LinkedCollections_IsEmptyLock_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_IsEmptyLock", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -666,7 +666,7 @@ func Test_LinkedCollections_IsEmptyLock(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AppendNode_Empty(t *testing.T) {
+func Test_LinkedCollections_AppendNode_Empty_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AppendNode_Empty", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -699,7 +699,7 @@ func Test_LinkedCollections_AppendNode_NonEmpty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AddBackNode(t *testing.T) {
+func Test_LinkedCollections_AddBackNode_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AddBackNode", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -715,7 +715,7 @@ func Test_LinkedCollections_AddBackNode(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AppendChainOfNodes(t *testing.T) {
+func Test_LinkedCollections_AppendChainOfNodes_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AppendChainOfNodes", func() {
 		// Arrange
 		lc1 := corestr.New.LinkedCollection.Create()
@@ -753,7 +753,7 @@ func Test_LinkedCollections_AppendChainOfNodes_NonEmpty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AppendChainOfNodesAsync(t *testing.T) {
+func Test_LinkedCollections_AppendChainOfNodesAsync_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AppendChainOfNodesAsync", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -776,7 +776,7 @@ func Test_LinkedCollections_AppendChainOfNodesAsync(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AttachWithNode_NilCurrent(t *testing.T) {
+func Test_LinkedCollections_AttachWithNode_NilCurrent_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AttachWithNode_NilCurrent", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -792,7 +792,7 @@ func Test_LinkedCollections_AttachWithNode_NilCurrent(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AddAnother(t *testing.T) {
+func Test_LinkedCollections_AddAnother_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AddAnother", func() {
 		// Arrange
 		lc1 := corestr.New.LinkedCollection.Create()
@@ -811,7 +811,7 @@ func Test_LinkedCollections_AddAnother(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AddAnother_Nil(t *testing.T) {
+func Test_LinkedCollections_AddAnother_Nil_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AddAnother_Nil", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -841,7 +841,7 @@ func Test_LinkedCollections_AddCollection_Nil(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AddCollection(t *testing.T) {
+func Test_LinkedCollections_AddCollection_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AddCollection", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -856,7 +856,7 @@ func Test_LinkedCollections_AddCollection(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AppendCollections(t *testing.T) {
+func Test_LinkedCollections_AppendCollections_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AppendCollections", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -888,7 +888,7 @@ func Test_LinkedCollections_AppendCollections_NilSkip(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AddStringsOfStrings(t *testing.T) {
+func Test_LinkedCollections_AddStringsOfStrings_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AddStringsOfStrings", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -918,7 +918,7 @@ func Test_LinkedCollections_AddStringsOfStrings_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_Loop(t *testing.T) {
+func Test_LinkedCollections_Loop_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_Loop", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -939,7 +939,7 @@ func Test_LinkedCollections_Loop(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_Loop_Empty(t *testing.T) {
+func Test_LinkedCollections_Loop_Empty_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_Loop_Empty", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -956,7 +956,7 @@ func Test_LinkedCollections_Loop_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_Filter(t *testing.T) {
+func Test_LinkedCollections_Filter_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_Filter", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -975,7 +975,7 @@ func Test_LinkedCollections_Filter(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_FilterAsCollection(t *testing.T) {
+func Test_LinkedCollections_FilterAsCollection_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_FilterAsCollection", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -994,7 +994,7 @@ func Test_LinkedCollections_FilterAsCollection(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_FilterAsCollections(t *testing.T) {
+func Test_LinkedCollections_FilterAsCollections_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_FilterAsCollections", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1012,7 +1012,7 @@ func Test_LinkedCollections_FilterAsCollections(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_GetNextNodes(t *testing.T) {
+func Test_LinkedCollections_GetNextNodes_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_GetNextNodes", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1030,7 +1030,7 @@ func Test_LinkedCollections_GetNextNodes(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_GetAllLinkedNodes(t *testing.T) {
+func Test_LinkedCollections_GetAllLinkedNodes_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_GetAllLinkedNodes", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1046,7 +1046,7 @@ func Test_LinkedCollections_GetAllLinkedNodes(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_InsertAt_Front(t *testing.T) {
+func Test_LinkedCollections_InsertAt_Front_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_InsertAt_Front", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1062,7 +1062,7 @@ func Test_LinkedCollections_InsertAt_Front(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_RemoveNodeByIndex(t *testing.T) {
+func Test_LinkedCollections_RemoveNodeByIndex_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_RemoveNodeByIndex", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1080,7 +1080,7 @@ func Test_LinkedCollections_RemoveNodeByIndex(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_RemoveNodeByIndex_First(t *testing.T) {
+func Test_LinkedCollections_RemoveNodeByIndex_First_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_RemoveNodeByIndex_First", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1097,7 +1097,7 @@ func Test_LinkedCollections_RemoveNodeByIndex_First(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_RemoveNode(t *testing.T) {
+func Test_LinkedCollections_RemoveNode_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_RemoveNode", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1114,7 +1114,7 @@ func Test_LinkedCollections_RemoveNode(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_RemoveNodeByIndexes(t *testing.T) {
+func Test_LinkedCollections_RemoveNodeByIndexes_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_RemoveNodeByIndexes", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1148,7 +1148,7 @@ func Test_LinkedCollections_RemoveNodeByIndexes_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_IndexAt(t *testing.T) {
+func Test_LinkedCollections_IndexAt_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_IndexAt", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1169,7 +1169,7 @@ func Test_LinkedCollections_IndexAt(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_SafeIndexAt(t *testing.T) {
+func Test_LinkedCollections_SafeIndexAt_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_SafeIndexAt", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1193,7 +1193,7 @@ func Test_LinkedCollections_SafeIndexAt(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_SafePointerIndexAt(t *testing.T) {
+func Test_LinkedCollections_SafePointerIndexAt_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_SafePointerIndexAt", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1213,7 +1213,7 @@ func Test_LinkedCollections_SafePointerIndexAt(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_IsEqualsPtr(t *testing.T) {
+func Test_LinkedCollections_IsEqualsPtr_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_IsEqualsPtr", func() {
 		// Arrange
 		lc1 := corestr.New.LinkedCollection.Create()
@@ -1230,7 +1230,7 @@ func Test_LinkedCollections_IsEqualsPtr(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_IsEqualsPtr_Nil(t *testing.T) {
+func Test_LinkedCollections_IsEqualsPtr_Nil_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_IsEqualsPtr_Nil", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1259,7 +1259,7 @@ func Test_LinkedCollections_IsEqualsPtr_SameRef(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_IsEqualsPtr_BothEmpty(t *testing.T) {
+func Test_LinkedCollections_IsEqualsPtr_BothEmpty_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_IsEqualsPtr_BothEmpty", func() {
 		// Arrange
 		lc1 := corestr.New.LinkedCollection.Create()
@@ -1292,7 +1292,7 @@ func Test_LinkedCollections_IsEqualsPtr_DiffLength(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_ToCollection(t *testing.T) {
+func Test_LinkedCollections_ToCollection_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_ToCollection", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1309,7 +1309,7 @@ func Test_LinkedCollections_ToCollection(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_ToCollection_Empty(t *testing.T) {
+func Test_LinkedCollections_ToCollection_Empty_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_ToCollection_Empty", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1324,7 +1324,7 @@ func Test_LinkedCollections_ToCollection_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_ToCollectionSimple(t *testing.T) {
+func Test_LinkedCollections_ToCollectionSimple_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_ToCollectionSimple", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1340,7 +1340,7 @@ func Test_LinkedCollections_ToCollectionSimple(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_ToStrings(t *testing.T) {
+func Test_LinkedCollections_ToStrings_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_ToStrings", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1356,7 +1356,7 @@ func Test_LinkedCollections_ToStrings(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_ToStringsPtr(t *testing.T) {
+func Test_LinkedCollections_ToStringsPtr_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_ToStringsPtr", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1372,7 +1372,7 @@ func Test_LinkedCollections_ToStringsPtr(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_ToCollectionsOfCollection(t *testing.T) {
+func Test_LinkedCollections_ToCollectionsOfCollection_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_ToCollectionsOfCollection", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1388,7 +1388,7 @@ func Test_LinkedCollections_ToCollectionsOfCollection(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_ToCollectionsOfCollection_Empty(t *testing.T) {
+func Test_LinkedCollections_ToCollectionsOfCollection_Empty_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_ToCollectionsOfCollection_Empty", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1403,7 +1403,7 @@ func Test_LinkedCollections_ToCollectionsOfCollection_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_ItemsOfItems(t *testing.T) {
+func Test_LinkedCollections_ItemsOfItems_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_ItemsOfItems", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1435,7 +1435,7 @@ func Test_LinkedCollections_ItemsOfItems_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_ItemsOfItemsCollection(t *testing.T) {
+func Test_LinkedCollections_ItemsOfItemsCollection_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_ItemsOfItemsCollection", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1451,7 +1451,7 @@ func Test_LinkedCollections_ItemsOfItemsCollection(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_SimpleSlice(t *testing.T) {
+func Test_LinkedCollections_SimpleSlice_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_SimpleSlice", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1467,7 +1467,7 @@ func Test_LinkedCollections_SimpleSlice(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_List(t *testing.T) {
+func Test_LinkedCollections_List_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_List", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1498,7 +1498,7 @@ func Test_LinkedCollections_List_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_ListPtr(t *testing.T) {
+func Test_LinkedCollections_ListPtr_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_ListPtr", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1514,7 +1514,7 @@ func Test_LinkedCollections_ListPtr(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_String_Empty(t *testing.T) {
+func Test_LinkedCollections_String_Empty_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_String_Empty", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1545,7 +1545,7 @@ func Test_LinkedCollections_String_NonEmpty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_StringLock(t *testing.T) {
+func Test_LinkedCollections_StringLock_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_StringLock", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1576,7 +1576,7 @@ func Test_LinkedCollections_StringLock_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_Join(t *testing.T) {
+func Test_LinkedCollections_Join_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_Join", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1592,7 +1592,7 @@ func Test_LinkedCollections_Join(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_Joins(t *testing.T) {
+func Test_LinkedCollections_Joins_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_Joins", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1623,7 +1623,7 @@ func Test_LinkedCollections_Joins_NilItems(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_ConcatNew(t *testing.T) {
+func Test_LinkedCollections_ConcatNew_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_ConcatNew", func() {
 		// Arrange
 		lc1 := corestr.New.LinkedCollection.Create()
@@ -1641,7 +1641,7 @@ func Test_LinkedCollections_ConcatNew(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_ConcatNew_EmptyClone(t *testing.T) {
+func Test_LinkedCollections_ConcatNew_EmptyClone_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_ConcatNew_EmptyClone", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1657,7 +1657,7 @@ func Test_LinkedCollections_ConcatNew_EmptyClone(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_ConcatNew_EmptyNoClone(t *testing.T) {
+func Test_LinkedCollections_ConcatNew_EmptyNoClone_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_ConcatNew_EmptyNoClone", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1673,7 +1673,7 @@ func Test_LinkedCollections_ConcatNew_EmptyNoClone(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_Clear(t *testing.T) {
+func Test_LinkedCollections_Clear_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_Clear", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1696,7 +1696,7 @@ func Test_LinkedCollections_Clear_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_RemoveAll(t *testing.T) {
+func Test_LinkedCollections_RemoveAll_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_RemoveAll", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1712,7 +1712,7 @@ func Test_LinkedCollections_RemoveAll(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_GetCompareSummary(t *testing.T) {
+func Test_LinkedCollections_GetCompareSummary_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_GetCompareSummary", func() {
 		// Arrange
 		lc1 := corestr.New.LinkedCollection.Create()
@@ -1731,7 +1731,7 @@ func Test_LinkedCollections_GetCompareSummary(t *testing.T) {
 }
 
 // JSON
-func Test_LinkedCollections_MarshalJSON(t *testing.T) {
+func Test_LinkedCollections_MarshalJSON_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_MarshalJSON", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1752,7 +1752,7 @@ func Test_LinkedCollections_MarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_UnmarshalJSON(t *testing.T) {
+func Test_LinkedCollections_UnmarshalJSON_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_UnmarshalJSON", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1771,7 +1771,7 @@ func Test_LinkedCollections_UnmarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_Json(t *testing.T) {
+func Test_LinkedCollections_Json_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_Json", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1787,7 +1787,7 @@ func Test_LinkedCollections_Json(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_JsonPtr(t *testing.T) {
+func Test_LinkedCollections_JsonPtr_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_JsonPtr", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1803,7 +1803,7 @@ func Test_LinkedCollections_JsonPtr(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_ParseInjectUsingJson(t *testing.T) {
+func Test_LinkedCollections_ParseInjectUsingJson_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_ParseInjectUsingJson", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1821,7 +1821,7 @@ func Test_LinkedCollections_ParseInjectUsingJson(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_ParseInjectUsingJsonMust(t *testing.T) {
+func Test_LinkedCollections_ParseInjectUsingJsonMust_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_ParseInjectUsingJsonMust", func() {
 		lc := corestr.New.LinkedCollection.Create()
 		lc.AddStrings("a")
@@ -1832,7 +1832,7 @@ func Test_LinkedCollections_ParseInjectUsingJsonMust(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_JsonParseSelfInject(t *testing.T) {
+func Test_LinkedCollections_JsonParseSelfInject_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_JsonParseSelfInject", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1850,7 +1850,7 @@ func Test_LinkedCollections_JsonParseSelfInject(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_JsonModel(t *testing.T) {
+func Test_LinkedCollections_JsonModel_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_JsonModel", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -1866,7 +1866,7 @@ func Test_LinkedCollections_JsonModel(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_JsonModelAny(t *testing.T) {
+func Test_LinkedCollections_JsonModelAny_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_JsonModelAny", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -2028,7 +2028,7 @@ func Test_NewLinkedCollectionCreator_PointerStringsPtr_Nil(t *testing.T) {
 }
 
 // EmptyCreator
-func Test_EmptyCreator_LinkedCollections(t *testing.T) {
+func Test_EmptyCreator_LinkedCollections_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_EmptyCreator_LinkedCollections", func() {
 		// Arrange
 		lc := corestr.Empty.LinkedCollections()
@@ -2066,7 +2066,7 @@ func Test_NonChainedLinkedCollectionNodes_Basic(t *testing.T) {
 	})
 }
 
-func Test_NonChainedLinkedCollectionNodes_FirstOrDefault_Empty(t *testing.T) {
+func Test_NonChainedLinkedCollectionNodes_FirstOrDefault_Empty_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_NonChainedLinkedCollectionNodes_FirstOrDefault_Empty", func() {
 		// Arrange
 		nc := corestr.NewNonChainedLinkedCollectionNodes(0)
@@ -2080,7 +2080,7 @@ func Test_NonChainedLinkedCollectionNodes_FirstOrDefault_Empty(t *testing.T) {
 	})
 }
 
-func Test_NonChainedLinkedCollectionNodes_LastOrDefault_Empty(t *testing.T) {
+func Test_NonChainedLinkedCollectionNodes_LastOrDefault_Empty_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_NonChainedLinkedCollectionNodes_LastOrDefault_Empty", func() {
 		// Arrange
 		nc := corestr.NewNonChainedLinkedCollectionNodes(0)
@@ -2094,7 +2094,7 @@ func Test_NonChainedLinkedCollectionNodes_LastOrDefault_Empty(t *testing.T) {
 	})
 }
 
-func Test_NonChainedLinkedCollectionNodes_ApplyChaining(t *testing.T) {
+func Test_NonChainedLinkedCollectionNodes_ApplyChaining_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_NonChainedLinkedCollectionNodes_ApplyChaining", func() {
 		// Arrange
 		nc := corestr.NewNonChainedLinkedCollectionNodes(2)
@@ -2115,7 +2115,7 @@ func Test_NonChainedLinkedCollectionNodes_ApplyChaining(t *testing.T) {
 	})
 }
 
-func Test_NonChainedLinkedCollectionNodes_ToChainedNodes(t *testing.T) {
+func Test_NonChainedLinkedCollectionNodes_ToChainedNodes_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_NonChainedLinkedCollectionNodes_ToChainedNodes", func() {
 		nc := corestr.NewNonChainedLinkedCollectionNodes(2)
 		nc.Adds(
@@ -2143,7 +2143,7 @@ func Test_NonChainedLinkedCollectionNodes_ToChainedNodes_Empty(t *testing.T) {
 }
 
 // Async tests
-func Test_LinkedCollections_AddAsync(t *testing.T) {
+func Test_LinkedCollections_AddAsync_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AddAsync", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -2161,7 +2161,7 @@ func Test_LinkedCollections_AddAsync(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AddStringsAsync(t *testing.T) {
+func Test_LinkedCollections_AddStringsAsync_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AddStringsAsync", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -2179,7 +2179,7 @@ func Test_LinkedCollections_AddStringsAsync(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AddStringsAsync_Nil(t *testing.T) {
+func Test_LinkedCollections_AddStringsAsync_Nil_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AddStringsAsync_Nil", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -2194,7 +2194,7 @@ func Test_LinkedCollections_AddStringsAsync_Nil(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AddAsyncFuncItems(t *testing.T) {
+func Test_LinkedCollections_AddAsyncFuncItems_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AddAsyncFuncItems", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -2213,7 +2213,7 @@ func Test_LinkedCollections_AddAsyncFuncItems(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AddAsyncFuncItems_Nil(t *testing.T) {
+func Test_LinkedCollections_AddAsyncFuncItems_Nil_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AddAsyncFuncItems_Nil", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -2228,7 +2228,7 @@ func Test_LinkedCollections_AddAsyncFuncItems_Nil(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AddAsyncFuncItemsPointer(t *testing.T) {
+func Test_LinkedCollections_AddAsyncFuncItemsPointer_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AddAsyncFuncItemsPointer", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -2266,7 +2266,7 @@ func Test_LinkedCollections_AddAsyncFuncItemsPointer_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AddCollectionsPtr(t *testing.T) {
+func Test_LinkedCollections_AddCollectionsPtr_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AddCollectionsPtr", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()
@@ -2297,7 +2297,7 @@ func Test_LinkedCollections_AddCollectionsPtr_Empty(t *testing.T) {
 	})
 }
 
-func Test_LinkedCollections_AddCollections(t *testing.T) {
+func Test_LinkedCollections_AddCollections_LinkedcollectionnodeI8(t *testing.T) {
 	safeTest(t, "Test_LinkedCollections_AddCollections", func() {
 		// Arrange
 		lc := corestr.New.LinkedCollection.Create()

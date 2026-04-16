@@ -407,7 +407,7 @@ func Test_LMR_New(t *testing.T) {
 	})
 }
 
-func Test_LMR_Invalid(t *testing.T) {
+func Test_LMR_Invalid_LeftrightNewleftrightExtended(t *testing.T) {
 	safeTest(t, "Test_LMR_Invalid", func() {
 		lmr := corestr.InvalidLeftMiddleRight("err")
 		tc := caseV1Compat{Name: "LMR Invalid", Expected: false, Actual: lmr.IsValid, Args: args.Map{}}
@@ -689,7 +689,7 @@ func Test_ValidValue_InvalidNoMsg(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_IsEmpty(t *testing.T) {
+func Test_ValidValue_IsEmpty_LeftrightNewleftrightExtended(t *testing.T) {
 	safeTest(t, "Test_ValidValue_IsEmpty", func() {
 		vv := corestr.NewValidValue("")
 		tc := caseV1Compat{Name: "VV IsEmpty", Expected: true, Actual: vv.IsEmpty(), Args: args.Map{}}
@@ -729,7 +729,7 @@ func Test_ValidValue_HasValidNonEmpty_FromLeftRightNewLeftRigh(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_HasValidNonWhitespace(t *testing.T) {
+func Test_ValidValue_HasValidNonWhitespace_LeftrightNewleftrightExtended(t *testing.T) {
 	safeTest(t, "Test_ValidValue_HasValidNonWhitespace", func() {
 		vv := corestr.NewValidValue("x")
 		tc := caseV1Compat{Name: "VV HasValidNonWS", Expected: true, Actual: vv.HasValidNonWhitespace(), Args: args.Map{}}
@@ -739,7 +739,7 @@ func Test_ValidValue_HasValidNonWhitespace(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_HasSafeNonEmpty(t *testing.T) {
+func Test_ValidValue_HasSafeNonEmpty_LeftrightNewleftrightExtended(t *testing.T) {
 	safeTest(t, "Test_ValidValue_HasSafeNonEmpty", func() {
 		vv := corestr.NewValidValue("x")
 		tc := caseV1Compat{Name: "VV HasSafeNonEmpty", Expected: true, Actual: vv.HasSafeNonEmpty(), Args: args.Map{}}
@@ -769,7 +769,7 @@ func Test_ValidValue_ValueInt_FromLeftRightNewLeftRigh(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ValueDefInt(t *testing.T) {
+func Test_ValidValue_ValueDefInt_LeftrightNewleftrightExtended(t *testing.T) {
 	safeTest(t, "Test_ValidValue_ValueDefInt", func() {
 		vv := corestr.NewValidValue("10")
 		tc := caseV1Compat{Name: "VV ValueDefInt", Expected: 10, Actual: vv.ValueDefInt(), Args: args.Map{}}
@@ -829,7 +829,7 @@ func Test_ValidValue_IsEqualNonSensitive_FromLeftRightNewLeftRigh(t *testing.T) 
 	})
 }
 
-func Test_ValidValue_IsRegexMatches(t *testing.T) {
+func Test_ValidValue_IsRegexMatches_LeftrightNewleftrightExtended(t *testing.T) {
 	safeTest(t, "Test_ValidValue_IsRegexMatches", func() {
 		vv := corestr.NewValidValue("abc123")
 		re := regexp.MustCompile(`\d+`)
@@ -1086,7 +1086,7 @@ func Test_TextWithLineNumber_HasLineNumber_FromLeftRightNewLeftRigh(t *testing.T
 	})
 }
 
-func Test_TextWithLineNumber_IsInvalidLineNumber(t *testing.T) {
+func Test_TextWithLineNumber_IsInvalidLineNumber_LeftrightNewleftrightExtended(t *testing.T) {
 	safeTest(t, "Test_TextWithLineNumber_IsInvalidLineNumber", func() {
 		twl := &corestr.TextWithLineNumber{LineNumber: -1, Text: "hello"}
 		tc := caseV1Compat{Name: "TWL IsInvalidLineNumber", Expected: true, Actual: twl.IsInvalidLineNumber(), Args: args.Map{}}
@@ -1096,7 +1096,7 @@ func Test_TextWithLineNumber_IsInvalidLineNumber(t *testing.T) {
 	})
 }
 
-func Test_TextWithLineNumber_Length(t *testing.T) {
+func Test_TextWithLineNumber_Length_LeftrightNewleftrightExtended(t *testing.T) {
 	safeTest(t, "Test_TextWithLineNumber_Length", func() {
 		twl := &corestr.TextWithLineNumber{LineNumber: 1, Text: "hello"}
 		tc := caseV1Compat{Name: "TWL Length", Expected: 5, Actual: twl.Length(), Args: args.Map{}}
@@ -1106,7 +1106,7 @@ func Test_TextWithLineNumber_Length(t *testing.T) {
 	})
 }
 
-func Test_TextWithLineNumber_IsEmpty(t *testing.T) {
+func Test_TextWithLineNumber_IsEmpty_LeftrightNewleftrightExtended(t *testing.T) {
 	safeTest(t, "Test_TextWithLineNumber_IsEmpty", func() {
 		twl := &corestr.TextWithLineNumber{LineNumber: -1, Text: ""}
 		tc := caseV1Compat{Name: "TWL IsEmpty", Expected: true, Actual: twl.IsEmpty(), Args: args.Map{}}
@@ -1116,7 +1116,7 @@ func Test_TextWithLineNumber_IsEmpty(t *testing.T) {
 	})
 }
 
-func Test_TextWithLineNumber_IsEmptyText(t *testing.T) {
+func Test_TextWithLineNumber_IsEmptyText_LeftrightNewleftrightExtended(t *testing.T) {
 	safeTest(t, "Test_TextWithLineNumber_IsEmptyText", func() {
 		twl := &corestr.TextWithLineNumber{LineNumber: 1, Text: ""}
 		tc := caseV1Compat{Name: "TWL IsEmptyText", Expected: true, Actual: twl.IsEmptyText(), Args: args.Map{}}

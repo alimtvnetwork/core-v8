@@ -68,13 +68,13 @@ func Test_AnyTo_SerializedJsonResult_Any(t *testing.T) {
 	_ = out
 }
 
-func Test_AnyTo_SerializedRaw(t *testing.T) {
+func Test_AnyTo_SerializedRaw_AnytoDeser(t *testing.T) {
 	b, err := corejson.AnyTo.SerializedRaw("hello")
 	_ = b
 	_ = err
 }
 
-func Test_AnyTo_SerializedString(t *testing.T) {
+func Test_AnyTo_SerializedString_AnytoDeser(t *testing.T) {
 	// Arrange
 	s, err := corejson.AnyTo.SerializedString("hello")
 
@@ -98,7 +98,7 @@ func Test_AnyTo_SerializedString_Error(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected error", actual)
 }
 
-func Test_AnyTo_SerializedSafeString(t *testing.T) {
+func Test_AnyTo_SerializedSafeString_AnytoDeser(t *testing.T) {
 	// Arrange
 	s := corejson.AnyTo.SerializedSafeString("hello")
 
@@ -122,7 +122,7 @@ func Test_AnyTo_SerializedSafeString_Error(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected empty for error", actual)
 }
 
-func Test_AnyTo_SerializedStringMust(t *testing.T) {
+func Test_AnyTo_SerializedStringMust_AnytoDeser(t *testing.T) {
 	// Arrange
 	s := corejson.AnyTo.SerializedStringMust("hello")
 
@@ -134,7 +134,7 @@ func Test_AnyTo_SerializedStringMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected non-empty", actual)
 }
 
-func Test_AnyTo_SafeJsonString(t *testing.T) {
+func Test_AnyTo_SafeJsonString_AnytoDeser(t *testing.T) {
 	// Arrange
 	s := corejson.AnyTo.SafeJsonString("hello")
 
@@ -344,7 +344,7 @@ func Test_AnyTo_JsonStringWithErr_Any(t *testing.T) {
 	_, _ = corejson.AnyTo.JsonStringWithErr(42)
 }
 
-func Test_AnyTo_JsonStringMust(t *testing.T) {
+func Test_AnyTo_JsonStringMust_AnytoDeser(t *testing.T) {
 	// Arrange
 	s := corejson.AnyTo.JsonStringMust("hello")
 
@@ -361,7 +361,7 @@ func Test_AnyTo_JsonStringMust_Panic(t *testing.T) {
 	corejson.AnyTo.JsonStringMust(make(chan int))
 }
 
-func Test_AnyTo_PrettyStringMust(t *testing.T) {
+func Test_AnyTo_PrettyStringMust_AnytoDeser(t *testing.T) {
 	s := corejson.AnyTo.PrettyStringMust("hello")
 	_ = s
 }
@@ -375,7 +375,7 @@ func Test_AnyTo_UsingSerializer(t *testing.T) {
 	_ = corejson.AnyTo.UsingSerializer(nil)
 }
 
-func Test_AnyTo_SerializedFieldsMap(t *testing.T) {
+func Test_AnyTo_SerializedFieldsMap_AnytoDeser(t *testing.T) {
 	m, err := corejson.AnyTo.SerializedFieldsMap(map[string]string{"a": "b"})
 	_ = m
 	_ = err
@@ -1068,20 +1068,20 @@ func Test_ResultTo_BytesMust(t *testing.T) {
 
 // ── castingAny ──
 
-func Test_CastAny_FromToReflection(t *testing.T) {
+func Test_CastAny_FromToReflection_AnytoDeser(t *testing.T) {
 	src := "hello"
 	dst := ""
 	err := corejson.CastAny.FromToReflection(&src, &dst)
 	_ = err
 }
 
-func Test_CastAny_OrDeserializeTo(t *testing.T) {
+func Test_CastAny_OrDeserializeTo_AnytoDeser(t *testing.T) {
 	var s string
 	err := corejson.CastAny.OrDeserializeTo(`"hello"`, &s)
 	_ = err
 }
 
-func Test_CastAny_FromToOption_Bytes(t *testing.T) {
+func Test_CastAny_FromToOption_Bytes_AnytoDeser(t *testing.T) {
 	// Arrange
 	var s string
 	err := corejson.CastAny.FromToOption(false, []byte(`"hello"`), &s)
@@ -1094,7 +1094,7 @@ func Test_CastAny_FromToOption_Bytes(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_CastAny_FromToOption_String(t *testing.T) {
+func Test_CastAny_FromToOption_String_AnytoDeser(t *testing.T) {
 	// Arrange
 	var s string
 	err := corejson.CastAny.FromToOption(false, `"hello"`, &s)
@@ -1127,7 +1127,7 @@ func Test_CastAny_FromToOption_NilError(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "err", actual)
 }
 
-func Test_CastAny_FromToOption_SerializerFunc(t *testing.T) {
+func Test_CastAny_FromToOption_SerializerFunc_AnytoDeser(t *testing.T) {
 	// Arrange
 	var s string
 	f := func() ([]byte, error) { return json.Marshal("hello") }

@@ -11,7 +11,7 @@ import (
 
 // ── Collection basics ──
 
-func Test_Collection_JsonString(t *testing.T) {
+func Test_Collection_JsonString_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_Collection_JsonString", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b"})
@@ -33,7 +33,7 @@ func Test_Collection_JsonStringMust(t *testing.T) {
 	})
 }
 
-func Test_Collection_HasAnyItem(t *testing.T) {
+func Test_Collection_HasAnyItem_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_Collection_HasAnyItem", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a"})
@@ -78,7 +78,7 @@ func Test_Collection_LastIndex_HasIndex(t *testing.T) {
 	})
 }
 
-func Test_Collection_ListStrings(t *testing.T) {
+func Test_Collection_ListStrings_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_Collection_ListStrings", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a"})
@@ -95,14 +95,14 @@ func Test_Collection_ListStrings(t *testing.T) {
 	})
 }
 
-func Test_Collection_StringJSON(t *testing.T) {
+func Test_Collection_StringJSON_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_Collection_StringJSON", func() {
 		c := corestr.New.Collection.Strings([]string{"a"})
 		_ = c.StringJSON()
 	})
 }
 
-func Test_Collection_RemoveAt(t *testing.T) {
+func Test_Collection_RemoveAt_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_Collection_RemoveAt", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b", "c"})
@@ -142,7 +142,7 @@ func Test_Collection_Count_Capacity(t *testing.T) {
 	})
 }
 
-func Test_Collection_Length_Nil(t *testing.T) {
+func Test_Collection_Length_Nil_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_Collection_Length_Nil", func() {
 		// Arrange
 		var nilC *corestr.Collection
@@ -156,7 +156,7 @@ func Test_Collection_Length_Nil(t *testing.T) {
 	})
 }
 
-func Test_Collection_LengthLock(t *testing.T) {
+func Test_Collection_LengthLock_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_Collection_LengthLock", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a"})
@@ -170,7 +170,7 @@ func Test_Collection_LengthLock(t *testing.T) {
 	})
 }
 
-func Test_Collection_IsEquals(t *testing.T) {
+func Test_Collection_IsEquals_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_Collection_IsEquals", func() {
 		// Arrange
 		c1 := corestr.New.Collection.Strings([]string{"a", "b"})
@@ -194,7 +194,7 @@ func Test_Collection_IsEquals(t *testing.T) {
 
 // ── ValidValue ──
 
-func Test_ValidValue_Constructors(t *testing.T) {
+func Test_ValidValue_Constructors_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Constructors", func() {
 		// Arrange
 		v1 := corestr.NewValidValue("hello")
@@ -221,7 +221,7 @@ func Test_ValidValue_Constructors(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ValueBytesOnce(t *testing.T) {
+func Test_ValidValue_ValueBytesOnce_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_ValidValue_ValueBytesOnce", func() {
 		// Arrange
 		v := corestr.NewValidValue("hello")
@@ -261,7 +261,7 @@ func Test_ValidValue_IsEmpty_IsWhitespace(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_HasValidNonEmpty(t *testing.T) {
+func Test_ValidValue_HasValidNonEmpty_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_ValidValue_HasValidNonEmpty", func() {
 		// Arrange
 		v := corestr.NewValidValue("hello")
@@ -283,7 +283,7 @@ func Test_ValidValue_HasValidNonEmpty(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ValueBool(t *testing.T) {
+func Test_ValidValue_ValueBool_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_ValidValue_ValueBool", func() {
 		// Arrange
 		vTrue := corestr.NewValidValue("true")
@@ -308,7 +308,7 @@ func Test_ValidValue_ValueBool(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ValueInt(t *testing.T) {
+func Test_ValidValue_ValueInt_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_ValidValue_ValueInt", func() {
 		// Arrange
 		v := corestr.NewValidValue("42")
@@ -333,7 +333,7 @@ func Test_ValidValue_ValueInt(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ValueByte(t *testing.T) {
+func Test_ValidValue_ValueByte_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_ValidValue_ValueByte", func() {
 		v := corestr.NewValidValue("200")
 		vBad := corestr.NewValidValue("abc")
@@ -347,7 +347,7 @@ func Test_ValidValue_ValueByte(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ValueFloat64(t *testing.T) {
+func Test_ValidValue_ValueFloat64_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_ValidValue_ValueFloat64", func() {
 		// Arrange
 		v := corestr.NewValidValue("3.14")
@@ -416,7 +416,7 @@ func Test_ValidValue_IsContains_IsAnyContains(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_IsEqualNonSensitive(t *testing.T) {
+func Test_ValidValue_IsEqualNonSensitive_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_ValidValue_IsEqualNonSensitive", func() {
 		// Arrange
 		v := corestr.NewValidValue("Hello")
@@ -471,7 +471,7 @@ func Test_ValidValue_Regex(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Split(t *testing.T) {
+func Test_ValidValue_Split_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Split", func() {
 		// Arrange
 		v := corestr.NewValidValue("a,b,c")
@@ -488,7 +488,7 @@ func Test_ValidValue_Split(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Clone(t *testing.T) {
+func Test_ValidValue_Clone_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_ValidValue_Clone", func() {
 		// Arrange
 		v := corestr.NewValidValue("hello")
@@ -566,7 +566,7 @@ func Test_ValidValue_Deserialize(t *testing.T) {
 
 // ── LeftRight ──
 
-func Test_LeftRight_Constructors(t *testing.T) {
+func Test_LeftRight_Constructors_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_LeftRight_Constructors", func() {
 		// Arrange
 		lr := corestr.NewLeftRight("L", "R")
@@ -642,7 +642,7 @@ func Test_LeftRight_Methods(t *testing.T) {
 	})
 }
 
-func Test_LeftRight_IsEqual(t *testing.T) {
+func Test_LeftRight_IsEqual_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_LeftRight_IsEqual", func() {
 		// Arrange
 		lr1 := corestr.NewLeftRight("a", "b")
@@ -716,7 +716,7 @@ func Test_LeftRight_Clone_Clear_Dispose(t *testing.T) {
 
 // ── LeftMiddleRight ──
 
-func Test_LeftMiddleRight_Constructors(t *testing.T) {
+func Test_LeftMiddleRight_Constructors_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_LeftMiddleRight_Constructors", func() {
 		// Arrange
 		lmr := corestr.NewLeftMiddleRight("L", "M", "R")
@@ -738,7 +738,7 @@ func Test_LeftMiddleRight_Constructors(t *testing.T) {
 	})
 }
 
-func Test_LeftMiddleRight_Methods(t *testing.T) {
+func Test_LeftMiddleRight_Methods_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_LeftMiddleRight_Methods", func() {
 		// Arrange
 		lmr := corestr.NewLeftMiddleRight("left", "mid", "right")
@@ -823,7 +823,7 @@ func Test_Hashmap_IsEmpty_HasItems(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_AddOrUpdate(t *testing.T) {
+func Test_Hashmap_AddOrUpdate_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_Hashmap_AddOrUpdate", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Empty()
@@ -856,7 +856,7 @@ func Test_Hashmap_IsEmptyLock(t *testing.T) {
 	})
 }
 
-func Test_Hashmap_Collection(t *testing.T) {
+func Test_Hashmap_Collection_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_Hashmap_Collection", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Empty()
@@ -905,7 +905,7 @@ func Test_Hashset_AddCapacities(t *testing.T) {
 	})
 }
 
-func Test_Hashset_Resize(t *testing.T) {
+func Test_Hashset_Resize_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_Hashset_Resize", func() {
 		hs := corestr.New.Hashset.Strings([]string{"a", "b"})
 		hs.Resize(10)
@@ -1146,7 +1146,7 @@ func Test_SS_AddAsTitleValue(t *testing.T) {
 
 // ── CloneSlice ──
 
-func Test_CloneSlice(t *testing.T) {
+func Test_CloneSlice_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_CloneSlice", func() {
 		// Arrange
 		result := corestr.CloneSlice([]string{"a", "b"})
@@ -1164,7 +1164,7 @@ func Test_CloneSlice(t *testing.T) {
 	})
 }
 
-func Test_CloneSliceIf(t *testing.T) {
+func Test_CloneSliceIf_CollectionFull(t *testing.T) {
 	safeTest(t, "Test_CloneSliceIf", func() {
 		// Arrange
 		result := corestr.CloneSliceIf(true, []string{"a"}...)

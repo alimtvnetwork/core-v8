@@ -30,7 +30,7 @@ func Test_KeyValuePair_KeyName(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_VariableName(t *testing.T) {
+func Test_KeyValuePair_VariableName_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_VariableName", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "port", Value: "8080"}
@@ -60,7 +60,7 @@ func Test_KeyValuePair_ValueString(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_IsVariableNameEqual(t *testing.T) {
+func Test_KeyValuePair_IsVariableNameEqual_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_IsVariableNameEqual", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "name", Value: "x"}
@@ -75,7 +75,7 @@ func Test_KeyValuePair_IsVariableNameEqual(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_IsValueEqual(t *testing.T) {
+func Test_KeyValuePair_IsValueEqual_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_IsValueEqual", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "k", Value: "abc"}
@@ -90,7 +90,7 @@ func Test_KeyValuePair_IsValueEqual(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_Compile(t *testing.T) {
+func Test_KeyValuePair_Compile_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_Compile", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "a", Value: "b"}
@@ -166,7 +166,7 @@ func Test_KeyValuePair_TrimKey_TrimValue(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_ValueBool(t *testing.T) {
+func Test_KeyValuePair_ValueBool_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_ValueBool", func() {
 		// Arrange
 		trueKv := corestr.KeyValuePair{Key: "k", Value: "true"}
@@ -190,7 +190,7 @@ func Test_KeyValuePair_ValueBool(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_ValueInt(t *testing.T) {
+func Test_KeyValuePair_ValueInt_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_ValueInt", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "k", Value: "42"}
@@ -222,7 +222,7 @@ func Test_KeyValuePair_ValueDefInt(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_ValueByte(t *testing.T) {
+func Test_KeyValuePair_ValueByte_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_ValueByte", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "k", Value: "200"}
@@ -262,7 +262,7 @@ func Test_KeyValuePair_ValueDefByte(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_ValueFloat64(t *testing.T) {
+func Test_KeyValuePair_ValueFloat64_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_ValueFloat64", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "k", Value: "3.14"}
@@ -290,7 +290,7 @@ func Test_KeyValuePair_ValueDefFloat64(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_ValueValid(t *testing.T) {
+func Test_KeyValuePair_ValueValid_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_ValueValid", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "k", Value: "myval"}
@@ -305,7 +305,7 @@ func Test_KeyValuePair_ValueValid(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_ValueValidOptions(t *testing.T) {
+func Test_KeyValuePair_ValueValidOptions_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_ValueValidOptions", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "k", Value: "v"}
@@ -320,7 +320,7 @@ func Test_KeyValuePair_ValueValidOptions(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_Is(t *testing.T) {
+func Test_KeyValuePair_Is_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_Is", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "a", Value: "b"}
@@ -353,7 +353,7 @@ func Test_KeyValuePair_IsKey_IsVal(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_IsKeyValueAnyEmpty(t *testing.T) {
+func Test_KeyValuePair_IsKeyValueAnyEmpty_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_IsKeyValueAnyEmpty", func() {
 		// Arrange
 		full := corestr.KeyValuePair{Key: "k", Value: "v"}
@@ -377,7 +377,7 @@ func Test_KeyValuePair_IsKeyValueAnyEmpty(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_FormatString(t *testing.T) {
+func Test_KeyValuePair_FormatString_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_FormatString", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "host", Value: "localhost"}
@@ -392,7 +392,7 @@ func Test_KeyValuePair_FormatString(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_String(t *testing.T) {
+func Test_KeyValuePair_String_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_String", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "a", Value: "b"}
@@ -422,7 +422,7 @@ func Test_KeyValuePair_Clear_Dispose(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_Dispose_Nil(t *testing.T) {
+func Test_KeyValuePair_Dispose_Nil_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_Dispose_Nil", func() {
 		// Arrange
 		var kv *corestr.KeyValuePair
@@ -455,7 +455,7 @@ func Test_KeyValuePair_Json_Serialize(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_SerializeMust(t *testing.T) {
+func Test_KeyValuePair_SerializeMust_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_SerializeMust", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "a", Value: "b"}
@@ -487,7 +487,7 @@ func Test_KeyAnyValuePair_KeyName_VariableName(t *testing.T) {
 	})
 }
 
-func Test_KeyAnyValuePair_ValueAny(t *testing.T) {
+func Test_KeyAnyValuePair_ValueAny_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyAnyValuePair_ValueAny", func() {
 		// Arrange
 		kav := corestr.KeyAnyValuePair{Key: "k", Value: "hello"}
@@ -502,7 +502,7 @@ func Test_KeyAnyValuePair_ValueAny(t *testing.T) {
 	})
 }
 
-func Test_KeyAnyValuePair_IsVariableNameEqual(t *testing.T) {
+func Test_KeyAnyValuePair_IsVariableNameEqual_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyAnyValuePair_IsVariableNameEqual", func() {
 		// Arrange
 		kav := corestr.KeyAnyValuePair{Key: "name", Value: nil}
@@ -541,7 +541,7 @@ func Test_KeyAnyValuePair_IsValueNull_NilReceiver(t *testing.T) {
 	})
 }
 
-func Test_KeyAnyValuePair_HasNonNull(t *testing.T) {
+func Test_KeyAnyValuePair_HasNonNull_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyAnyValuePair_HasNonNull", func() {
 		// Arrange
 		kav := corestr.KeyAnyValuePair{Key: "k", Value: 42}
@@ -557,7 +557,7 @@ func Test_KeyAnyValuePair_HasNonNull(t *testing.T) {
 	})
 }
 
-func Test_KeyAnyValuePair_HasValue(t *testing.T) {
+func Test_KeyAnyValuePair_HasValue_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyAnyValuePair_HasValue", func() {
 		// Arrange
 		kav := corestr.KeyAnyValuePair{Key: "k", Value: "x"}
@@ -569,7 +569,7 @@ func Test_KeyAnyValuePair_HasValue(t *testing.T) {
 	})
 }
 
-func Test_KeyAnyValuePair_IsValueEmptyString(t *testing.T) {
+func Test_KeyAnyValuePair_IsValueEmptyString_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyAnyValuePair_IsValueEmptyString", func() {
 		// Arrange
 		kavEmpty := corestr.KeyAnyValuePair{Key: "k", Value: ""}
@@ -585,7 +585,7 @@ func Test_KeyAnyValuePair_IsValueEmptyString(t *testing.T) {
 	})
 }
 
-func Test_KeyAnyValuePair_IsValueWhitespace(t *testing.T) {
+func Test_KeyAnyValuePair_IsValueWhitespace_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyAnyValuePair_IsValueWhitespace", func() {
 		// Arrange
 		kav := corestr.KeyAnyValuePair{Key: "k", Value: "  "}
@@ -597,7 +597,7 @@ func Test_KeyAnyValuePair_IsValueWhitespace(t *testing.T) {
 	})
 }
 
-func Test_KeyAnyValuePair_ValueString(t *testing.T) {
+func Test_KeyAnyValuePair_ValueString_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyAnyValuePair_ValueString", func() {
 		// Arrange
 		kav := corestr.KeyAnyValuePair{Key: "k", Value: 123}
@@ -612,7 +612,7 @@ func Test_KeyAnyValuePair_ValueString(t *testing.T) {
 	})
 }
 
-func Test_KeyAnyValuePair_Compile(t *testing.T) {
+func Test_KeyAnyValuePair_Compile_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyAnyValuePair_Compile", func() {
 		// Arrange
 		kav := corestr.KeyAnyValuePair{Key: "a", Value: "b"}
@@ -627,7 +627,7 @@ func Test_KeyAnyValuePair_Compile(t *testing.T) {
 	})
 }
 
-func Test_KeyAnyValuePair_String(t *testing.T) {
+func Test_KeyAnyValuePair_String_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyAnyValuePair_String", func() {
 		// Arrange
 		kav := corestr.KeyAnyValuePair{Key: "x", Value: "y"}
@@ -664,7 +664,7 @@ func Test_KeyAnyValuePair_Json_Serialize(t *testing.T) {
 	})
 }
 
-func Test_KeyAnyValuePair_SerializeMust(t *testing.T) {
+func Test_KeyAnyValuePair_SerializeMust_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyAnyValuePair_SerializeMust", func() {
 		// Arrange
 		kav := corestr.KeyAnyValuePair{Key: "k", Value: "v"}
@@ -679,7 +679,7 @@ func Test_KeyAnyValuePair_SerializeMust(t *testing.T) {
 	})
 }
 
-func Test_KeyAnyValuePair_Clear_Dispose(t *testing.T) {
+func Test_KeyAnyValuePair_Clear_Dispose_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyAnyValuePair_Clear_Dispose", func() {
 		// Arrange
 		kav := corestr.KeyAnyValuePair{Key: "k", Value: "v"}
@@ -705,7 +705,7 @@ func Test_KeyAnyValuePair_Dispose_Nil(t *testing.T) {
 	})
 }
 
-func Test_KeyAnyValuePair_AsJsonContractsBinder(t *testing.T) {
+func Test_KeyAnyValuePair_AsJsonContractsBinder_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyAnyValuePair_AsJsonContractsBinder", func() {
 		// Arrange
 		kav := corestr.KeyAnyValuePair{Key: "k", Value: "v"}
@@ -720,7 +720,7 @@ func Test_KeyAnyValuePair_AsJsonContractsBinder(t *testing.T) {
 	})
 }
 
-func Test_KeyAnyValuePair_AsJsoner(t *testing.T) {
+func Test_KeyAnyValuePair_AsJsoner_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyAnyValuePair_AsJsoner", func() {
 		// Arrange
 		kav := corestr.KeyAnyValuePair{Key: "k", Value: "v"}
@@ -750,7 +750,7 @@ func Test_KeyAnyValuePair_AsJsonParseSelfInjector(t *testing.T) {
 	})
 }
 
-func Test_KeyAnyValuePair_ParseInjectUsingJson(t *testing.T) {
+func Test_KeyAnyValuePair_ParseInjectUsingJson_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyAnyValuePair_ParseInjectUsingJson", func() {
 		// Arrange
 		original := corestr.KeyAnyValuePair{Key: "k", Value: "v"}
@@ -821,7 +821,7 @@ func Test_KeyValueCollection_Add_Length(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_AddIf(t *testing.T) {
+func Test_KeyValueCollection_AddIf_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_AddIf", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -860,7 +860,7 @@ func Test_KeyValueCollection_IsEmpty_HasAnyItem(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_Count(t *testing.T) {
+func Test_KeyValueCollection_Count_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_Count", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -873,7 +873,7 @@ func Test_KeyValueCollection_Count(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_First_Last(t *testing.T) {
+func Test_KeyValueCollection_First_Last_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_First_Last", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -889,7 +889,7 @@ func Test_KeyValueCollection_First_Last(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_FirstOrDefault_Empty(t *testing.T) {
+func Test_KeyValueCollection_FirstOrDefault_Empty_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_FirstOrDefault_Empty", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -904,7 +904,7 @@ func Test_KeyValueCollection_FirstOrDefault_Empty(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_LastOrDefault_Empty(t *testing.T) {
+func Test_KeyValueCollection_LastOrDefault_Empty_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_LastOrDefault_Empty", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -919,7 +919,7 @@ func Test_KeyValueCollection_LastOrDefault_Empty(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_LastIndex_HasIndex(t *testing.T) {
+func Test_KeyValueCollection_LastIndex_HasIndex_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_LastIndex_HasIndex", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -960,7 +960,7 @@ func Test_KeyValueCollection_HasKey_IsContains(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_Get(t *testing.T) {
+func Test_KeyValueCollection_Get_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_Get", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -980,7 +980,7 @@ func Test_KeyValueCollection_Get(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_SafeValueAt(t *testing.T) {
+func Test_KeyValueCollection_SafeValueAt_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_SafeValueAt", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -996,7 +996,7 @@ func Test_KeyValueCollection_SafeValueAt(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_SafeValuesAtIndexes(t *testing.T) {
+func Test_KeyValueCollection_SafeValuesAtIndexes_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_SafeValuesAtIndexes", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1012,7 +1012,7 @@ func Test_KeyValueCollection_SafeValuesAtIndexes(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_Strings(t *testing.T) {
+func Test_KeyValueCollection_Strings_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_Strings", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1043,7 +1043,7 @@ func Test_KeyValueCollection_Strings_Empty(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_StringsUsingFormat(t *testing.T) {
+func Test_KeyValueCollection_StringsUsingFormat_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_StringsUsingFormat", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1094,7 +1094,7 @@ func Test_KeyValueCollection_AllKeys_AllValues(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_AllKeysSorted(t *testing.T) {
+func Test_KeyValueCollection_AllKeysSorted_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_AllKeysSorted", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1129,7 +1129,7 @@ func Test_KeyValueCollection_Join_JoinKeys_JoinValues(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_Find(t *testing.T) {
+func Test_KeyValueCollection_Find_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_Find", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1182,7 +1182,7 @@ func Test_KeyValueCollection_Find_Empty(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_AddStringBySplit(t *testing.T) {
+func Test_KeyValueCollection_AddStringBySplit_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_AddStringBySplit", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1197,7 +1197,7 @@ func Test_KeyValueCollection_AddStringBySplit(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_AddStringBySplitTrim(t *testing.T) {
+func Test_KeyValueCollection_AddStringBySplitTrim_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_AddStringBySplitTrim", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1212,7 +1212,7 @@ func Test_KeyValueCollection_AddStringBySplitTrim(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_Adds(t *testing.T) {
+func Test_KeyValueCollection_Adds_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_Adds", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1230,7 +1230,7 @@ func Test_KeyValueCollection_Adds(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_Adds_Empty(t *testing.T) {
+func Test_KeyValueCollection_Adds_Empty_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_Adds_Empty", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1245,7 +1245,7 @@ func Test_KeyValueCollection_Adds_Empty(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_AddMap(t *testing.T) {
+func Test_KeyValueCollection_AddMap_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_AddMap", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1260,7 +1260,7 @@ func Test_KeyValueCollection_AddMap(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_AddMap_Nil(t *testing.T) {
+func Test_KeyValueCollection_AddMap_Nil_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_AddMap_Nil", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1275,7 +1275,7 @@ func Test_KeyValueCollection_AddMap_Nil(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_AddHashsetMap(t *testing.T) {
+func Test_KeyValueCollection_AddHashsetMap_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_AddHashsetMap", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1290,7 +1290,7 @@ func Test_KeyValueCollection_AddHashsetMap(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_AddHashsetMap_Nil(t *testing.T) {
+func Test_KeyValueCollection_AddHashsetMap_Nil_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_AddHashsetMap_Nil", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1305,7 +1305,7 @@ func Test_KeyValueCollection_AddHashsetMap_Nil(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_AddHashset(t *testing.T) {
+func Test_KeyValueCollection_AddHashset_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_AddHashset", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1321,7 +1321,7 @@ func Test_KeyValueCollection_AddHashset(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_AddHashset_Nil(t *testing.T) {
+func Test_KeyValueCollection_AddHashset_Nil_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_AddHashset_Nil", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1336,7 +1336,7 @@ func Test_KeyValueCollection_AddHashset_Nil(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_AddsHashmap(t *testing.T) {
+func Test_KeyValueCollection_AddsHashmap_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_AddsHashmap", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1352,7 +1352,7 @@ func Test_KeyValueCollection_AddsHashmap(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_AddsHashmap_Nil(t *testing.T) {
+func Test_KeyValueCollection_AddsHashmap_Nil_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_AddsHashmap_Nil", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1367,7 +1367,7 @@ func Test_KeyValueCollection_AddsHashmap_Nil(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_AddsHashmaps(t *testing.T) {
+func Test_KeyValueCollection_AddsHashmaps_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_AddsHashmaps", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1384,7 +1384,7 @@ func Test_KeyValueCollection_AddsHashmaps(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_AddsHashmaps_Nil(t *testing.T) {
+func Test_KeyValueCollection_AddsHashmaps_Nil_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_AddsHashmaps_Nil", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1467,7 +1467,7 @@ func Test_KeyValueCollection_MarshalUnmarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_ParseInjectUsingJson(t *testing.T) {
+func Test_KeyValueCollection_ParseInjectUsingJson_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_ParseInjectUsingJson", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1518,7 +1518,7 @@ func Test_KeyValueCollection_AsJsonParseSelfInjector(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_JsonParseSelfInject(t *testing.T) {
+func Test_KeyValueCollection_JsonParseSelfInject_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_JsonParseSelfInject", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1536,7 +1536,7 @@ func Test_KeyValueCollection_JsonParseSelfInject(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_Clear_Dispose(t *testing.T) {
+func Test_KeyValueCollection_Clear_Dispose_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_Clear_Dispose", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1563,7 +1563,7 @@ func Test_KeyValueCollection_Dispose_Nil(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_Deserialize(t *testing.T) {
+func Test_KeyValueCollection_Deserialize_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_Deserialize", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1580,7 +1580,7 @@ func Test_KeyValueCollection_Deserialize(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_SerializeMust(t *testing.T) {
+func Test_KeyValueCollection_SerializeMust_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_SerializeMust", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1708,7 +1708,7 @@ func Test_CollOfColl_IsEmpty_HasItems(t *testing.T) {
 	})
 }
 
-func Test_CollOfColl_Length(t *testing.T) {
+func Test_CollOfColl_Length_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_CollOfColl_Length", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()
@@ -1720,7 +1720,7 @@ func Test_CollOfColl_Length(t *testing.T) {
 	})
 }
 
-func Test_CollOfColl_AllIndividualItemsLength(t *testing.T) {
+func Test_CollOfColl_AllIndividualItemsLength_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_CollOfColl_AllIndividualItemsLength", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()
@@ -1750,7 +1750,7 @@ func Test_CollOfColl_AllIndividualItemsLength_Empty(t *testing.T) {
 	})
 }
 
-func Test_CollOfColl_Items(t *testing.T) {
+func Test_CollOfColl_Items_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_CollOfColl_Items", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()
@@ -1767,7 +1767,7 @@ func Test_CollOfColl_Items(t *testing.T) {
 	})
 }
 
-func Test_CollOfColl_List(t *testing.T) {
+func Test_CollOfColl_List_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_CollOfColl_List", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()
@@ -1800,7 +1800,7 @@ func Test_CollOfColl_List_Empty(t *testing.T) {
 	})
 }
 
-func Test_CollOfColl_ToCollection(t *testing.T) {
+func Test_CollOfColl_ToCollection_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_CollOfColl_ToCollection", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()
@@ -1817,7 +1817,7 @@ func Test_CollOfColl_ToCollection(t *testing.T) {
 	})
 }
 
-func Test_CollOfColl_AddStrings(t *testing.T) {
+func Test_CollOfColl_AddStrings_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_CollOfColl_AddStrings", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()
@@ -1832,7 +1832,7 @@ func Test_CollOfColl_AddStrings(t *testing.T) {
 	})
 }
 
-func Test_CollOfColl_AddStrings_Empty(t *testing.T) {
+func Test_CollOfColl_AddStrings_Empty_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_CollOfColl_AddStrings_Empty", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()
@@ -2036,7 +2036,7 @@ func Test_CollOfColl_AsJsonMarshaller(t *testing.T) {
 	})
 }
 
-func Test_CollOfColl_AsJsonContractsBinder(t *testing.T) {
+func Test_CollOfColl_AsJsonContractsBinder_KeyvaluepairCollofcoll(t *testing.T) {
 	safeTest(t, "Test_CollOfColl_AsJsonContractsBinder", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()

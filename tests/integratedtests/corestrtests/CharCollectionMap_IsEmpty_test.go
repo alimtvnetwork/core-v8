@@ -303,7 +303,7 @@ func Test_CharCollectionMap_Has_NotFound_FromCharCollectionMapIsE(t *testing.T) 
 	})
 }
 
-func Test_CharCollectionMap_Has_Empty(t *testing.T) {
+func Test_CharCollectionMap_Has_Empty_CharcollectionmapIsempty(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_Has_Empty", func() {
 		m := corestr.New.CharCollectionMap.Empty()
 		tc := caseV1Compat{
@@ -650,7 +650,7 @@ func Test_CharCollectionMap_GetMap_FromCharCollectionMapIsE(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_GetCopyMapLock_Empty(t *testing.T) {
+func Test_CharCollectionMap_GetCopyMapLock_Empty_CharcollectionmapIsempty(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_GetCopyMapLock_Empty", func() {
 		m := corestr.New.CharCollectionMap.Empty()
 		tc := caseV1Compat{
@@ -834,7 +834,7 @@ func Test_CharCollectionMap_AddSameCharsCollection_New(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_AddSameCharsCollection_Existing(t *testing.T) {
+func Test_CharCollectionMap_AddSameCharsCollection_Existing_CharcollectionmapIsempty(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AddSameCharsCollection_Existing", func() {
 		m := corestr.New.CharCollectionMap.Empty()
 		m.Add("apple")
@@ -1114,7 +1114,7 @@ func Test_CharCollectionMap_AddHashmapsKeysOrValuesBothUsingFilter_Break(t *test
 
 // ─── AddCharHashsetMap ──────
 
-func Test_CharCollectionMap_AddCharHashsetMap(t *testing.T) {
+func Test_CharCollectionMap_AddCharHashsetMap_CharcollectionmapIsempty(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_AddCharHashsetMap", func() {
 		m := corestr.New.CharCollectionMap.Empty()
 		chm := corestr.New.CharHashsetMap.Cap(10, 5)
@@ -1270,7 +1270,7 @@ func Test_CharCollectionMap_IsEqualsCaseSensitive_Insensitive(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_IsEqualsCaseSensitiveLock(t *testing.T) {
+func Test_CharCollectionMap_IsEqualsCaseSensitiveLock_CharcollectionmapIsempty(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_IsEqualsCaseSensitiveLock", func() {
 		m1 := corestr.New.CharCollectionMap.Empty()
 		m1.Add("test")
@@ -1373,7 +1373,7 @@ func Test_CharCollectionMap_HashsetByStringFirstChar_FromCharCollectionMapIsE(t 
 	})
 }
 
-func Test_CharCollectionMap_HashsetByStringFirstCharLock(t *testing.T) {
+func Test_CharCollectionMap_HashsetByStringFirstCharLock_CharcollectionmapIsempty(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_HashsetByStringFirstCharLock", func() {
 		m := corestr.New.CharCollectionMap.Empty()
 		m.Add("hello")
@@ -1798,7 +1798,7 @@ func Test_CharCollectionMap_JsonModelAny_FromCharCollectionMapIsE(t *testing.T) 
 	})
 }
 
-func Test_CharCollectionMap_ParseInjectUsingJson(t *testing.T) {
+func Test_CharCollectionMap_ParseInjectUsingJson_CharcollectionmapIsempty(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_ParseInjectUsingJson", func() {
 		m := corestr.New.CharCollectionMap.Empty()
 		m.Add("hello")
@@ -1834,7 +1834,7 @@ func Test_CharCollectionMap_ParseInjectUsingJson_Error(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_ParseInjectUsingJsonMust(t *testing.T) {
+func Test_CharCollectionMap_ParseInjectUsingJsonMust_CharcollectionmapIsempty(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_ParseInjectUsingJsonMust", func() {
 		m := corestr.New.CharCollectionMap.Empty()
 		m.Add("hello")
@@ -1853,7 +1853,7 @@ func Test_CharCollectionMap_ParseInjectUsingJsonMust(t *testing.T) {
 	})
 }
 
-func Test_CharCollectionMap_JsonParseSelfInject(t *testing.T) {
+func Test_CharCollectionMap_JsonParseSelfInject_CharcollectionmapIsempty(t *testing.T) {
 	safeTest(t, "Test_CharCollectionMap_JsonParseSelfInject", func() {
 		m := corestr.New.CharCollectionMap.Empty()
 		m.Add("hello")
@@ -2132,7 +2132,7 @@ func Test_NewCharCollectionMapDataModelUsing(t *testing.T) {
 
 // ─── emptyCreator ──────────────
 
-func Test_EmptyCreator_CharCollectionMap(t *testing.T) {
+func Test_EmptyCreator_CharCollectionMap_CharcollectionmapIsempty(t *testing.T) {
 	safeTest(t, "Test_EmptyCreator_CharCollectionMap", func() {
 		m := corestr.Empty.CharCollectionMap()
 		tc := caseV1Compat{

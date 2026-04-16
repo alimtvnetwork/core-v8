@@ -608,7 +608,7 @@ func Test_LeftRight_Factories(t *testing.T) {
 	})
 }
 
-func Test_LeftRight_Methods(t *testing.T) {
+func Test_LeftRight_Methods_ValidvalueFactoriesTypes(t *testing.T) {
 	safeTest(t, "Test_LeftRight_Methods", func() {
 		// Arrange
 		lr := corestr.NewLeftRight("hello", "world")

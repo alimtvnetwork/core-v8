@@ -11,7 +11,7 @@ import (
 // KeyValuePair
 // ═══════════════════════════════════════════════════════════════
 
-func Test_KeyValuePair_KeyName(t *testing.T) {
+func Test_KeyValuePair_KeyName_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_KeyName", func() {
 		kv := corestr.KeyValuePair{Key: "k", Value: "v"}
 		tc := caseV1Compat{Name: "KVP KeyName", Expected: "k", Actual: kv.KeyName(), Args: args.Map{}}
@@ -31,7 +31,7 @@ func Test_KeyValuePair_VariableName_FromKeyValuePairKeyNameI(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_ValueString(t *testing.T) {
+func Test_KeyValuePair_ValueString_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_ValueString", func() {
 		kv := corestr.KeyValuePair{Key: "k", Value: "v"}
 		tc := caseV1Compat{Name: "KVP ValueString", Expected: "v", Actual: kv.ValueString(), Args: args.Map{}}
@@ -101,7 +101,7 @@ func Test_KeyValuePair_HasValue(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_IsKeyValueEmpty(t *testing.T) {
+func Test_KeyValuePair_IsKeyValueEmpty_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_IsKeyValueEmpty", func() {
 		kv := corestr.KeyValuePair{}
 		tc := caseV1Compat{Name: "KVP IsKeyValueEmpty", Expected: true, Actual: kv.IsKeyValueEmpty(), Args: args.Map{}}
@@ -181,7 +181,7 @@ func Test_KeyValuePair_ValueInt_Invalid(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_ValueDefInt(t *testing.T) {
+func Test_KeyValuePair_ValueDefInt_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_ValueDefInt", func() {
 		kv := corestr.KeyValuePair{Key: "k", Value: "10"}
 		tc := caseV1Compat{Name: "KVP ValueDefInt", Expected: 10, Actual: kv.ValueDefInt(), Args: args.Map{}}
@@ -221,7 +221,7 @@ func Test_KeyValuePair_ValueByte_Invalid(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_ValueDefByte(t *testing.T) {
+func Test_KeyValuePair_ValueDefByte_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_ValueDefByte", func() {
 		kv := corestr.KeyValuePair{Key: "k", Value: "10"}
 		tc := caseV1Compat{Name: "KVP ValueDefByte", Expected: byte(10), Actual: kv.ValueDefByte(), Args: args.Map{}}
@@ -251,7 +251,7 @@ func Test_KeyValuePair_ValueFloat64_Invalid(t *testing.T) {
 	})
 }
 
-func Test_KeyValuePair_ValueDefFloat64(t *testing.T) {
+func Test_KeyValuePair_ValueDefFloat64_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValuePair_ValueDefFloat64", func() {
 		kv := corestr.KeyValuePair{Key: "k", Value: "2.5"}
 		tc := caseV1Compat{Name: "KVP ValueDefFloat64", Expected: 2.5, Actual: kv.ValueDefFloat64(), Args: args.Map{}}
@@ -476,7 +476,7 @@ func Test_KeyValueCollection_IsEmpty(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_HasAnyItem(t *testing.T) {
+func Test_KeyValueCollection_HasAnyItem_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_HasAnyItem", func() {
 		kvc := &corestr.KeyValueCollection{}
 		kvc.Add("k", "v")
@@ -487,7 +487,7 @@ func Test_KeyValueCollection_HasAnyItem(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_Count(t *testing.T) {
+func Test_KeyValueCollection_Count_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_Count", func() {
 		kvc := &corestr.KeyValueCollection{}
 		kvc.Add("k", "v")
@@ -565,7 +565,7 @@ func Test_KeyValueCollection_Last(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_LastOrDefault_Empty(t *testing.T) {
+func Test_KeyValueCollection_LastOrDefault_Empty_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_LastOrDefault_Empty", func() {
 		kvc := &corestr.KeyValueCollection{}
 		tc := caseV1Compat{Name: "KVC LastOrDefault empty", Expected: true, Actual: kvc.LastOrDefault() == nil, Args: args.Map{}}
@@ -575,7 +575,7 @@ func Test_KeyValueCollection_LastOrDefault_Empty(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_HasKey(t *testing.T) {
+func Test_KeyValueCollection_HasKey_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_HasKey", func() {
 		kvc := &corestr.KeyValueCollection{}
 		kvc.Add("a", "1")
@@ -622,7 +622,7 @@ func Test_KeyValueCollection_Get_NotFound(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_AllKeys(t *testing.T) {
+func Test_KeyValueCollection_AllKeys_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_AllKeys", func() {
 		kvc := &corestr.KeyValueCollection{}
 		kvc.Add("a", "1")
@@ -634,7 +634,7 @@ func Test_KeyValueCollection_AllKeys(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_AllValues(t *testing.T) {
+func Test_KeyValueCollection_AllValues_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_AllValues", func() {
 		kvc := &corestr.KeyValueCollection{}
 		kvc.Add("a", "1")
@@ -794,7 +794,7 @@ func Test_KeyValueCollection_Map_FromKeyValuePairKeyNameI(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_Join(t *testing.T) {
+func Test_KeyValueCollection_Join_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_Join", func() {
 		kvc := &corestr.KeyValueCollection{}
 		kvc.Add("k", "v")
@@ -805,7 +805,7 @@ func Test_KeyValueCollection_Join(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_JoinKeys(t *testing.T) {
+func Test_KeyValueCollection_JoinKeys_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_JoinKeys", func() {
 		kvc := &corestr.KeyValueCollection{}
 		kvc.Add("a", "1")
@@ -817,7 +817,7 @@ func Test_KeyValueCollection_JoinKeys(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_JoinValues(t *testing.T) {
+func Test_KeyValueCollection_JoinValues_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_JoinValues", func() {
 		kvc := &corestr.KeyValueCollection{}
 		kvc.Add("a", "1")
@@ -828,7 +828,7 @@ func Test_KeyValueCollection_JoinValues(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_Strings(t *testing.T) {
+func Test_KeyValueCollection_Strings_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_Strings", func() {
 		kvc := &corestr.KeyValueCollection{}
 		kvc.Add("k", "v")
@@ -839,7 +839,7 @@ func Test_KeyValueCollection_Strings(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_Strings_Empty(t *testing.T) {
+func Test_KeyValueCollection_Strings_Empty_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_Strings_Empty", func() {
 		kvc := &corestr.KeyValueCollection{}
 		tc := caseV1Compat{Name: "KVC Strings empty", Expected: 0, Actual: len(kvc.Strings()), Args: args.Map{}}
@@ -967,7 +967,7 @@ func Test_KeyValueCollection_Find_FromKeyValuePairKeyNameI(t *testing.T) {
 	})
 }
 
-func Test_KeyValueCollection_Find_Empty(t *testing.T) {
+func Test_KeyValueCollection_Find_Empty_KeyvaluepairKeyname(t *testing.T) {
 	safeTest(t, "Test_KeyValueCollection_Find_Empty", func() {
 		kvc := &corestr.KeyValueCollection{}
 		result := kvc.Find(func(i int, kv corestr.KeyValuePair) (corestr.KeyValuePair, bool, bool) {

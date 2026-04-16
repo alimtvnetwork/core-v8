@@ -11,7 +11,7 @@ import (
 
 // ── Migrated from , 08, 09, 10, 12, 17 — Collections & MapResults ──
 
-func Test_ResultsCollection_BasicOps(t *testing.T) {
+func Test_ResultsCollection_BasicOps_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	c := corejson.NewResultsCollection.Empty()
 
@@ -60,7 +60,7 @@ func Test_ResultsCollection_TakeSkipLimit(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 0", actual)
 }
 
-func Test_ResultsCollection_AddMethods(t *testing.T) {
+func Test_ResultsCollection_AddMethods_ResultscollectionMigrated(t *testing.T) {
 	c := corejson.NewResultsCollection.UsingCap(10)
 	r := corejson.NewResult.AnyPtr("x")
 	c.AddSkipOnNil(r)
@@ -77,7 +77,7 @@ func Test_ResultsCollection_AddMethods(t *testing.T) {
 	c.AddAnyItems("a", nil, "b")
 }
 
-func Test_ResultsCollection_Errors(t *testing.T) {
+func Test_ResultsCollection_Errors_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	c := corejson.NewResultsCollection.UsingCap(3)
 	c.Add(corejson.NewResult.Any("ok"))
@@ -99,7 +99,7 @@ func Test_ResultsCollection_Errors(t *testing.T) {
 	_ = c.GetErrorsAsSingle()
 }
 
-func Test_ResultsCollection_UnmarshalAt(t *testing.T) {
+func Test_ResultsCollection_UnmarshalAt_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	c := corejson.NewResultsCollection.UsingCap(1)
 	c.Add(corejson.NewResult.Any("hello"))
@@ -114,7 +114,7 @@ func Test_ResultsCollection_UnmarshalAt(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_ResultsCollection_GetAtSafe(t *testing.T) {
+func Test_ResultsCollection_GetAtSafe_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	c := corejson.NewResultsCollection.UsingCap(1)
 	c.Add(corejson.NewResult.Any("x"))
@@ -187,7 +187,7 @@ func Test_ResultsCollection_Clone(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected nil", actual)
 }
 
-func Test_ResultsCollection_ClearDispose(t *testing.T) {
+func Test_ResultsCollection_ClearDispose_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	c := corejson.NewResultsCollection.UsingCap(2)
 	c.Add(corejson.NewResult.Any("x"))
@@ -206,7 +206,7 @@ func Test_ResultsCollection_ClearDispose(t *testing.T) {
 	nilC.Dispose()
 }
 
-func Test_ResultsCollection_GetStrings(t *testing.T) {
+func Test_ResultsCollection_GetStrings_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	c := corejson.NewResultsCollection.UsingCap(2)
 	c.Add(corejson.NewResult.Any("a"))
@@ -249,7 +249,7 @@ func Test_ResultsCollection_Nil(t *testing.T) {
 
 // ── BytesCollection ──
 
-func Test_BytesCollection_BasicOps(t *testing.T) {
+func Test_BytesCollection_BasicOps_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	c := corejson.NewBytesCollection.Empty()
 
@@ -268,7 +268,7 @@ func Test_BytesCollection_BasicOps(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected non-nil", actual)
 }
 
-func Test_BytesCollection_AddMethods(t *testing.T) {
+func Test_BytesCollection_AddMethods_ResultscollectionMigrated(t *testing.T) {
 	c := corejson.NewBytesCollection.UsingCap(5)
 	c.AddSkipOnNil(nil)
 	c.AddSkipOnNil([]byte("x"))
@@ -301,7 +301,7 @@ func Test_BytesCollection_TakeSkipLimit(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 3", actual)
 }
 
-func Test_BytesCollection_ClearDispose(t *testing.T) {
+func Test_BytesCollection_ClearDispose_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	c := corejson.NewBytesCollection.UsingCap(2)
 	c.Add([]byte("x"))
@@ -422,7 +422,7 @@ func Test_BytesCollection_AddResult(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 2", actual)
 }
 
-func Test_BytesCollection_AddAny(t *testing.T) {
+func Test_BytesCollection_AddAny_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	c := corejson.NewBytesCollection.UsingCap(2)
 	err := c.AddAny("hello")
@@ -439,7 +439,7 @@ func Test_BytesCollection_AddAny(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "err2", actual)
 }
 
-func Test_BytesCollection_GetAtSafe(t *testing.T) {
+func Test_BytesCollection_GetAtSafe_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	c := corejson.NewBytesCollection.UsingCap(1)
 	c.Add([]byte(`"x"`))
@@ -467,7 +467,7 @@ func Test_BytesCollection_GetAtSafe(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected nil", actual)
 }
 
-func Test_BytesCollection_Strings(t *testing.T) {
+func Test_BytesCollection_Strings_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	c := corejson.NewBytesCollection.UsingCap(2)
 	c.Add([]byte(`"a"`))
@@ -497,7 +497,7 @@ func Test_BytesCollection_MapResults(t *testing.T) {
 	c.AddRawMapResults(map[string]corejson.Result{"a": corejson.NewResult.Any("x")})
 }
 
-func Test_BytesCollection_UnmarshalAt(t *testing.T) {
+func Test_BytesCollection_UnmarshalAt_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	c := corejson.NewBytesCollection.UsingCap(1)
 	c.Add([]byte(`"hello"`))
@@ -512,7 +512,7 @@ func Test_BytesCollection_UnmarshalAt(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_BytesCollection_AddBytesCollection(t *testing.T) {
+func Test_BytesCollection_AddBytesCollection_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	c := corejson.NewBytesCollection.UsingCap(2)
 	c.Add([]byte(`"a"`))
@@ -530,7 +530,7 @@ func Test_BytesCollection_AddBytesCollection(t *testing.T) {
 
 // ── ResultsPtrCollection ──
 
-func Test_ResultsPtrCollection_BasicOps(t *testing.T) {
+func Test_ResultsPtrCollection_BasicOps_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	var nilC *corejson.ResultsPtrCollection
 
@@ -560,7 +560,7 @@ func Test_ResultsPtrCollection_BasicOps(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected non-nil", actual)
 }
 
-func Test_ResultsPtrCollection_AddMethods(t *testing.T) {
+func Test_ResultsPtrCollection_AddMethods_ResultscollectionMigrated(t *testing.T) {
 	c := corejson.NewResultsPtrCollection.UsingCap(10)
 	c.AddSkipOnNil(nil)
 	c.AddSkipOnNil(corejson.NewResult.AnyPtr("x"))
@@ -602,7 +602,7 @@ func Test_ResultsPtrCollection_TakeSkipLimit(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected all", actual)
 }
 
-func Test_ResultsPtrCollection_Errors(t *testing.T) {
+func Test_ResultsPtrCollection_Errors_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	c := corejson.NewResultsPtrCollection.UsingCap(2)
 	c.Add(corejson.NewResult.AnyPtr("ok"))
@@ -624,7 +624,7 @@ func Test_ResultsPtrCollection_Errors(t *testing.T) {
 	_ = c.GetErrorsAsSingle()
 }
 
-func Test_ResultsPtrCollection_ClearDispose(t *testing.T) {
+func Test_ResultsPtrCollection_ClearDispose_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	c := corejson.NewResultsPtrCollection.UsingCap(2)
 	c.Add(corejson.NewResult.AnyPtr("x"))
@@ -643,7 +643,7 @@ func Test_ResultsPtrCollection_ClearDispose(t *testing.T) {
 	nilC.Dispose()
 }
 
-func Test_ResultsPtrCollection_Clone(t *testing.T) {
+func Test_ResultsPtrCollection_Clone_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	c := corejson.NewResultsPtrCollection.UsingCap(2)
 	c.Add(corejson.NewResult.AnyPtr("x"))
@@ -693,7 +693,7 @@ func Test_ResultsPtrCollection_Paging(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 4", actual)
 }
 
-func Test_ResultsPtrCollection_GetStrings(t *testing.T) {
+func Test_ResultsPtrCollection_GetStrings_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	c := corejson.NewResultsPtrCollection.UsingCap(2)
 	c.Add(corejson.NewResult.AnyPtr("a"))
@@ -728,7 +728,7 @@ func Test_ResultsPtrCollection_Creators(t *testing.T) {
 
 // ── MapResults ──
 
-func Test_MapResults_BasicOps(t *testing.T) {
+func Test_MapResults_BasicOps_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	var nilM *corejson.MapResults
 
@@ -759,7 +759,7 @@ func Test_MapResults_BasicOps(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected nil", actual)
 }
 
-func Test_MapResults_AddMethods(t *testing.T) {
+func Test_MapResults_AddMethods_ResultscollectionMigrated(t *testing.T) {
 	m := corejson.NewMapResults.UsingCap(10)
 	m.AddSkipOnNil("a", nil)
 	m.AddSkipOnNil("a", &corejson.Result{Bytes: []byte(`"x"`)})
@@ -799,7 +799,7 @@ func Test_MapResults_AddMethods(t *testing.T) {
 	m.AddMapAnyItems(map[string]any{"o": "val"})
 }
 
-func Test_MapResults_Errors(t *testing.T) {
+func Test_MapResults_Errors_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	m := corejson.NewMapResults.UsingCap(3)
 	m.Add("ok", corejson.NewResult.Any("x"))
@@ -844,7 +844,7 @@ func Test_MapResults_AllKeys(t *testing.T) {
 	_ = m.AllResultsCollection()
 }
 
-func Test_MapResults_Paging(t *testing.T) {
+func Test_MapResults_Paging_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	m := corejson.NewMapResults.UsingCap(10)
 	for i := 0; i < 10; i++ {
@@ -866,7 +866,7 @@ func Test_MapResults_Paging(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 4", actual)
 }
 
-func Test_MapResults_ClearDispose(t *testing.T) {
+func Test_MapResults_ClearDispose_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	m := corejson.NewMapResults.UsingCap(2)
 	m.Add("a", corejson.NewResult.Any("x"))
@@ -885,7 +885,7 @@ func Test_MapResults_ClearDispose(t *testing.T) {
 	nilM.Dispose()
 }
 
-func Test_MapResults_Json(t *testing.T) {
+func Test_MapResults_Json_ResultscollectionMigrated(t *testing.T) {
 	m := corejson.NewMapResults.UsingCap(1)
 	m.Add("a", corejson.NewResult.Any("x"))
 	_ = m.JsonModel()
@@ -897,7 +897,7 @@ func Test_MapResults_Json(t *testing.T) {
 	_ = m.AsJsonParseSelfInjector()
 }
 
-func Test_MapResults_ResultCollection(t *testing.T) {
+func Test_MapResults_ResultCollection_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	m := corejson.NewMapResults.UsingCap(1)
 	m.Add("a", corejson.NewResult.Any("x"))
@@ -911,7 +911,7 @@ func Test_MapResults_ResultCollection(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected 1", actual)
 }
 
-func Test_MapResults_GetStrings(t *testing.T) {
+func Test_MapResults_GetStrings_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	m := corejson.NewMapResults.UsingCap(1)
 	m.Add("a", corejson.NewResult.Any("x"))
@@ -925,7 +925,7 @@ func Test_MapResults_GetStrings(t *testing.T) {
 	_ = m.GetStringsPtr()
 }
 
-func Test_MapResults_AddMapResultsUsingCloneOption(t *testing.T) {
+func Test_MapResults_AddMapResultsUsingCloneOption_ResultscollectionMigrated(t *testing.T) {
 	m := corejson.NewMapResults.UsingCap(2)
 	items := map[string]corejson.Result{"a": corejson.NewResult.Any("x")}
 	m.AddMapResultsUsingCloneOption(false, false, items)
@@ -935,7 +935,7 @@ func Test_MapResults_AddMapResultsUsingCloneOption(t *testing.T) {
 	m3.AddMapResultsUsingCloneOption(false, false, nil)
 }
 
-func Test_MapResults_GetNewMapUsingKeys(t *testing.T) {
+func Test_MapResults_GetNewMapUsingKeys_ResultscollectionMigrated(t *testing.T) {
 	// Arrange
 	m := corejson.NewMapResults.UsingCap(2)
 	m.Add("a", corejson.NewResult.Any("x"))
@@ -966,7 +966,7 @@ func Test_MapResults_Creators(t *testing.T) {
 	_, _ = corejson.NewMapResults.UnmarshalUsingBytes([]byte(`{}`))
 }
 
-func Test_MapResults_AddJsoner(t *testing.T) {
+func Test_MapResults_AddJsoner_ResultscollectionMigrated(t *testing.T) {
 	m := corejson.NewMapResults.UsingCap(2)
 	m.AddJsoner("a", nil)
 	_ = corejson.NewMapResults.UsingKeyJsoners()

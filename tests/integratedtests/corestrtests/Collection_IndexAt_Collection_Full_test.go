@@ -78,7 +78,7 @@ func Test_Collection_FirstOrDefault_LastOrDefault(t *testing.T) {
 	})
 }
 
-func Test_Collection_Take(t *testing.T) {
+func Test_Collection_Take_CollectionIndexatCollectionFull(t *testing.T) {
 	safeTest(t, "Test_Collection_Take", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b", "c"})
@@ -101,7 +101,7 @@ func Test_Collection_Take(t *testing.T) {
 	})
 }
 
-func Test_Collection_Skip(t *testing.T) {
+func Test_Collection_Skip_CollectionIndexatCollectionFull(t *testing.T) {
 	safeTest(t, "Test_Collection_Skip", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b", "c"})
@@ -265,7 +265,7 @@ func Test_Collection_IsContainsAll_FromCollectionIndexAtCol(t *testing.T) {
 	})
 }
 
-func Test_Collection_IsContainsAllSlice(t *testing.T) {
+func Test_Collection_IsContainsAllSlice_CollectionIndexatCollectionFull(t *testing.T) {
 	safeTest(t, "Test_Collection_IsContainsAllSlice", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b"})
@@ -1054,7 +1054,7 @@ func Test_Collection_SummaryString_FromCollectionIndexAtCol(t *testing.T) {
 	})
 }
 
-func Test_Collection_SummaryStringWithHeader(t *testing.T) {
+func Test_Collection_SummaryStringWithHeader_CollectionIndexatCollectionFull(t *testing.T) {
 	safeTest(t, "Test_Collection_SummaryStringWithHeader", func() {
 		// Arrange
 		c := corestr.New.Collection.Empty()
@@ -1069,7 +1069,7 @@ func Test_Collection_SummaryStringWithHeader(t *testing.T) {
 	})
 }
 
-func Test_Collection_Capacity(t *testing.T) {
+func Test_Collection_Capacity_CollectionIndexatCollectionFull(t *testing.T) {
 	safeTest(t, "Test_Collection_Capacity", func() {
 		var c *corestr.Collection
 		_ = fmt.Sprint(c) // should not panic
@@ -1090,7 +1090,7 @@ func Test_Collection_Single_FromCollectionIndexAtCol(t *testing.T) {
 	})
 }
 
-func Test_Collection_HasAnyItem(t *testing.T) {
+func Test_Collection_HasAnyItem_CollectionIndexatCollectionFull(t *testing.T) {
 	safeTest(t, "Test_Collection_HasAnyItem", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a"})

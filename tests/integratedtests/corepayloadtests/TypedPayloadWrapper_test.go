@@ -165,7 +165,7 @@ func Test_TypedPayloadWrapper_Strings(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedPayloadWrapper returns correct value -- strings", actual)
 }
 
-func Test_TypedPayloadWrapper_JSON(t *testing.T) {
+func Test_TypedPayloadWrapper_JSON_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	tw := makeTypedWrapperCov15(t)
 	j := tw.Json()
@@ -334,7 +334,7 @@ func Test_TypedPayloadWrapper_Setters(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedPayloadWrapper returns correct value -- Setters", actual)
 }
 
-func Test_TypedPayloadWrapper_SetTypedData(t *testing.T) {
+func Test_TypedPayloadWrapper_SetTypedData_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	tw := makeTypedWrapperCov15(t)
 	err := tw.SetTypedData(testUser{Name: "Bob", Email: "bob@test.com"})
@@ -366,7 +366,7 @@ func Test_TypedPayloadWrapper_SetTypedData_Nil(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedPayloadWrapper returns nil -- SetTypedData nil", actual)
 }
 
-func Test_TypedPayloadWrapper_SetTypedDataMust(t *testing.T) {
+func Test_TypedPayloadWrapper_SetTypedDataMust_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	tw := makeTypedWrapperCov15(t)
 	tw.SetTypedDataMust(testUser{Name: "Charlie"})
@@ -379,7 +379,7 @@ func Test_TypedPayloadWrapper_SetTypedDataMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedPayloadWrapper returns correct value -- SetTypedDataMust", actual)
 }
 
-func Test_TypedPayloadWrapper_Clone(t *testing.T) {
+func Test_TypedPayloadWrapper_Clone_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	tw := makeTypedWrapperCov15(t)
 	cloneP, err := tw.ClonePtr(true)
@@ -433,7 +433,7 @@ func Test_TypedPayloadWrapper_ToPayloadWrapper(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedPayloadWrapper returns correct value -- ToPayloadWrapper", actual)
 }
 
-func Test_TypedPayloadWrapper_Reparse(t *testing.T) {
+func Test_TypedPayloadWrapper_Reparse_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	tw := makeTypedWrapperCov15(t)
 	err := tw.Reparse()
@@ -523,7 +523,7 @@ func Test_TypedPayloadWrapper_IdInteger(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedPayloadWrapper returns correct value -- IdInteger", actual)
 }
 
-func Test_TypedPayloadWrapper_HandleError_NoError(t *testing.T) {
+func Test_TypedPayloadWrapper_HandleError_NoError_Typedpayloadwrapper(t *testing.T) {
 	tw := makeTypedWrapperCov15(t)
 	tw.HandleError() // should not panic
 }
@@ -665,7 +665,7 @@ func Test_TypedPayloadCollection_Core(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedPayloadCollection returns correct value -- core", actual)
 }
 
-func Test_TypedPayloadCollection_NilReceiver(t *testing.T) {
+func Test_TypedPayloadCollection_NilReceiver_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	var nilCol *corepayload.TypedPayloadCollection[testUser]
 
@@ -685,7 +685,7 @@ func Test_TypedPayloadCollection_NilReceiver(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedPayloadCollection returns nil -- nil", actual)
 }
 
-func Test_TypedPayloadCollection_ElementAccess(t *testing.T) {
+func Test_TypedPayloadCollection_ElementAccess_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	col := makeTypedCollection(t)
 	first := col.First()
@@ -743,7 +743,7 @@ func Test_TypedPayloadCollection_Mutation(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedPayloadCollection returns correct value -- mutation", actual)
 }
 
-func Test_TypedPayloadCollection_AddCollection(t *testing.T) {
+func Test_TypedPayloadCollection_AddCollection_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	col := makeTypedCollection(t)
 	col2 := makeTypedCollection(t)
@@ -757,7 +757,7 @@ func Test_TypedPayloadCollection_AddCollection(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedPayloadCollection returns correct value -- AddCollection", actual)
 }
 
-func Test_TypedPayloadCollection_RemoveAt(t *testing.T) {
+func Test_TypedPayloadCollection_RemoveAt_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	col := makeTypedCollection(t)
 	ok := col.RemoveAt(0)
@@ -860,7 +860,7 @@ func Test_TypedPayloadCollection_Filter(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedPayloadCollection returns correct value -- filter", actual)
 }
 
-func Test_TypedPayloadCollection_SkipTake(t *testing.T) {
+func Test_TypedPayloadCollection_SkipTake_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	col := makeTypedCollection(t)
 	skipped := col.Skip(1)
@@ -913,7 +913,7 @@ func Test_TypedPayloadCollection_Extraction(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedPayloadCollection returns correct value -- extraction", actual)
 }
 
-func Test_TypedPayloadCollection_ToPayloadsCollection(t *testing.T) {
+func Test_TypedPayloadCollection_ToPayloadsCollection_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	col := makeTypedCollection(t)
 	pc := col.ToPayloadsCollection()
@@ -934,7 +934,7 @@ func Test_TypedPayloadCollection_ToPayloadsCollection(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedPayloadCollection returns correct value -- ToPayloadsCollection", actual)
 }
 
-func Test_TypedPayloadCollection_Clone(t *testing.T) {
+func Test_TypedPayloadCollection_Clone_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	col := makeTypedCollection(t)
 	cloned, err := col.Clone()
@@ -962,7 +962,7 @@ func Test_TypedPayloadCollection_Clone(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedPayloadCollection returns correct value -- Clone", actual)
 }
 
-func Test_TypedPayloadCollection_ConcatNew(t *testing.T) {
+func Test_TypedPayloadCollection_ConcatNew_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	col := makeTypedCollection(t)
 	tw := makeTypedWrapperCov15(t)
@@ -982,7 +982,7 @@ func Test_TypedPayloadCollection_ConcatNew(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedPayloadCollection returns correct value -- ConcatNew", actual)
 }
 
-func Test_TypedPayloadCollection_ClearDispose(t *testing.T) {
+func Test_TypedPayloadCollection_ClearDispose_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	col := makeTypedCollection(t)
 	col.Clear()
@@ -1166,7 +1166,7 @@ func Test_TypedPayloadCollection_Deserialize(t *testing.T) {
 // typed_collection_funcs.go coverage
 // ==========================================================================
 
-func Test_MapTypedPayloads(t *testing.T) {
+func Test_MapTypedPayloads_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	col := makeTypedCollection(t)
 	names := corepayload.MapTypedPayloads[testUser, string](col, func(item *corepayload.TypedPayloadWrapper[testUser]) string {
@@ -1197,7 +1197,7 @@ func Test_MapTypedPayloads(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "MapTypedPayloads returns correct value -- with args", actual)
 }
 
-func Test_FlatMapTypedPayloads(t *testing.T) {
+func Test_FlatMapTypedPayloads_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	col := makeTypedCollection(t)
 	result := corepayload.FlatMapTypedPayloads[testUser, string](col, func(item *corepayload.TypedPayloadWrapper[testUser]) []string {
@@ -1228,7 +1228,7 @@ func Test_FlatMapTypedPayloads(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "FlatMapTypedPayloads returns correct value -- with args", actual)
 }
 
-func Test_ReduceTypedPayloads(t *testing.T) {
+func Test_ReduceTypedPayloads_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	col := makeTypedCollection(t)
 	total := corepayload.ReduceTypedPayloads[testUser, int](col, 0, func(acc int, item *corepayload.TypedPayloadWrapper[testUser]) int {
@@ -1259,7 +1259,7 @@ func Test_ReduceTypedPayloads(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ReduceTypedPayloads returns correct value -- with args", actual)
 }
 
-func Test_GroupTypedPayloads(t *testing.T) {
+func Test_GroupTypedPayloads_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	col := makeTypedCollection(t)
 	groups := corepayload.GroupTypedPayloads[testUser, string](col, func(item *corepayload.TypedPayloadWrapper[testUser]) string {
@@ -1287,7 +1287,7 @@ func Test_GroupTypedPayloads(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "GroupTypedPayloads returns correct value -- with args", actual)
 }
 
-func Test_PartitionTypedPayloads(t *testing.T) {
+func Test_PartitionTypedPayloads_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	col := makeTypedCollection(t)
 	matching, notMatching := corepayload.PartitionTypedPayloads[testUser](col, func(item *corepayload.TypedPayloadWrapper[testUser]) bool {
@@ -1379,7 +1379,7 @@ func Test_ConvertTypedPayloads(t *testing.T) {
 // generic_helpers.go coverage
 // ==========================================================================
 
-func Test_DeserializePayloadTo(t *testing.T) {
+func Test_DeserializePayloadTo_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	pw, _ := corepayload.New.PayloadWrapper.NameIdCategory("n", "i", "cat", testUser{Name: "X"})
 	u, err := corepayload.DeserializePayloadTo[testUser](pw)
@@ -1398,7 +1398,7 @@ func Test_DeserializePayloadTo(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "DeserializePayloadTo returns correct value -- with args", actual)
 }
 
-func Test_DeserializePayloadTo_Nil(t *testing.T) {
+func Test_DeserializePayloadTo_Nil_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	_, err := corepayload.DeserializePayloadTo[testUser](nil)
 
@@ -1423,7 +1423,7 @@ func Test_DeserializePayloadToMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "DeserializePayloadToMust returns correct value -- with args", actual)
 }
 
-func Test_DeserializePayloadToSlice(t *testing.T) {
+func Test_DeserializePayloadToSlice_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	users := []testUser{{Name: "A"}, {Name: "B"}}
 	pw, _ := corepayload.New.PayloadWrapper.NameIdCategory("n", "i", "cat", users)
@@ -1443,7 +1443,7 @@ func Test_DeserializePayloadToSlice(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "DeserializePayloadToSlice returns correct value -- with args", actual)
 }
 
-func Test_DeserializePayloadToSlice_Nil(t *testing.T) {
+func Test_DeserializePayloadToSlice_Nil_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	result, err := corepayload.DeserializePayloadToSlice[testUser](nil)
 
@@ -1475,7 +1475,7 @@ func Test_DeserializePayloadToSliceMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "DeserializePayloadToSliceMust returns correct value -- with args", actual)
 }
 
-func Test_DeserializeAttributesPayloadTo(t *testing.T) {
+func Test_DeserializeAttributesPayloadTo_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	u := testUser{Name: "Test"}
 	b, _ := corejson.Serialize.Raw(u)
@@ -1496,7 +1496,7 @@ func Test_DeserializeAttributesPayloadTo(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "DeserializeAttributesPayloadTo returns correct value -- with args", actual)
 }
 
-func Test_DeserializeAttributesPayloadTo_Nil(t *testing.T) {
+func Test_DeserializeAttributesPayloadTo_Nil_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	_, err := corepayload.DeserializeAttributesPayloadTo[testUser](nil)
 
@@ -1523,7 +1523,7 @@ func Test_DeserializeAttributesPayloadToMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "DeserializeAttributesPayloadToMust returns correct value -- with args", actual)
 }
 
-func Test_DeserializeAttributesPayloadToSlice(t *testing.T) {
+func Test_DeserializeAttributesPayloadToSlice_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	users := []testUser{{Name: "A"}}
 	b, _ := corejson.Serialize.Raw(users)
@@ -1544,7 +1544,7 @@ func Test_DeserializeAttributesPayloadToSlice(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "DeserializeAttributesPayloadToSlice returns correct value -- with args", actual)
 }
 
-func Test_DeserializeAttributesPayloadToSlice_Nil(t *testing.T) {
+func Test_DeserializeAttributesPayloadToSlice_Nil_Typedpayloadwrapper(t *testing.T) {
 	// Arrange
 	result, err := corepayload.DeserializeAttributesPayloadToSlice[testUser](nil)
 

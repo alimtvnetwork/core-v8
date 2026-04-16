@@ -328,7 +328,7 @@ func Test_SimpleRequest_GetErrorOnTypeMismatch_MismatchWithMessage(t *testing.T)
 // SimpleResult
 // ==========================================
 
-func Test_SimpleResult(t *testing.T) {
+func Test_SimpleResult_DynamicInvaliddynamicV2(t *testing.T) {
 	// Arrange
 	sr := coredynamic.NewSimpleResult("data", true, "")
 

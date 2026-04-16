@@ -359,7 +359,7 @@ func Test_Dynamic_IsMap(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Dynamic returns correct value -- IsMap", actual)
 }
 
-func Test_Dynamic_IntDefault(t *testing.T) {
+func Test_Dynamic_IntDefault_DynamicData(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamic("42", true)
 	val, ok := d.IntDefault(0)
@@ -416,7 +416,7 @@ func Test_Dynamic_IntDefault_Invalid(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Dynamic returns error -- IntDefault invalid", actual)
 }
 
-func Test_Dynamic_Float64(t *testing.T) {
+func Test_Dynamic_Float64_DynamicData(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamic("3.14", true)
 	val, err := d.Float64()
@@ -533,7 +533,7 @@ func Test_Dynamic_ValueInt64(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Dynamic returns correct value -- ValueInt64", actual)
 }
 
-func Test_Dynamic_ValueNullErr(t *testing.T) {
+func Test_Dynamic_ValueNullErr_DynamicData(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamic("ok", true)
 
@@ -557,7 +557,7 @@ func Test_Dynamic_ValueNullErr_Nil(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Dynamic returns nil -- ValueNullErr nil", actual)
 }
 
-func Test_Dynamic_ValueString(t *testing.T) {
+func Test_Dynamic_ValueString_DynamicData(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamic("hello", true)
 
@@ -582,7 +582,7 @@ func Test_Dynamic_ValueString_NonString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Dynamic returns non-empty -- ValueString non-string", actual)
 }
 
-func Test_Dynamic_Bytes(t *testing.T) {
+func Test_Dynamic_Bytes_DynamicData(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamic([]byte{1, 2, 3}, true)
 	b, ok := d.Bytes()
@@ -618,7 +618,7 @@ func Test_Dynamic_Bytes_Nil(t *testing.T) {
 // DynamicReflect — reflect operations, loops, filters
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_Dynamic_ReflectValue(t *testing.T) {
+func Test_Dynamic_ReflectValue_DynamicData(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamic(42, true)
 	rv := d.ReflectValue()
@@ -710,7 +710,7 @@ func Test_Dynamic_ItemUsingKey(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Dynamic returns correct value -- ItemUsingKey", actual)
 }
 
-func Test_Dynamic_ReflectSetTo(t *testing.T) {
+func Test_Dynamic_ReflectSetTo_DynamicData(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamic("hello", true)
 	var target string
@@ -759,7 +759,7 @@ func Test_Dynamic_ConvertUsingFunc(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Dynamic returns correct value -- ConvertUsingFunc", actual)
 }
 
-func Test_Dynamic_Loop(t *testing.T) {
+func Test_Dynamic_Loop_DynamicData(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamic([]int{10, 20, 30}, true)
 	sum := 0
@@ -812,7 +812,7 @@ func Test_Dynamic_Loop_Invalid(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Dynamic returns error -- Loop invalid", actual)
 }
 
-func Test_Dynamic_FilterAsDynamicCollection(t *testing.T) {
+func Test_Dynamic_FilterAsDynamicCollection_DynamicData(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamic([]int{1, 2, 3, 4, 5}, true)
 	filtered := d.FilterAsDynamicCollection(func(i int, item coredynamic.Dynamic) (bool, bool) {
@@ -842,7 +842,7 @@ func Test_Dynamic_FilterAsDynamicCollection_Break(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Dynamic returns correct value -- FilterAsDynamicCollection break", actual)
 }
 
-func Test_Dynamic_LoopMap(t *testing.T) {
+func Test_Dynamic_LoopMap_DynamicData(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamic(map[string]int{"a": 1, "b": 2}, true)
 	count := 0
@@ -920,7 +920,7 @@ func Test_Dynamic_ValueMarshal(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Dynamic returns correct value -- ValueMarshal", actual)
 }
 
-func Test_Dynamic_ValueMarshal_Nil(t *testing.T) {
+func Test_Dynamic_ValueMarshal_Nil_DynamicData(t *testing.T) {
 	// Arrange
 	var d *coredynamic.Dynamic
 	_, err := d.ValueMarshal()
@@ -1053,7 +1053,7 @@ func Test_Dynamic_JsonPtr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Dynamic returns correct value -- JsonPtr", actual)
 }
 
-func Test_Dynamic_ParseInjectUsingJson(t *testing.T) {
+func Test_Dynamic_ParseInjectUsingJson_DynamicData(t *testing.T) {
 	// Arrange
 	seed := "initial"
 	d := coredynamic.NewDynamic(&seed, true)

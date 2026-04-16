@@ -691,7 +691,7 @@ func Test_TypedDynamic_ValueBool_NotBool(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedDynamic returns correct value -- ValueBool not bool", actual)
 }
 
-func Test_TypedDynamic_Clone(t *testing.T) {
+func Test_TypedDynamic_Clone_TypestatusIsvalid(t *testing.T) {
 	// Arrange
 	td := coredynamic.NewTypedDynamic("hello", true)
 	cloned := td.Clone()
@@ -786,7 +786,7 @@ func Test_TypedDynamic_Deserialize_Nil(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedDynamic returns nil -- Deserialize nil", actual)
 }
 
-func Test_TypedDynamic_Bytes_AsBytes(t *testing.T) {
+func Test_TypedDynamic_Bytes_AsBytes_TypestatusIsvalid(t *testing.T) {
 	// Arrange
 	td := coredynamic.NewTypedDynamic([]byte{1, 2}, true)
 	b, ok := td.Bytes()
@@ -837,7 +837,7 @@ func Test_TypedDynamic_NonPtr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedDynamic returns correct value -- NonPtr", actual)
 }
 
-func Test_TypedDynamic_JsonModel(t *testing.T) {
+func Test_TypedDynamic_JsonModel_TypestatusIsvalid(t *testing.T) {
 	// Arrange
 	td := coredynamic.NewTypedDynamic("val", true)
 
@@ -899,7 +899,7 @@ func Test_TypedDynamic_MarshalJSON(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedDynamic returns correct value -- MarshalJSON", actual)
 }
 
-func Test_TypedDynamic_UnmarshalJSON(t *testing.T) {
+func Test_TypedDynamic_UnmarshalJSON_TypestatusIsvalid(t *testing.T) {
 	// Arrange
 	td := coredynamic.NewTypedDynamicPtr("", true)
 	err := td.UnmarshalJSON([]byte(`"abc"`))
@@ -922,7 +922,7 @@ func Test_TypedDynamic_UnmarshalJSON(t *testing.T) {
 // TypedSimpleRequest — deeper paths
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_TypedSimpleRequest_Clone(t *testing.T) {
+func Test_TypedSimpleRequest_Clone_TypestatusIsvalid(t *testing.T) {
 	// Arrange
 	sr := coredynamic.NewTypedSimpleRequestValid("hello")
 	cloned := sr.Clone()
@@ -1091,7 +1091,7 @@ func Test_TypedSimpleRequest_JsonModelAny(t *testing.T) {
 // TypedSimpleResult — deeper paths
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_TypedSimpleResult_Clone(t *testing.T) {
+func Test_TypedSimpleResult_Clone_TypestatusIsvalid(t *testing.T) {
 	// Arrange
 	sr := coredynamic.NewTypedSimpleResultValid("ok")
 	cloned := sr.Clone()

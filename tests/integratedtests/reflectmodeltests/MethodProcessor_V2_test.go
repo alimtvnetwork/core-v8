@@ -322,7 +322,7 @@ func Test_MethodProcessor_ValidateMethodArgs_Correct(t *testing.T) {
 
 // ── MethodProcessor — nil receiver invoke ──
 
-func Test_MethodProcessor_Invoke_NilReceiver(t *testing.T) {
+func Test_MethodProcessor_Invoke_NilReceiver_MethodprocessorV2(t *testing.T) {
 	// Arrange
 	var mp *reflectmodel.MethodProcessor
 	_, err := mp.Invoke()

@@ -230,7 +230,7 @@ func Test_Collection_AppendCollections_Empty(t *testing.T) {
 	})
 }
 
-func Test_Collection_AppendAnysLock(t *testing.T) {
+func Test_Collection_AppendAnysLock_CollectionInsertatCollseg2(t *testing.T) {
 	safeTest(t, "Test_Collection_AppendAnysLock", func() {
 		// Arrange
 		c := corestr.New.Collection.Empty()
@@ -523,7 +523,7 @@ func Test_Collection_AddsNonEmpty_Nil(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddsNonEmptyPtrLock(t *testing.T) {
+func Test_Collection_AddsNonEmptyPtrLock_CollectionInsertatCollseg2(t *testing.T) {
 	safeTest(t, "Test_Collection_AddsNonEmptyPtrLock", func() {
 		// Arrange
 		c := corestr.New.Collection.Empty()
@@ -954,7 +954,7 @@ func Test_Collection_NonEmptyItems_FromCollectionInsertAtCo(t *testing.T) {
 	})
 }
 
-func Test_Collection_NonEmptyItemsPtr(t *testing.T) {
+func Test_Collection_NonEmptyItemsPtr_CollectionInsertatCollseg2(t *testing.T) {
 	safeTest(t, "Test_Collection_NonEmptyItemsPtr", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "", "b"})
@@ -984,7 +984,7 @@ func Test_Collection_NonEmptyItemsOrNonWhitespace_FromCollectionInsertAtCo(t *te
 	})
 }
 
-func Test_Collection_NonEmptyItemsOrNonWhitespacePtr(t *testing.T) {
+func Test_Collection_NonEmptyItemsOrNonWhitespacePtr_CollectionInsertatCollseg2(t *testing.T) {
 	safeTest(t, "Test_Collection_NonEmptyItemsOrNonWhitespacePtr", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "  ", ""})
@@ -999,7 +999,7 @@ func Test_Collection_NonEmptyItemsOrNonWhitespacePtr(t *testing.T) {
 	})
 }
 
-func Test_Collection_Items(t *testing.T) {
+func Test_Collection_Items_CollectionInsertatCollseg2(t *testing.T) {
 	safeTest(t, "Test_Collection_Items", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a"})
@@ -1938,7 +1938,7 @@ func Test_Collection_StringLock_Empty_FromCollectionInsertAtCo(t *testing.T) {
 	})
 }
 
-func Test_Collection_AddCapacity(t *testing.T) {
+func Test_Collection_AddCapacity_CollectionInsertatCollseg2(t *testing.T) {
 	safeTest(t, "Test_Collection_AddCapacity", func() {
 		// Arrange
 		c := corestr.New.Collection.Empty()
@@ -2073,7 +2073,7 @@ func Test_Collection_JsonModel_FromCollectionInsertAtCo(t *testing.T) {
 	})
 }
 
-func Test_Collection_JsonModelAny(t *testing.T) {
+func Test_Collection_JsonModelAny_CollectionInsertatCollseg2(t *testing.T) {
 	safeTest(t, "Test_Collection_JsonModelAny", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a"})
@@ -2197,7 +2197,7 @@ func Test_Collection_ParseInjectUsingJson_FromCollectionInsertAtCo(t *testing.T)
 	})
 }
 
-func Test_Collection_ParseInjectUsingJson_Error(t *testing.T) {
+func Test_Collection_ParseInjectUsingJson_Error_CollectionInsertatCollseg2(t *testing.T) {
 	safeTest(t, "Test_Collection_ParseInjectUsingJson_Error", func() {
 		// Arrange
 		c := corestr.New.Collection.Empty()

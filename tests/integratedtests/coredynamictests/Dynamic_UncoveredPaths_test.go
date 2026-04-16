@@ -64,7 +64,7 @@ func Test_Dynamic_ValueMarshal_Valid(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ValueMarshal returns non-empty -- valid", actual)
 }
 
-func Test_Dynamic_JsonPayloadMust(t *testing.T) {
+func Test_Dynamic_JsonPayloadMust_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid("test")
 	b := d.JsonPayloadMust()
@@ -77,7 +77,7 @@ func Test_Dynamic_JsonPayloadMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "JsonPayloadMust returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_JsonBytesPtr_Null(t *testing.T) {
+func Test_Dynamic_JsonBytesPtr_Null_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid(nil)
 	b, err := d.JsonBytesPtr()
@@ -115,7 +115,7 @@ func Test_Dynamic_JsonBytesPtr_Valid(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "JsonBytesPtr returns non-empty -- valid", actual)
 }
 
-func Test_Dynamic_MarshalJSON(t *testing.T) {
+func Test_Dynamic_MarshalJSON_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid(42)
 	b, err := d.MarshalJSON()
@@ -134,7 +134,7 @@ func Test_Dynamic_MarshalJSON(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "MarshalJSON returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_UnmarshalJSON_Nil(t *testing.T) {
+func Test_Dynamic_UnmarshalJSON_Nil_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	var d *coredynamic.Dynamic
 	err := d.UnmarshalJSON([]byte(`"hello"`))
@@ -219,7 +219,7 @@ func Test_Dynamic_JsonBytes_JsonString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "JsonBytes/JsonString returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_JsonStringMust(t *testing.T) {
+func Test_Dynamic_JsonStringMust_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid("hello")
 	s := d.JsonStringMust()
@@ -236,7 +236,7 @@ func Test_Dynamic_JsonStringMust(t *testing.T) {
 // Dynamic — DynamicGetters.go uncovered paths
 // ==========================================================================
 
-func Test_Dynamic_IsStructStringNullOrEmpty(t *testing.T) {
+func Test_Dynamic_IsStructStringNullOrEmpty_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid("")
 	dNull := coredynamic.NewDynamicValid(nil)
@@ -258,7 +258,7 @@ func Test_Dynamic_IsStructStringNullOrEmpty(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "IsStructStringNullOrEmpty returns empty -- with args", actual)
 }
 
-func Test_Dynamic_IsStructStringNullOrEmptyOrWhitespace(t *testing.T) {
+func Test_Dynamic_IsStructStringNullOrEmptyOrWhitespace_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid("   ")
 	dVal := coredynamic.NewDynamicValid("abc")
@@ -277,7 +277,7 @@ func Test_Dynamic_IsStructStringNullOrEmptyOrWhitespace(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "IsStructStringNullOrEmptyOrWhitespace returns empty -- with args", actual)
 }
 
-func Test_Dynamic_IntDefault(t *testing.T) {
+func Test_Dynamic_IntDefault_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid(42)
 	val, ok := d.IntDefault(0)
@@ -302,7 +302,7 @@ func Test_Dynamic_IntDefault(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "IntDefault returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_Float64(t *testing.T) {
+func Test_Dynamic_Float64_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid(3.14)
 	val, err := d.Float64()
@@ -329,7 +329,7 @@ func Test_Dynamic_Float64(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Float64 returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_ValueUInt(t *testing.T) {
+func Test_Dynamic_ValueUInt_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid(uint(5))
 	dFail := coredynamic.NewDynamicValid("nope")
@@ -348,7 +348,7 @@ func Test_Dynamic_ValueUInt(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ValueUInt returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_ValueStrings(t *testing.T) {
+func Test_Dynamic_ValueStrings_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid([]string{"a", "b"})
 	dFail := coredynamic.NewDynamicValid(42)
@@ -367,7 +367,7 @@ func Test_Dynamic_ValueStrings(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ValueStrings returns non-empty -- with args", actual)
 }
 
-func Test_Dynamic_ValueBool(t *testing.T) {
+func Test_Dynamic_ValueBool_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid(true)
 	dFail := coredynamic.NewDynamicValid("nope")
@@ -386,7 +386,7 @@ func Test_Dynamic_ValueBool(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ValueBool returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_ValueInt64(t *testing.T) {
+func Test_Dynamic_ValueInt64_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid(int64(99))
 	dFail := coredynamic.NewDynamicValid("nope")
@@ -405,7 +405,7 @@ func Test_Dynamic_ValueInt64(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ValueInt64 returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_ValueNullErr(t *testing.T) {
+func Test_Dynamic_ValueNullErr_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	var dNil *coredynamic.Dynamic
 	errNil := dNil.ValueNullErr()
@@ -430,7 +430,7 @@ func Test_Dynamic_ValueNullErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ValueNullErr returns error -- with args", actual)
 }
 
-func Test_Dynamic_ValueString_NonString(t *testing.T) {
+func Test_Dynamic_ValueString_NonString_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid(42)
 	s := d.ValueString()
@@ -451,7 +451,7 @@ func Test_Dynamic_ValueString_NonString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ValueString returns non-empty -- non-string", actual)
 }
 
-func Test_Dynamic_Bytes(t *testing.T) {
+func Test_Dynamic_Bytes_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid([]byte{1, 2, 3})
 	b, ok := d.Bytes()
@@ -484,7 +484,7 @@ func Test_Dynamic_Bytes(t *testing.T) {
 // Dynamic — DynamicReflect.go uncovered paths
 // ==========================================================================
 
-func Test_Dynamic_MapToKeyVal(t *testing.T) {
+func Test_Dynamic_MapToKeyVal_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid(map[string]int{"a": 1})
 	kv, err := d.MapToKeyVal()
@@ -503,7 +503,7 @@ func Test_Dynamic_MapToKeyVal(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "MapToKeyVal returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_ReflectType(t *testing.T) {
+func Test_Dynamic_ReflectType_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid("hello")
 	rt := d.ReflectType()
@@ -520,7 +520,7 @@ func Test_Dynamic_ReflectType(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ReflectType returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_IsReflectTypeOf(t *testing.T) {
+func Test_Dynamic_IsReflectTypeOf_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid("hello")
 
@@ -538,7 +538,7 @@ func Test_Dynamic_IsReflectTypeOf(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "IsReflectTypeOf returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_ItemUsingIndex(t *testing.T) {
+func Test_Dynamic_ItemUsingIndex_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid([]string{"a", "b", "c"})
 	item := d.ItemUsingIndex(1)
@@ -558,7 +558,7 @@ func Test_Dynamic_ItemUsingIndex(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ItemUsingIndex returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_ItemUsingKey(t *testing.T) {
+func Test_Dynamic_ItemUsingKey_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid(map[string]int{"x": 42})
 	item := d.ItemUsingKey("x")
@@ -578,7 +578,7 @@ func Test_Dynamic_ItemUsingKey(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ItemUsingKey returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_ReflectSetTo(t *testing.T) {
+func Test_Dynamic_ReflectSetTo_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid("hello")
 	var target string
@@ -598,7 +598,7 @@ func Test_Dynamic_ReflectSetTo(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ReflectSetTo returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_ReflectSetTo_Nil(t *testing.T) {
+func Test_Dynamic_ReflectSetTo_Nil_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	var d *coredynamic.Dynamic
 	err := d.ReflectSetTo(nil)
@@ -611,7 +611,7 @@ func Test_Dynamic_ReflectSetTo_Nil(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ReflectSetTo returns nil -- nil", actual)
 }
 
-func Test_Dynamic_Loop(t *testing.T) {
+func Test_Dynamic_Loop_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid([]int{10, 20, 30})
 	sum := 0
@@ -634,7 +634,7 @@ func Test_Dynamic_Loop(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Loop returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_Loop_Break(t *testing.T) {
+func Test_Dynamic_Loop_Break_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid([]int{1, 2, 3})
 	count := 0
@@ -651,7 +651,7 @@ func Test_Dynamic_Loop_Break(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Loop returns correct value -- break", actual)
 }
 
-func Test_Dynamic_Loop_Invalid(t *testing.T) {
+func Test_Dynamic_Loop_Invalid_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.InvalidDynamic()
 	called := d.Loop(func(i int, item any) bool { return false })
@@ -664,7 +664,7 @@ func Test_Dynamic_Loop_Invalid(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Loop returns error -- invalid", actual)
 }
 
-func Test_Dynamic_FilterAsDynamicCollection(t *testing.T) {
+func Test_Dynamic_FilterAsDynamicCollection_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid([]int{1, 2, 3, 4, 5})
 	result := d.FilterAsDynamicCollection(func(i int, item coredynamic.Dynamic) (bool, bool) {
@@ -679,7 +679,7 @@ func Test_Dynamic_FilterAsDynamicCollection(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "FilterAsDynamicCollection returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_FilterAsDynamicCollection_Break(t *testing.T) {
+func Test_Dynamic_FilterAsDynamicCollection_Break_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid([]int{1, 2, 3, 4, 5})
 	result := d.FilterAsDynamicCollection(func(i int, item coredynamic.Dynamic) (bool, bool) {
@@ -709,7 +709,7 @@ func Test_Dynamic_FilterAsDynamicCollection_Invalid(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "FilterAsDynamicCollection returns error -- invalid", actual)
 }
 
-func Test_Dynamic_LoopMap(t *testing.T) {
+func Test_Dynamic_LoopMap_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid(map[string]int{"a": 1, "b": 2})
 	count := 0
@@ -732,7 +732,7 @@ func Test_Dynamic_LoopMap(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "LoopMap returns correct value -- with args", actual)
 }
 
-func Test_Dynamic_LoopMap_Break(t *testing.T) {
+func Test_Dynamic_LoopMap_Break_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid(map[string]int{"a": 1, "b": 2})
 	count := 0
@@ -755,7 +755,7 @@ func Test_Dynamic_LoopMap_Break(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "LoopMap returns correct value -- break", actual)
 }
 
-func Test_Dynamic_LoopMap_Invalid(t *testing.T) {
+func Test_Dynamic_LoopMap_Invalid_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.InvalidDynamic()
 	called := d.LoopMap(func(i int, key, value any) bool { return false })
@@ -772,7 +772,7 @@ func Test_Dynamic_LoopMap_Invalid(t *testing.T) {
 // DynamicStatus coverage
 // ==========================================================================
 
-func Test_DynamicStatus(t *testing.T) {
+func Test_DynamicStatus_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	invalid := coredynamic.InvalidDynamicStatus("bad")
 	invalidNoMsg := coredynamic.InvalidDynamicStatusNoMessage()
@@ -805,7 +805,7 @@ func Test_DynamicStatus(t *testing.T) {
 // ValueStatus coverage
 // ==========================================================================
 
-func Test_ValueStatus(t *testing.T) {
+func Test_ValueStatus_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	inv := coredynamic.InvalidValueStatus("oops")
 	invNoMsg := coredynamic.InvalidValueStatusNoMessage()
@@ -830,7 +830,7 @@ func Test_ValueStatus(t *testing.T) {
 // SimpleRequest coverage
 // ==========================================================================
 
-func Test_SimpleRequest(t *testing.T) {
+func Test_SimpleRequest_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	sr := coredynamic.NewSimpleRequest("data", true, "msg")
 	srValid := coredynamic.NewSimpleRequestValid("data2")
@@ -859,7 +859,7 @@ func Test_SimpleRequest(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "SimpleRequest returns correct value -- constructors", actual)
 }
 
-func Test_SimpleRequest_TypeMismatch(t *testing.T) {
+func Test_SimpleRequest_TypeMismatch_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	sr := coredynamic.NewSimpleRequestValid("hello")
 	err1 := sr.GetErrorOnTypeMismatch(reflect.TypeOf(42), false)
@@ -882,7 +882,7 @@ func Test_SimpleRequest_TypeMismatch(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "SimpleRequest returns error -- GetErrorOnTypeMismatch", actual)
 }
 
-func Test_SimpleRequest_IsPointer(t *testing.T) {
+func Test_SimpleRequest_IsPointer_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	s := "hello"
 	sr := coredynamic.NewSimpleRequestValid(&s)
@@ -902,7 +902,7 @@ func Test_SimpleRequest_IsPointer(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "SimpleRequest returns correct value -- IsPointer", actual)
 }
 
-func Test_SimpleRequest_InvalidError(t *testing.T) {
+func Test_SimpleRequest_InvalidError_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	sr := coredynamic.InvalidSimpleRequest("oops")
 	err1 := sr.InvalidError()
@@ -932,7 +932,7 @@ func Test_SimpleRequest_InvalidError(t *testing.T) {
 // SimpleResult coverage
 // ==========================================================================
 
-func Test_SimpleResult(t *testing.T) {
+func Test_SimpleResult_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	sr := coredynamic.NewSimpleResult("data", true, "msg")
 	srValid := coredynamic.NewSimpleResultValid("data2")
@@ -959,7 +959,7 @@ func Test_SimpleResult(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "SimpleResult returns correct value -- constructors", actual)
 }
 
-func Test_SimpleResult_TypeMismatch(t *testing.T) {
+func Test_SimpleResult_TypeMismatch_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	sr := coredynamic.NewSimpleResultValid("hello")
 	err1 := sr.GetErrorOnTypeMismatch(reflect.TypeOf(42), false)
@@ -982,7 +982,7 @@ func Test_SimpleResult_TypeMismatch(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "SimpleResult returns error -- GetErrorOnTypeMismatch", actual)
 }
 
-func Test_SimpleResult_InvalidError(t *testing.T) {
+func Test_SimpleResult_InvalidError_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	sr := coredynamic.InvalidSimpleResult("oops")
 	err1 := sr.InvalidError()
@@ -1008,7 +1008,7 @@ func Test_SimpleResult_InvalidError(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "SimpleResult returns error -- InvalidError", actual)
 }
 
-func Test_SimpleResult_Clone(t *testing.T) {
+func Test_SimpleResult_Clone_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	sr := coredynamic.NewSimpleResultValid("data")
 	clone := sr.Clone()
@@ -1103,7 +1103,7 @@ func Test_TypedDynamic_JSON(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedDynamic returns correct value -- JSON", actual)
 }
 
-func Test_TypedDynamic_UnmarshalJSON(t *testing.T) {
+func Test_TypedDynamic_UnmarshalJSON_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewTypedDynamicPtr[string]("", false)
 	err := d.UnmarshalJSON([]byte(`"updated"`))
@@ -1143,7 +1143,7 @@ func Test_TypedDynamic_Bytes_IsBytes(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedDynamic returns correct value -- Bytes []byte", actual)
 }
 
-func Test_TypedDynamic_GetAs(t *testing.T) {
+func Test_TypedDynamic_GetAs_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	dStr := coredynamic.NewTypedDynamic[string]("hello", true)
 	s, sOk := dStr.GetAsString()
@@ -1177,7 +1177,7 @@ func Test_TypedDynamic_GetAs(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedDynamic returns correct value -- GetAs", actual)
 }
 
-func Test_TypedDynamic_Value_Methods(t *testing.T) {
+func Test_TypedDynamic_Value_Methods_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	dStr := coredynamic.NewTypedDynamic[string]("hello", true)
 	dInt := coredynamic.NewTypedDynamic[int](42, true)
@@ -1205,7 +1205,7 @@ func Test_TypedDynamic_Value_Methods(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedDynamic returns correct value -- Value methods", actual)
 }
 
-func Test_TypedDynamic_Clone(t *testing.T) {
+func Test_TypedDynamic_Clone_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewTypedDynamic[string]("x", true)
 	clone := d.Clone()
@@ -1239,7 +1239,7 @@ func Test_TypedDynamic_Clone(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedDynamic returns correct value -- Clone", actual)
 }
 
-func Test_TypedDynamic_Deserialize(t *testing.T) {
+func Test_TypedDynamic_Deserialize_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewTypedDynamicPtr[string]("", false)
 	err := d.Deserialize([]byte(`"hello"`))
@@ -1645,7 +1645,7 @@ func Test_TypedSimpleResult_Clone(t *testing.T) {
 // Package-level funcs coverage
 // ==========================================================================
 
-func Test_SafeTypeName(t *testing.T) {
+func Test_SafeTypeName_DynamicUncoveredpaths(t *testing.T) {
 	// Act
 	actual := args.Map{
 		"string": coredynamic.SafeTypeName("hello"),
@@ -1674,7 +1674,7 @@ func Test_Type(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Type returns correct value -- with args", actual)
 }
 
-func Test_IsAnyTypesOf(t *testing.T) {
+func Test_IsAnyTypesOf_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	strType := reflect.TypeOf("")
 	intType := reflect.TypeOf(0)
@@ -1694,7 +1694,7 @@ func Test_IsAnyTypesOf(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "IsAnyTypesOf returns correct value -- with args", actual)
 }
 
-func Test_AnyToReflectVal(t *testing.T) {
+func Test_AnyToReflectVal_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	rv := coredynamic.AnyToReflectVal("hello")
 
@@ -1718,7 +1718,7 @@ func Test_PointerOrNonPointer(t *testing.T) {
 	_ = rvStruct
 }
 
-func Test_ZeroSet(t *testing.T) {
+func Test_ZeroSet_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	type S struct{ X int }
 	s := S{X: 42}
@@ -1733,7 +1733,7 @@ func Test_ZeroSet(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "ZeroSet returns correct value -- with args", actual)
 }
 
-func Test_LengthOfReflect(t *testing.T) {
+func Test_LengthOfReflect_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	rv := reflect.ValueOf([]int{1, 2, 3})
 	l := coredynamic.LengthOfReflect(rv)
@@ -1769,7 +1769,7 @@ func Test_BytesConverter(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "BytesConverter returns correct value -- ToString", actual)
 }
 
-func Test_BytesConverter_SafeCastString(t *testing.T) {
+func Test_BytesConverter_SafeCastString_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	bc := coredynamic.NewBytesConverter([]byte("raw"))
 	bcEmpty := coredynamic.NewBytesConverter([]byte{})
@@ -1788,7 +1788,7 @@ func Test_BytesConverter_SafeCastString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "BytesConverter returns correct value -- SafeCastString", actual)
 }
 
-func Test_BytesConverter_CastString(t *testing.T) {
+func Test_BytesConverter_CastString_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	bc := coredynamic.NewBytesConverter([]byte("raw"))
 	s, err := bc.CastString()
@@ -1811,7 +1811,7 @@ func Test_BytesConverter_CastString(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "BytesConverter returns correct value -- CastString", actual)
 }
 
-func Test_BytesConverter_ToBool(t *testing.T) {
+func Test_BytesConverter_ToBool_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	bc := coredynamic.NewBytesConverter([]byte(`true`))
 	val, err := bc.ToBool()
@@ -1830,7 +1830,7 @@ func Test_BytesConverter_ToBool(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "BytesConverter returns correct value -- ToBool", actual)
 }
 
-func Test_BytesConverter_ToBoolMust(t *testing.T) {
+func Test_BytesConverter_ToBoolMust_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	bc := coredynamic.NewBytesConverter([]byte(`false`))
 	val := bc.ToBoolMust()
@@ -1843,7 +1843,7 @@ func Test_BytesConverter_ToBoolMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "BytesConverter returns correct value -- ToBoolMust", actual)
 }
 
-func Test_BytesConverter_ToStringMust(t *testing.T) {
+func Test_BytesConverter_ToStringMust_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	bc := coredynamic.NewBytesConverter([]byte(`"hi"`))
 	val := bc.ToStringMust()
@@ -1856,7 +1856,7 @@ func Test_BytesConverter_ToStringMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "BytesConverter returns correct value -- ToStringMust", actual)
 }
 
-func Test_BytesConverter_ToStrings(t *testing.T) {
+func Test_BytesConverter_ToStrings_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	bc := coredynamic.NewBytesConverter([]byte(`["a","b"]`))
 	val, err := bc.ToStrings()
@@ -1875,7 +1875,7 @@ func Test_BytesConverter_ToStrings(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "BytesConverter returns correct value -- ToStrings", actual)
 }
 
-func Test_BytesConverter_ToStringsMust(t *testing.T) {
+func Test_BytesConverter_ToStringsMust_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	bc := coredynamic.NewBytesConverter([]byte(`["x"]`))
 	val := bc.ToStringsMust()
@@ -1888,7 +1888,7 @@ func Test_BytesConverter_ToStringsMust(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "BytesConverter returns correct value -- ToStringsMust", actual)
 }
 
-func Test_BytesConverter_ToInt64(t *testing.T) {
+func Test_BytesConverter_ToInt64_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	bc := coredynamic.NewBytesConverter([]byte(`42`))
 	val, err := bc.ToInt64()
@@ -1907,7 +1907,7 @@ func Test_BytesConverter_ToInt64(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "BytesConverter returns correct value -- ToInt64", actual)
 }
 
-func Test_BytesConverter_ToInt64Must(t *testing.T) {
+func Test_BytesConverter_ToInt64Must_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	bc := coredynamic.NewBytesConverter([]byte(`99`))
 	val := bc.ToInt64Must()
@@ -1920,7 +1920,7 @@ func Test_BytesConverter_ToInt64Must(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "BytesConverter returns correct value -- ToInt64Must", actual)
 }
 
-func Test_BytesConverter_Deserialize(t *testing.T) {
+func Test_BytesConverter_Deserialize_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	bc := coredynamic.NewBytesConverter([]byte(`"hello"`))
 	var s string
@@ -1940,7 +1940,7 @@ func Test_BytesConverter_Deserialize(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "BytesConverter returns correct value -- Deserialize", actual)
 }
 
-func Test_BytesConverter_DeserializeMust(t *testing.T) {
+func Test_BytesConverter_DeserializeMust_DynamicUncoveredpaths(t *testing.T) {
 	// Arrange
 	bc := coredynamic.NewBytesConverter([]byte(`42`))
 	var i int

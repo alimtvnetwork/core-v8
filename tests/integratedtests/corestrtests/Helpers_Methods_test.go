@@ -9,7 +9,7 @@ import (
 
 // ── CloneSlice ──
 
-func Test_CloneSlice_Empty(t *testing.T) {
+func Test_CloneSlice_Empty_HelpersMethods(t *testing.T) {
 	safeTest(t, "Test_CloneSlice_Empty", func() {
 		// Arrange
 		tc := cloneSliceTestCases[0]
@@ -24,7 +24,7 @@ func Test_CloneSlice_Empty(t *testing.T) {
 	})
 }
 
-func Test_CloneSlice_WithItems(t *testing.T) {
+func Test_CloneSlice_WithItems_HelpersMethods(t *testing.T) {
 	safeTest(t, "Test_CloneSlice_WithItems", func() {
 		// Arrange
 		tc := cloneSliceTestCases[1]
@@ -42,7 +42,7 @@ func Test_CloneSlice_WithItems(t *testing.T) {
 
 // ── CloneSliceIf ──
 
-func Test_CloneSliceIf_Empty(t *testing.T) {
+func Test_CloneSliceIf_Empty_HelpersMethods(t *testing.T) {
 	safeTest(t, "Test_CloneSliceIf_Empty", func() {
 		// Arrange
 		tc := cloneSliceIfTestCases[0]
@@ -57,7 +57,7 @@ func Test_CloneSliceIf_Empty(t *testing.T) {
 	})
 }
 
-func Test_CloneSliceIf_NoClone(t *testing.T) {
+func Test_CloneSliceIf_NoClone_HelpersMethods(t *testing.T) {
 	safeTest(t, "Test_CloneSliceIf_NoClone", func() {
 		// Arrange
 		tc := cloneSliceIfTestCases[1]
@@ -72,7 +72,7 @@ func Test_CloneSliceIf_NoClone(t *testing.T) {
 	})
 }
 
-func Test_CloneSliceIf_Clone(t *testing.T) {
+func Test_CloneSliceIf_Clone_HelpersMethods(t *testing.T) {
 	safeTest(t, "Test_CloneSliceIf_Clone", func() {
 		// Arrange
 		tc := cloneSliceIfTestCases[2]
@@ -89,7 +89,7 @@ func Test_CloneSliceIf_Clone(t *testing.T) {
 
 // ── AnyToString ──
 
-func Test_AnyToString_Empty(t *testing.T) {
+func Test_AnyToString_Empty_HelpersMethods(t *testing.T) {
 	safeTest(t, "Test_AnyToString_Empty", func() {
 		// Arrange
 		tc := anyToStringTestCases[0]
@@ -104,7 +104,7 @@ func Test_AnyToString_Empty(t *testing.T) {
 	})
 }
 
-func Test_AnyToString_WithFieldName(t *testing.T) {
+func Test_AnyToString_WithFieldName_HelpersMethods(t *testing.T) {
 	safeTest(t, "Test_AnyToString_WithFieldName", func() {
 		// Arrange
 		tc := anyToStringTestCases[1]
@@ -119,7 +119,7 @@ func Test_AnyToString_WithFieldName(t *testing.T) {
 	})
 }
 
-func Test_AnyToString_WithoutFieldName(t *testing.T) {
+func Test_AnyToString_WithoutFieldName_HelpersMethods(t *testing.T) {
 	safeTest(t, "Test_AnyToString_WithoutFieldName", func() {
 		// Arrange
 		tc := anyToStringTestCases[2]
@@ -134,7 +134,7 @@ func Test_AnyToString_WithoutFieldName(t *testing.T) {
 	})
 }
 
-func Test_AnyToString_Ptr(t *testing.T) {
+func Test_AnyToString_Ptr_HelpersMethods(t *testing.T) {
 	safeTest(t, "Test_AnyToString_Ptr", func() {
 		// Arrange
 		tc := anyToStringTestCases[3]
@@ -152,7 +152,7 @@ func Test_AnyToString_Ptr(t *testing.T) {
 
 // ── AllIndividualStringsOfStringsLength ──
 
-func Test_AllIndividualStringsOfStringsLength_Nil(t *testing.T) {
+func Test_AllIndividualStringsOfStringsLength_Nil_HelpersMethods(t *testing.T) {
 	safeTest(t, "Test_AllIndividualStringsOfStringsLength_Nil", func() {
 		// Arrange
 		tc := allIndividualStringsOfStringsLengthTestCases[0]
@@ -201,7 +201,7 @@ func Test_AllIndividualStringsOfStringsLength_WithItems(t *testing.T) {
 
 // ── AllIndividualsLengthOfSimpleSlices ──
 
-func Test_AllIndividualsLengthOfSimpleSlices_Nil(t *testing.T) {
+func Test_AllIndividualsLengthOfSimpleSlices_Nil_HelpersMethods(t *testing.T) {
 	safeTest(t, "Test_AllIndividualsLengthOfSimpleSlices_Nil", func() {
 		// Arrange
 		tc := allIndividualsLengthOfSimpleSlicesTestCases[0]
@@ -235,7 +235,7 @@ func Test_AllIndividualsLengthOfSimpleSlices_WithItems(t *testing.T) {
 
 // ── utils ──
 
-func Test_Utils_WrapDouble(t *testing.T) {
+func Test_Utils_WrapDouble_HelpersMethods(t *testing.T) {
 	safeTest(t, "Test_Utils_WrapDouble", func() {
 		// Arrange
 		tc := utilsWrapTestCases[0]
@@ -250,7 +250,7 @@ func Test_Utils_WrapDouble(t *testing.T) {
 	})
 }
 
-func Test_Utils_WrapSingle(t *testing.T) {
+func Test_Utils_WrapSingle_HelpersMethods(t *testing.T) {
 	safeTest(t, "Test_Utils_WrapSingle", func() {
 		// Arrange
 		tc := utilsWrapTestCases[1]
@@ -265,7 +265,7 @@ func Test_Utils_WrapSingle(t *testing.T) {
 	})
 }
 
-func Test_Utils_WrapTilda(t *testing.T) {
+func Test_Utils_WrapTilda_HelpersMethods(t *testing.T) {
 	safeTest(t, "Test_Utils_WrapTilda", func() {
 		// Arrange
 		tc := utilsWrapTestCases[2]
@@ -372,7 +372,7 @@ func Test_Utils_WrapSingleIfMissing_NotWrapped(t *testing.T) {
 
 // ── Empty creators ──
 
-func Test_EmptyCreator_All(t *testing.T) {
+func Test_EmptyCreator_All_HelpersMethods(t *testing.T) {
 	safeTest(t, "Test_EmptyCreator_All", func() {
 		// Arrange
 		tc := emptyCreatorTestCases[0]
@@ -404,7 +404,7 @@ func Test_EmptyCreator_All(t *testing.T) {
 
 // ── DataModels ──
 
-func Test_CharCollectionDataModel(t *testing.T) {
+func Test_CharCollectionDataModel_HelpersMethods(t *testing.T) {
 	safeTest(t, "Test_CharCollectionDataModel", func() {
 		// Arrange
 		tc := dataModelTestCases[0]
@@ -499,7 +499,7 @@ func Test_HashsetsCollectionDataModel_HelpersModel(t *testing.T) {
 
 // ── SimpleStringOnceModel ──
 
-func Test_SimpleStringOnceModel(t *testing.T) {
+func Test_SimpleStringOnceModel_HelpersMethods(t *testing.T) {
 	safeTest(t, "Test_SimpleStringOnceModel", func() {
 		// Arrange
 		tc := simpleStringOnceModelTestCases[0]

@@ -313,7 +313,7 @@ func Test_Dynamic_Json_FromNewDynamicValid(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Dynamic Json -- valid", actual)
 }
 
-func Test_Dynamic_JsonParseSelfInject(t *testing.T) {
+func Test_Dynamic_JsonParseSelfInject_NewdynamicValid(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewDynamicValid("hello")
 	r := d.JsonPtr()
@@ -752,7 +752,7 @@ func Test_Collection_CollectionClone(t *testing.T) {
 
 // ── LeftRight ──
 
-func Test_LeftRight(t *testing.T) {
+func Test_LeftRight_NewdynamicValid(t *testing.T) {
 	// Arrange
 	lr := coredynamic.LeftRight{Left: "l", Right: "r"}
 
@@ -821,7 +821,7 @@ func Test_TypeMustBeSame_Different(t *testing.T) {
 
 // ── ValueStatus ──
 
-func Test_ValueStatus(t *testing.T) {
+func Test_ValueStatus_NewdynamicValid(t *testing.T) {
 	// Arrange
 	vs := &coredynamic.ValueStatus{Value: "hello", IsValid: true}
 
@@ -841,7 +841,7 @@ func Test_ValueStatus(t *testing.T) {
 
 // ── SimpleRequest / SimpleResult ──
 
-func Test_SimpleRequest(t *testing.T) {
+func Test_SimpleRequest_NewdynamicValid(t *testing.T) {
 	// Arrange
 	sr := coredynamic.NewSimpleRequestValid("hello")
 

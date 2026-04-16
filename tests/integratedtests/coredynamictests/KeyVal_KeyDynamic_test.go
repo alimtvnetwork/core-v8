@@ -666,7 +666,7 @@ func Test_KeyVal_JsonPtr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "KeyVal returns correct value -- JsonPtr", actual)
 }
 
-func Test_KeyVal_ParseInjectUsingJson(t *testing.T) {
+func Test_KeyVal_ParseInjectUsingJson_KeyvalKeydynamic(t *testing.T) {
 	// Arrange
 	kv := &coredynamic.KeyVal{}
 	original := coredynamic.KeyVal{Key: "pk", Value: "pv"}

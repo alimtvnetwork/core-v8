@@ -28,7 +28,7 @@ func Test_StringTo_IntegerWithDefault_Valid(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "IntegerWithDefault returns non-empty -- valid", actual)
 }
 
-func Test_StringTo_IntegerWithDefault_Empty(t *testing.T) {
+func Test_StringTo_IntegerWithDefault_Empty_StringtoIntegerwithdefault(t *testing.T) {
 	// Arrange
 	val, ok := converters.StringTo.IntegerWithDefault("", -1)
 
@@ -249,7 +249,7 @@ func Test_StringTo_Float64Default_Invalid_FromStringToIntegerWithD(t *testing.T)
 
 // ── StringTo: Float64Conditional (deprecated alias) ──
 
-func Test_StringTo_Float64Conditional(t *testing.T) {
+func Test_StringTo_Float64Conditional_StringtoIntegerwithdefault(t *testing.T) {
 	// Arrange
 	val, ok := converters.StringTo.Float64Conditional("3.14", 0.0)
 
@@ -307,7 +307,7 @@ func Test_StringTo_ByteWithDefault_Invalid_FromStringToIntegerWithD(t *testing.T
 
 // ── StringTo: BytesConditional ──
 
-func Test_StringTo_BytesConditional_Empty(t *testing.T) {
+func Test_StringTo_BytesConditional_Empty_StringtoIntegerwithdefault(t *testing.T) {
 	// Arrange
 	result := converters.StringTo.BytesConditional("", ",", func(in string) (byte, bool, bool) {
 		return 0, true, false
@@ -868,7 +868,7 @@ func Test_StringsTo_PointerStringsCopy(t *testing.T) {
 
 // ── StringsTo: IntegersConditional ──
 
-func Test_StringsTo_IntegersConditional(t *testing.T) {
+func Test_StringsTo_IntegersConditional_StringtoIntegerwithdefault(t *testing.T) {
 	// Arrange
 	result := converters.StringsTo.IntegersConditional(func(in string) (int, bool, bool) {
 		return len(in), true, false
@@ -918,7 +918,7 @@ func Test_StringsTo_IntegersWithDefaults(t *testing.T) {
 
 // ── StringsTo: IntegersOptionPanic (no panic) ──
 
-func Test_StringsTo_IntegersOptionPanic_NoPanic(t *testing.T) {
+func Test_StringsTo_IntegersOptionPanic_NoPanic_StringtoIntegerwithdefault(t *testing.T) {
 	// Arrange
 	result := converters.StringsTo.IntegersOptionPanic(false, "1", "abc", "3")
 
@@ -946,7 +946,7 @@ func Test_StringsTo_IntegersSkipErrors_FromStringToIntegerWithD(t *testing.T) {
 
 // ── StringsTo: BytesMust ──
 
-func Test_StringsTo_BytesMust(t *testing.T) {
+func Test_StringsTo_BytesMust_StringtoIntegerwithdefault(t *testing.T) {
 	// Arrange
 	result := converters.StringsTo.BytesMust("0", "1", "255")
 

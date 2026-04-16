@@ -79,7 +79,7 @@ func Test_Collection_Adds_FromCollectionBasic(t *testing.T) {
 	})
 }
 
-func Test_Collection_List(t *testing.T) {
+func Test_Collection_List_CollectionBasic(t *testing.T) {
 	safeTest(t, "Test_Collection_List", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b"})

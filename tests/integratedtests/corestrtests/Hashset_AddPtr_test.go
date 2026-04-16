@@ -1385,7 +1385,7 @@ func Test_Hashset_GetFilteredItems_Break(t *testing.T) {
 	})
 }
 
-func Test_Hashset_GetFilteredCollection(t *testing.T) {
+func Test_Hashset_GetFilteredCollection_HashsetAddptr(t *testing.T) {
 	safeTest(t, "Test_Hashset_GetFilteredCollection", func() {
 		// Arrange
 		hs := corestr.New.Hashset.Strings([]string{"abc"})
@@ -1433,7 +1433,7 @@ func Test_Hashset_GetFilteredCollection_Break(t *testing.T) {
 	})
 }
 
-func Test_Hashset_GetAllExceptHashset(t *testing.T) {
+func Test_Hashset_GetAllExceptHashset_HashsetAddptr(t *testing.T) {
 	safeTest(t, "Test_Hashset_GetAllExceptHashset", func() {
 		// Arrange
 		hs := corestr.New.Hashset.Strings([]string{"a", "b", "c"})
@@ -1498,7 +1498,7 @@ func Test_Hashset_GetAllExcept_Nil(t *testing.T) {
 	})
 }
 
-func Test_Hashset_GetAllExceptSpread(t *testing.T) {
+func Test_Hashset_GetAllExceptSpread_HashsetAddptr(t *testing.T) {
 	safeTest(t, "Test_Hashset_GetAllExceptSpread", func() {
 		// Arrange
 		hs := corestr.New.Hashset.Strings([]string{"a", "b"})
@@ -1514,7 +1514,7 @@ func Test_Hashset_GetAllExceptSpread(t *testing.T) {
 	})
 }
 
-func Test_Hashset_GetAllExceptCollection(t *testing.T) {
+func Test_Hashset_GetAllExceptCollection_HashsetAddptr(t *testing.T) {
 	safeTest(t, "Test_Hashset_GetAllExceptCollection", func() {
 		// Arrange
 		hs := corestr.New.Hashset.Strings([]string{"a", "b"})
@@ -1639,7 +1639,7 @@ func Test_Hashset_ListPtr(t *testing.T) {
 	})
 }
 
-func Test_Hashset_AddCapacities(t *testing.T) {
+func Test_Hashset_AddCapacities_HashsetAddptr(t *testing.T) {
 	safeTest(t, "Test_Hashset_AddCapacities", func() {
 		// Arrange
 		hs := corestr.New.Hashset.Strings([]string{"a"})
@@ -1735,7 +1735,7 @@ func Test_Hashset_Resize_AlreadyLarger(t *testing.T) {
 	})
 }
 
-func Test_Hashset_ResizeLock(t *testing.T) {
+func Test_Hashset_ResizeLock_HashsetAddptr(t *testing.T) {
 	safeTest(t, "Test_Hashset_ResizeLock", func() {
 		// Arrange
 		hs := corestr.New.Hashset.Strings([]string{"a"})

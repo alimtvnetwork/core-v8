@@ -13,7 +13,7 @@ import (
 // ValidValue — Factories
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_ValidValue_NewValidValue(t *testing.T) {
+func Test_ValidValue_NewValidValue_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_ValidValue_NewValidValue", func() {
 		// Arrange
 		vv := corestr.NewValidValue("hello")
@@ -33,7 +33,7 @@ func Test_ValidValue_NewValidValue(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_NewValidValueEmpty(t *testing.T) {
+func Test_ValidValue_NewValidValueEmpty_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_ValidValue_NewValidValueEmpty", func() {
 		// Arrange
 		vv := corestr.NewValidValueEmpty()
@@ -289,7 +289,7 @@ func Test_ValidValue_ValueByte_FromValidValueNewValidVa(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ValueDefByte(t *testing.T) {
+func Test_ValidValue_ValueDefByte_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_ValidValue_ValueDefByte", func() {
 		// Arrange
 		vv1 := corestr.NewValidValue("50")
@@ -385,7 +385,7 @@ func Test_ValidValue_IsAnyOf_FromValidValueNewValidVa(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_IsContains_IsAnyContains(t *testing.T) {
+func Test_ValidValue_IsContains_IsAnyContains_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_ValidValue_IsContains_IsAnyContains", func() {
 		// Arrange
 		vv := corestr.NewValidValue("hello world")
@@ -452,7 +452,7 @@ func Test_ValidValue_IsRegexMatches_FromValidValueNewValidVa(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_RegexFindString(t *testing.T) {
+func Test_ValidValue_RegexFindString_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_ValidValue_RegexFindString", func() {
 		// Arrange
 		vv := corestr.NewValidValue("abc123def")
@@ -565,7 +565,7 @@ func Test_ValidValue_Split_FromValidValueNewValidVa(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_SplitNonEmpty(t *testing.T) {
+func Test_ValidValue_SplitNonEmpty_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_ValidValue_SplitNonEmpty", func() {
 		// Arrange
 		vv := corestr.NewValidValue("a,,b")
@@ -580,7 +580,7 @@ func Test_ValidValue_SplitNonEmpty(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_SplitTrimNonWhitespace(t *testing.T) {
+func Test_ValidValue_SplitTrimNonWhitespace_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_ValidValue_SplitTrimNonWhitespace", func() {
 		// Arrange
 		vv := corestr.NewValidValue("a , , b")
@@ -690,7 +690,7 @@ func Test_ValidValue_FullString_Nil_FromValidValueNewValidVa(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Clear_Dispose(t *testing.T) {
+func Test_ValidValue_Clear_Dispose_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_ValidValue_Clear_Dispose", func() {
 		// Arrange
 		vv := corestr.NewValidValue("hello")
@@ -716,7 +716,7 @@ func Test_ValidValue_Clear_Dispose(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Json(t *testing.T) {
+func Test_ValidValue_Json_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_ValidValue_Json", func() {
 		// Arrange
 		vv := corestr.NewValidValue("hello")
@@ -731,7 +731,7 @@ func Test_ValidValue_Json(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_JsonPtr(t *testing.T) {
+func Test_ValidValue_JsonPtr_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_ValidValue_JsonPtr", func() {
 		// Arrange
 		vv := corestr.NewValidValue("hello")
@@ -766,7 +766,7 @@ func Test_ValidValue_Serialize_FromValidValueNewValidVa(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_Deserialize(t *testing.T) {
+func Test_ValidValue_Deserialize_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_ValidValue_Deserialize", func() {
 		// Arrange
 		vv := corestr.NewValidValue("hello")
@@ -782,7 +782,7 @@ func Test_ValidValue_Deserialize(t *testing.T) {
 	})
 }
 
-func Test_ValidValue_ParseInjectUsingJson(t *testing.T) {
+func Test_ValidValue_ParseInjectUsingJson_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_ValidValue_ParseInjectUsingJson", func() {
 		// Arrange
 		vv := &corestr.ValidValue{}
@@ -903,7 +903,7 @@ func Test_KeyAnyValuePair_IsValueEmptyString_FromValidValueNewValidVa(t *testing
 	})
 }
 
-func Test_KeyAnyValuePair_IsValueWhitespace(t *testing.T) {
+func Test_KeyAnyValuePair_IsValueWhitespace_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_KeyAnyValuePair_IsValueWhitespace", func() {
 		// Arrange
 		kv1 := &corestr.KeyAnyValuePair{Key: "k", Value: nil}
@@ -1033,7 +1033,7 @@ func Test_KeyAnyValuePair_Json_FromValidValueNewValidVa(t *testing.T) {
 	})
 }
 
-func Test_KeyAnyValuePair_JsonPtr(t *testing.T) {
+func Test_KeyAnyValuePair_JsonPtr_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_KeyAnyValuePair_JsonPtr", func() {
 		// Arrange
 		kv := &corestr.KeyAnyValuePair{Key: "k", Value: "v"}
@@ -1069,7 +1069,7 @@ func Test_KeyAnyValuePair_AsJsonContractsBinder_FromValidValueNewValidVa(t *test
 	})
 }
 
-func Test_KeyAnyValuePair_JsonParseSelfInject(t *testing.T) {
+func Test_KeyAnyValuePair_JsonParseSelfInject_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_KeyAnyValuePair_JsonParseSelfInject", func() {
 		// Arrange
 		kv := &corestr.KeyAnyValuePair{}
@@ -1085,7 +1085,7 @@ func Test_KeyAnyValuePair_JsonParseSelfInject(t *testing.T) {
 	})
 }
 
-func Test_KeyAnyValuePair_Clear_Dispose(t *testing.T) {
+func Test_KeyAnyValuePair_Clear_Dispose_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_KeyAnyValuePair_Clear_Dispose", func() {
 		// Arrange
 		kv := &corestr.KeyAnyValuePair{Key: "k", Value: "v"}
@@ -1396,7 +1396,7 @@ func Test_ValidValues_Find_FromValidValueNewValidVa(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_Find_Break(t *testing.T) {
+func Test_ValidValues_Find_Break_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_ValidValues_Find_Break", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -1515,7 +1515,7 @@ func Test_ValidValues_ConcatNew_FromValidValueNewValidVa(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_ConcatNew_EmptyClone(t *testing.T) {
+func Test_ValidValues_ConcatNew_EmptyClone_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_ValidValues_ConcatNew_EmptyClone", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()
@@ -1531,7 +1531,7 @@ func Test_ValidValues_ConcatNew_EmptyClone(t *testing.T) {
 	})
 }
 
-func Test_ValidValues_ConcatNew_EmptyNoClone(t *testing.T) {
+func Test_ValidValues_ConcatNew_EmptyNoClone_ValidvalueNewvalidvalue(t *testing.T) {
 	safeTest(t, "Test_I27_ValidValues_ConcatNew_EmptyNoClone", func() {
 		// Arrange
 		vvs := corestr.EmptyValidValues()

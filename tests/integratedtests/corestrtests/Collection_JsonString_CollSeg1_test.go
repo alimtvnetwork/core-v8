@@ -42,7 +42,7 @@ func Test_Collection_JsonString_FromCollectionJsonString(t *testing.T) {
 	})
 }
 
-func Test_Collection_JsonStringMust(t *testing.T) {
+func Test_Collection_JsonStringMust_CollectionJsonstringCollseg1(t *testing.T) {
 	safeTest(t, "Test_Collection_JsonStringMust", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"x"})
@@ -114,7 +114,7 @@ func Test_Collection_HasIndex_FromCollectionJsonString(t *testing.T) {
 	})
 }
 
-func Test_Collection_ListStringsPtr(t *testing.T) {
+func Test_Collection_ListStringsPtr_CollectionJsonstringCollseg1(t *testing.T) {
 	safeTest(t, "Test_Collection_ListStringsPtr", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a"})
@@ -142,7 +142,7 @@ func Test_Collection_ListStrings_FromCollectionJsonString(t *testing.T) {
 	})
 }
 
-func Test_Collection_StringJSON(t *testing.T) {
+func Test_Collection_StringJSON_CollectionJsonstringCollseg1(t *testing.T) {
 	safeTest(t, "Test_Collection_StringJSON", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a"})
@@ -184,7 +184,7 @@ func Test_Collection_RemoveAt_FromCollectionJsonString(t *testing.T) {
 	})
 }
 
-func Test_Collection_Count(t *testing.T) {
+func Test_Collection_Count_CollectionJsonstringCollseg1(t *testing.T) {
 	safeTest(t, "Test_Collection_Count", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b"})
@@ -277,7 +277,7 @@ func Test_Collection_IsEquals_DiffContent(t *testing.T) {
 	})
 }
 
-func Test_Collection_IsEquals_NilBoth(t *testing.T) {
+func Test_Collection_IsEquals_NilBoth_CollectionJsonstringCollseg1(t *testing.T) {
 	safeTest(t, "Test_Collection_IsEquals_NilBoth", func() {
 		// Arrange
 		var a, b *corestr.Collection
@@ -306,7 +306,7 @@ func Test_Collection_IsEquals_NilOne(t *testing.T) {
 	})
 }
 
-func Test_Collection_IsEquals_DiffLength(t *testing.T) {
+func Test_Collection_IsEquals_DiffLength_CollectionJsonstringCollseg1(t *testing.T) {
 	safeTest(t, "Test_Collection_IsEquals_DiffLength", func() {
 		// Arrange
 		a := corestr.New.Collection.Strings([]string{"a"})
@@ -336,7 +336,7 @@ func Test_Collection_IsEquals_BothEmpty_FromCollectionJsonString(t *testing.T) {
 	})
 }
 
-func Test_Collection_IsEquals_SamePtr(t *testing.T) {
+func Test_Collection_IsEquals_SamePtr_CollectionJsonstringCollseg1(t *testing.T) {
 	safeTest(t, "Test_Collection_IsEquals_SamePtr", func() {
 		// Arrange
 		a := corestr.New.Collection.Strings([]string{"x"})
@@ -407,7 +407,7 @@ func Test_Collection_IsEmptyLock_FromCollectionJsonString(t *testing.T) {
 	})
 }
 
-func Test_Collection_HasItems(t *testing.T) {
+func Test_Collection_HasItems_CollectionJsonstringCollseg1(t *testing.T) {
 	safeTest(t, "Test_Collection_HasItems", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a"})
@@ -1077,7 +1077,7 @@ func Test_Collection_Last_FromCollectionJsonString(t *testing.T) {
 	})
 }
 
-func Test_Collection_LastOrDefault(t *testing.T) {
+func Test_Collection_LastOrDefault_CollectionJsonstringCollseg1(t *testing.T) {
 	safeTest(t, "Test_Collection_LastOrDefault", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b"})
@@ -1098,7 +1098,7 @@ func Test_Collection_LastOrDefault(t *testing.T) {
 	})
 }
 
-func Test_Collection_FirstOrDefault(t *testing.T) {
+func Test_Collection_FirstOrDefault_CollectionJsonstringCollseg1(t *testing.T) {
 	safeTest(t, "Test_Collection_FirstOrDefault", func() {
 		// Arrange
 		c := corestr.New.Collection.Strings([]string{"a", "b"})

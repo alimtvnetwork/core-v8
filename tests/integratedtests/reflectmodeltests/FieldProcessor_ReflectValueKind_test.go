@@ -11,7 +11,7 @@ import (
 
 // ── FieldProcessor ──
 
-func Test_FieldProcessor_IsFieldType(t *testing.T) {
+func Test_FieldProcessor_IsFieldType_FieldprocessorReflectvaluekind(t *testing.T) {
 	// Arrange
 	fp := &reflectmodel.FieldProcessor{
 		Name:      "TestField",
@@ -38,7 +38,7 @@ func Test_FieldProcessor_IsFieldType(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "nil should return false", actual)
 }
 
-func Test_FieldProcessor_IsFieldKind(t *testing.T) {
+func Test_FieldProcessor_IsFieldKind_FieldprocessorReflectvaluekind(t *testing.T) {
 	// Arrange
 	fp := &reflectmodel.FieldProcessor{
 		Name:      "TestField",
@@ -475,7 +475,7 @@ func Test_MethodProcessor_ZeroArgsMethod(t *testing.T) {
 
 // ── MethodProcessor — IsEqual / IsNotEqual ──
 
-func Test_MethodProcessor_IsEqual(t *testing.T) {
+func Test_MethodProcessor_IsEqual_FieldprocessorReflectvaluekind(t *testing.T) {
 	// Arrange
 	mp1 := getMethodProcessorFull("Add")
 	mp2 := getMethodProcessorFull("Add")

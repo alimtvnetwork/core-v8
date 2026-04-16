@@ -193,7 +193,7 @@ func Test_TypedDynamic_ValueMarshal_FromTypedDynamicStringIt(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedDynamic returns correct value -- ValueMarshal", actual)
 }
 
-func Test_TypedDynamic_Bytes_IsBytes(t *testing.T) {
+func Test_TypedDynamic_Bytes_IsBytes_TypeddynamicString(t *testing.T) {
 	// Arrange
 	d := coredynamic.NewTypedDynamic[[]byte]([]byte("hi"), true)
 	b, ok := d.Bytes()

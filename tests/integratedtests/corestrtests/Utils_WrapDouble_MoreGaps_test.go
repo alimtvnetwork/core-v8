@@ -13,7 +13,7 @@ import (
 // utils — WrapDouble, WrapSingle, WrapTilda, WrapDoubleIfMissing, WrapSingleIfMissing
 // =============================================================================
 
-func Test_Utils_WrapDouble(t *testing.T) {
+func Test_Utils_WrapDouble_UtilsWrapdoubleMoregaps(t *testing.T) {
 	safeTest(t, "Test_Utils_WrapDouble", func() {
 		// Act
 		actual := args.Map{"r": corestr.StringUtils.WrapDouble("hello")}
@@ -24,7 +24,7 @@ func Test_Utils_WrapDouble(t *testing.T) {
 	})
 }
 
-func Test_Utils_WrapSingle(t *testing.T) {
+func Test_Utils_WrapSingle_UtilsWrapdoubleMoregaps(t *testing.T) {
 	safeTest(t, "Test_Utils_WrapSingle", func() {
 		// Act
 		actual := args.Map{"r": corestr.StringUtils.WrapSingle("hello")}
@@ -35,7 +35,7 @@ func Test_Utils_WrapSingle(t *testing.T) {
 	})
 }
 
-func Test_Utils_WrapTilda(t *testing.T) {
+func Test_Utils_WrapTilda_UtilsWrapdoubleMoregaps(t *testing.T) {
 	safeTest(t, "Test_Utils_WrapTilda", func() {
 		// Act
 		actual := args.Map{"r": corestr.StringUtils.WrapTilda("hello")}
@@ -68,7 +68,7 @@ func Test_Utils_WrapDoubleIfMissing_Wrap(t *testing.T) {
 	})
 }
 
-func Test_Utils_WrapDoubleIfMissing_Empty(t *testing.T) {
+func Test_Utils_WrapDoubleIfMissing_Empty_UtilsWrapdoubleMoregaps(t *testing.T) {
 	safeTest(t, "Test_Utils_WrapDoubleIfMissing_Empty", func() {
 		// Act
 		actual := args.Map{"r": corestr.StringUtils.WrapDoubleIfMissing("")}
@@ -101,7 +101,7 @@ func Test_Utils_WrapSingleIfMissing_Wrap(t *testing.T) {
 	})
 }
 
-func Test_Utils_WrapSingleIfMissing_Empty(t *testing.T) {
+func Test_Utils_WrapSingleIfMissing_Empty_UtilsWrapdoubleMoregaps(t *testing.T) {
 	safeTest(t, "Test_Utils_WrapSingleIfMissing_Empty", func() {
 		// Act
 		actual := args.Map{"r": corestr.StringUtils.WrapSingleIfMissing("")}

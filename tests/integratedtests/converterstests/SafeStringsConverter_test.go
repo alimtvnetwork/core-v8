@@ -793,7 +793,7 @@ func Test_AIC_SmartStringsOf_Valid(t *testing.T) {
 // bytesTo — all uncovered methods
 // ═══════════════════════════════════════════════
 
-func Test_BytesTo_PtrString_Empty(t *testing.T) {
+func Test_BytesTo_PtrString_Empty_Safestringsconverter(t *testing.T) {
 	// Act
 	actual := args.Map{"result": converters.BytesTo.PtrString(nil) != ""}
 
@@ -811,7 +811,7 @@ func Test_BytesTo_PtrString_Valid(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "assertion", actual)
 }
 
-func Test_BytesTo_String_Empty(t *testing.T) {
+func Test_BytesTo_String_Empty_Safestringsconverter(t *testing.T) {
 	// Act
 	actual := args.Map{"result": converters.BytesTo.String(nil) != ""}
 
@@ -829,7 +829,7 @@ func Test_BytesTo_String_Valid(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "assertion", actual)
 }
 
-func Test_BytesTo_PointerToBytes_Nil(t *testing.T) {
+func Test_BytesTo_PointerToBytes_Nil_Safestringsconverter(t *testing.T) {
 	// Arrange
 	r := converters.BytesTo.PointerToBytes(nil)
 
@@ -869,7 +869,7 @@ func Test_StringTo_IntegerWithDefault_Empty(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "assertion", actual)
 }
 
-func Test_StringTo_IntegersWithDefaults_Empty(t *testing.T) {
+func Test_StringTo_IntegersWithDefaults_Empty_Safestringsconverter(t *testing.T) {
 	// Arrange
 	r := converters.StringTo.IntegersWithDefaults("", ",", 0)
 
@@ -896,7 +896,7 @@ func Test_StringTo_IntegersWithDefaults_WithError(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "assertion", actual)
 }
 
-func Test_StringTo_IntegersConditional_Empty(t *testing.T) {
+func Test_StringTo_IntegersConditional_Empty_Safestringsconverter(t *testing.T) {
 	// Arrange
 	r := converters.StringTo.IntegersConditional("", ",",
 		func(in string) (int, bool, bool) { return 0, true, false })
@@ -909,7 +909,7 @@ func Test_StringTo_IntegersConditional_Empty(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "assertion", actual)
 }
 
-func Test_StringTo_IntegersConditional_WithBreak(t *testing.T) {
+func Test_StringTo_IntegersConditional_WithBreak_Safestringsconverter(t *testing.T) {
 	// Arrange
 	r := converters.StringTo.IntegersConditional("1,2,3", ",",
 		func(in string) (int, bool, bool) {
@@ -970,7 +970,7 @@ func Test_StringTo_Integer_Error(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "assertion", actual)
 }
 
-func Test_StringTo_Float64Must_Panic(t *testing.T) {
+func Test_StringTo_Float64Must_Panic_Safestringsconverter(t *testing.T) {
 	// Arrange
 	defer func() {
 
@@ -1065,7 +1065,7 @@ func Test_StringTo_Byte_Edge(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "assertion", actual)
 }
 
-func Test_StringTo_JsonBytes(t *testing.T) {
+func Test_StringTo_JsonBytes_Safestringsconverter(t *testing.T) {
 	// Arrange
 	b := converters.StringTo.JsonBytes("test")
 
@@ -1081,7 +1081,7 @@ func Test_StringTo_JsonBytes(t *testing.T) {
 // stringsTo — uncovered methods
 // ═══════════════════════════════════════════════
 
-func Test_StringsTo_Hashset(t *testing.T) {
+func Test_StringsTo_Hashset_Safestringsconverter(t *testing.T) {
 	// Arrange
 	m := converters.StringsTo.Hashset([]string{"a", "b"})
 
@@ -1093,7 +1093,7 @@ func Test_StringsTo_Hashset(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "assertion", actual)
 }
 
-func Test_StringsTo_HashmapTrimColon(t *testing.T) {
+func Test_StringsTo_HashmapTrimColon_Safestringsconverter(t *testing.T) {
 	// Arrange
 	m := converters.StringsTo.HashmapTrimColon(" k : v ")
 
@@ -1105,7 +1105,7 @@ func Test_StringsTo_HashmapTrimColon(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "got", actual)
 }
 
-func Test_StringsTo_HashmapTrimHyphen(t *testing.T) {
+func Test_StringsTo_HashmapTrimHyphen_Safestringsconverter(t *testing.T) {
 	// Arrange
 	m := converters.StringsTo.HashmapTrimHyphen(" k - v ")
 
@@ -1117,7 +1117,7 @@ func Test_StringsTo_HashmapTrimHyphen(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "got", actual)
 }
 
-func Test_StringsTo_HashmapOptions(t *testing.T) {
+func Test_StringsTo_HashmapOptions_Safestringsconverter(t *testing.T) {
 	// Arrange
 	m := converters.StringsTo.HashmapOptions(true, "=", "k = v")
 
@@ -1129,7 +1129,7 @@ func Test_StringsTo_HashmapOptions(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "got", actual)
 }
 
-func Test_StringsTo_HashmapTrim(t *testing.T) {
+func Test_StringsTo_HashmapTrim_Safestringsconverter(t *testing.T) {
 	// Arrange
 	m := converters.StringsTo.HashmapTrim(":", []string{" k : v "})
 
@@ -1201,7 +1201,7 @@ func Test_StringsTo_MapStringAnyUsingFunc(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "assertion", actual)
 }
 
-func Test_StringsTo_MapConverter(t *testing.T) {
+func Test_StringsTo_MapConverter_Safestringsconverter(t *testing.T) {
 	// Arrange
 	mc := converters.StringsTo.MapConverter("a:b")
 
@@ -1213,7 +1213,7 @@ func Test_StringsTo_MapConverter(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "assertion", actual)
 }
 
-func Test_StringsTo_PointerStrings_Nil(t *testing.T) {
+func Test_StringsTo_PointerStrings_Nil_Safestringsconverter(t *testing.T) {
 	// Arrange
 	r := converters.StringsTo.PointerStrings(nil)
 
@@ -1238,7 +1238,7 @@ func Test_StringsTo_PointerStrings_Valid(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "assertion", actual)
 }
 
-func Test_StringsTo_PointerStringsCopy_Nil(t *testing.T) {
+func Test_StringsTo_PointerStringsCopy_Nil_Safestringsconverter(t *testing.T) {
 	// Arrange
 	r := converters.StringsTo.PointerStringsCopy(nil)
 
@@ -1302,7 +1302,7 @@ func Test_StringsTo_IntegersOptionPanic_NoPanic(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "assertion", actual)
 }
 
-func Test_StringsTo_IntegersSkipErrors(t *testing.T) {
+func Test_StringsTo_IntegersSkipErrors_Safestringsconverter(t *testing.T) {
 	// Arrange
 	r := converters.StringsTo.IntegersSkipErrors("1", "abc", "3")
 
@@ -1327,7 +1327,7 @@ func Test_StringsTo_IntegersSkipMapAndDefaultValue(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "got", actual)
 }
 
-func Test_StringsTo_IntegersSkipAndDefaultValue(t *testing.T) {
+func Test_StringsTo_IntegersSkipAndDefaultValue_Safestringsconverter(t *testing.T) {
 	// Arrange
 	r := converters.StringsTo.IntegersSkipAndDefaultValue(0, "skip", "1", "skip", "abc")
 
@@ -1354,7 +1354,7 @@ func Test_StringsTo_BytesConditional(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "assertion", actual)
 }
 
-func Test_StringsTo_BytesWithDefaults_Valid(t *testing.T) {
+func Test_StringsTo_BytesWithDefaults_Valid_Safestringsconverter(t *testing.T) {
 	// Arrange
 	r := converters.StringsTo.BytesWithDefaults(0, "1", "2")
 
@@ -1378,7 +1378,7 @@ func Test_StringsTo_BytesWithDefaults_ParseError(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "assertion", actual)
 }
 
-func Test_StringsTo_BytesWithDefaults_OutOfRange(t *testing.T) {
+func Test_StringsTo_BytesWithDefaults_OutOfRange_Safestringsconverter(t *testing.T) {
 	// Arrange
 	r := converters.StringsTo.BytesWithDefaults(0, "256", "-1")
 
@@ -1390,7 +1390,7 @@ func Test_StringsTo_BytesWithDefaults_OutOfRange(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "assertion", actual)
 }
 
-func Test_StringsTo_Csv(t *testing.T) {
+func Test_StringsTo_Csv_Safestringsconverter(t *testing.T) {
 	// Arrange
 	r := converters.StringsTo.Csv(false, "a", "b")
 
@@ -1402,7 +1402,7 @@ func Test_StringsTo_Csv(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "assertion", actual)
 }
 
-func Test_StringsTo_CsvUsingPtrStrings_Nil(t *testing.T) {
+func Test_StringsTo_CsvUsingPtrStrings_Nil_Safestringsconverter(t *testing.T) {
 	// Arrange
 	r := converters.StringsTo.CsvUsingPtrStrings(false, nil)
 

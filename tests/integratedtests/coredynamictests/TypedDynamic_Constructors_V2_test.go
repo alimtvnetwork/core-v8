@@ -300,7 +300,7 @@ func Test_TypedSimpleRequest_NilReceiver(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedSimpleRequest returns nil -- nil receiver", actual)
 }
 
-func Test_TypedSimpleRequest_InvalidError(t *testing.T) {
+func Test_TypedSimpleRequest_InvalidError_TypeddynamicConstructorsV2(t *testing.T) {
 	// Arrange
 	r := coredynamic.InvalidTypedSimpleRequest[string]("some error")
 	err1 := r.InvalidError()
@@ -323,7 +323,7 @@ func Test_TypedSimpleRequest_InvalidError(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedSimpleRequest returns error -- InvalidError", actual)
 }
 
-func Test_TypedSimpleRequest_JSON(t *testing.T) {
+func Test_TypedSimpleRequest_JSON_TypeddynamicConstructorsV2(t *testing.T) {
 	// Arrange
 	r := coredynamic.NewTypedSimpleRequestValid[string]("test")
 	jb, jbErr := r.JsonBytes()
@@ -349,7 +349,7 @@ func Test_TypedSimpleRequest_JSON(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedSimpleRequest returns correct value -- JSON", actual)
 }
 
-func Test_TypedSimpleRequest_GetAs(t *testing.T) {
+func Test_TypedSimpleRequest_GetAs_TypeddynamicConstructorsV2(t *testing.T) {
 	// Arrange
 	r := coredynamic.NewTypedSimpleRequestValid[string]("hello")
 	s, sOk := r.GetAsString()
@@ -464,7 +464,7 @@ func Test_TypedSimpleResult_NilReceiver(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedSimpleResult returns nil -- nil receiver", actual)
 }
 
-func Test_TypedSimpleResult_InvalidError(t *testing.T) {
+func Test_TypedSimpleResult_InvalidError_TypeddynamicConstructorsV2(t *testing.T) {
 	// Arrange
 	r := coredynamic.InvalidTypedSimpleResult[string]("err msg")
 	err1 := r.InvalidError()
@@ -484,7 +484,7 @@ func Test_TypedSimpleResult_InvalidError(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedSimpleResult returns error -- InvalidError", actual)
 }
 
-func Test_TypedSimpleResult_JSON(t *testing.T) {
+func Test_TypedSimpleResult_JSON_TypeddynamicConstructorsV2(t *testing.T) {
 	// Arrange
 	r := coredynamic.NewTypedSimpleResultValid[string]("test")
 	jb, jbErr := r.JsonBytes()
@@ -510,7 +510,7 @@ func Test_TypedSimpleResult_JSON(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "TypedSimpleResult returns correct value -- JSON", actual)
 }
 
-func Test_TypedSimpleResult_GetAs(t *testing.T) {
+func Test_TypedSimpleResult_GetAs_TypeddynamicConstructorsV2(t *testing.T) {
 	// Arrange
 	r := coredynamic.NewTypedSimpleResultValid[int](42)
 	_, sOk := r.GetAsString()
@@ -1240,7 +1240,7 @@ func Test_TypeMustBeSame_Panic_FromTypedDynamicConstruc(t *testing.T) {
 	coredynamic.TypeMustBeSame("a", 1)
 }
 
-func Test_IsAnyTypesOf(t *testing.T) {
+func Test_IsAnyTypesOf_TypeddynamicConstructorsV2(t *testing.T) {
 	// Arrange
 	strType := reflect.TypeOf("")
 	intType := reflect.TypeOf(0)
@@ -1350,7 +1350,7 @@ func Test_NotAcceptedTypesErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "NotAcceptedTypesErr returns error -- with args", actual)
 }
 
-func Test_PointerOrNonPointer(t *testing.T) {
+func Test_PointerOrNonPointer_TypeddynamicConstructorsV2(t *testing.T) {
 	// Arrange
 	val, _ := coredynamic.PointerOrNonPointer(false, "hello")
 

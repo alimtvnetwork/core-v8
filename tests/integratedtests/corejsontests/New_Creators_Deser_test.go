@@ -11,7 +11,7 @@ import (
 
 // ── New / NewPtr ──
 
-func Test_New_Valid(t *testing.T) {
+func Test_New_Valid_NewCreatorsDeser(t *testing.T) {
 	// Arrange
 	r := corejson.New("hello")
 
@@ -35,7 +35,7 @@ func Test_New_Error(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected error", actual)
 }
 
-func Test_NewPtr_Valid(t *testing.T) {
+func Test_NewPtr_Valid_NewCreatorsDeser(t *testing.T) {
 	// Arrange
 	r := corejson.NewPtr("hello")
 
@@ -61,7 +61,7 @@ func Test_NewPtr_Error(t *testing.T) {
 
 // ── newResultCreator methods ──
 
-func Test_NRC_UnmarshalUsingBytes(t *testing.T) {
+func Test_NRC_UnmarshalUsingBytes_NewCreatorsDeser(t *testing.T) {
 	original := corejson.New("test")
 	b, _ := original.Serialize()
 	r := corejson.NewResult.UnmarshalUsingBytes(b)
@@ -73,7 +73,7 @@ func Test_NRC_DeserializeUsingBytes(t *testing.T) {
 	_ = r
 }
 
-func Test_NRC_DeserializeUsingBytes_Error(t *testing.T) {
+func Test_NRC_DeserializeUsingBytes_Error_NewCreatorsDeser(t *testing.T) {
 	// Arrange
 	r := corejson.NewResult.DeserializeUsingBytes([]byte(`invalid`))
 
@@ -85,7 +85,7 @@ func Test_NRC_DeserializeUsingBytes_Error(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected error", actual)
 }
 
-func Test_NRC_DeserializeUsingResult_HasIssue(t *testing.T) {
+func Test_NRC_DeserializeUsingResult_HasIssue_NewCreatorsDeser(t *testing.T) {
 	bad := &corejson.Result{}
 	r := corejson.NewResult.DeserializeUsingResult(bad)
 	_ = r
@@ -311,7 +311,7 @@ func Test_NRC_ErrorPtr(t *testing.T) {
 	_ = corejson.NewResult.ErrorPtr(errors.New("e"))
 }
 
-func Test_NRC_Empty(t *testing.T) {
+func Test_NRC_Empty_NewCreatorsDeser(t *testing.T) {
 	_ = corejson.NewResult.Empty()
 }
 
@@ -421,18 +421,18 @@ func Test_NRC_AnyToCastingResult(t *testing.T) {
 
 // ── emptyCreator ──
 
-func Test_Empty_Result(t *testing.T) { _ = corejson.Empty.Result() }
+func Test_Empty_Result_NewCreatorsDeser(t *testing.T) { _ = corejson.Empty.Result() }
 	// Arrange
-func Test_Empty_ResultWithErr(t *testing.T) { _ = corejson.Empty.ResultWithErr("t", errors.New("e")) }
-func Test_Empty_BytesCollection(t *testing.T) { _ = corejson.Empty.BytesCollection() }
-func Test_Empty_BytesCollectionPtr(t *testing.T) { _ = corejson.Empty.BytesCollectionPtr() }
-func Test_Empty_ResultsCollection(t *testing.T) { _ = corejson.Empty.ResultsCollection() }
-func Test_Empty_ResultsPtrCollection(t *testing.T) { _ = corejson.Empty.ResultsPtrCollection() }
-func Test_Empty_MapResults(t *testing.T) { _ = corejson.Empty.MapResults() }
+func Test_Empty_ResultWithErr_NewCreatorsDeser(t *testing.T) { _ = corejson.Empty.ResultWithErr("t", errors.New("e")) }
+func Test_Empty_BytesCollection_NewCreatorsDeser(t *testing.T) { _ = corejson.Empty.BytesCollection() }
+func Test_Empty_BytesCollectionPtr_NewCreatorsDeser(t *testing.T) { _ = corejson.Empty.BytesCollectionPtr() }
+func Test_Empty_ResultsCollection_NewCreatorsDeser(t *testing.T) { _ = corejson.Empty.ResultsCollection() }
+func Test_Empty_ResultsPtrCollection_NewCreatorsDeser(t *testing.T) { _ = corejson.Empty.ResultsPtrCollection() }
+func Test_Empty_MapResults_NewCreatorsDeser(t *testing.T) { _ = corejson.Empty.MapResults() }
 
 // ── BytesCloneIf ──
 
-func Test_BytesCloneIf_NoClone(t *testing.T) {
+func Test_BytesCloneIf_NoClone_NewCreatorsDeser(t *testing.T) {
 	b := corejson.BytesCloneIf(false, []byte("hello"))
 
 	// Act
@@ -443,14 +443,14 @@ func Test_BytesCloneIf_NoClone(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected empty for no clone", actual)
 }
 
-func Test_BytesCloneIf_DeepClone(t *testing.T) {
+func Test_BytesCloneIf_DeepClone_NewCreatorsDeser(t *testing.T) {
 	b := corejson.BytesCloneIf(true, []byte("hello"))
 	actual := args.Map{"result": len(b) != 5}
 	expected := args.Map{"result": false}
 	expected.ShouldBeEqual(t, 0, "expected 5", actual)
 }
 
-func Test_BytesCloneIf_Empty(t *testing.T) {
+func Test_BytesCloneIf_Empty_NewCreatorsDeser(t *testing.T) {
 	b := corejson.BytesCloneIf(true, []byte{})
 	actual := args.Map{"result": len(b) != 0}
 	expected := args.Map{"result": false}
@@ -459,25 +459,25 @@ func Test_BytesCloneIf_Empty(t *testing.T) {
 
 // ── BytesToString / BytesToPrettyString ──
 
-func Test_BytesToString_Empty(t *testing.T) {
+func Test_BytesToString_Empty_NewCreatorsDeser(t *testing.T) {
 	actual := args.Map{"result": corejson.BytesToString(nil) != ""}
 	expected := args.Map{"result": false}
 	expected.ShouldBeEqual(t, 0, "expected empty", actual)
 }
 
-func Test_BytesToString_Valid(t *testing.T) {
+func Test_BytesToString_Valid_NewCreatorsDeser(t *testing.T) {
 	actual := args.Map{"result": corejson.BytesToString([]byte(`"x"`)) != `"x"`}
 	expected := args.Map{"result": false}
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_BytesToPrettyString_Empty(t *testing.T) {
+func Test_BytesToPrettyString_Empty_NewCreatorsDeser(t *testing.T) {
 	actual := args.Map{"result": corejson.BytesToPrettyString(nil) != ""}
 	expected := args.Map{"result": false}
 	expected.ShouldBeEqual(t, 0, "expected empty", actual)
 }
 
-func Test_BytesToPrettyString_Valid(t *testing.T) {
+func Test_BytesToPrettyString_Valid_NewCreatorsDeser(t *testing.T) {
 	s := corejson.BytesToPrettyString([]byte(`{"a":"b"}`))
 	actual := args.Map{"result": s == ""}
 	expected := args.Map{"result": false}
@@ -493,14 +493,14 @@ func Test_JsonString_Valid(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "unexpected", actual)
 }
 
-func Test_JsonStringOrErrMsg_Valid(t *testing.T) {
+func Test_JsonStringOrErrMsg_Valid_NewCreatorsDeser(t *testing.T) {
 	s := corejson.JsonStringOrErrMsg("hello")
 	actual := args.Map{"result": s == ""}
 	expected := args.Map{"result": false}
 	expected.ShouldBeEqual(t, 0, "expected non-empty", actual)
 }
 
-func Test_JsonStringOrErrMsg_Error(t *testing.T) {
+func Test_JsonStringOrErrMsg_Error_NewCreatorsDeser(t *testing.T) {
 	s := corejson.JsonStringOrErrMsg(make(chan int))
 	actual := args.Map{"result": s == ""}
 	expected := args.Map{"result": false}

@@ -847,7 +847,7 @@ func Test_CollectionsOfCollection_AsJsonMarshaller(t *testing.T) {
 // CharHashsetMap — deeper methods
 // ═══════════════════════════════════════════════════════════════
 
-func Test_CharHashsetMap_GetChar(t *testing.T) {
+func Test_CharHashsetMap_GetChar_CollectionLengthlock(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_GetChar", func() {
 		chm := corestr.New.CharHashsetMap.Cap(10, 5)
 		tc := caseV1Compat{Name: "CHM GetChar", Expected: byte('h'), Actual: chm.GetChar("hello"), Args: args.Map{}}
@@ -867,7 +867,7 @@ func Test_CharHashsetMap_GetChar_Empty_FromCollectionLengthLock(t *testing.T) {
 	})
 }
 
-func Test_CharHashsetMap_GetCharOf(t *testing.T) {
+func Test_CharHashsetMap_GetCharOf_CollectionLengthlock(t *testing.T) {
 	safeTest(t, "Test_CharHashsetMap_GetCharOf", func() {
 		chm := corestr.New.CharHashsetMap.Cap(10, 5)
 		tc := caseV1Compat{Name: "CHM GetCharOf", Expected: byte('a'), Actual: chm.GetCharOf("abc"), Args: args.Map{}}

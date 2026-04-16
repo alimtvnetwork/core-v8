@@ -708,7 +708,7 @@ func Test_Result_IsAnyNull_FromResultMapV3(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "IsAnyNull returns correct value -- with args", actual)
 }
 
-func Test_Result_HasIssuesOrEmpty(t *testing.T) {
+func Test_Result_HasIssuesOrEmpty_ResultMapV3(t *testing.T) {
 	// Arrange
 	r1 := &corejson.Result{Bytes: []byte(`"hi"`)}
 	r2 := &corejson.Result{Error: errors.New("e")}
@@ -969,7 +969,7 @@ func Test_Result_UnmarshalSkipExistingIssues_Valid_FromResultMapV3(t *testing.T)
 	expected.ShouldBeEqual(t, 0, "UnmarshalSkipExistingIssues returns non-empty -- valid", actual)
 }
 
-func Test_Result_UnmarshalSkipExistingIssues_BadJson(t *testing.T) {
+func Test_Result_UnmarshalSkipExistingIssues_BadJson_ResultMapV3(t *testing.T) {
 	r := &corejson.Result{Bytes: []byte(`{bad`)}
 	var s string
 	err := r.UnmarshalSkipExistingIssues(&s)
@@ -1369,35 +1369,35 @@ func Test_Serialize_Apply(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Serialize.Apply returns correct value -- with args", actual)
 }
 
-func Test_Serialize_StringsApply(t *testing.T) {
+func Test_Serialize_StringsApply_ResultMapV3(t *testing.T) {
 	r := corejson.Serialize.StringsApply([]string{"a", "b"})
 	actual := args.Map{"notNil": r != nil}
 	expected := args.Map{"notNil": true}
 	expected.ShouldBeEqual(t, 0, "Serialize.StringsApply returns correct value -- with args", actual)
 }
 
-func Test_Serialize_FromString(t *testing.T) {
+func Test_Serialize_FromString_ResultMapV3(t *testing.T) {
 	r := corejson.Serialize.FromString("hello")
 	actual := args.Map{"notNil": r != nil}
 	expected := args.Map{"notNil": true}
 	expected.ShouldBeEqual(t, 0, "Serialize.FromString returns correct value -- with args", actual)
 }
 
-func Test_Serialize_FromInteger(t *testing.T) {
+func Test_Serialize_FromInteger_ResultMapV3(t *testing.T) {
 	r := corejson.Serialize.FromInteger(42)
 	actual := args.Map{"notNil": r != nil}
 	expected := args.Map{"notNil": true}
 	expected.ShouldBeEqual(t, 0, "Serialize.FromInteger returns correct value -- with args", actual)
 }
 
-func Test_Serialize_FromBool(t *testing.T) {
+func Test_Serialize_FromBool_ResultMapV3(t *testing.T) {
 	r := corejson.Serialize.FromBool(true)
 	actual := args.Map{"notNil": r != nil}
 	expected := args.Map{"notNil": true}
 	expected.ShouldBeEqual(t, 0, "Serialize.FromBool returns correct value -- with args", actual)
 }
 
-func Test_Serialize_UsingAnyPtr(t *testing.T) {
+func Test_Serialize_UsingAnyPtr_ResultMapV3(t *testing.T) {
 	r := corejson.Serialize.UsingAnyPtr("hello")
 	actual := args.Map{
 		"notNil": r != nil,
@@ -1450,7 +1450,7 @@ func Test_Serialize_ToStringErr_FromResultMapV3(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Serialize.ToStringErr returns error -- with args", actual)
 }
 
-func Test_Serialize_ToBytesErr(t *testing.T) {
+func Test_Serialize_ToBytesErr_ResultMapV3(t *testing.T) {
 	b, err := corejson.Serialize.ToBytesErr("hello")
 	actual := args.Map{
 		"hasBytes": len(b) > 0,
@@ -1463,14 +1463,14 @@ func Test_Serialize_ToBytesErr(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Serialize.ToBytesErr returns error -- with args", actual)
 }
 
-func Test_Serialize_ToSafeBytesSwallowErr(t *testing.T) {
+func Test_Serialize_ToSafeBytesSwallowErr_ResultMapV3(t *testing.T) {
 	b := corejson.Serialize.ToSafeBytesSwallowErr("hello")
 	actual := args.Map{"hasBytes": len(b) > 0}
 	expected := args.Map{"hasBytes": true}
 	expected.ShouldBeEqual(t, 0, "Serialize.ToSafeBytesSwallowErr returns error -- with args", actual)
 }
 
-func Test_Serialize_ToBytesSwallowErr(t *testing.T) {
+func Test_Serialize_ToBytesSwallowErr_ResultMapV3(t *testing.T) {
 	b := corejson.Serialize.ToBytesSwallowErr("hello")
 	actual := args.Map{"hasBytes": len(b) > 0}
 	expected := args.Map{"hasBytes": true}
@@ -1631,7 +1631,7 @@ func Test_Deserialize_MapAnyToPointer_Empty(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "Deserialize.MapAnyToPointer returns empty -- empty skip", actual)
 }
 
-func Test_Deserialize_AnyToFieldsMap(t *testing.T) {
+func Test_Deserialize_AnyToFieldsMap_ResultMapV3(t *testing.T) {
 	// AnyToFieldsMap should deserialize valid map input.
 	m, err := corejson.Deserialize.AnyToFieldsMap(map[string]int{"a": 1})
 	actual := args.Map{
@@ -1954,7 +1954,7 @@ func Test_NewResult_UsingBytesType(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "NewResult.UsingBytesType returns correct value -- with args", actual)
 }
 
-func Test_NewResult_UsingBytesPtr_Nil(t *testing.T) {
+func Test_NewResult_UsingBytesPtr_Nil_ResultMapV3(t *testing.T) {
 	r := corejson.NewResult.UsingBytesPtr(nil)
 	actual := args.Map{"empty": r.IsEmpty()}
 	expected := args.Map{"empty": true}
@@ -2030,7 +2030,7 @@ func Test_NewResult_Many_FromResultMapV3(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "NewResult.Many returns correct value -- with args", actual)
 }
 
-func Test_NewResult_UsingSerializer_Nil(t *testing.T) {
+func Test_NewResult_UsingSerializer_Nil_ResultMapV3(t *testing.T) {
 	r := corejson.NewResult.UsingSerializer(nil)
 	actual := args.Map{"nil": r == nil}
 	expected := args.Map{"nil": true}
@@ -2051,14 +2051,14 @@ func Test_NewResult_UsingJsoner_Nil_FromResultMapV3(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "NewResult.UsingJsoner returns nil -- nil", actual)
 }
 
-func Test_NewResult_PtrUsingStringPtr_Nil(t *testing.T) {
+func Test_NewResult_PtrUsingStringPtr_Nil_ResultMapV3(t *testing.T) {
 	r := corejson.NewResult.PtrUsingStringPtr(nil, "T")
 	actual := args.Map{"hasErr": r.HasError()}
 	expected := args.Map{"hasErr": true}
 	expected.ShouldBeEqual(t, 0, "NewResult.PtrUsingStringPtr returns nil -- nil", actual)
 }
 
-func Test_NewResult_PtrUsingStringPtr_Valid(t *testing.T) {
+func Test_NewResult_PtrUsingStringPtr_Valid_ResultMapV3(t *testing.T) {
 	s := `"hi"`
 	r := corejson.NewResult.PtrUsingStringPtr(&s, "T")
 	actual := args.Map{"noErr": !r.HasError()}
@@ -2080,7 +2080,7 @@ func Test_NewResult_UsingBytesPtrErrPtr_Nil(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "NewResult.UsingBytesPtrErrPtr returns nil -- nil", actual)
 }
 
-func Test_NewResult_UsingBytesErrPtr_Empty(t *testing.T) {
+func Test_NewResult_UsingBytesErrPtr_Empty_ResultMapV3(t *testing.T) {
 	r := corejson.NewResult.UsingBytesErrPtr([]byte{}, nil, "T")
 	actual := args.Map{"len": len(r.Bytes)}
 	expected := args.Map{"len": 0}

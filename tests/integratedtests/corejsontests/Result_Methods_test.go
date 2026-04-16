@@ -10,7 +10,7 @@ import (
 
 // ── Result.Map ──
 
-func Test_Result_Map_Nil(t *testing.T) {
+func Test_Result_Map_Nil_ResultMethods(t *testing.T) {
 	// Arrange
 	var r *corejson.Result
 	m := r.Map()
@@ -32,7 +32,7 @@ func Test_Result_Map_WithBytes(t *testing.T) {
 	_ = m
 }
 
-func Test_Result_Map_WithError(t *testing.T) {
+func Test_Result_Map_WithError_ResultMethods(t *testing.T) {
 	r := corejson.NewResult.Error(errors.New("test err"))
 	m := r.Map()
 	_ = m

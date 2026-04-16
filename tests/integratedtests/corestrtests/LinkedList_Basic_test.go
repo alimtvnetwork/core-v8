@@ -191,7 +191,7 @@ func Test_LinkedList_Loop_Break_FromLinkedListBasic(t *testing.T) {
 	})
 }
 
-func Test_LinkedList_Loop_Empty(t *testing.T) {
+func Test_LinkedList_Loop_Empty_LinkedlistBasic(t *testing.T) {
 	safeTest(t, "Test_LinkedList_Loop_Empty", func() {
 		// Arrange
 		ll := corestr.New.LinkedList.Create()

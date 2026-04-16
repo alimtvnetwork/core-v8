@@ -23,7 +23,7 @@ func makeTypedWrapper(name, id string, data testUserTyped) *corepayload.TypedPay
 	return tw
 }
 
-func makeTypedCollection() *corepayload.TypedPayloadCollection[testUserTyped] {
+func makeTypedCollectionShared() *corepayload.TypedPayloadCollection[testUserTyped] {
 	col := corepayload.NewTypedPayloadCollection[testUserTyped](3)
 	col.Add(makeTypedWrapper("user", "1", testUserTyped{Name: "Alice", Email: "a@a.com", Age: 30}))
 	col.Add(makeTypedWrapper("user", "2", testUserTyped{Name: "Bob", Email: "b@b.com", Age: 25}))

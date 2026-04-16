@@ -412,7 +412,7 @@ func Test_KVC_Add_Length(t *testing.T) {
 	})
 }
 
-func Test_KVC_AddIf(t *testing.T) {
+func Test_KVC_AddIf_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_KVC_AddIf", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -458,7 +458,7 @@ func Test_KVC_AddStringBySplitTrim(t *testing.T) {
 	})
 }
 
-func Test_KVC_Adds(t *testing.T) {
+func Test_KVC_Adds_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_KVC_Adds", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -488,7 +488,7 @@ func Test_KVC_Adds_Empty(t *testing.T) {
 	})
 }
 
-func Test_KVC_AddMap(t *testing.T) {
+func Test_KVC_AddMap_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_KVC_AddMap", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -518,7 +518,7 @@ func Test_KVC_AddMap_Nil(t *testing.T) {
 	})
 }
 
-func Test_KVC_AddHashsetMap(t *testing.T) {
+func Test_KVC_AddHashsetMap_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_KVC_AddHashsetMap", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -548,7 +548,7 @@ func Test_KVC_AddHashsetMap_Nil(t *testing.T) {
 	})
 }
 
-func Test_KVC_AddHashset(t *testing.T) {
+func Test_KVC_AddHashset_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_KVC_AddHashset", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -917,7 +917,7 @@ func Test_KVC_Map(t *testing.T) {
 	})
 }
 
-func Test_KVC_Find(t *testing.T) {
+func Test_KVC_Find_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_KVC_Find", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1208,7 +1208,7 @@ func Test_KVC_Clear_Dispose(t *testing.T) {
 	})
 }
 
-func Test_KVC_Dispose(t *testing.T) {
+func Test_KVC_Dispose_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_KVC_Dispose", func() {
 		// Arrange
 		kvc := corestr.New.KeyValues.Empty()
@@ -1389,7 +1389,7 @@ func Test_HC_Add(t *testing.T) {
 	})
 }
 
-func Test_HC_AddNonNil(t *testing.T) {
+func Test_HC_AddNonNil_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_HC_AddNonNil", func() {
 		// Arrange
 		hc := corestr.New.HashsetsCollection.Empty()
@@ -1405,7 +1405,7 @@ func Test_HC_AddNonNil(t *testing.T) {
 	})
 }
 
-func Test_HC_AddNonEmpty(t *testing.T) {
+func Test_HC_AddNonEmpty_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_HC_AddNonEmpty", func() {
 		// Arrange
 		hc := corestr.New.HashsetsCollection.Empty()
@@ -1421,7 +1421,7 @@ func Test_HC_AddNonEmpty(t *testing.T) {
 	})
 }
 
-func Test_HC_Adds(t *testing.T) {
+func Test_HC_Adds_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_HC_Adds", func() {
 		// Arrange
 		hc := corestr.New.HashsetsCollection.Empty()
@@ -1451,7 +1451,7 @@ func Test_HC_Adds_Nil(t *testing.T) {
 	})
 }
 
-func Test_HC_AddHashsetsCollection(t *testing.T) {
+func Test_HC_AddHashsetsCollection_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_HC_AddHashsetsCollection", func() {
 		// Arrange
 		hc1 := corestr.New.HashsetsCollection.Empty()
@@ -1739,7 +1739,7 @@ func Test_HC_JSON(t *testing.T) {
 	})
 }
 
-func Test_HC_UnmarshalJSON(t *testing.T) {
+func Test_HC_UnmarshalJSON_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_HC_UnmarshalJSON", func() {
 		// Arrange
 		hc := corestr.New.HashsetsCollection.Empty()
@@ -1993,7 +1993,7 @@ func Test_COC_Basic(t *testing.T) {
 	})
 }
 
-func Test_COC_Add(t *testing.T) {
+func Test_COC_Add_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_COC_Add", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()
@@ -2023,7 +2023,7 @@ func Test_COC_Add_Empty(t *testing.T) {
 	})
 }
 
-func Test_COC_Adds(t *testing.T) {
+func Test_COC_Adds_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_COC_Adds", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()
@@ -2054,7 +2054,7 @@ func Test_COC_Adds_Nil(t *testing.T) {
 	})
 }
 
-func Test_COC_AddCollections(t *testing.T) {
+func Test_COC_AddCollections_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_COC_AddCollections", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()
@@ -2070,7 +2070,7 @@ func Test_COC_AddCollections(t *testing.T) {
 	})
 }
 
-func Test_COC_AddStrings(t *testing.T) {
+func Test_COC_AddStrings_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_COC_AddStrings", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()
@@ -2100,7 +2100,7 @@ func Test_COC_AddStrings_Empty(t *testing.T) {
 	})
 }
 
-func Test_COC_AddsStringsOfStrings(t *testing.T) {
+func Test_COC_AddsStringsOfStrings_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_COC_AddsStringsOfStrings", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()
@@ -2130,7 +2130,7 @@ func Test_COC_AddsStringsOfStrings_Nil(t *testing.T) {
 	})
 }
 
-func Test_COC_AddAsyncFuncItems(t *testing.T) {
+func Test_COC_AddAsyncFuncItems_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_COC_AddAsyncFuncItems", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()
@@ -2193,7 +2193,7 @@ func Test_COC_Items(t *testing.T) {
 	})
 }
 
-func Test_COC_List(t *testing.T) {
+func Test_COC_List_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_COC_List", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()
@@ -2222,7 +2222,7 @@ func Test_COC_List_Empty(t *testing.T) {
 	})
 }
 
-func Test_COC_ToCollection(t *testing.T) {
+func Test_COC_ToCollection_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_COC_ToCollection", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()
@@ -2237,7 +2237,7 @@ func Test_COC_ToCollection(t *testing.T) {
 	})
 }
 
-func Test_COC_String(t *testing.T) {
+func Test_COC_String_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_COC_String", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()
@@ -2268,7 +2268,7 @@ func Test_COC_JSON(t *testing.T) {
 	})
 }
 
-func Test_COC_UnmarshalJSON(t *testing.T) {
+func Test_COC_UnmarshalJSON_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_COC_UnmarshalJSON", func() {
 		// Arrange
 		coc := corestr.New.CollectionsOfCollection.Empty()
@@ -2315,7 +2315,7 @@ func Test_COC_JsonModel(t *testing.T) {
 	})
 }
 
-func Test_COC_ParseInjectUsingJson(t *testing.T) {
+func Test_COC_ParseInjectUsingJson_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_COC_ParseInjectUsingJson", func() {
 		// Arrange
 		src := corestr.New.CollectionsOfCollection.Empty()
@@ -2363,7 +2363,7 @@ func Test_COC_AsJsoner(t *testing.T) {
 	})
 }
 
-func Test_COC_JsonParseSelfInject(t *testing.T) {
+func Test_COC_JsonParseSelfInject_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_COC_JsonParseSelfInject", func() {
 		// Arrange
 		src := corestr.New.CollectionsOfCollection.Empty()
@@ -2506,7 +2506,7 @@ func Test_Creator_COC_LenCap(t *testing.T) {
 // CharHashsetMap — core operations
 // ══════════════════════════════════════════════════════════════
 
-func Test_CHM_Basic(t *testing.T) {
+func Test_CHM_Basic_KvpBasic(t *testing.T) {
 	safeTest(t, "Test_CHM_Basic", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(10, 5)

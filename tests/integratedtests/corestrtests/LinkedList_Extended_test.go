@@ -9,7 +9,7 @@ import (
 	"github.com/alimtvnetwork/core/coretests/args"
 )
 
-func Test_Creators_Verification(t *testing.T) {
+func Test_Creators_Verification_LinkedlistExtended(t *testing.T) {
 	safeTest(t, "Test_Creators_Verification", func() {
 		// Arrange
 		tc := srcC18CreatorsTestCase
@@ -37,7 +37,7 @@ func Test_Creators_Verification(t *testing.T) {
 	})
 }
 
-func Test_HeadTail_Verification(t *testing.T) {
+func Test_HeadTail_Verification_LinkedlistExtended(t *testing.T) {
 	safeTest(t, "Test_HeadTail_Verification", func() {
 		// Arrange
 		tc := srcC18HeadTailTestCase
@@ -55,7 +55,7 @@ func Test_HeadTail_Verification(t *testing.T) {
 	})
 }
 
-func Test_State_Verification(t *testing.T) {
+func Test_State_Verification_LinkedlistExtended(t *testing.T) {
 	safeTest(t, "Test_State_Verification", func() {
 		// Arrange
 		tc := srcC18StateTestCase
@@ -77,7 +77,7 @@ func Test_State_Verification(t *testing.T) {
 	})
 }
 
-func Test_Add_Verification(t *testing.T) {
+func Test_Add_Verification_LinkedlistExtended(t *testing.T) {
 	safeTest(t, "Test_Add_Verification", func() {
 		// Arrange
 		tc := srcC18AddTestCase
@@ -127,7 +127,7 @@ func Test_Add_Verification(t *testing.T) {
 	})
 }
 
-func Test_AddFront_Verification(t *testing.T) {
+func Test_AddFront_Verification_LinkedlistExtended(t *testing.T) {
 	safeTest(t, "Test_AddFront_Verification", func() {
 		// Arrange
 		tc := srcC18AddFrontTestCase
@@ -149,7 +149,7 @@ func Test_AddFront_Verification(t *testing.T) {
 	})
 }
 
-func Test_AppendNode_Verification(t *testing.T) {
+func Test_AppendNode_Verification_LinkedlistExtended(t *testing.T) {
 	safeTest(t, "Test_AppendNode_Verification", func() {
 		// Arrange
 		tc := srcC18AppendNodeTestCase
@@ -172,7 +172,7 @@ func Test_AppendNode_Verification(t *testing.T) {
 	})
 }
 
-func Test_InsertAt_Verification(t *testing.T) {
+func Test_InsertAt_Verification_LinkedlistExtended(t *testing.T) {
 	safeTest(t, "Test_InsertAt_Verification", func() {
 		// Arrange
 		tc := srcC18InsertAtTestCase
@@ -193,7 +193,7 @@ func Test_InsertAt_Verification(t *testing.T) {
 	})
 }
 
-func Test_Attach_Verification(t *testing.T) {
+func Test_Attach_Verification_LinkedlistExtended(t *testing.T) {
 	safeTest(t, "Test_Attach_Verification", func() {
 		// Arrange
 		tc := srcC18AttachTestCase
@@ -312,7 +312,7 @@ func Test_Filter_Verification(t *testing.T) {
 	})
 }
 
-func Test_Remove_Verification(t *testing.T) {
+func Test_Remove_Verification_LinkedlistExtended(t *testing.T) {
 	safeTest(t, "Test_Remove_Verification", func() {
 		// Arrange
 		tc := srcC18RemoveTestCase
@@ -492,7 +492,7 @@ func Test_AddStrToNode_Verification(t *testing.T) {
 	})
 }
 
-func Test_Json_Verification(t *testing.T) {
+func Test_Json_Verification_LinkedlistExtended(t *testing.T) {
 	safeTest(t, "Test_Json_Verification", func() {
 		// Arrange
 		tc := srcC18JsonTestCase
@@ -525,7 +525,7 @@ func Test_Json_Verification(t *testing.T) {
 	})
 }
 
-func Test_Clear_Verification(t *testing.T) {
+func Test_Clear_Verification_LinkedlistExtended(t *testing.T) {
 	safeTest(t, "Test_Clear_Verification", func() {
 		// Arrange
 		tc := srcC18ClearTestCase
@@ -545,7 +545,7 @@ func Test_Clear_Verification(t *testing.T) {
 	})
 }
 
-func Test_NodeExported_Verification(t *testing.T) {
+func Test_NodeExported_Verification_LinkedlistExtended(t *testing.T) {
 	safeTest(t, "Test_NodeExported_Verification", func() {
 		// Arrange
 		tc := srcC18NodeExportedTestCase

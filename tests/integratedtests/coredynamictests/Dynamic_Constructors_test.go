@@ -814,7 +814,7 @@ func Test_SimpleResult_InvalidError(t *testing.T) {
 	expected.ShouldBeEqual(t, 0, "expected cached", actual)
 }
 
-func Test_SimpleResult_Clone(t *testing.T) {
+func Test_SimpleResult_Clone_DynamicConstructors(t *testing.T) {
 	// Arrange
 	sr := coredynamic.NewSimpleResultValid("data")
 	clone := sr.Clone()
