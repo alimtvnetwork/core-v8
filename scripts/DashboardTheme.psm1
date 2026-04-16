@@ -28,6 +28,16 @@ function Get-TerminalTheme {
 
     if ($env:DASHBOARD_THEME) { return $env:DASHBOARD_THEME.ToLower() }
 
+    $isInteractiveConsole = $false
+    try {
+        $isInteractiveConsole =
+            [Environment]::UserInteractive -and
+            $null -ne [Console]::In -and
+            $null -ne [Console]::Out -and
+            -not [Console]::IsInputRedirected -and
+            -not [Console]::IsOutputRedirected
+    } catch { }
+
     if ($env:WT_SESSION -and $env:LOCALAPPDATA) {
         $wtSettings = Join-Path $env:LOCALAPPDATA "Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
         if (Test-Path $wtSettings) {
@@ -54,15 +64,19 @@ function Get-TerminalTheme {
         }
     }
 
-    if ($IsLinux -or $IsMacOS) {
+    if (($IsLinux -or $IsMacOS) -and $isInteractiveConsole) {
+        $sttyOld = $null
         try {
-            $sttyOld = & stty -g 2>/dev/null
-            & stty raw -echo min 0 time 1 2>/dev/null
+            $sttyOld = (& stty -g 2>$null | Out-String).Trim()
+            if (-not $sttyOld) { throw 'stty state unavailable' }
+
+            & stty raw -echo min 0 time 1 2>$null | Out-Null
             [Console]::Write("$([char]27)]11;?$([char]27)\")
+            [Console]::Out.Flush()
             Start-Sleep -Milliseconds 100
+
             $response = ""
             while ([Console]::KeyAvailable) { $response += [char][Console]::Read() }
-            & stty $sttyOld 2>/dev/null
             if ($response -match 'rgb:([0-9a-f]{2,4})/([0-9a-f]{2,4})/([0-9a-f]{2,4})') {
                 $r = [convert]::ToInt32($Matches[1].Substring(0,2), 16)
                 $g = [convert]::ToInt32($Matches[2].Substring(0,2), 16)
@@ -71,6 +85,11 @@ function Get-TerminalTheme {
                 return $(if ($luminance -lt 0.5) { "dark" } else { "light" })
             }
         } catch { }
+        finally {
+            if ($sttyOld) {
+                & stty $sttyOld 2>$null | Out-Null
+            }
+        }
     }
 
     try {

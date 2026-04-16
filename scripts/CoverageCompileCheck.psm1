@@ -49,7 +49,6 @@ function Invoke-CoverageCompileCheck {
                 $blockedPkgs.Add($shortName)
                 $blockedErrors[$shortName] = ($combinedOut -join "`n")
                 Add-BuildErrorsForPackage $buildErrorsByPackage $shortName $combinedOut
-                Add-RuntimeFailuresForPackage $runtimeFailuresByPackage $shortName $combinedOut
             }
         }
     } else {
@@ -92,7 +91,6 @@ function Invoke-CoverageCompileCheck {
                 $blockedPkgs.Add($shortName)
                 $blockedErrors[$shortName] = ($diagnosticOut -join "`n")
                 Add-BuildErrorsForPackage $buildErrorsByPackage $shortName $diagnosticOut
-                Add-RuntimeFailuresForPackage $runtimeFailuresByPackage $shortName $diagnosticOut
             }
         }
     }

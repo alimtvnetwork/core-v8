@@ -111,7 +111,8 @@ function Write-RuntimeFailuresReport {
     [CmdletBinding()]
     param(
         [string]$CoverDir, [hashtable]$RuntimeFailuresByPackage,
-        [System.Collections.Generic.List[string]]$MissingProfiles
+        [System.Collections.Generic.List[string]]$MissingProfiles,
+        [System.Collections.Generic.List[string]]$BlockedPkgs
     )
 
     if ($MissingProfiles.Count -gt 0) {
@@ -124,7 +125,11 @@ function Write-RuntimeFailuresReport {
 
     $runtimeFailuresFile = Join-Path $CoverDir "runtime-failures.txt"
     $runtimeFailuresJsonFile = Join-Path $CoverDir "runtime-failures.json"
-    $runtimeFailurePkgs = @($RuntimeFailuresByPackage.Keys | Sort-Object)
+    $blockedLookup = @{}
+    if ($BlockedPkgs) {
+        foreach ($bp in $BlockedPkgs) { $blockedLookup[$bp] = $true }
+    }
+    $runtimeFailurePkgs = @($RuntimeFailuresByPackage.Keys | Where-Object { -not $blockedLookup.ContainsKey($_) } | Sort-Object)
     $callerSource = Get-CallerSource
     $rtLines = [System.Collections.Generic.List[string]]::new()
     $rtLines.Add("# Runtime Failures — $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')")
