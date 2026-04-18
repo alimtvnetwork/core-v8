@@ -15,7 +15,7 @@ import (
 
 // ── IsEmpty / HasItems / IsEmptyLock ─────────────────────────
 
-func Test_01_Hashmap_IsEmpty(t *testing.T) {
+func Test_Hashmap_01_Hashmap_IsEmpty_FromS09(t *testing.T) {
 	safeTest(t, "Test_01_Hashmap_IsEmpty", func() {
 		// Arrange
 		empty := corestr.Empty.Hashmap()
@@ -32,7 +32,7 @@ func Test_01_Hashmap_IsEmpty(t *testing.T) {
 	})
 }
 
-func Test_02_Hashmap_HasItems(t *testing.T) {
+func Test_Hashmap_02_Hashmap_HasItems_FromS09(t *testing.T) {
 	safeTest(t, "Test_02_Hashmap_HasItems", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -48,7 +48,7 @@ func Test_02_Hashmap_HasItems(t *testing.T) {
 	})
 }
 
-func Test_03_Hashmap_IsEmptyLock(t *testing.T) {
+func Test_Hashmap_03_Hashmap_IsEmptyLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_03_Hashmap_IsEmptyLock", func() {
 		// Arrange
 		hm := corestr.Empty.Hashmap()
@@ -60,7 +60,7 @@ func Test_03_Hashmap_IsEmptyLock(t *testing.T) {
 	})
 }
 
-func Test_04_Hashmap_Collection(t *testing.T) {
+func Test_Hashmap_04_Hashmap_Collection_FromS09(t *testing.T) {
 	safeTest(t, "Test_04_Hashmap_Collection", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -78,7 +78,7 @@ func Test_04_Hashmap_Collection(t *testing.T) {
 
 // ── AddOrUpdate variants ─────────────────────────────────────
 
-func Test_05_Hashmap_AddOrUpdateWithWgLock(t *testing.T) {
+func Test_Hashmap_05_Hashmap_AddOrUpdateWithWgLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_05_Hashmap_AddOrUpdateWithWgLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -96,7 +96,7 @@ func Test_05_Hashmap_AddOrUpdateWithWgLock(t *testing.T) {
 	})
 }
 
-func Test_06_Hashmap_AddOrUpdateKeyStrValInt(t *testing.T) {
+func Test_Hashmap_06_Hashmap_AddOrUpdateKeyStrValInt_FromS09(t *testing.T) {
 	safeTest(t, "Test_06_Hashmap_AddOrUpdateKeyStrValInt", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -112,7 +112,7 @@ func Test_06_Hashmap_AddOrUpdateKeyStrValInt(t *testing.T) {
 	})
 }
 
-func Test_07_Hashmap_AddOrUpdateKeyStrValFloat(t *testing.T) {
+func Test_Hashmap_07_Hashmap_AddOrUpdateKeyStrValFloat_FromS09(t *testing.T) {
 	safeTest(t, "Test_07_Hashmap_AddOrUpdateKeyStrValFloat", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -128,7 +128,7 @@ func Test_07_Hashmap_AddOrUpdateKeyStrValFloat(t *testing.T) {
 	})
 }
 
-func Test_08_Hashmap_AddOrUpdateKeyStrValFloat64(t *testing.T) {
+func Test_Hashmap_08_Hashmap_AddOrUpdateKeyStrValFloat64_FromS09(t *testing.T) {
 	safeTest(t, "Test_08_Hashmap_AddOrUpdateKeyStrValFloat64", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -144,7 +144,7 @@ func Test_08_Hashmap_AddOrUpdateKeyStrValFloat64(t *testing.T) {
 	})
 }
 
-func Test_09_Hashmap_AddOrUpdateKeyStrValAny(t *testing.T) {
+func Test_Hashmap_09_Hashmap_AddOrUpdateKeyStrValAny_FromS09(t *testing.T) {
 	safeTest(t, "Test_09_Hashmap_AddOrUpdateKeyStrValAny", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -160,7 +160,7 @@ func Test_09_Hashmap_AddOrUpdateKeyStrValAny(t *testing.T) {
 	})
 }
 
-func Test_10_Hashmap_AddOrUpdateKeyValueAny(t *testing.T) {
+func Test_Hashmap_10_Hashmap_AddOrUpdateKeyValueAny_FromS09(t *testing.T) {
 	safeTest(t, "Test_10_Hashmap_AddOrUpdateKeyValueAny", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -176,7 +176,7 @@ func Test_10_Hashmap_AddOrUpdateKeyValueAny(t *testing.T) {
 	})
 }
 
-func Test_11_Hashmap_AddOrUpdateKeyVal(t *testing.T) {
+func Test_Hashmap_11_Hashmap_AddOrUpdateKeyVal_FromS09(t *testing.T) {
 	safeTest(t, "Test_11_Hashmap_AddOrUpdateKeyVal", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -196,7 +196,7 @@ func Test_11_Hashmap_AddOrUpdateKeyVal(t *testing.T) {
 	})
 }
 
-func Test_12_Hashmap_AddOrUpdate(t *testing.T) {
+func Test_Hashmap_12_Hashmap_AddOrUpdate_FromS09(t *testing.T) {
 	safeTest(t, "Test_12_Hashmap_AddOrUpdate", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -215,7 +215,7 @@ func Test_12_Hashmap_AddOrUpdate(t *testing.T) {
 	})
 }
 
-func Test_13_Hashmap_Set(t *testing.T) {
+func Test_Hashmap_13_Hashmap_Set_FromS09(t *testing.T) {
 	safeTest(t, "Test_13_Hashmap_Set", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -230,7 +230,7 @@ func Test_13_Hashmap_Set(t *testing.T) {
 	})
 }
 
-func Test_14_Hashmap_SetTrim(t *testing.T) {
+func Test_Hashmap_14_Hashmap_SetTrim_FromS09(t *testing.T) {
 	safeTest(t, "Test_14_Hashmap_SetTrim", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -246,7 +246,7 @@ func Test_14_Hashmap_SetTrim(t *testing.T) {
 	})
 }
 
-func Test_15_Hashmap_SetBySplitter(t *testing.T) {
+func Test_Hashmap_15_Hashmap_SetBySplitter_FromS09(t *testing.T) {
 	safeTest(t, "Test_15_Hashmap_SetBySplitter", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -267,7 +267,7 @@ func Test_15_Hashmap_SetBySplitter(t *testing.T) {
 	})
 }
 
-func Test_16_Hashmap_AddOrUpdateStringsPtrWgLock(t *testing.T) {
+func Test_Hashmap_16_Hashmap_AddOrUpdateStringsPtrWgLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_16_Hashmap_AddOrUpdateStringsPtrWgLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -285,7 +285,7 @@ func Test_16_Hashmap_AddOrUpdateStringsPtrWgLock(t *testing.T) {
 	})
 }
 
-func Test_17_Hashmap_AddOrUpdateStringsPtrWgLock_Empty(t *testing.T) {
+func Test_Hashmap_17_Hashmap_AddOrUpdateStringsPtrWgLock_Empty_FromS09(t *testing.T) {
 	safeTest(t, "Test_17_Hashmap_AddOrUpdateStringsPtrWgLock_Empty", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -301,7 +301,7 @@ func Test_17_Hashmap_AddOrUpdateStringsPtrWgLock_Empty(t *testing.T) {
 	})
 }
 
-func Test_18_Hashmap_AddOrUpdateStringsPtrWgLock_Panic(t *testing.T) {
+func Test_Hashmap_18_Hashmap_AddOrUpdateStringsPtrWgLock_Panic_FromS09(t *testing.T) {
 	safeTest(t, "Test_18_Hashmap_AddOrUpdateStringsPtrWgLock_Panic", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -319,7 +319,7 @@ func Test_18_Hashmap_AddOrUpdateStringsPtrWgLock_Panic(t *testing.T) {
 	})
 }
 
-func Test_19_Hashmap_AddOrUpdateHashmap(t *testing.T) {
+func Test_Hashmap_19_Hashmap_AddOrUpdateHashmap_FromS09(t *testing.T) {
 	safeTest(t, "Test_19_Hashmap_AddOrUpdateHashmap", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -337,7 +337,7 @@ func Test_19_Hashmap_AddOrUpdateHashmap(t *testing.T) {
 	})
 }
 
-func Test_20_Hashmap_AddOrUpdateHashmap_Nil(t *testing.T) {
+func Test_Hashmap_20_Hashmap_AddOrUpdateHashmap_Nil_FromS09(t *testing.T) {
 	safeTest(t, "Test_20_Hashmap_AddOrUpdateHashmap_Nil", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -352,7 +352,7 @@ func Test_20_Hashmap_AddOrUpdateHashmap_Nil(t *testing.T) {
 	})
 }
 
-func Test_21_Hashmap_AddOrUpdateMap(t *testing.T) {
+func Test_Hashmap_21_Hashmap_AddOrUpdateMap_FromS09(t *testing.T) {
 	safeTest(t, "Test_21_Hashmap_AddOrUpdateMap", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -367,7 +367,7 @@ func Test_21_Hashmap_AddOrUpdateMap(t *testing.T) {
 	})
 }
 
-func Test_22_Hashmap_AddOrUpdateMap_Empty(t *testing.T) {
+func Test_Hashmap_22_Hashmap_AddOrUpdateMap_Empty_FromS09(t *testing.T) {
 	safeTest(t, "Test_22_Hashmap_AddOrUpdateMap_Empty", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -382,7 +382,7 @@ func Test_22_Hashmap_AddOrUpdateMap_Empty(t *testing.T) {
 	})
 }
 
-func Test_23_Hashmap_AddsOrUpdates(t *testing.T) {
+func Test_Hashmap_23_Hashmap_AddsOrUpdates_FromS09(t *testing.T) {
 	safeTest(t, "Test_23_Hashmap_AddsOrUpdates", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -400,7 +400,7 @@ func Test_23_Hashmap_AddsOrUpdates(t *testing.T) {
 	})
 }
 
-func Test_24_Hashmap_AddsOrUpdates_Nil(t *testing.T) {
+func Test_Hashmap_24_Hashmap_AddsOrUpdates_Nil_FromS09(t *testing.T) {
 	safeTest(t, "Test_24_Hashmap_AddsOrUpdates_Nil", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -415,7 +415,7 @@ func Test_24_Hashmap_AddsOrUpdates_Nil(t *testing.T) {
 	})
 }
 
-func Test_25_Hashmap_AddOrUpdateKeyAnyValues(t *testing.T) {
+func Test_Hashmap_25_Hashmap_AddOrUpdateKeyAnyValues_FromS09(t *testing.T) {
 	safeTest(t, "Test_25_Hashmap_AddOrUpdateKeyAnyValues", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -432,7 +432,7 @@ func Test_25_Hashmap_AddOrUpdateKeyAnyValues(t *testing.T) {
 	})
 }
 
-func Test_26_Hashmap_AddOrUpdateKeyAnyValues_Empty(t *testing.T) {
+func Test_Hashmap_26_Hashmap_AddOrUpdateKeyAnyValues_Empty_FromS09(t *testing.T) {
 	safeTest(t, "Test_26_Hashmap_AddOrUpdateKeyAnyValues_Empty", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -447,7 +447,7 @@ func Test_26_Hashmap_AddOrUpdateKeyAnyValues_Empty(t *testing.T) {
 	})
 }
 
-func Test_27_Hashmap_AddOrUpdateKeyValues(t *testing.T) {
+func Test_Hashmap_27_Hashmap_AddOrUpdateKeyValues_FromS09(t *testing.T) {
 	safeTest(t, "Test_27_Hashmap_AddOrUpdateKeyValues", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -464,7 +464,7 @@ func Test_27_Hashmap_AddOrUpdateKeyValues(t *testing.T) {
 	})
 }
 
-func Test_28_Hashmap_AddOrUpdateKeyValues_Empty(t *testing.T) {
+func Test_Hashmap_28_Hashmap_AddOrUpdateKeyValues_Empty_FromS09(t *testing.T) {
 	safeTest(t, "Test_28_Hashmap_AddOrUpdateKeyValues_Empty", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -481,7 +481,7 @@ func Test_28_Hashmap_AddOrUpdateKeyValues_Empty(t *testing.T) {
 
 // ── AddOrUpdateCollection ────────────────────────────────────
 
-func Test_29_Hashmap_AddOrUpdateCollection(t *testing.T) {
+func Test_Hashmap_29_Hashmap_AddOrUpdateCollection_FromS09(t *testing.T) {
 	safeTest(t, "Test_29_Hashmap_AddOrUpdateCollection", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -498,7 +498,7 @@ func Test_29_Hashmap_AddOrUpdateCollection(t *testing.T) {
 	})
 }
 
-func Test_30_Hashmap_AddOrUpdateCollection_NilKeys(t *testing.T) {
+func Test_Hashmap_30_Hashmap_AddOrUpdateCollection_NilKeys_FromS09(t *testing.T) {
 	safeTest(t, "Test_30_Hashmap_AddOrUpdateCollection_NilKeys", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -514,7 +514,7 @@ func Test_30_Hashmap_AddOrUpdateCollection_NilKeys(t *testing.T) {
 	})
 }
 
-func Test_31_Hashmap_AddOrUpdateCollection_LengthMismatch(t *testing.T) {
+func Test_Hashmap_31_Hashmap_AddOrUpdateCollection_LengthMismatch_FromS09(t *testing.T) {
 	safeTest(t, "Test_31_Hashmap_AddOrUpdateCollection_LengthMismatch", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -533,7 +533,7 @@ func Test_31_Hashmap_AddOrUpdateCollection_LengthMismatch(t *testing.T) {
 
 // ── Filter-based adds ────────────────────────────────────────
 
-func Test_32_Hashmap_AddsOrUpdatesAnyUsingFilter(t *testing.T) {
+func Test_Hashmap_32_Hashmap_AddsOrUpdatesAnyUsingFilter_FromS09(t *testing.T) {
 	safeTest(t, "Test_32_Hashmap_AddsOrUpdatesAnyUsingFilter", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -553,7 +553,7 @@ func Test_32_Hashmap_AddsOrUpdatesAnyUsingFilter(t *testing.T) {
 	})
 }
 
-func Test_33_Hashmap_AddsOrUpdatesAnyUsingFilter_Break(t *testing.T) {
+func Test_Hashmap_33_Hashmap_AddsOrUpdatesAnyUsingFilter_Break_FromS09(t *testing.T) {
 	safeTest(t, "Test_33_Hashmap_AddsOrUpdatesAnyUsingFilter_Break", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -574,7 +574,7 @@ func Test_33_Hashmap_AddsOrUpdatesAnyUsingFilter_Break(t *testing.T) {
 	})
 }
 
-func Test_34_Hashmap_AddsOrUpdatesAnyUsingFilter_Nil(t *testing.T) {
+func Test_Hashmap_34_Hashmap_AddsOrUpdatesAnyUsingFilter_Nil_FromS09(t *testing.T) {
 	safeTest(t, "Test_34_Hashmap_AddsOrUpdatesAnyUsingFilter_Nil", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -589,7 +589,7 @@ func Test_34_Hashmap_AddsOrUpdatesAnyUsingFilter_Nil(t *testing.T) {
 	})
 }
 
-func Test_35_Hashmap_AddsOrUpdatesAnyUsingFilter_Skip(t *testing.T) {
+func Test_Hashmap_35_Hashmap_AddsOrUpdatesAnyUsingFilter_Skip_FromS09(t *testing.T) {
 	safeTest(t, "Test_35_Hashmap_AddsOrUpdatesAnyUsingFilter_Skip", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -609,7 +609,7 @@ func Test_35_Hashmap_AddsOrUpdatesAnyUsingFilter_Skip(t *testing.T) {
 	})
 }
 
-func Test_36_Hashmap_AddsOrUpdatesAnyUsingFilterLock(t *testing.T) {
+func Test_Hashmap_36_Hashmap_AddsOrUpdatesAnyUsingFilterLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_36_Hashmap_AddsOrUpdatesAnyUsingFilterLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -629,7 +629,7 @@ func Test_36_Hashmap_AddsOrUpdatesAnyUsingFilterLock(t *testing.T) {
 	})
 }
 
-func Test_37_Hashmap_AddsOrUpdatesAnyUsingFilterLock_Nil(t *testing.T) {
+func Test_Hashmap_37_Hashmap_AddsOrUpdatesAnyUsingFilterLock_Nil_FromS09(t *testing.T) {
 	safeTest(t, "Test_37_Hashmap_AddsOrUpdatesAnyUsingFilterLock_Nil", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -644,7 +644,7 @@ func Test_37_Hashmap_AddsOrUpdatesAnyUsingFilterLock_Nil(t *testing.T) {
 	})
 }
 
-func Test_38_Hashmap_AddsOrUpdatesAnyUsingFilterLock_SkipAndBreak(t *testing.T) {
+func Test_Hashmap_38_Hashmap_AddsOrUpdatesAnyUsingFilterLock_SkipAndBreak_FromS09(t *testing.T) {
 	safeTest(t, "Test_38_Hashmap_AddsOrUpdatesAnyUsingFilterLock_SkipAndBreak", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -671,7 +671,7 @@ func Test_38_Hashmap_AddsOrUpdatesAnyUsingFilterLock_SkipAndBreak(t *testing.T) 
 	})
 }
 
-func Test_39_Hashmap_AddsOrUpdatesUsingFilter(t *testing.T) {
+func Test_Hashmap_39_Hashmap_AddsOrUpdatesUsingFilter_FromS09(t *testing.T) {
 	safeTest(t, "Test_39_Hashmap_AddsOrUpdatesUsingFilter", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -691,7 +691,7 @@ func Test_39_Hashmap_AddsOrUpdatesUsingFilter(t *testing.T) {
 	})
 }
 
-func Test_40_Hashmap_AddsOrUpdatesUsingFilter_Nil(t *testing.T) {
+func Test_Hashmap_40_Hashmap_AddsOrUpdatesUsingFilter_Nil_FromS09(t *testing.T) {
 	safeTest(t, "Test_40_Hashmap_AddsOrUpdatesUsingFilter_Nil", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -706,7 +706,7 @@ func Test_40_Hashmap_AddsOrUpdatesUsingFilter_Nil(t *testing.T) {
 	})
 }
 
-func Test_41_Hashmap_AddsOrUpdatesUsingFilter_Break(t *testing.T) {
+func Test_Hashmap_41_Hashmap_AddsOrUpdatesUsingFilter_Break_FromS09(t *testing.T) {
 	safeTest(t, "Test_41_Hashmap_AddsOrUpdatesUsingFilter_Break", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -727,7 +727,7 @@ func Test_41_Hashmap_AddsOrUpdatesUsingFilter_Break(t *testing.T) {
 	})
 }
 
-func Test_42_Hashmap_AddsOrUpdatesUsingFilter_Skip(t *testing.T) {
+func Test_Hashmap_42_Hashmap_AddsOrUpdatesUsingFilter_Skip_FromS09(t *testing.T) {
 	safeTest(t, "Test_42_Hashmap_AddsOrUpdatesUsingFilter_Skip", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -749,7 +749,7 @@ func Test_42_Hashmap_AddsOrUpdatesUsingFilter_Skip(t *testing.T) {
 
 // ── ConcatNew / ConcatNewUsingMaps ───────────────────────────
 
-func Test_43_Hashmap_ConcatNew(t *testing.T) {
+func Test_Hashmap_43_Hashmap_ConcatNew_FromS09(t *testing.T) {
 	safeTest(t, "Test_43_Hashmap_ConcatNew", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -767,7 +767,7 @@ func Test_43_Hashmap_ConcatNew(t *testing.T) {
 	})
 }
 
-func Test_44_Hashmap_ConcatNew_Empty(t *testing.T) {
+func Test_Hashmap_44_Hashmap_ConcatNew_Empty_FromS09(t *testing.T) {
 	safeTest(t, "Test_44_Hashmap_ConcatNew_Empty", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -783,7 +783,7 @@ func Test_44_Hashmap_ConcatNew_Empty(t *testing.T) {
 	})
 }
 
-func Test_45_Hashmap_ConcatNew_NilInList(t *testing.T) {
+func Test_Hashmap_45_Hashmap_ConcatNew_NilInList_FromS09(t *testing.T) {
 	safeTest(t, "Test_45_Hashmap_ConcatNew_NilInList", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -799,7 +799,7 @@ func Test_45_Hashmap_ConcatNew_NilInList(t *testing.T) {
 	})
 }
 
-func Test_46_Hashmap_ConcatNewUsingMaps(t *testing.T) {
+func Test_Hashmap_46_Hashmap_ConcatNewUsingMaps_FromS09(t *testing.T) {
 	safeTest(t, "Test_46_Hashmap_ConcatNewUsingMaps", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -815,7 +815,7 @@ func Test_46_Hashmap_ConcatNewUsingMaps(t *testing.T) {
 	})
 }
 
-func Test_47_Hashmap_ConcatNewUsingMaps_Empty(t *testing.T) {
+func Test_Hashmap_47_Hashmap_ConcatNewUsingMaps_Empty_FromS09(t *testing.T) {
 	safeTest(t, "Test_47_Hashmap_ConcatNewUsingMaps_Empty", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -830,7 +830,7 @@ func Test_47_Hashmap_ConcatNewUsingMaps_Empty(t *testing.T) {
 	})
 }
 
-func Test_48_Hashmap_ConcatNewUsingMaps_NilInList(t *testing.T) {
+func Test_Hashmap_48_Hashmap_ConcatNewUsingMaps_NilInList_FromS09(t *testing.T) {
 	safeTest(t, "Test_48_Hashmap_ConcatNewUsingMaps_NilInList", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -848,7 +848,7 @@ func Test_48_Hashmap_ConcatNewUsingMaps_NilInList(t *testing.T) {
 
 // ── AddOrUpdateLock ──────────────────────────────────────────
 
-func Test_49_Hashmap_AddOrUpdateLock(t *testing.T) {
+func Test_Hashmap_49_Hashmap_AddOrUpdateLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_49_Hashmap_AddOrUpdateLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -865,7 +865,7 @@ func Test_49_Hashmap_AddOrUpdateLock(t *testing.T) {
 
 // ── Has / Contains / ContainsLock / IsKeyMissing / IsKeyMissingLock / HasLock / HasWithLock ──
 
-func Test_50_Hashmap_Has(t *testing.T) {
+func Test_Hashmap_50_Hashmap_Has_FromS09(t *testing.T) {
 	safeTest(t, "Test_50_Hashmap_Has", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -881,7 +881,7 @@ func Test_50_Hashmap_Has(t *testing.T) {
 	})
 }
 
-func Test_51_Hashmap_Contains(t *testing.T) {
+func Test_Hashmap_51_Hashmap_Contains_FromS09(t *testing.T) {
 	safeTest(t, "Test_51_Hashmap_Contains", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -894,7 +894,7 @@ func Test_51_Hashmap_Contains(t *testing.T) {
 	})
 }
 
-func Test_52_Hashmap_ContainsLock(t *testing.T) {
+func Test_Hashmap_52_Hashmap_ContainsLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_52_Hashmap_ContainsLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -907,7 +907,7 @@ func Test_52_Hashmap_ContainsLock(t *testing.T) {
 	})
 }
 
-func Test_53_Hashmap_IsKeyMissing(t *testing.T) {
+func Test_Hashmap_53_Hashmap_IsKeyMissing_FromS09(t *testing.T) {
 	safeTest(t, "Test_53_Hashmap_IsKeyMissing", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -923,7 +923,7 @@ func Test_53_Hashmap_IsKeyMissing(t *testing.T) {
 	})
 }
 
-func Test_54_Hashmap_IsKeyMissingLock(t *testing.T) {
+func Test_Hashmap_54_Hashmap_IsKeyMissingLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_54_Hashmap_IsKeyMissingLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -936,7 +936,7 @@ func Test_54_Hashmap_IsKeyMissingLock(t *testing.T) {
 	})
 }
 
-func Test_55_Hashmap_HasLock(t *testing.T) {
+func Test_Hashmap_55_Hashmap_HasLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_55_Hashmap_HasLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -949,7 +949,7 @@ func Test_55_Hashmap_HasLock(t *testing.T) {
 	})
 }
 
-func Test_56_Hashmap_HasWithLock(t *testing.T) {
+func Test_Hashmap_56_Hashmap_HasWithLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_56_Hashmap_HasWithLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -964,7 +964,7 @@ func Test_56_Hashmap_HasWithLock(t *testing.T) {
 
 // ── HasAllStrings / HasAll / HasAnyItem / HasAny ─────────────
 
-func Test_57_Hashmap_HasAllStrings(t *testing.T) {
+func Test_Hashmap_57_Hashmap_HasAllStrings_FromS09(t *testing.T) {
 	safeTest(t, "Test_57_Hashmap_HasAllStrings", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -981,7 +981,7 @@ func Test_57_Hashmap_HasAllStrings(t *testing.T) {
 	})
 }
 
-func Test_58_Hashmap_HasAll(t *testing.T) {
+func Test_Hashmap_58_Hashmap_HasAll_FromS09(t *testing.T) {
 	safeTest(t, "Test_58_Hashmap_HasAll", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -997,7 +997,7 @@ func Test_58_Hashmap_HasAll(t *testing.T) {
 	})
 }
 
-func Test_59_Hashmap_HasAnyItem(t *testing.T) {
+func Test_Hashmap_59_Hashmap_HasAnyItem_FromS09(t *testing.T) {
 	safeTest(t, "Test_59_Hashmap_HasAnyItem", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1010,7 +1010,7 @@ func Test_59_Hashmap_HasAnyItem(t *testing.T) {
 	})
 }
 
-func Test_60_Hashmap_HasAny(t *testing.T) {
+func Test_Hashmap_60_Hashmap_HasAny_FromS09(t *testing.T) {
 	safeTest(t, "Test_60_Hashmap_HasAny", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1028,7 +1028,7 @@ func Test_60_Hashmap_HasAny(t *testing.T) {
 
 // ── HasAllCollectionItems ────────────────────────────────────
 
-func Test_61_Hashmap_HasAllCollectionItems(t *testing.T) {
+func Test_Hashmap_61_Hashmap_HasAllCollectionItems_FromS09(t *testing.T) {
 	safeTest(t, "Test_61_Hashmap_HasAllCollectionItems", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1043,7 +1043,7 @@ func Test_61_Hashmap_HasAllCollectionItems(t *testing.T) {
 	})
 }
 
-func Test_62_Hashmap_HasAllCollectionItems_Nil(t *testing.T) {
+func Test_Hashmap_62_Hashmap_HasAllCollectionItems_Nil_FromS09(t *testing.T) {
 	safeTest(t, "Test_62_Hashmap_HasAllCollectionItems_Nil", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1055,7 +1055,7 @@ func Test_62_Hashmap_HasAllCollectionItems_Nil(t *testing.T) {
 	})
 }
 
-func Test_63_Hashmap_HasAllCollectionItems_Empty(t *testing.T) {
+func Test_Hashmap_63_Hashmap_HasAllCollectionItems_Empty_FromS09(t *testing.T) {
 	safeTest(t, "Test_63_Hashmap_HasAllCollectionItems_Empty", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1069,7 +1069,7 @@ func Test_63_Hashmap_HasAllCollectionItems_Empty(t *testing.T) {
 
 // ── DiffRaw / Diff ───────────────────────────────────────────
 
-func Test_64_Hashmap_DiffRaw(t *testing.T) {
+func Test_Hashmap_64_Hashmap_DiffRaw_FromS09(t *testing.T) {
 	safeTest(t, "Test_64_Hashmap_DiffRaw", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1085,7 +1085,7 @@ func Test_64_Hashmap_DiffRaw(t *testing.T) {
 	})
 }
 
-func Test_65_Hashmap_Diff(t *testing.T) {
+func Test_Hashmap_65_Hashmap_Diff_FromS09(t *testing.T) {
 	safeTest(t, "Test_65_Hashmap_Diff", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1105,7 +1105,7 @@ func Test_65_Hashmap_Diff(t *testing.T) {
 
 // ── GetKeysFilteredItems / GetKeysFilteredCollection ─────────
 
-func Test_66_Hashmap_GetKeysFilteredItems(t *testing.T) {
+func Test_Hashmap_66_Hashmap_GetKeysFilteredItems_FromS09(t *testing.T) {
 	safeTest(t, "Test_66_Hashmap_GetKeysFilteredItems", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1125,7 +1125,7 @@ func Test_66_Hashmap_GetKeysFilteredItems(t *testing.T) {
 	})
 }
 
-func Test_67_Hashmap_GetKeysFilteredItems_Empty(t *testing.T) {
+func Test_Hashmap_67_Hashmap_GetKeysFilteredItems_Empty_FromS09(t *testing.T) {
 	safeTest(t, "Test_67_Hashmap_GetKeysFilteredItems_Empty", func() {
 		// Arrange
 		hm := corestr.Empty.Hashmap()
@@ -1143,7 +1143,7 @@ func Test_67_Hashmap_GetKeysFilteredItems_Empty(t *testing.T) {
 	})
 }
 
-func Test_68_Hashmap_GetKeysFilteredItems_Break(t *testing.T) {
+func Test_Hashmap_68_Hashmap_GetKeysFilteredItems_Break_FromS09(t *testing.T) {
 	safeTest(t, "Test_68_Hashmap_GetKeysFilteredItems_Break", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1163,7 +1163,7 @@ func Test_68_Hashmap_GetKeysFilteredItems_Break(t *testing.T) {
 	})
 }
 
-func Test_69_Hashmap_GetKeysFilteredCollection(t *testing.T) {
+func Test_Hashmap_69_Hashmap_GetKeysFilteredCollection_FromS09(t *testing.T) {
 	safeTest(t, "Test_69_Hashmap_GetKeysFilteredCollection", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1182,7 +1182,7 @@ func Test_69_Hashmap_GetKeysFilteredCollection(t *testing.T) {
 	})
 }
 
-func Test_70_Hashmap_GetKeysFilteredCollection_Empty(t *testing.T) {
+func Test_Hashmap_70_Hashmap_GetKeysFilteredCollection_Empty_FromS09(t *testing.T) {
 	safeTest(t, "Test_70_Hashmap_GetKeysFilteredCollection_Empty", func() {
 		// Arrange
 		hm := corestr.Empty.Hashmap()
@@ -1197,7 +1197,7 @@ func Test_70_Hashmap_GetKeysFilteredCollection_Empty(t *testing.T) {
 	})
 }
 
-func Test_71_Hashmap_GetKeysFilteredCollection_Break(t *testing.T) {
+func Test_Hashmap_71_Hashmap_GetKeysFilteredCollection_Break_FromS09(t *testing.T) {
 	safeTest(t, "Test_71_Hashmap_GetKeysFilteredCollection_Break", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1219,7 +1219,7 @@ func Test_71_Hashmap_GetKeysFilteredCollection_Break(t *testing.T) {
 
 // ── Items / SafeItems / ItemsCopyLock ────────────────────────
 
-func Test_72_Hashmap_Items(t *testing.T) {
+func Test_Hashmap_72_Hashmap_Items_FromS09(t *testing.T) {
 	safeTest(t, "Test_72_Hashmap_Items", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1232,7 +1232,7 @@ func Test_72_Hashmap_Items(t *testing.T) {
 	})
 }
 
-func Test_73_Hashmap_SafeItems(t *testing.T) {
+func Test_Hashmap_73_Hashmap_SafeItems_FromS09(t *testing.T) {
 	safeTest(t, "Test_73_Hashmap_SafeItems", func() {
 		// Arrange
 		var hm *corestr.Hashmap
@@ -1244,7 +1244,7 @@ func Test_73_Hashmap_SafeItems(t *testing.T) {
 	})
 }
 
-func Test_74_Hashmap_ItemsCopyLock(t *testing.T) {
+func Test_Hashmap_74_Hashmap_ItemsCopyLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_74_Hashmap_ItemsCopyLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1262,7 +1262,7 @@ func Test_74_Hashmap_ItemsCopyLock(t *testing.T) {
 
 // ── ValuesCollection / ValuesHashset / ValuesCollectionLock / ValuesHashsetLock ──
 
-func Test_75_Hashmap_ValuesCollection(t *testing.T) {
+func Test_Hashmap_75_Hashmap_ValuesCollection_FromS09(t *testing.T) {
 	safeTest(t, "Test_75_Hashmap_ValuesCollection", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1278,7 +1278,7 @@ func Test_75_Hashmap_ValuesCollection(t *testing.T) {
 	})
 }
 
-func Test_76_Hashmap_ValuesHashset(t *testing.T) {
+func Test_Hashmap_76_Hashmap_ValuesHashset_FromS09(t *testing.T) {
 	safeTest(t, "Test_76_Hashmap_ValuesHashset", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1294,7 +1294,7 @@ func Test_76_Hashmap_ValuesHashset(t *testing.T) {
 	})
 }
 
-func Test_77_Hashmap_ValuesCollectionLock(t *testing.T) {
+func Test_Hashmap_77_Hashmap_ValuesCollectionLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_77_Hashmap_ValuesCollectionLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1310,7 +1310,7 @@ func Test_77_Hashmap_ValuesCollectionLock(t *testing.T) {
 	})
 }
 
-func Test_78_Hashmap_ValuesHashsetLock(t *testing.T) {
+func Test_Hashmap_78_Hashmap_ValuesHashsetLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_78_Hashmap_ValuesHashsetLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1328,7 +1328,7 @@ func Test_78_Hashmap_ValuesHashsetLock(t *testing.T) {
 
 // ── ValuesList / KeysValuesCollection / KeysValuesList ───────
 
-func Test_79_Hashmap_ValuesList(t *testing.T) {
+func Test_Hashmap_79_Hashmap_ValuesList_FromS09(t *testing.T) {
 	safeTest(t, "Test_79_Hashmap_ValuesList", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1344,7 +1344,7 @@ func Test_79_Hashmap_ValuesList(t *testing.T) {
 	})
 }
 
-func Test_80_Hashmap_KeysValuesCollection(t *testing.T) {
+func Test_Hashmap_80_Hashmap_KeysValuesCollection_FromS09(t *testing.T) {
 	safeTest(t, "Test_80_Hashmap_KeysValuesCollection", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1360,7 +1360,7 @@ func Test_80_Hashmap_KeysValuesCollection(t *testing.T) {
 	})
 }
 
-func Test_81_Hashmap_KeysValuesList(t *testing.T) {
+func Test_Hashmap_81_Hashmap_KeysValuesList_FromS09(t *testing.T) {
 	safeTest(t, "Test_81_Hashmap_KeysValuesList", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1376,7 +1376,7 @@ func Test_81_Hashmap_KeysValuesList(t *testing.T) {
 	})
 }
 
-func Test_82_Hashmap_KeysValuesListLock(t *testing.T) {
+func Test_Hashmap_82_Hashmap_KeysValuesListLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_82_Hashmap_KeysValuesListLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1394,7 +1394,7 @@ func Test_82_Hashmap_KeysValuesListLock(t *testing.T) {
 
 // ── KeysValuePairs / KeysValuePairsCollection ────────────────
 
-func Test_83_Hashmap_KeysValuePairs(t *testing.T) {
+func Test_Hashmap_83_Hashmap_KeysValuePairs_FromS09(t *testing.T) {
 	safeTest(t, "Test_83_Hashmap_KeysValuePairs", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1410,7 +1410,7 @@ func Test_83_Hashmap_KeysValuePairs(t *testing.T) {
 	})
 }
 
-func Test_84_Hashmap_KeysValuePairsCollection(t *testing.T) {
+func Test_Hashmap_84_Hashmap_KeysValuePairsCollection_FromS09(t *testing.T) {
 	safeTest(t, "Test_84_Hashmap_KeysValuePairsCollection", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1428,7 +1428,7 @@ func Test_84_Hashmap_KeysValuePairsCollection(t *testing.T) {
 
 // ── AllKeys / Keys / KeysCollection / KeysLock ───────────────
 
-func Test_85_Hashmap_AllKeys(t *testing.T) {
+func Test_Hashmap_85_Hashmap_AllKeys_FromS09(t *testing.T) {
 	safeTest(t, "Test_85_Hashmap_AllKeys", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1444,7 +1444,7 @@ func Test_85_Hashmap_AllKeys(t *testing.T) {
 	})
 }
 
-func Test_86_Hashmap_AllKeys_Empty(t *testing.T) {
+func Test_Hashmap_86_Hashmap_AllKeys_Empty_FromS09(t *testing.T) {
 	safeTest(t, "Test_86_Hashmap_AllKeys_Empty", func() {
 		// Arrange
 		hm := corestr.Empty.Hashmap()
@@ -1459,7 +1459,7 @@ func Test_86_Hashmap_AllKeys_Empty(t *testing.T) {
 	})
 }
 
-func Test_87_Hashmap_Keys(t *testing.T) {
+func Test_Hashmap_87_Hashmap_Keys_FromS09(t *testing.T) {
 	safeTest(t, "Test_87_Hashmap_Keys", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1472,7 +1472,7 @@ func Test_87_Hashmap_Keys(t *testing.T) {
 	})
 }
 
-func Test_88_Hashmap_KeysCollection(t *testing.T) {
+func Test_Hashmap_88_Hashmap_KeysCollection_FromS09(t *testing.T) {
 	safeTest(t, "Test_88_Hashmap_KeysCollection", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1485,7 +1485,7 @@ func Test_88_Hashmap_KeysCollection(t *testing.T) {
 	})
 }
 
-func Test_89_Hashmap_KeysLock(t *testing.T) {
+func Test_Hashmap_89_Hashmap_KeysLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_89_Hashmap_KeysLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1501,7 +1501,7 @@ func Test_89_Hashmap_KeysLock(t *testing.T) {
 	})
 }
 
-func Test_90_Hashmap_KeysLock_Empty(t *testing.T) {
+func Test_Hashmap_90_Hashmap_KeysLock_Empty_FromS09(t *testing.T) {
 	safeTest(t, "Test_90_Hashmap_KeysLock_Empty", func() {
 		// Arrange
 		hm := corestr.Empty.Hashmap()
@@ -1518,7 +1518,7 @@ func Test_90_Hashmap_KeysLock_Empty(t *testing.T) {
 
 // ── ValuesListCopyLock ───────────────────────────────────────
 
-func Test_91_Hashmap_ValuesListCopyLock(t *testing.T) {
+func Test_Hashmap_91_Hashmap_ValuesListCopyLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_91_Hashmap_ValuesListCopyLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1536,7 +1536,7 @@ func Test_91_Hashmap_ValuesListCopyLock(t *testing.T) {
 
 // ── KeysToLower / ValuesToLower ──────────────────────────────
 
-func Test_92_Hashmap_KeysToLower(t *testing.T) {
+func Test_Hashmap_92_Hashmap_KeysToLower_FromS09(t *testing.T) {
 	safeTest(t, "Test_92_Hashmap_KeysToLower", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1552,7 +1552,7 @@ func Test_92_Hashmap_KeysToLower(t *testing.T) {
 	})
 }
 
-func Test_93_Hashmap_ValuesToLower(t *testing.T) {
+func Test_Hashmap_93_Hashmap_ValuesToLower_FromS09(t *testing.T) {
 	safeTest(t, "Test_93_Hashmap_ValuesToLower", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1570,7 +1570,7 @@ func Test_93_Hashmap_ValuesToLower(t *testing.T) {
 
 // ── Length / LengthLock ──────────────────────────────────────
 
-func Test_94_Hashmap_Length(t *testing.T) {
+func Test_Hashmap_94_Hashmap_Length_FromS09(t *testing.T) {
 	safeTest(t, "Test_94_Hashmap_Length", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1583,7 +1583,7 @@ func Test_94_Hashmap_Length(t *testing.T) {
 	})
 }
 
-func Test_95_Hashmap_Length_Nil(t *testing.T) {
+func Test_Hashmap_95_Hashmap_Length_Nil_FromS09(t *testing.T) {
 	safeTest(t, "Test_95_Hashmap_Length_Nil", func() {
 		// Arrange
 		var hm *corestr.Hashmap
@@ -1595,7 +1595,7 @@ func Test_95_Hashmap_Length_Nil(t *testing.T) {
 	})
 }
 
-func Test_96_Hashmap_LengthLock(t *testing.T) {
+func Test_Hashmap_96_Hashmap_LengthLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_96_Hashmap_LengthLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1610,7 +1610,7 @@ func Test_96_Hashmap_LengthLock(t *testing.T) {
 
 // ── IsEqual / IsEqualPtr / IsEqualPtrLock ────────────────────
 
-func Test_97_Hashmap_IsEqual_Same(t *testing.T) {
+func Test_Hashmap_97_Hashmap_IsEqual_Same_FromS09(t *testing.T) {
 	safeTest(t, "Test_97_Hashmap_IsEqual_Same", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1625,7 +1625,7 @@ func Test_97_Hashmap_IsEqual_Same(t *testing.T) {
 	})
 }
 
-func Test_98_Hashmap_IsEqualPtr_DiffValues(t *testing.T) {
+func Test_Hashmap_98_Hashmap_IsEqualPtr_DiffValues_FromS09(t *testing.T) {
 	safeTest(t, "Test_98_Hashmap_IsEqualPtr_DiffValues", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1640,7 +1640,7 @@ func Test_98_Hashmap_IsEqualPtr_DiffValues(t *testing.T) {
 	})
 }
 
-func Test_99_Hashmap_IsEqualPtr_DiffLength(t *testing.T) {
+func Test_Hashmap_99_Hashmap_IsEqualPtr_DiffLength_FromS09(t *testing.T) {
 	safeTest(t, "Test_99_Hashmap_IsEqualPtr_DiffLength", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1656,7 +1656,7 @@ func Test_99_Hashmap_IsEqualPtr_DiffLength(t *testing.T) {
 	})
 }
 
-func Test_100_Hashmap_IsEqualPtr_BothNil(t *testing.T) {
+func Test_Hashmap_100_Hashmap_IsEqualPtr_BothNil_FromS09(t *testing.T) {
 	safeTest(t, "Test_100_Hashmap_IsEqualPtr_BothNil", func() {
 		// Arrange
 		var a *corestr.Hashmap
@@ -1669,7 +1669,7 @@ func Test_100_Hashmap_IsEqualPtr_BothNil(t *testing.T) {
 	})
 }
 
-func Test_101_Hashmap_IsEqualPtr_OneNil(t *testing.T) {
+func Test_Hashmap_101_Hashmap_IsEqualPtr_OneNil_FromS09(t *testing.T) {
 	safeTest(t, "Test_101_Hashmap_IsEqualPtr_OneNil", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1682,7 +1682,7 @@ func Test_101_Hashmap_IsEqualPtr_OneNil(t *testing.T) {
 	})
 }
 
-func Test_102_Hashmap_IsEqualPtr_SamePtr(t *testing.T) {
+func Test_Hashmap_102_Hashmap_IsEqualPtr_SamePtr_FromS09(t *testing.T) {
 	safeTest(t, "Test_102_Hashmap_IsEqualPtr_SamePtr", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1695,7 +1695,7 @@ func Test_102_Hashmap_IsEqualPtr_SamePtr(t *testing.T) {
 	})
 }
 
-func Test_103_Hashmap_IsEqualPtr_BothEmpty(t *testing.T) {
+func Test_Hashmap_103_Hashmap_IsEqualPtr_BothEmpty_FromS09(t *testing.T) {
 	safeTest(t, "Test_103_Hashmap_IsEqualPtr_BothEmpty", func() {
 		// Arrange
 		a := corestr.Empty.Hashmap()
@@ -1708,7 +1708,7 @@ func Test_103_Hashmap_IsEqualPtr_BothEmpty(t *testing.T) {
 	})
 }
 
-func Test_104_Hashmap_IsEqualPtr_OneEmpty(t *testing.T) {
+func Test_Hashmap_104_Hashmap_IsEqualPtr_OneEmpty_FromS09(t *testing.T) {
 	safeTest(t, "Test_104_Hashmap_IsEqualPtr_OneEmpty", func() {
 		// Arrange
 		a := corestr.New.Hashmap.Cap(5)
@@ -1722,7 +1722,7 @@ func Test_104_Hashmap_IsEqualPtr_OneEmpty(t *testing.T) {
 	})
 }
 
-func Test_105_Hashmap_IsEqualPtr_MissingKey(t *testing.T) {
+func Test_Hashmap_105_Hashmap_IsEqualPtr_MissingKey_FromS09(t *testing.T) {
 	safeTest(t, "Test_105_Hashmap_IsEqualPtr_MissingKey", func() {
 		// Arrange
 		a := corestr.New.Hashmap.Cap(5)
@@ -1737,7 +1737,7 @@ func Test_105_Hashmap_IsEqualPtr_MissingKey(t *testing.T) {
 	})
 }
 
-func Test_106_Hashmap_IsEqual(t *testing.T) {
+func Test_Hashmap_106_Hashmap_IsEqual_FromS09(t *testing.T) {
 	safeTest(t, "Test_106_Hashmap_IsEqual", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1752,7 +1752,7 @@ func Test_106_Hashmap_IsEqual(t *testing.T) {
 	})
 }
 
-func Test_107_Hashmap_IsEqualPtrLock(t *testing.T) {
+func Test_Hashmap_107_Hashmap_IsEqualPtrLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_107_Hashmap_IsEqualPtrLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1769,7 +1769,7 @@ func Test_107_Hashmap_IsEqualPtrLock(t *testing.T) {
 
 // ── Remove / RemoveWithLock ──────────────────────────────────
 
-func Test_108_Hashmap_Remove(t *testing.T) {
+func Test_Hashmap_108_Hashmap_Remove_FromS09(t *testing.T) {
 	safeTest(t, "Test_108_Hashmap_Remove", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1785,7 +1785,7 @@ func Test_108_Hashmap_Remove(t *testing.T) {
 	})
 }
 
-func Test_109_Hashmap_RemoveWithLock(t *testing.T) {
+func Test_Hashmap_109_Hashmap_RemoveWithLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_109_Hashmap_RemoveWithLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1803,7 +1803,7 @@ func Test_109_Hashmap_RemoveWithLock(t *testing.T) {
 
 // ── String / StringLock ──────────────────────────────────────
 
-func Test_110_Hashmap_String(t *testing.T) {
+func Test_Hashmap_110_Hashmap_String_FromS09(t *testing.T) {
 	safeTest(t, "Test_110_Hashmap_String", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1819,7 +1819,7 @@ func Test_110_Hashmap_String(t *testing.T) {
 	})
 }
 
-func Test_111_Hashmap_String_Empty(t *testing.T) {
+func Test_Hashmap_111_Hashmap_String_Empty_FromS09(t *testing.T) {
 	safeTest(t, "Test_111_Hashmap_String_Empty", func() {
 		// Arrange
 		hm := corestr.Empty.Hashmap()
@@ -1834,7 +1834,7 @@ func Test_111_Hashmap_String_Empty(t *testing.T) {
 	})
 }
 
-func Test_112_Hashmap_StringLock(t *testing.T) {
+func Test_Hashmap_112_Hashmap_StringLock_FromS09(t *testing.T) {
 	safeTest(t, "Test_112_Hashmap_StringLock", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1850,7 +1850,7 @@ func Test_112_Hashmap_StringLock(t *testing.T) {
 	})
 }
 
-func Test_113_Hashmap_StringLock_Empty(t *testing.T) {
+func Test_Hashmap_113_Hashmap_StringLock_Empty_FromS09(t *testing.T) {
 	safeTest(t, "Test_113_Hashmap_StringLock_Empty", func() {
 		// Arrange
 		hm := corestr.Empty.Hashmap()
@@ -1867,7 +1867,7 @@ func Test_113_Hashmap_StringLock_Empty(t *testing.T) {
 
 // ── GetValuesExceptKeysInHashset / GetValuesKeysExcept / GetAllExceptCollection ──
 
-func Test_114_Hashmap_GetValuesExceptKeysInHashset(t *testing.T) {
+func Test_Hashmap_114_Hashmap_GetValuesExceptKeysInHashset_FromS09(t *testing.T) {
 	safeTest(t, "Test_114_Hashmap_GetValuesExceptKeysInHashset", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1885,7 +1885,7 @@ func Test_114_Hashmap_GetValuesExceptKeysInHashset(t *testing.T) {
 	})
 }
 
-func Test_115_Hashmap_GetValuesExceptKeysInHashset_NilHashset(t *testing.T) {
+func Test_Hashmap_115_Hashmap_GetValuesExceptKeysInHashset_NilHashset_FromS09(t *testing.T) {
 	safeTest(t, "Test_115_Hashmap_GetValuesExceptKeysInHashset_NilHashset", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1901,7 +1901,7 @@ func Test_115_Hashmap_GetValuesExceptKeysInHashset_NilHashset(t *testing.T) {
 	})
 }
 
-func Test_116_Hashmap_GetValuesExceptKeysInHashset_EmptyHashset(t *testing.T) {
+func Test_Hashmap_116_Hashmap_GetValuesExceptKeysInHashset_EmptyHashset_FromS09(t *testing.T) {
 	safeTest(t, "Test_116_Hashmap_GetValuesExceptKeysInHashset_EmptyHashset", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1917,7 +1917,7 @@ func Test_116_Hashmap_GetValuesExceptKeysInHashset_EmptyHashset(t *testing.T) {
 	})
 }
 
-func Test_117_Hashmap_GetValuesKeysExcept(t *testing.T) {
+func Test_Hashmap_117_Hashmap_GetValuesKeysExcept_FromS09(t *testing.T) {
 	safeTest(t, "Test_117_Hashmap_GetValuesKeysExcept", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1934,7 +1934,7 @@ func Test_117_Hashmap_GetValuesKeysExcept(t *testing.T) {
 	})
 }
 
-func Test_118_Hashmap_GetValuesKeysExcept_Nil(t *testing.T) {
+func Test_Hashmap_118_Hashmap_GetValuesKeysExcept_Nil_FromS09(t *testing.T) {
 	safeTest(t, "Test_118_Hashmap_GetValuesKeysExcept_Nil", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1950,7 +1950,7 @@ func Test_118_Hashmap_GetValuesKeysExcept_Nil(t *testing.T) {
 	})
 }
 
-func Test_119_Hashmap_GetAllExceptCollection(t *testing.T) {
+func Test_Hashmap_119_Hashmap_GetAllExceptCollection_FromS09(t *testing.T) {
 	safeTest(t, "Test_119_Hashmap_GetAllExceptCollection", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1968,7 +1968,7 @@ func Test_119_Hashmap_GetAllExceptCollection(t *testing.T) {
 	})
 }
 
-func Test_120_Hashmap_GetAllExceptCollection_Nil(t *testing.T) {
+func Test_Hashmap_120_Hashmap_GetAllExceptCollection_Nil_FromS09(t *testing.T) {
 	safeTest(t, "Test_120_Hashmap_GetAllExceptCollection_Nil", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -1986,7 +1986,7 @@ func Test_120_Hashmap_GetAllExceptCollection_Nil(t *testing.T) {
 
 // ── Join / JoinKeys ──────────────────────────────────────────
 
-func Test_121_Hashmap_Join(t *testing.T) {
+func Test_Hashmap_121_Hashmap_Join_FromS09(t *testing.T) {
 	safeTest(t, "Test_121_Hashmap_Join", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2002,7 +2002,7 @@ func Test_121_Hashmap_Join(t *testing.T) {
 	})
 }
 
-func Test_122_Hashmap_JoinKeys(t *testing.T) {
+func Test_Hashmap_122_Hashmap_JoinKeys_FromS09(t *testing.T) {
 	safeTest(t, "Test_122_Hashmap_JoinKeys", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2020,7 +2020,7 @@ func Test_122_Hashmap_JoinKeys(t *testing.T) {
 
 // ── JSON methods ─────────────────────────────────────────────
 
-func Test_123_Hashmap_JsonModel(t *testing.T) {
+func Test_Hashmap_123_Hashmap_JsonModel_FromS09(t *testing.T) {
 	safeTest(t, "Test_123_Hashmap_JsonModel", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2033,7 +2033,7 @@ func Test_123_Hashmap_JsonModel(t *testing.T) {
 	})
 }
 
-func Test_124_Hashmap_JsonModelAny(t *testing.T) {
+func Test_Hashmap_124_Hashmap_JsonModelAny_FromS09(t *testing.T) {
 	safeTest(t, "Test_124_Hashmap_JsonModelAny", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2045,7 +2045,7 @@ func Test_124_Hashmap_JsonModelAny(t *testing.T) {
 	})
 }
 
-func Test_125_Hashmap_MarshalJSON(t *testing.T) {
+func Test_Hashmap_125_Hashmap_MarshalJSON_FromS09(t *testing.T) {
 	safeTest(t, "Test_125_Hashmap_MarshalJSON", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2061,7 +2061,7 @@ func Test_125_Hashmap_MarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_126_Hashmap_UnmarshalJSON(t *testing.T) {
+func Test_Hashmap_126_Hashmap_UnmarshalJSON_FromS09(t *testing.T) {
 	safeTest(t, "Test_126_Hashmap_UnmarshalJSON", func() {
 		// Arrange
 		hm := corestr.Empty.Hashmap()
@@ -2079,7 +2079,7 @@ func Test_126_Hashmap_UnmarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_127_Hashmap_UnmarshalJSON_Invalid(t *testing.T) {
+func Test_Hashmap_127_Hashmap_UnmarshalJSON_Invalid_FromS09(t *testing.T) {
 	safeTest(t, "Test_127_Hashmap_UnmarshalJSON_Invalid", func() {
 		// Arrange
 		hm := corestr.Empty.Hashmap()
@@ -2094,7 +2094,7 @@ func Test_127_Hashmap_UnmarshalJSON_Invalid(t *testing.T) {
 	})
 }
 
-func Test_128_Hashmap_Json(t *testing.T) {
+func Test_Hashmap_128_Hashmap_Json_FromS09(t *testing.T) {
 	safeTest(t, "Test_128_Hashmap_Json", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2110,7 +2110,7 @@ func Test_128_Hashmap_Json(t *testing.T) {
 	})
 }
 
-func Test_129_Hashmap_JsonPtr(t *testing.T) {
+func Test_Hashmap_129_Hashmap_JsonPtr_FromS09(t *testing.T) {
 	safeTest(t, "Test_129_Hashmap_JsonPtr", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2122,7 +2122,7 @@ func Test_129_Hashmap_JsonPtr(t *testing.T) {
 	})
 }
 
-func Test_130_Hashmap_ParseInjectUsingJson(t *testing.T) {
+func Test_Hashmap_130_Hashmap_ParseInjectUsingJson_FromS09(t *testing.T) {
 	safeTest(t, "Test_130_Hashmap_ParseInjectUsingJson", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2140,7 +2140,7 @@ func Test_130_Hashmap_ParseInjectUsingJson(t *testing.T) {
 	})
 }
 
-func Test_131_Hashmap_ParseInjectUsingJsonMust(t *testing.T) {
+func Test_Hashmap_131_Hashmap_ParseInjectUsingJsonMust_FromS09(t *testing.T) {
 	safeTest(t, "Test_131_Hashmap_ParseInjectUsingJsonMust", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2158,7 +2158,7 @@ func Test_131_Hashmap_ParseInjectUsingJsonMust(t *testing.T) {
 	})
 }
 
-func Test_132_Hashmap_JsonParseSelfInject(t *testing.T) {
+func Test_Hashmap_132_Hashmap_JsonParseSelfInject_FromS09(t *testing.T) {
 	safeTest(t, "Test_132_Hashmap_JsonParseSelfInject", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2178,7 +2178,7 @@ func Test_132_Hashmap_JsonParseSelfInject(t *testing.T) {
 
 // ── ToError / ToDefaultError / KeyValStringLines ─────────────
 
-func Test_133_Hashmap_ToError(t *testing.T) {
+func Test_Hashmap_133_Hashmap_ToError_FromS09(t *testing.T) {
 	safeTest(t, "Test_133_Hashmap_ToError", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2194,7 +2194,7 @@ func Test_133_Hashmap_ToError(t *testing.T) {
 	})
 }
 
-func Test_134_Hashmap_ToDefaultError(t *testing.T) {
+func Test_Hashmap_134_Hashmap_ToDefaultError_FromS09(t *testing.T) {
 	safeTest(t, "Test_134_Hashmap_ToDefaultError", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2210,7 +2210,7 @@ func Test_134_Hashmap_ToDefaultError(t *testing.T) {
 	})
 }
 
-func Test_135_Hashmap_KeyValStringLines(t *testing.T) {
+func Test_Hashmap_135_Hashmap_KeyValStringLines_FromS09(t *testing.T) {
 	safeTest(t, "Test_135_Hashmap_KeyValStringLines", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2228,7 +2228,7 @@ func Test_135_Hashmap_KeyValStringLines(t *testing.T) {
 
 // ── Clear / Dispose ──────────────────────────────────────────
 
-func Test_136_Hashmap_Clear(t *testing.T) {
+func Test_Hashmap_136_Hashmap_Clear_FromS09(t *testing.T) {
 	safeTest(t, "Test_136_Hashmap_Clear", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2245,7 +2245,7 @@ func Test_136_Hashmap_Clear(t *testing.T) {
 	})
 }
 
-func Test_137_Hashmap_Clear_Nil(t *testing.T) {
+func Test_Hashmap_137_Hashmap_Clear_Nil_FromS09(t *testing.T) {
 	safeTest(t, "Test_137_Hashmap_Clear_Nil", func() {
 		// Arrange
 		var hm *corestr.Hashmap
@@ -2260,7 +2260,7 @@ func Test_137_Hashmap_Clear_Nil(t *testing.T) {
 	})
 }
 
-func Test_138_Hashmap_Dispose(t *testing.T) {
+func Test_Hashmap_138_Hashmap_Dispose_FromS09(t *testing.T) {
 	safeTest(t, "Test_138_Hashmap_Dispose", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2276,7 +2276,7 @@ func Test_138_Hashmap_Dispose(t *testing.T) {
 	})
 }
 
-func Test_139_Hashmap_Dispose_Nil(t *testing.T) {
+func Test_Hashmap_139_Hashmap_Dispose_Nil_FromS09(t *testing.T) {
 	safeTest(t, "Test_139_Hashmap_Dispose_Nil", func() {
 		// Arrange
 		var hm *corestr.Hashmap
@@ -2288,7 +2288,7 @@ func Test_139_Hashmap_Dispose_Nil(t *testing.T) {
 
 // ── ToStringsUsingCompiler ───────────────────────────────────
 
-func Test_140_Hashmap_ToStringsUsingCompiler(t *testing.T) {
+func Test_Hashmap_140_Hashmap_ToStringsUsingCompiler_FromS09(t *testing.T) {
 	safeTest(t, "Test_140_Hashmap_ToStringsUsingCompiler", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2306,7 +2306,7 @@ func Test_140_Hashmap_ToStringsUsingCompiler(t *testing.T) {
 	})
 }
 
-func Test_141_Hashmap_ToStringsUsingCompiler_Empty(t *testing.T) {
+func Test_Hashmap_141_Hashmap_ToStringsUsingCompiler_Empty_FromS09(t *testing.T) {
 	safeTest(t, "Test_141_Hashmap_ToStringsUsingCompiler_Empty", func() {
 		// Arrange
 		hm := corestr.Empty.Hashmap()
@@ -2325,7 +2325,7 @@ func Test_141_Hashmap_ToStringsUsingCompiler_Empty(t *testing.T) {
 
 // ── AsJsoner / AsJsonContractsBinder / AsJsonParseSelfInjector / AsJsonMarshaller ──
 
-func Test_142_Hashmap_AsJsoner(t *testing.T) {
+func Test_Hashmap_142_Hashmap_AsJsoner_FromS09(t *testing.T) {
 	safeTest(t, "Test_142_Hashmap_AsJsoner", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2339,7 +2339,7 @@ func Test_142_Hashmap_AsJsoner(t *testing.T) {
 	})
 }
 
-func Test_143_Hashmap_AsJsonContractsBinder(t *testing.T) {
+func Test_Hashmap_143_Hashmap_AsJsonContractsBinder_FromS09(t *testing.T) {
 	safeTest(t, "Test_143_Hashmap_AsJsonContractsBinder", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2353,7 +2353,7 @@ func Test_143_Hashmap_AsJsonContractsBinder(t *testing.T) {
 	})
 }
 
-func Test_144_Hashmap_AsJsonParseSelfInjector(t *testing.T) {
+func Test_Hashmap_144_Hashmap_AsJsonParseSelfInjector_FromS09(t *testing.T) {
 	safeTest(t, "Test_144_Hashmap_AsJsonParseSelfInjector", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2367,7 +2367,7 @@ func Test_144_Hashmap_AsJsonParseSelfInjector(t *testing.T) {
 	})
 }
 
-func Test_145_Hashmap_AsJsonMarshaller(t *testing.T) {
+func Test_Hashmap_145_Hashmap_AsJsonMarshaller_FromS09(t *testing.T) {
 	safeTest(t, "Test_145_Hashmap_AsJsonMarshaller", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2383,7 +2383,7 @@ func Test_145_Hashmap_AsJsonMarshaller(t *testing.T) {
 
 // ── ClonePtr / Clone ─────────────────────────────────────────
 
-func Test_146_Hashmap_ClonePtr(t *testing.T) {
+func Test_Hashmap_146_Hashmap_ClonePtr_FromS09(t *testing.T) {
 	safeTest(t, "Test_146_Hashmap_ClonePtr", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2399,7 +2399,7 @@ func Test_146_Hashmap_ClonePtr(t *testing.T) {
 	})
 }
 
-func Test_147_Hashmap_ClonePtr_Nil(t *testing.T) {
+func Test_Hashmap_147_Hashmap_ClonePtr_Nil_FromS09(t *testing.T) {
 	safeTest(t, "Test_147_Hashmap_ClonePtr_Nil", func() {
 		// Arrange
 		var hm *corestr.Hashmap
@@ -2414,7 +2414,7 @@ func Test_147_Hashmap_ClonePtr_Nil(t *testing.T) {
 	})
 }
 
-func Test_148_Hashmap_Clone(t *testing.T) {
+func Test_Hashmap_148_Hashmap_Clone_FromS09(t *testing.T) {
 	safeTest(t, "Test_148_Hashmap_Clone", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2430,7 +2430,7 @@ func Test_148_Hashmap_Clone(t *testing.T) {
 	})
 }
 
-func Test_149_Hashmap_Clone_Empty(t *testing.T) {
+func Test_Hashmap_149_Hashmap_Clone_Empty_FromS09(t *testing.T) {
 	safeTest(t, "Test_149_Hashmap_Clone_Empty", func() {
 		// Arrange
 		hm := corestr.Empty.Hashmap()
@@ -2447,7 +2447,7 @@ func Test_149_Hashmap_Clone_Empty(t *testing.T) {
 
 // ── Get / GetValue ───────────────────────────────────────────
 
-func Test_150_Hashmap_Get(t *testing.T) {
+func Test_Hashmap_150_Hashmap_Get_FromS09(t *testing.T) {
 	safeTest(t, "Test_150_Hashmap_Get", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2463,7 +2463,7 @@ func Test_150_Hashmap_Get(t *testing.T) {
 	})
 }
 
-func Test_151_Hashmap_Get_Missing(t *testing.T) {
+func Test_Hashmap_151_Hashmap_Get_Missing_FromS09(t *testing.T) {
 	safeTest(t, "Test_151_Hashmap_Get_Missing", func() {
 		// Arrange
 		hm := corestr.Empty.Hashmap()
@@ -2478,7 +2478,7 @@ func Test_151_Hashmap_Get_Missing(t *testing.T) {
 	})
 }
 
-func Test_152_Hashmap_GetValue(t *testing.T) {
+func Test_Hashmap_152_Hashmap_GetValue_FromS09(t *testing.T) {
 	safeTest(t, "Test_152_Hashmap_GetValue", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2496,7 +2496,7 @@ func Test_152_Hashmap_GetValue(t *testing.T) {
 
 // ── Serialize / Deserialize ──────────────────────────────────
 
-func Test_153_Hashmap_Serialize(t *testing.T) {
+func Test_Hashmap_153_Hashmap_Serialize_FromS09(t *testing.T) {
 	safeTest(t, "Test_153_Hashmap_Serialize", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)
@@ -2512,7 +2512,7 @@ func Test_153_Hashmap_Serialize(t *testing.T) {
 	})
 }
 
-func Test_154_Hashmap_Deserialize(t *testing.T) {
+func Test_Hashmap_154_Hashmap_Deserialize_FromS09(t *testing.T) {
 	safeTest(t, "Test_154_Hashmap_Deserialize", func() {
 		// Arrange
 		hm := corestr.New.Hashmap.Cap(5)

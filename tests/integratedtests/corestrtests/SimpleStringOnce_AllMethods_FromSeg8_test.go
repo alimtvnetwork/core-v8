@@ -12,7 +12,7 @@ import (
 // SimpleStringOnce — Segment 8a
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_Seg8_SSO_ValueAndInit(t *testing.T) {
+func Test_SimpleStringOnce_ValueAndInit_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_ValueAndInit", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -36,7 +36,7 @@ func Test_Seg8_SSO_ValueAndInit(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_SetOnUninitialized(t *testing.T) {
+func Test_SimpleStringOnce_SetOnUninitialized_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_SetOnUninitialized", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -59,7 +59,7 @@ func Test_Seg8_SSO_SetOnUninitialized(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_SetOnUninitialized_AlreadyInit(t *testing.T) {
+func Test_SimpleStringOnce_AlreadyInit_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_SetOnUninitialized_AlreadyInit", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -81,7 +81,7 @@ func Test_Seg8_SSO_SetOnUninitialized_AlreadyInit(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_GetSetOnce(t *testing.T) {
+func Test_SimpleStringOnce_GetSetOnce_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_GetSetOnce", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -103,7 +103,7 @@ func Test_Seg8_SSO_GetSetOnce(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_GetOnce(t *testing.T) {
+func Test_SimpleStringOnce_GetOnce_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_GetOnce", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -124,7 +124,7 @@ func Test_Seg8_SSO_GetOnce(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_GetOnceFunc(t *testing.T) {
+func Test_SimpleStringOnce_GetOnceFunc_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_GetOnceFunc", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -146,7 +146,7 @@ func Test_Seg8_SSO_GetOnceFunc(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_SetOnceIfUninitialized(t *testing.T) {
+func Test_SimpleStringOnce_SetOnceIfUninitialized_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_SetOnceIfUninitialized", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -170,7 +170,7 @@ func Test_Seg8_SSO_SetOnceIfUninitialized(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_SetInitialize_SetUnInit(t *testing.T) {
+func Test_SimpleStringOnce_SetUnInit_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_SetInitialize_SetUnInit", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -194,7 +194,7 @@ func Test_Seg8_SSO_SetInitialize_SetUnInit(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Invalidate(t *testing.T) {
+func Test_SimpleStringOnce_Invalidate_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Invalidate", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -216,7 +216,7 @@ func Test_Seg8_SSO_Invalidate(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Reset(t *testing.T) {
+func Test_SimpleStringOnce_Reset_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Reset", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -238,7 +238,7 @@ func Test_Seg8_SSO_Reset(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_IsInvalid(t *testing.T) {
+func Test_SimpleStringOnce_IsInvalid_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_IsInvalid", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -261,7 +261,7 @@ func Test_Seg8_SSO_IsInvalid(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_IsInvalid_NilReceiver(t *testing.T) {
+func Test_SimpleStringOnce_NilReceiver_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_IsInvalid_NilReceiver", func() {
 		// Arrange
 		var sso *corestr.SimpleStringOnce
@@ -275,7 +275,7 @@ func Test_Seg8_SSO_IsInvalid_NilReceiver(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_ValueBytes(t *testing.T) {
+func Test_SimpleStringOnce_ValueBytes_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_ValueBytes", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -296,7 +296,7 @@ func Test_Seg8_SSO_ValueBytes(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_ConcatNew(t *testing.T) {
+func Test_SimpleStringOnce_ConcatNew_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_ConcatNew", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -318,7 +318,7 @@ func Test_Seg8_SSO_ConcatNew(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_ConcatNewUsingStrings(t *testing.T) {
+func Test_SimpleStringOnce_ConcatNewUsingStrings_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_ConcatNewUsingStrings", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -334,7 +334,7 @@ func Test_Seg8_SSO_ConcatNewUsingStrings(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_IsEmpty_IsWhitespace(t *testing.T) {
+func Test_SimpleStringOnce_IsWhitespace_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_IsEmpty_IsWhitespace", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -354,7 +354,7 @@ func Test_Seg8_SSO_IsEmpty_IsWhitespace(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Trim(t *testing.T) {
+func Test_SimpleStringOnce_Trim_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Trim", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -369,7 +369,7 @@ func Test_Seg8_SSO_Trim(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_HasValidNonEmpty(t *testing.T) {
+func Test_SimpleStringOnce_HasValidNonEmpty_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_HasValidNonEmpty", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -390,7 +390,7 @@ func Test_Seg8_SSO_HasValidNonEmpty(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_HasValidNonEmpty_Uninit(t *testing.T) {
+func Test_SimpleStringOnce_Uninit_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_HasValidNonEmpty_Uninit", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -410,7 +410,7 @@ func Test_Seg8_SSO_HasValidNonEmpty_Uninit(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_SafeValue(t *testing.T) {
+func Test_SimpleStringOnce_SafeValue_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_SafeValue", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -433,7 +433,7 @@ func Test_Seg8_SSO_SafeValue(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_HasSafeNonEmpty(t *testing.T) {
+func Test_SimpleStringOnce_HasSafeNonEmpty_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_HasSafeNonEmpty", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -448,7 +448,7 @@ func Test_Seg8_SSO_HasSafeNonEmpty(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Int(t *testing.T) {
+func Test_SimpleStringOnce_Int_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Int", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -463,7 +463,7 @@ func Test_Seg8_SSO_Int(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Int_Invalid(t *testing.T) {
+func Test_SimpleStringOnce_Invalid_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Int_Invalid", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -478,7 +478,7 @@ func Test_Seg8_SSO_Int_Invalid(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Byte(t *testing.T) {
+func Test_SimpleStringOnce_Byte_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Byte", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -493,7 +493,7 @@ func Test_Seg8_SSO_Byte(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Byte_OutOfRange(t *testing.T) {
+func Test_SimpleStringOnce_OutOfRange_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Byte_OutOfRange", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -508,7 +508,7 @@ func Test_Seg8_SSO_Byte_OutOfRange(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Byte_Invalid(t *testing.T) {
+func Test_SimpleStringOnce_Invalid_FromSeg8_v2(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Byte_Invalid", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -523,7 +523,7 @@ func Test_Seg8_SSO_Byte_Invalid(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Int16(t *testing.T) {
+func Test_SimpleStringOnce_Int16_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Int16", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -538,7 +538,7 @@ func Test_Seg8_SSO_Int16(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Int16_OutOfRange(t *testing.T) {
+func Test_SimpleStringOnce_OutOfRange_FromSeg8_v2(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Int16_OutOfRange", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -553,7 +553,7 @@ func Test_Seg8_SSO_Int16_OutOfRange(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Int32(t *testing.T) {
+func Test_SimpleStringOnce_Int32_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Int32", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -568,7 +568,7 @@ func Test_Seg8_SSO_Int32(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Int32_OutOfRange(t *testing.T) {
+func Test_SimpleStringOnce_OutOfRange_FromSeg8_v3(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Int32_OutOfRange", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -583,7 +583,7 @@ func Test_Seg8_SSO_Int32_OutOfRange(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Uint16(t *testing.T) {
+func Test_SimpleStringOnce_Uint16_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Uint16", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -605,7 +605,7 @@ func Test_Seg8_SSO_Uint16(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Uint32(t *testing.T) {
+func Test_SimpleStringOnce_Uint32_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Uint32", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -627,7 +627,7 @@ func Test_Seg8_SSO_Uint32(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_WithinRange_InRange(t *testing.T) {
+func Test_SimpleStringOnce_InRange_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_WithinRange_InRange", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -649,7 +649,7 @@ func Test_Seg8_SSO_WithinRange_InRange(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_WithinRange_Below_Boundary(t *testing.T) {
+func Test_SimpleStringOnce_Boundary_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_WithinRange_Below_Boundary", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -671,7 +671,7 @@ func Test_Seg8_SSO_WithinRange_Below_Boundary(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_WithinRange_Above_Boundary(t *testing.T) {
+func Test_SimpleStringOnce_Boundary_FromSeg8_v2(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_WithinRange_Above_Boundary", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -693,7 +693,7 @@ func Test_Seg8_SSO_WithinRange_Above_Boundary(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_WithinRange_NoBoundary(t *testing.T) {
+func Test_SimpleStringOnce_NoBoundary_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_WithinRange_NoBoundary", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -715,7 +715,7 @@ func Test_Seg8_SSO_WithinRange_NoBoundary(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_WithinRange_Invalid(t *testing.T) {
+func Test_SimpleStringOnce_Invalid_FromSeg8_v3(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_WithinRange_Invalid", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -737,7 +737,7 @@ func Test_Seg8_SSO_WithinRange_Invalid(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_WithinRangeDefault(t *testing.T) {
+func Test_SimpleStringOnce_WithinRangeDefault_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_WithinRangeDefault", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -759,7 +759,7 @@ func Test_Seg8_SSO_WithinRangeDefault(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Boolean_Yes(t *testing.T) {
+func Test_SimpleStringOnce_Yes_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Boolean_Yes", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -774,7 +774,7 @@ func Test_Seg8_SSO_Boolean_Yes(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Boolean_True(t *testing.T) {
+func Test_SimpleStringOnce_True_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Boolean_True", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -789,7 +789,7 @@ func Test_Seg8_SSO_Boolean_True(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Boolean_1(t *testing.T) {
+func Test_SimpleStringOnce_1_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Boolean_1", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -804,7 +804,7 @@ func Test_Seg8_SSO_Boolean_1(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Boolean_Y(t *testing.T) {
+func Test_SimpleStringOnce_Y_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Boolean_Y", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -819,7 +819,7 @@ func Test_Seg8_SSO_Boolean_Y(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Boolean_YES(t *testing.T) {
+func Test_SimpleStringOnce_YES_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Boolean_YES", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -834,7 +834,7 @@ func Test_Seg8_SSO_Boolean_YES(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Boolean_Invalid(t *testing.T) {
+func Test_SimpleStringOnce_Invalid_FromSeg8_v4(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Boolean_Invalid", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -849,7 +849,7 @@ func Test_Seg8_SSO_Boolean_Invalid(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Boolean_Uninit(t *testing.T) {
+func Test_SimpleStringOnce_Uninit_FromSeg8_v2(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Boolean_Uninit", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -863,7 +863,7 @@ func Test_Seg8_SSO_Boolean_Uninit(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_BooleanDefault(t *testing.T) {
+func Test_SimpleStringOnce_BooleanDefault_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_BooleanDefault", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -878,7 +878,7 @@ func Test_Seg8_SSO_BooleanDefault(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_IsValueBool(t *testing.T) {
+func Test_SimpleStringOnce_IsValueBool_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_IsValueBool", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -893,7 +893,7 @@ func Test_Seg8_SSO_IsValueBool(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_IsSetter_True(t *testing.T) {
+func Test_SimpleStringOnce_True_FromSeg8_v2(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_IsSetter_True", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -908,7 +908,7 @@ func Test_Seg8_SSO_IsSetter_True(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_IsSetter_Uninit(t *testing.T) {
+func Test_SimpleStringOnce_Uninit_FromSeg8_v3(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_IsSetter_Uninit", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -922,7 +922,7 @@ func Test_Seg8_SSO_IsSetter_Uninit(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_IsSetter_Invalid(t *testing.T) {
+func Test_SimpleStringOnce_Invalid_FromSeg8_v5(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_IsSetter_Invalid", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -937,7 +937,7 @@ func Test_Seg8_SSO_IsSetter_Invalid(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_ValueInt(t *testing.T) {
+func Test_SimpleStringOnce_ValueInt_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_ValueInt", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -952,7 +952,7 @@ func Test_Seg8_SSO_ValueInt(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_ValueInt_Invalid(t *testing.T) {
+func Test_SimpleStringOnce_Invalid_FromSeg8_v6(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_ValueInt_Invalid", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -967,7 +967,7 @@ func Test_Seg8_SSO_ValueInt_Invalid(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_ValueDefInt(t *testing.T) {
+func Test_SimpleStringOnce_ValueDefInt_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_ValueDefInt", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -982,7 +982,7 @@ func Test_Seg8_SSO_ValueDefInt(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_ValueByte(t *testing.T) {
+func Test_SimpleStringOnce_ValueByte_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_ValueByte", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -997,7 +997,7 @@ func Test_Seg8_SSO_ValueByte(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_ValueByte_OverMax(t *testing.T) {
+func Test_SimpleStringOnce_OverMax_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_ValueByte_OverMax", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1012,7 +1012,7 @@ func Test_Seg8_SSO_ValueByte_OverMax(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_ValueDefByte(t *testing.T) {
+func Test_SimpleStringOnce_ValueDefByte_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_ValueDefByte", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1027,7 +1027,7 @@ func Test_Seg8_SSO_ValueDefByte(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_ValueFloat64(t *testing.T) {
+func Test_SimpleStringOnce_ValueFloat64_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_ValueFloat64", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1042,7 +1042,7 @@ func Test_Seg8_SSO_ValueFloat64(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_ValueFloat64_Invalid(t *testing.T) {
+func Test_SimpleStringOnce_Invalid_FromSeg8_v7(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_ValueFloat64_Invalid", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1057,7 +1057,7 @@ func Test_Seg8_SSO_ValueFloat64_Invalid(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_ValueDefFloat64(t *testing.T) {
+func Test_SimpleStringOnce_ValueDefFloat64_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_ValueDefFloat64", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1072,7 +1072,7 @@ func Test_Seg8_SSO_ValueDefFloat64(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_NonPtr_Ptr(t *testing.T) {
+func Test_SimpleStringOnce_Ptr_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_NonPtr_Ptr", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1094,7 +1094,7 @@ func Test_Seg8_SSO_NonPtr_Ptr(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Is(t *testing.T) {
+func Test_SimpleStringOnce_Is_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Is", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1115,7 +1115,7 @@ func Test_Seg8_SSO_Is(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_IsAnyOf(t *testing.T) {
+func Test_SimpleStringOnce_IsAnyOf_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_IsAnyOf", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1138,7 +1138,7 @@ func Test_Seg8_SSO_IsAnyOf(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_IsContains(t *testing.T) {
+func Test_SimpleStringOnce_IsContains_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_IsContains", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1159,7 +1159,7 @@ func Test_Seg8_SSO_IsContains(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_IsAnyContains(t *testing.T) {
+func Test_SimpleStringOnce_IsAnyContains_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_IsAnyContains", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1182,7 +1182,7 @@ func Test_Seg8_SSO_IsAnyContains(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_IsEqualNonSensitive(t *testing.T) {
+func Test_SimpleStringOnce_IsEqualNonSensitive_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_IsEqualNonSensitive", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1203,7 +1203,7 @@ func Test_Seg8_SSO_IsEqualNonSensitive(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_IsRegexMatches(t *testing.T) {
+func Test_SimpleStringOnce_IsRegexMatches_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_IsRegexMatches", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1225,7 +1225,7 @@ func Test_Seg8_SSO_IsRegexMatches(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_RegexFindString(t *testing.T) {
+func Test_SimpleStringOnce_RegexFindString_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_RegexFindString", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1247,7 +1247,7 @@ func Test_Seg8_SSO_RegexFindString(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_RegexFindAllStrings(t *testing.T) {
+func Test_SimpleStringOnce_RegexFindAllStrings_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_RegexFindAllStrings", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1269,7 +1269,7 @@ func Test_Seg8_SSO_RegexFindAllStrings(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_RegexFindAllStringsWithFlag(t *testing.T) {
+func Test_SimpleStringOnce_RegexFindAllStringsWithFlag_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_RegexFindAllStringsWithFlag", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1297,7 +1297,7 @@ func Test_Seg8_SSO_RegexFindAllStringsWithFlag(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_LinesSimpleSlice(t *testing.T) {
+func Test_SimpleStringOnce_LinesSimpleSlice_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_LinesSimpleSlice", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1312,7 +1312,7 @@ func Test_Seg8_SSO_LinesSimpleSlice(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_SimpleSlice(t *testing.T) {
+func Test_SimpleStringOnce_SimpleSlice_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_SimpleSlice", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1327,7 +1327,7 @@ func Test_Seg8_SSO_SimpleSlice(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Split(t *testing.T) {
+func Test_SimpleStringOnce_Split_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Split", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1342,7 +1342,7 @@ func Test_Seg8_SSO_Split(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_SplitLeftRight(t *testing.T) {
+func Test_SimpleStringOnce_SplitLeftRight_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_SplitLeftRight", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1364,7 +1364,7 @@ func Test_Seg8_SSO_SplitLeftRight(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_SplitLeftRight_NoSep(t *testing.T) {
+func Test_SimpleStringOnce_NoSep_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_SplitLeftRight_NoSep", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1386,7 +1386,7 @@ func Test_Seg8_SSO_SplitLeftRight_NoSep(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_SplitLeftRightTrim(t *testing.T) {
+func Test_SimpleStringOnce_SplitLeftRightTrim_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_SplitLeftRightTrim", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1408,7 +1408,7 @@ func Test_Seg8_SSO_SplitLeftRightTrim(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_SplitNonEmpty(t *testing.T) {
+func Test_SimpleStringOnce_SplitNonEmpty_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_SplitNonEmpty", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1424,7 +1424,7 @@ func Test_Seg8_SSO_SplitNonEmpty(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_SplitTrimNonWhitespace(t *testing.T) {
+func Test_SimpleStringOnce_SplitTrimNonWhitespace_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_SplitTrimNonWhitespace", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1440,7 +1440,7 @@ func Test_Seg8_SSO_SplitTrimNonWhitespace(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Clone(t *testing.T) {
+func Test_SimpleStringOnce_Clone_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Clone", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1462,7 +1462,7 @@ func Test_Seg8_SSO_Clone(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_ClonePtr(t *testing.T) {
+func Test_SimpleStringOnce_ClonePtr_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_ClonePtr", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1484,7 +1484,7 @@ func Test_Seg8_SSO_ClonePtr(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_ClonePtr_Nil(t *testing.T) {
+func Test_SimpleStringOnce_Nil_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_ClonePtr_Nil", func() {
 		// Arrange
 		var sso *corestr.SimpleStringOnce
@@ -1499,7 +1499,7 @@ func Test_Seg8_SSO_ClonePtr_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_CloneUsingNewVal(t *testing.T) {
+func Test_SimpleStringOnce_CloneUsingNewVal_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_CloneUsingNewVal", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1521,7 +1521,7 @@ func Test_Seg8_SSO_CloneUsingNewVal(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Dispose(t *testing.T) {
+func Test_SimpleStringOnce_Dispose_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Dispose", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1543,14 +1543,14 @@ func Test_Seg8_SSO_Dispose(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Dispose_Nil(t *testing.T) {
+func Test_SimpleStringOnce_Nil_FromSeg8_v2(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Dispose_Nil", func() {
 		var sso *corestr.SimpleStringOnce
 		sso.Dispose() // should not panic
 	})
 }
 
-func Test_Seg8_SSO_String(t *testing.T) {
+func Test_SimpleStringOnce_String_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_String", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1565,7 +1565,7 @@ func Test_Seg8_SSO_String(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_String_Nil(t *testing.T) {
+func Test_SimpleStringOnce_Nil_FromSeg8_v3(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_String_Nil", func() {
 		// Arrange
 		var sso *corestr.SimpleStringOnce
@@ -1579,7 +1579,7 @@ func Test_Seg8_SSO_String_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_StringPtr(t *testing.T) {
+func Test_SimpleStringOnce_StringPtr_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_StringPtr", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1595,7 +1595,7 @@ func Test_Seg8_SSO_StringPtr(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_StringPtr_Nil(t *testing.T) {
+func Test_SimpleStringOnce_Nil_FromSeg8_v4(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_StringPtr_Nil", func() {
 		// Arrange
 		var sso *corestr.SimpleStringOnce
@@ -1610,7 +1610,7 @@ func Test_Seg8_SSO_StringPtr_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_JsonModel(t *testing.T) {
+func Test_SimpleStringOnce_JsonModel_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_JsonModel", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1632,7 +1632,7 @@ func Test_Seg8_SSO_JsonModel(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_JsonModelAny(t *testing.T) {
+func Test_SimpleStringOnce_JsonModelAny_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_JsonModelAny", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1646,7 +1646,7 @@ func Test_Seg8_SSO_JsonModelAny(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_MarshalJSON(t *testing.T) {
+func Test_SimpleStringOnce_MarshalJSON_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_MarshalJSON", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1668,7 +1668,7 @@ func Test_Seg8_SSO_MarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_UnmarshalJSON(t *testing.T) {
+func Test_SimpleStringOnce_UnmarshalJSON_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_UnmarshalJSON", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1694,7 +1694,7 @@ func Test_Seg8_SSO_UnmarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_UnmarshalJSON_Invalid(t *testing.T) {
+func Test_SimpleStringOnce_Invalid_FromSeg8_v8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_UnmarshalJSON_Invalid", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1709,7 +1709,7 @@ func Test_Seg8_SSO_UnmarshalJSON_Invalid(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Json(t *testing.T) {
+func Test_SimpleStringOnce_Json_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Json", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1725,7 +1725,7 @@ func Test_Seg8_SSO_Json(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_ParseInjectUsingJson(t *testing.T) {
+func Test_SimpleStringOnce_ParseInjectUsingJson_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_ParseInjectUsingJson", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1749,7 +1749,7 @@ func Test_Seg8_SSO_ParseInjectUsingJson(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_ParseInjectUsingJsonMust(t *testing.T) {
+func Test_SimpleStringOnce_ParseInjectUsingJsonMust_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_ParseInjectUsingJsonMust", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1767,7 +1767,7 @@ func Test_Seg8_SSO_ParseInjectUsingJsonMust(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_JsonParseSelfInject(t *testing.T) {
+func Test_SimpleStringOnce_JsonParseSelfInject_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_JsonParseSelfInject", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1785,7 +1785,7 @@ func Test_Seg8_SSO_JsonParseSelfInject(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_InterfaceCasts(t *testing.T) {
+func Test_SimpleStringOnce_InterfaceCasts_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_InterfaceCasts", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1809,7 +1809,7 @@ func Test_Seg8_SSO_InterfaceCasts(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Serialize(t *testing.T) {
+func Test_SimpleStringOnce_Serialize_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Serialize", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}
@@ -1831,7 +1831,7 @@ func Test_Seg8_SSO_Serialize(t *testing.T) {
 	})
 }
 
-func Test_Seg8_SSO_Deserialize(t *testing.T) {
+func Test_SimpleStringOnce_Deserialize_FromSeg8(t *testing.T) {
 	safeTest(t, "Test_Seg8_SSO_Deserialize", func() {
 		// Arrange
 		sso := &corestr.SimpleStringOnce{}

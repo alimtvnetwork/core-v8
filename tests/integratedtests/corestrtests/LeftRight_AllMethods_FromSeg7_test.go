@@ -13,7 +13,7 @@ import (
 // LeftRight — Segment 7a
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_Seg7_LR_NewLeftRight(t *testing.T) {
+func Test_LeftRight_NewLeftRight_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_NewLeftRight", func() {
 		// Arrange
 		lr := corestr.NewLeftRight("left", "right")
@@ -35,7 +35,7 @@ func Test_Seg7_LR_NewLeftRight(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_InvalidLeftRight(t *testing.T) {
+func Test_LeftRight_InvalidLeftRight_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_InvalidLeftRight", func() {
 		// Arrange
 		lr := corestr.InvalidLeftRight("err")
@@ -55,7 +55,7 @@ func Test_Seg7_LR_InvalidLeftRight(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_InvalidLeftRightNoMessage(t *testing.T) {
+func Test_LeftRight_InvalidLeftRightNoMessage_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_InvalidLeftRightNoMessage", func() {
 		// Arrange
 		lr := corestr.InvalidLeftRightNoMessage()
@@ -69,7 +69,7 @@ func Test_Seg7_LR_InvalidLeftRightNoMessage(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_LeftRightUsingSlice_Two(t *testing.T) {
+func Test_LeftRight_Two_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_LeftRightUsingSlice_Two", func() {
 		// Arrange
 		lr := corestr.LeftRightUsingSlice([]string{"a", "b"})
@@ -91,7 +91,7 @@ func Test_Seg7_LR_LeftRightUsingSlice_Two(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_LeftRightUsingSlice_One(t *testing.T) {
+func Test_LeftRight_One_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_LeftRightUsingSlice_One", func() {
 		// Arrange
 		lr := corestr.LeftRightUsingSlice([]string{"a"})
@@ -113,7 +113,7 @@ func Test_Seg7_LR_LeftRightUsingSlice_One(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_LeftRightUsingSlice_Empty(t *testing.T) {
+func Test_LeftRight_Empty_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_LeftRightUsingSlice_Empty", func() {
 		// Arrange
 		lr := corestr.LeftRightUsingSlice([]string{})
@@ -127,7 +127,7 @@ func Test_Seg7_LR_LeftRightUsingSlice_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_LeftRightUsingSlice_Three(t *testing.T) {
+func Test_LeftRight_Three_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_LeftRightUsingSlice_Three", func() {
 		// Arrange
 		lr := corestr.LeftRightUsingSlice([]string{"a", "b", "c"})
@@ -149,7 +149,7 @@ func Test_Seg7_LR_LeftRightUsingSlice_Three(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_LeftRightUsingSlicePtr(t *testing.T) {
+func Test_LeftRight_LeftRightUsingSlicePtr_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_LeftRightUsingSlicePtr", func() {
 		// Arrange
 		lr := corestr.LeftRightUsingSlicePtr([]string{"a", "b"})
@@ -169,7 +169,7 @@ func Test_Seg7_LR_LeftRightUsingSlicePtr(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_LeftRightUsingSlicePtr_Empty(t *testing.T) {
+func Test_LeftRight_Empty_FromSeg7_v2(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_LeftRightUsingSlicePtr_Empty", func() {
 		// Arrange
 		lr := corestr.LeftRightUsingSlicePtr([]string{})
@@ -183,7 +183,7 @@ func Test_Seg7_LR_LeftRightUsingSlicePtr_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_LeftRightTrimmedUsingSlice(t *testing.T) {
+func Test_LeftRight_LeftRightTrimmedUsingSlice_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_LeftRightTrimmedUsingSlice", func() {
 		// Arrange
 		lr := corestr.LeftRightTrimmedUsingSlice([]string{" a ", " b "})
@@ -205,7 +205,7 @@ func Test_Seg7_LR_LeftRightTrimmedUsingSlice(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_LeftRightTrimmedUsingSlice_Nil(t *testing.T) {
+func Test_LeftRight_Nil_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_LeftRightTrimmedUsingSlice_Nil", func() {
 		// Arrange
 		lr := corestr.LeftRightTrimmedUsingSlice(nil)
@@ -219,7 +219,7 @@ func Test_Seg7_LR_LeftRightTrimmedUsingSlice_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_LeftRightTrimmedUsingSlice_Empty(t *testing.T) {
+func Test_LeftRight_Empty_FromSeg7_v3(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_LeftRightTrimmedUsingSlice_Empty", func() {
 		// Arrange
 		lr := corestr.LeftRightTrimmedUsingSlice([]string{})
@@ -233,7 +233,7 @@ func Test_Seg7_LR_LeftRightTrimmedUsingSlice_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_LeftRightTrimmedUsingSlice_One(t *testing.T) {
+func Test_LeftRight_One_FromSeg7_v2(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_LeftRightTrimmedUsingSlice_One", func() {
 		// Arrange
 		lr := corestr.LeftRightTrimmedUsingSlice([]string{"a"})
@@ -255,7 +255,7 @@ func Test_Seg7_LR_LeftRightTrimmedUsingSlice_One(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_Bytes(t *testing.T) {
+func Test_LeftRight_Bytes_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_Bytes", func() {
 		// Arrange
 		lr := corestr.NewLeftRight("abc", "xyz")
@@ -275,7 +275,7 @@ func Test_Seg7_LR_Bytes(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_Trim(t *testing.T) {
+func Test_LeftRight_Trim_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_Trim", func() {
 		// Arrange
 		lr := corestr.NewLeftRight(" a ", " b ")
@@ -295,7 +295,7 @@ func Test_Seg7_LR_Trim(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_EmptyChecks(t *testing.T) {
+func Test_LeftRight_EmptyChecks_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_EmptyChecks", func() {
 		// Arrange
 		lr := corestr.NewLeftRight("a", "")
@@ -319,7 +319,7 @@ func Test_Seg7_LR_EmptyChecks(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_ValidNonEmpty(t *testing.T) {
+func Test_LeftRight_ValidNonEmpty_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_ValidNonEmpty", func() {
 		// Arrange
 		lr := corestr.NewLeftRight("a", "b")
@@ -342,7 +342,7 @@ func Test_Seg7_LR_ValidNonEmpty(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_NonPtr_Ptr(t *testing.T) {
+func Test_LeftRight_Ptr_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_NonPtr_Ptr", func() {
 		// Arrange
 		lr := corestr.NewLeftRight("a", "b")
@@ -362,7 +362,7 @@ func Test_Seg7_LR_NonPtr_Ptr(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_Regex(t *testing.T) {
+func Test_LeftRight_Regex_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_Regex", func() {
 		// Arrange
 		lr := corestr.NewLeftRight("abc123", "xyz")
@@ -387,7 +387,7 @@ func Test_Seg7_LR_Regex(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_Is(t *testing.T) {
+func Test_LeftRight_Is_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_Is", func() {
 		// Arrange
 		lr := corestr.NewLeftRight("a", "b")
@@ -411,7 +411,7 @@ func Test_Seg7_LR_Is(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_IsEqual(t *testing.T) {
+func Test_LeftRight_IsEqual_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_IsEqual", func() {
 		// Arrange
 		lr1 := corestr.NewLeftRight("a", "b")
@@ -439,7 +439,7 @@ func Test_Seg7_LR_IsEqual(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_Clone(t *testing.T) {
+func Test_LeftRight_Clone_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_Clone", func() {
 		// Arrange
 		lr := corestr.NewLeftRight("a", "b")
@@ -462,7 +462,7 @@ func Test_Seg7_LR_Clone(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_Clear(t *testing.T) {
+func Test_LeftRight_Clear_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_Clear", func() {
 		// Arrange
 		lr := corestr.NewLeftRight("a", "b")
@@ -483,7 +483,7 @@ func Test_Seg7_LR_Clear(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_Dispose(t *testing.T) {
+func Test_LeftRight_Dispose_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_Dispose", func() {
 		// Arrange
 		lr := corestr.NewLeftRight("a", "b")
@@ -498,14 +498,14 @@ func Test_Seg7_LR_Dispose(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LR_Clear_Nil(t *testing.T) {
+func Test_LeftRight_Nil_FromSeg7_v2(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_Clear_Nil", func() {
 		var lr *corestr.LeftRight
 		lr.Clear() // should not panic
 	})
 }
 
-func Test_Seg7_LR_Dispose_Nil(t *testing.T) {
+func Test_LeftRight_Nil_FromSeg7_v3(t *testing.T) {
 	safeTest(t, "Test_Seg7_LR_Dispose_Nil", func() {
 		var lr *corestr.LeftRight
 		lr.Dispose() // should not panic
@@ -516,7 +516,7 @@ func Test_Seg7_LR_Dispose_Nil(t *testing.T) {
 // LeftRightFromSplit — Segment 7b
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_Seg7_LRFS_FromSplit(t *testing.T) {
+func Test_LeftRight_FromSplit_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LRFS_FromSplit", func() {
 		// Arrange
 		lr := corestr.LeftRightFromSplit("key=value", "=")
@@ -536,7 +536,7 @@ func Test_Seg7_LRFS_FromSplit(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LRFS_FromSplitTrimmed(t *testing.T) {
+func Test_LeftRight_FromSplitTrimmed_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LRFS_FromSplitTrimmed", func() {
 		// Arrange
 		lr := corestr.LeftRightFromSplitTrimmed(" key = value ", "=")
@@ -556,7 +556,7 @@ func Test_Seg7_LRFS_FromSplitTrimmed(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LRFS_FromSplitFull(t *testing.T) {
+func Test_LeftRight_FromSplitFull_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LRFS_FromSplitFull", func() {
 		// Arrange
 		lr := corestr.LeftRightFromSplitFull("a:b:c:d", ":")
@@ -576,7 +576,7 @@ func Test_Seg7_LRFS_FromSplitFull(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LRFS_FromSplitFullTrimmed(t *testing.T) {
+func Test_LeftRight_FromSplitFullTrimmed_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LRFS_FromSplitFullTrimmed", func() {
 		// Arrange
 		lr := corestr.LeftRightFromSplitFullTrimmed(" a : b : c ", ":")
@@ -596,7 +596,7 @@ func Test_Seg7_LRFS_FromSplitFullTrimmed(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LRFS_FromSplit_NoSep(t *testing.T) {
+func Test_LeftRight_NoSep_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LRFS_FromSplit_NoSep", func() {
 		// Arrange
 		lr := corestr.LeftRightFromSplit("nosep", "=")
@@ -614,7 +614,7 @@ func Test_Seg7_LRFS_FromSplit_NoSep(t *testing.T) {
 // LeftMiddleRight — Segment 7c
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_Seg7_LMR_New(t *testing.T) {
+func Test_LeftRight_New_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMR_New", func() {
 		// Arrange
 		lmr := corestr.NewLeftMiddleRight("a", "b", "c")
@@ -635,7 +635,7 @@ func Test_Seg7_LMR_New(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LMR_Invalid(t *testing.T) {
+func Test_LeftRight_Invalid_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMR_Invalid", func() {
 		// Arrange
 		lmr := corestr.InvalidLeftMiddleRight("err")
@@ -655,7 +655,7 @@ func Test_Seg7_LMR_Invalid(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LMR_InvalidNoMessage(t *testing.T) {
+func Test_LeftRight_InvalidNoMessage_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMR_InvalidNoMessage", func() {
 		// Arrange
 		lmr := corestr.InvalidLeftMiddleRightNoMessage()
@@ -669,7 +669,7 @@ func Test_Seg7_LMR_InvalidNoMessage(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LMR_Bytes(t *testing.T) {
+func Test_LeftRight_Bytes_FromSeg7_v2(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMR_Bytes", func() {
 		// Arrange
 		lmr := corestr.NewLeftMiddleRight("ab", "cd", "ef")
@@ -689,7 +689,7 @@ func Test_Seg7_LMR_Bytes(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LMR_Trim(t *testing.T) {
+func Test_LeftRight_Trim_FromSeg7_v2(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMR_Trim", func() {
 		// Arrange
 		lmr := corestr.NewLeftMiddleRight(" a ", " b ", " c ")
@@ -711,7 +711,7 @@ func Test_Seg7_LMR_Trim(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LMR_EmptyChecks(t *testing.T) {
+func Test_LeftRight_EmptyChecks_FromSeg7_v2(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMR_EmptyChecks", func() {
 		// Arrange
 		lmr := corestr.NewLeftMiddleRight("a", "", "c")
@@ -731,7 +731,7 @@ func Test_Seg7_LMR_EmptyChecks(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LMR_ValidNonEmpty(t *testing.T) {
+func Test_LeftRight_ValidNonEmpty_FromSeg7_v2(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMR_ValidNonEmpty", func() {
 		// Arrange
 		lmr := corestr.NewLeftMiddleRight("a", "b", "c")
@@ -756,7 +756,7 @@ func Test_Seg7_LMR_ValidNonEmpty(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LMR_IsAll(t *testing.T) {
+func Test_LeftRight_IsAll_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMR_IsAll", func() {
 		// Arrange
 		lmr := corestr.NewLeftMiddleRight("a", "b", "c")
@@ -780,7 +780,7 @@ func Test_Seg7_LMR_IsAll(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LMR_Clone(t *testing.T) {
+func Test_LeftRight_Clone_FromSeg7_v2(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMR_Clone", func() {
 		// Arrange
 		lmr := corestr.NewLeftMiddleRight("a", "b", "c")
@@ -805,7 +805,7 @@ func Test_Seg7_LMR_Clone(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LMR_ToLeftRight(t *testing.T) {
+func Test_LeftRight_ToLeftRight_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMR_ToLeftRight", func() {
 		// Arrange
 		lmr := corestr.NewLeftMiddleRight("a", "b", "c")
@@ -828,7 +828,7 @@ func Test_Seg7_LMR_ToLeftRight(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LMR_Clear(t *testing.T) {
+func Test_LeftRight_Clear_FromSeg7_v2(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMR_Clear", func() {
 		// Arrange
 		lmr := corestr.NewLeftMiddleRight("a", "b", "c")
@@ -851,7 +851,7 @@ func Test_Seg7_LMR_Clear(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LMR_Dispose(t *testing.T) {
+func Test_LeftRight_Dispose_FromSeg7_v2(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMR_Dispose", func() {
 		// Arrange
 		lmr := corestr.NewLeftMiddleRight("a", "b", "c")
@@ -866,14 +866,14 @@ func Test_Seg7_LMR_Dispose(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LMR_Clear_Nil(t *testing.T) {
+func Test_LeftRight_Nil_FromSeg7_v4(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMR_Clear_Nil", func() {
 		var lmr *corestr.LeftMiddleRight
 		lmr.Clear()
 	})
 }
 
-func Test_Seg7_LMR_Dispose_Nil(t *testing.T) {
+func Test_LeftRight_Nil_FromSeg7_v5(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMR_Dispose_Nil", func() {
 		var lmr *corestr.LeftMiddleRight
 		lmr.Dispose()
@@ -884,7 +884,7 @@ func Test_Seg7_LMR_Dispose_Nil(t *testing.T) {
 // LeftMiddleRightFromSplit — Segment 7d
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_Seg7_LMRFS_FromSplit(t *testing.T) {
+func Test_LeftRight_FromSplit_FromSeg7_v2(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMRFS_FromSplit", func() {
 		// Arrange
 		lmr := corestr.LeftMiddleRightFromSplit("a.b.c", ".")
@@ -906,7 +906,7 @@ func Test_Seg7_LMRFS_FromSplit(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LMRFS_FromSplitTrimmed(t *testing.T) {
+func Test_LeftRight_FromSplitTrimmed_FromSeg7_v2(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMRFS_FromSplitTrimmed", func() {
 		// Arrange
 		lmr := corestr.LeftMiddleRightFromSplitTrimmed(" a . b . c ", ".")
@@ -928,7 +928,7 @@ func Test_Seg7_LMRFS_FromSplitTrimmed(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LMRFS_FromSplitN(t *testing.T) {
+func Test_LeftRight_FromSplitN_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMRFS_FromSplitN", func() {
 		// Arrange
 		lmr := corestr.LeftMiddleRightFromSplitN("a:b:c:d:e", ":")
@@ -950,7 +950,7 @@ func Test_Seg7_LMRFS_FromSplitN(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LMRFS_FromSplitNTrimmed(t *testing.T) {
+func Test_LeftRight_FromSplitNTrimmed_FromSeg7(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMRFS_FromSplitNTrimmed", func() {
 		// Arrange
 		lmr := corestr.LeftMiddleRightFromSplitNTrimmed(" a : b : c : d ", ":")
@@ -972,7 +972,7 @@ func Test_Seg7_LMRFS_FromSplitNTrimmed(t *testing.T) {
 	})
 }
 
-func Test_Seg7_LMRFS_FromSplit_NoSep(t *testing.T) {
+func Test_LeftRight_NoSep_FromSeg7_v2(t *testing.T) {
 	safeTest(t, "Test_Seg7_LMRFS_FromSplit_NoSep", func() {
 		// Arrange
 		lmr := corestr.LeftMiddleRightFromSplit("nosep", ".")

@@ -12,7 +12,7 @@ import (
 // S11a — SimpleSlice.go Lines 1-600 — Add, Query, Join, Wrap
 // ══════════════════════════════════════════════════════════════
 
-func Test_01_SimpleSlice_Add(t *testing.T) {
+func Test_SimpleSlice_01_SimpleSlice_Add_FromS11a(t *testing.T) {
 	safeTest(t, "Test_01_SimpleSlice_Add", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -27,7 +27,7 @@ func Test_01_SimpleSlice_Add(t *testing.T) {
 	})
 }
 
-func Test_02_SimpleSlice_AddSplit(t *testing.T) {
+func Test_SimpleSlice_02_SimpleSlice_AddSplit_FromS11a(t *testing.T) {
 	safeTest(t, "Test_02_SimpleSlice_AddSplit", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -42,7 +42,7 @@ func Test_02_SimpleSlice_AddSplit(t *testing.T) {
 	})
 }
 
-func Test_03_SimpleSlice_AddIf(t *testing.T) {
+func Test_SimpleSlice_03_SimpleSlice_AddIf_FromS11a(t *testing.T) {
 	safeTest(t, "Test_03_SimpleSlice_AddIf", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -58,7 +58,7 @@ func Test_03_SimpleSlice_AddIf(t *testing.T) {
 	})
 }
 
-func Test_04_SimpleSlice_Adds(t *testing.T) {
+func Test_SimpleSlice_04_SimpleSlice_Adds_FromS11a(t *testing.T) {
 	safeTest(t, "Test_04_SimpleSlice_Adds", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -73,7 +73,7 @@ func Test_04_SimpleSlice_Adds(t *testing.T) {
 	})
 }
 
-func Test_05_SimpleSlice_Adds_Empty(t *testing.T) {
+func Test_SimpleSlice_05_SimpleSlice_Adds_Empty_FromS11a(t *testing.T) {
 	safeTest(t, "Test_05_SimpleSlice_Adds_Empty", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -88,7 +88,7 @@ func Test_05_SimpleSlice_Adds_Empty(t *testing.T) {
 	})
 }
 
-func Test_06_SimpleSlice_Append(t *testing.T) {
+func Test_SimpleSlice_06_SimpleSlice_Append_FromS11a(t *testing.T) {
 	safeTest(t, "Test_06_SimpleSlice_Append", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -103,7 +103,7 @@ func Test_06_SimpleSlice_Append(t *testing.T) {
 	})
 }
 
-func Test_07_SimpleSlice_Append_Empty(t *testing.T) {
+func Test_SimpleSlice_07_SimpleSlice_Append_Empty_FromS11a(t *testing.T) {
 	safeTest(t, "Test_07_SimpleSlice_Append_Empty", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -118,7 +118,7 @@ func Test_07_SimpleSlice_Append_Empty(t *testing.T) {
 	})
 }
 
-func Test_08_SimpleSlice_AppendFmt(t *testing.T) {
+func Test_SimpleSlice_08_SimpleSlice_AppendFmt_FromS11a(t *testing.T) {
 	safeTest(t, "Test_08_SimpleSlice_AppendFmt", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -133,7 +133,7 @@ func Test_08_SimpleSlice_AppendFmt(t *testing.T) {
 	})
 }
 
-func Test_09_SimpleSlice_AppendFmt_EmptySkip(t *testing.T) {
+func Test_SimpleSlice_09_SimpleSlice_AppendFmt_EmptySkip_FromS11a(t *testing.T) {
 	safeTest(t, "Test_09_SimpleSlice_AppendFmt_EmptySkip", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -148,7 +148,7 @@ func Test_09_SimpleSlice_AppendFmt_EmptySkip(t *testing.T) {
 	})
 }
 
-func Test_10_SimpleSlice_AppendFmtIf(t *testing.T) {
+func Test_SimpleSlice_10_SimpleSlice_AppendFmtIf_FromS11a(t *testing.T) {
 	safeTest(t, "Test_10_SimpleSlice_AppendFmtIf", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -164,7 +164,7 @@ func Test_10_SimpleSlice_AppendFmtIf(t *testing.T) {
 	})
 }
 
-func Test_11_SimpleSlice_AppendFmtIf_EmptyFormatSkip(t *testing.T) {
+func Test_SimpleSlice_11_SimpleSlice_AppendFmtIf_EmptyFormatSkip_FromS11a(t *testing.T) {
 	safeTest(t, "Test_11_SimpleSlice_AppendFmtIf_EmptyFormatSkip", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -179,7 +179,7 @@ func Test_11_SimpleSlice_AppendFmtIf_EmptyFormatSkip(t *testing.T) {
 	})
 }
 
-func Test_12_SimpleSlice_AddAsTitleValue(t *testing.T) {
+func Test_SimpleSlice_12_SimpleSlice_AddAsTitleValue_FromS11a(t *testing.T) {
 	safeTest(t, "Test_12_SimpleSlice_AddAsTitleValue", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -194,7 +194,7 @@ func Test_12_SimpleSlice_AddAsTitleValue(t *testing.T) {
 	})
 }
 
-func Test_13_SimpleSlice_AddAsCurlyTitleWrap(t *testing.T) {
+func Test_SimpleSlice_13_SimpleSlice_AddAsCurlyTitleWrap_FromS11a(t *testing.T) {
 	safeTest(t, "Test_13_SimpleSlice_AddAsCurlyTitleWrap", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -209,7 +209,7 @@ func Test_13_SimpleSlice_AddAsCurlyTitleWrap(t *testing.T) {
 	})
 }
 
-func Test_14_SimpleSlice_AddAsCurlyTitleWrapIf(t *testing.T) {
+func Test_SimpleSlice_14_SimpleSlice_AddAsCurlyTitleWrapIf_FromS11a(t *testing.T) {
 	safeTest(t, "Test_14_SimpleSlice_AddAsCurlyTitleWrapIf", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -225,7 +225,7 @@ func Test_14_SimpleSlice_AddAsCurlyTitleWrapIf(t *testing.T) {
 	})
 }
 
-func Test_15_SimpleSlice_AddAsTitleValueIf(t *testing.T) {
+func Test_SimpleSlice_15_SimpleSlice_AddAsTitleValueIf_FromS11a(t *testing.T) {
 	safeTest(t, "Test_15_SimpleSlice_AddAsTitleValueIf", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -241,7 +241,7 @@ func Test_15_SimpleSlice_AddAsTitleValueIf(t *testing.T) {
 	})
 }
 
-func Test_16_SimpleSlice_InsertAt(t *testing.T) {
+func Test_SimpleSlice_16_SimpleSlice_InsertAt_FromS11a(t *testing.T) {
 	safeTest(t, "Test_16_SimpleSlice_InsertAt", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a", "c"})
@@ -256,7 +256,7 @@ func Test_16_SimpleSlice_InsertAt(t *testing.T) {
 	})
 }
 
-func Test_17_SimpleSlice_InsertAt_OutOfRange(t *testing.T) {
+func Test_SimpleSlice_17_SimpleSlice_InsertAt_OutOfRange_FromS11a(t *testing.T) {
 	safeTest(t, "Test_17_SimpleSlice_InsertAt_OutOfRange", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a"})
@@ -272,7 +272,7 @@ func Test_17_SimpleSlice_InsertAt_OutOfRange(t *testing.T) {
 	})
 }
 
-func Test_18_SimpleSlice_AddStruct(t *testing.T) {
+func Test_SimpleSlice_18_SimpleSlice_AddStruct_FromS11a(t *testing.T) {
 	safeTest(t, "Test_18_SimpleSlice_AddStruct", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -288,7 +288,7 @@ func Test_18_SimpleSlice_AddStruct(t *testing.T) {
 	})
 }
 
-func Test_19_SimpleSlice_AddPointer(t *testing.T) {
+func Test_SimpleSlice_19_SimpleSlice_AddPointer_FromS11a(t *testing.T) {
 	safeTest(t, "Test_19_SimpleSlice_AddPointer", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -304,7 +304,7 @@ func Test_19_SimpleSlice_AddPointer(t *testing.T) {
 	})
 }
 
-func Test_20_SimpleSlice_AddsIf(t *testing.T) {
+func Test_SimpleSlice_20_SimpleSlice_AddsIf_FromS11a(t *testing.T) {
 	safeTest(t, "Test_20_SimpleSlice_AddsIf", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -320,7 +320,7 @@ func Test_20_SimpleSlice_AddsIf(t *testing.T) {
 	})
 }
 
-func Test_21_SimpleSlice_AddError(t *testing.T) {
+func Test_SimpleSlice_21_SimpleSlice_AddError_FromS11a(t *testing.T) {
 	safeTest(t, "Test_21_SimpleSlice_AddError", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Cap(5)
@@ -336,7 +336,7 @@ func Test_21_SimpleSlice_AddError(t *testing.T) {
 	})
 }
 
-func Test_22_SimpleSlice_AsDefaultError(t *testing.T) {
+func Test_SimpleSlice_22_SimpleSlice_AsDefaultError_FromS11a(t *testing.T) {
 	safeTest(t, "Test_22_SimpleSlice_AsDefaultError", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"err1", "err2"})
@@ -351,7 +351,7 @@ func Test_22_SimpleSlice_AsDefaultError(t *testing.T) {
 	})
 }
 
-func Test_23_SimpleSlice_AsError_Empty(t *testing.T) {
+func Test_SimpleSlice_23_SimpleSlice_AsError_Empty_FromS11a(t *testing.T) {
 	safeTest(t, "Test_23_SimpleSlice_AsError_Empty", func() {
 		// Arrange
 		ss := corestr.Empty.SimpleSlice()
@@ -366,7 +366,7 @@ func Test_23_SimpleSlice_AsError_Empty(t *testing.T) {
 	})
 }
 
-func Test_24_SimpleSlice_FirstAndLast(t *testing.T) {
+func Test_SimpleSlice_24_SimpleSlice_FirstAndLast_FromS11a(t *testing.T) {
 	safeTest(t, "Test_24_SimpleSlice_FirstAndLast", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a", "b", "c"})
@@ -387,7 +387,7 @@ func Test_24_SimpleSlice_FirstAndLast(t *testing.T) {
 	})
 }
 
-func Test_25_SimpleSlice_FirstOrDefault(t *testing.T) {
+func Test_SimpleSlice_25_SimpleSlice_FirstOrDefault_FromS11a(t *testing.T) {
 	safeTest(t, "Test_25_SimpleSlice_FirstOrDefault", func() {
 		// Arrange
 		ss := corestr.Empty.SimpleSlice()
@@ -406,7 +406,7 @@ func Test_25_SimpleSlice_FirstOrDefault(t *testing.T) {
 	})
 }
 
-func Test_26_SimpleSlice_LastOrDefault(t *testing.T) {
+func Test_SimpleSlice_26_SimpleSlice_LastOrDefault_FromS11a(t *testing.T) {
 	safeTest(t, "Test_26_SimpleSlice_LastOrDefault", func() {
 		// Arrange
 		ss := corestr.Empty.SimpleSlice()
@@ -425,7 +425,7 @@ func Test_26_SimpleSlice_LastOrDefault(t *testing.T) {
 	})
 }
 
-func Test_27_SimpleSlice_Skip(t *testing.T) {
+func Test_SimpleSlice_27_SimpleSlice_Skip_FromS11a(t *testing.T) {
 	safeTest(t, "Test_27_SimpleSlice_Skip", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a", "b", "c"})
@@ -444,7 +444,7 @@ func Test_27_SimpleSlice_Skip(t *testing.T) {
 	})
 }
 
-func Test_28_SimpleSlice_SkipDynamic(t *testing.T) {
+func Test_SimpleSlice_28_SimpleSlice_SkipDynamic_FromS11a(t *testing.T) {
 	safeTest(t, "Test_28_SimpleSlice_SkipDynamic", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a", "b"})
@@ -459,7 +459,7 @@ func Test_28_SimpleSlice_SkipDynamic(t *testing.T) {
 	})
 }
 
-func Test_29_SimpleSlice_Take(t *testing.T) {
+func Test_SimpleSlice_29_SimpleSlice_Take_FromS11a(t *testing.T) {
 	safeTest(t, "Test_29_SimpleSlice_Take", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a", "b", "c"})
@@ -478,7 +478,7 @@ func Test_29_SimpleSlice_Take(t *testing.T) {
 	})
 }
 
-func Test_30_SimpleSlice_TakeDynamic(t *testing.T) {
+func Test_SimpleSlice_30_SimpleSlice_TakeDynamic_FromS11a(t *testing.T) {
 	safeTest(t, "Test_30_SimpleSlice_TakeDynamic", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a", "b"})
@@ -493,7 +493,7 @@ func Test_30_SimpleSlice_TakeDynamic(t *testing.T) {
 	})
 }
 
-func Test_31_SimpleSlice_LimitDynamic(t *testing.T) {
+func Test_SimpleSlice_31_SimpleSlice_LimitDynamic_FromS11a(t *testing.T) {
 	safeTest(t, "Test_31_SimpleSlice_LimitDynamic", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a", "b"})
@@ -508,7 +508,7 @@ func Test_31_SimpleSlice_LimitDynamic(t *testing.T) {
 	})
 }
 
-func Test_32_SimpleSlice_Length_Count(t *testing.T) {
+func Test_SimpleSlice_32_SimpleSlice_Length_Count_FromS11a(t *testing.T) {
 	safeTest(t, "Test_32_SimpleSlice_Length_Count", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a"})
@@ -520,7 +520,7 @@ func Test_32_SimpleSlice_Length_Count(t *testing.T) {
 	})
 }
 
-func Test_33_SimpleSlice_Length_Nil(t *testing.T) {
+func Test_SimpleSlice_33_SimpleSlice_Length_Nil_FromS11a(t *testing.T) {
 	safeTest(t, "Test_33_SimpleSlice_Length_Nil", func() {
 		// Arrange
 		var ss *corestr.SimpleSlice
@@ -532,7 +532,7 @@ func Test_33_SimpleSlice_Length_Nil(t *testing.T) {
 	})
 }
 
-func Test_34_SimpleSlice_CountFunc(t *testing.T) {
+func Test_SimpleSlice_34_SimpleSlice_CountFunc_FromS11a(t *testing.T) {
 	safeTest(t, "Test_34_SimpleSlice_CountFunc", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a", "bb", "ccc"})
@@ -549,7 +549,7 @@ func Test_34_SimpleSlice_CountFunc(t *testing.T) {
 	})
 }
 
-func Test_35_SimpleSlice_CountFunc_Empty(t *testing.T) {
+func Test_SimpleSlice_35_SimpleSlice_CountFunc_Empty_FromS11a(t *testing.T) {
 	safeTest(t, "Test_35_SimpleSlice_CountFunc_Empty", func() {
 		// Arrange
 		ss := corestr.Empty.SimpleSlice()
@@ -564,7 +564,7 @@ func Test_35_SimpleSlice_CountFunc_Empty(t *testing.T) {
 	})
 }
 
-func Test_36_SimpleSlice_IsEmpty(t *testing.T) {
+func Test_SimpleSlice_36_SimpleSlice_IsEmpty_FromS11a(t *testing.T) {
 	safeTest(t, "Test_36_SimpleSlice_IsEmpty", func() {
 		// Act & Assert
 		actual := args.Map{"result": corestr.Empty.SimpleSlice().IsEmpty()}
@@ -573,7 +573,7 @@ func Test_36_SimpleSlice_IsEmpty(t *testing.T) {
 	})
 }
 
-func Test_37_SimpleSlice_IsContains(t *testing.T) {
+func Test_SimpleSlice_37_SimpleSlice_IsContains_FromS11a(t *testing.T) {
 	safeTest(t, "Test_37_SimpleSlice_IsContains", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a", "b"})
@@ -591,7 +591,7 @@ func Test_37_SimpleSlice_IsContains(t *testing.T) {
 	})
 }
 
-func Test_38_SimpleSlice_IsContainsFunc(t *testing.T) {
+func Test_SimpleSlice_38_SimpleSlice_IsContainsFunc_FromS11a(t *testing.T) {
 	safeTest(t, "Test_38_SimpleSlice_IsContainsFunc", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"abc"})
@@ -606,7 +606,7 @@ func Test_38_SimpleSlice_IsContainsFunc(t *testing.T) {
 	})
 }
 
-func Test_39_SimpleSlice_IndexOf(t *testing.T) {
+func Test_SimpleSlice_39_SimpleSlice_IndexOf_FromS11a(t *testing.T) {
 	safeTest(t, "Test_39_SimpleSlice_IndexOf", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a", "b"})
@@ -624,7 +624,7 @@ func Test_39_SimpleSlice_IndexOf(t *testing.T) {
 	})
 }
 
-func Test_40_SimpleSlice_IndexOfFunc(t *testing.T) {
+func Test_SimpleSlice_40_SimpleSlice_IndexOfFunc_FromS11a(t *testing.T) {
 	safeTest(t, "Test_40_SimpleSlice_IndexOfFunc", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"abc", "def"})
@@ -642,7 +642,7 @@ func Test_40_SimpleSlice_IndexOfFunc(t *testing.T) {
 	})
 }
 
-func Test_41_SimpleSlice_HasAnyItem(t *testing.T) {
+func Test_SimpleSlice_41_SimpleSlice_HasAnyItem_FromS11a(t *testing.T) {
 	safeTest(t, "Test_41_SimpleSlice_HasAnyItem", func() {
 		// Act & Assert
 		actual := args.Map{"result": corestr.New.SimpleSlice.Strings([]string{"a"}).HasAnyItem()}
@@ -651,7 +651,7 @@ func Test_41_SimpleSlice_HasAnyItem(t *testing.T) {
 	})
 }
 
-func Test_42_SimpleSlice_LastIndex_HasIndex(t *testing.T) {
+func Test_SimpleSlice_42_SimpleSlice_LastIndex_HasIndex_FromS11a(t *testing.T) {
 	safeTest(t, "Test_42_SimpleSlice_LastIndex_HasIndex", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a", "b"})
@@ -669,7 +669,7 @@ func Test_42_SimpleSlice_LastIndex_HasIndex(t *testing.T) {
 	})
 }
 
-func Test_43_SimpleSlice_Strings_List(t *testing.T) {
+func Test_SimpleSlice_43_SimpleSlice_Strings_List_FromS11a(t *testing.T) {
 	safeTest(t, "Test_43_SimpleSlice_Strings_List", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a"})
@@ -681,7 +681,7 @@ func Test_43_SimpleSlice_Strings_List(t *testing.T) {
 	})
 }
 
-func Test_44_SimpleSlice_WrapDoubleQuote(t *testing.T) {
+func Test_SimpleSlice_44_SimpleSlice_WrapDoubleQuote_FromS11a(t *testing.T) {
 	safeTest(t, "Test_44_SimpleSlice_WrapDoubleQuote", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a"})
@@ -693,7 +693,7 @@ func Test_44_SimpleSlice_WrapDoubleQuote(t *testing.T) {
 	})
 }
 
-func Test_45_SimpleSlice_WrapSingleQuote(t *testing.T) {
+func Test_SimpleSlice_45_SimpleSlice_WrapSingleQuote_FromS11a(t *testing.T) {
 	safeTest(t, "Test_45_SimpleSlice_WrapSingleQuote", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a"})
@@ -707,7 +707,7 @@ func Test_45_SimpleSlice_WrapSingleQuote(t *testing.T) {
 	})
 }
 
-func Test_46_SimpleSlice_WrapTildaQuote(t *testing.T) {
+func Test_SimpleSlice_46_SimpleSlice_WrapTildaQuote_FromS11a(t *testing.T) {
 	safeTest(t, "Test_46_SimpleSlice_WrapTildaQuote", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a"})
@@ -721,7 +721,7 @@ func Test_46_SimpleSlice_WrapTildaQuote(t *testing.T) {
 	})
 }
 
-func Test_47_SimpleSlice_WrapDoubleQuoteIfMissing(t *testing.T) {
+func Test_SimpleSlice_47_SimpleSlice_WrapDoubleQuoteIfMissing_FromS11a(t *testing.T) {
 	safeTest(t, "Test_47_SimpleSlice_WrapDoubleQuoteIfMissing", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a"})
@@ -735,7 +735,7 @@ func Test_47_SimpleSlice_WrapDoubleQuoteIfMissing(t *testing.T) {
 	})
 }
 
-func Test_48_SimpleSlice_WrapSingleQuoteIfMissing(t *testing.T) {
+func Test_SimpleSlice_48_SimpleSlice_WrapSingleQuoteIfMissing_FromS11a(t *testing.T) {
 	safeTest(t, "Test_48_SimpleSlice_WrapSingleQuoteIfMissing", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a"})
@@ -749,7 +749,7 @@ func Test_48_SimpleSlice_WrapSingleQuoteIfMissing(t *testing.T) {
 	})
 }
 
-func Test_49_SimpleSlice_Transpile(t *testing.T) {
+func Test_SimpleSlice_49_SimpleSlice_Transpile_FromS11a(t *testing.T) {
 	safeTest(t, "Test_49_SimpleSlice_Transpile", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a"})
@@ -764,7 +764,7 @@ func Test_49_SimpleSlice_Transpile(t *testing.T) {
 	})
 }
 
-func Test_50_SimpleSlice_Transpile_Empty(t *testing.T) {
+func Test_SimpleSlice_50_SimpleSlice_Transpile_Empty_FromS11a(t *testing.T) {
 	safeTest(t, "Test_50_SimpleSlice_Transpile_Empty", func() {
 		// Arrange
 		ss := corestr.Empty.SimpleSlice()
@@ -779,7 +779,7 @@ func Test_50_SimpleSlice_Transpile_Empty(t *testing.T) {
 	})
 }
 
-func Test_51_SimpleSlice_TranspileJoin(t *testing.T) {
+func Test_SimpleSlice_51_SimpleSlice_TranspileJoin_FromS11a(t *testing.T) {
 	safeTest(t, "Test_51_SimpleSlice_TranspileJoin", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a", "b"})
@@ -794,7 +794,7 @@ func Test_51_SimpleSlice_TranspileJoin(t *testing.T) {
 	})
 }
 
-func Test_52_SimpleSlice_Hashset(t *testing.T) {
+func Test_SimpleSlice_52_SimpleSlice_Hashset_FromS11a(t *testing.T) {
 	safeTest(t, "Test_52_SimpleSlice_Hashset", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a", "b"})
@@ -809,7 +809,7 @@ func Test_52_SimpleSlice_Hashset(t *testing.T) {
 	})
 }
 
-func Test_53_SimpleSlice_Join(t *testing.T) {
+func Test_SimpleSlice_53_SimpleSlice_Join_FromS11a(t *testing.T) {
 	safeTest(t, "Test_53_SimpleSlice_Join", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a", "b"})
@@ -824,7 +824,7 @@ func Test_53_SimpleSlice_Join(t *testing.T) {
 	})
 }
 
-func Test_54_SimpleSlice_JoinLine(t *testing.T) {
+func Test_SimpleSlice_54_SimpleSlice_JoinLine_FromS11a(t *testing.T) {
 	safeTest(t, "Test_54_SimpleSlice_JoinLine", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a"})
@@ -839,7 +839,7 @@ func Test_54_SimpleSlice_JoinLine(t *testing.T) {
 	})
 }
 
-func Test_55_SimpleSlice_JoinLineEofLine(t *testing.T) {
+func Test_SimpleSlice_55_SimpleSlice_JoinLineEofLine_FromS11a(t *testing.T) {
 	safeTest(t, "Test_55_SimpleSlice_JoinLineEofLine", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a"})
@@ -857,7 +857,7 @@ func Test_55_SimpleSlice_JoinLineEofLine(t *testing.T) {
 	})
 }
 
-func Test_56_SimpleSlice_JoinLineEofLine_AlreadyHas(t *testing.T) {
+func Test_SimpleSlice_56_SimpleSlice_JoinLineEofLine_AlreadyHas_FromS11a(t *testing.T) {
 	safeTest(t, "Test_56_SimpleSlice_JoinLineEofLine_AlreadyHas", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a\n"})
@@ -872,7 +872,7 @@ func Test_56_SimpleSlice_JoinLineEofLine_AlreadyHas(t *testing.T) {
 	})
 }
 
-func Test_57_SimpleSlice_JoinSpace(t *testing.T) {
+func Test_SimpleSlice_57_SimpleSlice_JoinSpace_FromS11a(t *testing.T) {
 	safeTest(t, "Test_57_SimpleSlice_JoinSpace", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a", "b"})
@@ -886,7 +886,7 @@ func Test_57_SimpleSlice_JoinSpace(t *testing.T) {
 	})
 }
 
-func Test_58_SimpleSlice_JoinComma(t *testing.T) {
+func Test_SimpleSlice_58_SimpleSlice_JoinComma_FromS11a(t *testing.T) {
 	safeTest(t, "Test_58_SimpleSlice_JoinComma", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a", "b"})
@@ -900,7 +900,7 @@ func Test_58_SimpleSlice_JoinComma(t *testing.T) {
 	})
 }
 
-func Test_59_SimpleSlice_JoinCsv(t *testing.T) {
+func Test_SimpleSlice_59_SimpleSlice_JoinCsv_FromS11a(t *testing.T) {
 	safeTest(t, "Test_59_SimpleSlice_JoinCsv", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a"})
@@ -915,7 +915,7 @@ func Test_59_SimpleSlice_JoinCsv(t *testing.T) {
 	})
 }
 
-func Test_60_SimpleSlice_JoinCsvLine(t *testing.T) {
+func Test_SimpleSlice_60_SimpleSlice_JoinCsvLine_FromS11a(t *testing.T) {
 	safeTest(t, "Test_60_SimpleSlice_JoinCsvLine", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a"})
@@ -929,7 +929,7 @@ func Test_60_SimpleSlice_JoinCsvLine(t *testing.T) {
 	})
 }
 
-func Test_61_SimpleSlice_EachItemSplitBy(t *testing.T) {
+func Test_SimpleSlice_61_SimpleSlice_EachItemSplitBy_FromS11a(t *testing.T) {
 	safeTest(t, "Test_61_SimpleSlice_EachItemSplitBy", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a,b", "c,d"})
@@ -944,7 +944,7 @@ func Test_61_SimpleSlice_EachItemSplitBy(t *testing.T) {
 	})
 }
 
-func Test_62_SimpleSlice_PrependJoin(t *testing.T) {
+func Test_SimpleSlice_62_SimpleSlice_PrependJoin_FromS11a(t *testing.T) {
 	safeTest(t, "Test_62_SimpleSlice_PrependJoin", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"b"})
@@ -959,7 +959,7 @@ func Test_62_SimpleSlice_PrependJoin(t *testing.T) {
 	})
 }
 
-func Test_63_SimpleSlice_AppendJoin(t *testing.T) {
+func Test_SimpleSlice_63_SimpleSlice_AppendJoin_FromS11a(t *testing.T) {
 	safeTest(t, "Test_63_SimpleSlice_AppendJoin", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"a"})
@@ -974,7 +974,7 @@ func Test_63_SimpleSlice_AppendJoin(t *testing.T) {
 	})
 }
 
-func Test_64_SimpleSlice_PrependAppend(t *testing.T) {
+func Test_SimpleSlice_64_SimpleSlice_PrependAppend_FromS11a(t *testing.T) {
 	safeTest(t, "Test_64_SimpleSlice_PrependAppend", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"b"})
@@ -989,7 +989,7 @@ func Test_64_SimpleSlice_PrependAppend(t *testing.T) {
 	})
 }
 
-func Test_65_SimpleSlice_PrependAppend_Empty(t *testing.T) {
+func Test_SimpleSlice_65_SimpleSlice_PrependAppend_Empty_FromS11a(t *testing.T) {
 	safeTest(t, "Test_65_SimpleSlice_PrependAppend_Empty", func() {
 		// Arrange
 		ss := corestr.New.SimpleSlice.Strings([]string{"b"})

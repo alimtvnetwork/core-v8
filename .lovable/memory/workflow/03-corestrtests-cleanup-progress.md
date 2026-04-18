@@ -12,7 +12,7 @@ Phase 2 sub-plan: `spec/01-app/29-corestrtests-phase2-merge-plan.md`
 | Phase | Title | Status |
 |-------|-------|--------|
 | 1 | Strip `_Cov<N>` symbols (38 in `SimpleSlice_Cap_test.go`) | ✅ Done — green on `run.ps1 -tc` |
-| 2 | Remove `S##` / `Seg#` cryptic-prefix files (~27) | 🟡 In progress — Batch 2.1 ✅ green; Batch 2.2 ✅ green; Batch 2.3 ✅ green; Batch 2.4 ✅ code complete (5→10 files, 668 funcs); Batch 2.5 pending |
+| 2 | Remove `S##` / `Seg#` cryptic-prefix files (~27) | 🟡 In progress — Batch 2.1 ✅ green; Batch 2.2 ✅ green; Batch 2.3 ✅ green; Batch 2.4 ✅ green (post import-prune fix); Batch 2.5 ✅ code complete (13→13 files, 1295 funcs) — pending `-tc` |
 | 3 | Resolve initialism prefixes HM/HS/SS/LL/LC/VV/KVP/SSO/CCM/CHM/COC/LR (~13) | ⬜ Not started |
 | 4 | Eliminate vague `_Part/_Core/_Full/_Basic/_Gaps…` suffixes (~60) | ⬜ Not started |
 | 5 | Restore data/logic separation (extract `_testcases.go` siblings) | ⬜ Not started |
@@ -55,9 +55,16 @@ Phase 2 sub-plan: `spec/01-app/29-corestrtests-phase2-merge-plan.md`
 - Tooling: `/tmp/batch24/split.py` (regex-based AST-light splitter with longest-prefix-first matching to disambiguate HSC/HSCDM, HM/HMD); `safeTest("…")` labels rewritten in lockstep.
 - Pending validation: user must run `.\run.ps1 -tc` and confirm `✓ READY TO COMMIT` + `coredata/corestr` ≥ 98.5% before Batch 2.5 starts.
 
+## Phase 2 Batch 2.5 Notes (2026-04-18)
+- 13 source files (Seg7 LL/LC/LR, Seg8 SSO, S08, S08b, S09, S10a, S10b, S11a, S11b, S12, S13), 1,295 functions → 13 type-scoped target files (1:1 mapping; no per-method-family sub-split this round per user direction).
+- Source files removed and replaced by: `LinkedList_AllMethods_FromSeg7_test.go` (88), `LinkedCollections_AllMethods_FromSeg7_test.go` (126), `LeftRight_AllMethods_FromSeg7_test.go` (50), `SimpleStringOnce_AllMethods_FromSeg8_test.go` (99), `Collection_AllMethods_FromS08_test.go` (99), `Collection_AllMethods_FromS08b_test.go` (133), `Hashmap_AllMethods_FromS09_test.go` (154), `Hashset_AllMethods_FromS10a_test.go` (87), `Hashset_AllMethods_FromS10b_test.go` (89), `SimpleSlice_AllMethods_FromS11a_test.go` (65), `SimpleSlice_AllMethods_FromS11b_test.go` (91), `LinkedList_AllMethods_FromS12_test.go` (102), `LinkedCollections_AllMethods_FromS13_test.go` (112).
+- Symbol pattern: `Test_<Type>_<Behaviour>_FromSeg7|Seg8|S08|S08b|S09|S10a|S10b|S11a|S11b|S12|S13`. Zero duplicates verified via `grep | sort | uniq -d` across 206 test files / 14,104 Test funcs.
+- Tooling: `/tmp/batch25_split.py` — single regex-based pass: rename Test_ symbols, rewrite `safeTest("…")` labels, prune unused candidate imports per-file (lesson learned from Batch 2.4).
+- Pending validation: user runs `.\run.ps1 -tc`; on green, Phase 2 closes and Phase 3 (initialism prefixes) begins.
+
 ## Remaining Tasks
-- Batch 2.5: Seg7/Seg8 + remaining S03–S13 splits (files #3–10, #23–26 in the merge plan).
-- Phases 3–7 per master plan.
+- Phase 3: Resolve any leftover initialism-prefixed files (HM/HS/SS/LL/LC/VV/KVP/SSO/CCM/CHM/COC/LR) introduced as targets — most already type-scoped, audit for stragglers.
+- Phases 4–7 per master plan (vague suffixes, data/logic separation, helper consolidation, lint guardrail).
 
 ## Batch 2.4 Post-Verification Fix (2026-04-18)
 
