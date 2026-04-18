@@ -3,6 +3,7 @@
 - #1 : Fix macOS dashboard theme probing so `run.ps1` does not leak OSC 11 terminal escape sequences into the shell
 - #2 : Improve coverage diagnostics by keeping compile-blocked packages out of runtime failure reports
 - #3 : Preserve root cause analysis + fix workflow in memory for future debugging sessions
+- #4 : corestrtests cleanup Phase 1 — strip 38 `_Cov2` symbols from `SimpleSlice_Cap_test.go`, rename to behaviour-describing `Test_<Type>_<Behaviour>` names with descriptive assertion titles
 
 # v1.5.0 : Args, coretestcases, added error stack, Revamp - Redesign, coretest, Add tests, Refactor - Converters, reflectinernal, convertinternal, chmodhelper, codestack
 
