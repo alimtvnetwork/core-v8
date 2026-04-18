@@ -1,6 +1,6 @@
 # corestrtests — Naming, Structure & Assertion Cleanup Plan
 
-## Status: 📋 Proposed — awaiting approval to begin Phase 1
+## Status: 🔄 In Progress — Phase 1 ✅ done, awaiting `run.ps1 -tc` validation before Phase 2
 ## Scope: `tests/integratedtests/corestrtests/` only (211 `.go` files: 180 `_test.go`, 29 `_testcases.go`, 2 helpers)
 
 ---
@@ -85,7 +85,7 @@ Renaming a `Test_…` function or moving it to another file is safe (Go test dis
 
 | Phase | Status | Started | Finished | Coverage delta |
 |-------|--------|---------|----------|----------------|
-| 1 — Strip `_Cov<N>` | ⬜ Not started | — | — | — |
+| 1 — Strip `_Cov<N>` | ✅ Code done — pending `run.ps1 -tc` | 2026-04-18 | 2026-04-18 | expected unchanged (rename only) |
 | 2 — Remove S##/Seg# | ⬜ Not started | — | — | — |
 | 3 — Resolve initialisms | ⬜ Not started | — | — | — |
 | 4 — Vague suffixes | ⬜ Not started | — | — | — |

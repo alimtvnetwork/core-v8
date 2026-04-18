@@ -1,4 +1,4 @@
-# v1.6.0 : macOS runner root-cause fix, PowerShell error attribution cleanup
+# v1.7.0 : macOS runner root-cause fix, PowerShell error attribution cleanup, corestrtests Phase 1
 
 - #1 : Fix macOS dashboard theme probing so `run.ps1` does not leak OSC 11 terminal escape sequences into the shell
 - #2 : Improve coverage diagnostics by keeping compile-blocked packages out of runtime failure reports
