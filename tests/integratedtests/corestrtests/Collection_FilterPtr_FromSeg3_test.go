@@ -3,10 +3,8 @@ package corestrtests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/corejson"
 	"github.com/alimtvnetwork/core/coredata/corestr"
-	"github.com/alimtvnetwork/core/coretests/args"
-)
+	"github.com/alimtvnetwork/core/coretests/args")
 
 // ══════════════════════════════════════════════════════════════════════════════
 // Collection — Segment 3: Filter variants, Hashset, Sort, Contains, Join, CSV,

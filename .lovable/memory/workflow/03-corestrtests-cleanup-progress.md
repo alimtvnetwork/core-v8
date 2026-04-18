@@ -58,3 +58,15 @@ Phase 2 sub-plan: `spec/01-app/29-corestrtests-phase2-merge-plan.md`
 ## Remaining Tasks
 - Batch 2.5: Seg7/Seg8 + remaining S03–S13 splits (files #3–10, #23–26 in the merge plan).
 - Phases 3–7 per master plan.
+
+## Batch 2.4 Post-Verification Fix (2026-04-18)
+
+**Issue**: 15 of the new Batch 2.3/2.4 split files failed compile-check during `.\run.ps1 -tc` split-recovery due to **unused imports** (`errors`, `regexp`, `corejson`, `sync`) inherited from the original Seg source files.
+
+**Root cause**: When splitting Seg1/Seg3/Seg4/Seg5 into smaller per-type files, the full import block was duplicated to every child file even when the new file no longer referenced those packages. The full `corestrtests` package compiled because some other file used them, but the per-file split-recovery surfaced the unused-import errors.
+
+**Fix**: Pruned each file's import block to keep only packages actually referenced in its body (preserved `errors` in `Collection_FromSeg1`, `corejson` in `KeyAnyValuePair_AllMethods_FromSeg1`, `regexp` in `LeftRight_Behaviour_FromSeg1`).
+
+**Files cleaned** (15): AllIndividualsLengthOfSimpleSlices_Behaviour, AllIndividualStringsOfStringsLength_Behaviour, Collection_FilterLock_FromSeg3, Collection_FilterPtr_FromSeg3, Collection_FromSeg1, HashmapDataModel_FromSeg5, HashsetCollection_AllMethods_FromSeg5, KeyAnyValuePair_AllMethods_FromSeg1, KeyValuePair_AllMethods_FromSeg1, LeftMiddleRight_Behaviour_FromSeg1, LeftRight_Behaviour_FromSeg1, SimpleSlice_AddAppend_FromSeg4, SimpleSlice_Mutators_FromSeg4, TextWithLineNumber_FromSeg1, ValueStatus_FromSeg1.
+
+**Lesson**: After every split that produces sub-50-func files, run an automated unused-import prune step before claiming green — the per-file recovery check will catch what the package-level build hides.
