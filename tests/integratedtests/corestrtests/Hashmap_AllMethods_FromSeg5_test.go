@@ -12,7 +12,7 @@ import (
 // Hashmap — Segment 5a
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_Seg5_HM_IsEmpty(t *testing.T) {
+func Test_Hashmap_IsEmpty_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_IsEmpty", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(0)
@@ -32,7 +32,7 @@ func Test_Seg5_HM_IsEmpty(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdate(t *testing.T) {
+func Test_Hashmap_AddOrUpdate_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdate", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -56,7 +56,7 @@ func Test_Seg5_HM_AddOrUpdate(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_Set(t *testing.T) {
+func Test_Hashmap_Set_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Set", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -71,7 +71,7 @@ func Test_Seg5_HM_Set(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_SetTrim(t *testing.T) {
+func Test_Hashmap_SetTrim_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_SetTrim", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -93,7 +93,7 @@ func Test_Seg5_HM_SetTrim(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_SetBySplitter(t *testing.T) {
+func Test_Hashmap_SetBySplitter_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_SetBySplitter", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -115,7 +115,7 @@ func Test_Seg5_HM_SetBySplitter(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_SetBySplitter_NoValue(t *testing.T) {
+func Test_Hashmap_SetBySplitter_NoValue_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_SetBySplitter_NoValue", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -137,7 +137,7 @@ func Test_Seg5_HM_SetBySplitter_NoValue(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateKeyStrValInt(t *testing.T) {
+func Test_Hashmap_AddOrUpdateKeyStrValInt_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateKeyStrValInt", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -153,7 +153,7 @@ func Test_Seg5_HM_AddOrUpdateKeyStrValInt(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateKeyStrValFloat(t *testing.T) {
+func Test_Hashmap_AddOrUpdateKeyStrValFloat_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateKeyStrValFloat", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -169,7 +169,7 @@ func Test_Seg5_HM_AddOrUpdateKeyStrValFloat(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateKeyStrValFloat64(t *testing.T) {
+func Test_Hashmap_AddOrUpdateKeyStrValFloat64_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateKeyStrValFloat64", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -185,7 +185,7 @@ func Test_Seg5_HM_AddOrUpdateKeyStrValFloat64(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateKeyStrValAny(t *testing.T) {
+func Test_Hashmap_AddOrUpdateKeyStrValAny_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateKeyStrValAny", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -201,7 +201,7 @@ func Test_Seg5_HM_AddOrUpdateKeyStrValAny(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateKeyValueAny(t *testing.T) {
+func Test_Hashmap_AddOrUpdateKeyValueAny_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateKeyValueAny", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -217,7 +217,7 @@ func Test_Seg5_HM_AddOrUpdateKeyValueAny(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateKeyVal(t *testing.T) {
+func Test_Hashmap_AddOrUpdateKeyVal_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateKeyVal", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -232,7 +232,7 @@ func Test_Seg5_HM_AddOrUpdateKeyVal(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateWithWgLock(t *testing.T) {
+func Test_Hashmap_AddOrUpdateWithWgLock_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateWithWgLock", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -250,7 +250,7 @@ func Test_Seg5_HM_AddOrUpdateWithWgLock(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateHashmap(t *testing.T) {
+func Test_Hashmap_AddOrUpdateHashmap_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateHashmap", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -268,7 +268,7 @@ func Test_Seg5_HM_AddOrUpdateHashmap(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateHashmap_Nil(t *testing.T) {
+func Test_Hashmap_AddOrUpdateHashmap_Nil_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateHashmap_Nil", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -284,7 +284,7 @@ func Test_Seg5_HM_AddOrUpdateHashmap_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateMap(t *testing.T) {
+func Test_Hashmap_AddOrUpdateMap_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateMap", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -299,7 +299,7 @@ func Test_Seg5_HM_AddOrUpdateMap(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateMap_Empty(t *testing.T) {
+func Test_Hashmap_AddOrUpdateMap_Empty_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateMap_Empty", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -314,7 +314,7 @@ func Test_Seg5_HM_AddOrUpdateMap_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddsOrUpdates(t *testing.T) {
+func Test_Hashmap_AddsOrUpdates_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddsOrUpdates", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -332,7 +332,7 @@ func Test_Seg5_HM_AddsOrUpdates(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddsOrUpdates_Nil(t *testing.T) {
+func Test_Hashmap_AddsOrUpdates_Nil_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddsOrUpdates_Nil", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -347,7 +347,7 @@ func Test_Seg5_HM_AddsOrUpdates_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateKeyAnyValues(t *testing.T) {
+func Test_Hashmap_AddOrUpdateKeyAnyValues_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateKeyAnyValues", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -362,7 +362,7 @@ func Test_Seg5_HM_AddOrUpdateKeyAnyValues(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateKeyAnyValues_Empty(t *testing.T) {
+func Test_Hashmap_AddOrUpdateKeyAnyValues_Empty_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateKeyAnyValues_Empty", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -377,7 +377,7 @@ func Test_Seg5_HM_AddOrUpdateKeyAnyValues_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateKeyValues(t *testing.T) {
+func Test_Hashmap_AddOrUpdateKeyValues_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateKeyValues", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -392,7 +392,7 @@ func Test_Seg5_HM_AddOrUpdateKeyValues(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateKeyValues_Empty(t *testing.T) {
+func Test_Hashmap_AddOrUpdateKeyValues_Empty_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateKeyValues_Empty", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -407,7 +407,7 @@ func Test_Seg5_HM_AddOrUpdateKeyValues_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateCollection(t *testing.T) {
+func Test_Hashmap_AddOrUpdateCollection_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateCollection", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -424,7 +424,7 @@ func Test_Seg5_HM_AddOrUpdateCollection(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateCollection_NilKeys(t *testing.T) {
+func Test_Hashmap_AddOrUpdateCollection_NilKeys_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateCollection_NilKeys", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -439,7 +439,7 @@ func Test_Seg5_HM_AddOrUpdateCollection_NilKeys(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateCollection_LenMismatch(t *testing.T) {
+func Test_Hashmap_AddOrUpdateCollection_LenMismatch_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateCollection_LenMismatch", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -456,7 +456,7 @@ func Test_Seg5_HM_AddOrUpdateCollection_LenMismatch(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateStringsPtrWgLock(t *testing.T) {
+func Test_Hashmap_AddOrUpdateStringsPtrWgLock_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateStringsPtrWgLock", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(4)
@@ -474,7 +474,7 @@ func Test_Seg5_HM_AddOrUpdateStringsPtrWgLock(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddOrUpdateStringsPtrWgLock_Empty(t *testing.T) {
+func Test_Hashmap_AddOrUpdateStringsPtrWgLock_Empty_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateStringsPtrWgLock_Empty", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -494,7 +494,7 @@ func Test_Seg5_HM_AddOrUpdateStringsPtrWgLock_Empty(t *testing.T) {
 
 // ── Has / Contains / Missing ────────────────────────────────────────────────
 
-func Test_Seg5_HM_Has_Contains(t *testing.T) {
+func Test_Hashmap_Has_Contains_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Has_Contains", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -519,7 +519,7 @@ func Test_Seg5_HM_Has_Contains(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_HasLock_ContainsLock(t *testing.T) {
+func Test_Hashmap_HasLock_ContainsLock_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_HasLock_ContainsLock", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -544,7 +544,7 @@ func Test_Seg5_HM_HasLock_ContainsLock(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_HasAllStrings(t *testing.T) {
+func Test_Hashmap_HasAllStrings_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_HasAllStrings", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -566,7 +566,7 @@ func Test_Seg5_HM_HasAllStrings(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_HasAll(t *testing.T) {
+func Test_Hashmap_HasAll_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_HasAll", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -587,7 +587,7 @@ func Test_Seg5_HM_HasAll(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_HasAllCollectionItems(t *testing.T) {
+func Test_Hashmap_HasAllCollectionItems_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_HasAllCollectionItems", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -609,7 +609,7 @@ func Test_Seg5_HM_HasAllCollectionItems(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_HasAny(t *testing.T) {
+func Test_Hashmap_HasAny_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_HasAny", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -630,7 +630,7 @@ func Test_Seg5_HM_HasAny(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_HasAnyItem(t *testing.T) {
+func Test_Hashmap_HasAnyItem_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_HasAnyItem", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -647,7 +647,7 @@ func Test_Seg5_HM_HasAnyItem(t *testing.T) {
 
 // ── Get / GetValue ──────────────────────────────────────────────────────────
 
-func Test_Seg5_HM_Get(t *testing.T) {
+func Test_Hashmap_Get_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Get", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -676,7 +676,7 @@ func Test_Seg5_HM_Get(t *testing.T) {
 
 // ── Items / Keys / Values ───────────────────────────────────────────────────
 
-func Test_Seg5_HM_Items(t *testing.T) {
+func Test_Hashmap_Items_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Items", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -691,7 +691,7 @@ func Test_Seg5_HM_Items(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_SafeItems_Nil(t *testing.T) {
+func Test_Hashmap_SafeItems_Nil_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_SafeItems_Nil", func() {
 		// Arrange
 		var h *corestr.Hashmap
@@ -705,7 +705,7 @@ func Test_Seg5_HM_SafeItems_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_Keys(t *testing.T) {
+func Test_Hashmap_Keys_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Keys", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -726,7 +726,7 @@ func Test_Seg5_HM_Keys(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_KeysCollection(t *testing.T) {
+func Test_Hashmap_KeysCollection_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_KeysCollection", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -741,7 +741,7 @@ func Test_Seg5_HM_KeysCollection(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ValuesList(t *testing.T) {
+func Test_Hashmap_ValuesList_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ValuesList", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -756,7 +756,7 @@ func Test_Seg5_HM_ValuesList(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ValuesCollection(t *testing.T) {
+func Test_Hashmap_ValuesCollection_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ValuesCollection", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -771,7 +771,7 @@ func Test_Seg5_HM_ValuesCollection(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ValuesHashset(t *testing.T) {
+func Test_Hashmap_ValuesHashset_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ValuesHashset", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -786,7 +786,7 @@ func Test_Seg5_HM_ValuesHashset(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_KeysValuesList(t *testing.T) {
+func Test_Hashmap_KeysValuesList_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_KeysValuesList", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -808,7 +808,7 @@ func Test_Seg5_HM_KeysValuesList(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_KeysValuesCollection(t *testing.T) {
+func Test_Hashmap_KeysValuesCollection_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_KeysValuesCollection", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -830,7 +830,7 @@ func Test_Seg5_HM_KeysValuesCollection(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_KeysValuePairs(t *testing.T) {
+func Test_Hashmap_KeysValuePairs_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_KeysValuePairs", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -845,7 +845,7 @@ func Test_Seg5_HM_KeysValuePairs(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_KeysValuePairsCollection(t *testing.T) {
+func Test_Hashmap_KeysValuePairsCollection_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_KeysValuePairsCollection", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -860,7 +860,7 @@ func Test_Seg5_HM_KeysValuePairsCollection(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_KeysLock(t *testing.T) {
+func Test_Hashmap_KeysLock_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_KeysLock", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -875,7 +875,7 @@ func Test_Seg5_HM_KeysLock(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_KeysLock_Empty(t *testing.T) {
+func Test_Hashmap_KeysLock_Empty_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_KeysLock_Empty", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(0)
@@ -889,7 +889,7 @@ func Test_Seg5_HM_KeysLock_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_KeysValuesListLock(t *testing.T) {
+func Test_Hashmap_KeysValuesListLock_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_KeysValuesListLock", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -911,7 +911,7 @@ func Test_Seg5_HM_KeysValuesListLock(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ValuesListCopyLock(t *testing.T) {
+func Test_Hashmap_ValuesListCopyLock_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ValuesListCopyLock", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -926,7 +926,7 @@ func Test_Seg5_HM_ValuesListCopyLock(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ValuesCollectionLock(t *testing.T) {
+func Test_Hashmap_ValuesCollectionLock_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ValuesCollectionLock", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -941,7 +941,7 @@ func Test_Seg5_HM_ValuesCollectionLock(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ValuesHashsetLock(t *testing.T) {
+func Test_Hashmap_ValuesHashsetLock_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ValuesHashsetLock", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -956,7 +956,7 @@ func Test_Seg5_HM_ValuesHashsetLock(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ItemsCopyLock(t *testing.T) {
+func Test_Hashmap_ItemsCopyLock_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ItemsCopyLock", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -974,7 +974,7 @@ func Test_Seg5_HM_ItemsCopyLock(t *testing.T) {
 
 // ── Filter ──────────────────────────────────────────────────────────────────
 
-func Test_Seg5_HM_GetKeysFilteredItems(t *testing.T) {
+func Test_Hashmap_GetKeysFilteredItems_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_GetKeysFilteredItems", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(4)
@@ -993,7 +993,7 @@ func Test_Seg5_HM_GetKeysFilteredItems(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_GetKeysFilteredItems_Empty(t *testing.T) {
+func Test_Hashmap_GetKeysFilteredItems_Empty_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_GetKeysFilteredItems_Empty", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(0)
@@ -1010,7 +1010,7 @@ func Test_Seg5_HM_GetKeysFilteredItems_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_GetKeysFilteredItems_Break(t *testing.T) {
+func Test_Hashmap_GetKeysFilteredItems_Break_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_GetKeysFilteredItems_Break", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(4)
@@ -1030,7 +1030,7 @@ func Test_Seg5_HM_GetKeysFilteredItems_Break(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_GetKeysFilteredCollection(t *testing.T) {
+func Test_Hashmap_GetKeysFilteredCollection_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_GetKeysFilteredCollection", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(4)
@@ -1049,7 +1049,7 @@ func Test_Seg5_HM_GetKeysFilteredCollection(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_GetKeysFilteredCollection_Empty(t *testing.T) {
+func Test_Hashmap_GetKeysFilteredCollection_Empty_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_GetKeysFilteredCollection_Empty", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(0)
@@ -1066,7 +1066,7 @@ func Test_Seg5_HM_GetKeysFilteredCollection_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_GetKeysFilteredCollection_Break(t *testing.T) {
+func Test_Hashmap_GetKeysFilteredCollection_Break_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_GetKeysFilteredCollection_Break", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(4)
@@ -1087,7 +1087,7 @@ func Test_Seg5_HM_GetKeysFilteredCollection_Break(t *testing.T) {
 
 // ── AddsOrUpdatesAnyUsingFilter ─────────────────────────────────────────────
 
-func Test_Seg5_HM_AddsOrUpdatesAnyUsingFilter(t *testing.T) {
+func Test_Hashmap_AddsOrUpdatesAnyUsingFilter_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddsOrUpdatesAnyUsingFilter", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(4)
@@ -1107,7 +1107,7 @@ func Test_Seg5_HM_AddsOrUpdatesAnyUsingFilter(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddsOrUpdatesAnyUsingFilter_Break(t *testing.T) {
+func Test_Hashmap_AddsOrUpdatesAnyUsingFilter_Break_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddsOrUpdatesAnyUsingFilter_Break", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(4)
@@ -1128,7 +1128,7 @@ func Test_Seg5_HM_AddsOrUpdatesAnyUsingFilter_Break(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddsOrUpdatesAnyUsingFilter_Nil(t *testing.T) {
+func Test_Hashmap_AddsOrUpdatesAnyUsingFilter_Nil_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddsOrUpdatesAnyUsingFilter_Nil", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1143,7 +1143,7 @@ func Test_Seg5_HM_AddsOrUpdatesAnyUsingFilter_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddsOrUpdatesAnyUsingFilterLock(t *testing.T) {
+func Test_Hashmap_AddsOrUpdatesAnyUsingFilterLock_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddsOrUpdatesAnyUsingFilterLock", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(4)
@@ -1163,7 +1163,7 @@ func Test_Seg5_HM_AddsOrUpdatesAnyUsingFilterLock(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddsOrUpdatesAnyUsingFilterLock_Break(t *testing.T) {
+func Test_Hashmap_AddsOrUpdatesAnyUsingFilterLock_Break_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddsOrUpdatesAnyUsingFilterLock_Break", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(4)
@@ -1184,7 +1184,7 @@ func Test_Seg5_HM_AddsOrUpdatesAnyUsingFilterLock_Break(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddsOrUpdatesUsingFilter(t *testing.T) {
+func Test_Hashmap_AddsOrUpdatesUsingFilter_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddsOrUpdatesUsingFilter", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(4)
@@ -1204,7 +1204,7 @@ func Test_Seg5_HM_AddsOrUpdatesUsingFilter(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddsOrUpdatesUsingFilter_Nil(t *testing.T) {
+func Test_Hashmap_AddsOrUpdatesUsingFilter_Nil_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddsOrUpdatesUsingFilter_Nil", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1219,7 +1219,7 @@ func Test_Seg5_HM_AddsOrUpdatesUsingFilter_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_AddsOrUpdatesUsingFilter_Break(t *testing.T) {
+func Test_Hashmap_AddsOrUpdatesUsingFilter_Break_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddsOrUpdatesUsingFilter_Break", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(4)
@@ -1242,7 +1242,7 @@ func Test_Seg5_HM_AddsOrUpdatesUsingFilter_Break(t *testing.T) {
 
 // ── Concat ──────────────────────────────────────────────────────────────────
 
-func Test_Seg5_HM_ConcatNew(t *testing.T) {
+func Test_Hashmap_ConcatNew_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ConcatNew", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1260,7 +1260,7 @@ func Test_Seg5_HM_ConcatNew(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ConcatNew_Empty(t *testing.T) {
+func Test_Hashmap_ConcatNew_Empty_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ConcatNew_Empty", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1276,7 +1276,7 @@ func Test_Seg5_HM_ConcatNew_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ConcatNewUsingMaps(t *testing.T) {
+func Test_Hashmap_ConcatNewUsingMaps_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ConcatNewUsingMaps", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1292,7 +1292,7 @@ func Test_Seg5_HM_ConcatNewUsingMaps(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ConcatNewUsingMaps_Empty(t *testing.T) {
+func Test_Hashmap_ConcatNewUsingMaps_Empty_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ConcatNewUsingMaps_Empty", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1310,7 +1310,7 @@ func Test_Seg5_HM_ConcatNewUsingMaps_Empty(t *testing.T) {
 
 // ── Lock variants ───────────────────────────────────────────────────────────
 
-func Test_Seg5_HM_AddOrUpdateLock(t *testing.T) {
+func Test_Hashmap_AddOrUpdateLock_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_AddOrUpdateLock", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1325,7 +1325,7 @@ func Test_Seg5_HM_AddOrUpdateLock(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_IsEmptyLock(t *testing.T) {
+func Test_Hashmap_IsEmptyLock_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_IsEmptyLock", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(0)
@@ -1339,7 +1339,7 @@ func Test_Seg5_HM_IsEmptyLock(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_LengthLock(t *testing.T) {
+func Test_Hashmap_LengthLock_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_LengthLock", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1354,7 +1354,7 @@ func Test_Seg5_HM_LengthLock(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_Length_Nil(t *testing.T) {
+func Test_Hashmap_Length_Nil_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Length_Nil", func() {
 		// Arrange
 		var h *corestr.Hashmap
@@ -1370,7 +1370,7 @@ func Test_Seg5_HM_Length_Nil(t *testing.T) {
 
 // ── IsEqual ─────────────────────────────────────────────────────────────────
 
-func Test_Seg5_HM_IsEqualPtr(t *testing.T) {
+func Test_Hashmap_IsEqualPtr_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_IsEqualPtr", func() {
 		// Arrange
 		h1 := corestr.New.Hashmap.Cap(2)
@@ -1401,7 +1401,7 @@ func Test_Seg5_HM_IsEqualPtr(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_IsEqualPtr_DiffLen(t *testing.T) {
+func Test_Hashmap_IsEqualPtr_DiffLen_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_IsEqualPtr_DiffLen", func() {
 		// Arrange
 		h1 := corestr.New.Hashmap.Cap(2)
@@ -1419,7 +1419,7 @@ func Test_Seg5_HM_IsEqualPtr_DiffLen(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_IsEqualPtr_BothEmpty(t *testing.T) {
+func Test_Hashmap_IsEqualPtr_BothEmpty_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_IsEqualPtr_BothEmpty", func() {
 		// Arrange
 		h1 := corestr.New.Hashmap.Cap(0)
@@ -1434,7 +1434,7 @@ func Test_Seg5_HM_IsEqualPtr_BothEmpty(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_IsEqualPtr_OneEmpty(t *testing.T) {
+func Test_Hashmap_IsEqualPtr_OneEmpty_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_IsEqualPtr_OneEmpty", func() {
 		// Arrange
 		h1 := corestr.New.Hashmap.Cap(2)
@@ -1450,7 +1450,7 @@ func Test_Seg5_HM_IsEqualPtr_OneEmpty(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_IsEqualPtrLock(t *testing.T) {
+func Test_Hashmap_IsEqualPtrLock_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_IsEqualPtrLock", func() {
 		// Arrange
 		h1 := corestr.New.Hashmap.Cap(2)
@@ -1469,7 +1469,7 @@ func Test_Seg5_HM_IsEqualPtrLock(t *testing.T) {
 
 // ── Remove ──────────────────────────────────────────────────────────────────
 
-func Test_Seg5_HM_Remove(t *testing.T) {
+func Test_Hashmap_Remove_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Remove", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1485,7 +1485,7 @@ func Test_Seg5_HM_Remove(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_RemoveWithLock(t *testing.T) {
+func Test_Hashmap_RemoveWithLock_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_RemoveWithLock", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1503,7 +1503,7 @@ func Test_Seg5_HM_RemoveWithLock(t *testing.T) {
 
 // ── String / Join ───────────────────────────────────────────────────────────
 
-func Test_Seg5_HM_String(t *testing.T) {
+func Test_Hashmap_String_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_String", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1518,7 +1518,7 @@ func Test_Seg5_HM_String(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_String_Empty(t *testing.T) {
+func Test_Hashmap_String_Empty_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_String_Empty", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(0)
@@ -1532,7 +1532,7 @@ func Test_Seg5_HM_String_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_StringLock(t *testing.T) {
+func Test_Hashmap_StringLock_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_StringLock", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1547,7 +1547,7 @@ func Test_Seg5_HM_StringLock(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_StringLock_Empty(t *testing.T) {
+func Test_Hashmap_StringLock_Empty_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_StringLock_Empty", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(0)
@@ -1561,7 +1561,7 @@ func Test_Seg5_HM_StringLock_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_Join(t *testing.T) {
+func Test_Hashmap_Join_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Join", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1576,7 +1576,7 @@ func Test_Seg5_HM_Join(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_JoinKeys(t *testing.T) {
+func Test_Hashmap_JoinKeys_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_JoinKeys", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1593,7 +1593,7 @@ func Test_Seg5_HM_JoinKeys(t *testing.T) {
 
 // ── Except ──────────────────────────────────────────────────────────────────
 
-func Test_Seg5_HM_GetValuesExceptKeysInHashset(t *testing.T) {
+func Test_Hashmap_GetValuesExceptKeysInHashset_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_GetValuesExceptKeysInHashset", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(4)
@@ -1611,7 +1611,7 @@ func Test_Seg5_HM_GetValuesExceptKeysInHashset(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_GetValuesExceptKeysInHashset_NilExcept(t *testing.T) {
+func Test_Hashmap_GetValuesExceptKeysInHashset_NilExcept_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_GetValuesExceptKeysInHashset_NilExcept", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1627,7 +1627,7 @@ func Test_Seg5_HM_GetValuesExceptKeysInHashset_NilExcept(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_GetValuesKeysExcept(t *testing.T) {
+func Test_Hashmap_GetValuesKeysExcept_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_GetValuesKeysExcept", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(4)
@@ -1644,7 +1644,7 @@ func Test_Seg5_HM_GetValuesKeysExcept(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_GetValuesKeysExcept_Nil(t *testing.T) {
+func Test_Hashmap_GetValuesKeysExcept_Nil_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_GetValuesKeysExcept_Nil", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1660,7 +1660,7 @@ func Test_Seg5_HM_GetValuesKeysExcept_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_GetAllExceptCollection(t *testing.T) {
+func Test_Hashmap_GetAllExceptCollection_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_GetAllExceptCollection", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(4)
@@ -1678,7 +1678,7 @@ func Test_Seg5_HM_GetAllExceptCollection(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_GetAllExceptCollection_Nil(t *testing.T) {
+func Test_Hashmap_GetAllExceptCollection_Nil_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_GetAllExceptCollection_Nil", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1696,7 +1696,7 @@ func Test_Seg5_HM_GetAllExceptCollection_Nil(t *testing.T) {
 
 // ── KeysToLower / ValuesToLower ─────────────────────────────────────────────
 
-func Test_Seg5_HM_KeysToLower(t *testing.T) {
+func Test_Hashmap_KeysToLower_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_KeysToLower", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1713,7 +1713,7 @@ func Test_Seg5_HM_KeysToLower(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ValuesToLower(t *testing.T) {
+func Test_Hashmap_ValuesToLower_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ValuesToLower", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1732,7 +1732,7 @@ func Test_Seg5_HM_ValuesToLower(t *testing.T) {
 
 // ── Diff ────────────────────────────────────────────────────────────────────
 
-func Test_Seg5_HM_Diff(t *testing.T) {
+func Test_Hashmap_Diff_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Diff", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1752,7 +1752,7 @@ func Test_Seg5_HM_Diff(t *testing.T) {
 
 // ── JSON ────────────────────────────────────────────────────────────────────
 
-func Test_Seg5_HM_Json(t *testing.T) {
+func Test_Hashmap_Json_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Json", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1768,7 +1768,7 @@ func Test_Seg5_HM_Json(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_MarshalJSON(t *testing.T) {
+func Test_Hashmap_MarshalJSON_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_MarshalJSON", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1790,7 +1790,7 @@ func Test_Seg5_HM_MarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_UnmarshalJSON(t *testing.T) {
+func Test_Hashmap_UnmarshalJSON_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_UnmarshalJSON", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(0)
@@ -1811,7 +1811,7 @@ func Test_Seg5_HM_UnmarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_UnmarshalJSON_Invalid(t *testing.T) {
+func Test_Hashmap_UnmarshalJSON_Invalid_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_UnmarshalJSON_Invalid", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(0)
@@ -1826,7 +1826,7 @@ func Test_Seg5_HM_UnmarshalJSON_Invalid(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ParseInjectUsingJson(t *testing.T) {
+func Test_Hashmap_ParseInjectUsingJson_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ParseInjectUsingJson", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1850,7 +1850,7 @@ func Test_Seg5_HM_ParseInjectUsingJson(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ParseInjectUsingJsonMust(t *testing.T) {
+func Test_Hashmap_ParseInjectUsingJsonMust_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ParseInjectUsingJsonMust", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1868,7 +1868,7 @@ func Test_Seg5_HM_ParseInjectUsingJsonMust(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_Serialize(t *testing.T) {
+func Test_Hashmap_Serialize_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Serialize", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1890,7 +1890,7 @@ func Test_Seg5_HM_Serialize(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_Deserialize(t *testing.T) {
+func Test_Hashmap_Deserialize_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Deserialize", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1913,7 +1913,7 @@ func Test_Seg5_HM_Deserialize(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_JsonModel(t *testing.T) {
+func Test_Hashmap_JsonModel_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_JsonModel", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1928,7 +1928,7 @@ func Test_Seg5_HM_JsonModel(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_JsonModelAny(t *testing.T) {
+func Test_Hashmap_JsonModelAny_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_JsonModelAny", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1943,7 +1943,7 @@ func Test_Seg5_HM_JsonModelAny(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_InterfaceCasts(t *testing.T) {
+func Test_Hashmap_InterfaceCasts_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_InterfaceCasts", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1967,7 +1967,7 @@ func Test_Seg5_HM_InterfaceCasts(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_JsonParseSelfInject(t *testing.T) {
+func Test_Hashmap_JsonParseSelfInject_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_JsonParseSelfInject", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -1987,7 +1987,7 @@ func Test_Seg5_HM_JsonParseSelfInject(t *testing.T) {
 
 // ── Error / KeyValStringLines ───────────────────────────────────────────────
 
-func Test_Seg5_HM_ToError(t *testing.T) {
+func Test_Hashmap_ToError_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ToError", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -2003,7 +2003,7 @@ func Test_Seg5_HM_ToError(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ToDefaultError(t *testing.T) {
+func Test_Hashmap_ToDefaultError_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ToDefaultError", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -2019,7 +2019,7 @@ func Test_Seg5_HM_ToDefaultError(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_KeyValStringLines(t *testing.T) {
+func Test_Hashmap_KeyValStringLines_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_KeyValStringLines", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -2034,7 +2034,7 @@ func Test_Seg5_HM_KeyValStringLines(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ToStringsUsingCompiler(t *testing.T) {
+func Test_Hashmap_ToStringsUsingCompiler_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ToStringsUsingCompiler", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -2056,7 +2056,7 @@ func Test_Seg5_HM_ToStringsUsingCompiler(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ToStringsUsingCompiler_Empty(t *testing.T) {
+func Test_Hashmap_ToStringsUsingCompiler_Empty_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ToStringsUsingCompiler_Empty", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(0)
@@ -2073,7 +2073,7 @@ func Test_Seg5_HM_ToStringsUsingCompiler_Empty(t *testing.T) {
 
 // ── Clone / Clear / Dispose ─────────────────────────────────────────────────
 
-func Test_Seg5_HM_Clone(t *testing.T) {
+func Test_Hashmap_Clone_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Clone", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -2089,7 +2089,7 @@ func Test_Seg5_HM_Clone(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_Clone_Empty(t *testing.T) {
+func Test_Hashmap_Clone_Empty_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Clone_Empty", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(0)
@@ -2104,7 +2104,7 @@ func Test_Seg5_HM_Clone_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ClonePtr(t *testing.T) {
+func Test_Hashmap_ClonePtr_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ClonePtr", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -2120,7 +2120,7 @@ func Test_Seg5_HM_ClonePtr(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_ClonePtr_Nil(t *testing.T) {
+func Test_Hashmap_ClonePtr_Nil_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_ClonePtr_Nil", func() {
 		// Arrange
 		var h *corestr.Hashmap
@@ -2134,7 +2134,7 @@ func Test_Seg5_HM_ClonePtr_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_Clear(t *testing.T) {
+func Test_Hashmap_Clear_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Clear", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -2150,7 +2150,7 @@ func Test_Seg5_HM_Clear(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_Clear_Nil(t *testing.T) {
+func Test_Hashmap_Clear_Nil_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Clear_Nil", func() {
 		// Arrange
 		var h *corestr.Hashmap
@@ -2164,7 +2164,7 @@ func Test_Seg5_HM_Clear_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_Dispose(t *testing.T) {
+func Test_Hashmap_Dispose_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Dispose", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -2180,7 +2180,7 @@ func Test_Seg5_HM_Dispose(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_Dispose_Nil(t *testing.T) {
+func Test_Hashmap_Dispose_Nil_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Dispose_Nil", func() {
 		var h *corestr.Hashmap
 		h.Dispose() // should not panic
@@ -2189,7 +2189,7 @@ func Test_Seg5_HM_Dispose_Nil(t *testing.T) {
 
 // ── Collection ──────────────────────────────────────────────────────────────
 
-func Test_Seg5_HM_Collection(t *testing.T) {
+func Test_Hashmap_Collection_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_Collection", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -2208,7 +2208,7 @@ func Test_Seg5_HM_Collection(t *testing.T) {
 // HashmapDataModel
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_Seg5_HM_DataModel(t *testing.T) {
+func Test_Hashmap_DataModel_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_DataModel", func() {
 		// Arrange
 		dm := &corestr.HashmapDataModel{Items: map[string]string{"a": "1"}}
@@ -2223,7 +2223,7 @@ func Test_Seg5_HM_DataModel(t *testing.T) {
 	})
 }
 
-func Test_Seg5_HM_DataModel_Reverse(t *testing.T) {
+func Test_Hashmap_DataModel_Reverse_FromSeg5(t *testing.T) {
 	safeTest(t, "Test_Seg5_HM_DataModel_Reverse", func() {
 		// Arrange
 		h := corestr.New.Hashmap.Cap(2)
@@ -2243,302 +2243,3 @@ func Test_Seg5_HM_DataModel_Reverse(t *testing.T) {
 // HashmapDiff
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_Seg5_HMD_Length(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_Length", func() {
-		// Arrange
-		d := corestr.HashmapDiff(map[string]string{"a": "1"})
-
-		// Act
-		actual := args.Map{
-			"len": d.Length(),
-			"empty": d.IsEmpty(),
-			"hasAny": d.HasAnyItem(),
-			"last": d.LastIndex(),
-		}
-
-		// Assert
-		expected := args.Map{
-			"len": 1,
-			"empty": false,
-			"hasAny": true,
-			"last": 0,
-		}
-		expected.ShouldBeEqual(t, 0, "HashmapDiff -- basic props", actual)
-	})
-}
-
-func Test_Seg5_HMD_Length_Nil(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_Length_Nil", func() {
-		// Arrange
-		var d *corestr.HashmapDiff
-
-		// Act
-		actual := args.Map{"len": d.Length()}
-
-		// Assert
-		expected := args.Map{"len": 0}
-		expected.ShouldBeEqual(t, 0, "HashmapDiff nil -- 0", actual)
-	})
-}
-
-func Test_Seg5_HMD_Raw(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_Raw", func() {
-		// Arrange
-		d := corestr.HashmapDiff(map[string]string{"a": "1"})
-
-		// Act
-		actual := args.Map{"len": len(d.Raw())}
-
-		// Assert
-		expected := args.Map{"len": 1}
-		expected.ShouldBeEqual(t, 0, "HashmapDiff Raw -- 1 item", actual)
-	})
-}
-
-func Test_Seg5_HMD_Raw_Nil(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_Raw_Nil", func() {
-		// Arrange
-		var d *corestr.HashmapDiff
-
-		// Act
-		actual := args.Map{"len": len(d.Raw())}
-
-		// Assert
-		expected := args.Map{"len": 0}
-		expected.ShouldBeEqual(t, 0, "HashmapDiff Raw nil -- empty", actual)
-	})
-}
-
-func Test_Seg5_HMD_MapAnyItems(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_MapAnyItems", func() {
-		// Arrange
-		d := corestr.HashmapDiff(map[string]string{"a": "1"})
-
-		// Act
-		actual := args.Map{"len": len(d.MapAnyItems())}
-
-		// Assert
-		expected := args.Map{"len": 1}
-		expected.ShouldBeEqual(t, 0, "MapAnyItems -- 1 item", actual)
-	})
-}
-
-func Test_Seg5_HMD_MapAnyItems_Nil(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_MapAnyItems_Nil", func() {
-		// Arrange
-		var d *corestr.HashmapDiff
-
-		// Act
-		actual := args.Map{"len": len(d.MapAnyItems())}
-
-		// Assert
-		expected := args.Map{"len": 0}
-		expected.ShouldBeEqual(t, 0, "MapAnyItems nil -- empty", actual)
-	})
-}
-
-func Test_Seg5_HMD_AllKeysSorted(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_AllKeysSorted", func() {
-		// Arrange
-		d := corestr.HashmapDiff(map[string]string{"b": "2", "a": "1"})
-		keys := d.AllKeysSorted()
-
-		// Act
-		actual := args.Map{"first": keys[0]}
-
-		// Assert
-		expected := args.Map{"first": "a"}
-		expected.ShouldBeEqual(t, 0, "AllKeysSorted -- sorted", actual)
-	})
-}
-
-func Test_Seg5_HMD_IsRawEqual(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_IsRawEqual", func() {
-		// Arrange
-		d := corestr.HashmapDiff(map[string]string{"a": "1"})
-
-		// Act
-		actual := args.Map{
-			"eq":  d.IsRawEqual(map[string]string{"a": "1"}),
-			"neq": d.IsRawEqual(map[string]string{"a": "2"}),
-		}
-
-		// Assert
-		expected := args.Map{
-			"eq": true,
-			"neq": false,
-		}
-		expected.ShouldBeEqual(t, 0, "IsRawEqual -- match and mismatch", actual)
-	})
-}
-
-func Test_Seg5_HMD_HasAnyChanges(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_HasAnyChanges", func() {
-		// Arrange
-		d := corestr.HashmapDiff(map[string]string{"a": "1"})
-
-		// Act
-		actual := args.Map{"has": d.HasAnyChanges(map[string]string{"a": "2"})}
-
-		// Assert
-		expected := args.Map{"has": true}
-		expected.ShouldBeEqual(t, 0, "HasAnyChanges -- true", actual)
-	})
-}
-
-func Test_Seg5_HMD_DiffRaw(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_DiffRaw", func() {
-		// Arrange
-		d := corestr.HashmapDiff(map[string]string{"a": "1"})
-		diff := d.DiffRaw(map[string]string{"a": "2"})
-
-		// Act
-		actual := args.Map{"hasItems": len(diff) > 0}
-
-		// Assert
-		expected := args.Map{"hasItems": true}
-		expected.ShouldBeEqual(t, 0, "DiffRaw -- has diff", actual)
-	})
-}
-
-func Test_Seg5_HMD_HashmapDiffUsingRaw(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_HashmapDiffUsingRaw", func() {
-		// Arrange
-		d := corestr.HashmapDiff(map[string]string{"a": "1"})
-		diff := d.HashmapDiffUsingRaw(map[string]string{"a": "2"})
-
-		// Act
-		actual := args.Map{"hasItems": diff.HasAnyItem()}
-
-		// Assert
-		expected := args.Map{"hasItems": true}
-		expected.ShouldBeEqual(t, 0, "HashmapDiffUsingRaw -- has diff", actual)
-	})
-}
-
-func Test_Seg5_HMD_HashmapDiffUsingRaw_NoDiff(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_HashmapDiffUsingRaw_NoDiff", func() {
-		// Arrange
-		d := corestr.HashmapDiff(map[string]string{"a": "1"})
-		diff := d.HashmapDiffUsingRaw(map[string]string{"a": "1"})
-
-		// Act
-		actual := args.Map{"empty": diff.IsEmpty()}
-
-		// Assert
-		expected := args.Map{"empty": true}
-		expected.ShouldBeEqual(t, 0, "HashmapDiffUsingRaw no diff -- empty", actual)
-	})
-}
-
-func Test_Seg5_HMD_DiffJsonMessage(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_DiffJsonMessage", func() {
-		// Arrange
-		d := corestr.HashmapDiff(map[string]string{"a": "1"})
-		msg := d.DiffJsonMessage(map[string]string{"a": "2"})
-
-		// Act
-		actual := args.Map{"nonEmpty": msg != ""}
-
-		// Assert
-		expected := args.Map{"nonEmpty": true}
-		expected.ShouldBeEqual(t, 0, "DiffJsonMessage -- non-empty", actual)
-	})
-}
-
-func Test_Seg5_HMD_ShouldDiffMessage(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_ShouldDiffMessage", func() {
-		// Arrange
-		d := corestr.HashmapDiff(map[string]string{"a": "1"})
-		msg := d.ShouldDiffMessage("test", map[string]string{"a": "2"})
-
-		// Act
-		actual := args.Map{"nonEmpty": msg != ""}
-
-		// Assert
-		expected := args.Map{"nonEmpty": true}
-		expected.ShouldBeEqual(t, 0, "ShouldDiffMessage -- non-empty", actual)
-	})
-}
-
-func Test_Seg5_HMD_LogShouldDiffMessage(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_LogShouldDiffMessage", func() {
-		// Arrange
-		d := corestr.HashmapDiff(map[string]string{"a": "1"})
-		msg := d.LogShouldDiffMessage("test", map[string]string{"a": "2"})
-
-		// Act
-		actual := args.Map{"nonEmpty": msg != ""}
-
-		// Assert
-		expected := args.Map{"nonEmpty": true}
-		expected.ShouldBeEqual(t, 0, "LogShouldDiffMessage -- non-empty", actual)
-	})
-}
-
-func Test_Seg5_HMD_ToStringsSliceOfDiffMap(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_ToStringsSliceOfDiffMap", func() {
-		// Arrange
-		d := corestr.HashmapDiff(map[string]string{"a": "1"})
-		result := d.ToStringsSliceOfDiffMap(map[string]string{"a": "2"})
-
-		// Act
-		actual := args.Map{"hasItems": len(result) > 0}
-
-		// Assert
-		expected := args.Map{"hasItems": true}
-		expected.ShouldBeEqual(t, 0, "ToStringsSliceOfDiffMap -- non-empty", actual)
-	})
-}
-
-func Test_Seg5_HMD_RawMapStringAnyDiff(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_RawMapStringAnyDiff", func() {
-		// Arrange
-		d := corestr.HashmapDiff(map[string]string{"a": "1"})
-		result := d.RawMapStringAnyDiff()
-
-		// Act
-		actual := args.Map{"len": len(result)}
-
-		// Assert
-		expected := args.Map{"len": 1}
-		expected.ShouldBeEqual(t, 0, "RawMapStringAnyDiff -- 1 item", actual)
-	})
-}
-
-func Test_Seg5_HMD_Serialize(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_Serialize", func() {
-		// Arrange
-		d := corestr.HashmapDiff(map[string]string{"a": "1"})
-		b, err := d.Serialize()
-
-		// Act
-		actual := args.Map{
-			"noErr": err == nil,
-			"hasBytes": len(b) > 0,
-		}
-
-		// Assert
-		expected := args.Map{
-			"noErr": true,
-			"hasBytes": true,
-		}
-		expected.ShouldBeEqual(t, 0, "HashmapDiff Serialize -- success", actual)
-	})
-}
-
-func Test_Seg5_HMD_Deserialize(t *testing.T) {
-	safeTest(t, "Test_Seg5_HMD_Deserialize", func() {
-		// Arrange
-		d := corestr.HashmapDiff(map[string]string{"a": "1"})
-		var dest map[string]string
-		err := d.Deserialize(&dest)
-
-		// Act
-		actual := args.Map{"noErr": err == nil}
-
-		// Assert
-		expected := args.Map{"noErr": true}
-		expected.ShouldBeEqual(t, 0, "HashmapDiff Deserialize -- success", actual)
-	})
-}

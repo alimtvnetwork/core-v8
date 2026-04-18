@@ -11,7 +11,7 @@ import (
 // CharCollectionMap — Segment 6a
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_Seg6_CCM_IsEmpty(t *testing.T) {
+func Test_CharCollectionMap_IsEmpty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_IsEmpty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(0, 4)
@@ -31,7 +31,7 @@ func Test_Seg6_CCM_IsEmpty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_Add(t *testing.T) {
+func Test_CharCollectionMap_Add_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_Add", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -52,7 +52,7 @@ func Test_Seg6_CCM_Add(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddLock(t *testing.T) {
+func Test_CharCollectionMap_AddLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddLock", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -67,7 +67,7 @@ func Test_Seg6_CCM_AddLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddStrings(t *testing.T) {
+func Test_CharCollectionMap_AddStrings_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddStrings", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -88,7 +88,7 @@ func Test_Seg6_CCM_AddStrings(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddStrings_Empty(t *testing.T) {
+func Test_CharCollectionMap_AddStrings_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddStrings_Empty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -103,7 +103,7 @@ func Test_Seg6_CCM_AddStrings_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_GetChar(t *testing.T) {
+func Test_CharCollectionMap_GetChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_GetChar", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(0, 4)
@@ -123,7 +123,7 @@ func Test_Seg6_CCM_GetChar(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_Has(t *testing.T) {
+func Test_CharCollectionMap_Has_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_Has", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -144,7 +144,7 @@ func Test_Seg6_CCM_Has(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_Has_Empty(t *testing.T) {
+func Test_CharCollectionMap_Has_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_Has_Empty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(0, 4)
@@ -158,7 +158,7 @@ func Test_Seg6_CCM_Has_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_HasWithCollection(t *testing.T) {
+func Test_CharCollectionMap_HasWithCollection_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HasWithCollection", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -180,7 +180,7 @@ func Test_Seg6_CCM_HasWithCollection(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_HasWithCollection_Miss(t *testing.T) {
+func Test_CharCollectionMap_HasWithCollection_Miss_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HasWithCollection_Miss", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -202,7 +202,7 @@ func Test_Seg6_CCM_HasWithCollection_Miss(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_HasWithCollection_Empty(t *testing.T) {
+func Test_CharCollectionMap_HasWithCollection_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HasWithCollection_Empty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(0, 4)
@@ -223,7 +223,7 @@ func Test_Seg6_CCM_HasWithCollection_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_HasWithCollectionLock(t *testing.T) {
+func Test_CharCollectionMap_HasWithCollectionLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HasWithCollectionLock", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -245,7 +245,7 @@ func Test_Seg6_CCM_HasWithCollectionLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_HasWithCollectionLock_Empty(t *testing.T) {
+func Test_CharCollectionMap_HasWithCollectionLock_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HasWithCollectionLock_Empty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(0, 4)
@@ -266,7 +266,7 @@ func Test_Seg6_CCM_HasWithCollectionLock_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_HasWithCollectionLock_Miss(t *testing.T) {
+func Test_CharCollectionMap_HasWithCollectionLock_Miss_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HasWithCollectionLock_Miss", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -288,7 +288,7 @@ func Test_Seg6_CCM_HasWithCollectionLock_Miss(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_LengthOf(t *testing.T) {
+func Test_CharCollectionMap_LengthOf_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_LengthOf", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -309,7 +309,7 @@ func Test_Seg6_CCM_LengthOf(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_LengthOf_Empty(t *testing.T) {
+func Test_CharCollectionMap_LengthOf_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_LengthOf_Empty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(0, 4)
@@ -323,7 +323,7 @@ func Test_Seg6_CCM_LengthOf_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_LengthOfLock(t *testing.T) {
+func Test_CharCollectionMap_LengthOfLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_LengthOfLock", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -344,7 +344,7 @@ func Test_Seg6_CCM_LengthOfLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_LengthOfLock_Empty(t *testing.T) {
+func Test_CharCollectionMap_LengthOfLock_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_LengthOfLock_Empty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(0, 4)
@@ -358,7 +358,7 @@ func Test_Seg6_CCM_LengthOfLock_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_LengthOfCollectionFromFirstChar(t *testing.T) {
+func Test_CharCollectionMap_LengthOfCollectionFromFirstChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_LengthOfCollectionFromFirstChar", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -379,7 +379,7 @@ func Test_Seg6_CCM_LengthOfCollectionFromFirstChar(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AllLengthsSum(t *testing.T) {
+func Test_CharCollectionMap_AllLengthsSum_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AllLengthsSum", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -394,7 +394,7 @@ func Test_Seg6_CCM_AllLengthsSum(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AllLengthsSumLock(t *testing.T) {
+func Test_CharCollectionMap_AllLengthsSumLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AllLengthsSumLock", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -409,7 +409,7 @@ func Test_Seg6_CCM_AllLengthsSumLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_IsEmptyLock(t *testing.T) {
+func Test_CharCollectionMap_IsEmptyLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_IsEmptyLock", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(0, 4)
@@ -423,7 +423,7 @@ func Test_Seg6_CCM_IsEmptyLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_LengthLock(t *testing.T) {
+func Test_CharCollectionMap_LengthLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_LengthLock", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -438,7 +438,7 @@ func Test_Seg6_CCM_LengthLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_GetMap(t *testing.T) {
+func Test_CharCollectionMap_GetMap_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_GetMap", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -453,7 +453,7 @@ func Test_Seg6_CCM_GetMap(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_GetCopyMapLock(t *testing.T) {
+func Test_CharCollectionMap_GetCopyMapLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_GetCopyMapLock", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -468,7 +468,7 @@ func Test_Seg6_CCM_GetCopyMapLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_GetCopyMapLock_Empty(t *testing.T) {
+func Test_CharCollectionMap_GetCopyMapLock_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_GetCopyMapLock_Empty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(0, 4)
@@ -482,7 +482,7 @@ func Test_Seg6_CCM_GetCopyMapLock_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_List(t *testing.T) {
+func Test_CharCollectionMap_List_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_List", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -497,7 +497,7 @@ func Test_Seg6_CCM_List(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_List_Empty(t *testing.T) {
+func Test_CharCollectionMap_List_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_List_Empty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(0, 4)
@@ -511,7 +511,7 @@ func Test_Seg6_CCM_List_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_ListLock(t *testing.T) {
+func Test_CharCollectionMap_ListLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_ListLock", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -526,7 +526,7 @@ func Test_Seg6_CCM_ListLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_SortedListAsc(t *testing.T) {
+func Test_CharCollectionMap_SortedListAsc_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_SortedListAsc", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -542,7 +542,7 @@ func Test_Seg6_CCM_SortedListAsc(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_SortedListAsc_Empty(t *testing.T) {
+func Test_CharCollectionMap_SortedListAsc_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_SortedListAsc_Empty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(0, 4)
@@ -556,7 +556,7 @@ func Test_Seg6_CCM_SortedListAsc_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_String(t *testing.T) {
+func Test_CharCollectionMap_String_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_String", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -571,7 +571,7 @@ func Test_Seg6_CCM_String(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_StringLock(t *testing.T) {
+func Test_CharCollectionMap_StringLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_StringLock", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -586,7 +586,7 @@ func Test_Seg6_CCM_StringLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_SummaryString(t *testing.T) {
+func Test_CharCollectionMap_SummaryString_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_SummaryString", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -601,7 +601,7 @@ func Test_Seg6_CCM_SummaryString(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_SummaryStringLock(t *testing.T) {
+func Test_CharCollectionMap_SummaryStringLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_SummaryStringLock", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -616,7 +616,7 @@ func Test_Seg6_CCM_SummaryStringLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_Print(t *testing.T) {
+func Test_CharCollectionMap_Print_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_Print", func() {
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
 		ccm.Add("apple")
@@ -625,7 +625,7 @@ func Test_Seg6_CCM_Print(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_PrintLock(t *testing.T) {
+func Test_CharCollectionMap_PrintLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_PrintLock", func() {
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
 		ccm.Add("apple")
@@ -636,7 +636,7 @@ func Test_Seg6_CCM_PrintLock(t *testing.T) {
 
 // ── IsEquals ────────────────────────────────────────────────────────────────
 
-func Test_Seg6_CCM_IsEquals(t *testing.T) {
+func Test_CharCollectionMap_IsEquals_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_IsEquals", func() {
 		// Arrange
 		ccm1 := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -661,7 +661,7 @@ func Test_Seg6_CCM_IsEquals(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_IsEquals_BothEmpty(t *testing.T) {
+func Test_CharCollectionMap_IsEquals_BothEmpty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_IsEquals_BothEmpty", func() {
 		// Arrange
 		ccm1 := corestr.New.CharCollectionMap.CapSelfCap(0, 4)
@@ -676,7 +676,7 @@ func Test_Seg6_CCM_IsEquals_BothEmpty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_IsEquals_OneEmpty(t *testing.T) {
+func Test_CharCollectionMap_IsEquals_OneEmpty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_IsEquals_OneEmpty", func() {
 		// Arrange
 		ccm1 := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -692,7 +692,7 @@ func Test_Seg6_CCM_IsEquals_OneEmpty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_IsEquals_DiffLen(t *testing.T) {
+func Test_CharCollectionMap_IsEquals_DiffLen_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_IsEquals_DiffLen", func() {
 		// Arrange
 		ccm1 := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -709,7 +709,7 @@ func Test_Seg6_CCM_IsEquals_DiffLen(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_IsEquals_DiffItems(t *testing.T) {
+func Test_CharCollectionMap_IsEquals_DiffItems_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_IsEquals_DiffItems", func() {
 		// Arrange
 		ccm1 := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -726,7 +726,7 @@ func Test_Seg6_CCM_IsEquals_DiffItems(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_IsEquals_MissingKey(t *testing.T) {
+func Test_CharCollectionMap_IsEquals_MissingKey_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_IsEquals_MissingKey", func() {
 		// Arrange
 		ccm1 := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -743,7 +743,7 @@ func Test_Seg6_CCM_IsEquals_MissingKey(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_IsEqualsLock(t *testing.T) {
+func Test_CharCollectionMap_IsEqualsLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_IsEqualsLock", func() {
 		// Arrange
 		ccm1 := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -760,7 +760,7 @@ func Test_Seg6_CCM_IsEqualsLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_IsEqualsCaseSensitive(t *testing.T) {
+func Test_CharCollectionMap_IsEqualsCaseSensitive_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_IsEqualsCaseSensitive", func() {
 		// Arrange
 		ccm1 := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -777,7 +777,7 @@ func Test_Seg6_CCM_IsEqualsCaseSensitive(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_IsEqualsCaseSensitiveLock(t *testing.T) {
+func Test_CharCollectionMap_IsEqualsCaseSensitiveLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_IsEqualsCaseSensitiveLock", func() {
 		// Arrange
 		ccm1 := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -796,7 +796,7 @@ func Test_Seg6_CCM_IsEqualsCaseSensitiveLock(t *testing.T) {
 
 // ── AddSameStartingCharItems ────────────────────────────────────────────────
 
-func Test_Seg6_CCM_AddSameStartingCharItems(t *testing.T) {
+func Test_CharCollectionMap_AddSameStartingCharItems_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddSameStartingCharItems", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -811,7 +811,7 @@ func Test_Seg6_CCM_AddSameStartingCharItems(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddSameStartingCharItems_Existing(t *testing.T) {
+func Test_CharCollectionMap_AddSameStartingCharItems_Existing_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddSameStartingCharItems_Existing", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -827,7 +827,7 @@ func Test_Seg6_CCM_AddSameStartingCharItems_Existing(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddSameStartingCharItems_Empty(t *testing.T) {
+func Test_CharCollectionMap_AddSameStartingCharItems_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddSameStartingCharItems_Empty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -844,7 +844,7 @@ func Test_Seg6_CCM_AddSameStartingCharItems_Empty(t *testing.T) {
 
 // ── AddHashmapsValues / AddHashmapsKeysValuesBoth ───────────────────────────
 
-func Test_Seg6_CCM_AddHashmapsValues(t *testing.T) {
+func Test_CharCollectionMap_AddHashmapsValues_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddHashmapsValues", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -861,7 +861,7 @@ func Test_Seg6_CCM_AddHashmapsValues(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddHashmapsValues_Nil(t *testing.T) {
+func Test_CharCollectionMap_AddHashmapsValues_Nil_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddHashmapsValues_Nil", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -876,7 +876,7 @@ func Test_Seg6_CCM_AddHashmapsValues_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddHashmapsKeysValuesBoth(t *testing.T) {
+func Test_CharCollectionMap_AddHashmapsKeysValuesBoth_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddHashmapsKeysValuesBoth", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -893,7 +893,7 @@ func Test_Seg6_CCM_AddHashmapsKeysValuesBoth(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddHashmapsKeysValuesBoth_Nil(t *testing.T) {
+func Test_CharCollectionMap_AddHashmapsKeysValuesBoth_Nil_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddHashmapsKeysValuesBoth_Nil", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -908,7 +908,7 @@ func Test_Seg6_CCM_AddHashmapsKeysValuesBoth_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddHashmapsKeysOrValuesBothUsingFilter(t *testing.T) {
+func Test_CharCollectionMap_AddHashmapsKeysOrValuesBothUsingFilter_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddHashmapsKeysOrValuesBothUsingFilter", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -930,7 +930,7 @@ func Test_Seg6_CCM_AddHashmapsKeysOrValuesBothUsingFilter(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddHashmapsKeysOrValuesBothUsingFilter_Nil(t *testing.T) {
+func Test_CharCollectionMap_AddHashmapsKeysOrValuesBothUsingFilter_Nil_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddHashmapsKeysOrValuesBothUsingFilter_Nil", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -945,7 +945,7 @@ func Test_Seg6_CCM_AddHashmapsKeysOrValuesBothUsingFilter_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddHashmapsKeysOrValuesBothUsingFilter_Break(t *testing.T) {
+func Test_CharCollectionMap_AddHashmapsKeysOrValuesBothUsingFilter_Break_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddHashmapsKeysOrValuesBothUsingFilter_Break", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -970,7 +970,7 @@ func Test_Seg6_CCM_AddHashmapsKeysOrValuesBothUsingFilter_Break(t *testing.T) {
 
 // ── AddCollectionItems / AddCharHashsetMap ──────────────────────────────────
 
-func Test_Seg6_CCM_AddCollectionItems(t *testing.T) {
+func Test_CharCollectionMap_AddCollectionItems_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddCollectionItems", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -986,7 +986,7 @@ func Test_Seg6_CCM_AddCollectionItems(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddCollectionItems_Nil(t *testing.T) {
+func Test_CharCollectionMap_AddCollectionItems_Nil_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddCollectionItems_Nil", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1001,7 +1001,7 @@ func Test_Seg6_CCM_AddCollectionItems_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddCharHashsetMap(t *testing.T) {
+func Test_CharCollectionMap_AddCharHashsetMap_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddCharHashsetMap", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1018,7 +1018,7 @@ func Test_Seg6_CCM_AddCharHashsetMap(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddCharHashsetMap_Empty(t *testing.T) {
+func Test_CharCollectionMap_AddCharHashsetMap_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddCharHashsetMap_Empty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1036,7 +1036,7 @@ func Test_Seg6_CCM_AddCharHashsetMap_Empty(t *testing.T) {
 
 // ── GetCollection / GetCollectionLock ────────────────────────────────────────
 
-func Test_Seg6_CCM_GetCollection(t *testing.T) {
+func Test_CharCollectionMap_GetCollection_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_GetCollection", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1052,7 +1052,7 @@ func Test_Seg6_CCM_GetCollection(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_GetCollection_AddNew(t *testing.T) {
+func Test_CharCollectionMap_GetCollection_AddNew_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_GetCollection_AddNew", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1067,7 +1067,7 @@ func Test_Seg6_CCM_GetCollection_AddNew(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_GetCollection_Miss(t *testing.T) {
+func Test_CharCollectionMap_GetCollection_Miss_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_GetCollection_Miss", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1082,7 +1082,7 @@ func Test_Seg6_CCM_GetCollection_Miss(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_GetCollectionLock(t *testing.T) {
+func Test_CharCollectionMap_GetCollectionLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_GetCollectionLock", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1098,7 +1098,7 @@ func Test_Seg6_CCM_GetCollectionLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_GetCollectionByChar(t *testing.T) {
+func Test_CharCollectionMap_GetCollectionByChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_GetCollectionByChar", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1115,7 +1115,7 @@ func Test_Seg6_CCM_GetCollectionByChar(t *testing.T) {
 
 // ── AddSameCharsCollection ──────────────────────────────────────────────────
 
-func Test_Seg6_CCM_AddSameCharsCollection_Existing(t *testing.T) {
+func Test_CharCollectionMap_AddSameCharsCollection_Existing_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddSameCharsCollection_Existing", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1132,7 +1132,7 @@ func Test_Seg6_CCM_AddSameCharsCollection_Existing(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddSameCharsCollection_NilCollection(t *testing.T) {
+func Test_CharCollectionMap_AddSameCharsCollection_NilCollection_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddSameCharsCollection_NilCollection", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1148,7 +1148,7 @@ func Test_Seg6_CCM_AddSameCharsCollection_NilCollection(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddSameCharsCollection_NewChar(t *testing.T) {
+func Test_CharCollectionMap_AddSameCharsCollection_NewChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddSameCharsCollection_NewChar", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1164,7 +1164,7 @@ func Test_Seg6_CCM_AddSameCharsCollection_NewChar(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddSameCharsCollection_NewCharNilColl(t *testing.T) {
+func Test_CharCollectionMap_AddSameCharsCollection_NewCharNilColl_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddSameCharsCollection_NewCharNilColl", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1179,7 +1179,7 @@ func Test_Seg6_CCM_AddSameCharsCollection_NewCharNilColl(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddSameCharsCollectionLock(t *testing.T) {
+func Test_CharCollectionMap_AddSameCharsCollectionLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddSameCharsCollectionLock", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1196,7 +1196,7 @@ func Test_Seg6_CCM_AddSameCharsCollectionLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddSameCharsCollectionLock_NewCharNil(t *testing.T) {
+func Test_CharCollectionMap_AddSameCharsCollectionLock_NewCharNil_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddSameCharsCollectionLock_NewCharNil", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1211,7 +1211,7 @@ func Test_Seg6_CCM_AddSameCharsCollectionLock_NewCharNil(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddSameCharsCollectionLock_NewChar(t *testing.T) {
+func Test_CharCollectionMap_AddSameCharsCollectionLock_NewChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddSameCharsCollectionLock_NewChar", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1227,7 +1227,7 @@ func Test_Seg6_CCM_AddSameCharsCollectionLock_NewChar(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddSameCharsCollectionLock_ExistingNil(t *testing.T) {
+func Test_CharCollectionMap_AddSameCharsCollectionLock_ExistingNil_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddSameCharsCollectionLock_ExistingNil", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1245,7 +1245,7 @@ func Test_Seg6_CCM_AddSameCharsCollectionLock_ExistingNil(t *testing.T) {
 
 // ── Hashset conversions ─────────────────────────────────────────────────────
 
-func Test_Seg6_CCM_HashsetByChar(t *testing.T) {
+func Test_CharCollectionMap_HashsetByChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HashsetByChar", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1267,7 +1267,7 @@ func Test_Seg6_CCM_HashsetByChar(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_HashsetByChar_Miss(t *testing.T) {
+func Test_CharCollectionMap_HashsetByChar_Miss_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HashsetByChar_Miss", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1281,7 +1281,7 @@ func Test_Seg6_CCM_HashsetByChar_Miss(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_HashsetByCharLock(t *testing.T) {
+func Test_CharCollectionMap_HashsetByCharLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HashsetByCharLock", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1297,7 +1297,7 @@ func Test_Seg6_CCM_HashsetByCharLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_HashsetByCharLock_Miss(t *testing.T) {
+func Test_CharCollectionMap_HashsetByCharLock_Miss_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HashsetByCharLock_Miss", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1312,7 +1312,7 @@ func Test_Seg6_CCM_HashsetByCharLock_Miss(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_HashsetByStringFirstChar(t *testing.T) {
+func Test_CharCollectionMap_HashsetByStringFirstChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HashsetByStringFirstChar", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1328,7 +1328,7 @@ func Test_Seg6_CCM_HashsetByStringFirstChar(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_HashsetByStringFirstCharLock(t *testing.T) {
+func Test_CharCollectionMap_HashsetByStringFirstCharLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HashsetByStringFirstCharLock", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1344,7 +1344,7 @@ func Test_Seg6_CCM_HashsetByStringFirstCharLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_HashsetsCollection(t *testing.T) {
+func Test_CharCollectionMap_HashsetsCollection_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HashsetsCollection", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1360,7 +1360,7 @@ func Test_Seg6_CCM_HashsetsCollection(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_HashsetsCollection_Empty(t *testing.T) {
+func Test_CharCollectionMap_HashsetsCollection_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HashsetsCollection_Empty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(0, 4)
@@ -1375,7 +1375,7 @@ func Test_Seg6_CCM_HashsetsCollection_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_HashsetsCollectionByChars(t *testing.T) {
+func Test_CharCollectionMap_HashsetsCollectionByChars_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HashsetsCollectionByChars", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1391,7 +1391,7 @@ func Test_Seg6_CCM_HashsetsCollectionByChars(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_HashsetsCollectionByChars_Empty(t *testing.T) {
+func Test_CharCollectionMap_HashsetsCollectionByChars_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HashsetsCollectionByChars_Empty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(0, 4)
@@ -1406,7 +1406,7 @@ func Test_Seg6_CCM_HashsetsCollectionByChars_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_HashsetsCollectionByStringFirstChar(t *testing.T) {
+func Test_CharCollectionMap_HashsetsCollectionByStringFirstChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HashsetsCollectionByStringFirstChar", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1422,7 +1422,7 @@ func Test_Seg6_CCM_HashsetsCollectionByStringFirstChar(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_HashsetsCollectionByStringFirstChar_Empty(t *testing.T) {
+func Test_CharCollectionMap_HashsetsCollectionByStringFirstChar_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_HashsetsCollectionByStringFirstChar_Empty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(0, 4)
@@ -1439,7 +1439,7 @@ func Test_Seg6_CCM_HashsetsCollectionByStringFirstChar_Empty(t *testing.T) {
 
 // ── GetCharsGroups ──────────────────────────────────────────────────────────
 
-func Test_Seg6_CCM_GetCharsGroups(t *testing.T) {
+func Test_CharCollectionMap_GetCharsGroups_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_GetCharsGroups", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1454,7 +1454,7 @@ func Test_Seg6_CCM_GetCharsGroups(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_GetCharsGroups_Empty(t *testing.T) {
+func Test_CharCollectionMap_GetCharsGroups_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_GetCharsGroups_Empty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1471,7 +1471,7 @@ func Test_Seg6_CCM_GetCharsGroups_Empty(t *testing.T) {
 
 // ── Resize / AddLength ──────────────────────────────────────────────────────
 
-func Test_Seg6_CCM_Resize(t *testing.T) {
+func Test_CharCollectionMap_Resize_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_Resize", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(2, 4)
@@ -1487,7 +1487,7 @@ func Test_Seg6_CCM_Resize(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_Resize_SmallerThanLen(t *testing.T) {
+func Test_CharCollectionMap_Resize_SmallerThanLen_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_Resize_SmallerThanLen", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1503,7 +1503,7 @@ func Test_Seg6_CCM_Resize_SmallerThanLen(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddLength(t *testing.T) {
+func Test_CharCollectionMap_AddLength_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddLength", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(2, 4)
@@ -1519,7 +1519,7 @@ func Test_Seg6_CCM_AddLength(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_AddLength_Empty(t *testing.T) {
+func Test_CharCollectionMap_AddLength_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_AddLength_Empty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(2, 4)
@@ -1536,7 +1536,7 @@ func Test_Seg6_CCM_AddLength_Empty(t *testing.T) {
 
 // ── JSON ────────────────────────────────────────────────────────────────────
 
-func Test_Seg6_CCM_Json(t *testing.T) {
+func Test_CharCollectionMap_Json_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_Json", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1552,7 +1552,7 @@ func Test_Seg6_CCM_Json(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_MarshalJSON(t *testing.T) {
+func Test_CharCollectionMap_MarshalJSON_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_MarshalJSON", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1574,7 +1574,7 @@ func Test_Seg6_CCM_MarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_UnmarshalJSON(t *testing.T) {
+func Test_CharCollectionMap_UnmarshalJSON_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_UnmarshalJSON", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1592,7 +1592,7 @@ func Test_Seg6_CCM_UnmarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_UnmarshalJSON_Invalid(t *testing.T) {
+func Test_CharCollectionMap_UnmarshalJSON_Invalid_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_UnmarshalJSON_Invalid", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(0, 4)
@@ -1607,7 +1607,7 @@ func Test_Seg6_CCM_UnmarshalJSON_Invalid(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_JsonModel(t *testing.T) {
+func Test_CharCollectionMap_JsonModel_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_JsonModel", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1622,7 +1622,7 @@ func Test_Seg6_CCM_JsonModel(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_JsonModelAny(t *testing.T) {
+func Test_CharCollectionMap_JsonModelAny_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_JsonModelAny", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1636,7 +1636,7 @@ func Test_Seg6_CCM_JsonModelAny(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_InterfaceCasts(t *testing.T) {
+func Test_CharCollectionMap_InterfaceCasts_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_InterfaceCasts", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1660,7 +1660,7 @@ func Test_Seg6_CCM_InterfaceCasts(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_ParseInjectUsingJson(t *testing.T) {
+func Test_CharCollectionMap_ParseInjectUsingJson_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_ParseInjectUsingJson", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1678,7 +1678,7 @@ func Test_Seg6_CCM_ParseInjectUsingJson(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_ParseInjectUsingJsonMust(t *testing.T) {
+func Test_CharCollectionMap_ParseInjectUsingJsonMust_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_ParseInjectUsingJsonMust", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1696,7 +1696,7 @@ func Test_Seg6_CCM_ParseInjectUsingJsonMust(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_JsonParseSelfInject(t *testing.T) {
+func Test_CharCollectionMap_JsonParseSelfInject_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_JsonParseSelfInject", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1716,7 +1716,7 @@ func Test_Seg6_CCM_JsonParseSelfInject(t *testing.T) {
 
 // ── Clear / Dispose ─────────────────────────────────────────────────────────
 
-func Test_Seg6_CCM_Clear(t *testing.T) {
+func Test_CharCollectionMap_Clear_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_Clear", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1732,7 +1732,7 @@ func Test_Seg6_CCM_Clear(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_Clear_Empty(t *testing.T) {
+func Test_CharCollectionMap_Clear_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_Clear_Empty", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(0, 4)
@@ -1747,7 +1747,7 @@ func Test_Seg6_CCM_Clear_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_Dispose(t *testing.T) {
+func Test_CharCollectionMap_Dispose_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_Dispose", func() {
 		// Arrange
 		ccm := corestr.New.CharCollectionMap.CapSelfCap(4, 4)
@@ -1763,7 +1763,7 @@ func Test_Seg6_CCM_Dispose(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CCM_Dispose_Nil(t *testing.T) {
+func Test_CharCollectionMap_Dispose_Nil_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CCM_Dispose_Nil", func() {
 		var ccm *corestr.CharCollectionMap
 		ccm.Dispose() // should not panic

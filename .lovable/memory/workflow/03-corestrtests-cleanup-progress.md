@@ -12,7 +12,7 @@ Phase 2 sub-plan: `spec/01-app/29-corestrtests-phase2-merge-plan.md`
 | Phase | Title | Status |
 |-------|-------|--------|
 | 1 | Strip `_Cov<N>` symbols (38 in `SimpleSlice_Cap_test.go`) | ✅ Done — green on `run.ps1 -tc` |
-| 2 | Remove `S##` / `Seg#` cryptic-prefix files (~27) | 🟡 In progress — Batch 2.1 ✅ green; Batch 2.2 ✅ green; Batch 2.3 ✅ code complete (4→18 files, 455 funcs); Batches 2.4–2.5 pending |
+| 2 | Remove `S##` / `Seg#` cryptic-prefix files (~27) | 🟡 In progress — Batch 2.1 ✅ green; Batch 2.2 ✅ green; Batch 2.3 ✅ green; Batch 2.4 ✅ code complete (5→10 files, 668 funcs); Batch 2.5 pending |
 | 3 | Resolve initialism prefixes HM/HS/SS/LL/LC/VV/KVP/SSO/CCM/CHM/COC/LR (~13) | ⬜ Not started |
 | 4 | Eliminate vague `_Part/_Core/_Full/_Basic/_Gaps…` suffixes (~60) | ⬜ Not started |
 | 5 | Restore data/logic separation (extract `_testcases.go` siblings) | ⬜ Not started |
@@ -45,7 +45,16 @@ Phase 2 sub-plan: `spec/01-app/29-corestrtests-phase2-merge-plan.md`
 - Tooling: `/tmp/batch23/split.py` (regex-based AST-light splitter with per-Seg routing rules); `safeTest("…")` labels rewritten in lockstep.
 - Pending validation: user must run `.\run.ps1 -tc` and confirm `✓ READY TO COMMIT` + `coredata/corestr` ≥ 98.5% before Batch 2.4 starts.
 
+## Phase 2 Batch 2.4 Notes (2026-04-18)
+- 5 source files (Seg5_HM, Seg5_HS, Seg6_CCM, Seg6_CHM, Seg6_COC), 668 functions → 10 type-scoped target files (8 created, 2 appended).
+- Buckets discovered beyond plan: Seg5 had **HMD** (HashmapDataModel, 19) and **HSCDM** (HashsetCollectionDataModel, 2 — folded into HashsetCollection file). Seg6 COC had 4 sub-buckets (COC 27, KVC 62, KAVP 17, KVP 20).
+- Source files removed: `Seg5_HM_Seg5_Hashmap_test.go` (145), `Seg5_HS_Seg5_Hashset_test.go` (188), `Seg6_CCM_Seg6_CharCollectionMap_test.go` (105), `Seg6_CHM_Seg6_CharHashsetMap_test.go` (104), `Seg6_COC_Seg6_CollOfColl_KV_test.go` (126).
+- Target files created: `Hashmap_AllMethods_FromSeg5_test.go` (126), `HashmapDataModel_FromSeg5_test.go` (19), `Hashset_AllMethods_FromSeg5_test.go` (147), `HashsetCollection_AllMethods_FromSeg5_test.go` (41 = HSC 39 + HSCDM 2), `CharCollectionMap_AllMethods_FromSeg6_test.go` (105), `CharHashsetMap_AllMethods_FromSeg6_test.go` (104), `CollectionOfCollections_AllMethods_FromSeg6_test.go` (27), `KeyValueCollection_AllMethods_FromSeg6_test.go` (62).
+- Appended: 17 KAVP funcs → `KeyAnyValuePair_AllMethods_FromSeg1_test.go` (now 34); 20 KVP funcs → `KeyValuePair_AllMethods_FromSeg1_test.go` (now 37).
+- Symbol pattern: `Test_<Type>_<Behaviour>_FromSeg5|Seg6`. Zero duplicates verified via `grep | sort | uniq -d`.
+- Tooling: `/tmp/batch24/split.py` (regex-based AST-light splitter with longest-prefix-first matching to disambiguate HSC/HSCDM, HM/HMD); `safeTest("…")` labels rewritten in lockstep.
+- Pending validation: user must run `.\run.ps1 -tc` and confirm `✓ READY TO COMMIT` + `coredata/corestr` ≥ 98.5% before Batch 2.5 starts.
+
 ## Remaining Tasks
-- Batch 2.4: Seg5/Seg6 splits (~120 funcs, files #18–22).
-- Batch 2.5: Seg7/Seg8 + remaining S03–S13 splits (files #3–10, #23–26).
+- Batch 2.5: Seg7/Seg8 + remaining S03–S13 splits (files #3–10, #23–26 in the merge plan).
 - Phases 3–7 per master plan.

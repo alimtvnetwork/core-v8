@@ -307,3 +307,297 @@ func Test_KAVP_NilIsValueNull_FromSeg1(t *testing.T) {
 	})
 }
 
+
+// --- Appended from Seg6 (Batch 2.4) ---
+
+func Test_KeyAnyValuePair_Basic_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KAVP_Basic", func() {
+		// Arrange
+		kv := corestr.KeyAnyValuePair{Key: "name", Value: "hello"}
+
+		// Act
+		actual := args.Map{
+			"key":     kv.KeyName(),
+			"varName": kv.VariableName(),
+			"valAny":  kv.ValueAny() != nil,
+			"isEqual": kv.IsVariableNameEqual("name"),
+			"notEq":   kv.IsVariableNameEqual("other"),
+		}
+
+		// Assert
+		expected := args.Map{
+			"key": "name",
+			"varName": "name",
+			"valAny": true,
+			"isEqual": true,
+			"notEq": false,
+		}
+		expected.ShouldBeEqual(t, 0, "Basic accessors -- correct", actual)
+	})
+}
+
+func Test_KeyAnyValuePair_ValueChecks_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KAVP_ValueChecks", func() {
+		// Arrange
+		kv := corestr.KeyAnyValuePair{Key: "k", Value: "hello"}
+		kvNil := corestr.KeyAnyValuePair{Key: "k", Value: nil}
+
+		// Act
+		actual := args.Map{
+			"hasVal":        kv.HasValue(),
+			"hasNonNull":    kv.HasNonNull(),
+			"isNull":        kv.IsValueNull(),
+			"nilIsNull":     kvNil.IsValueNull(),
+			"nilHasVal":     kvNil.HasValue(),
+			"emptyStr":      kv.IsValueEmptyString(),
+			"whitespace":    kv.IsValueWhitespace(),
+			"nilEmptyStr":   kvNil.IsValueEmptyString(),
+			"nilWhitespace": kvNil.IsValueWhitespace(),
+		}
+
+		// Assert
+		expected := args.Map{
+			"hasVal": true, "hasNonNull": true, "isNull": false,
+			"nilIsNull": true, "nilHasVal": false,
+			"emptyStr": false, "whitespace": false,
+			"nilEmptyStr": true, "nilWhitespace": true,
+		}
+		expected.ShouldBeEqual(t, 0, "Value checks -- correct", actual)
+	})
+}
+
+func Test_KeyAnyValuePair_ValueString_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KAVP_ValueString", func() {
+		// Arrange
+		kv := corestr.KeyAnyValuePair{Key: "k", Value: 42}
+
+		// Act
+		actual := args.Map{"val": kv.ValueString()}
+
+		// Assert
+		expected := args.Map{"val": "42"}
+		expected.ShouldBeEqual(t, 0, "ValueString -- formatted", actual)
+	})
+}
+
+func Test_KeyAnyValuePair_ValueString_Cached_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KAVP_ValueString_Cached", func() {
+		// Arrange
+		kv := corestr.KeyAnyValuePair{Key: "k", Value: 42}
+		_ = kv.ValueString() // init
+
+		// Act
+		actual := args.Map{"val": kv.ValueString()}
+
+		// Assert
+		expected := args.Map{"val": "42"}
+		expected.ShouldBeEqual(t, 0, "ValueString cached -- same value", actual)
+	})
+}
+
+func Test_KeyAnyValuePair_String_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KAVP_String", func() {
+		// Arrange
+		kv := corestr.KeyAnyValuePair{Key: "k", Value: "v"}
+
+		// Act
+		actual := args.Map{"nonEmpty": kv.String() != ""}
+
+		// Assert
+		expected := args.Map{"nonEmpty": true}
+		expected.ShouldBeEqual(t, 0, "String -- non-empty", actual)
+	})
+}
+
+func Test_KeyAnyValuePair_Compile_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KAVP_Compile", func() {
+		// Arrange
+		kv := corestr.KeyAnyValuePair{Key: "k", Value: "v"}
+
+		// Act
+		actual := args.Map{"nonEmpty": kv.Compile() != ""}
+
+		// Assert
+		expected := args.Map{"nonEmpty": true}
+		expected.ShouldBeEqual(t, 0, "Compile -- delegates to String", actual)
+	})
+}
+
+func Test_KeyAnyValuePair_SerializeMust_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KAVP_SerializeMust", func() {
+		// Arrange
+		kv := corestr.KeyAnyValuePair{Key: "k", Value: "v"}
+		b := kv.SerializeMust()
+
+		// Act
+		actual := args.Map{"hasBytes": len(b) > 0}
+
+		// Assert
+		expected := args.Map{"hasBytes": true}
+		expected.ShouldBeEqual(t, 0, "SerializeMust -- success", actual)
+	})
+}
+
+func Test_KeyAnyValuePair_Serialize_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KAVP_Serialize", func() {
+		// Arrange
+		kv := corestr.KeyAnyValuePair{Key: "k", Value: "v"}
+		b, err := kv.Serialize()
+
+		// Act
+		actual := args.Map{
+			"noErr": err == nil,
+			"hasBytes": len(b) > 0,
+		}
+
+		// Assert
+		expected := args.Map{
+			"noErr": true,
+			"hasBytes": true,
+		}
+		expected.ShouldBeEqual(t, 0, "Serialize -- success", actual)
+	})
+}
+
+func Test_KeyAnyValuePair_Json_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KAVP_Json", func() {
+		// Arrange
+		kv := corestr.KeyAnyValuePair{Key: "k", Value: "v"}
+		j := kv.Json()
+
+		// Act
+		actual := args.Map{"noErr": !j.HasError()}
+
+		// Assert
+		expected := args.Map{"noErr": true}
+		expected.ShouldBeEqual(t, 0, "Json -- no error", actual)
+	})
+}
+
+func Test_KeyAnyValuePair_InterfaceCasts_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KAVP_InterfaceCasts", func() {
+		// Arrange
+		kv := &corestr.KeyAnyValuePair{Key: "k", Value: "v"}
+
+		// Act
+		actual := args.Map{
+			"jsoner":   kv.AsJsoner() != nil,
+			"binder":   kv.AsJsonContractsBinder() != nil,
+			"injector": kv.AsJsonParseSelfInjector() != nil,
+		}
+
+		// Assert
+		expected := args.Map{
+			"jsoner": true,
+			"binder": true,
+			"injector": true,
+		}
+		expected.ShouldBeEqual(t, 0, "Interface casts -- all non-nil", actual)
+	})
+}
+
+func Test_KeyAnyValuePair_ParseInjectUsingJson_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KAVP_ParseInjectUsingJson", func() {
+		// Arrange
+		kv := corestr.KeyAnyValuePair{Key: "k", Value: "v"}
+		jr := kv.JsonPtr()
+		kv2 := &corestr.KeyAnyValuePair{}
+		_, err := kv2.ParseInjectUsingJson(jr)
+
+		// Act
+		actual := args.Map{"noErr": err == nil}
+
+		// Assert
+		expected := args.Map{"noErr": true}
+		expected.ShouldBeEqual(t, 0, "ParseInjectUsingJson -- success", actual)
+	})
+}
+
+func Test_KeyAnyValuePair_ParseInjectUsingJsonMust_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KAVP_ParseInjectUsingJsonMust", func() {
+		// Arrange
+		kv := corestr.KeyAnyValuePair{Key: "k", Value: "v"}
+		jr := kv.JsonPtr()
+		kv2 := &corestr.KeyAnyValuePair{}
+		result := kv2.ParseInjectUsingJsonMust(jr)
+
+		// Act
+		actual := args.Map{"notNil": result != nil}
+
+		// Assert
+		expected := args.Map{"notNil": true}
+		expected.ShouldBeEqual(t, 0, "ParseInjectUsingJsonMust -- success", actual)
+	})
+}
+
+func Test_KeyAnyValuePair_JsonParseSelfInject_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KAVP_JsonParseSelfInject", func() {
+		// Arrange
+		kv := corestr.KeyAnyValuePair{Key: "k", Value: "v"}
+		jr := kv.JsonPtr()
+		kv2 := &corestr.KeyAnyValuePair{}
+		err := kv2.JsonParseSelfInject(jr)
+
+		// Act
+		actual := args.Map{"noErr": err == nil}
+
+		// Assert
+		expected := args.Map{"noErr": true}
+		expected.ShouldBeEqual(t, 0, "JsonParseSelfInject -- success", actual)
+	})
+}
+
+func Test_KeyAnyValuePair_Clear_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KAVP_Clear", func() {
+		// Arrange
+		kv := &corestr.KeyAnyValuePair{Key: "k", Value: "v"}
+		kv.Clear()
+
+		// Act
+		actual := args.Map{
+			"key": kv.Key,
+			"isNull": kv.IsValueNull(),
+		}
+
+		// Assert
+		expected := args.Map{
+			"key": "",
+			"isNull": true,
+		}
+		expected.ShouldBeEqual(t, 0, "Clear -- emptied", actual)
+	})
+}
+
+func Test_KeyAnyValuePair_Dispose_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KAVP_Dispose", func() {
+		// Arrange
+		kv := &corestr.KeyAnyValuePair{Key: "k", Value: "v"}
+		kv.Dispose()
+
+		// Act
+		actual := args.Map{"key": kv.Key}
+
+		// Assert
+		expected := args.Map{"key": ""}
+		expected.ShouldBeEqual(t, 0, "Dispose -- cleaned up", actual)
+	})
+}
+
+func Test_KeyAnyValuePair_Clear_Nil_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KAVP_Clear_Nil", func() {
+		var kv *corestr.KeyAnyValuePair
+		kv.Clear() // should not panic
+	})
+}
+
+func Test_KeyAnyValuePair_Dispose_Nil_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KAVP_Dispose_Nil", func() {
+		var kv *corestr.KeyAnyValuePair
+		kv.Dispose() // should not panic
+	})
+}
+
+// ══════════════════════════════════════════════════════════════════════════════
+// KeyValuePair — Segment 6f
+// ══════════════════════════════════════════════════════════════════════════════
+

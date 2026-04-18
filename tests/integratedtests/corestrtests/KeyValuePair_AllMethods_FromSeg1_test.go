@@ -360,3 +360,394 @@ func Test_KVP_DisposeNil_FromSeg1(t *testing.T) {
 	})
 }
 
+
+// --- Appended from Seg6 (Batch 2.4) ---
+
+func Test_KeyValuePair_Basic_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_Basic", func() {
+		// Arrange
+		kv := corestr.KeyValuePair{Key: "name", Value: "hello"}
+
+		// Act
+		actual := args.Map{
+			"key":      kv.KeyName(),
+			"varName":  kv.VariableName(),
+			"valStr":   kv.ValueString(),
+			"isEqual":  kv.IsVariableNameEqual("name"),
+			"isValEq":  kv.IsValueEqual("hello"),
+			"isValNeq": kv.IsValueEqual("other"),
+		}
+
+		// Assert
+		expected := args.Map{
+			"key": "name", "varName": "name", "valStr": "hello",
+			"isEqual": true, "isValEq": true, "isValNeq": false,
+		}
+		expected.ShouldBeEqual(t, 0, "Basic accessors -- correct", actual)
+	})
+}
+
+func Test_KeyValuePair_Empty_Checks_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_Empty_Checks", func() {
+		// Arrange
+		kv := &corestr.KeyValuePair{Key: "k", Value: "v"}
+		kvEmpty := &corestr.KeyValuePair{}
+
+		// Act
+		actual := args.Map{
+			"keyEmpty":     kv.IsKeyEmpty(),
+			"valEmpty":     kv.IsValueEmpty(),
+			"hasKey":       kv.HasKey(),
+			"hasVal":       kv.HasValue(),
+			"kvEmpty":      kv.IsKeyValueEmpty(),
+			"emptyKeyE":    kvEmpty.IsKeyEmpty(),
+			"emptyValE":    kvEmpty.IsValueEmpty(),
+			"emptyKVE":     kvEmpty.IsKeyValueEmpty(),
+			"anyEmpty":     kv.IsKeyValueAnyEmpty(),
+			"anyEmptyFull": kvEmpty.IsKeyValueAnyEmpty(),
+		}
+
+		// Assert
+		expected := args.Map{
+			"keyEmpty": false, "valEmpty": false,
+			"hasKey": true, "hasVal": true,
+			"kvEmpty": false, "emptyKeyE": true,
+			"emptyValE": true, "emptyKVE": true,
+			"anyEmpty": false, "anyEmptyFull": true,
+		}
+		expected.ShouldBeEqual(t, 0, "Empty checks -- correct", actual)
+	})
+}
+
+func Test_KeyValuePair_Is_IsKey_IsVal_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_Is_IsKey_IsVal", func() {
+		// Arrange
+		kv := &corestr.KeyValuePair{Key: "k", Value: "v"}
+
+		// Act
+		actual := args.Map{
+			"is":    kv.Is("k", "v"),
+			"isNot": kv.Is("k", "x"),
+			"isKey": kv.IsKey("k"),
+			"isVal": kv.IsVal("v"),
+		}
+
+		// Assert
+		expected := args.Map{
+			"is": true,
+			"isNot": false,
+			"isKey": true,
+			"isVal": true,
+		}
+		expected.ShouldBeEqual(t, 0, "Is/IsKey/IsVal -- correct", actual)
+	})
+}
+
+func Test_KeyValuePair_Trim_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_Trim", func() {
+		// Arrange
+		kv := &corestr.KeyValuePair{Key: " k ", Value: " v "}
+
+		// Act
+		actual := args.Map{
+			"trimKey": kv.TrimKey(),
+			"trimVal": kv.TrimValue(),
+		}
+
+		// Assert
+		expected := args.Map{
+			"trimKey": "k",
+			"trimVal": "v",
+		}
+		expected.ShouldBeEqual(t, 0, "Trim -- trimmed", actual)
+	})
+}
+
+func Test_KeyValuePair_ValueBool_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_ValueBool", func() {
+		// Arrange
+		kvTrue := &corestr.KeyValuePair{Key: "k", Value: "true"}
+		kvFalse := &corestr.KeyValuePair{Key: "k", Value: "invalid"}
+		kvEmpty := &corestr.KeyValuePair{Key: "k", Value: ""}
+
+		// Act
+		actual := args.Map{
+			"true": kvTrue.ValueBool(),
+			"invalid": kvFalse.ValueBool(),
+			"empty": kvEmpty.ValueBool(),
+		}
+
+		// Assert
+		expected := args.Map{
+			"true": true,
+			"invalid": false,
+			"empty": false,
+		}
+		expected.ShouldBeEqual(t, 0, "ValueBool -- various", actual)
+	})
+}
+
+func Test_KeyValuePair_ValueInt_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_ValueInt", func() {
+		// Arrange
+		kv := &corestr.KeyValuePair{Key: "k", Value: "42"}
+		kvBad := &corestr.KeyValuePair{Key: "k", Value: "abc"}
+
+		// Act
+		actual := args.Map{
+			"val": kv.ValueInt(0),
+			"def": kvBad.ValueInt(99),
+			"defInt": kv.ValueDefInt(),
+			"badDef": kvBad.ValueDefInt(),
+		}
+
+		// Assert
+		expected := args.Map{
+			"val": 42,
+			"def": 99,
+			"defInt": 42,
+			"badDef": 0,
+		}
+		expected.ShouldBeEqual(t, 0, "ValueInt -- various", actual)
+	})
+}
+
+func Test_KeyValuePair_ValueByte_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_ValueByte", func() {
+		// Arrange
+		kv := &corestr.KeyValuePair{Key: "k", Value: "65"}
+		kvBad := &corestr.KeyValuePair{Key: "k", Value: "abc"}
+		kvBig := &corestr.KeyValuePair{Key: "k", Value: "999"}
+
+		// Act
+		actual := args.Map{
+			"val":    kv.ValueByte(0),
+			"bad":    kvBad.ValueByte(1),
+			"big":    kvBig.ValueByte(2),
+			"defVal": kv.ValueDefByte(),
+			"defBad": kvBad.ValueDefByte(),
+			"defBig": kvBig.ValueDefByte(),
+		}
+
+		// Assert
+		expected := args.Map{
+			"val": byte(65),
+			"bad": byte(1),
+			"big": byte(2),
+			"defVal": byte(65),
+			"defBad": byte(0),
+			"defBig": byte(0),
+		}
+		expected.ShouldBeEqual(t, 0, "ValueByte -- various", actual)
+	})
+}
+
+func Test_KeyValuePair_ValueFloat64_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_ValueFloat64", func() {
+		// Arrange
+		kv := &corestr.KeyValuePair{Key: "k", Value: "1.5"}
+		kvBad := &corestr.KeyValuePair{Key: "k", Value: "abc"}
+
+		// Act
+		actual := args.Map{
+			"val": kv.ValueFloat64(0),
+			"bad": kvBad.ValueFloat64(9.9),
+			"def": kv.ValueDefFloat64(),
+		}
+
+		// Assert
+		expected := args.Map{
+			"val": 1.5,
+			"bad": 9.9,
+			"def": 1.5,
+		}
+		expected.ShouldBeEqual(t, 0, "ValueFloat64 -- various", actual)
+	})
+}
+
+func Test_KeyValuePair_ValueValid_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_ValueValid", func() {
+		// Arrange
+		kv := &corestr.KeyValuePair{Key: "k", Value: "hello"}
+		vv := kv.ValueValid()
+
+		// Act
+		actual := args.Map{
+			"val": vv.Value,
+			"valid": vv.IsValid,
+		}
+
+		// Assert
+		expected := args.Map{
+			"val": "hello",
+			"valid": true,
+		}
+		expected.ShouldBeEqual(t, 0, "ValueValid -- valid", actual)
+	})
+}
+
+func Test_KeyValuePair_ValueValidOptions_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_ValueValidOptions", func() {
+		// Arrange
+		kv := &corestr.KeyValuePair{Key: "k", Value: "hello"}
+		vv := kv.ValueValidOptions(false, "err")
+
+		// Act
+		actual := args.Map{
+			"val": vv.Value,
+			"valid": vv.IsValid,
+			"msg": vv.Message,
+		}
+
+		// Assert
+		expected := args.Map{
+			"val": "hello",
+			"valid": false,
+			"msg": "err",
+		}
+		expected.ShouldBeEqual(t, 0, "ValueValidOptions -- custom", actual)
+	})
+}
+
+func Test_KeyValuePair_FormatString_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_FormatString", func() {
+		// Arrange
+		kv := &corestr.KeyValuePair{Key: "k", Value: "v"}
+
+		// Act
+		actual := args.Map{"val": kv.FormatString("%v=%v")}
+
+		// Assert
+		expected := args.Map{"val": "k=v"}
+		expected.ShouldBeEqual(t, 0, "FormatString -- formatted", actual)
+	})
+}
+
+func Test_KeyValuePair_String_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_String", func() {
+		// Arrange
+		kv := &corestr.KeyValuePair{Key: "k", Value: "v"}
+
+		// Act
+		actual := args.Map{"nonEmpty": kv.String() != ""}
+
+		// Assert
+		expected := args.Map{"nonEmpty": true}
+		expected.ShouldBeEqual(t, 0, "String -- non-empty", actual)
+	})
+}
+
+func Test_KeyValuePair_Compile_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_Compile", func() {
+		// Arrange
+		kv := corestr.KeyValuePair{Key: "k", Value: "v"}
+
+		// Act
+		actual := args.Map{"nonEmpty": kv.Compile() != ""}
+
+		// Assert
+		expected := args.Map{"nonEmpty": true}
+		expected.ShouldBeEqual(t, 0, "Compile -- delegates to String", actual)
+	})
+}
+
+func Test_KeyValuePair_Json_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_Json", func() {
+		// Arrange
+		kv := corestr.KeyValuePair{Key: "k", Value: "v"}
+		j := kv.Json()
+
+		// Act
+		actual := args.Map{"noErr": !j.HasError()}
+
+		// Assert
+		expected := args.Map{"noErr": true}
+		expected.ShouldBeEqual(t, 0, "Json -- no error", actual)
+	})
+}
+
+func Test_KeyValuePair_Serialize_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_Serialize", func() {
+		// Arrange
+		kv := corestr.KeyValuePair{Key: "k", Value: "v"}
+		b, err := kv.Serialize()
+
+		// Act
+		actual := args.Map{
+			"noErr": err == nil,
+			"hasBytes": len(b) > 0,
+		}
+
+		// Assert
+		expected := args.Map{
+			"noErr": true,
+			"hasBytes": true,
+		}
+		expected.ShouldBeEqual(t, 0, "Serialize -- success", actual)
+	})
+}
+
+func Test_KeyValuePair_SerializeMust_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_SerializeMust", func() {
+		// Arrange
+		kv := corestr.KeyValuePair{Key: "k", Value: "v"}
+		b := kv.SerializeMust()
+
+		// Act
+		actual := args.Map{"hasBytes": len(b) > 0}
+
+		// Assert
+		expected := args.Map{"hasBytes": true}
+		expected.ShouldBeEqual(t, 0, "SerializeMust -- success", actual)
+	})
+}
+
+func Test_KeyValuePair_Clear_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_Clear", func() {
+		// Arrange
+		kv := &corestr.KeyValuePair{Key: "k", Value: "v"}
+		kv.Clear()
+
+		// Act
+		actual := args.Map{
+			"key": kv.Key,
+			"val": kv.Value,
+		}
+
+		// Assert
+		expected := args.Map{
+			"key": "",
+			"val": "",
+		}
+		expected.ShouldBeEqual(t, 0, "Clear -- emptied", actual)
+	})
+}
+
+func Test_KeyValuePair_Dispose_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_Dispose", func() {
+		// Arrange
+		kv := &corestr.KeyValuePair{Key: "k", Value: "v"}
+		kv.Dispose()
+
+		// Act
+		actual := args.Map{"key": kv.Key}
+
+		// Assert
+		expected := args.Map{"key": ""}
+		expected.ShouldBeEqual(t, 0, "Dispose -- cleaned up", actual)
+	})
+}
+
+func Test_KeyValuePair_Clear_Nil_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_Clear_Nil", func() {
+		var kv *corestr.KeyValuePair
+		kv.Clear() // should not panic
+	})
+}
+
+func Test_KeyValuePair_Dispose_Nil_FromSeg6(t *testing.T) {
+	safeTest(t, "Test_Seg6_KVP_Dispose_Nil", func() {
+		var kv *corestr.KeyValuePair
+		kv.Dispose() // should not panic
+	})
+}

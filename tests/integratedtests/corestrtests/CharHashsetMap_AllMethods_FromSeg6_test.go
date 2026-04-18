@@ -11,7 +11,7 @@ import (
 // CharHashsetMap — Segment 6b
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_Seg6_CHM_IsEmpty(t *testing.T) {
+func Test_CharHashsetMap_IsEmpty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_IsEmpty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -31,7 +31,7 @@ func Test_Seg6_CHM_IsEmpty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_Add(t *testing.T) {
+func Test_CharHashsetMap_Add_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_Add", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -52,7 +52,7 @@ func Test_Seg6_CHM_Add(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddLock(t *testing.T) {
+func Test_CharHashsetMap_AddLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddLock", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -67,7 +67,7 @@ func Test_Seg6_CHM_AddLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddStrings(t *testing.T) {
+func Test_CharHashsetMap_AddStrings_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddStrings", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -88,7 +88,7 @@ func Test_Seg6_CHM_AddStrings(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddStrings_Empty(t *testing.T) {
+func Test_CharHashsetMap_AddStrings_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddStrings_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -103,7 +103,7 @@ func Test_Seg6_CHM_AddStrings_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddStringsLock(t *testing.T) {
+func Test_CharHashsetMap_AddStringsLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddStringsLock", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -118,7 +118,7 @@ func Test_Seg6_CHM_AddStringsLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddStringsLock_Empty(t *testing.T) {
+func Test_CharHashsetMap_AddStringsLock_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddStringsLock_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -133,7 +133,7 @@ func Test_Seg6_CHM_AddStringsLock_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_GetChar(t *testing.T) {
+func Test_CharHashsetMap_GetChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_GetChar", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -153,7 +153,7 @@ func Test_Seg6_CHM_GetChar(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_GetCharOf(t *testing.T) {
+func Test_CharHashsetMap_GetCharOf_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_GetCharOf", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -173,7 +173,7 @@ func Test_Seg6_CHM_GetCharOf(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_Has(t *testing.T) {
+func Test_CharHashsetMap_Has_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_Has", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -194,7 +194,7 @@ func Test_Seg6_CHM_Has(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_Has_Empty(t *testing.T) {
+func Test_CharHashsetMap_Has_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_Has_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -208,7 +208,7 @@ func Test_Seg6_CHM_Has_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_HasWithHashset(t *testing.T) {
+func Test_CharHashsetMap_HasWithHashset_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_HasWithHashset", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -230,7 +230,7 @@ func Test_Seg6_CHM_HasWithHashset(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_HasWithHashset_Miss(t *testing.T) {
+func Test_CharHashsetMap_HasWithHashset_Miss_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_HasWithHashset_Miss", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -252,7 +252,7 @@ func Test_Seg6_CHM_HasWithHashset_Miss(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_HasWithHashset_Empty(t *testing.T) {
+func Test_CharHashsetMap_HasWithHashset_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_HasWithHashset_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -273,7 +273,7 @@ func Test_Seg6_CHM_HasWithHashset_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_HasWithHashsetLock(t *testing.T) {
+func Test_CharHashsetMap_HasWithHashsetLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_HasWithHashsetLock", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -295,7 +295,7 @@ func Test_Seg6_CHM_HasWithHashsetLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_HasWithHashsetLock_Empty(t *testing.T) {
+func Test_CharHashsetMap_HasWithHashsetLock_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_HasWithHashsetLock_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -316,7 +316,7 @@ func Test_Seg6_CHM_HasWithHashsetLock_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_HasWithHashsetLock_Miss(t *testing.T) {
+func Test_CharHashsetMap_HasWithHashsetLock_Miss_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_HasWithHashsetLock_Miss", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -338,7 +338,7 @@ func Test_Seg6_CHM_HasWithHashsetLock_Miss(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_LengthOf(t *testing.T) {
+func Test_CharHashsetMap_LengthOf_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_LengthOf", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -359,7 +359,7 @@ func Test_Seg6_CHM_LengthOf(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_LengthOf_Empty(t *testing.T) {
+func Test_CharHashsetMap_LengthOf_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_LengthOf_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -373,7 +373,7 @@ func Test_Seg6_CHM_LengthOf_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_LengthOfLock(t *testing.T) {
+func Test_CharHashsetMap_LengthOfLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_LengthOfLock", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -394,7 +394,7 @@ func Test_Seg6_CHM_LengthOfLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_LengthOfLock_Empty(t *testing.T) {
+func Test_CharHashsetMap_LengthOfLock_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_LengthOfLock_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -408,7 +408,7 @@ func Test_Seg6_CHM_LengthOfLock_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_LengthOfHashsetFromFirstChar(t *testing.T) {
+func Test_CharHashsetMap_LengthOfHashsetFromFirstChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_LengthOfHashsetFromFirstChar", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -429,7 +429,7 @@ func Test_Seg6_CHM_LengthOfHashsetFromFirstChar(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AllLengthsSum(t *testing.T) {
+func Test_CharHashsetMap_AllLengthsSum_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AllLengthsSum", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -444,7 +444,7 @@ func Test_Seg6_CHM_AllLengthsSum(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AllLengthsSum_Empty(t *testing.T) {
+func Test_CharHashsetMap_AllLengthsSum_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AllLengthsSum_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -458,7 +458,7 @@ func Test_Seg6_CHM_AllLengthsSum_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AllLengthsSumLock(t *testing.T) {
+func Test_CharHashsetMap_AllLengthsSumLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AllLengthsSumLock", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -473,7 +473,7 @@ func Test_Seg6_CHM_AllLengthsSumLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AllLengthsSumLock_Empty(t *testing.T) {
+func Test_CharHashsetMap_AllLengthsSumLock_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AllLengthsSumLock_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -487,7 +487,7 @@ func Test_Seg6_CHM_AllLengthsSumLock_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_IsEmptyLock(t *testing.T) {
+func Test_CharHashsetMap_IsEmptyLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_IsEmptyLock", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -501,7 +501,7 @@ func Test_Seg6_CHM_IsEmptyLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_LengthLock(t *testing.T) {
+func Test_CharHashsetMap_LengthLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_LengthLock", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -516,7 +516,7 @@ func Test_Seg6_CHM_LengthLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_GetMap(t *testing.T) {
+func Test_CharHashsetMap_GetMap_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_GetMap", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -531,7 +531,7 @@ func Test_Seg6_CHM_GetMap(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_GetCopyMapLock(t *testing.T) {
+func Test_CharHashsetMap_GetCopyMapLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_GetCopyMapLock", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -546,7 +546,7 @@ func Test_Seg6_CHM_GetCopyMapLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_GetCopyMapLock_Empty(t *testing.T) {
+func Test_CharHashsetMap_GetCopyMapLock_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_GetCopyMapLock_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -560,7 +560,7 @@ func Test_Seg6_CHM_GetCopyMapLock_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_List(t *testing.T) {
+func Test_CharHashsetMap_List_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_List", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -575,7 +575,7 @@ func Test_Seg6_CHM_List(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_SortedListAsc(t *testing.T) {
+func Test_CharHashsetMap_SortedListAsc_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_SortedListAsc", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -591,7 +591,7 @@ func Test_Seg6_CHM_SortedListAsc(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_SortedListDsc(t *testing.T) {
+func Test_CharHashsetMap_SortedListDsc_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_SortedListDsc", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -607,7 +607,7 @@ func Test_Seg6_CHM_SortedListDsc(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_String(t *testing.T) {
+func Test_CharHashsetMap_String_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_String", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -622,7 +622,7 @@ func Test_Seg6_CHM_String(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_StringLock(t *testing.T) {
+func Test_CharHashsetMap_StringLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_StringLock", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -637,7 +637,7 @@ func Test_Seg6_CHM_StringLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_SummaryString(t *testing.T) {
+func Test_CharHashsetMap_SummaryString_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_SummaryString", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -652,7 +652,7 @@ func Test_Seg6_CHM_SummaryString(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_SummaryStringLock(t *testing.T) {
+func Test_CharHashsetMap_SummaryStringLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_SummaryStringLock", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -667,7 +667,7 @@ func Test_Seg6_CHM_SummaryStringLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_Print(t *testing.T) {
+func Test_CharHashsetMap_Print_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_Print", func() {
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
 		chm.Add("apple")
@@ -676,7 +676,7 @@ func Test_Seg6_CHM_Print(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_PrintLock(t *testing.T) {
+func Test_CharHashsetMap_PrintLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_PrintLock", func() {
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
 		chm.Add("apple")
@@ -687,7 +687,7 @@ func Test_Seg6_CHM_PrintLock(t *testing.T) {
 
 // ── IsEquals ────────────────────────────────────────────────────────────────
 
-func Test_Seg6_CHM_IsEquals(t *testing.T) {
+func Test_CharHashsetMap_IsEquals_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_IsEquals", func() {
 		// Arrange
 		chm1 := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -712,7 +712,7 @@ func Test_Seg6_CHM_IsEquals(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_IsEquals_BothEmpty(t *testing.T) {
+func Test_CharHashsetMap_IsEquals_BothEmpty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_IsEquals_BothEmpty", func() {
 		// Arrange
 		chm1 := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -727,7 +727,7 @@ func Test_Seg6_CHM_IsEquals_BothEmpty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_IsEquals_OneEmpty(t *testing.T) {
+func Test_CharHashsetMap_IsEquals_OneEmpty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_IsEquals_OneEmpty", func() {
 		// Arrange
 		chm1 := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -743,7 +743,7 @@ func Test_Seg6_CHM_IsEquals_OneEmpty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_IsEquals_DiffLen(t *testing.T) {
+func Test_CharHashsetMap_IsEquals_DiffLen_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_IsEquals_DiffLen", func() {
 		// Arrange
 		chm1 := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -760,7 +760,7 @@ func Test_Seg6_CHM_IsEquals_DiffLen(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_IsEquals_DiffItems(t *testing.T) {
+func Test_CharHashsetMap_IsEquals_DiffItems_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_IsEquals_DiffItems", func() {
 		// Arrange
 		chm1 := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -777,7 +777,7 @@ func Test_Seg6_CHM_IsEquals_DiffItems(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_IsEquals_MissingKey(t *testing.T) {
+func Test_CharHashsetMap_IsEquals_MissingKey_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_IsEquals_MissingKey", func() {
 		// Arrange
 		chm1 := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -794,7 +794,7 @@ func Test_Seg6_CHM_IsEquals_MissingKey(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_IsEqualsLock(t *testing.T) {
+func Test_CharHashsetMap_IsEqualsLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_IsEqualsLock", func() {
 		// Arrange
 		chm1 := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -813,7 +813,7 @@ func Test_Seg6_CHM_IsEqualsLock(t *testing.T) {
 
 // ── AddSameStartingCharItems ────────────────────────────────────────────────
 
-func Test_Seg6_CHM_AddSameStartingCharItems(t *testing.T) {
+func Test_CharHashsetMap_AddSameStartingCharItems_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddSameStartingCharItems", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -828,7 +828,7 @@ func Test_Seg6_CHM_AddSameStartingCharItems(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddSameStartingCharItems_Existing(t *testing.T) {
+func Test_CharHashsetMap_AddSameStartingCharItems_Existing_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddSameStartingCharItems_Existing", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -844,7 +844,7 @@ func Test_Seg6_CHM_AddSameStartingCharItems_Existing(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddSameStartingCharItems_Empty(t *testing.T) {
+func Test_CharHashsetMap_AddSameStartingCharItems_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddSameStartingCharItems_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -861,7 +861,7 @@ func Test_Seg6_CHM_AddSameStartingCharItems_Empty(t *testing.T) {
 
 // ── AddCollectionItems / AddCharCollectionMapItems ──────────────────────────
 
-func Test_Seg6_CHM_AddCollectionItems(t *testing.T) {
+func Test_CharHashsetMap_AddCollectionItems_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddCollectionItems", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -877,7 +877,7 @@ func Test_Seg6_CHM_AddCollectionItems(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddCollectionItems_Nil(t *testing.T) {
+func Test_CharHashsetMap_AddCollectionItems_Nil_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddCollectionItems_Nil", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -892,7 +892,7 @@ func Test_Seg6_CHM_AddCollectionItems_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddCharCollectionMapItems(t *testing.T) {
+func Test_CharHashsetMap_AddCharCollectionMapItems_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddCharCollectionMapItems", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -909,7 +909,7 @@ func Test_Seg6_CHM_AddCharCollectionMapItems(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddCharCollectionMapItems_Nil(t *testing.T) {
+func Test_CharHashsetMap_AddCharCollectionMapItems_Nil_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddCharCollectionMapItems_Nil", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -924,7 +924,7 @@ func Test_Seg6_CHM_AddCharCollectionMapItems_Nil(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddHashsetItems(t *testing.T) {
+func Test_CharHashsetMap_AddHashsetItems_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddHashsetItems", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -940,7 +940,7 @@ func Test_Seg6_CHM_AddHashsetItems(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddHashsetItems_Empty(t *testing.T) {
+func Test_CharHashsetMap_AddHashsetItems_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddHashsetItems_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -958,7 +958,7 @@ func Test_Seg6_CHM_AddHashsetItems_Empty(t *testing.T) {
 
 // ── GetHashset / GetHashsetLock ─────────────────────────────────────────────
 
-func Test_Seg6_CHM_GetHashset(t *testing.T) {
+func Test_CharHashsetMap_GetHashset_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_GetHashset", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -974,7 +974,7 @@ func Test_Seg6_CHM_GetHashset(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_GetHashset_AddNew(t *testing.T) {
+func Test_CharHashsetMap_GetHashset_AddNew_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_GetHashset_AddNew", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -989,7 +989,7 @@ func Test_Seg6_CHM_GetHashset_AddNew(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_GetHashset_Miss(t *testing.T) {
+func Test_CharHashsetMap_GetHashset_Miss_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_GetHashset_Miss", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1004,7 +1004,7 @@ func Test_Seg6_CHM_GetHashset_Miss(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_GetHashsetLock(t *testing.T) {
+func Test_CharHashsetMap_GetHashsetLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_GetHashsetLock", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1020,7 +1020,7 @@ func Test_Seg6_CHM_GetHashsetLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_GetHashsetByChar(t *testing.T) {
+func Test_CharHashsetMap_GetHashsetByChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_GetHashsetByChar", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1037,7 +1037,7 @@ func Test_Seg6_CHM_GetHashsetByChar(t *testing.T) {
 
 // ── HashsetByChar / HashsetByStringFirstChar ────────────────────────────────
 
-func Test_Seg6_CHM_HashsetByChar(t *testing.T) {
+func Test_CharHashsetMap_HashsetByChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_HashsetByChar", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1053,7 +1053,7 @@ func Test_Seg6_CHM_HashsetByChar(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_HashsetByCharLock(t *testing.T) {
+func Test_CharHashsetMap_HashsetByCharLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_HashsetByCharLock", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1069,7 +1069,7 @@ func Test_Seg6_CHM_HashsetByCharLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_HashsetByCharLock_Miss(t *testing.T) {
+func Test_CharHashsetMap_HashsetByCharLock_Miss_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_HashsetByCharLock_Miss", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1084,7 +1084,7 @@ func Test_Seg6_CHM_HashsetByCharLock_Miss(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_HashsetByStringFirstChar(t *testing.T) {
+func Test_CharHashsetMap_HashsetByStringFirstChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_HashsetByStringFirstChar", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1100,7 +1100,7 @@ func Test_Seg6_CHM_HashsetByStringFirstChar(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_HashsetByStringFirstCharLock(t *testing.T) {
+func Test_CharHashsetMap_HashsetByStringFirstCharLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_HashsetByStringFirstCharLock", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1118,7 +1118,7 @@ func Test_Seg6_CHM_HashsetByStringFirstCharLock(t *testing.T) {
 
 // ── HashsetsCollection ──────────────────────────────────────────────────────
 
-func Test_Seg6_CHM_HashsetsCollection(t *testing.T) {
+func Test_CharHashsetMap_HashsetsCollection_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_HashsetsCollection", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1134,7 +1134,7 @@ func Test_Seg6_CHM_HashsetsCollection(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_HashsetsCollection_Empty(t *testing.T) {
+func Test_CharHashsetMap_HashsetsCollection_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_HashsetsCollection_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -1149,7 +1149,7 @@ func Test_Seg6_CHM_HashsetsCollection_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_HashsetsCollectionByChars(t *testing.T) {
+func Test_CharHashsetMap_HashsetsCollectionByChars_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_HashsetsCollectionByChars", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1165,7 +1165,7 @@ func Test_Seg6_CHM_HashsetsCollectionByChars(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_HashsetsCollectionByChars_Empty(t *testing.T) {
+func Test_CharHashsetMap_HashsetsCollectionByChars_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_HashsetsCollectionByChars_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -1180,7 +1180,7 @@ func Test_Seg6_CHM_HashsetsCollectionByChars_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_HashsetsCollectionByStringsFirstChar(t *testing.T) {
+func Test_CharHashsetMap_HashsetsCollectionByStringsFirstChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_HashsetsCollectionByStringsFirstChar", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1196,7 +1196,7 @@ func Test_Seg6_CHM_HashsetsCollectionByStringsFirstChar(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_HashsetsCollectionByStringsFirstChar_Empty(t *testing.T) {
+func Test_CharHashsetMap_HashsetsCollectionByStringsFirstChar_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_HashsetsCollectionByStringsFirstChar_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -1213,7 +1213,7 @@ func Test_Seg6_CHM_HashsetsCollectionByStringsFirstChar_Empty(t *testing.T) {
 
 // ── GetCharsGroups ──────────────────────────────────────────────────────────
 
-func Test_Seg6_CHM_GetCharsGroups(t *testing.T) {
+func Test_CharHashsetMap_GetCharsGroups_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_GetCharsGroups", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1228,7 +1228,7 @@ func Test_Seg6_CHM_GetCharsGroups(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_GetCharsGroups_Empty(t *testing.T) {
+func Test_CharHashsetMap_GetCharsGroups_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_GetCharsGroups_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1245,7 +1245,7 @@ func Test_Seg6_CHM_GetCharsGroups_Empty(t *testing.T) {
 
 // ── AddSameCharsCollection / AddSameCharsHashset ────────────────────────────
 
-func Test_Seg6_CHM_AddSameCharsCollection_Existing(t *testing.T) {
+func Test_CharHashsetMap_AddSameCharsCollection_Existing_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddSameCharsCollection_Existing", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1262,7 +1262,7 @@ func Test_Seg6_CHM_AddSameCharsCollection_Existing(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddSameCharsCollection_NilColl(t *testing.T) {
+func Test_CharHashsetMap_AddSameCharsCollection_NilColl_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddSameCharsCollection_NilColl", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1278,7 +1278,7 @@ func Test_Seg6_CHM_AddSameCharsCollection_NilColl(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddSameCharsCollection_NewChar(t *testing.T) {
+func Test_CharHashsetMap_AddSameCharsCollection_NewChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddSameCharsCollection_NewChar", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1294,7 +1294,7 @@ func Test_Seg6_CHM_AddSameCharsCollection_NewChar(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddSameCharsCollection_NewNil(t *testing.T) {
+func Test_CharHashsetMap_AddSameCharsCollection_NewNil_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddSameCharsCollection_NewNil", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1309,7 +1309,7 @@ func Test_Seg6_CHM_AddSameCharsCollection_NewNil(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddSameCharsHashset_Existing(t *testing.T) {
+func Test_CharHashsetMap_AddSameCharsHashset_Existing_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddSameCharsHashset_Existing", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1326,7 +1326,7 @@ func Test_Seg6_CHM_AddSameCharsHashset_Existing(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddSameCharsHashset_NewChar(t *testing.T) {
+func Test_CharHashsetMap_AddSameCharsHashset_NewChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddSameCharsHashset_NewChar", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1342,7 +1342,7 @@ func Test_Seg6_CHM_AddSameCharsHashset_NewChar(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddSameCharsHashset_NewNil(t *testing.T) {
+func Test_CharHashsetMap_AddSameCharsHashset_NewNil_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddSameCharsHashset_NewNil", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1357,7 +1357,7 @@ func Test_Seg6_CHM_AddSameCharsHashset_NewNil(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddSameCharsHashset_ExistingNil(t *testing.T) {
+func Test_CharHashsetMap_AddSameCharsHashset_ExistingNil_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddSameCharsHashset_ExistingNil", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1373,7 +1373,7 @@ func Test_Seg6_CHM_AddSameCharsHashset_ExistingNil(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddSameCharsCollectionLock(t *testing.T) {
+func Test_CharHashsetMap_AddSameCharsCollectionLock_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddSameCharsCollectionLock", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1390,7 +1390,7 @@ func Test_Seg6_CHM_AddSameCharsCollectionLock(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddSameCharsCollectionLock_NewNil(t *testing.T) {
+func Test_CharHashsetMap_AddSameCharsCollectionLock_NewNil_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddSameCharsCollectionLock_NewNil", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1405,7 +1405,7 @@ func Test_Seg6_CHM_AddSameCharsCollectionLock_NewNil(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddSameCharsCollectionLock_NewChar(t *testing.T) {
+func Test_CharHashsetMap_AddSameCharsCollectionLock_NewChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddSameCharsCollectionLock_NewChar", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1421,7 +1421,7 @@ func Test_Seg6_CHM_AddSameCharsCollectionLock_NewChar(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddSameCharsCollectionLock_ExistingNil(t *testing.T) {
+func Test_CharHashsetMap_AddSameCharsCollectionLock_ExistingNil_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddSameCharsCollectionLock_ExistingNil", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1437,7 +1437,7 @@ func Test_Seg6_CHM_AddSameCharsCollectionLock_ExistingNil(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddHashsetLock_Existing(t *testing.T) {
+func Test_CharHashsetMap_AddHashsetLock_Existing_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddHashsetLock_Existing", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1454,7 +1454,7 @@ func Test_Seg6_CHM_AddHashsetLock_Existing(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddHashsetLock_NewChar(t *testing.T) {
+func Test_CharHashsetMap_AddHashsetLock_NewChar_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddHashsetLock_NewChar", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1470,7 +1470,7 @@ func Test_Seg6_CHM_AddHashsetLock_NewChar(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddHashsetLock_NewNil(t *testing.T) {
+func Test_CharHashsetMap_AddHashsetLock_NewNil_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddHashsetLock_NewNil", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1485,7 +1485,7 @@ func Test_Seg6_CHM_AddHashsetLock_NewNil(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_AddHashsetLock_ExistingNil(t *testing.T) {
+func Test_CharHashsetMap_AddHashsetLock_ExistingNil_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_AddHashsetLock_ExistingNil", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1503,7 +1503,7 @@ func Test_Seg6_CHM_AddHashsetLock_ExistingNil(t *testing.T) {
 
 // ── JSON ────────────────────────────────────────────────────────────────────
 
-func Test_Seg6_CHM_Json(t *testing.T) {
+func Test_CharHashsetMap_Json_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_Json", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1519,7 +1519,7 @@ func Test_Seg6_CHM_Json(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_MarshalJSON(t *testing.T) {
+func Test_CharHashsetMap_MarshalJSON_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_MarshalJSON", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1541,7 +1541,7 @@ func Test_Seg6_CHM_MarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_UnmarshalJSON(t *testing.T) {
+func Test_CharHashsetMap_UnmarshalJSON_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_UnmarshalJSON", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1559,7 +1559,7 @@ func Test_Seg6_CHM_UnmarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_UnmarshalJSON_Invalid(t *testing.T) {
+func Test_CharHashsetMap_UnmarshalJSON_Invalid_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_UnmarshalJSON_Invalid", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -1574,7 +1574,7 @@ func Test_Seg6_CHM_UnmarshalJSON_Invalid(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_JsonModel(t *testing.T) {
+func Test_CharHashsetMap_JsonModel_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_JsonModel", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1589,7 +1589,7 @@ func Test_Seg6_CHM_JsonModel(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_JsonModelAny(t *testing.T) {
+func Test_CharHashsetMap_JsonModelAny_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_JsonModelAny", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1603,7 +1603,7 @@ func Test_Seg6_CHM_JsonModelAny(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_InterfaceCasts(t *testing.T) {
+func Test_CharHashsetMap_InterfaceCasts_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_InterfaceCasts", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1627,7 +1627,7 @@ func Test_Seg6_CHM_InterfaceCasts(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_ParseInjectUsingJson(t *testing.T) {
+func Test_CharHashsetMap_ParseInjectUsingJson_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_ParseInjectUsingJson", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1645,7 +1645,7 @@ func Test_Seg6_CHM_ParseInjectUsingJson(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_ParseInjectUsingJsonMust(t *testing.T) {
+func Test_CharHashsetMap_ParseInjectUsingJsonMust_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_ParseInjectUsingJsonMust", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1663,7 +1663,7 @@ func Test_Seg6_CHM_ParseInjectUsingJsonMust(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_JsonParseSelfInject(t *testing.T) {
+func Test_CharHashsetMap_JsonParseSelfInject_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_JsonParseSelfInject", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1683,7 +1683,7 @@ func Test_Seg6_CHM_JsonParseSelfInject(t *testing.T) {
 
 // ── Clear / RemoveAll ───────────────────────────────────────────────────────
 
-func Test_Seg6_CHM_Clear(t *testing.T) {
+func Test_CharHashsetMap_Clear_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_Clear", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1699,7 +1699,7 @@ func Test_Seg6_CHM_Clear(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_Clear_Empty(t *testing.T) {
+func Test_CharHashsetMap_Clear_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_Clear_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
@@ -1714,7 +1714,7 @@ func Test_Seg6_CHM_Clear_Empty(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_RemoveAll(t *testing.T) {
+func Test_CharHashsetMap_RemoveAll_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_RemoveAll", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(4, 4)
@@ -1730,7 +1730,7 @@ func Test_Seg6_CHM_RemoveAll(t *testing.T) {
 	})
 }
 
-func Test_Seg6_CHM_RemoveAll_Empty(t *testing.T) {
+func Test_CharHashsetMap_RemoveAll_Empty_FromSeg6(t *testing.T) {
 	safeTest(t, "Test_Seg6_CHM_RemoveAll_Empty", func() {
 		// Arrange
 		chm := corestr.New.CharHashsetMap.Cap(0, 4)
