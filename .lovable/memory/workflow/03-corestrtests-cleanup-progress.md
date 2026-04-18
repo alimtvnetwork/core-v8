@@ -77,3 +77,13 @@ Phase 2 sub-plan: `spec/01-app/29-corestrtests-phase2-merge-plan.md`
 **Files cleaned** (15): AllIndividualsLengthOfSimpleSlices_Behaviour, AllIndividualStringsOfStringsLength_Behaviour, Collection_FilterLock_FromSeg3, Collection_FilterPtr_FromSeg3, Collection_FromSeg1, HashmapDataModel_FromSeg5, HashsetCollection_AllMethods_FromSeg5, KeyAnyValuePair_AllMethods_FromSeg1, KeyValuePair_AllMethods_FromSeg1, LeftMiddleRight_Behaviour_FromSeg1, LeftRight_Behaviour_FromSeg1, SimpleSlice_AddAppend_FromSeg4, SimpleSlice_Mutators_FromSeg4, TextWithLineNumber_FromSeg1, ValueStatus_FromSeg1.
 
 **Lesson**: After every split that produces sub-50-func files, run an automated unused-import prune step before claiming green — the per-file recovery check will catch what the package-level build hides.
+
+## Phase 3 Notes (2026-04-18)
+- Audit found 10 initialism-prefixed files (1,185 funcs total): `KVP_Basic`, `LC_Add`, `LC_Head_LinkedCollSeg1`, `LL_Add`, `SSO_Core`, `SSO_Extended`, `SSO_Json_RemainingGaps`, `SSO_SplitLeftRight`, `SSO_Value`, `SS_WrapDoubleQuote_SimpleSlice_S03`.
+- HM/HS/CHM/CCM/COC/LR/VV initialism prefixes: zero matches — already on full names.
+- Renamed to: `KeyValuePair_Basic`, `LinkedCollections_Add`, `LinkedCollections_Head_FromSeg1`, `LinkedList_Add`, `SimpleStringOnce_{Core,Extended,Json_RemainingGaps,SplitLeftRight,Value}`, `SimpleSlice_WrapDoubleQuote_FromS03`.
+- Symbol-prefix rewrite (`Test_KVP_*` → `Test_KeyValuePair_*` etc.) caused 340 collisions with pre-existing symbols. Resolved by appending per-file disambiguator tags: `_Basic`, `_AddV2`, `_HeadSeg1`, `_Core`, `_Extended`, `_WrapDQ`, etc.
+- Verified zero duplicates package-wide: 14,104 unique Test funcs across 237 files.
+- Tooling: `/tmp/phase3.py` (rename + prefix rewrite + safeTest label sync), `/tmp/phase3_fix.py` (collision disambiguator).
+- Lesson learned: mass prefix expansion requires upfront collision detection AND a disambiguator strategy — `_<short-tag>` per source file is sufficient and preserves provenance.
+- Pending validation: user must run `.\run.ps1 -tc` and confirm `✓ READY TO COMMIT`.
