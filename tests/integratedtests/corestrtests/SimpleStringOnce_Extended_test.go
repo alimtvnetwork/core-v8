@@ -13,8 +13,8 @@ import (
 //   newSimpleStringOnceCreator
 // ========================================
 
-func Test_SSO_LinesSimpleSlice(t *testing.T) {
-	safeTest(t, "Test_SSO_LinesSimpleSlice", func() {
+func Test_SimpleStringOnce_LinesSimpleSlice(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_LinesSimpleSlice", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("a\nb\nc")
 
@@ -28,8 +28,8 @@ func Test_SSO_LinesSimpleSlice(t *testing.T) {
 	})
 }
 
-func Test_SSO_SimpleSlice(t *testing.T) {
-	safeTest(t, "Test_SSO_SimpleSlice", func() {
+func Test_SimpleStringOnce_SimpleSlice(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_SimpleSlice", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("a:b:c")
 
@@ -43,8 +43,8 @@ func Test_SSO_SimpleSlice(t *testing.T) {
 	})
 }
 
-func Test_SSO_Split(t *testing.T) {
-	safeTest(t, "Test_SSO_Split", func() {
+func Test_SimpleStringOnce_Split(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Split", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("a,b,c")
 
@@ -58,8 +58,8 @@ func Test_SSO_Split(t *testing.T) {
 	})
 }
 
-func Test_SSO_SplitLeftRight(t *testing.T) {
-	safeTest(t, "Test_SSO_SplitLeftRight", func() {
+func Test_SimpleStringOnce_SplitLeftRight(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_SplitLeftRight", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("key=value")
 
@@ -73,8 +73,8 @@ func Test_SSO_SplitLeftRight(t *testing.T) {
 	})
 }
 
-func Test_SSO_SplitLeftRight_NoSep(t *testing.T) {
-	safeTest(t, "Test_SSO_SplitLeftRight_NoSep", func() {
+func Test_SimpleStringOnce_SplitLeftRight_NoSep(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_SplitLeftRight_NoSep", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("noseparator")
 
@@ -88,8 +88,8 @@ func Test_SSO_SplitLeftRight_NoSep(t *testing.T) {
 	})
 }
 
-func Test_SSO_SplitLeftRightTrim(t *testing.T) {
-	safeTest(t, "Test_SSO_SplitLeftRightTrim", func() {
+func Test_SimpleStringOnce_SplitLeftRightTrim(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_SplitLeftRightTrim", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init(" key = value ")
 
@@ -103,8 +103,8 @@ func Test_SSO_SplitLeftRightTrim(t *testing.T) {
 	})
 }
 
-func Test_SSO_SplitLeftRightTrim_NoSep(t *testing.T) {
-	safeTest(t, "Test_SSO_SplitLeftRightTrim_NoSep", func() {
+func Test_SimpleStringOnce_SplitLeftRightTrim_NoSep(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_SplitLeftRightTrim_NoSep", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init(" nosep ")
 
@@ -118,8 +118,8 @@ func Test_SSO_SplitLeftRightTrim_NoSep(t *testing.T) {
 	})
 }
 
-func Test_SSO_SplitNonEmpty(t *testing.T) {
-	safeTest(t, "Test_SSO_SplitNonEmpty", func() {
+func Test_SimpleStringOnce_SplitNonEmpty(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_SplitNonEmpty", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("a::b::c")
 
@@ -133,8 +133,8 @@ func Test_SSO_SplitNonEmpty(t *testing.T) {
 	})
 }
 
-func Test_SSO_SplitTrimNonWhitespace(t *testing.T) {
-	safeTest(t, "Test_SSO_SplitTrimNonWhitespace", func() {
+func Test_SimpleStringOnce_SplitTrimNonWhitespace(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_SplitTrimNonWhitespace", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("a , , b")
 
@@ -148,8 +148,8 @@ func Test_SSO_SplitTrimNonWhitespace(t *testing.T) {
 	})
 }
 
-func Test_SSO_ClonePtr(t *testing.T) {
-	safeTest(t, "Test_SSO_ClonePtr", func() {
+func Test_SimpleStringOnce_ClonePtr(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_ClonePtr", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.InitPtr("hello")
 
@@ -163,8 +163,8 @@ func Test_SSO_ClonePtr(t *testing.T) {
 	})
 }
 
-func Test_SSO_ClonePtr_Nil(t *testing.T) {
-	safeTest(t, "Test_SSO_ClonePtr_Nil", func() {
+func Test_SimpleStringOnce_ClonePtr_Nil(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_ClonePtr_Nil", func() {
 		// Arrange
 		var sso *corestr.SimpleStringOnce
 
@@ -178,8 +178,8 @@ func Test_SSO_ClonePtr_Nil(t *testing.T) {
 	})
 }
 
-func Test_SSO_Clone(t *testing.T) {
-	safeTest(t, "Test_SSO_Clone", func() {
+func Test_SimpleStringOnce_Clone(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Clone", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("x")
 
@@ -193,8 +193,8 @@ func Test_SSO_Clone(t *testing.T) {
 	})
 }
 
-func Test_SSO_CloneUsingNewVal(t *testing.T) {
-	safeTest(t, "Test_SSO_CloneUsingNewVal", func() {
+func Test_SimpleStringOnce_CloneUsingNewVal(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_CloneUsingNewVal", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("old")
 
@@ -211,8 +211,8 @@ func Test_SSO_CloneUsingNewVal(t *testing.T) {
 	})
 }
 
-func Test_SSO_Dispose(t *testing.T) {
-	safeTest(t, "Test_SSO_Dispose", func() {
+func Test_SimpleStringOnce_Dispose(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Dispose", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.InitPtr("val")
 
@@ -226,8 +226,8 @@ func Test_SSO_Dispose(t *testing.T) {
 	})
 }
 
-func Test_SSO_Dispose_Nil(t *testing.T) {
-	safeTest(t, "Test_SSO_Dispose_Nil", func() {
+func Test_SimpleStringOnce_Dispose_Nil(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Dispose_Nil", func() {
 		// Arrange
 		var sso *corestr.SimpleStringOnce
 
@@ -236,8 +236,8 @@ func Test_SSO_Dispose_Nil(t *testing.T) {
 	})
 }
 
-func Test_SSO_String(t *testing.T) {
-	safeTest(t, "Test_SSO_String", func() {
+func Test_SimpleStringOnce_String(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_String", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.InitPtr("hello")
 
@@ -248,8 +248,8 @@ func Test_SSO_String(t *testing.T) {
 	})
 }
 
-func Test_SSO_String_Nil(t *testing.T) {
-	safeTest(t, "Test_SSO_String_Nil", func() {
+func Test_SimpleStringOnce_String_Nil(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_String_Nil", func() {
 		// Arrange
 		var sso *corestr.SimpleStringOnce
 
@@ -260,8 +260,8 @@ func Test_SSO_String_Nil(t *testing.T) {
 	})
 }
 
-func Test_SSO_StringPtr(t *testing.T) {
-	safeTest(t, "Test_SSO_StringPtr", func() {
+func Test_SimpleStringOnce_StringPtr(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_StringPtr", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.InitPtr("val")
 
@@ -275,8 +275,8 @@ func Test_SSO_StringPtr(t *testing.T) {
 	})
 }
 
-func Test_SSO_StringPtr_Nil(t *testing.T) {
-	safeTest(t, "Test_SSO_StringPtr_Nil", func() {
+func Test_SimpleStringOnce_StringPtr_Nil(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_StringPtr_Nil", func() {
 		// Arrange
 		var sso *corestr.SimpleStringOnce
 
@@ -290,8 +290,8 @@ func Test_SSO_StringPtr_Nil(t *testing.T) {
 	})
 }
 
-func Test_SSO_JsonModel(t *testing.T) {
-	safeTest(t, "Test_SSO_JsonModel", func() {
+func Test_SimpleStringOnce_JsonModel(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_JsonModel", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.InitPtr("test")
 
@@ -305,8 +305,8 @@ func Test_SSO_JsonModel(t *testing.T) {
 	})
 }
 
-func Test_SSO_JsonModelAny(t *testing.T) {
-	safeTest(t, "Test_SSO_JsonModelAny", func() {
+func Test_SimpleStringOnce_JsonModelAny(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_JsonModelAny", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.InitPtr("x")
 
@@ -317,8 +317,8 @@ func Test_SSO_JsonModelAny(t *testing.T) {
 	})
 }
 
-func Test_SSO_MarshalUnmarshalJSON(t *testing.T) {
-	safeTest(t, "Test_SSO_MarshalUnmarshalJSON", func() {
+func Test_SimpleStringOnce_MarshalUnmarshalJSON(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_MarshalUnmarshalJSON", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.InitPtr("hello")
 
@@ -341,8 +341,8 @@ func Test_SSO_MarshalUnmarshalJSON(t *testing.T) {
 	})
 }
 
-func Test_SSO_Json_JsonPtr(t *testing.T) {
-	safeTest(t, "Test_SSO_Json_JsonPtr", func() {
+func Test_SimpleStringOnce_Json_JsonPtr(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Json_JsonPtr", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("x")
 
@@ -360,8 +360,8 @@ func Test_SSO_Json_JsonPtr(t *testing.T) {
 	})
 }
 
-func Test_SSO_ParseInjectUsingJson(t *testing.T) {
-	safeTest(t, "Test_SSO_ParseInjectUsingJson", func() {
+func Test_SimpleStringOnce_ParseInjectUsingJson(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_ParseInjectUsingJson", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("hello")
 		jsonResult := sso.JsonPtr()
@@ -380,8 +380,8 @@ func Test_SSO_ParseInjectUsingJson(t *testing.T) {
 	})
 }
 
-func Test_SSO_ParseInjectUsingJsonMust(t *testing.T) {
-	safeTest(t, "Test_SSO_ParseInjectUsingJsonMust", func() {
+func Test_SimpleStringOnce_ParseInjectUsingJsonMust(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_ParseInjectUsingJsonMust", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("test")
 		jsonResult := sso.JsonPtr()
@@ -397,8 +397,8 @@ func Test_SSO_ParseInjectUsingJsonMust(t *testing.T) {
 	})
 }
 
-func Test_SSO_AsJsonContractsBinder(t *testing.T) {
-	safeTest(t, "Test_SSO_AsJsonContractsBinder", func() {
+func Test_SimpleStringOnce_AsJsonContractsBinder(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_AsJsonContractsBinder", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.InitPtr("x")
 
@@ -409,8 +409,8 @@ func Test_SSO_AsJsonContractsBinder(t *testing.T) {
 	})
 }
 
-func Test_SSO_AsJsoner(t *testing.T) {
-	safeTest(t, "Test_SSO_AsJsoner", func() {
+func Test_SimpleStringOnce_AsJsoner(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_AsJsoner", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.InitPtr("x")
 
@@ -421,8 +421,8 @@ func Test_SSO_AsJsoner(t *testing.T) {
 	})
 }
 
-func Test_SSO_JsonParseSelfInject(t *testing.T) {
-	safeTest(t, "Test_SSO_JsonParseSelfInject", func() {
+func Test_SimpleStringOnce_JsonParseSelfInject(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_JsonParseSelfInject", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.Init("val")
 		jsonResult := sso.JsonPtr()
@@ -438,8 +438,8 @@ func Test_SSO_JsonParseSelfInject(t *testing.T) {
 	})
 }
 
-func Test_SSO_AsJsonParseSelfInjector(t *testing.T) {
-	safeTest(t, "Test_SSO_AsJsonParseSelfInjector", func() {
+func Test_SimpleStringOnce_AsJsonParseSelfInjector(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_AsJsonParseSelfInjector", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.InitPtr("x")
 
@@ -450,8 +450,8 @@ func Test_SSO_AsJsonParseSelfInjector(t *testing.T) {
 	})
 }
 
-func Test_SSO_AsJsonMarshaller(t *testing.T) {
-	safeTest(t, "Test_SSO_AsJsonMarshaller", func() {
+func Test_SimpleStringOnce_AsJsonMarshaller(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_AsJsonMarshaller", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.InitPtr("x")
 
@@ -462,8 +462,8 @@ func Test_SSO_AsJsonMarshaller(t *testing.T) {
 	})
 }
 
-func Test_SSO_Serialize(t *testing.T) {
-	safeTest(t, "Test_SSO_Serialize", func() {
+func Test_SimpleStringOnce_Serialize(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Serialize", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.InitPtr("hello")
 
@@ -480,8 +480,8 @@ func Test_SSO_Serialize(t *testing.T) {
 	})
 }
 
-func Test_SSO_Deserialize(t *testing.T) {
-	safeTest(t, "Test_SSO_Deserialize", func() {
+func Test_SimpleStringOnce_Deserialize(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Deserialize", func() {
 		// Arrange
 		sso := corestr.New.SimpleStringOnce.InitPtr("data")
 
