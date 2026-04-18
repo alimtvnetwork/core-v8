@@ -12,8 +12,8 @@ import (
 // SimpleStringOnce — Split methods
 // ═══════════════════════════════════════════════════════════════
 
-func Test_SSO_SplitLeftRight_HasBoth(t *testing.T) {
-	safeTest(t, "Test_SSO_SplitLeftRight_HasBoth", func() {
+func Test_SimpleStringOnce_SplitLeftRight_HasBoth(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_SplitLeftRight_HasBoth", func() {
 		sso := corestr.New.SimpleStringOnce.Init("key=val")
 		left, right := sso.SplitLeftRight("=")
 		tc := caseV1Compat{Name: "SplitLeftRight left", Expected: "key", Actual: left}
@@ -25,8 +25,8 @@ func Test_SSO_SplitLeftRight_HasBoth(t *testing.T) {
 	})
 }
 
-func Test_SSO_SplitLeftRight_NoSep_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_SplitLeftRight_NoSep", func() {
+func Test_SimpleStringOnce_SplitLeftRight_NoSep_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_SplitLeftRight_NoSep", func() {
 		sso := corestr.New.SimpleStringOnce.Init("nosep")
 		left, right := sso.SplitLeftRight("=")
 		tc := caseV1Compat{Name: "SplitLeftRight no sep left", Expected: "nosep", Actual: left}
@@ -38,8 +38,8 @@ func Test_SSO_SplitLeftRight_NoSep_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_SplitLeftRightTrim_HasBoth(t *testing.T) {
-	safeTest(t, "Test_SSO_SplitLeftRightTrim_HasBoth", func() {
+func Test_SimpleStringOnce_SplitLeftRightTrim_HasBoth(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_SplitLeftRightTrim_HasBoth", func() {
 		sso := corestr.New.SimpleStringOnce.Init("  key = val  ")
 		left, right := sso.SplitLeftRightTrim("=")
 		tc := caseV1Compat{Name: "SplitLeftRightTrim left", Expected: "key", Actual: left}
@@ -51,8 +51,8 @@ func Test_SSO_SplitLeftRightTrim_HasBoth(t *testing.T) {
 	})
 }
 
-func Test_SSO_SplitLeftRightTrim_NoSep_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_SplitLeftRightTrim_NoSep", func() {
+func Test_SimpleStringOnce_SplitLeftRightTrim_NoSep_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_SplitLeftRightTrim_NoSep", func() {
 		sso := corestr.New.SimpleStringOnce.Init("  nosep  ")
 		left, right := sso.SplitLeftRightTrim("=")
 		tc := caseV1Compat{Name: "SplitLeftRightTrim no sep left", Expected: "nosep", Actual: left}
@@ -64,8 +64,8 @@ func Test_SSO_SplitLeftRightTrim_NoSep_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_LinesSimpleSlice_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_LinesSimpleSlice", func() {
+func Test_SimpleStringOnce_LinesSimpleSlice_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_LinesSimpleSlice", func() {
 		sso := corestr.New.SimpleStringOnce.Init("a\nb\nc")
 		ss := sso.LinesSimpleSlice()
 		tc := caseV1Compat{Name: "LinesSimpleSlice", Expected: 3, Actual: ss.Length()}
@@ -75,8 +75,8 @@ func Test_SSO_LinesSimpleSlice_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_SimpleSlice_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_SimpleSlice", func() {
+func Test_SimpleStringOnce_SimpleSlice_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_SimpleSlice", func() {
 		sso := corestr.New.SimpleStringOnce.Init("a,b,c")
 		ss := sso.SimpleSlice(",")
 		tc := caseV1Compat{Name: "SimpleSlice", Expected: 3, Actual: ss.Length()}
@@ -86,8 +86,8 @@ func Test_SSO_SimpleSlice_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_Split_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_Split", func() {
+func Test_SimpleStringOnce_Split_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Split", func() {
 		sso := corestr.New.SimpleStringOnce.Init("a-b-c")
 		result := sso.Split("-")
 		tc := caseV1Compat{Name: "Split", Expected: 3, Actual: len(result)}
@@ -97,8 +97,8 @@ func Test_SSO_Split_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_SplitNonEmpty_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_SplitNonEmpty", func() {
+func Test_SimpleStringOnce_SplitNonEmpty_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_SplitNonEmpty", func() {
 		sso := corestr.New.SimpleStringOnce.Init("a,,b")
 		result := sso.SplitNonEmpty(",")
 		tc := caseV1Compat{Name: "SplitNonEmpty", Expected: true, Actual: len(result) > 0}
@@ -108,8 +108,8 @@ func Test_SSO_SplitNonEmpty_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_SplitTrimNonWhitespace_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_SplitTrimNonWhitespace", func() {
+func Test_SimpleStringOnce_SplitTrimNonWhitespace_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_SplitTrimNonWhitespace", func() {
 		sso := corestr.New.SimpleStringOnce.Init("a, ,b")
 		result := sso.SplitTrimNonWhitespace(",")
 		tc := caseV1Compat{Name: "SplitTrimNonWhitespace", Expected: true, Actual: len(result) > 0}
@@ -123,8 +123,8 @@ func Test_SSO_SplitTrimNonWhitespace_SsoSplitleftright(t *testing.T) {
 // SimpleStringOnce — String/Match methods
 // ═══════════════════════════════════════════════════════════════
 
-func Test_SSO_Is_FromSSOSplitLeftRightIte(t *testing.T) {
-	safeTest(t, "Test_SSO_Is", func() {
+func Test_SimpleStringOnce_Is_FromSSOSplitLeftRightIte(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Is", func() {
 		sso := corestr.New.SimpleStringOnce.Init("hello")
 		tc := caseV1Compat{Name: "Is match", Expected: true, Actual: sso.Is("hello")}
 
@@ -133,8 +133,8 @@ func Test_SSO_Is_FromSSOSplitLeftRightIte(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsAnyOf_Found(t *testing.T) {
-	safeTest(t, "Test_SSO_IsAnyOf_Found", func() {
+func Test_SimpleStringOnce_IsAnyOf_Found(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_IsAnyOf_Found", func() {
 		sso := corestr.New.SimpleStringOnce.Init("b")
 		tc := caseV1Compat{Name: "IsAnyOf found", Expected: true, Actual: sso.IsAnyOf("a", "b", "c")}
 
@@ -143,8 +143,8 @@ func Test_SSO_IsAnyOf_Found(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsAnyOf_NotFound(t *testing.T) {
-	safeTest(t, "Test_SSO_IsAnyOf_NotFound", func() {
+func Test_SimpleStringOnce_IsAnyOf_NotFound(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_IsAnyOf_NotFound", func() {
 		sso := corestr.New.SimpleStringOnce.Init("z")
 		tc := caseV1Compat{Name: "IsAnyOf not found", Expected: false, Actual: sso.IsAnyOf("a", "b")}
 
@@ -153,8 +153,8 @@ func Test_SSO_IsAnyOf_NotFound(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsAnyOf_Empty_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_IsAnyOf_Empty", func() {
+func Test_SimpleStringOnce_IsAnyOf_Empty_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_IsAnyOf_Empty", func() {
 		sso := corestr.New.SimpleStringOnce.Init("x")
 		tc := caseV1Compat{Name: "IsAnyOf empty returns true", Expected: true, Actual: sso.IsAnyOf()}
 
@@ -163,8 +163,8 @@ func Test_SSO_IsAnyOf_Empty_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsContains_FromSSOSplitLeftRightIte(t *testing.T) {
-	safeTest(t, "Test_SSO_IsContains", func() {
+func Test_SimpleStringOnce_IsContains_FromSSOSplitLeftRightIte(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_IsContains", func() {
 		sso := corestr.New.SimpleStringOnce.Init("hello world")
 		tc := caseV1Compat{Name: "IsContains", Expected: true, Actual: sso.IsContains("world")}
 
@@ -173,8 +173,8 @@ func Test_SSO_IsContains_FromSSOSplitLeftRightIte(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsAnyContains_Found(t *testing.T) {
-	safeTest(t, "Test_SSO_IsAnyContains_Found", func() {
+func Test_SimpleStringOnce_IsAnyContains_Found(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_IsAnyContains_Found", func() {
 		sso := corestr.New.SimpleStringOnce.Init("hello world")
 		tc := caseV1Compat{Name: "IsAnyContains found", Expected: true, Actual: sso.IsAnyContains("xyz", "world")}
 
@@ -183,8 +183,8 @@ func Test_SSO_IsAnyContains_Found(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsAnyContains_NotFound(t *testing.T) {
-	safeTest(t, "Test_SSO_IsAnyContains_NotFound", func() {
+func Test_SimpleStringOnce_IsAnyContains_NotFound(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_IsAnyContains_NotFound", func() {
 		sso := corestr.New.SimpleStringOnce.Init("hello")
 		tc := caseV1Compat{Name: "IsAnyContains not found", Expected: false, Actual: sso.IsAnyContains("xyz", "abc")}
 
@@ -193,8 +193,8 @@ func Test_SSO_IsAnyContains_NotFound(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsAnyContains_Empty_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_IsAnyContains_Empty", func() {
+func Test_SimpleStringOnce_IsAnyContains_Empty_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_IsAnyContains_Empty", func() {
 		sso := corestr.New.SimpleStringOnce.Init("x")
 		tc := caseV1Compat{Name: "IsAnyContains empty", Expected: true, Actual: sso.IsAnyContains()}
 
@@ -203,8 +203,8 @@ func Test_SSO_IsAnyContains_Empty_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsEqualNonSensitive_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_IsEqualNonSensitive", func() {
+func Test_SimpleStringOnce_IsEqualNonSensitive_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_IsEqualNonSensitive", func() {
 		sso := corestr.New.SimpleStringOnce.Init("Hello")
 		tc := caseV1Compat{Name: "IsEqualNonSensitive", Expected: true, Actual: sso.IsEqualNonSensitive("hello")}
 
@@ -213,8 +213,8 @@ func Test_SSO_IsEqualNonSensitive_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsRegexMatches_Valid(t *testing.T) {
-	safeTest(t, "Test_SSO_IsRegexMatches_Valid", func() {
+func Test_SimpleStringOnce_IsRegexMatches_Valid(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_IsRegexMatches_Valid", func() {
 		sso := corestr.New.SimpleStringOnce.Init("abc123")
 		re := regexp.MustCompile(`\d+`)
 		tc := caseV1Compat{Name: "IsRegexMatches valid", Expected: true, Actual: sso.IsRegexMatches(re)}
@@ -224,8 +224,8 @@ func Test_SSO_IsRegexMatches_Valid(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsRegexMatches_Nil(t *testing.T) {
-	safeTest(t, "Test_SSO_IsRegexMatches_Nil", func() {
+func Test_SimpleStringOnce_IsRegexMatches_Nil(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_IsRegexMatches_Nil", func() {
 		sso := corestr.New.SimpleStringOnce.Init("abc")
 		tc := caseV1Compat{Name: "IsRegexMatches nil", Expected: false, Actual: sso.IsRegexMatches(nil)}
 
@@ -234,8 +234,8 @@ func Test_SSO_IsRegexMatches_Nil(t *testing.T) {
 	})
 }
 
-func Test_SSO_RegexFindString_Valid(t *testing.T) {
-	safeTest(t, "Test_SSO_RegexFindString_Valid", func() {
+func Test_SimpleStringOnce_RegexFindString_Valid(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_RegexFindString_Valid", func() {
 		sso := corestr.New.SimpleStringOnce.Init("abc123def")
 		re := regexp.MustCompile(`\d+`)
 		tc := caseV1Compat{Name: "RegexFindString", Expected: "123", Actual: sso.RegexFindString(re)}
@@ -245,8 +245,8 @@ func Test_SSO_RegexFindString_Valid(t *testing.T) {
 	})
 }
 
-func Test_SSO_RegexFindString_Nil_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_RegexFindString_Nil", func() {
+func Test_SimpleStringOnce_RegexFindString_Nil_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_RegexFindString_Nil", func() {
 		sso := corestr.New.SimpleStringOnce.Init("abc")
 		tc := caseV1Compat{Name: "RegexFindString nil", Expected: "", Actual: sso.RegexFindString(nil)}
 
@@ -255,8 +255,8 @@ func Test_SSO_RegexFindString_Nil_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_RegexFindAllStrings_Valid(t *testing.T) {
-	safeTest(t, "Test_SSO_RegexFindAllStrings_Valid", func() {
+func Test_SimpleStringOnce_RegexFindAllStrings_Valid(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_RegexFindAllStrings_Valid", func() {
 		sso := corestr.New.SimpleStringOnce.Init("a1b2c3")
 		re := regexp.MustCompile(`\d`)
 		result := sso.RegexFindAllStrings(re, -1)
@@ -267,8 +267,8 @@ func Test_SSO_RegexFindAllStrings_Valid(t *testing.T) {
 	})
 }
 
-func Test_SSO_RegexFindAllStrings_Nil_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_RegexFindAllStrings_Nil", func() {
+func Test_SimpleStringOnce_RegexFindAllStrings_Nil_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_RegexFindAllStrings_Nil", func() {
 		sso := corestr.New.SimpleStringOnce.Init("abc")
 		result := sso.RegexFindAllStrings(nil, -1)
 		tc := caseV1Compat{Name: "RegexFindAllStrings nil", Expected: 0, Actual: len(result)}
@@ -278,8 +278,8 @@ func Test_SSO_RegexFindAllStrings_Nil_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_RegexFindAllStringsWithFlag_Valid(t *testing.T) {
-	safeTest(t, "Test_SSO_RegexFindAllStringsWithFlag_Valid", func() {
+func Test_SimpleStringOnce_RegexFindAllStringsWithFlag_Valid(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_RegexFindAllStringsWithFlag_Valid", func() {
 		sso := corestr.New.SimpleStringOnce.Init("a1b2c3")
 		re := regexp.MustCompile(`\d`)
 		items, hasAny := sso.RegexFindAllStringsWithFlag(re, -1)
@@ -292,8 +292,8 @@ func Test_SSO_RegexFindAllStringsWithFlag_Valid(t *testing.T) {
 	})
 }
 
-func Test_SSO_RegexFindAllStringsWithFlag_Nil_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_RegexFindAllStringsWithFlag_Nil", func() {
+func Test_SimpleStringOnce_RegexFindAllStringsWithFlag_Nil_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_RegexFindAllStringsWithFlag_Nil", func() {
 		sso := corestr.New.SimpleStringOnce.Init("abc")
 		_, hasAny := sso.RegexFindAllStringsWithFlag(nil, -1)
 		tc := caseV1Compat{Name: "RegexFindAllStringsWithFlag nil", Expected: false, Actual: hasAny}
@@ -307,8 +307,8 @@ func Test_SSO_RegexFindAllStringsWithFlag_Nil_SsoSplitleftright(t *testing.T) {
 // SimpleStringOnce — Numeric conversions
 // ═══════════════════════════════════════════════════════════════
 
-func Test_SSO_Int16_Valid(t *testing.T) {
-	safeTest(t, "Test_SSO_Int16_Valid", func() {
+func Test_SimpleStringOnce_Int16_Valid(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Int16_Valid", func() {
 		sso := corestr.New.SimpleStringOnce.Init("100")
 		tc := caseV1Compat{Name: "Int16 valid", Expected: int16(100), Actual: sso.Int16()}
 
@@ -317,8 +317,8 @@ func Test_SSO_Int16_Valid(t *testing.T) {
 	})
 }
 
-func Test_SSO_Int16_OutOfRange(t *testing.T) {
-	safeTest(t, "Test_SSO_Int16_OutOfRange", func() {
+func Test_SimpleStringOnce_Int16_OutOfRange(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Int16_OutOfRange", func() {
 		sso := corestr.New.SimpleStringOnce.Init("99999")
 		tc := caseV1Compat{Name: "Int16 out of range", Expected: int16(0), Actual: sso.Int16()}
 
@@ -327,8 +327,8 @@ func Test_SSO_Int16_OutOfRange(t *testing.T) {
 	})
 }
 
-func Test_SSO_Int16_Error(t *testing.T) {
-	safeTest(t, "Test_SSO_Int16_Error", func() {
+func Test_SimpleStringOnce_Int16_Error(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Int16_Error", func() {
 		sso := corestr.New.SimpleStringOnce.Init("abc")
 		tc := caseV1Compat{Name: "Int16 error", Expected: int16(0), Actual: sso.Int16()}
 
@@ -337,8 +337,8 @@ func Test_SSO_Int16_Error(t *testing.T) {
 	})
 }
 
-func Test_SSO_Int32_Valid(t *testing.T) {
-	safeTest(t, "Test_SSO_Int32_Valid", func() {
+func Test_SimpleStringOnce_Int32_Valid(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Int32_Valid", func() {
 		sso := corestr.New.SimpleStringOnce.Init("5000")
 		tc := caseV1Compat{Name: "Int32 valid", Expected: int32(5000), Actual: sso.Int32()}
 
@@ -347,8 +347,8 @@ func Test_SSO_Int32_Valid(t *testing.T) {
 	})
 }
 
-func Test_SSO_Int32_Error(t *testing.T) {
-	safeTest(t, "Test_SSO_Int32_Error", func() {
+func Test_SimpleStringOnce_Int32_Error(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Int32_Error", func() {
 		sso := corestr.New.SimpleStringOnce.Init("abc")
 		tc := caseV1Compat{Name: "Int32 error", Expected: int32(0), Actual: sso.Int32()}
 
@@ -357,8 +357,8 @@ func Test_SSO_Int32_Error(t *testing.T) {
 	})
 }
 
-func Test_SSO_Uint16_Valid(t *testing.T) {
-	safeTest(t, "Test_SSO_Uint16_Valid", func() {
+func Test_SimpleStringOnce_Uint16_Valid(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Uint16_Valid", func() {
 		sso := corestr.New.SimpleStringOnce.Init("500")
 		val, isInRange := sso.Uint16()
 		tc := caseV1Compat{Name: "Uint16 valid", Expected: uint16(500), Actual: val}
@@ -370,8 +370,8 @@ func Test_SSO_Uint16_Valid(t *testing.T) {
 	})
 }
 
-func Test_SSO_Uint32_Valid(t *testing.T) {
-	safeTest(t, "Test_SSO_Uint32_Valid", func() {
+func Test_SimpleStringOnce_Uint32_Valid(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Uint32_Valid", func() {
 		sso := corestr.New.SimpleStringOnce.Init("1000")
 		val, isInRange := sso.Uint32()
 		tc := caseV1Compat{Name: "Uint32 valid", Expected: uint32(1000), Actual: val}
@@ -383,8 +383,8 @@ func Test_SSO_Uint32_Valid(t *testing.T) {
 	})
 }
 
-func Test_SSO_WithinRange_InRange_FromSSOSplitLeftRightIte(t *testing.T) {
-	safeTest(t, "Test_SSO_WithinRange_InRange", func() {
+func Test_SimpleStringOnce_WithinRange_InRange_FromSSOSplitLeftRightIte(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_WithinRange_InRange", func() {
 		sso := corestr.New.SimpleStringOnce.Init("5")
 		val, isInRange := sso.WithinRange(true, 0, 10)
 		tc := caseV1Compat{Name: "WithinRange inRange", Expected: 5, Actual: val}
@@ -396,8 +396,8 @@ func Test_SSO_WithinRange_InRange_FromSSOSplitLeftRightIte(t *testing.T) {
 	})
 }
 
-func Test_SSO_WithinRange_BelowMin(t *testing.T) {
-	safeTest(t, "Test_SSO_WithinRange_BelowMin", func() {
+func Test_SimpleStringOnce_WithinRange_BelowMin(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_WithinRange_BelowMin", func() {
 		sso := corestr.New.SimpleStringOnce.Init("-5")
 		val, isInRange := sso.WithinRange(true, 0, 10)
 		tc := caseV1Compat{Name: "WithinRange below min", Expected: 0, Actual: val}
@@ -409,8 +409,8 @@ func Test_SSO_WithinRange_BelowMin(t *testing.T) {
 	})
 }
 
-func Test_SSO_WithinRange_AboveMax(t *testing.T) {
-	safeTest(t, "Test_SSO_WithinRange_AboveMax", func() {
+func Test_SimpleStringOnce_WithinRange_AboveMax(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_WithinRange_AboveMax", func() {
 		sso := corestr.New.SimpleStringOnce.Init("15")
 		val, isInRange := sso.WithinRange(true, 0, 10)
 		tc := caseV1Compat{Name: "WithinRange above max", Expected: 10, Actual: val}
@@ -422,8 +422,8 @@ func Test_SSO_WithinRange_AboveMax(t *testing.T) {
 	})
 }
 
-func Test_SSO_WithinRange_NoBoundary_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_WithinRange_NoBoundary", func() {
+func Test_SimpleStringOnce_WithinRange_NoBoundary_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_WithinRange_NoBoundary", func() {
 		sso := corestr.New.SimpleStringOnce.Init("-5")
 		val, isInRange := sso.WithinRange(false, 0, 10)
 		tc := caseV1Compat{Name: "WithinRange noBoundary val", Expected: -5, Actual: val}
@@ -435,8 +435,8 @@ func Test_SSO_WithinRange_NoBoundary_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_WithinRange_ParseErr(t *testing.T) {
-	safeTest(t, "Test_SSO_WithinRange_ParseErr", func() {
+func Test_SimpleStringOnce_WithinRange_ParseErr(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_WithinRange_ParseErr", func() {
 		sso := corestr.New.SimpleStringOnce.Init("abc")
 		val, isInRange := sso.WithinRange(true, 0, 10)
 		tc := caseV1Compat{Name: "WithinRange parseErr", Expected: 0, Actual: val}
@@ -448,8 +448,8 @@ func Test_SSO_WithinRange_ParseErr(t *testing.T) {
 	})
 }
 
-func Test_SSO_WithinRangeDefault_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_WithinRangeDefault", func() {
+func Test_SimpleStringOnce_WithinRangeDefault_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_WithinRangeDefault", func() {
 		sso := corestr.New.SimpleStringOnce.Init("5")
 		val, isInRange := sso.WithinRangeDefault(0, 10)
 		tc := caseV1Compat{Name: "WithinRangeDefault", Expected: 5, Actual: val}
@@ -465,8 +465,8 @@ func Test_SSO_WithinRangeDefault_SsoSplitleftright(t *testing.T) {
 // SimpleStringOnce — Boolean / IsSetter
 // ═══════════════════════════════════════════════════════════════
 
-func Test_SSO_BooleanDefault_True(t *testing.T) {
-	safeTest(t, "Test_SSO_BooleanDefault_True", func() {
+func Test_SimpleStringOnce_BooleanDefault_True(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_BooleanDefault_True", func() {
 		sso := corestr.New.SimpleStringOnce.Init("yes")
 		tc := caseV1Compat{Name: "BooleanDefault true", Expected: true, Actual: sso.BooleanDefault()}
 
@@ -475,8 +475,8 @@ func Test_SSO_BooleanDefault_True(t *testing.T) {
 	})
 }
 
-func Test_SSO_Boolean_ConsiderInit_Uninit(t *testing.T) {
-	safeTest(t, "Test_SSO_Boolean_ConsiderInit_Uninit", func() {
+func Test_SimpleStringOnce_Boolean_ConsiderInit_Uninit(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Boolean_ConsiderInit_Uninit", func() {
 		sso := corestr.New.SimpleStringOnce.Uninitialized("true")
 		tc := caseV1Compat{Name: "Boolean considerInit uninit", Expected: false, Actual: sso.Boolean(true)}
 
@@ -485,8 +485,8 @@ func Test_SSO_Boolean_ConsiderInit_Uninit(t *testing.T) {
 	})
 }
 
-func Test_SSO_Boolean_YesValues(t *testing.T) {
-	safeTest(t, "Test_SSO_Boolean_YesValues", func() {
+func Test_SimpleStringOnce_Boolean_YesValues(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Boolean_YesValues", func() {
 		for _, val := range []string{"yes", "y", "1", "YES", "Y"} {
 			sso := corestr.New.SimpleStringOnce.Init(val)
 			tc := caseV1Compat{Name: "Boolean " + val, Expected: true, Actual: sso.Boolean(false)}
@@ -497,8 +497,8 @@ func Test_SSO_Boolean_YesValues(t *testing.T) {
 	})
 }
 
-func Test_SSO_Boolean_ParseTrue(t *testing.T) {
-	safeTest(t, "Test_SSO_Boolean_ParseTrue", func() {
+func Test_SimpleStringOnce_Boolean_ParseTrue(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Boolean_ParseTrue", func() {
 		sso := corestr.New.SimpleStringOnce.Init("true")
 		tc := caseV1Compat{Name: "Boolean parse true", Expected: true, Actual: sso.Boolean(false)}
 
@@ -507,8 +507,8 @@ func Test_SSO_Boolean_ParseTrue(t *testing.T) {
 	})
 }
 
-func Test_SSO_Boolean_ParseErr(t *testing.T) {
-	safeTest(t, "Test_SSO_Boolean_ParseErr", func() {
+func Test_SimpleStringOnce_Boolean_ParseErr(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Boolean_ParseErr", func() {
 		sso := corestr.New.SimpleStringOnce.Init("notbool")
 		tc := caseV1Compat{Name: "Boolean parse err", Expected: false, Actual: sso.Boolean(false)}
 
@@ -517,8 +517,8 @@ func Test_SSO_Boolean_ParseErr(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsValueBool_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_IsValueBool", func() {
+func Test_SimpleStringOnce_IsValueBool_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_IsValueBool", func() {
 		sso := corestr.New.SimpleStringOnce.Uninitialized("true")
 		tc := caseV1Compat{Name: "IsValueBool", Expected: true, Actual: sso.IsValueBool()}
 
@@ -527,8 +527,8 @@ func Test_SSO_IsValueBool_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsSetter_True_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_IsSetter_True", func() {
+func Test_SimpleStringOnce_IsSetter_True_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_IsSetter_True", func() {
 		sso := corestr.New.SimpleStringOnce.Init("yes")
 		tc := caseV1Compat{Name: "IsSetter true", Expected: issetter.True, Actual: sso.IsSetter(false)}
 
@@ -537,8 +537,8 @@ func Test_SSO_IsSetter_True_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsSetter_Uninit(t *testing.T) {
-	safeTest(t, "Test_SSO_IsSetter_Uninit", func() {
+func Test_SimpleStringOnce_IsSetter_Uninit(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_IsSetter_Uninit", func() {
 		sso := corestr.New.SimpleStringOnce.Uninitialized("yes")
 		tc := caseV1Compat{Name: "IsSetter uninit", Expected: issetter.False, Actual: sso.IsSetter(true)}
 
@@ -547,8 +547,8 @@ func Test_SSO_IsSetter_Uninit(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsSetter_ParseErr(t *testing.T) {
-	safeTest(t, "Test_SSO_IsSetter_ParseErr", func() {
+func Test_SimpleStringOnce_IsSetter_ParseErr(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_IsSetter_ParseErr", func() {
 		sso := corestr.New.SimpleStringOnce.Init("notbool")
 		tc := caseV1Compat{Name: "IsSetter parseErr", Expected: issetter.Uninitialized, Actual: sso.IsSetter(false)}
 
@@ -557,8 +557,8 @@ func Test_SSO_IsSetter_ParseErr(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsSetter_ParseTrue(t *testing.T) {
-	safeTest(t, "Test_SSO_IsSetter_ParseTrue", func() {
+func Test_SimpleStringOnce_IsSetter_ParseTrue(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_IsSetter_ParseTrue", func() {
 		sso := corestr.New.SimpleStringOnce.Init("true")
 		tc := caseV1Compat{Name: "IsSetter parse true", Expected: issetter.True, Actual: sso.IsSetter(false)}
 
@@ -567,8 +567,8 @@ func Test_SSO_IsSetter_ParseTrue(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsSetter_ParseFalse(t *testing.T) {
-	safeTest(t, "Test_SSO_IsSetter_ParseFalse", func() {
+func Test_SimpleStringOnce_IsSetter_ParseFalse(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_IsSetter_ParseFalse", func() {
 		sso := corestr.New.SimpleStringOnce.Init("false")
 		tc := caseV1Compat{Name: "IsSetter parse false", Expected: issetter.False, Actual: sso.IsSetter(false)}
 
@@ -581,8 +581,8 @@ func Test_SSO_IsSetter_ParseFalse(t *testing.T) {
 // SimpleStringOnce — Clone / String / Dispose / Json
 // ═══════════════════════════════════════════════════════════════
 
-func Test_SSO_CloneUsingNewVal_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_CloneUsingNewVal", func() {
+func Test_SimpleStringOnce_CloneUsingNewVal_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_CloneUsingNewVal", func() {
 		sso := corestr.New.SimpleStringOnce.Init("old")
 		cloned := sso.CloneUsingNewVal("new")
 		tc := caseV1Compat{Name: "CloneUsingNewVal value", Expected: "new", Actual: cloned.Value()}
@@ -594,8 +594,8 @@ func Test_SSO_CloneUsingNewVal_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_Clone_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_Clone", func() {
+func Test_SimpleStringOnce_Clone_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Clone", func() {
 		sso := corestr.New.SimpleStringOnce.Init("val")
 		cloned := sso.Clone()
 		tc := caseV1Compat{Name: "Clone", Expected: "val", Actual: cloned.Value()}
@@ -605,8 +605,8 @@ func Test_SSO_Clone_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_ClonePtr_Valid(t *testing.T) {
-	safeTest(t, "Test_SSO_ClonePtr_Valid", func() {
+func Test_SimpleStringOnce_ClonePtr_Valid(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_ClonePtr_Valid", func() {
 		sso := corestr.New.SimpleStringOnce.InitPtr("val")
 		cloned := sso.ClonePtr()
 		tc := caseV1Compat{Name: "ClonePtr", Expected: "val", Actual: cloned.Value()}
@@ -616,8 +616,8 @@ func Test_SSO_ClonePtr_Valid(t *testing.T) {
 	})
 }
 
-func Test_SSO_ClonePtr_Nil_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_ClonePtr_Nil", func() {
+func Test_SimpleStringOnce_ClonePtr_Nil_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_ClonePtr_Nil", func() {
 		var sso *corestr.SimpleStringOnce
 		cloned := sso.ClonePtr()
 		tc := caseV1Compat{Name: "ClonePtr nil", Expected: true, Actual: cloned == nil}
@@ -627,8 +627,8 @@ func Test_SSO_ClonePtr_Nil_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_StringPtr_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_StringPtr", func() {
+func Test_SimpleStringOnce_StringPtr_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_StringPtr", func() {
 		sso := corestr.New.SimpleStringOnce.InitPtr("hello")
 		ptr := sso.StringPtr()
 		tc := caseV1Compat{Name: "StringPtr", Expected: "hello", Actual: *ptr}
@@ -638,8 +638,8 @@ func Test_SSO_StringPtr_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_StringPtr_Nil_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_StringPtr_Nil", func() {
+func Test_SimpleStringOnce_StringPtr_Nil_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_StringPtr_Nil", func() {
 		var sso *corestr.SimpleStringOnce
 		ptr := sso.StringPtr()
 		tc := caseV1Compat{Name: "StringPtr nil", Expected: "", Actual: *ptr}
@@ -649,8 +649,8 @@ func Test_SSO_StringPtr_Nil_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_Dispose_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_Dispose", func() {
+func Test_SimpleStringOnce_Dispose_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Dispose", func() {
 		sso := corestr.New.SimpleStringOnce.InitPtr("val")
 		sso.Dispose()
 		tc := caseV1Compat{Name: "Dispose value empty", Expected: "", Actual: sso.Value()}
@@ -660,8 +660,8 @@ func Test_SSO_Dispose_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_Dispose_Nil_SsoSplitleftright(t *testing.T) {
-	safeTest(t, "Test_SSO_Dispose_Nil", func() {
+func Test_SimpleStringOnce_Dispose_Nil_SsoSplitleftright(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Dispose_Nil", func() {
 		var sso *corestr.SimpleStringOnce
 		sso.Dispose() // should not panic
 		tc := caseV1Compat{Name: "Dispose nil no panic", Expected: true, Actual: true}
@@ -671,8 +671,8 @@ func Test_SSO_Dispose_Nil_SsoSplitleftright(t *testing.T) {
 	})
 }
 
-func Test_SSO_NonPtr(t *testing.T) {
-	safeTest(t, "Test_SSO_NonPtr", func() {
+func Test_SimpleStringOnce_NonPtr(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_NonPtr", func() {
 		sso := corestr.New.SimpleStringOnce.Init("val")
 		np := sso.NonPtr()
 		tc := caseV1Compat{Name: "NonPtr", Expected: "val", Actual: np.Value()}
@@ -682,8 +682,8 @@ func Test_SSO_NonPtr(t *testing.T) {
 	})
 }
 
-func Test_SSO_Ptr(t *testing.T) {
-	safeTest(t, "Test_SSO_Ptr", func() {
+func Test_SimpleStringOnce_Ptr(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Ptr", func() {
 		sso := corestr.New.SimpleStringOnce.Init("val")
 		p := sso.Ptr()
 		tc := caseV1Compat{Name: "Ptr not nil", Expected: true, Actual: p != nil}
@@ -693,8 +693,8 @@ func Test_SSO_Ptr(t *testing.T) {
 	})
 }
 
-func Test_SSO_SafeValue_Init(t *testing.T) {
-	safeTest(t, "Test_SSO_SafeValue_Init", func() {
+func Test_SimpleStringOnce_SafeValue_Init(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_SafeValue_Init", func() {
 		sso := corestr.New.SimpleStringOnce.Init("test")
 		tc := caseV1Compat{Name: "SafeValue init", Expected: "test", Actual: sso.SafeValue()}
 
@@ -703,8 +703,8 @@ func Test_SSO_SafeValue_Init(t *testing.T) {
 	})
 }
 
-func Test_SSO_SafeValue_Uninit_FromSSOSplitLeftRightIte(t *testing.T) {
-	safeTest(t, "Test_SSO_SafeValue_Uninit", func() {
+func Test_SimpleStringOnce_SafeValue_Uninit_FromSSOSplitLeftRightIte(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_SafeValue_Uninit", func() {
 		sso := corestr.New.SimpleStringOnce.Uninitialized("test")
 		tc := caseV1Compat{Name: "SafeValue uninit", Expected: "", Actual: sso.SafeValue()}
 
@@ -713,8 +713,8 @@ func Test_SSO_SafeValue_Uninit_FromSSOSplitLeftRightIte(t *testing.T) {
 	})
 }
 
-func Test_SSO_Json_FromSSOSplitLeftRightIte(t *testing.T) {
-	safeTest(t, "Test_SSO_Json", func() {
+func Test_SimpleStringOnce_Json_FromSSOSplitLeftRightIte(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Json", func() {
 		sso := corestr.New.SimpleStringOnce.Init("jsonval")
 		jsonResult := sso.Json()
 		tc := caseV1Compat{Name: "Json not empty", Expected: true, Actual: jsonResult.HasAnyItem()}
@@ -724,8 +724,8 @@ func Test_SSO_Json_FromSSOSplitLeftRightIte(t *testing.T) {
 	})
 }
 
-func Test_SSO_JsonPtr_FromSSOSplitLeftRightIte(t *testing.T) {
-	safeTest(t, "Test_SSO_JsonPtr", func() {
+func Test_SimpleStringOnce_JsonPtr_FromSSOSplitLeftRightIte(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_JsonPtr", func() {
 		sso := corestr.New.SimpleStringOnce.Init("jsonval")
 		ptr := sso.JsonPtr()
 		tc := caseV1Compat{Name: "JsonPtr not nil", Expected: true, Actual: ptr != nil}
@@ -735,8 +735,8 @@ func Test_SSO_JsonPtr_FromSSOSplitLeftRightIte(t *testing.T) {
 	})
 }
 
-func Test_SSO_MarshalUnmarshal(t *testing.T) {
-	safeTest(t, "Test_SSO_MarshalUnmarshal", func() {
+func Test_SimpleStringOnce_MarshalUnmarshal(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_MarshalUnmarshal", func() {
 		sso := corestr.New.SimpleStringOnce.Init("marshal")
 		data, err := sso.MarshalJSON()
 		tc := caseV1Compat{Name: "MarshalJSON no err", Expected: true, Actual: err == nil}
@@ -753,8 +753,8 @@ func Test_SSO_MarshalUnmarshal(t *testing.T) {
 	})
 }
 
-func Test_SSO_Serialize_FromSSOSplitLeftRightIte(t *testing.T) {
-	safeTest(t, "Test_SSO_Serialize", func() {
+func Test_SimpleStringOnce_Serialize_FromSSOSplitLeftRightIte(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_Serialize", func() {
 		sso := corestr.New.SimpleStringOnce.Init("serval")
 		data, err := sso.Serialize()
 		tc := caseV1Compat{Name: "Serialize no err", Expected: true, Actual: err == nil}
@@ -766,8 +766,8 @@ func Test_SSO_Serialize_FromSSOSplitLeftRightIte(t *testing.T) {
 	})
 }
 
-func Test_SSO_AsJsonContractsBinder_FromSSOSplitLeftRightIte(t *testing.T) {
-	safeTest(t, "Test_SSO_AsJsonContractsBinder", func() {
+func Test_SimpleStringOnce_AsJsonContractsBinder_FromSSOSplitLeftRightIte(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_AsJsonContractsBinder", func() {
 		sso := corestr.New.SimpleStringOnce.InitPtr("v")
 		binder := sso.AsJsonContractsBinder()
 		tc := caseV1Compat{Name: "AsJsonContractsBinder", Expected: true, Actual: binder != nil}
@@ -777,8 +777,8 @@ func Test_SSO_AsJsonContractsBinder_FromSSOSplitLeftRightIte(t *testing.T) {
 	})
 }
 
-func Test_SSO_AsJsoner_FromSSOSplitLeftRightIte(t *testing.T) {
-	safeTest(t, "Test_SSO_AsJsoner", func() {
+func Test_SimpleStringOnce_AsJsoner_FromSSOSplitLeftRightIte(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_AsJsoner", func() {
 		sso := corestr.New.SimpleStringOnce.InitPtr("v")
 		j := sso.AsJsoner()
 		tc := caseV1Compat{Name: "AsJsoner", Expected: true, Actual: j != nil}
@@ -788,8 +788,8 @@ func Test_SSO_AsJsoner_FromSSOSplitLeftRightIte(t *testing.T) {
 	})
 }
 
-func Test_SSO_AsJsonParseSelfInjector_FromSSOSplitLeftRightIte(t *testing.T) {
-	safeTest(t, "Test_SSO_AsJsonParseSelfInjector", func() {
+func Test_SimpleStringOnce_AsJsonParseSelfInjector_FromSSOSplitLeftRightIte(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_AsJsonParseSelfInjector", func() {
 		sso := corestr.New.SimpleStringOnce.InitPtr("v")
 		inj := sso.AsJsonParseSelfInjector()
 		tc := caseV1Compat{Name: "AsJsonParseSelfInjector", Expected: true, Actual: inj != nil}
@@ -799,8 +799,8 @@ func Test_SSO_AsJsonParseSelfInjector_FromSSOSplitLeftRightIte(t *testing.T) {
 	})
 }
 
-func Test_SSO_AsJsonMarshaller_FromSSOSplitLeftRightIte(t *testing.T) {
-	safeTest(t, "Test_SSO_AsJsonMarshaller", func() {
+func Test_SimpleStringOnce_AsJsonMarshaller_FromSSOSplitLeftRightIte(t *testing.T) {
+	safeTest(t, "Test_SimpleStringOnce_AsJsonMarshaller", func() {
 		sso := corestr.New.SimpleStringOnce.InitPtr("v")
 		m := sso.AsJsonMarshaller()
 		tc := caseV1Compat{Name: "AsJsonMarshaller", Expected: true, Actual: m != nil}

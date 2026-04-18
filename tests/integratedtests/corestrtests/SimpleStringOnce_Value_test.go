@@ -11,7 +11,7 @@ import (
 // SimpleStringOnce — Init/Set/Get
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_SSO_Value_Empty(t *testing.T) {
+func Test_SimpleStringOnce_Value_Empty(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Value_Empty", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -35,7 +35,7 @@ func Test_SSO_Value_Empty(t *testing.T) {
 	})
 }
 
-func Test_SSO_SetOnUninitialized_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_SetOnUninitialized_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_SetOnUninitialized", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -58,7 +58,7 @@ func Test_SSO_SetOnUninitialized_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_SetOnUninitialized_AlreadyInit_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_SetOnUninitialized_AlreadyInit_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_SetOnUninitialized_AlreadyInit", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -80,7 +80,7 @@ func Test_SSO_SetOnUninitialized_AlreadyInit_FromSSOValueIteration28(t *testing.
 	})
 }
 
-func Test_SSO_GetSetOnce_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_GetSetOnce_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_GetSetOnce", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -102,7 +102,7 @@ func Test_SSO_GetSetOnce_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_GetOnce_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_GetOnce_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_GetOnce", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -123,7 +123,7 @@ func Test_SSO_GetOnce_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_GetOnce_AlreadyInit_SsoValue(t *testing.T) {
+func Test_SimpleStringOnce_GetOnce_AlreadyInit_SsoValue(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_GetOnce_AlreadyInit", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -139,7 +139,7 @@ func Test_SSO_GetOnce_AlreadyInit_SsoValue(t *testing.T) {
 	})
 }
 
-func Test_SSO_GetOnceFunc_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_GetOnceFunc_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_GetOnceFunc", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -161,7 +161,7 @@ func Test_SSO_GetOnceFunc_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_SetOnceIfUninitialized_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_SetOnceIfUninitialized_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_SetOnceIfUninitialized", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -185,7 +185,7 @@ func Test_SSO_SetOnceIfUninitialized_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_Invalidate_Reset(t *testing.T) {
+func Test_SimpleStringOnce_Invalidate_Reset(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Invalidate_Reset", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -213,7 +213,7 @@ func Test_SSO_Invalidate_Reset(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsInvalid_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_IsInvalid_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_IsInvalid", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -232,7 +232,7 @@ func Test_SSO_IsInvalid_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsInvalid_Nil_SsoValue(t *testing.T) {
+func Test_SimpleStringOnce_IsInvalid_Nil_SsoValue(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_IsInvalid_Nil", func() {
 		// Arrange
 		var sso *corestr.SimpleStringOnce
@@ -246,7 +246,7 @@ func Test_SSO_IsInvalid_Nil_SsoValue(t *testing.T) {
 	})
 }
 
-func Test_SSO_SetInitialize_SetUnInit_SsoValue(t *testing.T) {
+func Test_SimpleStringOnce_SetInitialize_SetUnInit_SsoValue(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_SetInitialize_SetUnInit", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -270,7 +270,7 @@ func Test_SSO_SetInitialize_SetUnInit_SsoValue(t *testing.T) {
 // SimpleStringOnce — Bytes, Checks
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_SSO_ValueBytes_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_ValueBytes_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_ValueBytes", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -291,7 +291,7 @@ func Test_SSO_ValueBytes_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsEmpty_IsWhitespace_Trim(t *testing.T) {
+func Test_SimpleStringOnce_IsEmpty_IsWhitespace_Trim(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_IsEmpty_IsWhitespace_Trim", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -314,7 +314,7 @@ func Test_SSO_IsEmpty_IsWhitespace_Trim(t *testing.T) {
 	})
 }
 
-func Test_SSO_HasValidNonEmpty_HasValidNonWhitespace(t *testing.T) {
+func Test_SimpleStringOnce_HasValidNonEmpty_HasValidNonWhitespace(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_HasValidNonEmpty_HasValidNonWhitespace", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -337,7 +337,7 @@ func Test_SSO_HasValidNonEmpty_HasValidNonWhitespace(t *testing.T) {
 	})
 }
 
-func Test_SSO_SafeValue_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_SafeValue_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_SafeValue", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -360,7 +360,7 @@ func Test_SSO_SafeValue_FromSSOValueIteration28(t *testing.T) {
 // SimpleStringOnce — Numeric conversions
 // ══════════════════════════════════════════════════════════════════════════════
 
-func Test_SSO_Int_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_Int_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Int", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -375,7 +375,7 @@ func Test_SSO_Int_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_Int_Err(t *testing.T) {
+func Test_SimpleStringOnce_Int_Err(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Int_Err", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -390,7 +390,7 @@ func Test_SSO_Int_Err(t *testing.T) {
 	})
 }
 
-func Test_SSO_Byte_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_Byte_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Byte", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -405,7 +405,7 @@ func Test_SSO_Byte_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_Byte_OutOfRange(t *testing.T) {
+func Test_SimpleStringOnce_Byte_OutOfRange(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Byte_OutOfRange", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -420,7 +420,7 @@ func Test_SSO_Byte_OutOfRange(t *testing.T) {
 	})
 }
 
-func Test_SSO_Byte_Err(t *testing.T) {
+func Test_SimpleStringOnce_Byte_Err(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Byte_Err", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -435,7 +435,7 @@ func Test_SSO_Byte_Err(t *testing.T) {
 	})
 }
 
-func Test_SSO_Int16_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_Int16_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Int16", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -450,7 +450,7 @@ func Test_SSO_Int16_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_Int16_OutOfRange_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_Int16_OutOfRange_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Int16_OutOfRange", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -465,7 +465,7 @@ func Test_SSO_Int16_OutOfRange_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_Int16_Err(t *testing.T) {
+func Test_SimpleStringOnce_Int16_Err(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Int16_Err", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -480,7 +480,7 @@ func Test_SSO_Int16_Err(t *testing.T) {
 	})
 }
 
-func Test_SSO_Int32_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_Int32_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Int32", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -495,7 +495,7 @@ func Test_SSO_Int32_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_Int32_Err(t *testing.T) {
+func Test_SimpleStringOnce_Int32_Err(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Int32_Err", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -510,7 +510,7 @@ func Test_SSO_Int32_Err(t *testing.T) {
 	})
 }
 
-func Test_SSO_Uint16_SsoValue(t *testing.T) {
+func Test_SimpleStringOnce_Uint16_SsoValue(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Uint16", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -532,7 +532,7 @@ func Test_SSO_Uint16_SsoValue(t *testing.T) {
 	})
 }
 
-func Test_SSO_Uint32_SsoValue(t *testing.T) {
+func Test_SimpleStringOnce_Uint32_SsoValue(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Uint32", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -554,7 +554,7 @@ func Test_SSO_Uint32_SsoValue(t *testing.T) {
 	})
 }
 
-func Test_SSO_WithinRange_InRange_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_WithinRange_InRange_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_WithinRange_InRange", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -576,7 +576,7 @@ func Test_SSO_WithinRange_InRange_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_WithinRange_Below(t *testing.T) {
+func Test_SimpleStringOnce_WithinRange_Below(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_WithinRange_Below", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -598,7 +598,7 @@ func Test_SSO_WithinRange_Below(t *testing.T) {
 	})
 }
 
-func Test_SSO_WithinRange_Above(t *testing.T) {
+func Test_SimpleStringOnce_WithinRange_Above(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_WithinRange_Above", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -620,7 +620,7 @@ func Test_SSO_WithinRange_Above(t *testing.T) {
 	})
 }
 
-func Test_SSO_WithinRange_NoBoundary_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_WithinRange_NoBoundary_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_WithinRange_NoBoundary", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -642,7 +642,7 @@ func Test_SSO_WithinRange_NoBoundary_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_WithinRange_Err(t *testing.T) {
+func Test_SimpleStringOnce_WithinRange_Err(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_WithinRange_Err", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -664,7 +664,7 @@ func Test_SSO_WithinRange_Err(t *testing.T) {
 	})
 }
 
-func Test_SSO_WithinRangeDefault_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_WithinRangeDefault_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_WithinRangeDefault", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -686,7 +686,7 @@ func Test_SSO_WithinRangeDefault_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_Boolean_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_Boolean_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Boolean", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -701,7 +701,7 @@ func Test_SSO_Boolean_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_Boolean_True(t *testing.T) {
+func Test_SimpleStringOnce_Boolean_True(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Boolean_True", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -716,7 +716,7 @@ func Test_SSO_Boolean_True(t *testing.T) {
 	})
 }
 
-func Test_SSO_Boolean_ConsiderInit_Uninit_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_Boolean_ConsiderInit_Uninit_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Boolean_ConsiderInit_Uninit", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -730,7 +730,7 @@ func Test_SSO_Boolean_ConsiderInit_Uninit_FromSSOValueIteration28(t *testing.T) 
 	})
 }
 
-func Test_SSO_Boolean_ParseErr_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_Boolean_ParseErr_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_Boolean_ParseErr", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -745,7 +745,7 @@ func Test_SSO_Boolean_ParseErr_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_BooleanDefault_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_BooleanDefault_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_BooleanDefault", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -760,7 +760,7 @@ func Test_SSO_BooleanDefault_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsValueBool_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_IsValueBool_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_IsValueBool", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -775,7 +775,7 @@ func Test_SSO_IsValueBool_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsSetter(t *testing.T) {
+func Test_SimpleStringOnce_IsSetter(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_IsSetter", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -791,7 +791,7 @@ func Test_SSO_IsSetter(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsSetter_ConsiderInit_Uninit(t *testing.T) {
+func Test_SimpleStringOnce_IsSetter_ConsiderInit_Uninit(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_IsSetter_ConsiderInit_Uninit", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -806,7 +806,7 @@ func Test_SSO_IsSetter_ConsiderInit_Uninit(t *testing.T) {
 	})
 }
 
-func Test_SSO_IsSetter_ParseErr_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_IsSetter_ParseErr_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_IsSetter_ParseErr", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -822,7 +822,7 @@ func Test_SSO_IsSetter_ParseErr_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_ValueInt_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_ValueInt_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_ValueInt", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -843,7 +843,7 @@ func Test_SSO_ValueInt_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_ValueInt_Err(t *testing.T) {
+func Test_SimpleStringOnce_ValueInt_Err(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_ValueInt_Err", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -864,7 +864,7 @@ func Test_SSO_ValueInt_Err(t *testing.T) {
 	})
 }
 
-func Test_SSO_ValueByte_SsoValue(t *testing.T) {
+func Test_SimpleStringOnce_ValueByte_SsoValue(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_ValueByte", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -885,7 +885,7 @@ func Test_SSO_ValueByte_SsoValue(t *testing.T) {
 	})
 }
 
-func Test_SSO_ValueFloat64_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_ValueFloat64_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_ValueFloat64", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -906,7 +906,7 @@ func Test_SSO_ValueFloat64_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_NonPtr_Ptr_SsoValue(t *testing.T) {
+func Test_SimpleStringOnce_NonPtr_Ptr_SsoValue(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_NonPtr_Ptr", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -929,7 +929,7 @@ func Test_SSO_NonPtr_Ptr_SsoValue(t *testing.T) {
 	})
 }
 
-func Test_SSO_ConcatNew_FromSSOValueIteration28(t *testing.T) {
+func Test_SimpleStringOnce_ConcatNew_FromSSOValueIteration28(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_ConcatNew", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce
@@ -945,7 +945,7 @@ func Test_SSO_ConcatNew_FromSSOValueIteration28(t *testing.T) {
 	})
 }
 
-func Test_SSO_ConcatNewUsingStrings_SsoValue(t *testing.T) {
+func Test_SimpleStringOnce_ConcatNewUsingStrings_SsoValue(t *testing.T) {
 	safeTest(t, "Test_I28_SSO_ConcatNewUsingStrings", func() {
 		// Arrange
 		var sso corestr.SimpleStringOnce

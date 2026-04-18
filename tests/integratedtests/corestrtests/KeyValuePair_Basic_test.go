@@ -14,8 +14,8 @@ import (
 // KeyValuePair
 // ══════════════════════════════════════════════════════════════
 
-func Test_KVP_Basic(t *testing.T) {
-	safeTest(t, "Test_KVP_Basic", func() {
+func Test_KeyValuePair_Basic_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_Basic_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "name", Value: "alice"}
 
@@ -28,8 +28,8 @@ func Test_KVP_Basic(t *testing.T) {
 	})
 }
 
-func Test_KVP_IsVariableNameEqual(t *testing.T) {
-	safeTest(t, "Test_KVP_IsVariableNameEqual", func() {
+func Test_KeyValuePair_IsVariableNameEqual_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_IsVariableNameEqual_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "x", Value: "y"}
 
@@ -42,8 +42,8 @@ func Test_KVP_IsVariableNameEqual(t *testing.T) {
 	})
 }
 
-func Test_KVP_IsValueEqual(t *testing.T) {
-	safeTest(t, "Test_KVP_IsValueEqual", func() {
+func Test_KeyValuePair_IsValueEqual_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_IsValueEqual_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "x", Value: "y"}
 
@@ -56,8 +56,8 @@ func Test_KVP_IsValueEqual(t *testing.T) {
 	})
 }
 
-func Test_KVP_Compile(t *testing.T) {
-	safeTest(t, "Test_KVP_Compile", func() {
+func Test_KeyValuePair_Compile_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_Compile_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "k", Value: "v"}
 
@@ -70,8 +70,8 @@ func Test_KVP_Compile(t *testing.T) {
 	})
 }
 
-func Test_KVP_IsKeyEmpty(t *testing.T) {
-	safeTest(t, "Test_KVP_IsKeyEmpty", func() {
+func Test_KeyValuePair_IsKeyEmpty_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_IsKeyEmpty_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "", Value: "v"}
 
@@ -84,8 +84,8 @@ func Test_KVP_IsKeyEmpty(t *testing.T) {
 	})
 }
 
-func Test_KVP_IsValueEmpty(t *testing.T) {
-	safeTest(t, "Test_KVP_IsValueEmpty", func() {
+func Test_KeyValuePair_IsValueEmpty_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_IsValueEmpty_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "k", Value: ""}
 
@@ -98,8 +98,8 @@ func Test_KVP_IsValueEmpty(t *testing.T) {
 	})
 }
 
-func Test_KVP_HasKeyValue(t *testing.T) {
-	safeTest(t, "Test_KVP_HasKeyValue", func() {
+func Test_KeyValuePair_HasKeyValue(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_HasKeyValue", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "k", Value: "v"}
 
@@ -112,8 +112,8 @@ func Test_KVP_HasKeyValue(t *testing.T) {
 	})
 }
 
-func Test_KVP_IsKeyValueEmpty(t *testing.T) {
-	safeTest(t, "Test_KVP_IsKeyValueEmpty", func() {
+func Test_KeyValuePair_IsKeyValueEmpty_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_IsKeyValueEmpty_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{}
 
@@ -126,8 +126,8 @@ func Test_KVP_IsKeyValueEmpty(t *testing.T) {
 	})
 }
 
-func Test_KVP_Trim(t *testing.T) {
-	safeTest(t, "Test_KVP_Trim", func() {
+func Test_KeyValuePair_Trim_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_Trim_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: " k ", Value: " v "}
 
@@ -140,8 +140,8 @@ func Test_KVP_Trim(t *testing.T) {
 	})
 }
 
-func Test_KVP_ValueBool(t *testing.T) {
-	safeTest(t, "Test_KVP_ValueBool", func() {
+func Test_KeyValuePair_ValueBool_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_ValueBool_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Value: "true"}
 
@@ -162,8 +162,8 @@ func Test_KVP_ValueBool(t *testing.T) {
 	})
 }
 
-func Test_KVP_ValueInt(t *testing.T) {
-	safeTest(t, "Test_KVP_ValueInt", func() {
+func Test_KeyValuePair_ValueInt_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_ValueInt_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Value: "42"}
 
@@ -180,8 +180,8 @@ func Test_KVP_ValueInt(t *testing.T) {
 	})
 }
 
-func Test_KVP_ValueDefInt(t *testing.T) {
-	safeTest(t, "Test_KVP_ValueDefInt", func() {
+func Test_KeyValuePair_ValueDefInt_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_ValueDefInt_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Value: "10"}
 
@@ -198,8 +198,8 @@ func Test_KVP_ValueDefInt(t *testing.T) {
 	})
 }
 
-func Test_KVP_ValueByte(t *testing.T) {
-	safeTest(t, "Test_KVP_ValueByte", func() {
+func Test_KeyValuePair_ValueByte_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_ValueByte_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Value: "10"}
 
@@ -216,8 +216,8 @@ func Test_KVP_ValueByte(t *testing.T) {
 	})
 }
 
-func Test_KVP_ValueDefByte(t *testing.T) {
-	safeTest(t, "Test_KVP_ValueDefByte", func() {
+func Test_KeyValuePair_ValueDefByte_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_ValueDefByte_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Value: "50"}
 
@@ -234,8 +234,8 @@ func Test_KVP_ValueDefByte(t *testing.T) {
 	})
 }
 
-func Test_KVP_ValueFloat64(t *testing.T) {
-	safeTest(t, "Test_KVP_ValueFloat64", func() {
+func Test_KeyValuePair_ValueFloat64_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_ValueFloat64_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Value: "3.14"}
 
@@ -252,8 +252,8 @@ func Test_KVP_ValueFloat64(t *testing.T) {
 	})
 }
 
-func Test_KVP_ValueDefFloat64(t *testing.T) {
-	safeTest(t, "Test_KVP_ValueDefFloat64", func() {
+func Test_KeyValuePair_ValueDefFloat64_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_ValueDefFloat64_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Value: "bad"}
 
@@ -266,8 +266,8 @@ func Test_KVP_ValueDefFloat64(t *testing.T) {
 	})
 }
 
-func Test_KVP_ValueValid(t *testing.T) {
-	safeTest(t, "Test_KVP_ValueValid", func() {
+func Test_KeyValuePair_ValueValid_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_ValueValid_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Value: "hello"}
 		vv := kv.ValueValid()
@@ -281,8 +281,8 @@ func Test_KVP_ValueValid(t *testing.T) {
 	})
 }
 
-func Test_KVP_ValueValidOptions(t *testing.T) {
-	safeTest(t, "Test_KVP_ValueValidOptions", func() {
+func Test_KeyValuePair_ValueValidOptions_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_ValueValidOptions_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Value: "x"}
 		vv := kv.ValueValidOptions(false, "err")
@@ -296,8 +296,8 @@ func Test_KVP_ValueValidOptions(t *testing.T) {
 	})
 }
 
-func Test_KVP_Is(t *testing.T) {
-	safeTest(t, "Test_KVP_Is", func() {
+func Test_KeyValuePair_Is_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_Is_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "a", Value: "b"}
 
@@ -310,8 +310,8 @@ func Test_KVP_Is(t *testing.T) {
 	})
 }
 
-func Test_KVP_IsKey_IsVal(t *testing.T) {
-	safeTest(t, "Test_KVP_IsKey_IsVal", func() {
+func Test_KeyValuePair_IsKey_IsVal_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_IsKey_IsVal_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "a", Value: "b"}
 
@@ -324,8 +324,8 @@ func Test_KVP_IsKey_IsVal(t *testing.T) {
 	})
 }
 
-func Test_KVP_FormatString(t *testing.T) {
-	safeTest(t, "Test_KVP_FormatString", func() {
+func Test_KeyValuePair_FormatString_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_FormatString_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "k", Value: "v"}
 
@@ -338,8 +338,8 @@ func Test_KVP_FormatString(t *testing.T) {
 	})
 }
 
-func Test_KVP_Json(t *testing.T) {
-	safeTest(t, "Test_KVP_Json", func() {
+func Test_KeyValuePair_Json_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_Json_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "k", Value: "v"}
 
@@ -355,8 +355,8 @@ func Test_KVP_Json(t *testing.T) {
 	})
 }
 
-func Test_KVP_Serialize(t *testing.T) {
-	safeTest(t, "Test_KVP_Serialize", func() {
+func Test_KeyValuePair_Serialize_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_Serialize_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "k", Value: "v"}
 		data, err := kv.Serialize()
@@ -373,8 +373,8 @@ func Test_KVP_Serialize(t *testing.T) {
 	})
 }
 
-func Test_KVP_Clear_Dispose(t *testing.T) {
-	safeTest(t, "Test_KVP_Clear_Dispose", func() {
+func Test_KeyValuePair_Clear_Dispose_Basic(t *testing.T) {
+	safeTest(t, "Test_KeyValuePair_Clear_Dispose_Basic", func() {
 		// Arrange
 		kv := corestr.KeyValuePair{Key: "k", Value: "v"}
 		kv.Clear()
