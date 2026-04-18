@@ -123,3 +123,101 @@ func Test_CloneSlice_CloneSliceIf_empty_FromS21(t *testing.T) {
 	})
 }
 
+
+func Test_CloneSlice_Empty_FromSeg1(t *testing.T) {
+	safeTest(t, "Test_CloneSlice_Empty_FromSeg1", func() {
+		// Arrange
+		result := corestr.CloneSlice([]string{})
+
+		// Act
+		actual := args.Map{"len": len(result)}
+
+		// Assert
+		expected := args.Map{"len": 0}
+		expected.ShouldBeEqual(t, 0, "CloneSlice returns empty -- empty input", actual)
+	})
+}
+
+func Test_CloneSlice_WithItems_FromSeg1(t *testing.T) {
+	safeTest(t, "Test_CloneSlice_WithItems_FromSeg1", func() {
+		// Arrange
+		src := []string{"a", "b", "c"}
+		result := corestr.CloneSlice(src)
+
+		// Act
+		actual := args.Map{
+			"len": len(result),
+			"eq": result[0] == "a" && result[2] == "c",
+		}
+
+		// Assert
+		expected := args.Map{
+			"len": 3,
+			"eq": true,
+		}
+		expected.ShouldBeEqual(t, 0, "CloneSlice returns copy -- with items", actual)
+	})
+}
+
+func Test_CloneSlice_Nil_FromSeg1(t *testing.T) {
+	safeTest(t, "Test_CloneSlice_Nil_FromSeg1", func() {
+		// Arrange
+		result := corestr.CloneSlice(nil)
+
+		// Act
+		actual := args.Map{"len": len(result)}
+
+		// Assert
+		expected := args.Map{"len": 0}
+		expected.ShouldBeEqual(t, 0, "CloneSlice returns empty -- nil input", actual)
+	})
+}
+
+func Test_CloneSliceIf_Clone_FromSeg1(t *testing.T) {
+	safeTest(t, "Test_CloneSliceIf_Clone_FromSeg1", func() {
+		// Arrange
+		result := corestr.CloneSliceIf(true, "a", "b")
+
+		// Act
+		actual := args.Map{
+			"len": len(result),
+			"first": result[0],
+		}
+
+		// Assert
+		expected := args.Map{
+			"len": 2,
+			"first": "a",
+		}
+		expected.ShouldBeEqual(t, 0, "CloneSliceIf returns clone -- isClone true", actual)
+	})
+}
+
+func Test_CloneSliceIf_NoClone_FromSeg1(t *testing.T) {
+	safeTest(t, "Test_CloneSliceIf_NoClone_FromSeg1", func() {
+		// Arrange
+		result := corestr.CloneSliceIf(false, "a", "b")
+
+		// Act
+		actual := args.Map{"len": len(result)}
+
+		// Assert
+		expected := args.Map{"len": 2}
+		expected.ShouldBeEqual(t, 0, "CloneSliceIf returns same -- isClone false", actual)
+	})
+}
+
+func Test_CloneSliceIf_Empty_FromSeg1(t *testing.T) {
+	safeTest(t, "Test_CloneSliceIf_Empty_FromSeg1", func() {
+		// Arrange
+		result := corestr.CloneSliceIf(true)
+
+		// Act
+		actual := args.Map{"len": len(result)}
+
+		// Assert
+		expected := args.Map{"len": 0}
+		expected.ShouldBeEqual(t, 0, "CloneSliceIf returns empty -- no items", actual)
+	})
+}
+

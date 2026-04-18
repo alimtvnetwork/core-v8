@@ -120,3 +120,43 @@ func Test_AnyToString_with_struct_pointer_FromS21(t *testing.T) {
 		expected.ShouldBeEqual(t, 0, "AnyToString returns non-empty -- struct pointer input", actual)
 	})
 }
+
+func Test_AnyToString_Empty_FromSeg1(t *testing.T) {
+	safeTest(t, "Test_AnyToString_Empty_FromSeg1", func() {
+		// Act
+		actual := args.Map{"val": corestr.AnyToString(false, "")}
+
+		// Assert
+		expected := args.Map{"val": ""}
+		expected.ShouldBeEqual(t, 0, "AnyToString returns empty -- empty input", actual)
+	})
+}
+
+func Test_AnyToString_WithFieldName_FromSeg1(t *testing.T) {
+	safeTest(t, "Test_AnyToString_WithFieldName_FromSeg1", func() {
+		// Arrange
+		result := corestr.AnyToString(true, 42)
+
+		// Act
+		actual := args.Map{"nonEmpty": result != ""}
+
+		// Assert
+		expected := args.Map{"nonEmpty": true}
+		expected.ShouldBeEqual(t, 0, "AnyToString returns non-empty -- with field name", actual)
+	})
+}
+
+func Test_AnyToString_WithoutFieldName_FromSeg1(t *testing.T) {
+	safeTest(t, "Test_AnyToString_WithoutFieldName_FromSeg1", func() {
+		// Arrange
+		result := corestr.AnyToString(false, 42)
+
+		// Act
+		actual := args.Map{"nonEmpty": result != ""}
+
+		// Assert
+		expected := args.Map{"nonEmpty": true}
+		expected.ShouldBeEqual(t, 0, "AnyToString returns non-empty -- without field name", actual)
+	})
+}
+

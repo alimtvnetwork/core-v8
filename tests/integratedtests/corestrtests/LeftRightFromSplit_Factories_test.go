@@ -94,3 +94,78 @@ func Test_LeftRightFromSplit_empty_FromS22(t *testing.T) {
 	})
 }
 
+
+func Test_LRFromSplit_FromSeg1(t *testing.T) {
+	safeTest(t, "Test_LRFromSplit_FromSeg1", func() {
+		// Arrange
+		lr := corestr.LeftRightFromSplit("key=value", "=")
+
+		// Act
+		actual := args.Map{
+			"left": lr.Left,
+			"right": lr.Right,
+		}
+
+		// Assert
+		expected := args.Map{
+			"left": "key",
+			"right": "value",
+		}
+		expected.ShouldBeEqual(t, 0, "LeftRightFromSplit -- 2 parts", actual)
+	})
+}
+
+func Test_LRFromSplitTrimmed_FromSeg1(t *testing.T) {
+	safeTest(t, "Test_LRFromSplitTrimmed_FromSeg1", func() {
+		// Arrange
+		lr := corestr.LeftRightFromSplitTrimmed(" key = value ", "=")
+
+		// Act
+		actual := args.Map{
+			"left": lr.Left,
+			"right": lr.Right,
+		}
+
+		// Assert
+		expected := args.Map{
+			"left": "key",
+			"right": "value",
+		}
+		expected.ShouldBeEqual(t, 0, "LeftRightFromSplitTrimmed -- trimmed", actual)
+	})
+}
+
+func Test_LRFromSplitFull_FromSeg1(t *testing.T) {
+	safeTest(t, "Test_LRFromSplitFull_FromSeg1", func() {
+		// Arrange
+		lr := corestr.LeftRightFromSplitFull("a:b:c:d", ":")
+
+		// Act
+		actual := args.Map{
+			"left": lr.Left,
+			"right": lr.Right,
+		}
+
+		// Assert
+		expected := args.Map{
+			"left": "a",
+			"right": "b:c:d",
+		}
+		expected.ShouldBeEqual(t, 0, "LeftRightFromSplitFull -- remainder in right", actual)
+	})
+}
+
+func Test_LRFromSplitFullTrimmed_FromSeg1(t *testing.T) {
+	safeTest(t, "Test_LRFromSplitFullTrimmed_FromSeg1", func() {
+		// Arrange
+		lr := corestr.LeftRightFromSplitFullTrimmed(" a : b : c ", ":")
+
+		// Act
+		actual := args.Map{"left": lr.Left}
+
+		// Assert
+		expected := args.Map{"left": "a"}
+		expected.ShouldBeEqual(t, 0, "LeftRightFromSplitFullTrimmed -- trimmed", actual)
+	})
+}
+

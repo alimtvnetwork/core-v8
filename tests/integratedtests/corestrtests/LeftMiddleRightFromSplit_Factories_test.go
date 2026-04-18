@@ -103,3 +103,90 @@ func Test_LeftMiddleRightFromSplit_empty_FromS22(t *testing.T) {
 	})
 }
 
+
+func Test_LMRFromSplit_FromSeg1(t *testing.T) {
+	safeTest(t, "Test_LMRFromSplit_FromSeg1", func() {
+		// Arrange
+		lmr := corestr.LeftMiddleRightFromSplit("a:b:c", ":")
+
+		// Act
+		actual := args.Map{
+			"left": lmr.Left,
+			"mid": lmr.Middle,
+			"right": lmr.Right,
+		}
+
+		// Assert
+		expected := args.Map{
+			"left": "a",
+			"mid": "b",
+			"right": "c",
+		}
+		expected.ShouldBeEqual(t, 0, "LeftMiddleRightFromSplit -- 3 parts", actual)
+	})
+}
+
+func Test_LMRFromSplitTrimmed_FromSeg1(t *testing.T) {
+	safeTest(t, "Test_LMRFromSplitTrimmed_FromSeg1", func() {
+		// Arrange
+		lmr := corestr.LeftMiddleRightFromSplitTrimmed(" a : b : c ", ":")
+
+		// Act
+		actual := args.Map{
+			"left": lmr.Left,
+			"mid": lmr.Middle,
+			"right": lmr.Right,
+		}
+
+		// Assert
+		expected := args.Map{
+			"left": "a",
+			"mid": "b",
+			"right": "c",
+		}
+		expected.ShouldBeEqual(t, 0, "LeftMiddleRightFromSplitTrimmed -- trimmed", actual)
+	})
+}
+
+func Test_LMRFromSplitN_FromSeg1(t *testing.T) {
+	safeTest(t, "Test_LMRFromSplitN_FromSeg1", func() {
+		// Arrange
+		lmr := corestr.LeftMiddleRightFromSplitN("a:b:c:d:e", ":")
+
+		// Act
+		actual := args.Map{
+			"left": lmr.Left,
+			"mid": lmr.Middle,
+			"right": lmr.Right,
+		}
+
+		// Assert
+		expected := args.Map{
+			"left": "a",
+			"mid": "b",
+			"right": "c:d:e",
+		}
+		expected.ShouldBeEqual(t, 0, "LeftMiddleRightFromSplitN -- remainder in right", actual)
+	})
+}
+
+func Test_LMRFromSplitNTrimmed_FromSeg1(t *testing.T) {
+	safeTest(t, "Test_LMRFromSplitNTrimmed_FromSeg1", func() {
+		// Arrange
+		lmr := corestr.LeftMiddleRightFromSplitNTrimmed(" a : b : c : d ", ":")
+
+		// Act
+		actual := args.Map{
+			"left": lmr.Left,
+			"mid": lmr.Middle,
+		}
+
+		// Assert
+		expected := args.Map{
+			"left": "a",
+			"mid": "b",
+		}
+		expected.ShouldBeEqual(t, 0, "LeftMiddleRightFromSplitNTrimmed -- trimmed", actual)
+	})
+}
+
