@@ -1,6 +1,25 @@
 # Phase 2 — S## / Seg# File Merge Plan
 
-## Status: 🟢 Approved (defaults: 5 batches, `_ExtraMethods` placeholders, copy-then-consolidate helpers) — Batch 2.1 ✅ code complete, awaiting `run.ps1 -tc`
+## Status: 🟢 In progress — Batch 2.1 ✅ green (`run.ps1 -tc` 10/11, corestr 98.5%); Batch 2.2 ✅ code complete, awaiting `run.ps1 -tc`
+
+### Batch 2.2 (executed 2026-04-18)
+Source files removed (3) → target files created (11):
+- `S20_001_S20_NonChainedNodes_HashmapDiff_test.go` (52 funcs) →
+  - `NonChainedLinkedListNodes_AllMethods_test.go` (14)
+  - `NonChainedLinkedCollectionNodes_AllMethods_test.go` (14)
+  - `HashmapDiff_AllMethods_test.go` (24)
+- `S21_001_S21_CloneSlice_Empty_Reflect_test.go` (31 funcs) →
+  - `CloneSlice_Behaviour_test.go` (6)
+  - `Empty_Constructors_test.go` (17)
+  - `AnyToString_Behaviour_test.go` (8)
+- `S22_001_S22_FromSplit_Creators_test.go` (103 funcs) →
+  - `LeftRightFromSplit_Factories_test.go` (6)
+  - `LeftMiddleRightFromSplit_Factories_test.go` (6)
+  - `NewCollection_Factories_test.go` (13)
+  - `NewHashset_Factories_test.go` (16)
+  - `NewHashmap_Factories_test.go` (62)
+
+Symbol pattern: `Test_<Type>_<Behaviour>_FromS20|S21|S22`. Zero duplicates verified via `grep | sort | uniq -d`.
 
 Parent plan: `spec/01-app/28-corestrtests-cleanup-plan.md`
 Scope: `tests/integratedtests/corestrtests/` only.
