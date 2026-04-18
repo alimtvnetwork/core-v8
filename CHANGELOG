@@ -1,3 +1,10 @@
+# v1.8.0 : corestrtests Phase 2 Batch 2.1 — ValidValue / ValueStatus / TextWithLineNumber splits
+
+- #1 : Split `S01_InvalidValueStatus_S01_ValueStatus_TWLN_test.go` into `ValueStatus_InvalidStatus_test.go` (3 funcs) + `TextWithLineNumber_LineNumberAndEmptiness_test.go` (6 funcs)
+- #2 : Split `S01_NewValidValue_S01_ValidValue_test.go` into `ValidValue_Constructors_test.go` (7 funcs) + `ValidValue_PrimitiveConverters_test.go` (43 funcs)
+- #3 : Split `Seg8_VV_Seg8_ValidValue_VV_VS_TWLN_test.go` into `ValidValue_ExtraMethods_test.go` (82 funcs incl. ValidValues collection) + `ValueStatus_ExtraMethods_test.go` (3 funcs) + `TextWithLineNumber_ExtraMethods_test.go` (11 funcs)
+- #4 : Renamed all 155 affected `Test_*` symbols to behaviour-driven `Test_<Type>_<Method>_<Outcome>_From{S01|Seg8}` form, eliminating cryptic `_S01…` and `_Seg8_VV/VS/VVS/TWLN_` prefixes; zero duplicate symbols across `corestrtests/`
+
 # v1.7.0 : macOS runner root-cause fix, PowerShell error attribution cleanup, corestrtests Phase 1
 
 - #1 : Fix macOS dashboard theme probing so `run.ps1` does not leak OSC 11 terminal escape sequences into the shell

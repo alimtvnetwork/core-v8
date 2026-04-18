@@ -1,6 +1,6 @@
 # Phase 2 — S## / Seg# File Merge Plan
 
-## Status: 📋 Awaiting approval — no renames yet
+## Status: 🟢 Approved (defaults: 5 batches, `_ExtraMethods` placeholders, copy-then-consolidate helpers) — Batch 2.1 ✅ code complete, awaiting `run.ps1 -tc`
 
 Parent plan: `spec/01-app/28-corestrtests-cleanup-plan.md`
 Scope: `tests/integratedtests/corestrtests/` only.
@@ -126,7 +126,7 @@ To keep `run.ps1 -tc` green at every checkpoint, execute in **5 batches**, valid
 
 | Batch | Status | Started | Finished | Coverage delta |
 |-------|--------|---------|----------|----------------|
-| 2.1 — ValidValue/ValueStatus/TWLN splits | ⬜ | — | — | — |
+| 2.1 — ValidValue/ValueStatus/TWLN splits | ✅ code | 2026-04-18 | 2026-04-18 | pending `run.ps1 -tc` |
 | 2.2 — NonChainedNodes/CloneSlice/FromSplit splits | ⬜ | — | — | — |
 | 2.3 — CollectionsOfCollection/KeyValues/LeftRight/SSO | ⬜ | — | — | — |
 | 2.4 — Hashmap/Hashset/CharMaps renames | ⬜ | — | — | — |
