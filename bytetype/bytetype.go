@@ -26,8 +26,8 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coreinterface/enuminf"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coreinterface/enuminf"
 )
 
 type Variant byte

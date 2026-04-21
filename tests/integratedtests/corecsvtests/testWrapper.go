@@ -23,7 +23,7 @@
 package corecsvtests
 
 import (
-	"github.com/alimtvnetwork/core/coretests"
+	"github.com/alimtvnetwork/core-v8/coretests"
 )
 
 type testWrapper struct {

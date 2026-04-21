@@ -27,9 +27,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/stringslice"
-	"github.com/alimtvnetwork/core/defaultcapacity"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/stringslice"
+	"github.com/alimtvnetwork/core-v8/defaultcapacity"
 )
 
 func (it *Key) CompileKeys(

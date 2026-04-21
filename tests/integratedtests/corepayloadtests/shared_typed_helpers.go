@@ -25,8 +25,8 @@ package corepayloadtests
 import (
 	"fmt"
 
-	"github.com/alimtvnetwork/core/coredata/corepayload"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/coredata/corepayload"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 // testUserTyped is a sample struct used across TypedPayloadWrapper test files.

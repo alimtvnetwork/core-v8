@@ -25,12 +25,12 @@ package corevalidator
 import (
 	"errors"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/corestr"
-	"github.com/alimtvnetwork/core/coreinterface"
-	"github.com/alimtvnetwork/core/errcore"
-	"github.com/alimtvnetwork/core/internal/messages"
-	"github.com/alimtvnetwork/core/internal/strutilinternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coreinterface"
+	"github.com/alimtvnetwork/core-v8/errcore"
+	"github.com/alimtvnetwork/core-v8/internal/messages"
+	"github.com/alimtvnetwork/core-v8/internal/strutilinternal"
 )
 
 type LinesValidators struct {

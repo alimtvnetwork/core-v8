@@ -23,8 +23,8 @@
 package anycmp
 
 import (
-	"github.com/alimtvnetwork/core/corecomparator"
-	"github.com/alimtvnetwork/core/isany"
+	"github.com/alimtvnetwork/core-v8/corecomparator"
+	"github.com/alimtvnetwork/core-v8/isany"
 )
 
 // Cmp

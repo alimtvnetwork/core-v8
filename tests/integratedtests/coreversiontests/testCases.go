@@ -25,11 +25,11 @@ package coreversiontests
 import (
 	"reflect"
 
-	"github.com/alimtvnetwork/core/corecomparator"
-	"github.com/alimtvnetwork/core/coretests"
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/coreversion"
-	"github.com/alimtvnetwork/core/issetter"
+	"github.com/alimtvnetwork/core-v8/corecomparator"
+	"github.com/alimtvnetwork/core-v8/coretests"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coreversion"
+	"github.com/alimtvnetwork/core-v8/issetter"
 )
 
 var (

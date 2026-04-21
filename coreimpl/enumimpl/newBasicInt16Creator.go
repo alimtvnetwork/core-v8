@@ -28,7 +28,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 type newBasicInt16Creator struct{}

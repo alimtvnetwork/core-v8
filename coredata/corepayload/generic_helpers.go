@@ -23,8 +23,8 @@
 package corepayload
 
 import (
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/defaulterr"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/defaulterr"
 )
 
 // DeserializePayloadTo deserializes the PayloadWrapper's Payloads bytes into T.

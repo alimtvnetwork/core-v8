@@ -29,10 +29,10 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coreappend"
-	"github.com/alimtvnetwork/core/internal/convertinternal"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coreappend"
+	"github.com/alimtvnetwork/core-v8/internal/convertinternal"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 type anyItemConverter struct{}

@@ -25,8 +25,8 @@ package simplewraptests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/simplewrap"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/simplewrap"
 )
 
 func Test_WithDoubleQuote_Verification(t *testing.T) {

@@ -27,10 +27,10 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/internal/convertinternal"
-	"github.com/alimtvnetwork/core/internal/msgcreator"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/internal/convertinternal"
+	"github.com/alimtvnetwork/core-v8/internal/msgcreator"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 type Map map[string]any

@@ -28,12 +28,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/coredynamic"
-	"github.com/alimtvnetwork/core/coreimpl/enumimpl"
-	"github.com/alimtvnetwork/core/coretests"
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/coredynamic"
+	"github.com/alimtvnetwork/core-v8/coreimpl/enumimpl"
+	"github.com/alimtvnetwork/core-v8/coretests"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 func Test_DynamicMapCreationDiff(t *testing.T) {

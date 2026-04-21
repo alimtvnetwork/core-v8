@@ -23,7 +23,7 @@
 package chmodhelper
 
 import (
-	"github.com/alimtvnetwork/core/internal/pathinternal"
+	"github.com/alimtvnetwork/core-v8/internal/pathinternal"
 )
 
 func removeDirIf(

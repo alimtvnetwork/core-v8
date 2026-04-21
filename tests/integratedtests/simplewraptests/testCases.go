@@ -25,10 +25,10 @@ package simplewraptests
 import (
 	"reflect"
 
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coredata/corerange"
-	"github.com/alimtvnetwork/core/coretests"
-	"github.com/alimtvnetwork/core/issetter"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coredata/corerange"
+	"github.com/alimtvnetwork/core-v8/coretests"
+	"github.com/alimtvnetwork/core-v8/issetter"
 )
 
 var (

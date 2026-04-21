@@ -22,7 +22,7 @@
 
 package coreinstruction
 
-import "github.com/alimtvnetwork/core/coredata/corestr"
+import "github.com/alimtvnetwork/core-v8/coredata/corestr"
 
 type NameRequests struct {
 	Name     string               `json:"Name,omitempty"`

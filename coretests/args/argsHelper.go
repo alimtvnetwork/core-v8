@@ -26,9 +26,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/corestr"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 // getByIndex safely retrieves an item from a slice by its index.

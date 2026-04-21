@@ -28,10 +28,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/constants/bitsize"
-	"github.com/alimtvnetwork/core/converters/coreconverted"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/constants/bitsize"
+	"github.com/alimtvnetwork/core-v8/converters/coreconverted"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 type stringTo struct{}

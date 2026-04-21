@@ -25,10 +25,10 @@ package corevalidator
 import (
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/enums/stringcompareas"
-	"github.com/alimtvnetwork/core/errcore"
-	"github.com/alimtvnetwork/core/internal/strutilinternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/enums/stringcompareas"
+	"github.com/alimtvnetwork/core-v8/errcore"
+	"github.com/alimtvnetwork/core-v8/internal/strutilinternal"
 )
 
 func NewSliceValidatorUsingErr(

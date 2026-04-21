@@ -22,7 +22,7 @@
 
 package enuminf
 
-import "github.com/alimtvnetwork/core/internal/internalinterface/internalenuminf"
+import "github.com/alimtvnetwork/core-v8/internal/internalinterface/internalenuminf"
 
 type BaseCmdTyper interface {
 	BasicEnumer

@@ -213,7 +213,7 @@ legacy := col.ToPayloadsCollection()
 ### PayloadWrapper — Standard Usage
 
 ```go
-import "github.com/alimtvnetwork/core/coredata/corepayload"
+import "github.com/alimtvnetwork/core-v8/coredata/corepayload"
 
 // Create via instruction
 payload, err := corepayload.New.PayloadWrapper.UsingCreateInstruction(

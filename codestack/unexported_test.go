@@ -26,7 +26,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
 )
 
 // ══════════════════════════════════════════════════════════════════════════════
@@ -605,7 +605,7 @@ func TestInternal_NameOf_Package(t *testing.T) {
 }
 
 func TestInternal_NameOf_All(t *testing.T) {
-	full, pkg, method := NameOf.All("github.com/alimtvnetwork/core/codestack.TestInternal_NameOf_All")
+	full, pkg, method := NameOf.All("github.com/alimtvnetwork/core-v8/codestack.TestInternal_NameOf_All")
 	if full == "" || pkg == "" || method == "" {
 		t.Fatal("expected non-empty")
 	}
@@ -635,20 +635,20 @@ func TestInternal_NameOf_PackageStackSkip(t *testing.T) {
 }
 
 func TestInternal_NameOf_MethodByFullName(t *testing.T) {
-	_ = NameOf.MethodByFullName("github.com/alimtvnetwork/core/codestack.TestMethod")
+	_ = NameOf.MethodByFullName("github.com/alimtvnetwork/core-v8/codestack.TestMethod")
 }
 
 func TestInternal_NameOf_PackageByFullName(t *testing.T) {
-	_ = NameOf.PackageByFullName("github.com/alimtvnetwork/core/codestack.TestMethod")
+	_ = NameOf.PackageByFullName("github.com/alimtvnetwork/core-v8/codestack.TestMethod")
 }
 
 func TestInternal_NameOf_CurrentFuncFullPath(t *testing.T) {
-	_ = NameOf.CurrentFuncFullPath("github.com/alimtvnetwork/core/codestack.TestMethod")
+	_ = NameOf.CurrentFuncFullPath("github.com/alimtvnetwork/core-v8/codestack.TestMethod")
 }
 
 func TestInternal_NameOf_JoinPackageNameWithRelative(t *testing.T) {
 	s := NameOf.JoinPackageNameWithRelative(
-		"github.com/alimtvnetwork/core/codestack.TestMethod",
+		"github.com/alimtvnetwork/core-v8/codestack.TestMethod",
 		"NewFunc",
 	)
 	if s == "" {

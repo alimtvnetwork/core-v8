@@ -25,7 +25,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/alimtvnetwork/core/coredata/coredynamic"
+	"github.com/alimtvnetwork/core-v8/coredata/coredynamic"
 )
 
 func jsonResultUnmarshallingTest01() {

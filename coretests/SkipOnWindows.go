@@ -25,8 +25,8 @@ package coretests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/errcore"
-	"github.com/alimtvnetwork/core/osconsts"
+	"github.com/alimtvnetwork/core-v8/errcore"
+	"github.com/alimtvnetwork/core-v8/osconsts"
 )
 
 // SkipOnWindows Skip on Windows

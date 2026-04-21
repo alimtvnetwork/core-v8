@@ -22,7 +22,7 @@
 
 package errcore
 
-import "github.com/alimtvnetwork/core/constants"
+import "github.com/alimtvnetwork/core-v8/constants"
 
 func SimpleHandleErrMany(msg string, errorItems ...error) {
 	if errorItems == nil || len(errorItems) == 0 {

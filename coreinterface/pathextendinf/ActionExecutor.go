@@ -22,7 +22,7 @@
 
 package pathextendinf
 
-import "github.com/alimtvnetwork/core/coreinterface/errcoreinf"
+import "github.com/alimtvnetwork/core-v8/coreinterface/errcoreinf"
 
 type ActionExecutor interface {
 	HasAnyAction() bool

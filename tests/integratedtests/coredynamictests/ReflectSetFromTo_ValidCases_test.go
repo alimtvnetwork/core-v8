@@ -26,9 +26,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/coredynamic"
-	"github.com/alimtvnetwork/core/coretests"
-	"github.com/alimtvnetwork/core/tests/testwrappers/coredynamictestwrappers"
+	"github.com/alimtvnetwork/core-v8/coredata/coredynamic"
+	"github.com/alimtvnetwork/core-v8/coretests"
+	"github.com/alimtvnetwork/core-v8/tests/testwrappers/coredynamictestwrappers"
 )
 
 // ==========================================================================

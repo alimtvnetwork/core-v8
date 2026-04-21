@@ -27,13 +27,13 @@ import (
 	"reflect"
 	"strconv"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/constants/bitsize"
-	"github.com/alimtvnetwork/core/errcore"
-	"github.com/alimtvnetwork/core/internal/messages"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
-	"github.com/alimtvnetwork/core/internal/strutilinternal"
-	"github.com/alimtvnetwork/core/issetter"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/constants/bitsize"
+	"github.com/alimtvnetwork/core-v8/errcore"
+	"github.com/alimtvnetwork/core-v8/internal/messages"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/internal/strutilinternal"
+	"github.com/alimtvnetwork/core-v8/issetter"
 )
 
 // DynamicGetters.go — Read-only accessors, type checks, and value extraction

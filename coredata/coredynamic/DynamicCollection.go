@@ -29,12 +29,12 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/defaultcapacity"
-	"github.com/alimtvnetwork/core/errcore"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
-	"github.com/alimtvnetwork/core/pagingutil"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/defaultcapacity"
+	"github.com/alimtvnetwork/core-v8/errcore"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/pagingutil"
 )
 
 type DynamicCollection struct {

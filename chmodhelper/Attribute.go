@@ -23,8 +23,8 @@
 package chmodhelper
 
 import (
-	"github.com/alimtvnetwork/core/conditional"
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/conditional"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 type Attribute struct {

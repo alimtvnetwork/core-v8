@@ -23,9 +23,9 @@
 package reqtypetests
 
 import (
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
-	"github.com/alimtvnetwork/core/reqtype"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/reqtype"
 )
 
 // requestIdentityTestCases

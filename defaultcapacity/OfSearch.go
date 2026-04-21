@@ -22,7 +22,7 @@
 
 package defaultcapacity
 
-import "github.com/alimtvnetwork/core/constants"
+import "github.com/alimtvnetwork/core-v8/constants"
 
 func OfSearch(length int) int {
 	if length <= constants.Capacity3 {

@@ -34,7 +34,7 @@ Same set without the leading dot (e.g., `Json = "json"`).
 ## Usage
 
 ```go
-import "github.com/alimtvnetwork/core/extensionsconst"
+import "github.com/alimtvnetwork/core-v8/extensionsconst"
 
 filename := "config" + extensionsconst.DotJson  // "config.json"
 ```

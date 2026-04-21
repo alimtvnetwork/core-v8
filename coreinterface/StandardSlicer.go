@@ -22,7 +22,7 @@
 
 package coreinterface
 
-import "github.com/alimtvnetwork/core/coredata/corejson"
+import "github.com/alimtvnetwork/core-v8/coredata/corejson"
 
 type StandardSlicer interface {
 	BasicSlicer

@@ -22,7 +22,7 @@
 
 package simplewrap
 
-import "github.com/alimtvnetwork/core/internal/csvinternal"
+import "github.com/alimtvnetwork/core-v8/internal/csvinternal"
 
 // TitleSquareCsvMeta
 //

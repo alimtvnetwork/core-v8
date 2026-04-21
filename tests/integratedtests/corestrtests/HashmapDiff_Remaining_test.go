@@ -26,9 +26,9 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
 )
 
 // ── HashmapDiff ──

@@ -23,7 +23,7 @@
 package corejsontests
 
 import (
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
 )
 
 var deserializerFromToTestCase = coretestcases.CaseV1{

@@ -23,8 +23,8 @@
 package enumimpl
 
 import (
-	"github.com/alimtvnetwork/core/errcore"
-	"github.com/alimtvnetwork/core/internal/csvinternal"
+	"github.com/alimtvnetwork/core-v8/errcore"
+	"github.com/alimtvnetwork/core-v8/internal/csvinternal"
 )
 
 func OnlySupportedErr(

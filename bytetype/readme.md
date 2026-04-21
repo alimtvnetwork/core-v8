@@ -115,7 +115,7 @@ bytetype/
 ## Usage
 
 ```go
-import "github.com/alimtvnetwork/core/bytetype"
+import "github.com/alimtvnetwork/core-v8/bytetype"
 
 v := bytetype.New(2)
 fmt.Println(v.Name())       // "Two"

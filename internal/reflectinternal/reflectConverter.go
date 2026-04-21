@@ -28,8 +28,8 @@ import (
 	"sync"
 	"unsafe"
 
-	"github.com/alimtvnetwork/core/internal/convertinternal"
-	"github.com/alimtvnetwork/core/reflectcore/reflectmodel"
+	"github.com/alimtvnetwork/core-v8/internal/convertinternal"
+	"github.com/alimtvnetwork/core-v8/reflectcore/reflectmodel"
 )
 
 type reflectConverter struct{}

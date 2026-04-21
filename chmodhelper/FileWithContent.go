@@ -26,8 +26,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/internal/pathinternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/internal/pathinternal"
 )
 
 type FileWithContent struct {

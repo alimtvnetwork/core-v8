@@ -23,7 +23,7 @@
 package chmodins
 
 import (
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 // GetRwxFullLengthError must be 10 chars length

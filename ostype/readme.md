@@ -77,7 +77,7 @@ ostype/
 ## Usage Examples
 
 ```go
-import "github.com/alimtvnetwork/core/ostype"
+import "github.com/alimtvnetwork/core-v8/ostype"
 
 // Runtime detection
 gv := ostype.GetGroupVariant()

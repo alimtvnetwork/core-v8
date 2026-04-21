@@ -23,9 +23,9 @@
 package coredatatests
 
 import (
-	"github.com/alimtvnetwork/core/coredata"
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
-	"github.com/alimtvnetwork/core/coretests/results"
+	"github.com/alimtvnetwork/core-v8/coredata"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/coretests/results"
 )
 
 // =============================================================================

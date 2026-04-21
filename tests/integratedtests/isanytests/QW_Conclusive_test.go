@@ -25,8 +25,8 @@ package isanytests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/isany"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/isany"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 func Test_QW_Conclusive_LeftNilRightDefined(t *testing.T) {

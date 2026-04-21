@@ -26,8 +26,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/enums/stringcompareas"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/enums/stringcompareas"
 )
 
 func Test_Glob_Match_Verification(t *testing.T) {

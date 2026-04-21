@@ -6,7 +6,7 @@
 
 ## Context
 
-The `github.com/alimtvnetwork/core` repository is a single Go module containing ~62 top-level packages, ~15 internal packages, and ~65 test packages. As the codebase has grown (generics adoption, new collection types, expanded test suites), the question arises: should this monorepo be split into multiple Go modules?
+The `github.com/alimtvnetwork/core-v8` repository is a single Go module containing ~62 top-level packages, ~15 internal packages, and ~65 test packages. As the codebase has grown (generics adoption, new collection types, expanded test suites), the question arises: should this monorepo be split into multiple Go modules?
 
 This document evaluates the trade-offs and recommends an approach.
 
@@ -59,7 +59,7 @@ issetter           —  45 imports
 
 ### Option A: Keep Single Module (Monorepo) ✅ RECOMMENDED
 
-Keep `github.com/alimtvnetwork/core` as one `go.mod`.
+Keep `github.com/alimtvnetwork/core-v8` as one `go.mod`.
 
 **Pros:**
 - Zero versioning coordination overhead
@@ -94,15 +94,15 @@ core-testing/     → coretests/*, corevalidator, testconsts
 - **Circular dependency risk**: `coredata` → `errcore` → `internal/reflectinternal` → used by `coredata/coredynamic`. Splitting requires careful layering.
 - **Version coordination**: Any interface change in `core-foundation` forces synchronized releases across all downstream modules.
 - **CI complexity**: Multiple pipelines, cross-module integration tests, release orchestration.
-- **Breaking change for all consumers**: Every `import "github.com/alimtvnetwork/core/..."` path changes.
+- **Breaking change for all consumers**: Every `import "github.com/alimtvnetwork/core-v8/..."` path changes.
 
 ### Option C: Extract Only Leaf Packages
 
 Extract zero-dependency packages as standalone modules:
 ```
-github.com/alimtvnetwork/core-constants
-github.com/alimtvnetwork/core-dtformats
-github.com/alimtvnetwork/core-filemode
+github.com/alimtvnetwork/core-v8-constants
+github.com/alimtvnetwork/core-v8-dtformats
+github.com/alimtvnetwork/core-v8-filemode
 ```
 
 **Pros:**

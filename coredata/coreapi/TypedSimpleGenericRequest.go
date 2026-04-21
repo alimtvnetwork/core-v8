@@ -22,7 +22,7 @@
 
 package coreapi
 
-import "github.com/alimtvnetwork/core/coredata/coredynamic"
+import "github.com/alimtvnetwork/core-v8/coredata/coredynamic"
 
 // TypedSimpleGenericRequest is the generic version of SimpleGenericRequest.
 //

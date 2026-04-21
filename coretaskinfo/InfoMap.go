@@ -23,8 +23,8 @@
 package coretaskinfo
 
 import (
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
 )
 
 func (it *Info) Map() map[string]string {

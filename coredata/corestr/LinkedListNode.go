@@ -26,7 +26,7 @@ import (
 	"log/slog"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 type LinkedListNode struct {

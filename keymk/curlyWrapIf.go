@@ -25,7 +25,7 @@ package keymk
 import (
 	"fmt"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 func curlyWrapIf(

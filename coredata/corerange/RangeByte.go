@@ -23,7 +23,7 @@
 package corerange
 
 import (
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 type RangeByte struct {

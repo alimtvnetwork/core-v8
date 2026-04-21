@@ -25,8 +25,8 @@ package anycmptests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/anycmp"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/anycmp"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 func Test_Cmp_SamePointer_Verification(t *testing.T) {

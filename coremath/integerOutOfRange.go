@@ -25,8 +25,8 @@ package coremath
 import (
 	"math"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/osconsts"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/osconsts"
 )
 
 type integerOutOfRange struct{}

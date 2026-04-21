@@ -23,8 +23,8 @@
 package reflectcore
 
 import (
-	"github.com/alimtvnetwork/core/internal/convertinternal"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/internal/convertinternal"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 var (

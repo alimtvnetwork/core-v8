@@ -25,7 +25,7 @@ Package `testconsts` provides shared constant values and sample data used exclus
 ## Usage
 
 ```go
-import "github.com/alimtvnetwork/core/testconsts"
+import "github.com/alimtvnetwork/core-v8/testconsts"
 
 func Test_Something(t *testing.T) {
     input := testconsts.JohnDoe

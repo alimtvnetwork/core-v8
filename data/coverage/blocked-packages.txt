@@ -3,10 +3,10 @@
 # Source: CoverageRunner.psm1 → Invoke-TestCoverage (CoverageRunner.psm1 → Invoke-TestCoverage)
 
 ## coredynamictests/Dynamic_UncoveredPaths
-# github.com/alimtvnetwork/core/tests/integratedtests/coredynamictests/Dynamic_UncoveredPaths [github.com/alimtvnetwork/core/tests/integratedtests/coredynamictests/Dynamic_UncoveredPaths.test]
+# github.com/alimtvnetwork/core-v8/tests/integratedtests/coredynamictests/Dynamic_UncoveredPaths [github.com/alimtvnetwork/core-v8/tests/integratedtests/coredynamictests/Dynamic_UncoveredPaths.test]
 tests/integratedtests/coredynamictests/Dynamic_UncoveredPaths/ReflectSetFromTo_BothNil_Reflect_Helpers_test.go:477:6: Test_Type redeclared in this block
 	tests/integratedtests/coredynamictests/Dynamic_UncoveredPaths/Dynamic_UncoveredPaths_test.go:1665:6: other declaration of Test_Type
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/coredynamictests/Dynamic_UncoveredPaths [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/coredynamictests/Dynamic_UncoveredPaths [build failed]
 
 ## corepayloadtests/TypedPayloadWrapper
 tests/integratedtests/corepayloadtests/TypedPayloadWrapper/TypedPayloadWrapper_test.go:1319:29: too many arguments in call to makeTypedCollection
@@ -17,7 +17,7 @@ tests/integratedtests/corepayloadtests/TypedPayloadWrapper/TypedPayloadWrapper_t
 tests/integratedtests/corepayloadtests/TypedPayloadWrapper/TypedPayloadWrapper_test.go:1326:52: cannot use col (variable of type *corepayload.TypedPayloadCollection[testUserTyped]) as *corepayload.TypedPayloadCollection[testUser] value in argument to corepayload.AllTypedPayloads[testUser]
 tests/integratedtests/corepayloadtests/TypedPayloadWrapper/TypedPayloadWrapper_test.go:1355:29: too many arguments in call to makeTypedCollection
 tests/integratedtests/corepayloadtests/TypedPayloadWrapper/TypedPayloadWrapper_test.go:1356:73: cannot use col (variable of type *corepayload.TypedPayloadCollection[testUserTyped]) as *corepayload.TypedPayloadCollection[testUser] value in argument to corepayload.ConvertTypedPayloads[testUser, testUser]
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corepayloadtests/TypedPayloadWrapper [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corepayloadtests/TypedPayloadWrapper [build failed]
 
 ## corepayloadtests/TypedPayloadWrapper_SetName_TypedWrapperMethods
 tests/integratedtests/corepayloadtests/TypedPayloadWrapper_SetName_TypedWrapperMethods/TypedPayloadWrapper_SetName_TypedWrapperMethods_test.go:399:10: undefined: makeCollectionCov23
@@ -30,7 +30,7 @@ tests/integratedtests/corepayloadtests/TypedPayloadWrapper_SetName_TypedWrapperM
 tests/integratedtests/corepayloadtests/TypedPayloadWrapper_SetName_TypedWrapperMethods/TypedPayloadWrapper_SetName_TypedWrapperMethods_test.go:462:9: undefined: makeCollectionCov23
 tests/integratedtests/corepayloadtests/TypedPayloadWrapper_SetName_TypedWrapperMethods/TypedPayloadWrapper_SetName_TypedWrapperMethods_test.go:466:59: undefined: testUserCov23
 tests/integratedtests/corepayloadtests/TypedPayloadWrapper_SetName_TypedWrapperMethods/TypedPayloadWrapper_SetName_TypedWrapperMethods_test.go:476:59: undefined: testUserCov23
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corepayloadtests/TypedPayloadWrapper_SetName_TypedWrapperMethods [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corepayloadtests/TypedPayloadWrapper_SetName_TypedWrapperMethods [build failed]
 
 ## corestrtests/Add
 tests/integratedtests/corestrtests/Add/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -43,7 +43,7 @@ tests/integratedtests/corestrtests/Add/Helpers_Methods_test.go:483:6: Test_Hashs
 	tests/integratedtests/corestrtests/Add/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Add/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Add/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Add [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Add [build failed]
 
 ## corestrtests/AnyToString_Empty
 tests/integratedtests/corestrtests/AnyToString_Empty/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -56,7 +56,7 @@ tests/integratedtests/corestrtests/AnyToString_Empty/Helpers_Methods_test.go:483
 	tests/integratedtests/corestrtests/AnyToString_Empty/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/AnyToString_Empty/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/AnyToString_Empty/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/AnyToString_Empty [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/AnyToString_Empty [build failed]
 
 ## corestrtests/BugfixRegression
 tests/integratedtests/corestrtests/BugfixRegression/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -69,7 +69,7 @@ tests/integratedtests/corestrtests/BugfixRegression/Helpers_Methods_test.go:483:
 	tests/integratedtests/corestrtests/BugfixRegression/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/BugfixRegression/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/BugfixRegression/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/BugfixRegression [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/BugfixRegression [build failed]
 
 ## corestrtests/CharCollectionMap_Add
 tests/integratedtests/corestrtests/CharCollectionMap_Add/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -82,7 +82,7 @@ tests/integratedtests/corestrtests/CharCollectionMap_Add/Helpers_Methods_test.go
 	tests/integratedtests/corestrtests/CharCollectionMap_Add/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/CharCollectionMap_Add/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/CharCollectionMap_Add/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/CharCollectionMap_Add [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/CharCollectionMap_Add [build failed]
 
 ## corestrtests/CharCollectionMap_AddHashmapsValues_CharMaps_SimpleSlice
 tests/integratedtests/corestrtests/CharCollectionMap_AddHashmapsValues_CharMaps_SimpleSlice/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -95,7 +95,7 @@ tests/integratedtests/corestrtests/CharCollectionMap_AddHashmapsValues_CharMaps_
 	tests/integratedtests/corestrtests/CharCollectionMap_AddHashmapsValues_CharMaps_SimpleSlice/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/CharCollectionMap_AddHashmapsValues_CharMaps_SimpleSlice/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/CharCollectionMap_AddHashmapsValues_CharMaps_SimpleSlice/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/CharCollectionMap_AddHashmapsValues_CharMaps_SimpleSlice [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/CharCollectionMap_AddHashmapsValues_CharMaps_SimpleSlice [build failed]
 
 ## corestrtests/CharCollectionMap_AddToNilItems_FinalGaps
 tests/integratedtests/corestrtests/CharCollectionMap_AddToNilItems_FinalGaps/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -108,7 +108,7 @@ tests/integratedtests/corestrtests/CharCollectionMap_AddToNilItems_FinalGaps/Hel
 	tests/integratedtests/corestrtests/CharCollectionMap_AddToNilItems_FinalGaps/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/CharCollectionMap_AddToNilItems_FinalGaps/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/CharCollectionMap_AddToNilItems_FinalGaps/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/CharCollectionMap_AddToNilItems_FinalGaps [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/CharCollectionMap_AddToNilItems_FinalGaps [build failed]
 
 ## corestrtests/CharCollectionMap_AllIndStrOfStrLen
 tests/integratedtests/corestrtests/CharCollectionMap_AllIndStrOfStrLen/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -121,7 +121,7 @@ tests/integratedtests/corestrtests/CharCollectionMap_AllIndStrOfStrLen/Helpers_M
 	tests/integratedtests/corestrtests/CharCollectionMap_AllIndStrOfStrLen/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/CharCollectionMap_AllIndStrOfStrLen/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/CharCollectionMap_AllIndStrOfStrLen/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/CharCollectionMap_AllIndStrOfStrLen [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/CharCollectionMap_AllIndStrOfStrLen [build failed]
 
 ## corestrtests/CharCollectionMap_Core
 tests/integratedtests/corestrtests/CharCollectionMap_Core/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -134,7 +134,7 @@ tests/integratedtests/corestrtests/CharCollectionMap_Core/Helpers_Methods_test.g
 	tests/integratedtests/corestrtests/CharCollectionMap_Core/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/CharCollectionMap_Core/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/CharCollectionMap_Core/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/CharCollectionMap_Core [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/CharCollectionMap_Core [build failed]
 
 ## corestrtests/CharCollectionMap_Full
 tests/integratedtests/corestrtests/CharCollectionMap_Full/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -147,7 +147,7 @@ tests/integratedtests/corestrtests/CharCollectionMap_Full/Helpers_Methods_test.g
 	tests/integratedtests/corestrtests/CharCollectionMap_Full/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/CharCollectionMap_Full/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/CharCollectionMap_Full/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/CharCollectionMap_Full [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/CharCollectionMap_Full [build failed]
 
 ## corestrtests/CharCollectionMap_I8
 tests/integratedtests/corestrtests/CharCollectionMap_I8/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -160,7 +160,7 @@ tests/integratedtests/corestrtests/CharCollectionMap_I8/Helpers_Methods_test.go:
 	tests/integratedtests/corestrtests/CharCollectionMap_I8/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/CharCollectionMap_I8/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/CharCollectionMap_I8/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/CharCollectionMap_I8 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/CharCollectionMap_I8 [build failed]
 
 ## corestrtests/CharCollectionMap_IsEmpty
 tests/integratedtests/corestrtests/CharCollectionMap_IsEmpty/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -173,7 +173,7 @@ tests/integratedtests/corestrtests/CharCollectionMap_IsEmpty/Helpers_Methods_tes
 	tests/integratedtests/corestrtests/CharCollectionMap_IsEmpty/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/CharCollectionMap_IsEmpty/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/CharCollectionMap_IsEmpty/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/CharCollectionMap_IsEmpty [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/CharCollectionMap_IsEmpty [build failed]
 
 ## corestrtests/CharCollectionMap_Methods
 tests/integratedtests/corestrtests/CharCollectionMap_Methods/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -186,7 +186,7 @@ tests/integratedtests/corestrtests/CharCollectionMap_Methods/Helpers_Methods_tes
 	tests/integratedtests/corestrtests/CharCollectionMap_Methods/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/CharCollectionMap_Methods/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/CharCollectionMap_Methods/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/CharCollectionMap_Methods [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/CharCollectionMap_Methods [build failed]
 
 ## corestrtests/CharHashsetMap_Core
 tests/integratedtests/corestrtests/CharHashsetMap_Core/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -199,7 +199,7 @@ tests/integratedtests/corestrtests/CharHashsetMap_Core/Helpers_Methods_test.go:4
 	tests/integratedtests/corestrtests/CharHashsetMap_Core/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/CharHashsetMap_Core/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/CharHashsetMap_Core/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/CharHashsetMap_Core [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/CharHashsetMap_Core [build failed]
 
 ## corestrtests/CharHashsetMap_DataModel
 tests/integratedtests/corestrtests/CharHashsetMap_DataModel/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -212,7 +212,7 @@ tests/integratedtests/corestrtests/CharHashsetMap_DataModel/Helpers_Methods_test
 	tests/integratedtests/corestrtests/CharHashsetMap_DataModel/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/CharHashsetMap_DataModel/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/CharHashsetMap_DataModel/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/CharHashsetMap_DataModel [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/CharHashsetMap_DataModel [build failed]
 
 ## corestrtests/CharHashsetMap_EfficientAdd_AllGaps
 tests/integratedtests/corestrtests/CharHashsetMap_EfficientAdd_AllGaps/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -225,7 +225,7 @@ tests/integratedtests/corestrtests/CharHashsetMap_EfficientAdd_AllGaps/Helpers_M
 	tests/integratedtests/corestrtests/CharHashsetMap_EfficientAdd_AllGaps/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/CharHashsetMap_EfficientAdd_AllGaps/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/CharHashsetMap_EfficientAdd_AllGaps/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/CharHashsetMap_EfficientAdd_AllGaps [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/CharHashsetMap_EfficientAdd_AllGaps [build failed]
 
 ## corestrtests/CharHashsetMap_GetChar_CharHashsetMapSeg1
 tests/integratedtests/corestrtests/CharHashsetMap_GetChar_CharHashsetMapSeg1/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -238,7 +238,7 @@ tests/integratedtests/corestrtests/CharHashsetMap_GetChar_CharHashsetMapSeg1/Hel
 	tests/integratedtests/corestrtests/CharHashsetMap_GetChar_CharHashsetMapSeg1/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/CharHashsetMap_GetChar_CharHashsetMapSeg1/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/CharHashsetMap_GetChar_CharHashsetMapSeg1/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/CharHashsetMap_GetChar_CharHashsetMapSeg1 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/CharHashsetMap_GetChar_CharHashsetMapSeg1 [build failed]
 
 ## corestrtests/CharHashsetMap_Methods
 tests/integratedtests/corestrtests/CharHashsetMap_Methods/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -251,7 +251,7 @@ tests/integratedtests/corestrtests/CharHashsetMap_Methods/Helpers_Methods_test.g
 	tests/integratedtests/corestrtests/CharHashsetMap_Methods/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/CharHashsetMap_Methods/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/CharHashsetMap_Methods/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/CharHashsetMap_Methods [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/CharHashsetMap_Methods [build failed]
 
 ## corestrtests/CloneSlice_Empty
 tests/integratedtests/corestrtests/CloneSlice_Empty/Helpers_Methods_test.go:447:6: Test_HashmapDataModel redeclared in this block
@@ -264,7 +264,7 @@ tests/integratedtests/corestrtests/CloneSlice_Empty/Helpers_Methods_test.go:502:
 	tests/integratedtests/corestrtests/CloneSlice_Empty/CloneSlice_Empty_test.go:2082:6: other declaration of Test_SimpleStringOnceModel
 tests/integratedtests/corestrtests/CloneSlice_Empty/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/CloneSlice_Empty/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/CloneSlice_Empty [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/CloneSlice_Empty [build failed]
 
 ## corestrtests/CloneSlice_NonEmpty
 tests/integratedtests/corestrtests/CloneSlice_NonEmpty/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -277,7 +277,7 @@ tests/integratedtests/corestrtests/CloneSlice_NonEmpty/Helpers_Methods_test.go:4
 	tests/integratedtests/corestrtests/CloneSlice_NonEmpty/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/CloneSlice_NonEmpty/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/CloneSlice_NonEmpty/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/CloneSlice_NonEmpty [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/CloneSlice_NonEmpty [build failed]
 
 ## corestrtests/Collection_Add
 tests/integratedtests/corestrtests/Collection_Add/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -290,7 +290,7 @@ tests/integratedtests/corestrtests/Collection_Add/Helpers_Methods_test.go:483:6:
 	tests/integratedtests/corestrtests/Collection_Add/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_Add/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_Add/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_Add [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_Add [build failed]
 
 ## corestrtests/Collection_AddHashmapsKeysValues
 tests/integratedtests/corestrtests/Collection_AddHashmapsKeysValues/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -303,7 +303,7 @@ tests/integratedtests/corestrtests/Collection_AddHashmapsKeysValues/Helpers_Meth
 	tests/integratedtests/corestrtests/Collection_AddHashmapsKeysValues/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_AddHashmapsKeysValues/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_AddHashmapsKeysValues/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_AddHashmapsKeysValues [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_AddHashmapsKeysValues [build failed]
 
 ## corestrtests/Collection_AddWithWgLock_AsyncConcurrency
 tests/integratedtests/corestrtests/Collection_AddWithWgLock_AsyncConcurrency/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -316,7 +316,7 @@ tests/integratedtests/corestrtests/Collection_AddWithWgLock_AsyncConcurrency/Hel
 	tests/integratedtests/corestrtests/Collection_AddWithWgLock_AsyncConcurrency/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_AddWithWgLock_AsyncConcurrency/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_AddWithWgLock_AsyncConcurrency/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_AddWithWgLock_AsyncConcurrency [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_AddWithWgLock_AsyncConcurrency [build failed]
 
 ## corestrtests/Collection_Basic
 tests/integratedtests/corestrtests/Collection_Basic/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -329,7 +329,7 @@ tests/integratedtests/corestrtests/Collection_Basic/Helpers_Methods_test.go:483:
 	tests/integratedtests/corestrtests/Collection_Basic/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_Basic/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_Basic/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_Basic [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_Basic [build failed]
 
 ## corestrtests/Collection_BasicMethods
 tests/integratedtests/corestrtests/Collection_BasicMethods/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -342,7 +342,7 @@ tests/integratedtests/corestrtests/Collection_BasicMethods/Helpers_Methods_test.
 	tests/integratedtests/corestrtests/Collection_BasicMethods/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_BasicMethods/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_BasicMethods/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_BasicMethods [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_BasicMethods [build failed]
 
 ## corestrtests/Collection_BasicOps
 tests/integratedtests/corestrtests/Collection_BasicOps/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -355,7 +355,7 @@ tests/integratedtests/corestrtests/Collection_BasicOps/Helpers_Methods_test.go:4
 	tests/integratedtests/corestrtests/Collection_BasicOps/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_BasicOps/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_BasicOps/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_BasicOps [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_BasicOps [build failed]
 
 ## corestrtests/Collection_BasicOps_Extended
 tests/integratedtests/corestrtests/Collection_BasicOps_Extended/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -368,7 +368,7 @@ tests/integratedtests/corestrtests/Collection_BasicOps_Extended/Helpers_Methods_
 	tests/integratedtests/corestrtests/Collection_BasicOps_Extended/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_BasicOps_Extended/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_BasicOps_Extended/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_BasicOps_Extended [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_BasicOps_Extended [build failed]
 
 ## corestrtests/Collection_CoreMethods
 tests/integratedtests/corestrtests/Collection_CoreMethods/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -381,7 +381,7 @@ tests/integratedtests/corestrtests/Collection_CoreMethods/Helpers_Methods_test.g
 	tests/integratedtests/corestrtests/Collection_CoreMethods/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_CoreMethods/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_CoreMethods/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_CoreMethods [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_CoreMethods [build failed]
 
 ## corestrtests/Collection_Deep
 tests/integratedtests/corestrtests/Collection_Deep/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -394,7 +394,7 @@ tests/integratedtests/corestrtests/Collection_Deep/Helpers_Methods_test.go:483:6
 	tests/integratedtests/corestrtests/Collection_Deep/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_Deep/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_Deep/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_Deep [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_Deep [build failed]
 
 ## corestrtests/Collection_DeepClone
 tests/integratedtests/corestrtests/Collection_DeepClone/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -407,7 +407,7 @@ tests/integratedtests/corestrtests/Collection_DeepClone/Helpers_Methods_test.go:
 	tests/integratedtests/corestrtests/Collection_DeepClone/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_DeepClone/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_DeepClone/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_DeepClone [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_DeepClone [build failed]
 
 ## corestrtests/Collection_Filter
 tests/integratedtests/corestrtests/Collection_Filter/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -420,7 +420,7 @@ tests/integratedtests/corestrtests/Collection_Filter/Helpers_Methods_test.go:483
 	tests/integratedtests/corestrtests/Collection_Filter/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_Filter/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_Filter/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_Filter [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_Filter [build failed]
 
 ## corestrtests/Collection_Full
 tests/integratedtests/corestrtests/Collection_Full/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -433,7 +433,7 @@ tests/integratedtests/corestrtests/Collection_Full/Helpers_Methods_test.go:483:6
 	tests/integratedtests/corestrtests/Collection_Full/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_Full/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_Full/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_Full [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_Full [build failed]
 
 ## corestrtests/Collection_I8
 tests/integratedtests/corestrtests/Collection_I8/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -446,7 +446,7 @@ tests/integratedtests/corestrtests/Collection_I8/Helpers_Methods_test.go:483:6: 
 	tests/integratedtests/corestrtests/Collection_I8/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_I8/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_I8/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_I8 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_I8 [build failed]
 
 ## corestrtests/Collection_IndexAt
 tests/integratedtests/corestrtests/Collection_IndexAt/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -459,7 +459,7 @@ tests/integratedtests/corestrtests/Collection_IndexAt/Helpers_Methods_test.go:48
 	tests/integratedtests/corestrtests/Collection_IndexAt/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_IndexAt/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_IndexAt/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_IndexAt [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_IndexAt [build failed]
 
 ## corestrtests/Collection_IndexAt_Collection_Full
 tests/integratedtests/corestrtests/Collection_IndexAt_Collection_Full/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -472,7 +472,7 @@ tests/integratedtests/corestrtests/Collection_IndexAt_Collection_Full/Helpers_Me
 	tests/integratedtests/corestrtests/Collection_IndexAt_Collection_Full/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_IndexAt_Collection_Full/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_IndexAt_Collection_Full/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_IndexAt_Collection_Full [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_IndexAt_Collection_Full [build failed]
 
 ## corestrtests/Collection_InsertAt_CollSeg2
 tests/integratedtests/corestrtests/Collection_InsertAt_CollSeg2/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -485,7 +485,7 @@ tests/integratedtests/corestrtests/Collection_InsertAt_CollSeg2/Helpers_Methods_
 	tests/integratedtests/corestrtests/Collection_InsertAt_CollSeg2/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_InsertAt_CollSeg2/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_InsertAt_CollSeg2/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_InsertAt_CollSeg2 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_InsertAt_CollSeg2 [build failed]
 
 ## corestrtests/Collection_IsEmpty
 tests/integratedtests/corestrtests/Collection_IsEmpty/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -498,7 +498,7 @@ tests/integratedtests/corestrtests/Collection_IsEmpty/Helpers_Methods_test.go:48
 	tests/integratedtests/corestrtests/Collection_IsEmpty/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_IsEmpty/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_IsEmpty/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_IsEmpty [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_IsEmpty [build failed]
 
 ## corestrtests/Collection_JsonString_CollSeg1
 tests/integratedtests/corestrtests/Collection_JsonString_CollSeg1/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -511,7 +511,7 @@ tests/integratedtests/corestrtests/Collection_JsonString_CollSeg1/Helpers_Method
 	tests/integratedtests/corestrtests/Collection_JsonString_CollSeg1/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_JsonString_CollSeg1/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_JsonString_CollSeg1/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_JsonString_CollSeg1 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_JsonString_CollSeg1 [build failed]
 
 ## corestrtests/Collection_LengthLock
 tests/integratedtests/corestrtests/Collection_LengthLock/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -524,7 +524,7 @@ tests/integratedtests/corestrtests/Collection_LengthLock/Helpers_Methods_test.go
 	tests/integratedtests/corestrtests/Collection_LengthLock/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_LengthLock/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_LengthLock/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_LengthLock [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_LengthLock [build failed]
 
 ## corestrtests/Collection_NewEmpty
 tests/integratedtests/corestrtests/Collection_NewEmpty/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -537,7 +537,7 @@ tests/integratedtests/corestrtests/Collection_NewEmpty/Helpers_Methods_test.go:4
 	tests/integratedtests/corestrtests/Collection_NewEmpty/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_NewEmpty/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_NewEmpty/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_NewEmpty [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_NewEmpty [build failed]
 
 ## corestrtests/Collection_Part1
 tests/integratedtests/corestrtests/Collection_Part1/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -550,7 +550,7 @@ tests/integratedtests/corestrtests/Collection_Part1/Helpers_Methods_test.go:483:
 	tests/integratedtests/corestrtests/Collection_Part1/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_Part1/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_Part1/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_Part1 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_Part1 [build failed]
 
 ## corestrtests/Collection_Part2
 tests/integratedtests/corestrtests/Collection_Part2/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -563,7 +563,7 @@ tests/integratedtests/corestrtests/Collection_Part2/Helpers_Methods_test.go:483:
 	tests/integratedtests/corestrtests/Collection_Part2/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_Part2/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_Part2/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_Part2 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_Part2 [build failed]
 
 ## corestrtests/Collection_RemoveItemsIndexes
 tests/integratedtests/corestrtests/Collection_RemoveItemsIndexes/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -576,7 +576,7 @@ tests/integratedtests/corestrtests/Collection_RemoveItemsIndexes/Helpers_Methods
 	tests/integratedtests/corestrtests/Collection_RemoveItemsIndexes/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_RemoveItemsIndexes/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_RemoveItemsIndexes/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_RemoveItemsIndexes [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_RemoveItemsIndexes [build failed]
 
 ## corestrtests/Collection_String
 tests/integratedtests/corestrtests/Collection_String/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -589,7 +589,7 @@ tests/integratedtests/corestrtests/Collection_String/Helpers_Methods_test.go:483
 	tests/integratedtests/corestrtests/Collection_String/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Collection_String/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Collection_String/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Collection_String [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Collection_String [build failed]
 
 ## corestrtests/CollOfColl_KV_Creators
 tests/integratedtests/corestrtests/CollOfColl_KV_Creators/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -602,7 +602,7 @@ tests/integratedtests/corestrtests/CollOfColl_KV_Creators/Helpers_Methods_test.g
 	tests/integratedtests/corestrtests/CollOfColl_KV_Creators/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/CollOfColl_KV_Creators/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/CollOfColl_KV_Creators/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/CollOfColl_KV_Creators [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/CollOfColl_KV_Creators [build failed]
 
 ## corestrtests/Creators_Methods
 tests/integratedtests/corestrtests/Creators_Methods/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -615,7 +615,7 @@ tests/integratedtests/corestrtests/Creators_Methods/Helpers_Methods_test.go:483:
 	tests/integratedtests/corestrtests/Creators_Methods/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Creators_Methods/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Creators_Methods/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Creators_Methods [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Creators_Methods [build failed]
 
 ## corestrtests/Creators_Utils
 tests/integratedtests/corestrtests/Creators_Utils/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -628,7 +628,7 @@ tests/integratedtests/corestrtests/Creators_Utils/Helpers_Methods_test.go:483:6:
 	tests/integratedtests/corestrtests/Creators_Utils/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Creators_Utils/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Creators_Utils/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Creators_Utils [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Creators_Utils [build failed]
 
 ## corestrtests/Deep_Methods
 tests/integratedtests/corestrtests/Deep_Methods/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -641,7 +641,7 @@ tests/integratedtests/corestrtests/Deep_Methods/Helpers_Methods_test.go:483:6: T
 	tests/integratedtests/corestrtests/Deep_Methods/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Deep_Methods/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Deep_Methods/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Deep_Methods [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Deep_Methods [build failed]
 
 ## corestrtests/ExtCollection_Add
 tests/integratedtests/corestrtests/ExtCollection_Add/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -654,7 +654,7 @@ tests/integratedtests/corestrtests/ExtCollection_Add/Helpers_Methods_test.go:483
 	tests/integratedtests/corestrtests/ExtCollection_Add/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/ExtCollection_Add/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/ExtCollection_Add/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/ExtCollection_Add [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/ExtCollection_Add [build failed]
 
 ## corestrtests/Full_Methods
 tests/integratedtests/corestrtests/Full_Methods/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -667,7 +667,7 @@ tests/integratedtests/corestrtests/Full_Methods/Helpers_Methods_test.go:483:6: T
 	tests/integratedtests/corestrtests/Full_Methods/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Full_Methods/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Full_Methods/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Full_Methods [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Full_Methods [build failed]
 
 ## corestrtests/Hashmap
 tests/integratedtests/corestrtests/Hashmap/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -680,7 +680,7 @@ tests/integratedtests/corestrtests/Hashmap/Helpers_Methods_test.go:483:6: Test_H
 	tests/integratedtests/corestrtests/Hashmap/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashmap/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashmap/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashmap [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashmap [build failed]
 
 ## corestrtests/Hashmap_AddMethods_Hashmap_Hashset_Full
 tests/integratedtests/corestrtests/Hashmap_AddMethods_Hashmap_Hashset_Full/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -693,7 +693,7 @@ tests/integratedtests/corestrtests/Hashmap_AddMethods_Hashmap_Hashset_Full/Helpe
 	tests/integratedtests/corestrtests/Hashmap_AddMethods_Hashmap_Hashset_Full/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashmap_AddMethods_Hashmap_Hashset_Full/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashmap_AddMethods_Hashmap_Hashset_Full/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashmap_AddMethods_Hashmap_Hashset_Full [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashmap_AddMethods_Hashmap_Hashset_Full [build failed]
 
 ## corestrtests/Hashmap_AddOrUpdateKeyStrValFloat
 tests/integratedtests/corestrtests/Hashmap_AddOrUpdateKeyStrValFloat/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -706,7 +706,7 @@ tests/integratedtests/corestrtests/Hashmap_AddOrUpdateKeyStrValFloat/Helpers_Met
 	tests/integratedtests/corestrtests/Hashmap_AddOrUpdateKeyStrValFloat/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashmap_AddOrUpdateKeyStrValFloat/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashmap_AddOrUpdateKeyStrValFloat/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashmap_AddOrUpdateKeyStrValFloat [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashmap_AddOrUpdateKeyStrValFloat [build failed]
 
 ## corestrtests/Hashmap_AllKeys
 tests/integratedtests/corestrtests/Hashmap_AllKeys/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -719,7 +719,7 @@ tests/integratedtests/corestrtests/Hashmap_AllKeys/Helpers_Methods_test.go:483:6
 	tests/integratedtests/corestrtests/Hashmap_AllKeys/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashmap_AllKeys/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashmap_AllKeys/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashmap_AllKeys [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashmap_AllKeys [build failed]
 
 ## corestrtests/Hashmap_Basic_HashmapHashset
 tests/integratedtests/corestrtests/Hashmap_Basic_HashmapHashset/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -732,7 +732,7 @@ tests/integratedtests/corestrtests/Hashmap_Basic_HashmapHashset/Helpers_Methods_
 	tests/integratedtests/corestrtests/Hashmap_Basic_HashmapHashset/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashmap_Basic_HashmapHashset/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashmap_Basic_HashmapHashset/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashmap_Basic_HashmapHashset [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashmap_Basic_HashmapHashset [build failed]
 
 ## corestrtests/Hashmap_BasicOps
 tests/integratedtests/corestrtests/Hashmap_BasicOps/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -745,7 +745,7 @@ tests/integratedtests/corestrtests/Hashmap_BasicOps/Helpers_Methods_test.go:483:
 	tests/integratedtests/corestrtests/Hashmap_BasicOps/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashmap_BasicOps/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashmap_BasicOps/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashmap_BasicOps [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashmap_BasicOps [build failed]
 
 ## corestrtests/Hashmap_CoreMethods
 tests/integratedtests/corestrtests/Hashmap_CoreMethods/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -758,7 +758,7 @@ tests/integratedtests/corestrtests/Hashmap_CoreMethods/Helpers_Methods_test.go:4
 	tests/integratedtests/corestrtests/Hashmap_CoreMethods/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashmap_CoreMethods/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashmap_CoreMethods/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashmap_CoreMethods [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashmap_CoreMethods [build failed]
 
 ## corestrtests/Hashmap_DeepClone
 tests/integratedtests/corestrtests/Hashmap_DeepClone/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -771,7 +771,7 @@ tests/integratedtests/corestrtests/Hashmap_DeepClone/Helpers_Methods_test.go:483
 	tests/integratedtests/corestrtests/Hashmap_DeepClone/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashmap_DeepClone/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashmap_DeepClone/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashmap_DeepClone [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashmap_DeepClone [build failed]
 
 ## corestrtests/Hashmap_Hashset
 tests/integratedtests/corestrtests/Hashmap_Hashset/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -784,7 +784,7 @@ tests/integratedtests/corestrtests/Hashmap_Hashset/Helpers_Methods_test.go:483:6
 	tests/integratedtests/corestrtests/Hashmap_Hashset/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashmap_Hashset/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashmap_Hashset/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashmap_Hashset [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashmap_Hashset [build failed]
 
 ## corestrtests/Hashmap_Hashset_Full
 tests/integratedtests/corestrtests/Hashmap_Hashset_Full/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -797,7 +797,7 @@ tests/integratedtests/corestrtests/Hashmap_Hashset_Full/Helpers_Methods_test.go:
 	tests/integratedtests/corestrtests/Hashmap_Hashset_Full/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashmap_Hashset_Full/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashmap_Hashset_Full/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashmap_Hashset_Full [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashmap_Hashset_Full [build failed]
 
 ## corestrtests/Hashmap_IsEmpty
 tests/integratedtests/corestrtests/Hashmap_IsEmpty/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -810,7 +810,7 @@ tests/integratedtests/corestrtests/Hashmap_IsEmpty/Helpers_Methods_test.go:483:6
 	tests/integratedtests/corestrtests/Hashmap_IsEmpty/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashmap_IsEmpty/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashmap_IsEmpty/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashmap_IsEmpty [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashmap_IsEmpty [build failed]
 
 ## corestrtests/Hashmap_IsEmpty_HashmapSeg1
 tests/integratedtests/corestrtests/Hashmap_IsEmpty_HashmapSeg1/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -823,7 +823,7 @@ tests/integratedtests/corestrtests/Hashmap_IsEmpty_HashmapSeg1/Helpers_Methods_t
 	tests/integratedtests/corestrtests/Hashmap_IsEmpty_HashmapSeg1/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashmap_IsEmpty_HashmapSeg1/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashmap_IsEmpty_HashmapSeg1/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashmap_IsEmpty_HashmapSeg1 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashmap_IsEmpty_HashmapSeg1 [build failed]
 
 ## corestrtests/Hashmap_Part1
 tests/integratedtests/corestrtests/Hashmap_Part1/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -836,7 +836,7 @@ tests/integratedtests/corestrtests/Hashmap_Part1/Helpers_Methods_test.go:483:6: 
 	tests/integratedtests/corestrtests/Hashmap_Part1/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashmap_Part1/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashmap_Part1/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashmap_Part1 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashmap_Part1 [build failed]
 
 ## corestrtests/Hashmap_Part2
 tests/integratedtests/corestrtests/Hashmap_Part2/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -849,7 +849,7 @@ tests/integratedtests/corestrtests/Hashmap_Part2/Helpers_Methods_test.go:483:6: 
 	tests/integratedtests/corestrtests/Hashmap_Part2/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashmap_Part2/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashmap_Part2/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashmap_Part2 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashmap_Part2 [build failed]
 
 ## corestrtests/HashmapDiff_Length
 tests/integratedtests/corestrtests/HashmapDiff_Length/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -862,7 +862,7 @@ tests/integratedtests/corestrtests/HashmapDiff_Length/Helpers_Methods_test.go:48
 	tests/integratedtests/corestrtests/HashmapDiff_Length/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/HashmapDiff_Length/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/HashmapDiff_Length/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/HashmapDiff_Length [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/HashmapDiff_Length [build failed]
 
 ## corestrtests/HashmapDiff_Remaining
 tests/integratedtests/corestrtests/HashmapDiff_Remaining/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -875,7 +875,7 @@ tests/integratedtests/corestrtests/HashmapDiff_Remaining/Helpers_Methods_test.go
 	tests/integratedtests/corestrtests/HashmapDiff_Remaining/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/HashmapDiff_Remaining/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/HashmapDiff_Remaining/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/HashmapDiff_Remaining [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/HashmapDiff_Remaining [build failed]
 
 ## corestrtests/Hashset
 tests/integratedtests/corestrtests/Hashset/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -888,7 +888,7 @@ tests/integratedtests/corestrtests/Hashset/Helpers_Methods_test.go:483:6: Test_H
 	tests/integratedtests/corestrtests/Hashset/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashset/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashset/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashset [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashset [build failed]
 
 ## corestrtests/Hashset_AddPtr
 tests/integratedtests/corestrtests/Hashset_AddPtr/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -901,7 +901,7 @@ tests/integratedtests/corestrtests/Hashset_AddPtr/Helpers_Methods_test.go:483:6:
 	tests/integratedtests/corestrtests/Hashset_AddPtr/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashset_AddPtr/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashset_AddPtr/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashset_AddPtr [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashset_AddPtr [build failed]
 
 ## corestrtests/Hashset_CoreMethods
 tests/integratedtests/corestrtests/Hashset_CoreMethods/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -914,7 +914,7 @@ tests/integratedtests/corestrtests/Hashset_CoreMethods/Helpers_Methods_test.go:4
 	tests/integratedtests/corestrtests/Hashset_CoreMethods/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashset_CoreMethods/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashset_CoreMethods/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashset_CoreMethods [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashset_CoreMethods [build failed]
 
 ## corestrtests/Hashset_FullMethods
 tests/integratedtests/corestrtests/Hashset_FullMethods/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -927,7 +927,7 @@ tests/integratedtests/corestrtests/Hashset_FullMethods/Helpers_Methods_test.go:4
 	tests/integratedtests/corestrtests/Hashset_FullMethods/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashset_FullMethods/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashset_FullMethods/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashset_FullMethods [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashset_FullMethods [build failed]
 
 ## corestrtests/Hashset_Hashmap
 tests/integratedtests/corestrtests/Hashset_Hashmap/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -940,7 +940,7 @@ tests/integratedtests/corestrtests/Hashset_Hashmap/Helpers_Methods_test.go:483:6
 	tests/integratedtests/corestrtests/Hashset_Hashmap/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashset_Hashmap/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashset_Hashmap/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashset_Hashmap [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashset_Hashmap [build failed]
 
 ## corestrtests/Hashset_IsEmpty
 tests/integratedtests/corestrtests/Hashset_IsEmpty/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -953,7 +953,7 @@ tests/integratedtests/corestrtests/Hashset_IsEmpty/Helpers_Methods_test.go:483:6
 	tests/integratedtests/corestrtests/Hashset_IsEmpty/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashset_IsEmpty/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashset_IsEmpty/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashset_IsEmpty [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashset_IsEmpty [build failed]
 
 ## corestrtests/Hashset_IsEmpty_HashsetSeg1
 tests/integratedtests/corestrtests/Hashset_IsEmpty_HashsetSeg1/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -966,7 +966,7 @@ tests/integratedtests/corestrtests/Hashset_IsEmpty_HashsetSeg1/Helpers_Methods_t
 	tests/integratedtests/corestrtests/Hashset_IsEmpty_HashsetSeg1/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashset_IsEmpty_HashsetSeg1/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashset_IsEmpty_HashsetSeg1/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashset_IsEmpty_HashsetSeg1 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashset_IsEmpty_HashsetSeg1 [build failed]
 
 ## corestrtests/Hashset_Part1
 tests/integratedtests/corestrtests/Hashset_Part1/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -979,7 +979,7 @@ tests/integratedtests/corestrtests/Hashset_Part1/Helpers_Methods_test.go:483:6: 
 	tests/integratedtests/corestrtests/Hashset_Part1/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashset_Part1/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashset_Part1/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashset_Part1 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashset_Part1 [build failed]
 
 ## corestrtests/Hashset_Part2
 tests/integratedtests/corestrtests/Hashset_Part2/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -992,7 +992,7 @@ tests/integratedtests/corestrtests/Hashset_Part2/Helpers_Methods_test.go:483:6: 
 	tests/integratedtests/corestrtests/Hashset_Part2/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Hashset_Part2/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Hashset_Part2/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Hashset_Part2 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Hashset_Part2 [build failed]
 
 ## corestrtests/HashsetsCollection_Core
 tests/integratedtests/corestrtests/HashsetsCollection_Core/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1005,7 +1005,7 @@ tests/integratedtests/corestrtests/HashsetsCollection_Core/Helpers_Methods_test.
 	tests/integratedtests/corestrtests/HashsetsCollection_Core/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/HashsetsCollection_Core/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/HashsetsCollection_Core/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/HashsetsCollection_Core [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/HashsetsCollection_Core [build failed]
 
 ## corestrtests/HashsetsCollection_Extended
 tests/integratedtests/corestrtests/HashsetsCollection_Extended/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1018,7 +1018,7 @@ tests/integratedtests/corestrtests/HashsetsCollection_Extended/Helpers_Methods_t
 	tests/integratedtests/corestrtests/HashsetsCollection_Extended/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/HashsetsCollection_Extended/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/HashsetsCollection_Extended/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/HashsetsCollection_Extended [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/HashsetsCollection_Extended [build failed]
 
 ## corestrtests/HashsetsCollection_IsEmpty
 tests/integratedtests/corestrtests/HashsetsCollection_IsEmpty/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1031,7 +1031,7 @@ tests/integratedtests/corestrtests/HashsetsCollection_IsEmpty/Helpers_Methods_te
 	tests/integratedtests/corestrtests/HashsetsCollection_IsEmpty/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/HashsetsCollection_IsEmpty/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/HashsetsCollection_IsEmpty/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/HashsetsCollection_IsEmpty [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/HashsetsCollection_IsEmpty [build failed]
 
 ## corestrtests/HM01_IsEmpty_Hashmap_I8
 tests/integratedtests/corestrtests/HM01_IsEmpty_Hashmap_I8/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1044,7 +1044,7 @@ tests/integratedtests/corestrtests/HM01_IsEmpty_Hashmap_I8/Helpers_Methods_test.
 	tests/integratedtests/corestrtests/HM01_IsEmpty_Hashmap_I8/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/HM01_IsEmpty_Hashmap_I8/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/HM01_IsEmpty_Hashmap_I8/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/HM01_IsEmpty_Hashmap_I8 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/HM01_IsEmpty_Hashmap_I8 [build failed]
 
 ## corestrtests/HS01_IsEmpty_Hashset_I8
 tests/integratedtests/corestrtests/HS01_IsEmpty_Hashset_I8/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1057,7 +1057,7 @@ tests/integratedtests/corestrtests/HS01_IsEmpty_Hashset_I8/Helpers_Methods_test.
 	tests/integratedtests/corestrtests/HS01_IsEmpty_Hashset_I8/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/HS01_IsEmpty_Hashset_I8/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/HS01_IsEmpty_Hashset_I8/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/HS01_IsEmpty_Hashset_I8 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/HS01_IsEmpty_Hashset_I8 [build failed]
 
 ## corestrtests/InvalidLeftMiddleRightNoMessage_S02_LeftMiddleRight
 tests/integratedtests/corestrtests/InvalidLeftMiddleRightNoMessage_S02_LeftMiddleRight/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1070,7 +1070,7 @@ tests/integratedtests/corestrtests/InvalidLeftMiddleRightNoMessage_S02_LeftMiddl
 	tests/integratedtests/corestrtests/InvalidLeftMiddleRightNoMessage_S02_LeftMiddleRight/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/InvalidLeftMiddleRightNoMessage_S02_LeftMiddleRight/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/InvalidLeftMiddleRightNoMessage_S02_LeftMiddleRight/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/InvalidLeftMiddleRightNoMessage_S02_LeftMiddleRight [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/InvalidLeftMiddleRightNoMessage_S02_LeftMiddleRight [build failed]
 
 ## corestrtests/InvalidLeftRightNoMessage_S02_LeftRight
 tests/integratedtests/corestrtests/InvalidLeftRightNoMessage_S02_LeftRight/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1083,7 +1083,7 @@ tests/integratedtests/corestrtests/InvalidLeftRightNoMessage_S02_LeftRight/Helpe
 	tests/integratedtests/corestrtests/InvalidLeftRightNoMessage_S02_LeftRight/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/InvalidLeftRightNoMessage_S02_LeftRight/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/InvalidLeftRightNoMessage_S02_LeftRight/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/InvalidLeftRightNoMessage_S02_LeftRight [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/InvalidLeftRightNoMessage_S02_LeftRight [build failed]
 
 ## corestrtests/KeyAnyValuePair_Comprehensive
 tests/integratedtests/corestrtests/KeyAnyValuePair_Comprehensive/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1096,7 +1096,7 @@ tests/integratedtests/corestrtests/KeyAnyValuePair_Comprehensive/Helpers_Methods
 	tests/integratedtests/corestrtests/KeyAnyValuePair_Comprehensive/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/KeyAnyValuePair_Comprehensive/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/KeyAnyValuePair_Comprehensive/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/KeyAnyValuePair_Comprehensive [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/KeyAnyValuePair_Comprehensive [build failed]
 
 ## corestrtests/KeyValueCollection
 tests/integratedtests/corestrtests/KeyValueCollection/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1109,7 +1109,7 @@ tests/integratedtests/corestrtests/KeyValueCollection/Helpers_Methods_test.go:48
 	tests/integratedtests/corestrtests/KeyValueCollection/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/KeyValueCollection/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/KeyValueCollection/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/KeyValueCollection [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/KeyValueCollection [build failed]
 
 ## corestrtests/KeyValueCollection_Full
 tests/integratedtests/corestrtests/KeyValueCollection_Full/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
@@ -1122,7 +1122,7 @@ tests/integratedtests/corestrtests/KeyValueCollection_Full/KeyValueCollection_Fu
 	tests/integratedtests/corestrtests/KeyValueCollection_Full/CloneSlice_Nil_Helpers_test.go:260:6: other declaration of Test_HashmapDataModel
 tests/integratedtests/corestrtests/KeyValueCollection_Full/KeyValueCollection_Full_test.go:2547:6: Test_HashsetsCollectionDataModel redeclared in this block
 	tests/integratedtests/corestrtests/KeyValueCollection_Full/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/KeyValueCollection_Full [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/KeyValueCollection_Full [build failed]
 
 ## corestrtests/KeyValuePair_CollOfColl
 tests/integratedtests/corestrtests/KeyValuePair_CollOfColl/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1135,7 +1135,7 @@ tests/integratedtests/corestrtests/KeyValuePair_CollOfColl/Helpers_Methods_test.
 	tests/integratedtests/corestrtests/KeyValuePair_CollOfColl/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/KeyValuePair_CollOfColl/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/KeyValuePair_CollOfColl/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/KeyValuePair_CollOfColl [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/KeyValuePair_CollOfColl [build failed]
 
 ## corestrtests/KeyValuePair_KeyName
 tests/integratedtests/corestrtests/KeyValuePair_KeyName/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1148,7 +1148,7 @@ tests/integratedtests/corestrtests/KeyValuePair_KeyName/Helpers_Methods_test.go:
 	tests/integratedtests/corestrtests/KeyValuePair_KeyName/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/KeyValuePair_KeyName/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/KeyValuePair_KeyName/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/KeyValuePair_KeyName [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/KeyValuePair_KeyName [build failed]
 
 ## corestrtests/KVP_Basic
 tests/integratedtests/corestrtests/KVP_Basic/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1161,7 +1161,7 @@ tests/integratedtests/corestrtests/KVP_Basic/Helpers_Methods_test.go:483:6: Test
 	tests/integratedtests/corestrtests/KVP_Basic/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/KVP_Basic/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/KVP_Basic/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/KVP_Basic [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/KVP_Basic [build failed]
 
 ## corestrtests/LC_Add
 tests/integratedtests/corestrtests/LC_Add/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1174,7 +1174,7 @@ tests/integratedtests/corestrtests/LC_Add/Helpers_Methods_test.go:483:6: Test_Ha
 	tests/integratedtests/corestrtests/LC_Add/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LC_Add/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LC_Add/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LC_Add [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LC_Add [build failed]
 
 ## corestrtests/LC_Head_LinkedCollSeg1
 tests/integratedtests/corestrtests/LC_Head_LinkedCollSeg1/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1187,7 +1187,7 @@ tests/integratedtests/corestrtests/LC_Head_LinkedCollSeg1/Helpers_Methods_test.g
 	tests/integratedtests/corestrtests/LC_Head_LinkedCollSeg1/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LC_Head_LinkedCollSeg1/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LC_Head_LinkedCollSeg1/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LC_Head_LinkedCollSeg1 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LC_Head_LinkedCollSeg1 [build failed]
 
 ## corestrtests/LeftMiddleRightFromSplit
 tests/integratedtests/corestrtests/LeftMiddleRightFromSplit/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1200,7 +1200,7 @@ tests/integratedtests/corestrtests/LeftMiddleRightFromSplit/Helpers_Methods_test
 	tests/integratedtests/corestrtests/LeftMiddleRightFromSplit/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LeftMiddleRightFromSplit/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LeftMiddleRightFromSplit/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LeftMiddleRightFromSplit [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LeftMiddleRightFromSplit [build failed]
 
 ## corestrtests/LeftRight_CollOfColl
 tests/integratedtests/corestrtests/LeftRight_CollOfColl/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1213,7 +1213,7 @@ tests/integratedtests/corestrtests/LeftRight_CollOfColl/Helpers_Methods_test.go:
 	tests/integratedtests/corestrtests/LeftRight_CollOfColl/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LeftRight_CollOfColl/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LeftRight_CollOfColl/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LeftRight_CollOfColl [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LeftRight_CollOfColl [build failed]
 
 ## corestrtests/LeftRight_NewLeftRight
 tests/integratedtests/corestrtests/LeftRight_NewLeftRight/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1226,7 +1226,7 @@ tests/integratedtests/corestrtests/LeftRight_NewLeftRight/Helpers_Methods_test.g
 	tests/integratedtests/corestrtests/LeftRight_NewLeftRight/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LeftRight_NewLeftRight/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LeftRight_NewLeftRight/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LeftRight_NewLeftRight [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LeftRight_NewLeftRight [build failed]
 
 ## corestrtests/LeftRight_NewLeftRight_Extended
 tests/integratedtests/corestrtests/LeftRight_NewLeftRight_Extended/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1239,7 +1239,7 @@ tests/integratedtests/corestrtests/LeftRight_NewLeftRight_Extended/Helpers_Metho
 	tests/integratedtests/corestrtests/LeftRight_NewLeftRight_Extended/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LeftRight_NewLeftRight_Extended/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LeftRight_NewLeftRight_Extended/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LeftRight_NewLeftRight_Extended [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LeftRight_NewLeftRight_Extended [build failed]
 
 ## corestrtests/LeftRightFromSplit
 tests/integratedtests/corestrtests/LeftRightFromSplit/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1252,7 +1252,7 @@ tests/integratedtests/corestrtests/LeftRightFromSplit/Helpers_Methods_test.go:48
 	tests/integratedtests/corestrtests/LeftRightFromSplit/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LeftRightFromSplit/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LeftRightFromSplit/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LeftRightFromSplit [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LeftRightFromSplit [build failed]
 
 ## corestrtests/LeftRightFromSplit_Basic_S02_FromSplit
 tests/integratedtests/corestrtests/LeftRightFromSplit_Basic_S02_FromSplit/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1265,7 +1265,7 @@ tests/integratedtests/corestrtests/LeftRightFromSplit_Basic_S02_FromSplit/Helper
 	tests/integratedtests/corestrtests/LeftRightFromSplit_Basic_S02_FromSplit/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LeftRightFromSplit_Basic_S02_FromSplit/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LeftRightFromSplit_Basic_S02_FromSplit/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LeftRightFromSplit_Basic_S02_FromSplit [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LeftRightFromSplit_Basic_S02_FromSplit [build failed]
 
 ## corestrtests/LinkedCollectionNode_Full
 tests/integratedtests/corestrtests/LinkedCollectionNode_Full/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1278,7 +1278,7 @@ tests/integratedtests/corestrtests/LinkedCollectionNode_Full/Helpers_Methods_tes
 	tests/integratedtests/corestrtests/LinkedCollectionNode_Full/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LinkedCollectionNode_Full/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LinkedCollectionNode_Full/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LinkedCollectionNode_Full [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LinkedCollectionNode_Full [build failed]
 
 ## corestrtests/LinkedCollectionNode_I8
 tests/integratedtests/corestrtests/LinkedCollectionNode_I8/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1291,7 +1291,7 @@ tests/integratedtests/corestrtests/LinkedCollectionNode_I8/Helpers_Methods_test.
 	tests/integratedtests/corestrtests/LinkedCollectionNode_I8/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LinkedCollectionNode_I8/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LinkedCollectionNode_I8/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LinkedCollectionNode_I8 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LinkedCollectionNode_I8 [build failed]
 
 ## corestrtests/LinkedCollections_Methods
 tests/integratedtests/corestrtests/LinkedCollections_Methods/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1304,7 +1304,7 @@ tests/integratedtests/corestrtests/LinkedCollections_Methods/Helpers_Methods_tes
 	tests/integratedtests/corestrtests/LinkedCollections_Methods/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LinkedCollections_Methods/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LinkedCollections_Methods/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LinkedCollections_Methods [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LinkedCollections_Methods [build failed]
 
 ## corestrtests/LinkedCollections_Part1
 tests/integratedtests/corestrtests/LinkedCollections_Part1/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1317,7 +1317,7 @@ tests/integratedtests/corestrtests/LinkedCollections_Part1/Helpers_Methods_test.
 	tests/integratedtests/corestrtests/LinkedCollections_Part1/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LinkedCollections_Part1/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LinkedCollections_Part1/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LinkedCollections_Part1 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LinkedCollections_Part1 [build failed]
 
 ## corestrtests/LinkedCollections_Part2
 tests/integratedtests/corestrtests/LinkedCollections_Part2/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1330,7 +1330,7 @@ tests/integratedtests/corestrtests/LinkedCollections_Part2/Helpers_Methods_test.
 	tests/integratedtests/corestrtests/LinkedCollections_Part2/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LinkedCollections_Part2/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LinkedCollections_Part2/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LinkedCollections_Part2 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LinkedCollections_Part2 [build failed]
 
 ## corestrtests/LinkedCollections_SafeIndexAt
 tests/integratedtests/corestrtests/LinkedCollections_SafeIndexAt/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1343,7 +1343,7 @@ tests/integratedtests/corestrtests/LinkedCollections_SafeIndexAt/Helpers_Methods
 	tests/integratedtests/corestrtests/LinkedCollections_SafeIndexAt/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LinkedCollections_SafeIndexAt/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LinkedCollections_SafeIndexAt/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LinkedCollections_SafeIndexAt [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LinkedCollections_SafeIndexAt [build failed]
 
 ## corestrtests/LinkedList_Basic
 tests/integratedtests/corestrtests/LinkedList_Basic/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1356,7 +1356,7 @@ tests/integratedtests/corestrtests/LinkedList_Basic/Helpers_Methods_test.go:483:
 	tests/integratedtests/corestrtests/LinkedList_Basic/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LinkedList_Basic/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LinkedList_Basic/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LinkedList_Basic [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LinkedList_Basic [build failed]
 
 ## corestrtests/LinkedList_Extended
 tests/integratedtests/corestrtests/LinkedList_Extended/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1369,7 +1369,7 @@ tests/integratedtests/corestrtests/LinkedList_Extended/Helpers_Methods_test.go:4
 	tests/integratedtests/corestrtests/LinkedList_Extended/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LinkedList_Extended/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LinkedList_Extended/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LinkedList_Extended [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LinkedList_Extended [build failed]
 
 ## corestrtests/LinkedList_HeadTail_LinkedListSeg1
 tests/integratedtests/corestrtests/LinkedList_HeadTail_LinkedListSeg1/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1382,7 +1382,7 @@ tests/integratedtests/corestrtests/LinkedList_HeadTail_LinkedListSeg1/Helpers_Me
 	tests/integratedtests/corestrtests/LinkedList_HeadTail_LinkedListSeg1/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LinkedList_HeadTail_LinkedListSeg1/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LinkedList_HeadTail_LinkedListSeg1/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LinkedList_HeadTail_LinkedListSeg1 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LinkedList_HeadTail_LinkedListSeg1 [build failed]
 
 ## corestrtests/LinkedList_LinkedColl
 tests/integratedtests/corestrtests/LinkedList_LinkedColl/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1395,7 +1395,7 @@ tests/integratedtests/corestrtests/LinkedList_LinkedColl/Helpers_Methods_test.go
 	tests/integratedtests/corestrtests/LinkedList_LinkedColl/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LinkedList_LinkedColl/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LinkedList_LinkedColl/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LinkedList_LinkedColl [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LinkedList_LinkedColl [build failed]
 
 ## corestrtests/LinkedList_Methods
 tests/integratedtests/corestrtests/LinkedList_Methods/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1408,7 +1408,7 @@ tests/integratedtests/corestrtests/LinkedList_Methods/Helpers_Methods_test.go:48
 	tests/integratedtests/corestrtests/LinkedList_Methods/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LinkedList_Methods/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LinkedList_Methods/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LinkedList_Methods [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LinkedList_Methods [build failed]
 
 ## corestrtests/LinkedList_Part1
 tests/integratedtests/corestrtests/LinkedList_Part1/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1421,7 +1421,7 @@ tests/integratedtests/corestrtests/LinkedList_Part1/Helpers_Methods_test.go:483:
 	tests/integratedtests/corestrtests/LinkedList_Part1/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LinkedList_Part1/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LinkedList_Part1/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LinkedList_Part1 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LinkedList_Part1 [build failed]
 
 ## corestrtests/LinkedList_Part2
 tests/integratedtests/corestrtests/LinkedList_Part2/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1434,7 +1434,7 @@ tests/integratedtests/corestrtests/LinkedList_Part2/Helpers_Methods_test.go:483:
 	tests/integratedtests/corestrtests/LinkedList_Part2/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LinkedList_Part2/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LinkedList_Part2/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LinkedList_Part2 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LinkedList_Part2 [build failed]
 
 ## corestrtests/LinkedListNode_Full
 tests/integratedtests/corestrtests/LinkedListNode_Full/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1447,7 +1447,7 @@ tests/integratedtests/corestrtests/LinkedListNode_Full/Helpers_Methods_test.go:4
 	tests/integratedtests/corestrtests/LinkedListNode_Full/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LinkedListNode_Full/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LinkedListNode_Full/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LinkedListNode_Full [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LinkedListNode_Full [build failed]
 
 ## corestrtests/LinkedListNode_HasNext
 tests/integratedtests/corestrtests/LinkedListNode_HasNext/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1460,7 +1460,7 @@ tests/integratedtests/corestrtests/LinkedListNode_HasNext/Helpers_Methods_test.g
 	tests/integratedtests/corestrtests/LinkedListNode_HasNext/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LinkedListNode_HasNext/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LinkedListNode_HasNext/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LinkedListNode_HasNext [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LinkedListNode_HasNext [build failed]
 
 ## corestrtests/LinkedListNode_I8
 tests/integratedtests/corestrtests/LinkedListNode_I8/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1473,7 +1473,7 @@ tests/integratedtests/corestrtests/LinkedListNode_I8/Helpers_Methods_test.go:483
 	tests/integratedtests/corestrtests/LinkedListNode_I8/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LinkedListNode_I8/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LinkedListNode_I8/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LinkedListNode_I8 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LinkedListNode_I8 [build failed]
 
 ## corestrtests/LL_Add
 tests/integratedtests/corestrtests/LL_Add/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1486,7 +1486,7 @@ tests/integratedtests/corestrtests/LL_Add/Helpers_Methods_test.go:483:6: Test_Ha
 	tests/integratedtests/corestrtests/LL_Add/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/LL_Add/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/LL_Add/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/LL_Add [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/LL_Add [build failed]
 
 ## corestrtests/NewHashmapCreator_Empty
 tests/integratedtests/corestrtests/NewHashmapCreator_Empty/Helpers_Methods_test.go:447:6: Test_HashmapDataModel redeclared in this block
@@ -1499,7 +1499,7 @@ tests/integratedtests/corestrtests/NewHashmapCreator_Empty/Helpers_Methods_test.
 	tests/integratedtests/corestrtests/NewHashmapCreator_Empty/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
 tests/integratedtests/corestrtests/NewHashmapCreator_Empty/NewHashmapCreator_Empty_test.go:1007:6: Test_AllIndividualStringsOfStringsLength_Empty redeclared in this block
 	tests/integratedtests/corestrtests/NewHashmapCreator_Empty/Helpers_Methods_test.go:170:6: other declaration of Test_AllIndividualStringsOfStringsLength_Empty
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/NewHashmapCreator_Empty [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/NewHashmapCreator_Empty [build failed]
 
 ## corestrtests/NilReceiver
 tests/integratedtests/corestrtests/NilReceiver/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1512,7 +1512,7 @@ tests/integratedtests/corestrtests/NilReceiver/Helpers_Methods_test.go:483:6: Te
 	tests/integratedtests/corestrtests/NilReceiver/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/NilReceiver/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/NilReceiver/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/NilReceiver [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/NilReceiver [build failed]
 
 ## corestrtests/Remaining_Methods
 tests/integratedtests/corestrtests/Remaining_Methods/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1525,7 +1525,7 @@ tests/integratedtests/corestrtests/Remaining_Methods/Helpers_Methods_test.go:483
 	tests/integratedtests/corestrtests/Remaining_Methods/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Remaining_Methods/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Remaining_Methods/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Remaining_Methods [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Remaining_Methods [build failed]
 
 ## corestrtests/S01_InvalidValueStatus_S01_ValueStatus_TWLN
 tests/integratedtests/corestrtests/S01_InvalidValueStatus_S01_ValueStatus_TWLN/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1538,7 +1538,7 @@ tests/integratedtests/corestrtests/S01_InvalidValueStatus_S01_ValueStatus_TWLN/H
 	tests/integratedtests/corestrtests/S01_InvalidValueStatus_S01_ValueStatus_TWLN/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/S01_InvalidValueStatus_S01_ValueStatus_TWLN/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/S01_InvalidValueStatus_S01_ValueStatus_TWLN/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/S01_InvalidValueStatus_S01_ValueStatus_TWLN [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/S01_InvalidValueStatus_S01_ValueStatus_TWLN [build failed]
 
 ## corestrtests/S01_NewValidValue_S01_ValidValue
 tests/integratedtests/corestrtests/S01_NewValidValue_S01_ValidValue/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1551,7 +1551,7 @@ tests/integratedtests/corestrtests/S01_NewValidValue_S01_ValidValue/Helpers_Meth
 	tests/integratedtests/corestrtests/S01_NewValidValue_S01_ValidValue/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/S01_NewValidValue_S01_ValidValue/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/S01_NewValidValue_S01_ValidValue/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/S01_NewValidValue_S01_ValidValue [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/S01_NewValidValue_S01_ValidValue [build failed]
 
 ## corestrtests/S08_01_Collection_S08
 tests/integratedtests/corestrtests/S08_01_Collection_S08/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1564,7 +1564,7 @@ tests/integratedtests/corestrtests/S08_01_Collection_S08/Helpers_Methods_test.go
 	tests/integratedtests/corestrtests/S08_01_Collection_S08/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/S08_01_Collection_S08/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/S08_01_Collection_S08/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/S08_01_Collection_S08 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/S08_01_Collection_S08 [build failed]
 
 ## corestrtests/S08b_01_Collection_S08b
 tests/integratedtests/corestrtests/S08b_01_Collection_S08b/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1577,7 +1577,7 @@ tests/integratedtests/corestrtests/S08b_01_Collection_S08b/Helpers_Methods_test.
 	tests/integratedtests/corestrtests/S08b_01_Collection_S08b/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/S08b_01_Collection_S08b/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/S08b_01_Collection_S08b/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/S08b_01_Collection_S08b [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/S08b_01_Collection_S08b [build failed]
 
 ## corestrtests/S09_01_Hashmap_S09
 tests/integratedtests/corestrtests/S09_01_Hashmap_S09/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1590,7 +1590,7 @@ tests/integratedtests/corestrtests/S09_01_Hashmap_S09/Helpers_Methods_test.go:48
 	tests/integratedtests/corestrtests/S09_01_Hashmap_S09/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/S09_01_Hashmap_S09/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/S09_01_Hashmap_S09/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/S09_01_Hashmap_S09 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/S09_01_Hashmap_S09 [build failed]
 
 ## corestrtests/S10_01_Hashset_S10a
 tests/integratedtests/corestrtests/S10_01_Hashset_S10a/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1603,7 +1603,7 @@ tests/integratedtests/corestrtests/S10_01_Hashset_S10a/Helpers_Methods_test.go:4
 	tests/integratedtests/corestrtests/S10_01_Hashset_S10a/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/S10_01_Hashset_S10a/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/S10_01_Hashset_S10a/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/S10_01_Hashset_S10a [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/S10_01_Hashset_S10a [build failed]
 
 ## corestrtests/S10_88_Hashset_S10b
 tests/integratedtests/corestrtests/S10_88_Hashset_S10b/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1616,7 +1616,7 @@ tests/integratedtests/corestrtests/S10_88_Hashset_S10b/Helpers_Methods_test.go:4
 	tests/integratedtests/corestrtests/S10_88_Hashset_S10b/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/S10_88_Hashset_S10b/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/S10_88_Hashset_S10b/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/S10_88_Hashset_S10b [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/S10_88_Hashset_S10b [build failed]
 
 ## corestrtests/S11_01_SimpleSlice_S11a
 tests/integratedtests/corestrtests/S11_01_SimpleSlice_S11a/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1629,7 +1629,7 @@ tests/integratedtests/corestrtests/S11_01_SimpleSlice_S11a/Helpers_Methods_test.
 	tests/integratedtests/corestrtests/S11_01_SimpleSlice_S11a/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/S11_01_SimpleSlice_S11a/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/S11_01_SimpleSlice_S11a/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/S11_01_SimpleSlice_S11a [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/S11_01_SimpleSlice_S11a [build failed]
 
 ## corestrtests/S11_66_SimpleSlice_S11b
 tests/integratedtests/corestrtests/S11_66_SimpleSlice_S11b/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1642,7 +1642,7 @@ tests/integratedtests/corestrtests/S11_66_SimpleSlice_S11b/Helpers_Methods_test.
 	tests/integratedtests/corestrtests/S11_66_SimpleSlice_S11b/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/S11_66_SimpleSlice_S11b/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/S11_66_SimpleSlice_S11b/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/S11_66_SimpleSlice_S11b [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/S11_66_SimpleSlice_S11b [build failed]
 
 ## corestrtests/S12_01_LinkedList_S12
 tests/integratedtests/corestrtests/S12_01_LinkedList_S12/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1655,7 +1655,7 @@ tests/integratedtests/corestrtests/S12_01_LinkedList_S12/Helpers_Methods_test.go
 	tests/integratedtests/corestrtests/S12_01_LinkedList_S12/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/S12_01_LinkedList_S12/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/S12_01_LinkedList_S12/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/S12_01_LinkedList_S12 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/S12_01_LinkedList_S12 [build failed]
 
 ## corestrtests/S13_01_LinkedCollections_S13
 tests/integratedtests/corestrtests/S13_01_LinkedCollections_S13/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1668,7 +1668,7 @@ tests/integratedtests/corestrtests/S13_01_LinkedCollections_S13/Helpers_Methods_
 	tests/integratedtests/corestrtests/S13_01_LinkedCollections_S13/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/S13_01_LinkedCollections_S13/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/S13_01_LinkedCollections_S13/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/S13_01_LinkedCollections_S13 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/S13_01_LinkedCollections_S13 [build failed]
 
 ## corestrtests/S20_001_S20_NonChainedNodes_HashmapDiff
 tests/integratedtests/corestrtests/S20_001_S20_NonChainedNodes_HashmapDiff/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1681,7 +1681,7 @@ tests/integratedtests/corestrtests/S20_001_S20_NonChainedNodes_HashmapDiff/Helpe
 	tests/integratedtests/corestrtests/S20_001_S20_NonChainedNodes_HashmapDiff/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/S20_001_S20_NonChainedNodes_HashmapDiff/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/S20_001_S20_NonChainedNodes_HashmapDiff/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/S20_001_S20_NonChainedNodes_HashmapDiff [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/S20_001_S20_NonChainedNodes_HashmapDiff [build failed]
 
 ## corestrtests/S21_001_S21_CloneSlice_Empty_Reflect
 tests/integratedtests/corestrtests/S21_001_S21_CloneSlice_Empty_Reflect/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1694,7 +1694,7 @@ tests/integratedtests/corestrtests/S21_001_S21_CloneSlice_Empty_Reflect/Helpers_
 	tests/integratedtests/corestrtests/S21_001_S21_CloneSlice_Empty_Reflect/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/S21_001_S21_CloneSlice_Empty_Reflect/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/S21_001_S21_CloneSlice_Empty_Reflect/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/S21_001_S21_CloneSlice_Empty_Reflect [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/S21_001_S21_CloneSlice_Empty_Reflect [build failed]
 
 ## corestrtests/S22_001_S22_FromSplit_Creators
 tests/integratedtests/corestrtests/S22_001_S22_FromSplit_Creators/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1707,7 +1707,7 @@ tests/integratedtests/corestrtests/S22_001_S22_FromSplit_Creators/Helpers_Method
 	tests/integratedtests/corestrtests/S22_001_S22_FromSplit_Creators/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/S22_001_S22_FromSplit_Creators/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/S22_001_S22_FromSplit_Creators/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/S22_001_S22_FromSplit_Creators [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/S22_001_S22_FromSplit_Creators [build failed]
 
 ## corestrtests/Seg1_AllIndividualStringsOfStringsLength_Seg1_Utilities
 tests/integratedtests/corestrtests/Seg1_AllIndividualStringsOfStringsLength_Seg1_Utilities/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1720,7 +1720,7 @@ tests/integratedtests/corestrtests/Seg1_AllIndividualStringsOfStringsLength_Seg1
 	tests/integratedtests/corestrtests/Seg1_AllIndividualStringsOfStringsLength_Seg1_Utilities/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Seg1_AllIndividualStringsOfStringsLength_Seg1_Utilities/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Seg1_AllIndividualStringsOfStringsLength_Seg1_Utilities/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Seg1_AllIndividualStringsOfStringsLength_Seg1_Utilities [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Seg1_AllIndividualStringsOfStringsLength_Seg1_Utilities [build failed]
 
 ## corestrtests/Seg2_Collection_Seg2_CollectionMid
 tests/integratedtests/corestrtests/Seg2_Collection_Seg2_CollectionMid/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1733,7 +1733,7 @@ tests/integratedtests/corestrtests/Seg2_Collection_Seg2_CollectionMid/Helpers_Me
 	tests/integratedtests/corestrtests/Seg2_Collection_Seg2_CollectionMid/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Seg2_Collection_Seg2_CollectionMid/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Seg2_Collection_Seg2_CollectionMid/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Seg2_Collection_Seg2_CollectionMid [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Seg2_Collection_Seg2_CollectionMid [build failed]
 
 ## corestrtests/Seg3_Collection_Seg3_CollectionEnd
 tests/integratedtests/corestrtests/Seg3_Collection_Seg3_CollectionEnd/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1746,7 +1746,7 @@ tests/integratedtests/corestrtests/Seg3_Collection_Seg3_CollectionEnd/Helpers_Me
 	tests/integratedtests/corestrtests/Seg3_Collection_Seg3_CollectionEnd/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Seg3_Collection_Seg3_CollectionEnd/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Seg3_Collection_Seg3_CollectionEnd/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Seg3_Collection_Seg3_CollectionEnd [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Seg3_Collection_Seg3_CollectionEnd [build failed]
 
 ## corestrtests/Seg4_SS_Seg4_SimpleSlice
 tests/integratedtests/corestrtests/Seg4_SS_Seg4_SimpleSlice/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1759,7 +1759,7 @@ tests/integratedtests/corestrtests/Seg4_SS_Seg4_SimpleSlice/Helpers_Methods_test
 	tests/integratedtests/corestrtests/Seg4_SS_Seg4_SimpleSlice/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Seg4_SS_Seg4_SimpleSlice/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Seg4_SS_Seg4_SimpleSlice/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Seg4_SS_Seg4_SimpleSlice [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Seg4_SS_Seg4_SimpleSlice [build failed]
 
 ## corestrtests/Seg5_HM_Seg5_Hashmap
 tests/integratedtests/corestrtests/Seg5_HM_Seg5_Hashmap/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1772,7 +1772,7 @@ tests/integratedtests/corestrtests/Seg5_HM_Seg5_Hashmap/Helpers_Methods_test.go:
 	tests/integratedtests/corestrtests/Seg5_HM_Seg5_Hashmap/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Seg5_HM_Seg5_Hashmap/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Seg5_HM_Seg5_Hashmap/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Seg5_HM_Seg5_Hashmap [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Seg5_HM_Seg5_Hashmap [build failed]
 
 ## corestrtests/Seg5_HS_Seg5_Hashset
 tests/integratedtests/corestrtests/Seg5_HS_Seg5_Hashset/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1785,7 +1785,7 @@ tests/integratedtests/corestrtests/Seg5_HS_Seg5_Hashset/Helpers_Methods_test.go:
 	tests/integratedtests/corestrtests/Seg5_HS_Seg5_Hashset/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Seg5_HS_Seg5_Hashset/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Seg5_HS_Seg5_Hashset/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Seg5_HS_Seg5_Hashset [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Seg5_HS_Seg5_Hashset [build failed]
 
 ## corestrtests/Seg6_CCM_Seg6_CharCollectionMap
 tests/integratedtests/corestrtests/Seg6_CCM_Seg6_CharCollectionMap/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1798,7 +1798,7 @@ tests/integratedtests/corestrtests/Seg6_CCM_Seg6_CharCollectionMap/Helpers_Metho
 	tests/integratedtests/corestrtests/Seg6_CCM_Seg6_CharCollectionMap/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Seg6_CCM_Seg6_CharCollectionMap/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Seg6_CCM_Seg6_CharCollectionMap/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Seg6_CCM_Seg6_CharCollectionMap [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Seg6_CCM_Seg6_CharCollectionMap [build failed]
 
 ## corestrtests/Seg6_CHM_Seg6_CharHashsetMap
 tests/integratedtests/corestrtests/Seg6_CHM_Seg6_CharHashsetMap/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1811,7 +1811,7 @@ tests/integratedtests/corestrtests/Seg6_CHM_Seg6_CharHashsetMap/Helpers_Methods_
 	tests/integratedtests/corestrtests/Seg6_CHM_Seg6_CharHashsetMap/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Seg6_CHM_Seg6_CharHashsetMap/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Seg6_CHM_Seg6_CharHashsetMap/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Seg6_CHM_Seg6_CharHashsetMap [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Seg6_CHM_Seg6_CharHashsetMap [build failed]
 
 ## corestrtests/Seg6_COC_Seg6_CollOfColl_KV
 tests/integratedtests/corestrtests/Seg6_COC_Seg6_CollOfColl_KV/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1824,7 +1824,7 @@ tests/integratedtests/corestrtests/Seg6_COC_Seg6_CollOfColl_KV/Helpers_Methods_t
 	tests/integratedtests/corestrtests/Seg6_COC_Seg6_CollOfColl_KV/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Seg6_COC_Seg6_CollOfColl_KV/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Seg6_COC_Seg6_CollOfColl_KV/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Seg6_COC_Seg6_CollOfColl_KV [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Seg6_COC_Seg6_CollOfColl_KV [build failed]
 
 ## corestrtests/Seg7_LC_Seg7_LinkedCollections
 tests/integratedtests/corestrtests/Seg7_LC_Seg7_LinkedCollections/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1837,7 +1837,7 @@ tests/integratedtests/corestrtests/Seg7_LC_Seg7_LinkedCollections/Helpers_Method
 	tests/integratedtests/corestrtests/Seg7_LC_Seg7_LinkedCollections/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Seg7_LC_Seg7_LinkedCollections/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Seg7_LC_Seg7_LinkedCollections/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Seg7_LC_Seg7_LinkedCollections [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Seg7_LC_Seg7_LinkedCollections [build failed]
 
 ## corestrtests/Seg7_LL_Seg7_LinkedList
 tests/integratedtests/corestrtests/Seg7_LL_Seg7_LinkedList/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1850,7 +1850,7 @@ tests/integratedtests/corestrtests/Seg7_LL_Seg7_LinkedList/Helpers_Methods_test.
 	tests/integratedtests/corestrtests/Seg7_LL_Seg7_LinkedList/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Seg7_LL_Seg7_LinkedList/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Seg7_LL_Seg7_LinkedList/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Seg7_LL_Seg7_LinkedList [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Seg7_LL_Seg7_LinkedList [build failed]
 
 ## corestrtests/Seg7_LR_Seg7_LeftRight
 tests/integratedtests/corestrtests/Seg7_LR_Seg7_LeftRight/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1863,7 +1863,7 @@ tests/integratedtests/corestrtests/Seg7_LR_Seg7_LeftRight/Helpers_Methods_test.g
 	tests/integratedtests/corestrtests/Seg7_LR_Seg7_LeftRight/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Seg7_LR_Seg7_LeftRight/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Seg7_LR_Seg7_LeftRight/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Seg7_LR_Seg7_LeftRight [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Seg7_LR_Seg7_LeftRight [build failed]
 
 ## corestrtests/Seg8_SSO_Seg8_SimpleStringOnce
 tests/integratedtests/corestrtests/Seg8_SSO_Seg8_SimpleStringOnce/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1876,7 +1876,7 @@ tests/integratedtests/corestrtests/Seg8_SSO_Seg8_SimpleStringOnce/Helpers_Method
 	tests/integratedtests/corestrtests/Seg8_SSO_Seg8_SimpleStringOnce/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Seg8_SSO_Seg8_SimpleStringOnce/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Seg8_SSO_Seg8_SimpleStringOnce/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Seg8_SSO_Seg8_SimpleStringOnce [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Seg8_SSO_Seg8_SimpleStringOnce [build failed]
 
 ## corestrtests/Seg8_VV_Seg8_ValidValue_VV_VS_TWLN
 tests/integratedtests/corestrtests/Seg8_VV_Seg8_ValidValue_VV_VS_TWLN/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1889,7 +1889,7 @@ tests/integratedtests/corestrtests/Seg8_VV_Seg8_ValidValue_VV_VS_TWLN/Helpers_Me
 	tests/integratedtests/corestrtests/Seg8_VV_Seg8_ValidValue_VV_VS_TWLN/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Seg8_VV_Seg8_ValidValue_VV_VS_TWLN/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Seg8_VV_Seg8_ValidValue_VV_VS_TWLN/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Seg8_VV_Seg8_ValidValue_VV_VS_TWLN [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Seg8_VV_Seg8_ValidValue_VV_VS_TWLN [build failed]
 
 ## corestrtests/SimpleSlice_Basic
 tests/integratedtests/corestrtests/SimpleSlice_Basic/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1902,7 +1902,7 @@ tests/integratedtests/corestrtests/SimpleSlice_Basic/Helpers_Methods_test.go:483
 	tests/integratedtests/corestrtests/SimpleSlice_Basic/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SimpleSlice_Basic/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SimpleSlice_Basic/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SimpleSlice_Basic [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SimpleSlice_Basic [build failed]
 
 ## corestrtests/SimpleSlice_Basic_Remaining
 tests/integratedtests/corestrtests/SimpleSlice_Basic_Remaining/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1915,7 +1915,7 @@ tests/integratedtests/corestrtests/SimpleSlice_Basic_Remaining/Helpers_Methods_t
 	tests/integratedtests/corestrtests/SimpleSlice_Basic_Remaining/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SimpleSlice_Basic_Remaining/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SimpleSlice_Basic_Remaining/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SimpleSlice_Basic_Remaining [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SimpleSlice_Basic_Remaining [build failed]
 
 ## corestrtests/SimpleSlice_BasicOps_SimpleSlice_Types
 tests/integratedtests/corestrtests/SimpleSlice_BasicOps_SimpleSlice_Types/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1928,7 +1928,7 @@ tests/integratedtests/corestrtests/SimpleSlice_BasicOps_SimpleSlice_Types/Helper
 	tests/integratedtests/corestrtests/SimpleSlice_BasicOps_SimpleSlice_Types/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SimpleSlice_BasicOps_SimpleSlice_Types/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SimpleSlice_BasicOps_SimpleSlice_Types/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SimpleSlice_BasicOps_SimpleSlice_Types [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SimpleSlice_BasicOps_SimpleSlice_Types [build failed]
 
 ## corestrtests/SimpleSlice_Cap
 tests/integratedtests/corestrtests/SimpleSlice_Cap/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1941,7 +1941,7 @@ tests/integratedtests/corestrtests/SimpleSlice_Cap/Helpers_Methods_test.go:483:6
 	tests/integratedtests/corestrtests/SimpleSlice_Cap/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SimpleSlice_Cap/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SimpleSlice_Cap/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SimpleSlice_Cap [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SimpleSlice_Cap [build failed]
 
 ## corestrtests/SimpleSlice_Comprehensive
 tests/integratedtests/corestrtests/SimpleSlice_Comprehensive/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1954,7 +1954,7 @@ tests/integratedtests/corestrtests/SimpleSlice_Comprehensive/Helpers_Methods_tes
 	tests/integratedtests/corestrtests/SimpleSlice_Comprehensive/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SimpleSlice_Comprehensive/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SimpleSlice_Comprehensive/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SimpleSlice_Comprehensive [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SimpleSlice_Comprehensive [build failed]
 
 ## corestrtests/SimpleSlice_Extended
 tests/integratedtests/corestrtests/SimpleSlice_Extended/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1967,7 +1967,7 @@ tests/integratedtests/corestrtests/SimpleSlice_Extended/Helpers_Methods_test.go:
 	tests/integratedtests/corestrtests/SimpleSlice_Extended/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SimpleSlice_Extended/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SimpleSlice_Extended/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SimpleSlice_Extended [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SimpleSlice_Extended [build failed]
 
 ## corestrtests/SimpleSlice_Methods
 tests/integratedtests/corestrtests/SimpleSlice_Methods/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1980,7 +1980,7 @@ tests/integratedtests/corestrtests/SimpleSlice_Methods/Helpers_Methods_test.go:4
 	tests/integratedtests/corestrtests/SimpleSlice_Methods/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SimpleSlice_Methods/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SimpleSlice_Methods/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SimpleSlice_Methods [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SimpleSlice_Methods [build failed]
 
 ## corestrtests/SimpleSlice_Part1
 tests/integratedtests/corestrtests/SimpleSlice_Part1/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -1993,7 +1993,7 @@ tests/integratedtests/corestrtests/SimpleSlice_Part1/Helpers_Methods_test.go:483
 	tests/integratedtests/corestrtests/SimpleSlice_Part1/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SimpleSlice_Part1/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SimpleSlice_Part1/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SimpleSlice_Part1 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SimpleSlice_Part1 [build failed]
 
 ## corestrtests/SimpleSlice_Part2
 tests/integratedtests/corestrtests/SimpleSlice_Part2/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2006,7 +2006,7 @@ tests/integratedtests/corestrtests/SimpleSlice_Part2/Helpers_Methods_test.go:483
 	tests/integratedtests/corestrtests/SimpleSlice_Part2/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SimpleSlice_Part2/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SimpleSlice_Part2/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SimpleSlice_Part2 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SimpleSlice_Part2 [build failed]
 
 ## corestrtests/SimpleSlice_SearchFilter
 tests/integratedtests/corestrtests/SimpleSlice_SearchFilter/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2019,7 +2019,7 @@ tests/integratedtests/corestrtests/SimpleSlice_SearchFilter/Helpers_Methods_test
 	tests/integratedtests/corestrtests/SimpleSlice_SearchFilter/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SimpleSlice_SearchFilter/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SimpleSlice_SearchFilter/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SimpleSlice_SearchFilter [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SimpleSlice_SearchFilter [build failed]
 
 ## corestrtests/SimpleSlice_SSO
 tests/integratedtests/corestrtests/SimpleSlice_SSO/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2032,7 +2032,7 @@ tests/integratedtests/corestrtests/SimpleSlice_SSO/Helpers_Methods_test.go:483:6
 	tests/integratedtests/corestrtests/SimpleSlice_SSO/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SimpleSlice_SSO/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SimpleSlice_SSO/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SimpleSlice_SSO [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SimpleSlice_SSO [build failed]
 
 ## corestrtests/SimpleStringOnce
 tests/integratedtests/corestrtests/SimpleStringOnce/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2045,7 +2045,7 @@ tests/integratedtests/corestrtests/SimpleStringOnce/Helpers_Methods_test.go:483:
 	tests/integratedtests/corestrtests/SimpleStringOnce/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SimpleStringOnce/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SimpleStringOnce/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SimpleStringOnce [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SimpleStringOnce [build failed]
 
 ## corestrtests/SS_WrapDoubleQuote_SimpleSlice_S03
 tests/integratedtests/corestrtests/SS_WrapDoubleQuote_SimpleSlice_S03/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2058,7 +2058,7 @@ tests/integratedtests/corestrtests/SS_WrapDoubleQuote_SimpleSlice_S03/Helpers_Me
 	tests/integratedtests/corestrtests/SS_WrapDoubleQuote_SimpleSlice_S03/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SS_WrapDoubleQuote_SimpleSlice_S03/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SS_WrapDoubleQuote_SimpleSlice_S03/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SS_WrapDoubleQuote_SimpleSlice_S03 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SS_WrapDoubleQuote_SimpleSlice_S03 [build failed]
 
 ## corestrtests/SS01_Add_SimpleSlice_I8
 tests/integratedtests/corestrtests/SS01_Add_SimpleSlice_I8/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2071,7 +2071,7 @@ tests/integratedtests/corestrtests/SS01_Add_SimpleSlice_I8/Helpers_Methods_test.
 	tests/integratedtests/corestrtests/SS01_Add_SimpleSlice_I8/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SS01_Add_SimpleSlice_I8/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SS01_Add_SimpleSlice_I8/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SS01_Add_SimpleSlice_I8 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SS01_Add_SimpleSlice_I8 [build failed]
 
 ## corestrtests/SSO_Core
 tests/integratedtests/corestrtests/SSO_Core/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2084,7 +2084,7 @@ tests/integratedtests/corestrtests/SSO_Core/Helpers_Methods_test.go:483:6: Test_
 	tests/integratedtests/corestrtests/SSO_Core/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SSO_Core/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SSO_Core/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SSO_Core [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SSO_Core [build failed]
 
 ## corestrtests/SSO_Extended
 tests/integratedtests/corestrtests/SSO_Extended/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2097,7 +2097,7 @@ tests/integratedtests/corestrtests/SSO_Extended/Helpers_Methods_test.go:483:6: T
 	tests/integratedtests/corestrtests/SSO_Extended/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SSO_Extended/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SSO_Extended/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SSO_Extended [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SSO_Extended [build failed]
 
 ## corestrtests/SSO_Json_RemainingGaps
 tests/integratedtests/corestrtests/SSO_Json_RemainingGaps/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2110,7 +2110,7 @@ tests/integratedtests/corestrtests/SSO_Json_RemainingGaps/Helpers_Methods_test.g
 	tests/integratedtests/corestrtests/SSO_Json_RemainingGaps/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SSO_Json_RemainingGaps/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SSO_Json_RemainingGaps/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SSO_Json_RemainingGaps [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SSO_Json_RemainingGaps [build failed]
 
 ## corestrtests/SSO_SplitLeftRight
 tests/integratedtests/corestrtests/SSO_SplitLeftRight/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2123,7 +2123,7 @@ tests/integratedtests/corestrtests/SSO_SplitLeftRight/Helpers_Methods_test.go:48
 	tests/integratedtests/corestrtests/SSO_SplitLeftRight/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SSO_SplitLeftRight/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SSO_SplitLeftRight/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SSO_SplitLeftRight [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SSO_SplitLeftRight [build failed]
 
 ## corestrtests/SSO_Value
 tests/integratedtests/corestrtests/SSO_Value/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2136,7 +2136,7 @@ tests/integratedtests/corestrtests/SSO_Value/Helpers_Methods_test.go:483:6: Test
 	tests/integratedtests/corestrtests/SSO_Value/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/SSO_Value/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/SSO_Value/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/SSO_Value [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/SSO_Value [build failed]
 
 ## corestrtests/Types_FullMethods
 tests/integratedtests/corestrtests/Types_FullMethods/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2149,7 +2149,7 @@ tests/integratedtests/corestrtests/Types_FullMethods/Helpers_Methods_test.go:483
 	tests/integratedtests/corestrtests/Types_FullMethods/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Types_FullMethods/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Types_FullMethods/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Types_FullMethods [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Types_FullMethods [build failed]
 
 ## corestrtests/Types_Methods
 tests/integratedtests/corestrtests/Types_Methods/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2162,7 +2162,7 @@ tests/integratedtests/corestrtests/Types_Methods/Helpers_Methods_test.go:483:6: 
 	tests/integratedtests/corestrtests/Types_Methods/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/Types_Methods/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/Types_Methods/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Types_Methods [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Types_Methods [build failed]
 
 ## corestrtests/Utils_WrapDouble_MoreGaps
 tests/integratedtests/corestrtests/Utils_WrapDouble_MoreGaps/Utils_WrapDouble_MoreGaps_test.go:16:6: Test_Utils_WrapDouble redeclared in this block
@@ -2175,7 +2175,7 @@ tests/integratedtests/corestrtests/Utils_WrapDouble_MoreGaps/Utils_WrapDouble_Mo
 	tests/integratedtests/corestrtests/Utils_WrapDouble_MoreGaps/Helpers_Methods_test.go:283:6: other declaration of Test_Utils_WrapDoubleIfMissing_Empty
 tests/integratedtests/corestrtests/Utils_WrapDouble_MoreGaps/Utils_WrapDouble_MoreGaps_test.go:104:6: Test_Utils_WrapSingleIfMissing_Empty redeclared in this block
 	tests/integratedtests/corestrtests/Utils_WrapDouble_MoreGaps/Helpers_Methods_test.go:328:6: other declaration of Test_Utils_WrapSingleIfMissing_Empty
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/Utils_WrapDouble_MoreGaps [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/Utils_WrapDouble_MoreGaps [build failed]
 
 ## corestrtests/ValidValue_Comprehensive
 tests/integratedtests/corestrtests/ValidValue_Comprehensive/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2188,7 +2188,7 @@ tests/integratedtests/corestrtests/ValidValue_Comprehensive/Helpers_Methods_test
 	tests/integratedtests/corestrtests/ValidValue_Comprehensive/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/ValidValue_Comprehensive/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/ValidValue_Comprehensive/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/ValidValue_Comprehensive [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/ValidValue_Comprehensive [build failed]
 
 ## corestrtests/ValidValue_Constructors
 tests/integratedtests/corestrtests/ValidValue_Constructors/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2201,7 +2201,7 @@ tests/integratedtests/corestrtests/ValidValue_Constructors/Helpers_Methods_test.
 	tests/integratedtests/corestrtests/ValidValue_Constructors/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/ValidValue_Constructors/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/ValidValue_Constructors/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/ValidValue_Constructors [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/ValidValue_Constructors [build failed]
 
 ## corestrtests/ValidValue_Factories_Types
 tests/integratedtests/corestrtests/ValidValue_Factories_Types/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2214,7 +2214,7 @@ tests/integratedtests/corestrtests/ValidValue_Factories_Types/Helpers_Methods_te
 	tests/integratedtests/corestrtests/ValidValue_Factories_Types/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/ValidValue_Factories_Types/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/ValidValue_Factories_Types/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/ValidValue_Factories_Types [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/ValidValue_Factories_Types [build failed]
 
 ## corestrtests/ValidValue_I8
 tests/integratedtests/corestrtests/ValidValue_I8/Helpers_Methods_test.go:483:6: Test_HashsetsCollectionDataModel redeclared in this block
@@ -2226,7 +2226,7 @@ tests/integratedtests/corestrtests/ValidValue_I8/ValidValue_I8_test.go:2285:6: T
 tests/integratedtests/corestrtests/ValidValue_I8/ValidValue_I8_test.go:2302:6: Test_HashsetDataModel redeclared in this block
 	tests/integratedtests/corestrtests/ValidValue_I8/CloneSlice_Nil_Helpers_test.go:284:6: other declaration of Test_HashsetDataModel
 tests/integratedtests/corestrtests/ValidValue_I8/ValidValue_I8_test.go:2318:6: Test_HashsetsCollectionDataModel redeclared in this block
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/ValidValue_I8 [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/ValidValue_I8 [build failed]
 
 ## corestrtests/ValidValue_New
 tests/integratedtests/corestrtests/ValidValue_New/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2239,7 +2239,7 @@ tests/integratedtests/corestrtests/ValidValue_New/Helpers_Methods_test.go:483:6:
 	tests/integratedtests/corestrtests/ValidValue_New/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/ValidValue_New/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/ValidValue_New/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/ValidValue_New [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/ValidValue_New [build failed]
 
 ## corestrtests/ValidValue_NewValidValue
 tests/integratedtests/corestrtests/ValidValue_NewValidValue/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2252,7 +2252,7 @@ tests/integratedtests/corestrtests/ValidValue_NewValidValue/Helpers_Methods_test
 	tests/integratedtests/corestrtests/ValidValue_NewValidValue/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/ValidValue_NewValidValue/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/ValidValue_NewValidValue/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/ValidValue_NewValidValue [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/ValidValue_NewValidValue [build failed]
 
 ## corestrtests/ValidValue_Types
 tests/integratedtests/corestrtests/ValidValue_Types/ValidValue_Types_test.go:1612:6: Test_Utils_WrapDoubleIfMissing_NotWrapped redeclared in this block
@@ -2265,7 +2265,7 @@ tests/integratedtests/corestrtests/ValidValue_Types/ValidValue_Types_test.go:164
 	tests/integratedtests/corestrtests/ValidValue_Types/Helpers_Methods_test.go:358:6: other declaration of Test_Utils_WrapSingleIfMissing_NotWrapped
 tests/integratedtests/corestrtests/ValidValue_Types/ValidValue_Types_test.go:1660:6: Test_Utils_WrapSingleIfMissing_Empty redeclared in this block
 	tests/integratedtests/corestrtests/ValidValue_Types/Helpers_Methods_test.go:328:6: other declaration of Test_Utils_WrapSingleIfMissing_Empty
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/ValidValue_Types [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/ValidValue_Types [build failed]
 
 ## corestrtests/ValidValue_Types_Remaining
 tests/integratedtests/corestrtests/ValidValue_Types_Remaining/Helpers_Methods_test.go:447:6: Test_HashmapDataModel redeclared in this block
@@ -2278,7 +2278,7 @@ tests/integratedtests/corestrtests/ValidValue_Types_Remaining/Helpers_Methods_te
 	tests/integratedtests/corestrtests/ValidValue_Types_Remaining/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
 tests/integratedtests/corestrtests/ValidValue_Types_Remaining/ValidValue_Types_Remaining_test.go:1248:6: Test_StringUtils redeclared in this block
 	tests/integratedtests/corestrtests/ValidValue_Types_Remaining/CloneSlice_Nil_Helpers_test.go:201:6: other declaration of Test_StringUtils
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/ValidValue_Types_Remaining [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/ValidValue_Types_Remaining [build failed]
 
 ## corestrtests/ValidValue_Valid
 tests/integratedtests/corestrtests/ValidValue_Valid/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2291,7 +2291,7 @@ tests/integratedtests/corestrtests/ValidValue_Valid/Helpers_Methods_test.go:483:
 	tests/integratedtests/corestrtests/ValidValue_Valid/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/ValidValue_Valid/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/ValidValue_Valid/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/ValidValue_Valid [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/ValidValue_Valid [build failed]
 
 ## corestrtests/ValidValue_ValidValues
 tests/integratedtests/corestrtests/ValidValue_ValidValues/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2304,7 +2304,7 @@ tests/integratedtests/corestrtests/ValidValue_ValidValues/Helpers_Methods_test.g
 	tests/integratedtests/corestrtests/ValidValue_ValidValues/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/ValidValue_ValidValues/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/ValidValue_ValidValues/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/ValidValue_ValidValues [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/ValidValue_ValidValues [build failed]
 
 ## corestrtests/ValidValues_Add
 tests/integratedtests/corestrtests/ValidValues_Add/Helpers_Methods_test.go:427:6: Test_CharHashsetDataModel redeclared in this block
@@ -2317,10 +2317,10 @@ tests/integratedtests/corestrtests/ValidValues_Add/Helpers_Methods_test.go:483:6
 	tests/integratedtests/corestrtests/ValidValues_Add/CloneSlice_Nil_Helpers_test.go:306:6: other declaration of Test_HashsetsCollectionDataModel
 tests/integratedtests/corestrtests/ValidValues_Add/Helpers_Methods_test.go:519:6: Test_CollectionsOfCollectionModel redeclared in this block
 	tests/integratedtests/corestrtests/ValidValues_Add/CloneSlice_Nil_Helpers_test.go:392:6: other declaration of Test_CollectionsOfCollectionModel
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/corestrtests/ValidValues_Add [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests/ValidValues_Add [build failed]
 
 ## errcoretests/FormattersTypes
-# github.com/alimtvnetwork/core/tests/integratedtests/errcoretests/FormattersTypes [github.com/alimtvnetwork/core/tests/integratedtests/errcoretests/FormattersTypes.test]
+# github.com/alimtvnetwork/core-v8/tests/integratedtests/errcoretests/FormattersTypes [github.com/alimtvnetwork/core-v8/tests/integratedtests/errcoretests/FormattersTypes.test]
 tests/integratedtests/errcoretests/FormattersTypes/FormattersTypes_test.go:566:14: undefined: callPanicsErrcore
 tests/integratedtests/errcoretests/FormattersTypes/FormattersTypes_test.go:574:14: undefined: callPanicsErrcore
 tests/integratedtests/errcoretests/FormattersTypes/FormattersTypes_test.go:582:14: undefined: callPanicsErrcore
@@ -2329,7 +2329,7 @@ tests/integratedtests/errcoretests/FormattersTypes/FormattersTypes_test.go:601:1
 tests/integratedtests/errcoretests/FormattersTypes/FormattersTypes_test.go:967:12: undefined: callPanicsErrcore
 tests/integratedtests/errcoretests/FormattersTypes/FormattersTypes_test.go:1017:14: undefined: callPanicsErrcore
 tests/integratedtests/errcoretests/FormattersTypes/FormattersTypes_test.go:1025:12: undefined: callPanicsErrcore
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/errcoretests/FormattersTypes [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/errcoretests/FormattersTypes [build failed]
 
 ## errcoretests/LineDiffExpecting
 tests/integratedtests/errcoretests/LineDiffExpecting/LineDiffExpecting_test.go:92:14: undefined: callPanicsErrcore
@@ -2342,12 +2342,12 @@ tests/integratedtests/errcoretests/LineDiffExpecting/LineDiffExpecting_test.go:2
 tests/integratedtests/errcoretests/LineDiffExpecting/LineDiffExpecting_test.go:375:14: undefined: callPanicsErrcore
 tests/integratedtests/errcoretests/LineDiffExpecting/LineDiffExpecting_test.go:388:14: undefined: callPanicsErrcore
 tests/integratedtests/errcoretests/LineDiffExpecting/LineDiffExpecting_test.go:402:14: undefined: callPanicsErrcore
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/errcoretests/LineDiffExpecting [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/errcoretests/LineDiffExpecting [build failed]
 
 ## errcoretests/RawErrCollection
-# github.com/alimtvnetwork/core/tests/integratedtests/errcoretests/RawErrCollection [github.com/alimtvnetwork/core/tests/integratedtests/errcoretests/RawErrCollection.test]
+# github.com/alimtvnetwork/core-v8/tests/integratedtests/errcoretests/RawErrCollection [github.com/alimtvnetwork/core-v8/tests/integratedtests/errcoretests/RawErrCollection.test]
 tests/integratedtests/errcoretests/RawErrCollection/RawErrCollection_test.go:288:14: undefined: callPanicsErrcore
 tests/integratedtests/errcoretests/RawErrCollection/RawErrCollection_test.go:297:14: undefined: callPanicsErrcore
 tests/integratedtests/errcoretests/RawErrCollection/RawErrCollection_test.go:547:14: undefined: callPanicsErrcore
-FAIL	github.com/alimtvnetwork/core/tests/integratedtests/errcoretests/RawErrCollection [build failed]
+FAIL	github.com/alimtvnetwork/core-v8/tests/integratedtests/errcoretests/RawErrCollection [build failed]
 

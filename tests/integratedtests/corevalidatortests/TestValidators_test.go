@@ -26,10 +26,10 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/corevalidator"
-	"github.com/alimtvnetwork/core/enums/stringcompareas"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/corevalidator"
+	"github.com/alimtvnetwork/core-v8/enums/stringcompareas"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 func Test_TestValidators_Verification(t *testing.T) {

@@ -25,7 +25,7 @@ package corestrtests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // caseV1Compat is a lightweight assertion helper used across many coverage files.

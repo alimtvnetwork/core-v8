@@ -26,9 +26,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/alimtvnetwork/core/corecomparator"
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/issetter"
+	"github.com/alimtvnetwork/core-v8/corecomparator"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/issetter"
 )
 
 func Test_New_Valid_Cov2(t *testing.T) {

@@ -26,7 +26,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/alimtvnetwork/core/defaulterr"
+	"github.com/alimtvnetwork/core-v8/defaulterr"
 )
 
 // TypedPayloadCollection is a generic, thread-safe collection of TypedPayloadWrapper[T].

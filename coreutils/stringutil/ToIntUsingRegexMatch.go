@@ -26,7 +26,7 @@ import (
 	"regexp"
 	"strconv"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 func ToIntUsingRegexMatch(

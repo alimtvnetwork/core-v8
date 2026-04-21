@@ -25,8 +25,8 @@ package integratedtests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coretests"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // ── AnyToBytes ──

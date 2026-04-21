@@ -75,7 +75,7 @@ function Invoke-PreCommitCheck {
     $goTestPkgs = [System.Collections.Generic.List[string]]::new()
     foreach ($dir in $pkgsWithCoverage) {
         $relPath = $dir -replace [regex]::Escape($global:ProjectRoot), '' -replace '^[\\/]', '' -replace '\\', '/'
-        $goTestPkgs.Add("github.com/alimtvnetwork/core/$relPath")
+        $goTestPkgs.Add("github.com/alimtvnetwork/core-v8/$relPath")
     }
 
     # ── Compile check ──

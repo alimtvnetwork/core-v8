@@ -27,12 +27,12 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests"
-	"github.com/alimtvnetwork/core/corevalidator"
-	"github.com/alimtvnetwork/core/enums/stringcompareas"
-	"github.com/alimtvnetwork/core/errcore"
-	"github.com/alimtvnetwork/core/internal/convertinternal"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/coretests"
+	"github.com/alimtvnetwork/core-v8/corevalidator"
+	"github.com/alimtvnetwork/core-v8/enums/stringcompareas"
+	"github.com/alimtvnetwork/core-v8/errcore"
+	"github.com/alimtvnetwork/core-v8/internal/convertinternal"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 	"github.com/smarty/assertions/should"
 	"github.com/smartystreets/goconvey/convey"
 )

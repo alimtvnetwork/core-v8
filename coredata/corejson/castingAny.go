@@ -26,7 +26,7 @@ import (
 	"errors"
 	"reflect"
 
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 type castingAny struct{}

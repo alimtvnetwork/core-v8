@@ -23,8 +23,8 @@
 package entityinf
 
 import (
-	"github.com/alimtvnetwork/core/internal/internalinterface"
-	"github.com/alimtvnetwork/core/internal/internalinterface/internalserializer"
+	"github.com/alimtvnetwork/core-v8/internal/internalinterface"
+	"github.com/alimtvnetwork/core-v8/internal/internalinterface/internalserializer"
 )
 
 type StandardTaskEntityDefiner interface {

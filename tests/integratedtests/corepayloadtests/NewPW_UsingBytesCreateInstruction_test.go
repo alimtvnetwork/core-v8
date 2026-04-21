@@ -26,9 +26,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coredata/corepayload"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coredata/corepayload"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 type stringer16 struct{ val string }

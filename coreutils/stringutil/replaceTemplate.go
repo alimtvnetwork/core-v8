@@ -27,7 +27,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 type replaceTemplate struct{}

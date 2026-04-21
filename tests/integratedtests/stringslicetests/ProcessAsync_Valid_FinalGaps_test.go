@@ -25,7 +25,7 @@ package stringslicetests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/stringslice"
+	"github.com/alimtvnetwork/core-v8/coredata/stringslice"
 	"github.com/smartystreets/goconvey/convey"
 )
 

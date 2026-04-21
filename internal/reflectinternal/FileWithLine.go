@@ -25,8 +25,8 @@ package reflectinternal
 import (
 	"fmt"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/internal/jsoninternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/internal/jsoninternal"
 )
 
 type FileWithLine struct {

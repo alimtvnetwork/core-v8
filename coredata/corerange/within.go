@@ -26,8 +26,8 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/constants/bitsize"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/constants/bitsize"
 )
 
 type within struct{}
@@ -102,7 +102,7 @@ func (it *within) StringRangeUint32(
 		input)
 
 	// fix https://t.ly/6aoW,
-	// https://github.com/alimtvnetwork/core/-/issues/81
+	// https://github.com/alimtvnetwork/core-v8/-/issues/81
 	// use MaxInt32 instead of uint32Max
 	if finalInt <= math.MaxInt32 {
 		return uint32(finalInt), isInRange

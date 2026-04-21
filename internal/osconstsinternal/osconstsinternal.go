@@ -25,7 +25,7 @@ package osconstsinternal
 import (
 	"runtime"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 // GOOS values https://stackoverflow.com/a/20728862

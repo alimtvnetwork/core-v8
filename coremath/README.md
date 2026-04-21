@@ -7,7 +7,7 @@ Package `coremath` provides min/max functions for numeric types and range-bounda
 ### Range Checking (Primary API)
 
 ```go
-import "github.com/alimtvnetwork/core/coremath"
+import "github.com/alimtvnetwork/core-v8/coremath"
 
 // Check if a value is within a range
 coremath.IsRangeWithin.Integer(5, 1, 10)   // true

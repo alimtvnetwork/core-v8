@@ -26,10 +26,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/converters"
-	"github.com/alimtvnetwork/core/coreindexes"
-	"github.com/alimtvnetwork/core/internal/convertinternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/converters"
+	"github.com/alimtvnetwork/core-v8/coreindexes"
+	"github.com/alimtvnetwork/core-v8/internal/convertinternal"
 )
 
 type RangeInt struct {

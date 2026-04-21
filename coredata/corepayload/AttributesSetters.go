@@ -23,10 +23,10 @@
 package corepayload
 
 import (
-	"github.com/alimtvnetwork/core/coredata/coredynamic"
-	"github.com/alimtvnetwork/core/coreinterface/errcoreinf"
-	"github.com/alimtvnetwork/core/coreinterface/payloadinf"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/coredata/coredynamic"
+	"github.com/alimtvnetwork/core-v8/coreinterface/errcoreinf"
+	"github.com/alimtvnetwork/core-v8/coreinterface/payloadinf"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 // AttributesSetters.go — Mutating methods extracted from Attributes.go

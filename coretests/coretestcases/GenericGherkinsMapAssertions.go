@@ -26,8 +26,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/errcore"
 	"github.com/smarty/assertions/should"
 	"github.com/smartystreets/goconvey/convey"
 )

@@ -25,9 +25,9 @@ package stringcompareas
 import (
 	"errors"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coreinterface/enuminf"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coreinterface/enuminf"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 type Variant byte

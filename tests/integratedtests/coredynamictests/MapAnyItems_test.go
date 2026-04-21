@@ -26,10 +26,10 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/coredynamic"
-	"github.com/alimtvnetwork/core/coredata/corestr"
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/coredata/coredynamic"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 func Test_MapAnyItems_AddAndKeys(t *testing.T) {

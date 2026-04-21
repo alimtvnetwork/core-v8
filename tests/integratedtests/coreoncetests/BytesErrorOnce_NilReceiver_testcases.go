@@ -23,9 +23,9 @@
 package coreoncetests
 
 import (
-	"github.com/alimtvnetwork/core/coredata/coreonce"
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
-	"github.com/alimtvnetwork/core/coretests/results"
+	"github.com/alimtvnetwork/core-v8/coredata/coreonce"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/coretests/results"
 )
 
 // =============================================================================

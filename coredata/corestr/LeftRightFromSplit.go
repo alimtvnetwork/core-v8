@@ -22,7 +22,7 @@
 
 package corestr
 
-import "github.com/alimtvnetwork/core/coredata/coregeneric"
+import "github.com/alimtvnetwork/core-v8/coredata/coregeneric"
 
 // LeftRightFromSplit splits a string by separator into a LeftRight.
 //

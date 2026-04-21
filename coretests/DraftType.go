@@ -28,7 +28,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/alimtvnetwork/core/corecmp"
+	"github.com/alimtvnetwork/core-v8/corecmp"
 )
 
 // DraftType

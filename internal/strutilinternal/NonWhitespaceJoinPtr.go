@@ -25,7 +25,7 @@ package strutilinternal
 import (
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 func NonWhitespaceJoinPtr(slice []string, joiner string) string {

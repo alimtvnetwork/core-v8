@@ -25,9 +25,9 @@ package corestrtests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coredata/corestr"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // caseV1Compat is defined in shared_compat_helpers.go

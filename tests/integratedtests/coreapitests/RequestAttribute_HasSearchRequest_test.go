@@ -25,9 +25,9 @@ package coreapitests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/coreapi"
-	"github.com/alimtvnetwork/core/coredata/coredynamic"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coredata/coreapi"
+	"github.com/alimtvnetwork/core-v8/coredata/coredynamic"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // =============================================================================

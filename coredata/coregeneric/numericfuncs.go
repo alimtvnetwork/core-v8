@@ -22,7 +22,7 @@
 
 package coregeneric
 
-import "github.com/alimtvnetwork/core/corecomparator"
+import "github.com/alimtvnetwork/core-v8/corecomparator"
 
 // =============================================================================
 // Comparison — returns corecomparator.Compare enum

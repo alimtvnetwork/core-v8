@@ -25,7 +25,7 @@ package coredynamic
 import (
 	"reflect"
 
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 func ReflectTypeValidation(

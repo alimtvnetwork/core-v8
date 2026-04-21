@@ -25,8 +25,8 @@ package corepayloadtests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coredata/corepayload"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coredata/corepayload"
 	"github.com/smartystreets/goconvey/convey"
 )
 

@@ -26,10 +26,10 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coreinterface/enuminf"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coreinterface/enuminf"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 type Request byte

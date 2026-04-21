@@ -30,8 +30,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 type RawErrCollection struct {

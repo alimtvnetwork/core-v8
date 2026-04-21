@@ -56,7 +56,7 @@ Package `regconsts` provides pre-defined regex pattern strings for common valida
 ```go
 import (
     "regexp"
-    "github.com/alimtvnetwork/core/regconsts"
+    "github.com/alimtvnetwork/core-v8/regconsts"
 )
 
 re := regexp.MustCompile(regconsts.UUID4)

@@ -25,7 +25,7 @@ package corerangetests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/corerange"
+	"github.com/alimtvnetwork/core-v8/coredata/corerange"
 )
 
 // Test_Cov7_Within_StringRangeUint32_Overflow tests the overflow fallback in

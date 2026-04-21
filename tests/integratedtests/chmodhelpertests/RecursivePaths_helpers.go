@@ -23,7 +23,7 @@
 package chmodhelpertests
 
 import (
-	"github.com/alimtvnetwork/core/chmodhelper"
+	"github.com/alimtvnetwork/core-v8/chmodhelper"
 )
 
 // mustRwxWrapper creates an RwxWrapper from a 9-char rwx string (without leading hyphen).

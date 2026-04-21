@@ -25,8 +25,8 @@ package csvinternaltests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/internal/csvinternal"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/internal/csvinternal"
 )
 
 // ── StringsToCsvStrings all branches ──

@@ -22,7 +22,7 @@
 
 package constants
 
-import "github.com/alimtvnetwork/core/constants/bitsize"
+import "github.com/alimtvnetwork/core-v8/constants/bitsize"
 
 const (
 	ArbitraryCapacity1     = 1

@@ -26,9 +26,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/defaulterr"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/defaulterr"
 )
 
 // TypedPayloadWrapper is a generic version of PayloadWrapper where T represents

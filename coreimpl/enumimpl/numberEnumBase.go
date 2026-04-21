@@ -27,11 +27,11 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/coreonce"
-	"github.com/alimtvnetwork/core/errcore"
-	"github.com/alimtvnetwork/core/internal/csvinternal"
-	"github.com/alimtvnetwork/core/internal/strutilinternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/coreonce"
+	"github.com/alimtvnetwork/core-v8/errcore"
+	"github.com/alimtvnetwork/core-v8/internal/csvinternal"
+	"github.com/alimtvnetwork/core-v8/internal/strutilinternal"
 )
 
 type numberEnumBase struct {

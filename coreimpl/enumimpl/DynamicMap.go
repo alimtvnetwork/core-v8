@@ -31,8 +31,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/internal/msgcreator"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/internal/msgcreator"
 )
 
 type DynamicMap map[string]any

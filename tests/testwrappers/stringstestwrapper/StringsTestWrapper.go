@@ -23,7 +23,7 @@
 package stringstestwrapper
 
 import (
-	"github.com/alimtvnetwork/core/coretests"
+	"github.com/alimtvnetwork/core-v8/coretests"
 )
 
 // StringsTestWrapper wraps BaseTestCase with typed []string accessors

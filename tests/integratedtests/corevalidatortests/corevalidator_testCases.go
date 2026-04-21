@@ -23,9 +23,9 @@
 package corevalidatortests
 
 import (
-	"github.com/alimtvnetwork/core/corevalidator"
-	"github.com/alimtvnetwork/core/enums/stringcompareas"
-	"github.com/alimtvnetwork/core/tests/testwrappers/corevalidatortestwrappers"
+	"github.com/alimtvnetwork/core-v8/corevalidator"
+	"github.com/alimtvnetwork/core-v8/enums/stringcompareas"
+	"github.com/alimtvnetwork/core-v8/tests/testwrappers/corevalidatortestwrappers"
 )
 
 var textValidatorsTestCases = []corevalidatortestwrappers.TextValidatorsWrapper{

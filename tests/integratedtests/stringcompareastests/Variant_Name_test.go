@@ -26,8 +26,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/alimtvnetwork/core/enums/stringcompareas"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/enums/stringcompareas"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 func Test_Variant_Name_Verification(t *testing.T) {

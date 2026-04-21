@@ -23,9 +23,9 @@
 package coredynamictestwrappers
 
 import (
-	"github.com/alimtvnetwork/core/coretests"
-	"github.com/alimtvnetwork/core/corevalidator"
-	"github.com/alimtvnetwork/core/enums/stringcompareas"
+	"github.com/alimtvnetwork/core-v8/coretests"
+	"github.com/alimtvnetwork/core-v8/corevalidator"
+	"github.com/alimtvnetwork/core-v8/enums/stringcompareas"
 )
 
 var (

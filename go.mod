@@ -1,4 +1,4 @@
-module github.com/alimtvnetwork/core
+module github.com/alimtvnetwork/core-v8
 
 go 1.25.0
 

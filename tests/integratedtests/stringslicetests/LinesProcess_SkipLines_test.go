@@ -26,9 +26,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/stringslice"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/stringslice"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // ── LinesProcess — isTake false branch ──

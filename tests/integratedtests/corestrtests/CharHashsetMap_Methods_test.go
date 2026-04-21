@@ -27,8 +27,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/alimtvnetwork/core/coredata/corestr"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 func Test_Creators_Verification(t *testing.T) {

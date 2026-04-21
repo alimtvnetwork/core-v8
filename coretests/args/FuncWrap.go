@@ -25,7 +25,7 @@ package args
 import (
 	"reflect"
 
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 // FuncWrap wraps a Go function value with reflection metadata for

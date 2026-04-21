@@ -22,7 +22,7 @@
 
 package coredynamic
 
-import "github.com/alimtvnetwork/core/constants"
+import "github.com/alimtvnetwork/core-v8/constants"
 
 // --- Package-level search functions for comparable types ---
 

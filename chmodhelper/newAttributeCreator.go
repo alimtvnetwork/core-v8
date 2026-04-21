@@ -22,7 +22,7 @@
 
 package chmodhelper
 
-import "github.com/alimtvnetwork/core/errcore"
+import "github.com/alimtvnetwork/core-v8/errcore"
 
 type newAttributeCreator struct{}
 

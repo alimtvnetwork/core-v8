@@ -17,7 +17,7 @@ Package `defaultcapacity` provides functions for computing predictive initial ca
 ## Usage
 
 ```go
-import "github.com/alimtvnetwork/core/defaultcapacity"
+import "github.com/alimtvnetwork/core-v8/defaultcapacity"
 
 // Pre-allocate a slice with predictive capacity
 cap := defaultcapacity.PredictiveDefault(len(input))

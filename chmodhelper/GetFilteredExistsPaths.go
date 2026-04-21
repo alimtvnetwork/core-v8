@@ -23,8 +23,8 @@
 package chmodhelper
 
 import (
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/internal/fsinternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/internal/fsinternal"
 )
 
 func GetFilteredExistsPaths(locations []string) (

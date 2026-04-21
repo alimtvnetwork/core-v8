@@ -27,8 +27,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/corestr"
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
 )
 
 // ─── Collection: AddHashmapsKeysValues ──────

@@ -61,6 +61,6 @@ func BenchmarkTrace_String(b *testing.B) {
 func BenchmarkNameOf_All(b *testing.B) {
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		NameOf.All("github.com/alimtvnetwork/core/codestack.BenchmarkNameOf_All")
+		NameOf.All("github.com/alimtvnetwork/core-v8/codestack.BenchmarkNameOf_All")
 	}
 }

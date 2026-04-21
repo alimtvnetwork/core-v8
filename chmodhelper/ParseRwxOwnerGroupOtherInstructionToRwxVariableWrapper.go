@@ -22,7 +22,7 @@
 
 package chmodhelper
 
-import "github.com/alimtvnetwork/core/chmodhelper/chmodins"
+import "github.com/alimtvnetwork/core-v8/chmodhelper/chmodins"
 
 func ParseRwxOwnerGroupOtherToRwxVariableWrapper(
 	rwxOwnerGroupOther *chmodins.RwxOwnerGroupOther,

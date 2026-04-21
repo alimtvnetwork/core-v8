@@ -25,8 +25,8 @@ package strutilinternaltests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/internal/strutilinternal"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/internal/strutilinternal"
 )
 
 func Test_IsNullOrEmpty_FromIsNullOrEmpty(t *testing.T) {

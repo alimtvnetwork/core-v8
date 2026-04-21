@@ -25,7 +25,7 @@ package conditional
 import (
 	"strconv"
 
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 // TypedErrorFunctionsExecuteResults is the generic version of ErrorFunctionsExecuteResults.

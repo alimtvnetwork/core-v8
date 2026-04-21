@@ -25,9 +25,9 @@ package chmodhelper
 import (
 	"os"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/errcore"
-	"github.com/alimtvnetwork/core/internal/fsinternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/errcore"
+	"github.com/alimtvnetwork/core-v8/internal/fsinternal"
 )
 
 func GetExistsFilteredPathFileInfoMap(

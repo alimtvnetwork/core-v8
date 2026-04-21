@@ -25,12 +25,12 @@ package isanytests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/conditional"
-	"github.com/alimtvnetwork/core/corecsv"
-	"github.com/alimtvnetwork/core/coredata/corestr"
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
-	"github.com/alimtvnetwork/core/isany"
+	"github.com/alimtvnetwork/core-v8/conditional"
+	"github.com/alimtvnetwork/core-v8/corecsv"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/isany"
 )
 
 func Test_Conclusive_Verification(t *testing.T) {

@@ -1,7 +1,7 @@
 # Project Overview
 
 ## Name
-`github.com/alimtvnetwork/core` — Go shared utility framework (auk-go ecosystem)
+`github.com/alimtvnetwork/core-v8` — Go shared utility framework (auk-go ecosystem)
 
 ## Purpose
 Reusable primitives, data structures, interfaces, converters, validators, file-system helpers, testing utilities, and code-generation tools for downstream Go packages.

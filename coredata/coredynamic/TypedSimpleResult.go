@@ -27,8 +27,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
 )
 
 // TypedSimpleResult is the generic version of SimpleResult.

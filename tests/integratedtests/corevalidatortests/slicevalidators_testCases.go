@@ -25,12 +25,12 @@ package corevalidatortests
 import (
 	"reflect"
 
-	"github.com/alimtvnetwork/core/coretests"
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
-	"github.com/alimtvnetwork/core/corevalidator"
-	"github.com/alimtvnetwork/core/issetter"
-	"github.com/alimtvnetwork/core/tests/testwrappers/corevalidatortestwrappers"
+	"github.com/alimtvnetwork/core-v8/coretests"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/corevalidator"
+	"github.com/alimtvnetwork/core-v8/issetter"
+	"github.com/alimtvnetwork/core-v8/tests/testwrappers/corevalidatortestwrappers"
 )
 
 var (

@@ -26,8 +26,8 @@ import (
 	"math"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coremath"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coremath"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // ── MaxInt / MinInt equal values ──

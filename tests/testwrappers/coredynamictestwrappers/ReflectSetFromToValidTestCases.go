@@ -23,7 +23,7 @@
 package coredynamictestwrappers
 
 import (
-	"github.com/alimtvnetwork/core/coretests"
+	"github.com/alimtvnetwork/core-v8/coretests"
 )
 
 var ReflectSetFromToValidNullNull = FromToTestWrapper{

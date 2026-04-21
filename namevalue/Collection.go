@@ -28,7 +28,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 // Collection is a generic collection of Instance[K, V] items.

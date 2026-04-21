@@ -1,7 +1,7 @@
 # Reliability & Failure-Chance Report
 
 ## Date: 2026-03-29 (Refreshed)
-## Scope: Full spec set for `github.com/alimtvnetwork/core`
+## Scope: Full spec set for `github.com/alimtvnetwork/core-v8`
 
 ---
 

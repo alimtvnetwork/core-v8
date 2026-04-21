@@ -17,7 +17,7 @@ Package `cmdconsts` provides string constants for common shell commands, flags, 
 ## Usage
 
 ```go
-import "github.com/alimtvnetwork/core/cmdconsts"
+import "github.com/alimtvnetwork/core-v8/cmdconsts"
 
 cmd := cmdconsts.SystemCtlRestart + " nginx"
 // "systemctl restart nginx"

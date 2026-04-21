@@ -25,7 +25,7 @@ package corestrtests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
 )
 
 // Reverted from broken ShouldBeEqualMapFirst pattern to working caseV1Compat pattern.

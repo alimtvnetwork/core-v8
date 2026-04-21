@@ -25,7 +25,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/alimtvnetwork/core/keymk"
+	"github.com/alimtvnetwork/core-v8/keymk"
 )
 
 func testMakerTesting() {

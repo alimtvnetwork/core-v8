@@ -28,8 +28,8 @@ import (
 	"testing"
 	"unsafe"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/isany"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/isany"
 )
 
 // ── Conclusive all branches ──

@@ -26,7 +26,7 @@ import (
 	"math"
 	"sync"
 
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 // PayloadsCollectionPaging.go — Paging methods extracted from PayloadsCollection.go

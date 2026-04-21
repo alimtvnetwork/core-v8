@@ -25,9 +25,9 @@ package coreteststests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests"
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/issetter"
+	"github.com/alimtvnetwork/core-v8/coretests"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/issetter"
 	"github.com/smartystreets/goconvey/convey"
 )
 

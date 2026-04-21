@@ -25,7 +25,7 @@ package coreinterface
 import (
 	"reflect"
 
-	"github.com/alimtvnetwork/core/internal/internalinterface"
+	"github.com/alimtvnetwork/core-v8/internal/internalinterface"
 )
 
 type StringRangesGetter interface {

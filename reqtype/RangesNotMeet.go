@@ -23,8 +23,8 @@
 package reqtype
 
 import (
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 func RangesNotMeet(

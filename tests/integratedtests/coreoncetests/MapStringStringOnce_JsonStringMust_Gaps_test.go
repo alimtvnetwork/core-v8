@@ -25,7 +25,7 @@ package coreoncetests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/coreonce"
+	"github.com/alimtvnetwork/core-v8/coredata/coreonce"
 	"github.com/smartystreets/goconvey/convey"
 )
 

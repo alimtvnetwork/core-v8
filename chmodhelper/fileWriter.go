@@ -26,9 +26,9 @@ import (
 	"errors"
 	"os"
 
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/internal/osconstsinternal"
-	"github.com/alimtvnetwork/core/internal/pathinternal"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/internal/osconstsinternal"
+	"github.com/alimtvnetwork/core-v8/internal/pathinternal"
 )
 
 type fileWriter struct {

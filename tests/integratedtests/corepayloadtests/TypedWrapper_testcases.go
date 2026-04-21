@@ -23,8 +23,8 @@
 package corepayloadtests
 
 import (
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
 )
 
 // testProduct is a sample struct for TypedPayloadWrapper deserialization tests.

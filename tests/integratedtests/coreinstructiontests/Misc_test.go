@@ -25,10 +25,10 @@ package coreinstructiontests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/corecomparator"
-	"github.com/alimtvnetwork/core/coreinstruction"
-	"github.com/alimtvnetwork/core/enums/stringcompareas"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/corecomparator"
+	"github.com/alimtvnetwork/core-v8/coreinstruction"
+	"github.com/alimtvnetwork/core-v8/enums/stringcompareas"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // TestStringSearch_IsMatch verifies match logic.

@@ -23,7 +23,7 @@
 package corestr
 
 import (
-	"github.com/alimtvnetwork/core/converters"
+	"github.com/alimtvnetwork/core-v8/converters"
 )
 
 type newLinkedListCollectionsCreator struct{}

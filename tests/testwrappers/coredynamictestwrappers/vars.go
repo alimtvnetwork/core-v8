@@ -22,7 +22,7 @@
 
 package coredynamictestwrappers
 
-import "github.com/alimtvnetwork/core/coretests"
+import "github.com/alimtvnetwork/core-v8/coretests"
 
 var (
 	ReflectSetFromToTestCasesDraftTypeInput = coretests.DraftType{

@@ -26,8 +26,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 // ── isChecker extended ──

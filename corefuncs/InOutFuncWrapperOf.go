@@ -22,7 +22,7 @@
 
 package corefuncs
 
-import "github.com/alimtvnetwork/core/errcore"
+import "github.com/alimtvnetwork/core-v8/errcore"
 
 // InOutFuncWrapperOf is the generic version of an input-output function wrapper.
 //

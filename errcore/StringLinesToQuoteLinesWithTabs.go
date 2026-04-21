@@ -26,7 +26,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/alimtvnetwork/core/internal/msgformats"
+	"github.com/alimtvnetwork/core-v8/internal/msgformats"
 )
 
 // LinesToDoubleQuoteLinesWithTabs

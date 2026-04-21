@@ -25,8 +25,8 @@ package issettertests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/issetter"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/issetter"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 func Test_Value_Methods_Ext2(t *testing.T) {

@@ -25,8 +25,8 @@ package stringutil
 import (
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
 )
 
 func SplitLeftRightType(s, separator string) *corestr.LeftRight {

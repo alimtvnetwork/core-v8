@@ -23,8 +23,8 @@
 package coreinstruction
 
 import (
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/reqtype"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/reqtype"
 )
 
 type LineIdentifier struct {

@@ -25,8 +25,8 @@ package keymktests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/keymk"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/keymk"
 )
 
 // ── Key.go — uncovered branches ──

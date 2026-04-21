@@ -23,9 +23,9 @@
 package enumimpltests
 
 import (
-	"github.com/alimtvnetwork/core/coreimpl/enumimpl"
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/coreimpl/enumimpl"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
 )
 
 var dynamicMapSimpleDiffCaseV1TestCases = []coretestcases.CaseV1{

@@ -25,9 +25,9 @@ package anycmptests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/anycmp"
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/anycmp"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
 )
 
 // Coverage test for anycmp.Cmp to ensure all branches reach 100%.

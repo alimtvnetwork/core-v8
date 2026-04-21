@@ -26,11 +26,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/alimtvnetwork/core/converters"
-	"github.com/alimtvnetwork/core/coredata/coredynamic"
-	"github.com/alimtvnetwork/core/corevalidator"
-	"github.com/alimtvnetwork/core/internal/trydo"
-	"github.com/alimtvnetwork/core/tests/testwrappers/coredynamictestwrappers"
+	"github.com/alimtvnetwork/core-v8/converters"
+	"github.com/alimtvnetwork/core-v8/coredata/coredynamic"
+	"github.com/alimtvnetwork/core-v8/corevalidator"
+	"github.com/alimtvnetwork/core-v8/internal/trydo"
+	"github.com/alimtvnetwork/core-v8/tests/testwrappers/coredynamictestwrappers"
 )
 
 // Test_ReflectSetFromTo_ValidCases

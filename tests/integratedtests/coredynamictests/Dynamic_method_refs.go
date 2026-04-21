@@ -27,7 +27,7 @@ import (
 	"reflect"
 	"runtime"
 
-	"github.com/alimtvnetwork/core/coredata/coredynamic"
+	"github.com/alimtvnetwork/core-v8/coredata/coredynamic"
 )
 
 // =============================================================================
@@ -144,7 +144,7 @@ var (
 // =============================================================================
 
 // extractShortName extracts the method name from a fully qualified
-// runtime function name like "github.com/alimtvnetwork/core/coredata/coredynamic.(*Dynamic).IsNull-fm".
+// runtime function name like "github.com/alimtvnetwork/core-v8/coredata/coredynamic.(*Dynamic).IsNull-fm".
 func extractShortName(fullName string) string {
 	// Find last dot for the method name
 	for i := len(fullName) - 1; i >= 0; i-- {

@@ -25,8 +25,8 @@ package coregenerictests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/coregeneric"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coredata/coregeneric"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // ══════════════════════════════════════════════════════════════════════════════

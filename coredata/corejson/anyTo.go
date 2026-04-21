@@ -25,7 +25,7 @@ package corejson
 import (
 	"errors"
 
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 type anyTo struct{}

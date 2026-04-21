@@ -22,7 +22,7 @@
 
 package corevalidatortestwrappers
 
-import "github.com/alimtvnetwork/core/corevalidator"
+import "github.com/alimtvnetwork/core-v8/corevalidator"
 
 type SegmentValidatorWrapper struct {
 	Header                string

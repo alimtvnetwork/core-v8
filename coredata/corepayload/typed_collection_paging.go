@@ -26,7 +26,7 @@ import (
 	"math"
 	"sync"
 
-	"github.com/alimtvnetwork/core/pagingutil"
+	"github.com/alimtvnetwork/core-v8/pagingutil"
 )
 
 // =============================================================================

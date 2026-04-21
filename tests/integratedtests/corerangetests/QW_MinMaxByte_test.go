@@ -25,7 +25,7 @@ package corerangetests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/corerange"
+	"github.com/alimtvnetwork/core-v8/coredata/corerange"
 )
 
 func Test_QW_MinMaxByte_DifferenceAbsolute(t *testing.T) {

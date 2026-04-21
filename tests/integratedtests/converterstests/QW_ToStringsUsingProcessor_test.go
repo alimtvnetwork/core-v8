@@ -25,8 +25,8 @@ package converterstests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/converters"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/converters"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 func Test_QW_ToStringsUsingProcessor_NilInput(t *testing.T) {

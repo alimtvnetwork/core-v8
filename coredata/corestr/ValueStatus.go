@@ -22,7 +22,7 @@
 
 package corestr
 
-import "github.com/alimtvnetwork/core/constants"
+import "github.com/alimtvnetwork/core-v8/constants"
 
 type ValueStatus struct {
 	ValueValid *ValidValue

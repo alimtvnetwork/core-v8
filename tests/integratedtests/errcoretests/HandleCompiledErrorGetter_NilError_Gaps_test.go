@@ -26,7 +26,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/errcore"
 	"github.com/smartystreets/goconvey/convey"
 )
 

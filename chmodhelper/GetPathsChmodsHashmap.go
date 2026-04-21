@@ -23,8 +23,8 @@
 package chmodhelper
 
 import (
-	"github.com/alimtvnetwork/core/coredata/corestr"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 // GetFilesChmodRwxFullMap returns filePath -> "-rwxrwxrwx"

@@ -25,8 +25,8 @@ package codestacktests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/codestack"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/codestack"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // ── FileWithLine nil-safety ──
@@ -829,7 +829,7 @@ func Test_TraceCollection_Dispose_FromFileWithLineNilSafe(t *testing.T) {
 
 func Test_NameOf_Method_FromFileWithLineNilSafe(t *testing.T) {
 	// Act
-	name := codestack.NameOf.MethodByFullName("github.com/alimtvnetwork/core/codestack.Test_NameOf_Method_Cov")
+	name := codestack.NameOf.MethodByFullName("github.com/alimtvnetwork/core-v8/codestack.Test_NameOf_Method_Cov")
 
 	// Assert
 	actual := args.Map{"result": name == ""}
@@ -839,7 +839,7 @@ func Test_NameOf_Method_FromFileWithLineNilSafe(t *testing.T) {
 
 func Test_NameOf_Package_FromFileWithLineNilSafe(t *testing.T) {
 	// Act
-	name := codestack.NameOf.PackageByFullName("github.com/alimtvnetwork/core/codestack.Test_NameOf_Package_Cov")
+	name := codestack.NameOf.PackageByFullName("github.com/alimtvnetwork/core-v8/codestack.Test_NameOf_Package_Cov")
 
 	// Assert
 	actual := args.Map{"result": name == ""}
@@ -849,7 +849,7 @@ func Test_NameOf_Package_FromFileWithLineNilSafe(t *testing.T) {
 
 func Test_NameOf_All(t *testing.T) {
 	// Act
-	full, pkg, method := codestack.NameOf.All("github.com/alimtvnetwork/core/codestack.Test_NameOf_All_Cov")
+	full, pkg, method := codestack.NameOf.All("github.com/alimtvnetwork/core-v8/codestack.Test_NameOf_All_Cov")
 
 	// Assert
 	actual := args.Map{"result": full == ""}

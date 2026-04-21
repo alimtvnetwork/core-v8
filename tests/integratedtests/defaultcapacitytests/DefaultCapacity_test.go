@@ -26,8 +26,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/defaultcapacity"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/defaultcapacity"
 )
 
 func Test_Predictive_Verification(t *testing.T) {

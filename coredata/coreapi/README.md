@@ -81,7 +81,7 @@ TypedSimpleGenericRequest[T]
 ### Generic Request/Response
 
 ```go
-import "github.com/alimtvnetwork/core/coredata/coreapi"
+import "github.com/alimtvnetwork/core-v8/coredata/coreapi"
 
 type UserInput struct {
     Name  string

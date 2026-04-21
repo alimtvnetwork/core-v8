@@ -28,7 +28,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/alimtvnetwork/core/internal/convertinternal"
+	"github.com/alimtvnetwork/core-v8/internal/convertinternal"
 )
 
 type rvUtils struct{}

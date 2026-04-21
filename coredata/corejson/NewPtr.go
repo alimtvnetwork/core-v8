@@ -25,8 +25,8 @@ package corejson
 import (
 	"encoding/json"
 
-	"github.com/alimtvnetwork/core/errcore"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/errcore"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 func NewPtr(anyItem any) *Result {

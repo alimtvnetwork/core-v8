@@ -25,7 +25,7 @@ package coretestcases
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/results"
+	"github.com/alimtvnetwork/core-v8/coretests/results"
 )
 
 // CaseNilSafe is a test case structure for systematically testing

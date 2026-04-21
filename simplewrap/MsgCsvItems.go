@@ -25,8 +25,8 @@ package simplewrap
 import (
 	"fmt"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/internal/csvinternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/internal/csvinternal"
 )
 
 func MsgCsvItems(

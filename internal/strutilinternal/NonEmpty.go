@@ -22,7 +22,7 @@
 
 package strutilinternal
 
-import "github.com/alimtvnetwork/core/constants"
+import "github.com/alimtvnetwork/core-v8/constants"
 
 func NonEmptySlice(slice []string) []string {
 	length := len(slice)

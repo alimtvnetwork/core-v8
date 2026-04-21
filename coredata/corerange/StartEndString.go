@@ -25,8 +25,8 @@ package corerange
 import (
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coreindexes"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coreindexes"
 )
 
 type StartEndString struct {

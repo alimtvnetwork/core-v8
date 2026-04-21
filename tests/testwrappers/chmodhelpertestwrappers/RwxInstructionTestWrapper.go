@@ -23,9 +23,9 @@
 package chmodhelpertestwrappers
 
 import (
-	"github.com/alimtvnetwork/core/chmodhelper"
-	"github.com/alimtvnetwork/core/chmodhelper/chmodins"
-	"github.com/alimtvnetwork/core/coretests"
+	"github.com/alimtvnetwork/core-v8/chmodhelper"
+	"github.com/alimtvnetwork/core-v8/chmodhelper/chmodins"
+	"github.com/alimtvnetwork/core-v8/coretests"
 )
 
 type RwxInstructionTestWrapper struct {

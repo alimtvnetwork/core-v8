@@ -22,7 +22,7 @@
 
 package ostype
 
-import "github.com/alimtvnetwork/core/osconsts"
+import "github.com/alimtvnetwork/core-v8/osconsts"
 
 func GetCurrentGroup() Group {
 	return GetGroup(osconsts.CurrentOperatingSystem)

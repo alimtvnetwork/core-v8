@@ -23,8 +23,8 @@
 package messages
 
 import (
-	"github.com/alimtvnetwork/core/corecomparator"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/corecomparator"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 var (

@@ -27,8 +27,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coreinterface/enuminf"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coreinterface/enuminf"
 )
 
 // KeyWithLegend

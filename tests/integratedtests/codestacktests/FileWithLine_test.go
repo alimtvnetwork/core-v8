@@ -26,8 +26,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/alimtvnetwork/core/codestack"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/codestack"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 func Test_FileWithLine_Verification(t *testing.T) {

@@ -23,7 +23,7 @@
 package chmodhelper
 
 import (
-	"github.com/alimtvnetwork/core/issetter"
+	"github.com/alimtvnetwork/core-v8/issetter"
 )
 
 type VarAttribute struct {

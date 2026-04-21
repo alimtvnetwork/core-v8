@@ -23,8 +23,8 @@
 package corevalidator
 
 import (
-	"github.com/alimtvnetwork/core/coredata/corestr"
-	"github.com/alimtvnetwork/core/enums/stringcompareas"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/enums/stringcompareas"
 )
 
 type SimpleSliceValidator struct {

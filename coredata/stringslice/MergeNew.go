@@ -23,7 +23,7 @@
 package stringslice
 
 import (
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 func MergeNew(firstSlice []string, additionalItems ...string) []string {

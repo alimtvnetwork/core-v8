@@ -23,7 +23,7 @@
 package coretaskinfo
 
 import (
-	"github.com/alimtvnetwork/core/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
 )
 
 type newInfoCreator struct {

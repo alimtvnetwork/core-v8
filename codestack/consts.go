@@ -22,7 +22,7 @@
 
 package codestack
 
-import "github.com/alimtvnetwork/core/constants"
+import "github.com/alimtvnetwork/core-v8/constants"
 
 const (
 	funcPrintFormat     = "func %s (...) line (%d):\n\r\tFile %s:%d"

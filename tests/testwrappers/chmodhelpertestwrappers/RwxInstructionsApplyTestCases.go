@@ -23,7 +23,7 @@
 package chmodhelpertestwrappers
 
 import (
-	"github.com/alimtvnetwork/core/chmodhelper/chmodins"
+	"github.com/alimtvnetwork/core-v8/chmodhelper/chmodins"
 )
 
 // RwxInstructionsApplyTestCases https://ss64.com/bash/chmod.html

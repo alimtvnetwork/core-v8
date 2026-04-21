@@ -25,8 +25,8 @@ package chmodclasstypetests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/chmodhelper/chmodclasstype"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/chmodhelper/chmodclasstype"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // ── Variant identity checks ──

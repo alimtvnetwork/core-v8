@@ -23,7 +23,7 @@
 package reqtype
 
 import (
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 func RangesNotSupportedFor(

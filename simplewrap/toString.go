@@ -22,7 +22,7 @@
 
 package simplewrap
 
-import "github.com/alimtvnetwork/core/internal/convertinternal"
+import "github.com/alimtvnetwork/core-v8/internal/convertinternal"
 
 func toString(
 	source any,

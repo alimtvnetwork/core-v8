@@ -25,7 +25,7 @@ package chmodhelper
 import (
 	"os"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 // Reference : https://ss64.com/bash/chmod.html

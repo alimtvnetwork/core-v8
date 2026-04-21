@@ -23,9 +23,9 @@
 package codestacktests
 
 import (
-	"github.com/alimtvnetwork/core/codestack"
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
-	"github.com/alimtvnetwork/core/coretests/results"
+	"github.com/alimtvnetwork/core-v8/codestack"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/coretests/results"
 )
 
 type fileWithLineType = codestack.FileWithLine

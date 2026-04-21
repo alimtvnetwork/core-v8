@@ -22,7 +22,7 @@
 
 package isany
 
-import "github.com/alimtvnetwork/core/internal/reflectinternal"
+import "github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 
 // Zero
 //

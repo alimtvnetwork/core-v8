@@ -25,8 +25,8 @@ package mutexbykeytests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/mutexbykey"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/mutexbykey"
 )
 
 // ============================================================================

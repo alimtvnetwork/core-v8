@@ -25,8 +25,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/alimtvnetwork/core/coretaskinfo"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/coretaskinfo"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 func infoCreateExample01() {

@@ -29,7 +29,7 @@ Package `iserror` provides predicate functions for checking error states, suppor
 ## Usage
 
 ```go
-import "github.com/alimtvnetwork/core/iserror"
+import "github.com/alimtvnetwork/core-v8/iserror"
 
 if iserror.Defined(err) {
     log.Fatal(err)

@@ -205,10 +205,10 @@ type SimpleTestCaseWrapper interface {
 import (
     "testing"
 
-    "github.com/alimtvnetwork/core/coretests"              // GetAssert, BaseTestCase, TypedTestCaseWrapper
-    "github.com/alimtvnetwork/core/coretests/args"          // Map, FuncWrap, Holder
-    "github.com/alimtvnetwork/core/coretests/coretestcases" // CaseV1, GenericGherkins
-    "github.com/alimtvnetwork/core/errcore"                 // AssertDiffOnMismatch
+    "github.com/alimtvnetwork/core-v8/coretests"              // GetAssert, BaseTestCase, TypedTestCaseWrapper
+    "github.com/alimtvnetwork/core-v8/coretests/args"          // Map, FuncWrap, Holder
+    "github.com/alimtvnetwork/core-v8/coretests/coretestcases" // CaseV1, GenericGherkins
+    "github.com/alimtvnetwork/core-v8/errcore"                 // AssertDiffOnMismatch
 )
 ```
 
@@ -1187,8 +1187,8 @@ tc.ShouldBeEqual(t, 0, actual)
 package coregenerictests
 
 import (
-    "github.com/alimtvnetwork/core/coretests/args"
-    "github.com/alimtvnetwork/core/coretests/coretestcases"
+    "github.com/alimtvnetwork/core-v8/coretests/args"
+    "github.com/alimtvnetwork/core-v8/coretests/coretestcases"
 )
 
 var pairFromSplitValidTestCase = coretestcases.CaseV1{
@@ -1218,9 +1218,9 @@ import (
     "fmt"
     "testing"
 
-    "github.com/alimtvnetwork/core/coredata/coregeneric"
-    "github.com/alimtvnetwork/core/coretests/args"
-    "github.com/alimtvnetwork/core/errcore"
+    "github.com/alimtvnetwork/core-v8/coredata/coregeneric"
+    "github.com/alimtvnetwork/core-v8/coretests/args"
+    "github.com/alimtvnetwork/core-v8/errcore"
 )
 
 func Test_PairFromSplit_Valid(t *testing.T) {

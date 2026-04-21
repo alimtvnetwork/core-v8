@@ -23,8 +23,8 @@
 package args
 
 import (
-	"github.com/alimtvnetwork/core/coredata/corestr"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 // Six holds six typed positional arguments plus an optional Expect field.

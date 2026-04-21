@@ -25,7 +25,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 func errTypePrintTest01() {

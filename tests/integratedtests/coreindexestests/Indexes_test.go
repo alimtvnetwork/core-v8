@@ -25,8 +25,8 @@ package coreindexestests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coreindexes"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coreindexes"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 func Test_HasIndex_Verification(t *testing.T) {

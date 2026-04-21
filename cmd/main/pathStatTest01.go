@@ -25,7 +25,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/alimtvnetwork/core/chmodhelper"
+	"github.com/alimtvnetwork/core-v8/chmodhelper"
 )
 
 func pathStatTest01() {

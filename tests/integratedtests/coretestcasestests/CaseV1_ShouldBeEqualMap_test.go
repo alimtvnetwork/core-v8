@@ -26,8 +26,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
 )
 
 // ── CaseV1.ShouldBeEqualMap — mismatch branch ──

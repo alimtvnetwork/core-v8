@@ -22,7 +22,7 @@
 
 package stringslice
 
-import "github.com/alimtvnetwork/core/constants"
+import "github.com/alimtvnetwork/core-v8/constants"
 
 func LastPtr(slice []string) string {
 	return slice[len(slice)-constants.One]

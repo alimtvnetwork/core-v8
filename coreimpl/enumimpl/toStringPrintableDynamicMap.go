@@ -26,7 +26,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 func toStringPrintableDynamicMap(diffMap DynamicMap) string {

@@ -27,7 +27,7 @@ import (
 )
 
 func TestGetFunc_All(t *testing.T) {
-	full, pkg, method := GetFunc.All("github.com/alimtvnetwork/core/codestack.TestFunc")
+	full, pkg, method := GetFunc.All("github.com/alimtvnetwork/core-v8/codestack.TestFunc")
 	if full == "" || pkg == "" || method == "" {
 		t.Fatal("expected non-empty")
 	}
@@ -119,7 +119,7 @@ func TestGetFunc_FuncDirectInvokeName(t *testing.T) {
 
 func TestGetFunc_FuncDirectInvokeNameUsingFullName(t *testing.T) {
 	name := GetFunc.FuncDirectInvokeNameUsingFullName(
-		"github.com/alimtvnetwork/core/codestack.TestFunc",
+		"github.com/alimtvnetwork/core-v8/codestack.TestFunc",
 	)
 	if name == "" {
 		t.Fatal("expected non-empty")
@@ -212,7 +212,7 @@ func TestGetFunc_GetPkgPath(t *testing.T) {
 }
 
 func TestGetFunc_GetPkgPathFullName(t *testing.T) {
-	p := GetFunc.GetPkgPathFullName("github.com/alimtvnetwork/core/codestack.TestFunc")
+	p := GetFunc.GetPkgPathFullName("github.com/alimtvnetwork/core-v8/codestack.TestFunc")
 	if p == "" {
 		t.Fatal("expected non-empty")
 	}

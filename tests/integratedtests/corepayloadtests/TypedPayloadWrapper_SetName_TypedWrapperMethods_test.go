@@ -25,8 +25,8 @@ package corepayloadtests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/corepayload"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coredata/corepayload"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // testUserCov23, makeTypedWrapperCov23, makeCollectionCov23 are declared in Coverage23_TypedFuncs_test.go

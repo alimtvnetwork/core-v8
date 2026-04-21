@@ -23,7 +23,7 @@
 package enumimpl
 
 import (
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 func JoinPrependUsingDot(

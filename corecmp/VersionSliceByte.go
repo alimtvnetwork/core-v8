@@ -22,7 +22,7 @@
 
 package corecmp
 
-import "github.com/alimtvnetwork/core/corecomparator"
+import "github.com/alimtvnetwork/core-v8/corecomparator"
 
 func VersionSliceByte(leftVersions, rightVersions []byte) corecomparator.Compare {
 	if leftVersions == nil && rightVersions == nil {

@@ -22,7 +22,7 @@
 
 package coreinterface
 
-import "github.com/alimtvnetwork/core/coredata/coredynamic"
+import "github.com/alimtvnetwork/core-v8/coredata/coredynamic"
 
 type DynamicStructMethodInvoker interface {
 	DynamicMethodInvoke(structInput any, args ...any) *coredynamic.SimpleResult

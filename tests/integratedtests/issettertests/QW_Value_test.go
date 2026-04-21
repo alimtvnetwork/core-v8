@@ -25,7 +25,7 @@ package issettertests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/issetter"
+	"github.com/alimtvnetwork/core-v8/issetter"
 )
 
 func Test_QW_Value_OnlySupportedErr_WithNames(t *testing.T) {

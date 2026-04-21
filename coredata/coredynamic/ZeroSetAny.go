@@ -25,7 +25,7 @@ package coredynamic
 import (
 	"reflect"
 
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 // ZeroSetAny

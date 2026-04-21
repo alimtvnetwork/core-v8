@@ -25,7 +25,7 @@ package enumimpltests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coreimpl/enumimpl"
+	"github.com/alimtvnetwork/core-v8/coreimpl/enumimpl"
 	"github.com/smartystreets/goconvey/convey"
 )
 

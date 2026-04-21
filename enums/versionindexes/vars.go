@@ -23,8 +23,8 @@
 package versionindexes
 
 import (
-	"github.com/alimtvnetwork/core/coreimpl/enumimpl"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/coreimpl/enumimpl"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 var (

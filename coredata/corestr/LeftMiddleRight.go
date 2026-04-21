@@ -25,8 +25,8 @@ package corestr
 import (
 	"strings"
 
-	"github.com/alimtvnetwork/core/coredata/coregeneric"
-	"github.com/alimtvnetwork/core/internal/strutilinternal"
+	"github.com/alimtvnetwork/core-v8/coredata/coregeneric"
+	"github.com/alimtvnetwork/core-v8/internal/strutilinternal"
 )
 
 // LeftMiddleRight is a string-specialized three-value container.

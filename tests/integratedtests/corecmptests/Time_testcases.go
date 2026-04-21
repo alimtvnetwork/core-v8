@@ -25,8 +25,8 @@ package corecmptests
 import (
 	"time"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
 )
 
 var baseTime = time.Date(2024, 1, 15, 10, 30, 0, 0, time.UTC)

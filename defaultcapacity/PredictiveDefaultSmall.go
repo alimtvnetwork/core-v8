@@ -23,8 +23,8 @@
 package defaultcapacity
 
 import (
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/constants/percentconst"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/constants/percentconst"
 )
 
 func PredictiveDefaultSmall(possibleLen int) int {

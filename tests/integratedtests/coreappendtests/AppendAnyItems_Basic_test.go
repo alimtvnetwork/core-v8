@@ -25,8 +25,8 @@ package coreappendtests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coreappend"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coreappend"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // ── AppendAnyItemsToStringSkipOnNil ──

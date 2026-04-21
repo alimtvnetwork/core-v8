@@ -25,7 +25,7 @@ package coredynamic
 import (
 	"fmt"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 // --- Conditional Add ---

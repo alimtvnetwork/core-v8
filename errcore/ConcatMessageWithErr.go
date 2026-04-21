@@ -25,7 +25,7 @@ package errcore
 import (
 	"fmt"
 
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 // ConcatMessageWithErr wraps an error with an additional message using fmt.Errorf and %w.

@@ -22,7 +22,7 @@
 
 package entityinf
 
-import "github.com/alimtvnetwork/core/internal/internalinterface"
+import "github.com/alimtvnetwork/core-v8/internal/internalinterface"
 
 type RecordEntityDefiner interface {
 	BaseRecordEntityDefiner

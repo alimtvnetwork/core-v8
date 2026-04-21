@@ -27,7 +27,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/alimtvnetwork/core/chmodhelper/chmodins"
+	"github.com/alimtvnetwork/core-v8/chmodhelper/chmodins"
 )
 
 // ══════════════════════════════════════════════════════════════════════════════

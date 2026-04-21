@@ -25,7 +25,7 @@ Standalone utility that extracts uncovered line ranges for a single source file 
 | Parameter | Required | Description |
 |-----------|----------|-------------|
 | `CoverProfile` | Yes | Path to `coverage.out` |
-| `SourceFile` | Yes | Full module-qualified file path (e.g., `github.com/alimtvnetwork/core/errcore/ErrorNew.go`) |
+| `SourceFile` | Yes | Full module-qualified file path (e.g., `github.com/alimtvnetwork/core-v8/errcore/ErrorNew.go`) |
 
 ### Get-FunctionCoverage.ps1
 
@@ -101,7 +101,7 @@ Write tests in tests/integratedtests/{pkg}tests/ using the AAA pattern with args
 # Get uncovered lines for a specific file
 ./scripts/coverage/Get-UncoveredLines.ps1 `
   -CoverProfile data/coverage/coverage.out `
-  -SourceFile "github.com/alimtvnetwork/core/errcore/ErrorNew.go"
+  -SourceFile "github.com/alimtvnetwork/core-v8/errcore/ErrorNew.go"
 
 # Get all functions below 80% coverage
 $funcLines = go tool cover -func=data/coverage/coverage.out

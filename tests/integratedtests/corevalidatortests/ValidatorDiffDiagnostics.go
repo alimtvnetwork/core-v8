@@ -26,7 +26,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/alimtvnetwork/core/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
 )
 
 // ValidatorDiffDiagnostics provides reusable diff-printing

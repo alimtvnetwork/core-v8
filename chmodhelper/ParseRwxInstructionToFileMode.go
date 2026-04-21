@@ -25,7 +25,7 @@ package chmodhelper
 import (
 	"os"
 
-	"github.com/alimtvnetwork/core/chmodhelper/chmodins"
+	"github.com/alimtvnetwork/core-v8/chmodhelper/chmodins"
 )
 
 func ParseRwxOwnerGroupOtherToFileModeMust(

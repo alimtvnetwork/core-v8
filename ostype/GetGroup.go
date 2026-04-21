@@ -23,7 +23,7 @@
 package ostype
 
 import (
-	"github.com/alimtvnetwork/core/osconsts"
+	"github.com/alimtvnetwork/core-v8/osconsts"
 )
 
 // GetGroup rawRuntimeGoos = runtime.GOOS

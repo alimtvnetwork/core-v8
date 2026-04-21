@@ -27,8 +27,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // ── Migrated from , 08, 09, 10, 12, 17 — Collections & MapResults ──

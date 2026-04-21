@@ -23,8 +23,8 @@
 package chmodhelper
 
 import (
-	"github.com/alimtvnetwork/core/chmodhelper/chmodins"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/chmodhelper/chmodins"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 // RwxPartialToInstructionExecutor

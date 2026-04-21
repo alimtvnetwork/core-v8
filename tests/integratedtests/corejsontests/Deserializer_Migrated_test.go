@@ -26,8 +26,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // ── Migrated from Deserializer_test.go ──

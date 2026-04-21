@@ -23,7 +23,7 @@
 package errcore
 
 import (
-	"github.com/alimtvnetwork/core/internal/strutilinternal"
+	"github.com/alimtvnetwork/core-v8/internal/strutilinternal"
 )
 
 func MeaningfulErrorWithData(

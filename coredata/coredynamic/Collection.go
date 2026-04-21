@@ -29,9 +29,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/defaultcapacity"
-	"github.com/alimtvnetwork/core/pagingutil"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/defaultcapacity"
+	"github.com/alimtvnetwork/core-v8/pagingutil"
 )
 
 // Collection is a generic, type-safe collection that replaces

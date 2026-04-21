@@ -28,8 +28,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/reflectcore/reflectmodel"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/reflectcore/reflectmodel"
 )
 
 // ══════════════════════════════════════════════════════════════════════════════

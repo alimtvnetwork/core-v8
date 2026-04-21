@@ -23,8 +23,8 @@
 package chmodhelpertests
 
 import (
-	"github.com/alimtvnetwork/core/chmodhelper/chmodins"
-	"github.com/alimtvnetwork/core/tests/testwrappers/chmodhelpertestwrappers"
+	"github.com/alimtvnetwork/core-v8/chmodhelper/chmodins"
+	"github.com/alimtvnetwork/core-v8/tests/testwrappers/chmodhelpertestwrappers"
 )
 
 // rwxInstructionsUnixApplyRecursivelyTestCase https://ss64.com/bash/chmod.html

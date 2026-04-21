@@ -25,7 +25,7 @@ package corecmp
 import (
 	"time"
 
-	"github.com/alimtvnetwork/core/corecomparator"
+	"github.com/alimtvnetwork/core-v8/corecomparator"
 )
 
 func Time(left, right time.Time) corecomparator.Compare {

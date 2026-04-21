@@ -28,13 +28,13 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata"
-	"github.com/alimtvnetwork/core/coreindexes"
-	"github.com/alimtvnetwork/core/defaulterr"
-	"github.com/alimtvnetwork/core/errcore"
-	"github.com/alimtvnetwork/core/internal/csvinternal"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata"
+	"github.com/alimtvnetwork/core-v8/coreindexes"
+	"github.com/alimtvnetwork/core-v8/defaulterr"
+	"github.com/alimtvnetwork/core-v8/errcore"
+	"github.com/alimtvnetwork/core-v8/internal/csvinternal"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 type Result struct {

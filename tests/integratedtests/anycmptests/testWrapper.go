@@ -23,7 +23,7 @@
 package anycmptests
 
 import (
-	"github.com/alimtvnetwork/core/tests/testwrappers/stringstestwrapper"
+	"github.com/alimtvnetwork/core-v8/tests/testwrappers/stringstestwrapper"
 )
 
 type testWrapper = stringstestwrapper.StringsTestWrapper

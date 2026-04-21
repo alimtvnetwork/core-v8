@@ -22,7 +22,7 @@
 
 package coreinstruction
 
-import "github.com/alimtvnetwork/core/coredata/stringslice"
+import "github.com/alimtvnetwork/core-v8/coredata/stringslice"
 
 type FlatSpecification struct {
 	Id       string   `json:"Id"`

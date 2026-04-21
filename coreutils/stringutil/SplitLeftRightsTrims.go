@@ -22,7 +22,7 @@
 
 package stringutil
 
-import "github.com/alimtvnetwork/core/coredata/corestr"
+import "github.com/alimtvnetwork/core-v8/coredata/corestr"
 
 func SplitLeftRightsTrims(separator string, lines ...string) []*corestr.LeftRight {
 	length := len(lines)

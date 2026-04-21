@@ -28,8 +28,8 @@ import (
 	"reflect"
 	"strconv"
 
-	"github.com/alimtvnetwork/core/coreinterface/enuminf"
-	"github.com/alimtvnetwork/core/internal/csvinternal"
+	"github.com/alimtvnetwork/core-v8/coreinterface/enuminf"
+	"github.com/alimtvnetwork/core-v8/internal/csvinternal"
 )
 
 type Variant byte

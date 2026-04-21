@@ -26,7 +26,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/alimtvnetwork/core/internal/trydo"
+	"github.com/alimtvnetwork/core-v8/internal/trydo"
 	"github.com/smarty/assertions/should"
 	"github.com/smartystreets/goconvey/convey"
 )

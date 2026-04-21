@@ -26,7 +26,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/alimtvnetwork/core/coredata/stringslice"
+	"github.com/alimtvnetwork/core-v8/coredata/stringslice"
 )
 
 func SplitByEachWordTrimmedNoSpace(

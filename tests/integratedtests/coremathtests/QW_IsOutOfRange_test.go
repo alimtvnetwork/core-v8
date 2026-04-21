@@ -25,8 +25,8 @@ package coremathtests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coremath"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coremath"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 func Test_QW_IsOutOfRange_Integer_ToUnsignedInt32(t *testing.T) {

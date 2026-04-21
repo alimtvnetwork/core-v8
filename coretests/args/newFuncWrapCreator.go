@@ -25,9 +25,9 @@ package args
 import (
 	"reflect"
 
-	"github.com/alimtvnetwork/core/errcore"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
-	"github.com/alimtvnetwork/core/iserror"
+	"github.com/alimtvnetwork/core-v8/errcore"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/iserror"
 )
 
 type newFuncWrapCreator struct{}

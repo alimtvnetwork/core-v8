@@ -27,7 +27,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/alimtvnetwork/core/chmodhelper"
+	"github.com/alimtvnetwork/core-v8/chmodhelper"
 	"github.com/smarty/assertions/should"
 	"github.com/smartystreets/goconvey/convey"
 )

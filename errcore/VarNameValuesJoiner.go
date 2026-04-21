@@ -25,7 +25,7 @@ package errcore
 import (
 	"strings"
 
-	"github.com/alimtvnetwork/core/namevalue"
+	"github.com/alimtvnetwork/core-v8/namevalue"
 )
 
 func VarNameValuesJoiner(

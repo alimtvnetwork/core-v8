@@ -26,9 +26,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/defaulterr"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/defaulterr"
 )
 
 // TypedDynamic is a generic, strongly-typed wrapper around a value of type T.

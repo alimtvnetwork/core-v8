@@ -22,7 +22,7 @@
 
 package corejson
 
-import "github.com/alimtvnetwork/core/errcore"
+import "github.com/alimtvnetwork/core-v8/errcore"
 
 type deserializeFromBytesTo struct{}
 

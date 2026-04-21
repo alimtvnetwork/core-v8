@@ -22,7 +22,7 @@
 
 package coreversion
 
-import "github.com/alimtvnetwork/core/corecomparator"
+import "github.com/alimtvnetwork/core-v8/corecomparator"
 
 func hasDeductUsingNilNess(
 	left *Version, right *Version,

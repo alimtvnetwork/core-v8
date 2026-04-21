@@ -25,11 +25,11 @@ package corepayload
 import (
 	"bytes"
 
-	"github.com/alimtvnetwork/core/coredata/coredynamic"
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coredata/corestr"
-	"github.com/alimtvnetwork/core/coreinstruction"
-	"github.com/alimtvnetwork/core/coreinterface/errcoreinf"
+	"github.com/alimtvnetwork/core-v8/coredata/coredynamic"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coreinstruction"
+	"github.com/alimtvnetwork/core-v8/coreinterface/errcoreinf"
 )
 
 // Attributes holds metadata, key-value pairs, error state, and dynamic payloads

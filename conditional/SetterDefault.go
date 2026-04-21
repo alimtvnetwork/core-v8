@@ -22,7 +22,7 @@
 
 package conditional
 
-import "github.com/alimtvnetwork/core/issetter"
+import "github.com/alimtvnetwork/core-v8/issetter"
 
 func SetterDefault(
 	currentSetter issetter.Value,

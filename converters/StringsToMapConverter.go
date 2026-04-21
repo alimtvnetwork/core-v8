@@ -23,7 +23,7 @@
 package converters
 
 import (
-	"github.com/alimtvnetwork/core/internal/strutilinternal"
+	"github.com/alimtvnetwork/core-v8/internal/strutilinternal"
 )
 
 type StringsToMapConverter []string

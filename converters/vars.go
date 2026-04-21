@@ -23,8 +23,8 @@
 package converters
 
 import (
-	"github.com/alimtvnetwork/core/internal/convertinternal"
-	"github.com/alimtvnetwork/core/internal/jsoninternal"
+	"github.com/alimtvnetwork/core-v8/internal/convertinternal"
+	"github.com/alimtvnetwork/core-v8/internal/jsoninternal"
 )
 
 var (

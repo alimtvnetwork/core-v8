@@ -26,7 +26,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/alimtvnetwork/core/regexnew"
+	"github.com/alimtvnetwork/core-v8/regexnew"
 )
 
 func lazyRegExTester01() {

@@ -22,7 +22,7 @@
 
 package corefuncs
 
-import "github.com/alimtvnetwork/core/errcore"
+import "github.com/alimtvnetwork/core-v8/errcore"
 
 // InActionReturnsErrFuncWrapperOf is the generic version of an input-action-error wrapper.
 //

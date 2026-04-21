@@ -23,10 +23,10 @@
 package coreinstructiontests
 
 import (
-	"github.com/alimtvnetwork/core/coreinstruction"
+	"github.com/alimtvnetwork/core-v8/coreinstruction"
 	"regexp"
 	"testing"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // ══════════════════════════════════════════════════════════════════════════════

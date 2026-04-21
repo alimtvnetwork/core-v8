@@ -25,7 +25,7 @@ package stringslice
 import (
 	"regexp"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 func RegexTrimmedSplitNonEmptyAll(

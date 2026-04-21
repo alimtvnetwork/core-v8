@@ -22,7 +22,7 @@
 
 package chmodhelper
 
-import "github.com/alimtvnetwork/core/internal/osconstsinternal"
+import "github.com/alimtvnetwork/core-v8/internal/osconstsinternal"
 
 type tempDirGetter struct{}
 

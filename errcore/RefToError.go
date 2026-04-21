@@ -26,7 +26,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 func RefToError(reference any) error {

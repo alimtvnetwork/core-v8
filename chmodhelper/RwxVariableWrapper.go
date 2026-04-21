@@ -25,9 +25,9 @@ package chmodhelper
 import (
 	"os"
 
-	"github.com/alimtvnetwork/core/chmodhelper/chmodins"
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/chmodhelper/chmodins"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 type RwxVariableWrapper struct {

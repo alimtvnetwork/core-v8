@@ -23,7 +23,7 @@ coreunique/
 ## Usage Examples
 
 ```go
-import "github.com/alimtvnetwork/core/coreunique/intunique"
+import "github.com/alimtvnetwork/core-v8/coreunique/intunique"
 
 nums := []int{1, 2, 2, 3, 3, 3}
 

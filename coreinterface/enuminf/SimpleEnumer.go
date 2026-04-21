@@ -22,7 +22,7 @@
 
 package enuminf
 
-import "github.com/alimtvnetwork/core/internal/internalinterface"
+import "github.com/alimtvnetwork/core-v8/internal/internalinterface"
 
 type SimpleEnumer interface {
 	internalinterface.SimpleEnumer

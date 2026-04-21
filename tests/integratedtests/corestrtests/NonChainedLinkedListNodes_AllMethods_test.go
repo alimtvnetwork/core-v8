@@ -28,8 +28,8 @@ package corestrtests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/corestr"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 func Test_NonChainedLinkedListNodes_NewNonChainedLinkedListNodes_creates_with_capacity_FromS20(t *testing.T) {

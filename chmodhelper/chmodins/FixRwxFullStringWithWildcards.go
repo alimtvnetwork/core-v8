@@ -23,8 +23,8 @@
 package chmodins
 
 import (
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/internal/strutilinternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/internal/strutilinternal"
 )
 
 // FixRwxFullStringWithWildcards can be less than 10 and can be

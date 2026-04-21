@@ -27,8 +27,8 @@ import (
 	"testing"
 	"unsafe"
 
-	"github.com/alimtvnetwork/core/coredata/stringslice"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coredata/stringslice"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // =============================================================================

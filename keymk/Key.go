@@ -23,9 +23,9 @@
 package keymk
 
 import (
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/stringslice"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/stringslice"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 type Key struct {

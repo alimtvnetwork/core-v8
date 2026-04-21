@@ -25,9 +25,9 @@ package chmodhelpertests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/chmodhelper"
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/chmodhelper"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 func Test_PartialRwxVerify_Verification(t *testing.T) {

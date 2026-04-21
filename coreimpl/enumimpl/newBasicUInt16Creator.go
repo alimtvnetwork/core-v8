@@ -26,7 +26,7 @@ import (
 	"reflect"
 	"strconv"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 type newBasicUInt16Creator struct{}

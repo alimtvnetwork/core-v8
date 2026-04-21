@@ -28,8 +28,8 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/alimtvnetwork/core/chmodhelper/chmodclasstype"
-	"github.com/alimtvnetwork/core/chmodhelper/chmodins"
+	"github.com/alimtvnetwork/core-v8/chmodhelper/chmodclasstype"
+	"github.com/alimtvnetwork/core-v8/chmodhelper/chmodins"
 )
 
 // ══════════════════════════════════════════════════════════════════════════════

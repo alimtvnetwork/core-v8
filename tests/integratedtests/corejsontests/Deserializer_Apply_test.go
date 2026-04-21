@@ -26,9 +26,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coreutils/stringutil"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coreutils/stringutil"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 func Test_FromTo_Verification(t *testing.T) {

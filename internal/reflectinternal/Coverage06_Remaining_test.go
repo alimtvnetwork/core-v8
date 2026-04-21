@@ -26,7 +26,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/alimtvnetwork/core/reflectcore/reflectmodel"
+	"github.com/alimtvnetwork/core-v8/reflectcore/reflectmodel"
 )
 
 // ======= reflectGetter =======
@@ -366,7 +366,7 @@ func TestUtils_PkgNameOnly(t *testing.T) {
 }
 
 func TestUtils_FullNameToPkgName(t *testing.T) {
-	p := Utils.FullNameToPkgName("github.com/alimtvnetwork/core/codestack.TestFunc")
+	p := Utils.FullNameToPkgName("github.com/alimtvnetwork/core-v8/codestack.TestFunc")
 	_ = p
 }
 

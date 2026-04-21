@@ -25,8 +25,8 @@ package namevaluetests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/namevalue"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/namevalue"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // Cover: Instance methods, Collection methods not hit by existing tests

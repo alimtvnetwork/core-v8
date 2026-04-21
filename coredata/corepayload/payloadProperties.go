@@ -23,10 +23,10 @@
 package corepayload
 
 import (
-	"github.com/alimtvnetwork/core/coredata/coredynamic"
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coreinterface/errcoreinf"
-	"github.com/alimtvnetwork/core/coreinterface/payloadinf"
+	"github.com/alimtvnetwork/core-v8/coredata/coredynamic"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coreinterface/errcoreinf"
+	"github.com/alimtvnetwork/core-v8/coreinterface/payloadinf"
 )
 
 type payloadProperties struct {

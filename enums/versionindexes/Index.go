@@ -23,9 +23,9 @@
 package versionindexes
 
 import (
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coreinterface/enuminf"
-	"github.com/alimtvnetwork/core/defaulterr"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coreinterface/enuminf"
+	"github.com/alimtvnetwork/core-v8/defaulterr"
 )
 
 type Index byte

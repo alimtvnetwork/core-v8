@@ -26,7 +26,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 func AllNameValues(nameStrings []string, anyEnumVal any) []string {

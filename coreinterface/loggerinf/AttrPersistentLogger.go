@@ -23,9 +23,9 @@
 package loggerinf
 
 import (
-	"github.com/alimtvnetwork/core/coreinterface/enuminf"
-	"github.com/alimtvnetwork/core/coreinterface/pathextendinf"
-	"github.com/alimtvnetwork/core/internal/internalinterface"
+	"github.com/alimtvnetwork/core-v8/coreinterface/enuminf"
+	"github.com/alimtvnetwork/core-v8/coreinterface/pathextendinf"
+	"github.com/alimtvnetwork/core-v8/internal/internalinterface"
 )
 
 type AttrPersistentLogger interface {

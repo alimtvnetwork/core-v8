@@ -23,7 +23,7 @@
 package stringutil
 
 import (
-	"github.com/alimtvnetwork/core/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
 )
 
 func SplitLeftRightTypeTrimmed(s, separator string) *corestr.LeftRight {

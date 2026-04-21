@@ -22,7 +22,7 @@
 
 package stringutil
 
-import "github.com/alimtvnetwork/core/constants"
+import "github.com/alimtvnetwork/core-v8/constants"
 
 func IsNotEmpty(str string) bool {
 	return str != constants.EmptyString

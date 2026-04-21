@@ -25,16 +25,16 @@ package corepayload
 import (
 	"bytes"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/converters"
-	"github.com/alimtvnetwork/core/coredata/coredynamic"
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coreinterface/entityinf"
-	"github.com/alimtvnetwork/core/coreinterface/enuminf"
-	"github.com/alimtvnetwork/core/coreinterface/errcoreinf"
-	"github.com/alimtvnetwork/core/coreinterface/payloadinf"
-	"github.com/alimtvnetwork/core/defaulterr"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/converters"
+	"github.com/alimtvnetwork/core-v8/coredata/coredynamic"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coreinterface/entityinf"
+	"github.com/alimtvnetwork/core-v8/coreinterface/enuminf"
+	"github.com/alimtvnetwork/core-v8/coreinterface/errcoreinf"
+	"github.com/alimtvnetwork/core-v8/coreinterface/payloadinf"
+	"github.com/alimtvnetwork/core-v8/defaulterr"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 type PayloadWrapper struct {

@@ -22,7 +22,7 @@
 
 package corecmp
 
-import "github.com/alimtvnetwork/core/corecomparator"
+import "github.com/alimtvnetwork/core-v8/corecomparator"
 
 func BytePtr(left, right *byte) corecomparator.Compare {
 	if left == nil && right == nil {

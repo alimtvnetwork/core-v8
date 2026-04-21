@@ -23,8 +23,8 @@
 package corepayload
 
 import (
-	"github.com/alimtvnetwork/core/coredata/coredynamic"
-	"github.com/alimtvnetwork/core/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coredata/coredynamic"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
 )
 
 type emptyCreator struct{}

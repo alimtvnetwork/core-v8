@@ -26,7 +26,7 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 func ToUint32Default(
@@ -39,7 +39,7 @@ func ToUint32Default(
 	}
 
 	// fix https://t.ly/6aoW,
-	// https://github.com/alimtvnetwork/core/-/issues/81
+	// https://github.com/alimtvnetwork/core-v8/-/issues/81
 	// use MaxInt32 instead of uint32Max
 	if toInt >= 0 && toInt <= math.MaxInt32 {
 		return uint32(toInt)

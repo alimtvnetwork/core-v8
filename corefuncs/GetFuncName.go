@@ -22,7 +22,7 @@
 
 package corefuncs
 
-import "github.com/alimtvnetwork/core/internal/reflectinternal"
+import "github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 
 func GetFuncName(i any) string {
 	return reflectinternal.GetFunc.NameOnly(i)

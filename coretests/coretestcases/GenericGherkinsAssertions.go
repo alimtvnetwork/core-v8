@@ -25,7 +25,7 @@ package coretestcases
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 // ShouldBeEqual asserts that actLines match ExpectedLines using

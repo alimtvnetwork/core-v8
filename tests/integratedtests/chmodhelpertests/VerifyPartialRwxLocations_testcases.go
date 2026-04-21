@@ -23,8 +23,8 @@
 package chmodhelpertests
 
 import (
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
-	"github.com/alimtvnetwork/core/tests/testwrappers/chmodhelpertestwrappers"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/tests/testwrappers/chmodhelpertestwrappers"
 )
 
 var verifyPartialRwxLocationsTestCases = []coretestcases.CaseV1{

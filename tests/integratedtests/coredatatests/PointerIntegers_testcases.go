@@ -23,8 +23,8 @@
 package coredatatests
 
 import (
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
 )
 
 var pointerIntegersLenTestCases = []coretestcases.CaseV1{

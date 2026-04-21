@@ -127,7 +127,7 @@ Pre-configured: `FullLegends`, `FullCategoryLegends`, `FullEventLegends`, `Short
 ## Usage
 
 ```go
-import "github.com/alimtvnetwork/core/keymk"
+import "github.com/alimtvnetwork/core-v8/keymk"
 
 // Simple hyphen key
 key := keymk.NewKey.Default("app", "users", "create")

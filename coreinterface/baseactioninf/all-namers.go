@@ -22,7 +22,7 @@
 
 package baseactioninf
 
-import "github.com/alimtvnetwork/core/coreinterface/enuminf"
+import "github.com/alimtvnetwork/core-v8/coreinterface/enuminf"
 
 type CategoryTypeNamer interface {
 	TypeName() enuminf.BasicEnumer

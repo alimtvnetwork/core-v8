@@ -22,7 +22,7 @@
 
 package pathextendinf
 
-import "github.com/alimtvnetwork/core/internal/internalinterface/internalpathextender"
+import "github.com/alimtvnetwork/core-v8/internal/internalinterface/internalpathextender"
 
 type PathRequestTyper interface {
 	internalpathextender.PathRequestTyper

@@ -26,8 +26,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/coreapi"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coredata/coreapi"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 func Test_PageRequest_IsPageSizeEmpty(t *testing.T) {

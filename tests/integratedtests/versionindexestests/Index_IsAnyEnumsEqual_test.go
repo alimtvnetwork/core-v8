@@ -25,8 +25,8 @@ package versionindexestests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/enums/versionindexes"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/enums/versionindexes"
 )
 
 func Test_Index_IsAnyEnumsEqual_NoMatch(t *testing.T) {

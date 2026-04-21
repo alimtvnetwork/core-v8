@@ -28,7 +28,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 type StringOnce struct {

@@ -28,10 +28,10 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coreindexes"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coreindexes"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 type LinkedCollections struct {

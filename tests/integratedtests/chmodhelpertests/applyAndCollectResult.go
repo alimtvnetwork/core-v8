@@ -27,7 +27,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/alimtvnetwork/core/tests/testwrappers/chmodhelpertestwrappers"
+	"github.com/alimtvnetwork/core-v8/tests/testwrappers/chmodhelpertestwrappers"
 )
 
 func applyAndCollectResult(

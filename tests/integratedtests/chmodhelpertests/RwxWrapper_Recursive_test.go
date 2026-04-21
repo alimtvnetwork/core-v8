@@ -28,7 +28,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // ── RwxWrapper.LinuxApplyRecursive valid dir (line 328-345) ──

@@ -26,7 +26,7 @@ import (
 	"regexp"
 	"sync"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 var (

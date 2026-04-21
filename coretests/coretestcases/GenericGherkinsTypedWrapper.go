@@ -22,7 +22,7 @@
 
 package coretestcases
 
-import "github.com/alimtvnetwork/core/coretests"
+import "github.com/alimtvnetwork/core-v8/coretests"
 
 // CaseTitle returns the test case title (Title or When fallback).
 //

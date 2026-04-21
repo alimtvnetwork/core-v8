@@ -25,9 +25,9 @@ package versionindexestests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/enums/versionindexes"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/enums/versionindexes"
 )
 
 func Test_QW_Index_JsonParseSelfInject_NilResult(t *testing.T) {

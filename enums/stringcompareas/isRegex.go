@@ -22,7 +22,7 @@
 
 package stringcompareas
 
-import "github.com/alimtvnetwork/core/regexnew"
+import "github.com/alimtvnetwork/core-v8/regexnew"
 
 // isRegexFunc no use of isCaseSensitive
 //

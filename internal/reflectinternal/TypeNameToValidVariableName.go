@@ -26,7 +26,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/alimtvnetwork/core/coredata/stringslice"
+	"github.com/alimtvnetwork/core-v8/coredata/stringslice"
 )
 
 func TypeNameToValidVariableName(currentTypeName string) (validVarName string) {

@@ -23,8 +23,8 @@
 package corepayload
 
 import (
-	"github.com/alimtvnetwork/core/coredata/corestr"
-	"github.com/alimtvnetwork/core/defaultcapacity"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/defaultcapacity"
 )
 
 // PayloadsCollectionFilter.go — Filter and search methods extracted from PayloadsCollection.go

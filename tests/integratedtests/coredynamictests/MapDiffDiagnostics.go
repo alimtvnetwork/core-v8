@@ -25,8 +25,8 @@ package coredynamictests
 import (
 	"fmt"
 
-	"github.com/alimtvnetwork/core/coredata/coredynamic"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/coredata/coredynamic"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 // MapDiffDiagnostics provides reusable diff-printing

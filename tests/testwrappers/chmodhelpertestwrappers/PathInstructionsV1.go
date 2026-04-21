@@ -23,7 +23,7 @@
 package chmodhelpertestwrappers
 
 import (
-	"github.com/alimtvnetwork/core/chmodhelper"
+	"github.com/alimtvnetwork/core-v8/chmodhelper"
 )
 
 var PathInstructionsV1 = []chmodhelper.DirFilesWithRwxPermission{

@@ -22,7 +22,7 @@
 
 package chmodhelper
 
-import "github.com/alimtvnetwork/core/errcore"
+import "github.com/alimtvnetwork/core-v8/errcore"
 
 func GetRwxLengthError(rwx string) error {
 	if len(rwx) != SingleRwxLength {

@@ -26,8 +26,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/alimtvnetwork/core/codestack"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/codestack"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // ── newCreator ──
@@ -419,7 +419,7 @@ func Test_CurrentNameOf_Package(t *testing.T) {
 
 func Test_CurrentNameOf_CurrentFuncFullPath(t *testing.T) {
 	// Arrange
-	name := codestack.NameOf.CurrentFuncFullPath("github.com/alimtvnetwork/core/tests/integratedtests/codestacktests.Test_Cov4_CurrentNameOf_CurrentFuncFullPath")
+	name := codestack.NameOf.CurrentFuncFullPath("github.com/alimtvnetwork/core-v8/tests/integratedtests/codestacktests.Test_Cov4_CurrentNameOf_CurrentFuncFullPath")
 
 	// Act
 	actual := args.Map{"hasContent": len(name) > 0}

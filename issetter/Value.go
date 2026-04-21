@@ -28,11 +28,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coreimpl/enumimpl/enumtype"
-	"github.com/alimtvnetwork/core/coreinterface/enuminf"
-	"github.com/alimtvnetwork/core/defaulterr"
-	"github.com/alimtvnetwork/core/internal/csvinternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coreimpl/enumimpl/enumtype"
+	"github.com/alimtvnetwork/core-v8/coreinterface/enuminf"
+	"github.com/alimtvnetwork/core-v8/defaulterr"
+	"github.com/alimtvnetwork/core-v8/internal/csvinternal"
 )
 
 // Value

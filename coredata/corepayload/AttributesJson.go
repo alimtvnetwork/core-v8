@@ -23,9 +23,9 @@
 package corepayload
 
 import (
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coreinterface/payloadinf"
-	"github.com/alimtvnetwork/core/defaulterr"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coreinterface/payloadinf"
+	"github.com/alimtvnetwork/core-v8/defaulterr"
 )
 
 // AttributesJson.go — JSON serialization, deserialization, and string methods extracted from Attributes.go

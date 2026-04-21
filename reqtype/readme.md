@@ -78,7 +78,7 @@ reqtype/
 ## Usage Examples
 
 ```go
-import "github.com/alimtvnetwork/core/reqtype"
+import "github.com/alimtvnetwork/core-v8/reqtype"
 
 req := reqtype.Create
 

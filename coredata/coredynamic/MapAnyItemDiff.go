@@ -25,8 +25,8 @@ package coredynamic
 import (
 	"log/slog"
 
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/internal/mapdiffinternal"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/internal/mapdiffinternal"
 )
 
 type MapAnyItemDiff map[string]any

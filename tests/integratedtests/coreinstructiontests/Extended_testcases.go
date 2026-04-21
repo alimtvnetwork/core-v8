@@ -23,8 +23,8 @@
 package coreinstructiontests
 
 import (
-	"github.com/alimtvnetwork/core/coreinstruction"
-	"github.com/alimtvnetwork/core/enums/stringcompareas"
+	"github.com/alimtvnetwork/core-v8/coreinstruction"
+	"github.com/alimtvnetwork/core-v8/enums/stringcompareas"
 )
 
 type stringSearchIsMatchCase struct {

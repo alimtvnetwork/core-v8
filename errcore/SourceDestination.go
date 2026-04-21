@@ -22,7 +22,7 @@
 
 package errcore
 
-import "github.com/alimtvnetwork/core/constants"
+import "github.com/alimtvnetwork/core-v8/constants"
 
 func SourceDestination(
 	isIncludeType bool,

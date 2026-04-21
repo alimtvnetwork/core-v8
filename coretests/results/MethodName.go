@@ -47,7 +47,7 @@ func MethodName(funcRef any) string {
 
 	fullName := runtime.FuncForPC(rv.Pointer()).Name()
 
-	// fullName looks like: "github.com/alimtvnetwork/core/pkg.(*Type).Method-fm"
+	// fullName looks like: "github.com/alimtvnetwork/core-v8/pkg.(*Type).Method-fm"
 	// We want just "Method"
 
 	lastDot := strings.LastIndex(fullName, ".")

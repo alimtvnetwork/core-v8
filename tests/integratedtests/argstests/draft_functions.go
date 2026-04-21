@@ -26,7 +26,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 func someFunctionV1(arg1, arg2, arg3 string) string {

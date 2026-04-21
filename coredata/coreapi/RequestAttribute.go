@@ -23,7 +23,7 @@
 package coreapi
 
 import (
-	"github.com/alimtvnetwork/core/reqtype"
+	"github.com/alimtvnetwork/core-v8/reqtype"
 )
 
 type RequestAttribute struct {

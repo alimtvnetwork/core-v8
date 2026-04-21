@@ -25,10 +25,10 @@ package coretests
 import (
 	"fmt"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
-	"github.com/alimtvnetwork/core/issetter"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/issetter"
 )
 
 // BaseTestCase

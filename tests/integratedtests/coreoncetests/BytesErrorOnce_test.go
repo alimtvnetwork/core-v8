@@ -27,8 +27,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/coreonce"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coredata/coreonce"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // =============================================================================

@@ -23,8 +23,8 @@
 package issetter
 
 import (
-	"github.com/alimtvnetwork/core/corecomparator"
-	"github.com/alimtvnetwork/core/internal/messages"
+	"github.com/alimtvnetwork/core-v8/corecomparator"
+	"github.com/alimtvnetwork/core-v8/internal/messages"
 )
 
 // IsCompareResult Here left is v, and right is `n`

@@ -26,7 +26,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // Result is the base typed result for a single-return function invocation.

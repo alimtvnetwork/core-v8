@@ -25,7 +25,7 @@ package coretests
 import (
 	"reflect"
 
-	"github.com/alimtvnetwork/core/issetter"
+	"github.com/alimtvnetwork/core-v8/issetter"
 )
 
 // VerifyTypeOf

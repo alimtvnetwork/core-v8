@@ -26,8 +26,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/coretests/results"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coretests/results"
 )
 
 // ── Result.IsResultTypeOf: actualType nil (Value is nil any) ──

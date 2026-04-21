@@ -12,7 +12,7 @@
         "\ttests/integratedtests/converterstests/SafeStringsConverter_test.go:1454:6: other declaration of Test_StringsTo_Float64sMust",
         "tests/integratedtests/converterstests/StringsTo_HashmapTrimColon_test.go:275:6: Test_StringsTo_Float64sConditional redeclared in this block",
         "\ttests/integratedtests/converterstests/SafeStringsConverter_test.go:1466:6: other declaration of Test_StringsTo_Float64sConditional",
-        "FAIL\tgithub.com/alimtvnetwork/core/tests/integratedtests/converterstests [build failed]"
+        "FAIL\tgithub.com/alimtvnetwork/core-v8/tests/integratedtests/converterstests [build failed]"
       ],
       "package": "converterstests",
       "failureCount": 11
@@ -29,7 +29,7 @@
         "\ttests/integratedtests/coredynamictests/Dynamic_Data_test.go:746:6: other declaration of Test_Dynamic_ConvertUsingFunc",
         "tests/integratedtests/coredynamictests/ZeroSetAny_test.go:1463:6: Test_CastedResult_Methods redeclared in this block",
         "\ttests/integratedtests/coredynamictests/TypeSameStatus_SameTypes_V2_test.go:851:6: other declaration of Test_CastedResult_Methods",
-        "FAIL\tgithub.com/alimtvnetwork/core/tests/integratedtests/coredynamictests [build failed]"
+        "FAIL\tgithub.com/alimtvnetwork/core-v8/tests/integratedtests/coredynamictests [build failed]"
       ],
       "package": "coredynamictests",
       "failureCount": 11
@@ -46,7 +46,7 @@
         "\ttests/integratedtests/corejsontests/Result_Extended_test.go:2680:6: other declaration of Test_Serialize_FromStringer",
         "tests/integratedtests/corejsontests/UsingStringPtr_Valid_DeserializerLogic_test.go:571:6: Test_JsonString_Valid redeclared in this block",
         "\ttests/integratedtests/corejsontests/New_Creators_Deser_test.go:489:6: other declaration of Test_JsonString_Valid",
-        "FAIL\tgithub.com/alimtvnetwork/core/tests/integratedtests/corejsontests [build failed]"
+        "FAIL\tgithub.com/alimtvnetwork/core-v8/tests/integratedtests/corejsontests [build failed]"
       ],
       "package": "corejsontests",
       "failureCount": 11
@@ -63,7 +63,7 @@
         "tests/integratedtests/corepayloadtests/TypedPayloadWrapper_SetName_TypedWrapperMethods_test.go:462:9: undefined: makeCollectionCov23",
         "tests/integratedtests/corepayloadtests/TypedPayloadWrapper_SetName_TypedWrapperMethods_test.go:466:59: undefined: testUserCov23",
         "tests/integratedtests/corepayloadtests/TypedPayloadWrapper_SetName_TypedWrapperMethods_test.go:476:59: undefined: testUserCov23",
-        "FAIL\tgithub.com/alimtvnetwork/core/tests/integratedtests/corepayloadtests [build failed]"
+        "FAIL\tgithub.com/alimtvnetwork/core-v8/tests/integratedtests/corepayloadtests [build failed]"
       ],
       "package": "corepayloadtests",
       "failureCount": 11
@@ -80,17 +80,17 @@
         "\ttests/integratedtests/corestrtests/KeyValuePair_CollOfColl_test.go:738:6: other declaration of Test_KeyAnyValuePair_AsJsonParseSelfInjector",
         "tests/integratedtests/corestrtests/ValidValues_Add_test.go:1063:6: Test_KeyAnyValuePair_Dispose_Nil redeclared in this block",
         "\ttests/integratedtests/corestrtests/KeyValuePair_CollOfColl_test.go:697:6: other declaration of Test_KeyAnyValuePair_Dispose_Nil",
-        "FAIL\tgithub.com/alimtvnetwork/core/tests/integratedtests/corestrtests [build failed]"
+        "FAIL\tgithub.com/alimtvnetwork/core-v8/tests/integratedtests/corestrtests [build failed]"
       ],
       "package": "corestrtests",
       "failureCount": 11
     },
     {
       "failures": [
-        "# github.com/alimtvnetwork/core/tests/integratedtests/coreteststests [github.com/alimtvnetwork/core/tests/integratedtests/coreteststests.test]",
+        "# github.com/alimtvnetwork/core-v8/tests/integratedtests/coreteststests [github.com/alimtvnetwork/core-v8/tests/integratedtests/coreteststests.test]",
         "tests/integratedtests/coreteststests/DraftType_Methods_test.go:89:6: Test_DraftType_ClonePtr_Nil redeclared in this block",
         "\ttests/integratedtests/coreteststests/AnyToBytes_FromBytes_test.go:232:6: other declaration of Test_DraftType_ClonePtr_Nil",
-        "FAIL\tgithub.com/alimtvnetwork/core/tests/integratedtests/coreteststests [build failed]"
+        "FAIL\tgithub.com/alimtvnetwork/core-v8/tests/integratedtests/coreteststests [build failed]"
       ],
       "package": "coreteststests",
       "failureCount": 4
@@ -107,7 +107,7 @@
         "\ttests/integratedtests/errcoretests/ErrorHandling_test.go:462:6: other declaration of Test_PanicOnIndexOutOfRange_Valid",
         "tests/integratedtests/errcoretests/SliceToError_Empty_test.go:38:6: Test_SliceToErrorPtr_Nil redeclared in this block",
         "\ttests/integratedtests/errcoretests/FormattersTypes_test.go:452:6: other declaration of Test_SliceToErrorPtr_Nil",
-        "FAIL\tgithub.com/alimtvnetwork/core/tests/integratedtests/errcoretests [build failed]"
+        "FAIL\tgithub.com/alimtvnetwork/core-v8/tests/integratedtests/errcoretests [build failed]"
       ],
       "package": "errcoretests",
       "failureCount": 11
@@ -124,7 +124,7 @@
         "\ttests/integratedtests/namevaluetests/AppendsIf_True_V2_test.go:275:6: other declaration of Test_Collection_Clear",
         "tests/integratedtests/namevaluetests/Instance_Full_test.go:751:6: Test_Collection_Dispose redeclared in this block",
         "\ttests/integratedtests/namevaluetests/AppendsIf_True_V2_test.go:302:6: other declaration of Test_Collection_Dispose",
-        "FAIL\tgithub.com/alimtvnetwork/core/tests/integratedtests/namevaluetests [build failed]"
+        "FAIL\tgithub.com/alimtvnetwork/core-v8/tests/integratedtests/namevaluetests [build failed]"
       ],
       "package": "namevaluetests",
       "failureCount": 11
@@ -141,7 +141,7 @@
         "\ttests/integratedtests/reflectmodeltests/FieldProcessor_ReflectValueKind_test.go:122:6: other declaration of Test_ReflectValueKind_Valid",
         "tests/integratedtests/reflectmodeltests/ReflectValueKind_test.go:34:6: Test_ReflectValueKind_NilReceiver redeclared in this block",
         "\ttests/integratedtests/reflectmodeltests/FieldProcessor_ReflectValueKind_test.go:92:6: other declaration of Test_ReflectValueKind_NilReceiver",
-        "FAIL\tgithub.com/alimtvnetwork/core/tests/integratedtests/reflectmodeltests [build failed]"
+        "FAIL\tgithub.com/alimtvnetwork/core-v8/tests/integratedtests/reflectmodeltests [build failed]"
       ],
       "package": "reflectmodeltests",
       "failureCount": 11

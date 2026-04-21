@@ -27,8 +27,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/regexnew"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/regexnew"
 )
 
 func Test_LazyLock_ConcurrentAccess(t *testing.T) {

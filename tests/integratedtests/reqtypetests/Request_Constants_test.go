@@ -26,8 +26,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/alimtvnetwork/core/reqtype"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/reqtype"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // ── Constants ──

@@ -22,7 +22,7 @@
 
 package stringcompareas
 
-import "github.com/alimtvnetwork/core/coreutils/stringutil"
+import "github.com/alimtvnetwork/core-v8/coreutils/stringutil"
 
 // isNotEndsWithFunc tided with NotEndsWith
 var isNotEndsWithFunc = func(

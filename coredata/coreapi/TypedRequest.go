@@ -22,7 +22,7 @@
 
 package coreapi
 
-import "github.com/alimtvnetwork/core/coredata/coredynamic"
+import "github.com/alimtvnetwork/core-v8/coredata/coredynamic"
 
 // TypedRequest is the generic request type.
 //

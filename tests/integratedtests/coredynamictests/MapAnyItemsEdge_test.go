@@ -25,8 +25,8 @@ package coredynamictests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/coredynamic"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coredata/coredynamic"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // getBool extracts a boolean flag from the input map, defaulting to false.

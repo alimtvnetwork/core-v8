@@ -25,7 +25,7 @@ package corefuncs
 import (
 	"runtime"
 
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 func GetFunc(i any) *runtime.Func {

@@ -27,10 +27,10 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/corestr"
-	"github.com/alimtvnetwork/core/coredata/stringslice"
-	"github.com/alimtvnetwork/core/coreutils/stringutil"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coredata/stringslice"
+	"github.com/alimtvnetwork/core-v8/coreutils/stringutil"
 )
 
 type String string

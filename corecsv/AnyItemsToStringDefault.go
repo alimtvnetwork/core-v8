@@ -22,7 +22,7 @@
 
 package corecsv
 
-import "github.com/alimtvnetwork/core/constants"
+import "github.com/alimtvnetwork/core-v8/constants"
 
 func AnyItemsToStringDefault(
 	references ...any,

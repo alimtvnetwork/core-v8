@@ -25,8 +25,8 @@ package corecsvtests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/corecsv"
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/corecsv"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
 )
 
 func Test_AnyToTypesCsvStrings_SingleQuote_Verification(t *testing.T) {

@@ -23,8 +23,8 @@
 package coreinstruction
 
 import (
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
 )
 
 type NameList struct {

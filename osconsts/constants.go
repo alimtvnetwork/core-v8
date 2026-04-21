@@ -23,7 +23,7 @@
 package osconsts
 
 import (
-	"github.com/alimtvnetwork/core/internal/osconstsinternal"
+	"github.com/alimtvnetwork/core-v8/internal/osconstsinternal"
 )
 
 // GOOS values https://stackoverflow.com/a/20728862

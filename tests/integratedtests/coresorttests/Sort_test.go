@@ -26,9 +26,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coresort/intsort"
-	"github.com/alimtvnetwork/core/coresort/strsort"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coresort/intsort"
+	"github.com/alimtvnetwork/core-v8/coresort/strsort"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 // =============================================================================

@@ -23,9 +23,9 @@
 package loggerinf
 
 import (
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coreinterface"
-	"github.com/alimtvnetwork/core/coreinterface/errcoreinf"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coreinterface"
+	"github.com/alimtvnetwork/core-v8/coreinterface/errcoreinf"
 )
 
 type MetaAttributesCompiler interface {

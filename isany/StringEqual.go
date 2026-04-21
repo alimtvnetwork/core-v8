@@ -22,7 +22,7 @@
 
 package isany
 
-import "github.com/alimtvnetwork/core/internal/strutilinternal"
+import "github.com/alimtvnetwork/core-v8/internal/strutilinternal"
 
 func StringEqual(
 	left, right any,

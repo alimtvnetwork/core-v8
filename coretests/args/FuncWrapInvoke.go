@@ -28,10 +28,10 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/alimtvnetwork/core/codestack"
-	"github.com/alimtvnetwork/core/internal/convertinternal"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
-	"github.com/alimtvnetwork/core/internal/trydo"
+	"github.com/alimtvnetwork/core-v8/codestack"
+	"github.com/alimtvnetwork/core-v8/internal/convertinternal"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/internal/trydo"
 )
 
 // VoidCallNoReturn invokes the function ignoring return values.

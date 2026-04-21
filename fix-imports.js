@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const OLD = 'github.com/alimtvnetwork/core';
-const NEW = 'github.com/alimtvnetwork/core';
+const OLD = 'github.com/alimtvnetwork/core-v8';
+const NEW = 'github.com/alimtvnetwork/core-v8';
 
 function walk(dir) {
   let results = [];

@@ -29,12 +29,12 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/converters"
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coredata/stringslice"
-	"github.com/alimtvnetwork/core/internal/mapdiffinternal"
-	"github.com/alimtvnetwork/core/internal/strutilinternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/converters"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coredata/stringslice"
+	"github.com/alimtvnetwork/core-v8/internal/mapdiffinternal"
+	"github.com/alimtvnetwork/core-v8/internal/strutilinternal"
 )
 
 type Hashset struct {

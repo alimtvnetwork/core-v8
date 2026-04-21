@@ -31,14 +31,14 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/coredata/stringslice"
-	"github.com/alimtvnetwork/core/coreindexes"
-	"github.com/alimtvnetwork/core/defaultcapacity"
-	"github.com/alimtvnetwork/core/errcore"
-	"github.com/alimtvnetwork/core/internal/strutilinternal"
-	"github.com/alimtvnetwork/core/simplewrap"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coredata/stringslice"
+	"github.com/alimtvnetwork/core-v8/coreindexes"
+	"github.com/alimtvnetwork/core-v8/defaultcapacity"
+	"github.com/alimtvnetwork/core-v8/errcore"
+	"github.com/alimtvnetwork/core-v8/internal/strutilinternal"
+	"github.com/alimtvnetwork/core-v8/simplewrap"
 )
 
 type Collection struct {

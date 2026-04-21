@@ -22,7 +22,7 @@
 
 package corepayload
 
-import "github.com/alimtvnetwork/core/coredata/corejson"
+import "github.com/alimtvnetwork/core-v8/coredata/corejson"
 
 // PayloadWrapperJson.go — JSON-related methods extracted from PayloadWrapper.go
 // These methods handle serialization, deserialization, and JSON representation.

@@ -22,7 +22,7 @@
 
 package corerange
 
-import "github.com/alimtvnetwork/core/constants"
+import "github.com/alimtvnetwork/core-v8/constants"
 
 const (
 	defaultSeparator = constants.Pipe

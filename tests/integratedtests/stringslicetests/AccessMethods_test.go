@@ -25,8 +25,8 @@ package stringslicetests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/stringslice"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coredata/stringslice"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 func Test_First_Verification(t *testing.T) {

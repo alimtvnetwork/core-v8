@@ -25,8 +25,8 @@ package jsoninternaltests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/internal/jsoninternal"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/internal/jsoninternal"
 )
 
 func Test_Pretty_AnyTo_String(t *testing.T) {

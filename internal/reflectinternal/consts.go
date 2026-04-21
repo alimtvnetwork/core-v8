@@ -22,7 +22,7 @@
 
 package reflectinternal
 
-import "github.com/alimtvnetwork/core/constants"
+import "github.com/alimtvnetwork/core-v8/constants"
 
 const (
 	gitHubDotCom                = "github.com"

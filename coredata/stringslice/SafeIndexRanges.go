@@ -22,7 +22,7 @@
 
 package stringslice
 
-import "github.com/alimtvnetwork/core/constants"
+import "github.com/alimtvnetwork/core-v8/constants"
 
 // SafeIndexRanges get safe index range values
 // If index range is out of range or not found then empty string will be added to response

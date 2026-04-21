@@ -237,8 +237,8 @@ const (
 package status
 
 import (
-    "github.com/alimtvnetwork/core/coreimpl/enumimpl"
-    "github.com/alimtvnetwork/core/internal/reflectinternal"
+    "github.com/alimtvnetwork/core-v8/coreimpl/enumimpl"
+    "github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 var (
@@ -268,7 +268,7 @@ var (
 ```go
 package status
 
-import "github.com/alimtvnetwork/core/coreinterface/enuminf"
+import "github.com/alimtvnetwork/core-v8/coreinterface/enuminf"
 
 // ── Value accessors (BasicEnumValuer) ──────────────────────────
 
@@ -439,8 +439,8 @@ const (
 package severity
 
 import (
-    "github.com/alimtvnetwork/core/coreimpl/enumimpl"
-    "github.com/alimtvnetwork/core/internal/reflectinternal"
+    "github.com/alimtvnetwork/core-v8/coreimpl/enumimpl"
+    "github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 var (
@@ -464,7 +464,7 @@ var (
 ```go
 package severity
 
-import "github.com/alimtvnetwork/core/coreinterface/enuminf"
+import "github.com/alimtvnetwork/core-v8/coreinterface/enuminf"
 
 // ── Value accessors (BasicEnumValuer) ──────────────────────────
 
@@ -582,8 +582,8 @@ Use `int16` when values exceed `int8` range (-128..127) or you need a larger ord
 package region
 
 import (
-    "github.com/alimtvnetwork/core/coreimpl/enumimpl"
-    "github.com/alimtvnetwork/core/internal/reflectinternal"
+    "github.com/alimtvnetwork/core-v8/coreimpl/enumimpl"
+    "github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 type Region int16
@@ -654,8 +654,8 @@ Use `int32` for enums with large value ranges or when interoperating with system
 package errorcode
 
 import (
-    "github.com/alimtvnetwork/core/coreimpl/enumimpl"
-    "github.com/alimtvnetwork/core/internal/reflectinternal"
+    "github.com/alimtvnetwork/core-v8/coreimpl/enumimpl"
+    "github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 type ErrorCode int32

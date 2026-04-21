@@ -25,8 +25,8 @@ package coretaskinfo
 import (
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
 )
 
 func (it Info) Json() corejson.Result {

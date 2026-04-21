@@ -25,7 +25,7 @@ package keymk
 import (
 	"encoding/json"
 
-	"github.com/alimtvnetwork/core/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
 )
 
 func (it *Key) TemplateReplacer() templateReplacer {

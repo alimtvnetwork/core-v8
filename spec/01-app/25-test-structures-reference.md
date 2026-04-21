@@ -24,7 +24,7 @@
 
 ## CaseV1 — Primary Test Case
 
-**Package**: `github.com/alimtvnetwork/core/coretests/coretestcases`
+**Package**: `github.com/alimtvnetwork/core-v8/coretests/coretestcases`
 
 **Definition**: `type CaseV1 coretests.BaseTestCase`
 
@@ -111,7 +111,7 @@ func Test_MyFunc_ValidInput(t *testing.T) {
 
 ## CaseNilSafe — Nil Receiver Testing
 
-**Package**: `github.com/alimtvnetwork/core/coretests/coretestcases`
+**Package**: `github.com/alimtvnetwork/core-v8/coretests/coretestcases`
 
 ### Fields
 
@@ -201,9 +201,9 @@ Expected: results.ResultAny{
 package mypkgtests
 
 import (
-    "github.com/alimtvnetwork/core/coretests/coretestcases"
-    "github.com/alimtvnetwork/core/coretests/results"
-    "github.com/alimtvnetwork/core/mypkg"
+    "github.com/alimtvnetwork/core-v8/coretests/coretestcases"
+    "github.com/alimtvnetwork/core-v8/coretests/results"
+    "github.com/alimtvnetwork/core-v8/mypkg"
 )
 
 var myStructNilSafeTestCases = []coretestcases.CaseNilSafe{
@@ -244,7 +244,7 @@ func Test_MyStruct_NilReceiver(t *testing.T) {
 
 ## GenericGherkins — Typed Test Case
 
-**Package**: `github.com/alimtvnetwork/core/coretests/coretestcases`
+**Package**: `github.com/alimtvnetwork/core-v8/coretests/coretestcases`
 
 ### Definition
 
@@ -338,7 +338,7 @@ func Test_Regex_Match(t *testing.T) {
 
 ## args.Map — Typed Input Map
 
-**Package**: `github.com/alimtvnetwork/core/coretests/args`
+**Package**: `github.com/alimtvnetwork/core-v8/coretests/args`
 
 **Definition**: `type Map map[string]any`
 
@@ -431,7 +431,7 @@ str, _ := input.GetAsString("key")
 
 ## args.One through args.Six — Positional Arguments
 
-**Package**: `github.com/alimtvnetwork/core/coretests/args`
+**Package**: `github.com/alimtvnetwork/core-v8/coretests/args`
 
 ### Overview
 
@@ -497,7 +497,7 @@ These embed a function alongside the arguments, primarily used for function-wrap
 
 ## args.Dynamic — Variable-Length Arguments
 
-**Package**: `github.com/alimtvnetwork/core/coretests/args`
+**Package**: `github.com/alimtvnetwork/core-v8/coretests/args`
 
 ```go
 type Dynamic[T any] struct {
@@ -521,7 +521,7 @@ ArrangeInput: args.Dynamic[string]{
 
 ## args.Holder — Multi-Parameter Holder
 
-**Package**: `github.com/alimtvnetwork/core/coretests/args`
+**Package**: `github.com/alimtvnetwork/core-v8/coretests/args`
 
 Used as `Parameters` field on `BaseTestCase` for complex test configurations:
 
@@ -541,7 +541,7 @@ var tc = coretestcases.CaseV1{
 
 ## args.FuncWrap — Function Reflection
 
-**Package**: `github.com/alimtvnetwork/core/coretests/args`
+**Package**: `github.com/alimtvnetwork/core-v8/coretests/args`
 
 ```go
 type FuncWrap[T any] struct {
@@ -558,7 +558,7 @@ Wraps a function with its name for reflection-based invocation in test framework
 
 ## results.Result — Invocation Result
 
-**Package**: `github.com/alimtvnetwork/core/coretests/results`
+**Package**: `github.com/alimtvnetwork/core-v8/coretests/results`
 
 ### Fields
 
@@ -665,7 +665,7 @@ This causes `ShouldMatchResult` to compare `hasError: true` in the filtered map.
 
 ## errcore.AssertDiffOnMismatch — Diff Assertion
 
-**Package**: `github.com/alimtvnetwork/core/errcore`
+**Package**: `github.com/alimtvnetwork/core-v8/errcore`
 
 ### Signature
 

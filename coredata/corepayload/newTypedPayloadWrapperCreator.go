@@ -23,8 +23,8 @@
 package corepayload
 
 import (
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
 )
 
 // newTypedPayloadWrapperCreator provides typed factory methods for TypedPayloadWrapper[T].

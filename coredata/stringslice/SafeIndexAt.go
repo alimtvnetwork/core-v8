@@ -22,7 +22,7 @@
 
 package stringslice
 
-import "github.com/alimtvnetwork/core/constants"
+import "github.com/alimtvnetwork/core-v8/constants"
 
 func SafeIndexAt(slice []string, index int) string {
 	if len(slice) == 0 || index < 0 || len(slice)-1 < index {

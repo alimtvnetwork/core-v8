@@ -25,9 +25,9 @@ package simplewraptests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/corestr"
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
-	"github.com/alimtvnetwork/core/simplewrap"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/simplewrap"
 )
 
 func Test_WithBrackets_Verification(t *testing.T) {

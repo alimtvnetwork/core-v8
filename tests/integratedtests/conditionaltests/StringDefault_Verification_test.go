@@ -25,8 +25,8 @@ package conditionaltests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/conditional"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/conditional"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 func Test_StringDefault_Verification(t *testing.T) {

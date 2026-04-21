@@ -26,9 +26,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata/corestr"
-	"github.com/alimtvnetwork/core/coretests"
-	"github.com/alimtvnetwork/core/coretests/coretestcases"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coretests"
+	"github.com/alimtvnetwork/core-v8/coretests/coretestcases"
 )
 
 func Test_SimpleTestCaseWrapper_String_Verification(t *testing.T) {

@@ -22,7 +22,7 @@
 
 package chmodhelpertestwrappers
 
-import "github.com/alimtvnetwork/core/chmodhelper/chmodins"
+import "github.com/alimtvnetwork/core-v8/chmodhelper/chmodins"
 
 type VerifyRwxChmodUsingRwxInstructionsWrapper struct {
 	Header string

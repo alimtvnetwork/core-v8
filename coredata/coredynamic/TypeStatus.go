@@ -26,10 +26,10 @@ import (
 	"errors"
 	"reflect"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/errcore"
-	"github.com/alimtvnetwork/core/internal/reflectinternal"
-	"github.com/alimtvnetwork/core/issetter"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/errcore"
+	"github.com/alimtvnetwork/core-v8/internal/reflectinternal"
+	"github.com/alimtvnetwork/core-v8/issetter"
 )
 
 type TypeStatus struct {

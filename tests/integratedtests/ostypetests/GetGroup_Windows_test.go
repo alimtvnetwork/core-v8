@@ -25,9 +25,9 @@ package ostypetests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/osconsts"
-	"github.com/alimtvnetwork/core/ostype"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/osconsts"
+	"github.com/alimtvnetwork/core-v8/ostype"
 )
 
 // ── GetGroup ──

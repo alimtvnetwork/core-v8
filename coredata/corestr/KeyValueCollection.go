@@ -27,10 +27,10 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coredata/corejson"
-	"github.com/alimtvnetwork/core/defaultcapacity"
-	"github.com/alimtvnetwork/core/internal/strutilinternal"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coredata/corejson"
+	"github.com/alimtvnetwork/core-v8/defaultcapacity"
+	"github.com/alimtvnetwork/core-v8/internal/strutilinternal"
 )
 
 type KeyValueCollection struct {

@@ -25,8 +25,8 @@ package defaulterrtests
 import (
 	"testing"
 
-	"github.com/alimtvnetwork/core/coretests/args"
-	"github.com/alimtvnetwork/core/defaulterr"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
+	"github.com/alimtvnetwork/core-v8/defaulterr"
 )
 
 func Test_DefaultErr_AllSentinels(t *testing.T) {

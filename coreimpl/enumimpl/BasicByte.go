@@ -25,10 +25,10 @@ package enumimpl
 import (
 	"fmt"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/coreimpl/enumimpl/enumtype"
-	"github.com/alimtvnetwork/core/defaulterr"
-	"github.com/alimtvnetwork/core/errcore"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/coreimpl/enumimpl/enumtype"
+	"github.com/alimtvnetwork/core-v8/defaulterr"
+	"github.com/alimtvnetwork/core-v8/errcore"
 )
 
 type BasicByte struct {

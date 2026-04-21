@@ -25,7 +25,7 @@ package stringslice
 import (
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 func NonEmptyJoin(slice []string, joiner string) string {

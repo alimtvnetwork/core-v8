@@ -25,7 +25,7 @@ package issetter
 import (
 	"fmt"
 
-	"github.com/alimtvnetwork/core/constants"
+	"github.com/alimtvnetwork/core-v8/constants"
 )
 
 func jsonBytes(name string) []byte {

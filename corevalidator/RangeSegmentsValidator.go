@@ -25,7 +25,7 @@ package corevalidator
 import (
 	"fmt"
 
-	"github.com/alimtvnetwork/core/coredata/corestr"
+	"github.com/alimtvnetwork/core-v8/coredata/corestr"
 )
 
 type RangeSegmentsValidator struct {

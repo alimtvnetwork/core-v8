@@ -27,9 +27,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/alimtvnetwork/core/constants"
-	"github.com/alimtvnetwork/core/converters"
-	"github.com/alimtvnetwork/core/enums/versionindexes"
+	"github.com/alimtvnetwork/core-v8/constants"
+	"github.com/alimtvnetwork/core-v8/converters"
+	"github.com/alimtvnetwork/core-v8/enums/versionindexes"
 )
 
 type newCreator struct{}

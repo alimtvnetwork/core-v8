@@ -25,8 +25,8 @@ package issetter
 import (
 	"reflect"
 
-	"github.com/alimtvnetwork/core/internal/csvinternal"
-	"github.com/alimtvnetwork/core/simplewrap"
+	"github.com/alimtvnetwork/core-v8/internal/csvinternal"
+	"github.com/alimtvnetwork/core-v8/simplewrap"
 )
 
 var (

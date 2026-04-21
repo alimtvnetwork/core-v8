@@ -22,7 +22,7 @@
 
 package coretests
 
-import "github.com/alimtvnetwork/core/internal/msgcreator"
+import "github.com/alimtvnetwork/core-v8/internal/msgcreator"
 
 // IsEqualMessage
 //

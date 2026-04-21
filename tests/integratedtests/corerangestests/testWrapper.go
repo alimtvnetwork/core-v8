@@ -23,9 +23,9 @@
 package corerangestests
 
 import (
-	"github.com/alimtvnetwork/core/coredata/corerange"
-	"github.com/alimtvnetwork/core/coretests"
-	"github.com/alimtvnetwork/core/corevalidator"
+	"github.com/alimtvnetwork/core-v8/coredata/corerange"
+	"github.com/alimtvnetwork/core-v8/coretests"
+	"github.com/alimtvnetwork/core-v8/corevalidator"
 )
 
 type testWrapper struct {

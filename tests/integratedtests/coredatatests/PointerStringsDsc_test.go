@@ -26,8 +26,8 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/alimtvnetwork/core/coredata"
-	"github.com/alimtvnetwork/core/coretests/args"
+	"github.com/alimtvnetwork/core-v8/coredata"
+	"github.com/alimtvnetwork/core-v8/coretests/args"
 )
 
 func Test_PointerStringsDsc_Len(t *testing.T) {
